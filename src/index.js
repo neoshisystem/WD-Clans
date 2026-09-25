@@ -1,3 +1,4 @@
+
 'use strict';
 
 module.exports = {
@@ -8,5 +9,6 @@ module.exports = {
   ...require('./validate-snapshot'),
   ...require('./pipeline'),
   ...require('./canonical'),
-  ...require('./persistence')
+  ...require('./persistence'),
+  ...require('./source-adapter')
 };

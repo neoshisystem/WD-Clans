@@ -1,3 +1,4 @@
+
 name: UCS Foundation Validation
 
 on:
@@ -21,3 +22,4 @@ jobs:
       - run: node --check src/metrics.js
       - run: node --check src/validate-snapshot.js
       - run: node --check src/persistence.js
+      - run: node --check src/source-adapter.js
