@@ -74,7 +74,7 @@ test('Normal continuous membership preserves identity and computes lifetime/leag
     priorEpisodeEnded: false
   }), 'CONTINUE');
 
-  assert.equal(resolveIdentity({ observation: current, candidates: [] }).status, 'CANDIDATE');
+  assert.equal(resolveIdentity({ observation: current, candidates: [] }).status, 'UNRESOLVED');
 
   assert.equal(monotonicDelta(current.total_kills, previous.total_kills, 'total_kills').delta, 850);
   assert.equal(currentLeagueClanMedalDelta({
