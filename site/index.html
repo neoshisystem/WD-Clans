@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UCS static product vertical slice">
+  <title>UCS — Static Product Vertical Slice</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="shell header">
+    <div>
+      <div class="eyebrow">UNIFIED CLAN SYSTEM</div>
+      <h1>Static Product Vertical Slice</h1>
+      <p class="muted">Canonical Data → Projection → Static Bundle → UI</p>
+    </div>
+    <div class="status-pill">OFFLINE READY</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero panel">
+      <div>
+        <div class="eyebrow">CURRENT SNAPSHOT</div>
+        <h2 id="clan-name">—</h2>
+        <div id="snapshot-meta" class="muted">—</div>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric"><span>Members</span><strong id="member-count">—</strong></div>
+        <div class="metric"><span>Projection</span><strong id="projection-version">—</strong></div>
+        <div class="metric"><span>Evidence</span><strong id="evidence-count">—</strong></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">READ MODEL</div>
+          <h2>Snapshot Members</h2>
+        </div>
+        <div id="snapshot-id" class="mono muted">—</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Stage</th>
+              <th>League Medals</th>
+              <th>Total Kills</th>
+              <th>Last Online</th>
+            </tr>
+          </thead>
+          <tbody id="members-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel">
+        <div class="eyebrow">PROVENANCE</div>
+        <h2>Traceability</h2>
+        <div class="kv"><span>Canonical refs</span><strong id="canonical-ref-count">—</strong></div>
+        <div class="kv"><span>Evidence refs</span><strong id="evidence-ref-list">—</strong></div>
+        <div class="kv"><span>Static data version</span><strong id="static-version">—</strong></div>
+      </article>
+
+      <article class="panel">
+        <div class="eyebrow">MISSING DATA</div>
+        <h2>Preserved State</h2>
+        <p class="muted">Null and unknown values are rendered as em dashes and are not converted to zero.</p>
+        <div class="kv"><span>Role</span><strong id="role-value">—</strong></div>
+        <div class="kv"><span>Last online status</span><strong id="last-online-status">—</strong></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <span>UCS static viewer — no backend dependency</span>
+    <span id="bundle-hash" class="mono"></span>
+  </footer>
+
+  <script src="./data/ucs-vertical-slice.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

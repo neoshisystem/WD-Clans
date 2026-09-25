@@ -1,4 +1,3 @@
-
 'use strict';
 
 module.exports = {
@@ -12,5 +11,6 @@ module.exports = {
   ...require('./persistence'),
   ...require('./source-adapter'),
   ...require('./evidence-registry'),
-  ...require('./projection')
+  ...require('./projection'),
+  ...require('./static-data')
 };

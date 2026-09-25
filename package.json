@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --test",
     "validate:snapshot": "node src/validate-snapshot.js",
-    "validate:canonical": "node src/validate-canonical.js"
+    "validate:canonical": "node src/validate-canonical.js",
+    "build:static": "node scripts/generate-static-vertical-slice.js"
   },
   "engines": {
     "node": ">=20"

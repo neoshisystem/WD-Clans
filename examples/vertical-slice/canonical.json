@@ -1,0 +1,138 @@
+{
+  "schema_version": "0.1",
+  "clans": [
+    {
+      "clan_id": "CLAN-UCS-DEMO",
+      "display_name": "UCS Demo Clan",
+      "status": "ACTIVE",
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"]
+      }
+    }
+  ],
+  "leagues": [
+    {
+      "league_id": "LEAGUE-UCS-DEMO-2026W39",
+      "name": "UCS Demo League",
+      "starts_at_utc": "2026-09-24T00:00:00.000Z",
+      "ends_at_utc": "2026-10-01T00:00:00.000Z",
+      "sequence": 39,
+      "status": "ACTIVE",
+      "completed_at_utc": null,
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"]
+      }
+    }
+  ],
+  "clan_leagues": [
+    {
+      "clan_league_id": "CLANLEAGUE::CLAN-UCS-DEMO::LEAGUE-UCS-DEMO-2026W39",
+      "clan_id": "CLAN-UCS-DEMO",
+      "league_id": "LEAGUE-UCS-DEMO-2026W39",
+      "status": "ACTIVE",
+      "final_snapshot_id": null,
+      "opening_snapshot_id": "VS-S01",
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"]
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "VS-S01",
+      "clan_id": "CLAN-UCS-DEMO",
+      "league_id": "LEAGUE-UCS-DEMO-2026W39",
+      "clan_league_id": "CLANLEAGUE::CLAN-UCS-DEMO::LEAGUE-UCS-DEMO-2026W39",
+      "sequence": 1,
+      "official_timestamp_utc": "2026-09-26T00:00:00.000Z",
+      "member_count": 1,
+      "capacity": 50,
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"]
+      }
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "VS-S01::M-001",
+      "snapshot_id": "VS-S01",
+      "clan_id": "CLAN-UCS-DEMO",
+      "source_member_key": "M-001",
+      "source_identity": {
+        "source_system": "UCS_SYNTHETIC",
+        "source_identity_id": "M-001"
+      },
+      "global_player_id": "GP-SYN-001",
+      "membership_episode_id": "ME-SYN-001",
+      "identity_resolution_status": "CONFIRMED",
+      "display_name": "Demo Operator",
+      "rank": 1,
+      "stage": 12,
+      "role": null,
+      "weapons": {
+        "25mm": 4,
+        "hydra": 3,
+        "hellfire": 2
+      },
+      "total_kills": 12345,
+      "lifetime_medals": {
+        "bronze": 2,
+        "silver": 1,
+        "gold": 0
+      },
+      "current_league_clan_medals": 420,
+      "profile_total_clan_medal_count": 420,
+      "last_online_utc": null,
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"],
+        "field_provenance": {
+          "last_online_utc": {
+            "status": "NOT_VISIBLE",
+            "evidence_refs": ["EV-SYN-001"]
+          },
+          "role": {
+            "status": "UNKNOWN",
+            "evidence_refs": ["EV-SYN-001"]
+          }
+        }
+      }
+    }
+  ],
+  "global_player_identities": [
+    {
+      "global_player_id": "GP-SYN-001",
+      "status": "ACTIVE"
+    }
+  ],
+  "membership_episodes": [
+    {
+      "membership_episode_id": "ME-SYN-001",
+      "global_player_id": "GP-SYN-001",
+      "clan_id": "CLAN-UCS-DEMO",
+      "sequence": 1,
+      "status": "ACTIVE",
+      "started_from_snapshot_id": "VS-S01",
+      "ended_at_utc": null,
+      "ended_by_event_id": null,
+      "provenance": {
+        "evidence_refs": ["EV-SYN-001"]
+      }
+    }
+  ],
+  "membership_events": [],
+  "evidence_artifacts": [
+    {
+      "evidence_artifact_id": "EV-SYN-001",
+      "artifact_type": "synthetic-vertical-slice",
+      "content_hash": {
+        "algorithm": "sha256",
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "source_location": "synthetic://ucs/static-vertical-slice/EV-SYN-001",
+      "received_at_utc": null,
+      "immutable": true
+    }
+  ],
+  "resolution_cases": [],
+  "delta_results": []
+}
