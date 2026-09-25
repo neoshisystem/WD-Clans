@@ -3,8 +3,10 @@
 const IDENTITY_STATUSES = Object.freeze([
   'UNRESOLVED',
   'CANDIDATE',
-  'RESOLVED',
+  'CONFIRMED',
   'AMBIGUOUS',
+  'CONTRADICTION',
+  'UNKNOWN',
   'NEW_IDENTITY_PENDING_AUTHORITY',
   'REJECTED_MATCH'
 ]);
@@ -68,7 +70,7 @@ function resolveIdentity({ observation, candidates = [], resolutionDecision = nu
     throw new Error(`unsupported identity status: ${resolutionDecision.status}`);
   }
 
-  if (resolutionDecision.status === 'RESOLVED' && !resolutionDecision.global_player_id) {
+  if (resolutionDecision.status === 'CONFIRMED' && !resolutionDecision.global_player_id) {
     throw new Error('RESOLVED identity decision requires global_player_id');
   }
 
