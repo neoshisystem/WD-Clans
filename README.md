@@ -17,6 +17,7 @@ Implemented here:
 - Membership lifecycle primitives that distinguish NOT_OBSERVED from LEAVE;
 - metric/delta primitives with anomaly handling for monotonic lifetime metrics;
 - Standard SnapshotInput validation;
+- Canonical Data Model v0.1 with history/provenance invariants;
 - deterministic planning primitives suitable for a future single Snapshot transaction boundary.
 
 Not implemented yet:
