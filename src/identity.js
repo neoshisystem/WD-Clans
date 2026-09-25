@@ -57,7 +57,7 @@ function resolveIdentity({ observation, candidates = [], resolutionDecision = nu
 
   if (!resolutionDecision) {
     return {
-      status: comparisons.length > 1 ? 'AMBIGUOUS' : 'CANDIDATE',
+      status: comparisons.length === 0 ? 'UNRESOLVED' : (comparisons.length > 1 ? 'AMBIGUOUS' : 'CANDIDATE'),
       global_player_id: null,
       comparisons,
       decision: null
