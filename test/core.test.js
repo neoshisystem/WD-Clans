@@ -95,7 +95,7 @@ test('Clan transfer keeps Global Identity but isolates clan membership', () => {
     observation: observation(),
     candidates: [{ observation: observation({ total_kills: 10010 }) }],
     resolutionDecision: {
-      status: 'RESOLVED',
+      status: 'CONFIRMED',
       global_player_id: 'GP-TEST-001',
       authority_ref: 'AUTH-TEST-001',
       evidence_refs: ['EV-TEST-001'],
@@ -103,7 +103,7 @@ test('Clan transfer keeps Global Identity but isolates clan membership', () => {
       reason: 'explicit test decision'
     }
   });
-  assert.equal(resolved.status, 'RESOLVED');
+  assert.equal(resolved.status, 'CONFIRMED');
   assert.equal(resolved.global_player_id, 'GP-TEST-001');
 
   const transfer = validateTransferResolution({
