@@ -5,5 +5,6 @@ module.exports = {
   ...require('./identity'),
   ...require('./membership'),
   ...require('./metrics'),
-  ...require('./validate-snapshot')
+  ...require('./validate-snapshot'),
+  ...require('./pipeline')
 };
