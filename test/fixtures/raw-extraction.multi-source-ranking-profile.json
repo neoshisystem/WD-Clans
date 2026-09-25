@@ -1,0 +1,318 @@
+{
+  "extraction_schema_version": "0.1",
+  "extraction_id": "EX-MULTI-SOURCE-001",
+  "extracted_at_utc": "2026-09-25T18:45:00Z",
+  "source": {
+    "primary_artifact_id": "RANK-001",
+    "artifacts": [
+      {
+        "artifact_id": "RANK-001",
+        "artifact_type": "ranking-screenshot",
+        "source_location": "ranking/page-1.png",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      },
+      {
+        "artifact_id": "RANK-002",
+        "artifact_type": "ranking-screenshot",
+        "source_location": "ranking/page-2.png",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "2222222222222222222222222222222222222222222222222222222222222222"
+        }
+      },
+      {
+        "artifact_id": "PROFILE-001",
+        "artifact_type": "profile-screenshot",
+        "source_location": "profiles/player-1.png",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "3333333333333333333333333333333333333333333333333333333333333333"
+        }
+      }
+    ]
+  },
+  "members": [
+    {
+      "source_member_key": "RANK-01",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "ranking",
+        "source_identity_id": "RANK-01"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "1",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Alpha Prime",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "12",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "6",
+            "Hydra-70": "5"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "10500",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "gold": "7"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        },
+        "current_league_clan_medals": [
+          {
+            "status": "OBSERVED",
+            "raw_value": "120",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "RANK-001"
+            ]
+          },
+          {
+            "status": "OBSERVED",
+            "raw_value": "120",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "RANK-002"
+            ]
+          }
+        ],
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "450",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Leader",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        },
+        "last_online_utc": {
+          "status": "OBSERVED",
+          "raw_value": "2026-09-25T17:30:00Z",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PROFILE-001"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "RANK-001",
+        "RANK-002",
+        "PROFILE-001"
+      ]
+    },
+    {
+      "source_member_key": "RANK-02",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "ranking",
+        "source_identity_id": "RANK-02"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "2",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Bravo",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "10",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "weapons": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        },
+        "total_kills": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "90",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-001"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        },
+        "role": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "evidence_refs": [
+            "RANK-001",
+            "RANK-002"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "RANK-001",
+        "RANK-002"
+      ]
+    },
+    {
+      "source_member_key": "RANK-03",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "ranking",
+        "source_identity_id": "RANK-03"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "3",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Charlie",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "9",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "weapons": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "total_kills": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "70",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "role": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "evidence_refs": [
+            "RANK-002"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "RANK-002"
+      ]
+    }
+  ]
+}
