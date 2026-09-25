@@ -76,7 +76,7 @@ function prepareSnapshotTransaction(input, context = {}) {
 
   const reviewReasons = [];
   for (const member of members) {
-    if (member.identity_resolution.status !== 'RESOLVED') {
+    if (member.identity_resolution.status !== 'CONFIRMED') {
       reviewReasons.push({
         source_member_key: member.source_member_key,
         reason: 'identity_resolution_not_confirmed',
