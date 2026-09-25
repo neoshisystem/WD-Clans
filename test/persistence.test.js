@@ -105,6 +105,7 @@ function secondTransaction(baseTransaction, snapshotId, kills = 11000) {
   tx.canonical_patch.leagues = [];
   tx.canonical_patch.observations[0].rank = 1;
   tx.canonical_patch.snapshots[0].sequence = 2;
+  tx.canonical_patch.snapshots[0].official_timestamp_utc = '2026-09-27T12:00:00Z';
   tx.canonical_patch.observations[0].total_kills = kills;
   tx.plan_hash = sha256(tx.canonical_patch);
   return tx;
