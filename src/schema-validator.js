@@ -42,7 +42,7 @@ function validateJsonSchema(value,schema,rootSchema=schema,path='$'){
   if(schema.minLength!==undefined&&typeof value==='string'&&value.length<schema.minLength)throw new SchemaValidationError(path,'must have length >= '+schema.minLength);
   if(schema.minimum!==undefined&&typeof value==='number'&&value<schema.minimum)throw new SchemaValidationError(path,'must be >= '+schema.minimum);
   if(schema.minItems!==undefined&&Array.isArray(value)&&value.length<schema.minItems)throw new SchemaValidationError(path,'must contain at least '+schema.minItems+' items');
-  if(schema.format==='date-time'&&!isDateTime(value))throw new SchemaValidationError(path,'must be an RFC3339 date-time');
+  if(schema.format==='date-time'&&value!==null&&value!==undefined&&!isDateTime(value))throw new SchemaValidationError(path,'must be an RFC3339 date-time');
   if(schema.required&&typeMatches(value,'object'))for(const key of schema.required)if(!Object.prototype.hasOwnProperty.call(value,key))throw new SchemaValidationError(path+'.'+key,'is required');
   if(typeMatches(value,'object')){
     const props=schema.properties||{};
