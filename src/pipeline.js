@@ -102,8 +102,9 @@ function prepareSnapshotTransaction(input, context = {}) {
     }
   }
 
-  return {
-    transaction_status: reviewReasons.length === 0 ? 'READY_FOR_PERSISTENCE_REVIEW' : 'REVIEW_REQUIRED',
+  const transactionStatus = reviewReasons.length === 0 ? 'READY_FOR_PERSISTENCE' : 'REVIEW_REQUIRED';
+  const prepared = {
+    transaction_status: transactionStatus,
     validation,
     league_binding: leagueBinding,
     members,
@@ -114,6 +115,8 @@ function prepareSnapshotTransaction(input, context = {}) {
       side_effects_executed: false
     }
   };
+  prepared.persistence.transaction = createSnapshotPersistencePlan(input, prepared);
+  return prepared;
 }
 
 module.exports = { prepareSnapshotTransaction };
