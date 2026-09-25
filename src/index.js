@@ -6,5 +6,6 @@ module.exports = {
   ...require('./membership'),
   ...require('./metrics'),
   ...require('./validate-snapshot'),
-  ...require('./pipeline')
+  ...require('./pipeline'),
+  ...require('./canonical')
 };
