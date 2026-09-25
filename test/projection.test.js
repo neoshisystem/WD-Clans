@@ -96,7 +96,7 @@ function buildCanonical() {
       clan_id: 'CLAN-B',
       league_id: 'L2',
       clan_league_id: 'CLANLEAGUE::CLAN-B::L2',
-      sequence: 1,
+      sequence: 2,
       official_timestamp_utc: '2026-10-02T12:00:00Z',
       member_count: 2,
       capacity: 50,
