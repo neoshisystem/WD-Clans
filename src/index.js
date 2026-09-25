@@ -11,5 +11,6 @@ module.exports = {
   ...require('./canonical'),
   ...require('./persistence'),
   ...require('./source-adapter'),
-  ...require('./evidence-registry')
+  ...require('./evidence-registry'),
+  ...require('./projection')
 };

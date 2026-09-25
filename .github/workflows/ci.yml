@@ -24,3 +24,4 @@ jobs:
       - run: node --check src/persistence.js
       - run: node --check src/source-adapter.js
       - run: node --check src/evidence-registry.js
+      - run: node --check src/projection.js
