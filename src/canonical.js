@@ -15,6 +15,7 @@ function emptyCanonicalModel() {
     schema_version: CANONICAL_SCHEMA_VERSION,
     clans: [],
     leagues: [],
+    clan_leagues: [],
     snapshots: [],
     observations: [],
     global_player_identities: [],
