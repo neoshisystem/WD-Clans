@@ -359,12 +359,26 @@ function validateRawExtraction(raw) {
   if (!Array.isArray(raw.members)) {
     throw new SourceAdapterError('INVALID_RAW_EXTRACTION', '$.members', 'members is required');
   }
+  if (hasOwn(raw, 'global_player_id')) {
+    throw new SourceAdapterError(
+      'FORBIDDEN_GLOBAL_ID',
+      '$.global_player_id',
+      'RawExtraction must never contain a Global Player ID'
+    );
+  }
 
   const memberKeys = new Set();
   for (const [index, member] of raw.members.entries()) {
     const path = '$.members[' + index + ']';
     if (!isObject(member) || !member.source_member_key) {
       throw new SourceAdapterError('INVALID_RAW_EXTRACTION', path, 'source_member_key is required');
+    }
+    if (hasOwn(member, 'global_player_id')) {
+      throw new SourceAdapterError(
+        'FORBIDDEN_GLOBAL_ID',
+        path + '.global_player_id',
+        'RawExtraction must never contain a Global Player ID'
+      );
     }
     if (memberKeys.has(member.source_member_key)) {
       throw new SourceAdapterError(
@@ -388,11 +402,29 @@ function validateRawExtraction(raw) {
         );
       }
       validateFieldCapture(member.fields[fieldName], path + '.fields.' + fieldName);
+      for (const ref of member.fields[fieldName].evidence_refs) {
+        if (!artifactIds.has(ref)) {
+          throw new SourceAdapterError(
+            'UNKNOWN_EVIDENCE_REF',
+            path + '.fields.' + fieldName + '.evidence_refs',
+            'field evidence reference is not declared in source.artifacts'
+          );
+        }
+      }
     }
 
     for (const fieldName of OPTIONAL_MEMBER_FIELDS) {
       if (hasOwn(member.fields, fieldName)) {
         validateFieldCapture(member.fields[fieldName], path + '.fields.' + fieldName);
+        for (const ref of member.fields[fieldName].evidence_refs) {
+          if (!artifactIds.has(ref)) {
+            throw new SourceAdapterError(
+              'UNKNOWN_EVIDENCE_REF',
+              path + '.fields.' + fieldName + '.evidence_refs',
+              'field evidence reference is not declared in source.artifacts'
+            );
+          }
+        }
       }
     }
 

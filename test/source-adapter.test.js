@@ -201,14 +201,23 @@ test('11. unknown evidence reference is rejected', () => {
   );
 });
 
-test('12. multiple evidence references are preserved and deterministically sorted', () => {
+test('13. direct Global Player ID on member is rejected', () => {
+  const raw = validRawExtraction();
+  raw.members[0].global_player_id = 'GP-FAKE-002';
+  assert.throws(
+    () => validateRawExtraction(raw),
+    (error) => error instanceof SourceAdapterError && error.code === 'FORBIDDEN_GLOBAL_ID'
+  );
+});
+
+test('14. multiple evidence references are preserved and deterministically sorted', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.rank.evidence_refs = ['ART-002', 'ART-001'];
   const input = new RawExtractionSourceAdapter().toSnapshotInput(raw, context());
   assert.deepEqual(input.members[0].evidence_refs, ['ART-001', 'ART-002']);
 });
 
-test('13. negative normalized metric is rejected and never becomes a core value', () => {
+test('15. negative normalized metric is rejected and never becomes a core value', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.total_kills.raw_value = '-1';
   assert.throws(
@@ -217,7 +226,7 @@ test('13. negative normalized metric is rejected and never becomes a core value'
   );
 });
 
-test('14. source-specific deterministic map normalization is injectable without changing the interface', () => {
+test('16. source-specific deterministic map normalization is injectable without changing the interface', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.weapons = capture(
     'OBSERVED',
@@ -243,7 +252,7 @@ test('14. source-specific deterministic map normalization is injectable without 
   assert.deepEqual(input.members[0].weapons, { '25mm': 4, hydra: 3 });
 });
 
-test('15. same RawExtraction + same authority context produces byte-equivalent SnapshotInput', () => {
+test('17. same RawExtraction + same authority context produces byte-equivalent SnapshotInput', () => {
   const raw = validRawExtraction();
   const adapter = new RawExtractionSourceAdapter();
   const first = adapter.toSnapshotInput(raw, context());
@@ -251,14 +260,14 @@ test('15. same RawExtraction + same authority context produces byte-equivalent S
   assert.deepEqual(first, second);
 });
 
-test('16. authority Snapshot identity is not derived from source extraction identifiers', () => {
+test('18. authority Snapshot identity is not derived from source extraction identifiers', () => {
   const raw = validRawExtraction();
   raw.extraction_id = 'different-extraction-id';
   const input = new RawExtractionSourceAdapter().toSnapshotInput(raw, context());
   assert.equal(input.snapshot.snapshot_id, 'S-IN-001');
 });
 
-test('17. late Snapshot timestamp remains the supplied Snapshot observation timestamp', () => {
+test('19. late Snapshot timestamp remains the supplied Snapshot observation timestamp', () => {
   const raw = validRawExtraction();
   const lateContext = context();
   lateContext.snapshot.official_timestamp_utc = '2026-09-27T12:00:00Z';
@@ -267,7 +276,7 @@ test('17. late Snapshot timestamp remains the supplied Snapshot observation time
   assert.equal(input.league.starts_at_utc, '2026-09-24T00:00:00Z');
 });
 
-test('18. SnapshotInput from the adapter can enter the existing deterministic Core pipeline', () => {
+test('20. SnapshotInput from the adapter can enter the existing deterministic Core pipeline', () => {
   const input = new RawExtractionSourceAdapter().toSnapshotInput(validRawExtraction(), context());
   const plan = prepareSnapshotTransaction(input);
   assert.equal(plan.validation.valid, true);
@@ -275,7 +284,7 @@ test('18. SnapshotInput from the adapter can enter the existing deterministic Co
   assert.equal(plan.members[0].identity_resolution.status, 'UNRESOLVED');
 });
 
-test('19. invalid authority context cannot be silently replaced by source-derived metadata', () => {
+test('21. invalid authority context cannot be silently replaced by source-derived metadata', () => {
   const raw = validRawExtraction();
   const invalid = structuredClone(context());
   delete invalid.snapshot.snapshot_id;
@@ -285,7 +294,7 @@ test('19. invalid authority context cannot be silently replaced by source-derive
   );
 });
 
-test('20. RawExtraction validation accepts explicit UNKNOWN/AMBIGUOUS field states without guessing', () => {
+test('22. RawExtraction validation accepts explicit UNKNOWN/AMBIGUOUS field states without guessing', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.role = capture('UNKNOWN', null, ['ART-001']);
   raw.members[0].fields.last_online_utc = capture('AMBIGUOUS', null, ['ART-002']);
@@ -294,12 +303,12 @@ test('20. RawExtraction validation accepts explicit UNKNOWN/AMBIGUOUS field stat
 
 const path = require('node:path');
 
-test('21. bundled RawExtraction fixture is valid', () => {
+test('23. bundled RawExtraction fixture is valid', () => {
   const fixture = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/raw-extraction.valid.json'), 'utf8'));
   assert.equal(validateRawExtraction(fixture).valid, true);
 });
 
-test('22. bundled UNKNOWN fixture validates as raw but cannot emit v0.1 SnapshotInput', () => {
+test('24. bundled UNKNOWN fixture validates as raw but cannot emit v0.1 SnapshotInput', () => {
   const fixture = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/raw-extraction.unknown-required.json'), 'utf8'));
   assert.equal(validateRawExtraction(fixture).valid, true);
   assert.throws(() => new RawExtractionSourceAdapter().toSnapshotInput(fixture, context()), /required SnapshotInput value/);
