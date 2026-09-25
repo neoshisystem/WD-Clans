@@ -114,7 +114,10 @@ function observationProjection(observation, snapshot, clan) {
     last_online_utc: observation.last_online_utc ?? null,
     provenance: {
       canonical_ref: observation.observation_id,
-      evidence_refs: uniqueSorted(collectEvidenceRefs(observation))
+      evidence_refs: uniqueSorted(collectEvidenceRefs(observation)),
+      ...(Object.prototype.hasOwnProperty.call(observation.provenance || {}, 'field_provenance')
+        ? { field_provenance: cloneOptional(observation.provenance.field_provenance) }
+        : {})
     },
     clan_display_name: clan?.display_name ?? null
   };
