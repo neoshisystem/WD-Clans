@@ -102,14 +102,6 @@ function validateCanonicalModel(model) {
     if (league.status === 'COMPLETED' && league.completed_at_utc !== league.ends_at_utc) {
       throw new Error('completed league must complete at its game boundary: ' + league.league_id);
     }
-    if (league.final_snapshot_id !== null && league.final_snapshot_id !== undefined) {
-      requireRef(snapshots, league.final_snapshot_id, 'league.final_snapshot_id');
-      const finalSnapshot = snapshots.get(league.final_snapshot_id);
-      if (finalSnapshot.league_id !== league.league_id) throw new Error('final snapshot belongs to another league: ' + league.final_snapshot_id);
-      if (new Date(finalSnapshot.official_timestamp_utc).getTime() >= new Date(league.ends_at_utc).getTime()) {
-        throw new Error('final snapshot must occur before League end: ' + finalSnapshot.snapshot_id);
-      }
-    }
   }
 
   for (const clanLeague of model.clan_leagues) {
@@ -131,6 +123,9 @@ function validateCanonicalModel(model) {
     }
   }
 
+  const snapshotSequenceByClan = new Set();
+  const snapshotTimestampByClan = new Set();
+
   for (const snapshot of model.snapshots) {
     requireRef(clans, snapshot.clan_id, 'snapshot.clan_id');
     requireRef(leagues, snapshot.league_id, 'snapshot.league_id');
@@ -139,6 +134,12 @@ function validateCanonicalModel(model) {
     if (clanLeague.clan_id !== snapshot.clan_id || clanLeague.league_id !== snapshot.league_id) {
       throw new Error('snapshot ClanLeague binding does not match clan/league: ' + snapshot.snapshot_id);
     }
+    const sequenceKey = snapshot.clan_id + '::' + snapshot.sequence;
+    if (snapshotSequenceByClan.has(sequenceKey)) throw new Error('duplicate Snapshot sequence within Clan: ' + sequenceKey);
+    snapshotSequenceByClan.add(sequenceKey);
+    const timestampKey = snapshot.clan_id + '::' + new Date(snapshot.official_timestamp_utc).toISOString();
+    if (snapshotTimestampByClan.has(timestampKey)) throw new Error('duplicate Snapshot timestamp within Clan: ' + timestampKey);
+    snapshotTimestampByClan.add(timestampKey);
     bindSnapshotToLeague(snapshot.official_timestamp_utc, leagues.get(snapshot.league_id));
     if (snapshot.member_count > snapshot.capacity) throw new Error('snapshot member_count exceeds capacity: ' + snapshot.snapshot_id);
   }
@@ -162,6 +163,14 @@ function validateCanonicalModel(model) {
     }
     if (observation.membership_episode_id !== null && observation.membership_episode_id !== undefined) {
       requireRef(episodes, observation.membership_episode_id, 'observation membership episode');
+      const episode = episodes.get(observation.membership_episode_id);
+      if (episode.clan_id !== observation.clan_id) throw new Error('observation membership episode clan mismatch: ' + observation.observation_id);
+      if (observation.global_player_id && episode.global_player_id !== observation.global_player_id) {
+        throw new Error('observation membership episode player mismatch: ' + observation.observation_id);
+      }
+    }
+    if (observation.identity_resolution_status !== 'CONFIRMED' && observation.membership_episode_id !== null && observation.membership_episode_id !== undefined) {
+      throw new Error('unresolved observation cannot bind a membership episode: ' + observation.observation_id);
     }
     if (observation.source_identity !== null && observation.source_identity !== undefined) {
       if (!observation.source_identity.source_system || !observation.source_identity.source_identity_id) {
