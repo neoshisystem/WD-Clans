@@ -101,6 +101,14 @@ function validateFieldCapture(capture,path){
 }
 function validateRawExtraction(raw){
   if(!isObject(raw))throw new SourceAdapterError('INVALID_RAW_EXTRACTION','$','raw extraction must be an object');
+  if(hasOwn(raw,'global_player_id'))throw new SourceAdapterError('FORBIDDEN_GLOBAL_ID','$.global_player_id','RawExtraction must never contain a Global Player ID');
+  if(Array.isArray(raw.members)){
+    for(const [index,member] of raw.members.entries()){
+      const p='$.members['+index+']';
+      if(isObject(member)&&hasOwn(member,'global_player_id'))throw new SourceAdapterError('FORBIDDEN_GLOBAL_ID',p+'.global_player_id','RawExtraction must never contain a Global Player ID');
+      if(isObject(member)&&isObject(member.source_identity)&&hasOwn(member.source_identity,'global_player_id'))throw new SourceAdapterError('FORBIDDEN_GLOBAL_ID',p+'.source_identity.global_player_id','RawExtraction must never contain a Global Player ID');
+    }
+  }
   try{validateJsonSchema(raw,RAW_SCHEMA);}
   catch(error){
     if(error instanceof SchemaValidationError)throw new SourceAdapterError('RAW_SCHEMA_INVALID',error.path,error.message);

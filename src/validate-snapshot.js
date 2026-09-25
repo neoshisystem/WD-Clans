@@ -7,7 +7,7 @@ const SNAPSHOT_SCHEMA=require('../schemas/snapshot-input.schema.json');
 
 const FIELD_STATUSES=new Set(['OBSERVED','NOT_VISIBLE','UNKNOWN','AMBIGUOUS','CONFLICTING']);
 const FIELD_NAMES=['rank','display_name','role','stage','weapons','total_kills','lifetime_medals','current_league_clan_medals','profile_total_clan_medal_count','last_online_utc'];
-const NULLABLE_PROFILE_FIELDS=new Set(['weapons','total_kills','lifetime_medals','profile_total_clan_medal_count','last_online_utc']);
+const NULLABLE_PROFILE_FIELDS=new Set(['weapons','total_kills','lifetime_medals','profile_total_clan_medal_count']);
 
 function fail(message){console.error('SNAPSHOT INPUT INVALID: '+message);process.exitCode=1;}
 

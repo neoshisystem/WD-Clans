@@ -111,15 +111,13 @@ test('2. RawExtraction keeps source data separate and does not mutate during con
   assert.equal(raw.members[0].fields.total_kills.raw_value, '۱۰٬۰۰۰');
 });
 
-test('3. unknown required field blocks SnapshotInput generation', () => {
+test('3. unknown Profile field remains machine-readable and is not converted to zero', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.total_kills = capture('UNKNOWN', null, ['ART-001']);
-  assert.throws(
-    () => new RawExtractionSourceAdapter().toSnapshotInput(raw, context()),
-    (error) => error instanceof SourceAdapterError &&
-      error.code === 'BLOCKED_REQUIRED_VALUE' &&
-      error.path.includes('total_kills')
-  );
+  const input = new RawExtractionSourceAdapter().toSnapshotInput(raw, context());
+  assert.equal(input.members[0].total_kills, null);
+  assert.equal(input.members[0].field_provenance.total_kills.status, 'UNKNOWN');
+  assert.notEqual(input.members[0].total_kills, 0);
 });
 
 test('4. ambiguous required field blocks SnapshotInput generation', () => {
@@ -152,14 +150,13 @@ test('6. conflicting normalization is rejected deterministically', () => {
   );
 });
 
-test('7. NOT_VISIBLE required field is preserved in RawExtraction but blocked for v0.1 SnapshotInput', () => {
+test('7. NOT_VISIBLE Profile field is preserved as missing in v0.1 SnapshotInput', () => {
   const raw = validRawExtraction();
   raw.members[0].fields.weapons = capture('NOT_VISIBLE', null, ['ART-001']);
   assert.equal(validateRawExtraction(raw).valid, true);
-  assert.throws(
-    () => new RawExtractionSourceAdapter().toSnapshotInput(raw, context()),
-    (error) => error instanceof SourceAdapterError && error.code === 'BLOCKED_REQUIRED_VALUE'
-  );
+  const input = new RawExtractionSourceAdapter().toSnapshotInput(raw, context());
+  assert.equal(input.members[0].weapons, null);
+  assert.equal(input.members[0].field_provenance.weapons.status, 'NOT_VISIBLE');
 });
 
 test('8. ambiguous source identity does not create or force a Global Identity', () => {
@@ -308,8 +305,10 @@ test('23. bundled RawExtraction fixture is valid', () => {
   assert.equal(validateRawExtraction(fixture).valid, true);
 });
 
-test('24. bundled UNKNOWN fixture validates as raw but cannot emit v0.1 SnapshotInput', () => {
+test('24. bundled UNKNOWN fixture validates as raw and emits explicit missing Profile state', () => {
   const fixture = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/raw-extraction.unknown-required.json'), 'utf8'));
   assert.equal(validateRawExtraction(fixture).valid, true);
-  assert.throws(() => new RawExtractionSourceAdapter().toSnapshotInput(fixture, context()), /required SnapshotInput value/);
+  const input = new RawExtractionSourceAdapter().toSnapshotInput(fixture, context());
+  assert.equal(input.members[0].total_kills, null);
+  assert.equal(input.members[0].field_provenance.total_kills.status, 'UNKNOWN');
 });
