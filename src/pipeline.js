@@ -5,6 +5,7 @@ const { bindSnapshotToLeague }=require('./league');
 const { resolveIdentity }=require('./identity');
 const { classifyMembership }=require('./membership');
 const { createSnapshotPersistencePlan }=require('./persistence');
+const { validateSnapshotInputAgainstRegistry }=require('./evidence-registry');
 const {
   validateLifetimeMetrics,
   currentLeagueClanMedalDelta,
@@ -13,6 +14,15 @@ const {
 
 function prepareSnapshotTransaction(input,context={}){
   const validation=validate(input);
+  if(context.evidenceRegistry){
+    const evidenceCheck=validateSnapshotInputAgainstRegistry(context.evidenceRegistry,input);
+    if(!evidenceCheck.valid){
+      const error=new Error('SnapshotInput evidence validation failed: '+evidenceCheck.message);
+      error.code=evidenceCheck.reason;
+      error.path=evidenceCheck.artifact_id||null;
+      throw error;
+    }
+  }
   const leagueBinding=bindSnapshotToLeague(input.snapshot.official_timestamp_utc,input.league);
 
   const previousByGlobalPlayerId=context.previousByGlobalPlayerId||{};

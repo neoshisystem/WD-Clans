@@ -92,8 +92,19 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
   const snapshotId = input.snapshot.snapshot_id;
   const clanId = input.clan_id;
   const leagueId = binding.league_id;
+  const sourceArtifacts = (input.source.artifacts || [{
+    artifact_id: input.source.artifact_id,
+    artifact_type: input.source.artifact_type,
+    source_location: null,
+    content_hash: input.source.content_hash
+  }]).map((artifact) => ({
+    artifact_id: artifact.artifact_id,
+    artifact_type: artifact.artifact_type,
+    source_location: artifact.source_location ?? null,
+    content_hash: clone(artifact.content_hash)
+  }));
   const artifactId = input.source.artifact_id;
-  const evidenceRefs = [artifactId];
+  const evidenceRefs = sourceArtifacts.map((artifact) => artifact.artifact_id).sort();
   const leagueStatus = input.league.status || 'ACTIVE';
   const confirmedIds = confirmedPlayerIds(preparedPlan);
 
@@ -120,7 +131,10 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       current_league_clan_medals: member.observation.current_league_clan_medals,
       profile_total_clan_medal_count: member.observation.profile_total_clan_medal_count,
       last_online_utc: member.observation.last_online_utc ?? null,
-      provenance: { evidence_refs: evidenceRefs }
+      provenance: {
+        evidence_refs: [...(member.observation.evidence_refs || evidenceRefs)].sort(),
+        field_provenance: clone(member.observation.field_provenance || {})
+      }
     };
   });
 
@@ -133,7 +147,7 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       candidate_global_player_ids: candidateIds(member),
       matched_global_player_id: null,
       signals: clone(member.identity_resolution?.comparisons || []),
-      evidence_refs: evidenceRefs,
+      evidence_refs: [...(member.observation.evidence_refs || evidenceRefs)].sort(),
       authority_ref: null,
       process_ref: 'identity-resolution-v0.1',
       decided_at_utc: null,
@@ -181,14 +195,14 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
     global_player_identities: [],
     membership_episodes: [],
     membership_events: [],
-    evidence_artifacts: [{
-      evidence_artifact_id: artifactId,
-      artifact_type: input.source.artifact_type,
-      content_hash: clone(input.source.content_hash),
-      source_location: null,
+    evidence_artifacts: sourceArtifacts.map((artifact) => ({
+      evidence_artifact_id: artifact.artifact_id,
+      artifact_type: artifact.artifact_type,
+      content_hash: clone(artifact.content_hash),
+      source_location: artifact.source_location,
       received_at_utc: null,
       immutable: true
-    }],
+    })),
     resolution_cases: resolutionCases,
     delta_results: []
   };

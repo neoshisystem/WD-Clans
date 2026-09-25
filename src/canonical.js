@@ -6,6 +6,9 @@ const CANONICAL_SCHEMA_VERSION = '0.1';
 const RESOLUTION_STATUSES = Object.freeze([
   'CONFIRMED', 'AMBIGUOUS', 'UNRESOLVED', 'CONTRADICTION', 'UNKNOWN'
 ]);
+const FIELD_PROVENANCE_STATUSES = Object.freeze([
+  'OBSERVED', 'NOT_VISIBLE', 'UNKNOWN', 'AMBIGUOUS', 'CONFLICTING'
+]);
 const MEMBERSHIP_EVENT_TYPES = Object.freeze([
   'JOIN', 'LEAVE', 'RETURN', 'TRANSFER', 'UNKNOWN_CHANGE', 'NOT_OBSERVED'
 ]);
@@ -178,6 +181,15 @@ function validateCanonicalModel(model) {
       }
     }
     for (const evidenceRef of (observation.provenance && observation.provenance.evidence_refs) || []) requireRef(evidence, evidenceRef, 'observation provenance evidence');
+    const fieldProvenance = observation.provenance && observation.provenance.field_provenance;
+    if (fieldProvenance !== null && fieldProvenance !== undefined) {
+      if (typeof fieldProvenance !== 'object' || Array.isArray(fieldProvenance)) throw new Error('observation field_provenance must be an object: ' + observation.observation_id);
+      for (const [fieldName, meta] of Object.entries(fieldProvenance)) {
+        if (!meta || !FIELD_PROVENANCE_STATUSES.includes(meta.status)) throw new Error('invalid observation field provenance status: ' + observation.observation_id + '::' + fieldName);
+        if (!Array.isArray(meta.evidence_refs) || meta.evidence_refs.length === 0) throw new Error('observation field provenance requires evidence_refs: ' + observation.observation_id + '::' + fieldName);
+        for (const evidenceRef of meta.evidence_refs) requireRef(evidence, evidenceRef, 'observation field provenance evidence');
+      }
+    }
   }
 
   for (const snapshot of model.snapshots) {

@@ -10,5 +10,6 @@ module.exports = {
   ...require('./pipeline'),
   ...require('./canonical'),
   ...require('./persistence'),
-  ...require('./source-adapter')
+  ...require('./source-adapter'),
+  ...require('./evidence-registry')
 };
