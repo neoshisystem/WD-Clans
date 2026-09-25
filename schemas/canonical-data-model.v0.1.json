@@ -275,6 +275,7 @@
         "delta_id": { "type": "string", "minLength": 1 },
         "current_observation_id": { "type": "string", "minLength": 1 },
         "baseline_observation_id": { "type": ["string", "null"] },
+        "global_player_id": { "type": ["string", "null"] },
         "baseline_type": {
           "type": "string",
           "enum": [
