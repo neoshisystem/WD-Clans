@@ -5,7 +5,8 @@
   "description": "Unified Clan System (UCS) implementation foundation",
   "scripts": {
     "test": "node --test",
-    "validate:snapshot": "node src/validate-snapshot.js"
+    "validate:snapshot": "node src/validate-snapshot.js",
+    "validate:canonical": "node src/validate-canonical.js"
   },
   "engines": {
     "node": ">=20"
