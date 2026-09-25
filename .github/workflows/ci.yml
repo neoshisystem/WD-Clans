@@ -1,4 +1,3 @@
-
 name: UCS Foundation Validation
 
 on:
@@ -25,3 +24,6 @@ jobs:
       - run: node --check src/source-adapter.js
       - run: node --check src/evidence-registry.js
       - run: node --check src/projection.js
+      - run: node --check src/static-data.js
+      - run: node scripts/generate-static-vertical-slice.js
+      - run: git diff --exit-code -- site/data/ucs-vertical-slice.json site/data/ucs-vertical-slice.js
