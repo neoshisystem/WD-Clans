@@ -11,6 +11,8 @@ This is an implementation-foundation design. It is not a final schema lock.
 
 Canonical domain boundaries:
 
+- Canonical Data Model v0.1 is now implemented as a draft Phase 1 contract; it is not a permanent schema lock.
+
 - Clan: owner of Clan-scoped history.
 - League: independent game-time entity.
 - Snapshot: time-stamped observation container inside exactly one League.
@@ -33,7 +35,7 @@ Derived boundaries:
 The implementation uses these explicit states conservatively:
 
 Identity:
-UNRESOLVED | CANDIDATE | RESOLVED | AMBIGUOUS | NEW_IDENTITY_PENDING_AUTHORITY | REJECTED_MATCH
+UNRESOLVED | CANDIDATE | CONFIRMED | AMBIGUOUS | CONTRADICTION | UNKNOWN
 
 Membership:
 JOIN | CONTINUE | NOT_OBSERVED | LEAVE | RETURN | POSSIBLE_TRANSFER | UNKNOWN_CHANGE
