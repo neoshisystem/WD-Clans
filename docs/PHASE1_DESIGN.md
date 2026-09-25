@@ -15,8 +15,9 @@ Canonical domain boundaries:
 
 - Clan: owner of Clan-scoped history.
 - League: independent game-time entity.
+- ClanLeague: Clan × League participation context, including Clan-specific opening/final capture references.
 - Snapshot: time-stamped observation container inside exactly one League.
-- Observation: player state as observed in one Snapshot + Clan context.
+- Observation: player state as observed in one Snapshot + Clan context; membership_episode_id is present only after identity is confirmed.
 - Global Player Identity: clan-independent identity reference.
 - Membership Episode: continuous membership period of one Global Player in one Clan.
 - Membership Event: lifecycle event attached to membership history.
