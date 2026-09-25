@@ -302,8 +302,7 @@ function buildCanonical() {
       provenance: {
         evidence_refs: ['E-B'],
         field_provenance: {
-          current_league_clan_medals: { status: 'CONFLICTING', evidence_refs: ['E-B', 'E-A'] },
-          last_online_utc: { status: 'UNKNOWN', evidence_refs: ['E-B'] }
+          current_league_clan_medals: { status: 'OBSERVED', evidence_refs: ['E-B'] }
         }
       }
     },
@@ -328,7 +327,8 @@ function buildCanonical() {
       provenance: {
         evidence_refs: ['E-B'],
         field_provenance: {
-          current_league_clan_medals: { status: 'OBSERVED', evidence_refs: ['E-B'] }
+          current_league_clan_medals: { status: 'CONFLICTING', evidence_refs: ['E-B', 'E-A'] },
+          last_online_utc: { status: 'UNKNOWN', evidence_refs: ['E-B'] }
         }
       }
     },
