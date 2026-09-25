@@ -62,11 +62,17 @@ function baseModel() {
     }
   );
 
+  model.clan_leagues.push(
+    { clan_league_id: 'CLAN-A-L1', clan_id: 'CLAN-A', league_id: 'L-1', status: 'COMPLETED', final_snapshot_id: null, opening_snapshot_id: 'SA-1' },
+    { clan_league_id: 'CLAN-A-L2', clan_id: 'CLAN-A', league_id: 'L-2', status: 'ACTIVE', final_snapshot_id: null, opening_snapshot_id: null },
+    { clan_league_id: 'CLAN-B-L2', clan_id: 'CLAN-B', league_id: 'L-2', status: 'ACTIVE', final_snapshot_id: null, opening_snapshot_id: null }
+  );
+
   model.snapshots.push(
-    { snapshot_id: 'SA-1', clan_id: 'CLAN-A', league_id: 'L-1', sequence: 1, official_timestamp_utc: '2026-09-20T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
-    { snapshot_id: 'SA-2', clan_id: 'CLAN-A', league_id: 'L-1', sequence: 2, official_timestamp_utc: '2026-09-22T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
-    { snapshot_id: 'SB-1', clan_id: 'CLAN-B', league_id: 'L-2', sequence: 1, official_timestamp_utc: '2026-09-26T12:00:00Z', member_count: 1, capacity: 50, provenance: { evidence_refs: ['EV-2'] } },
-    { snapshot_id: 'SA-3', clan_id: 'CLAN-A', league_id: 'L-2', sequence: 3, official_timestamp_utc: '2026-09-28T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } }
+    { snapshot_id: 'SA-1', clan_id: 'CLAN-A', league_id: 'L-1', clan_league_id: 'CLAN-A-L1', sequence: 1, official_timestamp_utc: '2026-09-20T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
+    { snapshot_id: 'SA-2', clan_id: 'CLAN-A', league_id: 'L-1', clan_league_id: 'CLAN-A-L1', sequence: 2, official_timestamp_utc: '2026-09-22T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
+    { snapshot_id: 'SB-1', clan_id: 'CLAN-B', league_id: 'L-2', clan_league_id: 'CLAN-B-L2', sequence: 1, official_timestamp_utc: '2026-09-26T12:00:00Z', member_count: 1, capacity: 50, provenance: { evidence_refs: ['EV-2'] } },
+    { snapshot_id: 'SA-3', clan_id: 'CLAN-A', league_id: 'L-2', clan_league_id: 'CLAN-A-L2', sequence: 3, official_timestamp_utc: '2026-09-28T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } }
   );
 
   function obs(id, snapshotId, clanId, sourceKey, playerId, overrides = {}) {
@@ -75,7 +81,118 @@ function baseModel() {
       snapshot_id: snapshotId,
       clan_id: clanId,
       source_member_key: sourceKey,
+      source_identity: { source_system: clanId === 'CLAN-B' ? 'GOLDENCROWN' : 'PERSIA', source_identity_id: sourceKey },
       global_player_id: playerId,
+      membership_episode_id: null,
+      identity_resolution_status: playerId ? 'CONFIRMED' : 'UNRESOLVED',
+      display_name: playerId === 'GP-2' ? 'Player Two' : 'Player One',
+      rank: 1,
+      stage: 10,
+      role: 'Member',
+      weapons: { '25mm': 4, hydra: 3, hellfire: 2 },
+      total_kills: 10000,
+      lifetime_medals: { bronze: 2, silver: 1, gold: 0, platinum: 0 },
+      current_league_clan_medals: 500,
+      profile_total_clan_medal_count: 1200,
+      last_online_utc: null,
+      provenance: { evidence_refs: [clanId === 'CLAN-B' ? 'EV-2' : 'EV-1'] },
+      ...overrides
+    };
+  }
+
+  model.observations.push(
+    obs('O-A1-P1', 'SA-1', 'CLAN-A', 'A1-P1', 'GP-1', { rank: 1 }),
+    obs('O-A1-P2', 'SA-1', 'CLAN-A', 'A1-P2', 'GP-2', { rank: 2 }),
+    obs('O-A2-P1', 'SA-2', 'CLAN-A', 'A2-P1', 'GP-1', { rank: 1, stage: 11, total_kills: 10850, current_league_clan_medals: 800, profile_total_clan_medal_count: 1500 }),
+    obs('O-A2-P2', 'SA-2', 'CLAN-A', 'A2-P2', 'GP-2', { rank: 2, total_kills: 10100, profile_total_clan_medal_count: 1400 }),
+    obs('O-B1-P1', 'SB-1', 'CLAN-B', 'B1-P1', 'GP-1', { rank: 1, stage: 11, total_kills: 11000, current_league_clan_medals: 120, profile_total_clan_medal_count: 120 }),
+    obs('O-A3-P1', 'SA-3', 'CLAN-A', 'A3-P1', 'GP-1', { rank: 1, stage: 12, total_kills: 11250, current_league_clan_medals: 260, profile_total_clan_medal_count: 260 }),
+    use strict';
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+
+const {
+  emptyCanonicalModel,
+  validateCanonicalModel,
+  assertHistoryPreserved,
+  buildDeltaResult
+} = require('../src/canonical');
+const {
+  leagueWindowForTimestamp
+} = require('../src/league');
+const {
+  validateLifetimeMetrics,
+  currentLeagueClanMedalDelta,
+  membershipEpisodeClanMedalContribution
+} = require('../src/metrics');
+
+function baseModel() {
+  const model = emptyCanonicalModel();
+
+  model.clans.push(
+    { clan_id: 'CLAN-A', display_name: 'Clan A', status: 'ACTIVE' },
+    { clan_id: 'CLAN-B', display_name: 'Clan B', status: 'ACTIVE' }
+  );
+
+  model.evidence_artifacts.push(
+    { evidence_artifact_id: 'EV-1', artifact_type: 'fixture', content_hash: { algorithm: 'sha256', value: 'ev1' }, immutable: true },
+    { evidence_artifact_id: 'EV-2', artifact_type: 'fixture', content_hash: { algorithm: 'sha256', value: 'ev2' }, immutable: true }
+  );
+
+  model.global_player_identities.push(
+    { global_player_id: 'GP-1', status: 'ACTIVE' },
+    { global_player_id: 'GP-2', status: 'ACTIVE' }
+  );
+
+  const l1 = leagueWindowForTimestamp('2026-09-20T12:00:00Z');
+  const l2 = leagueWindowForTimestamp('2026-09-28T12:00:00Z');
+
+  model.leagues.push(
+    {
+      league_id: 'L-1',
+      name: null,
+      starts_at_utc: l1.starts_at_utc,
+      ends_at_utc: l1.ends_at_utc,
+      sequence: 1,
+      status: 'COMPLETED',
+      completed_at_utc: l1.ends_at_utc,
+      final_snapshot_id: null
+    },
+    {
+      league_id: 'L-2',
+      name: null,
+      starts_at_utc: l2.starts_at_utc,
+      ends_at_utc: l2.ends_at_utc,
+      sequence: 2,
+      status: 'ACTIVE',
+      completed_at_utc: null,
+      final_snapshot_id: null
+    }
+  );
+
+  model.clan_leagues.push(
+    { clan_league_id: 'CLAN-A-L1', clan_id: 'CLAN-A', league_id: 'L-1', status: 'COMPLETED', final_snapshot_id: null, opening_snapshot_id: 'SA-1' },
+    { clan_league_id: 'CLAN-A-L2', clan_id: 'CLAN-A', league_id: 'L-2', status: 'ACTIVE', final_snapshot_id: null, opening_snapshot_id: null },
+    { clan_league_id: 'CLAN-B-L2', clan_id: 'CLAN-B', league_id: 'L-2', status: 'ACTIVE', final_snapshot_id: null, opening_snapshot_id: null }
+  );
+
+  model.snapshots.push(
+    { snapshot_id: 'SA-1', clan_id: 'CLAN-A', league_id: 'L-1', clan_league_id: 'CLAN-A-L1', sequence: 1, official_timestamp_utc: '2026-09-20T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
+    { snapshot_id: 'SA-2', clan_id: 'CLAN-A', league_id: 'L-1', clan_league_id: 'CLAN-A-L1', sequence: 2, official_timestamp_utc: '2026-09-22T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } },
+    { snapshot_id: 'SB-1', clan_id: 'CLAN-B', league_id: 'L-2', clan_league_id: 'CLAN-B-L2', sequence: 1, official_timestamp_utc: '2026-09-26T12:00:00Z', member_count: 1, capacity: 50, provenance: { evidence_refs: ['EV-2'] } },
+    { snapshot_id: 'SA-3', clan_id: 'CLAN-A', league_id: 'L-2', clan_league_id: 'CLAN-A-L2', sequence: 3, official_timestamp_utc: '2026-09-28T12:00:00Z', member_count: 2, capacity: 50, provenance: { evidence_refs: ['EV-1'] } }
+  );
+
+  function obs(id, snapshotId, clanId, sourceKey, playerId, overrides = {}) {
+    return {
+      observation_id: id,
+      snapshot_id: snapshotId,
+      clan_id: clanId,
+      source_member_key: sourceKey,
+      source_identity: { source_system: clanId === 'CLAN-B' ? 'GOLDENCROWN' : 'PERSIA', source_identity_id: sourceKey },
+      global_player_id: playerId,
+      membership_episode_id: null,
       identity_resolution_status: playerId ? 'CONFIRMED' : 'UNRESOLVED',
       display_name: playerId === 'GP-2' ? 'Player Two' : 'Player One',
       rank: 1,
@@ -173,6 +290,7 @@ test('Missing opening Snapshot does not move League start', () => {
   const model = baseModel();
   const league = model.leagues.find((l) => l.league_id === 'L-2');
   const late = model.snapshots.find((s) => s.snapshot_id === 'SB-1');
+  assert.equal(late.clan_league_id, 'CLAN-B-L2');
   assert.equal(league.starts_at_utc, '2026-09-24T00:00:00.000Z');
   assert.ok(new Date(late.official_timestamp_utc).getTime() > new Date(league.starts_at_utc).getTime());
   assert.equal(validateCanonicalModel(model).valid, true);
