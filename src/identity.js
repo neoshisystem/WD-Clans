@@ -71,7 +71,7 @@ function resolveIdentity({ observation, candidates = [], resolutionDecision = nu
   }
 
   if (resolutionDecision.status === 'CONFIRMED' && !resolutionDecision.global_player_id) {
-    throw new Error('RESOLVED identity decision requires global_player_id');
+    throw new Error('CONFIRMED identity decision requires global_player_id');
   }
 
   return {
