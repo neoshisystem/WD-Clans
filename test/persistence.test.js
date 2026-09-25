@@ -93,7 +93,11 @@ function secondTransaction(baseTransaction, snapshotId, kills = 11000) {
   tx.canonical_patch.observations[0].snapshot_id = snapshotId;
   tx.canonical_patch.observations[0].observation_id = snapshotId + '::ROW-001';
   tx.canonical_patch.resolution_cases = [];
-  tx.canonical_patch.clan_leagues[0].opening_snapshot_id = snapshotId;
+  tx.canonical_patch.clan_leagues = [];
+  tx.canonical_patch.clans = [];
+  tx.canonical_patch.leagues = [];
+  tx.canonical_patch.observations[0].rank = 1;
+  tx.canonical_patch.snapshots[0].sequence = 2;
   tx.canonical_patch.observations[0].total_kills = kills;
   tx.plan_hash = sha256(tx.canonical_patch);
   return tx;
@@ -389,7 +393,21 @@ test('15. Late Snapshot does not modify League start', () => {
   assert.ok(new Date(state.snapshots[0].official_timestamp_utc) > new Date(state.leagues[0].starts_at_utc));
 });
 
-test('16. Missing final Snapshot remains representable', () => {
+test('16. Expected-version mismatch is a conflict with no state change', () => {
+  const { transaction } = confirmedTransaction();
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const first = adapter.commit(transaction);
+  assert.equal(first.result, 'COMMITTED');
+  const next = secondTransaction(transaction, 'S-ATOMIC-004');
+  next.expected_version = 0;
+  const before = adapter.read();
+  const result = adapter.commit(next);
+  assert.equal(result.result, 'CONFLICT');
+  assert.equal(result.reason, 'expected_version_mismatch');
+  assert.deepEqual(adapter.read(), before);
+});
+
+test('17. Missing final Snapshot remains representable', () => {
   const { transaction } = confirmedTransaction();
   const adapter = new InMemoryAtomicPersistenceAdapter();
   adapter.commit(transaction);

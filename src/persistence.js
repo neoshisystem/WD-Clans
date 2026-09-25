@@ -141,13 +141,13 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
     }));
 
   const patch = {
-    clans: [{
+    clans: input.snapshot.sequence === 1 ? [{
       clan_id: clanId,
       display_name: input.clan_name ?? null,
       status: 'ACTIVE',
       provenance: { evidence_refs: evidenceRefs }
-    }],
-    leagues: [{
+    }] : [],
+    leagues: input.snapshot.sequence === 1 ? [{
       league_id: leagueId,
       name: input.league.name ?? null,
       starts_at_utc: input.league.starts_at_utc,
@@ -156,8 +156,8 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       status: leagueStatus,
       completed_at_utc: leagueStatus === 'COMPLETED' ? input.league.ends_at_utc : null,
       provenance: { evidence_refs: evidenceRefs }
-    }],
-    clan_leagues: [{
+    }] : [],
+    clan_leagues: input.snapshot.sequence === 1 ? [{
       clan_league_id: 'CLANLEAGUE::' + clanId + '::' + leagueId,
       clan_id: clanId,
       league_id: leagueId,
@@ -165,7 +165,7 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       final_snapshot_id: null,
       opening_snapshot_id: snapshotId,
       provenance: { evidence_refs: evidenceRefs }
-    }],
+    }] : [],
     snapshots: [{
       snapshot_id: snapshotId,
       clan_id: clanId,

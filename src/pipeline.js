@@ -4,6 +4,7 @@ const { validate } = require('./validate-snapshot');
 const { bindSnapshotToLeague } = require('./league');
 const { resolveIdentity } = require('./identity');
 const { classifyMembership } = require('./membership');
+const { createSnapshotPersistencePlan } = require('./persistence');
 const {
   validateLifetimeMetrics,
   currentLeagueClanMedalDelta,
