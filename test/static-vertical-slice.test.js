@@ -86,7 +86,10 @@ test('Vertical Slice 5: committed static artifacts equal regenerated output', ()
     const sandbox = { globalThis: {} };
     vm.createContext(sandbox);
     vm.runInContext(fs.readFileSync(STATIC_BROWSER_PATH, 'utf8'), sandbox);
-    assert.deepEqual(sandbox.globalThis.UCS_STATIC_DATA, committedJson);
+    assert.equal(
+      JSON.stringify(sandbox.globalThis.UCS_STATIC_DATA),
+      JSON.stringify(committedJson)
+    );
   } finally {
     fs.rmSync(tempDir, { recursive: true, force: true });
   }
