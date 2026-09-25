@@ -212,13 +212,13 @@ test('11. SnapshotInput structural and domain validation remain separate', () =>
 
 test('12. Evidence Registry accepts all declared multi-source artifacts and fails closed on missing registration', () => {
   const input = adapt();
-  const registered = new InMemoryEvidenceRegistry(input.source.artifacts);
+  const registered = new InMemoryEvidenceRegistry({ artifacts: input.source.artifacts });
 
   assert.equal(validateSnapshotInputAgainstRegistry(registered, input).valid, true);
 
-  const partial = new InMemoryEvidenceRegistry(
-    input.source.artifacts.filter((artifact) => artifact.artifact_id !== 'PROFILE-001')
-  );
+  const partial = new InMemoryEvidenceRegistry({
+    artifacts: input.source.artifacts.filter((artifact) => artifact.artifact_id !== 'PROFILE-001')
+  });
   const check = validateSnapshotInputAgainstRegistry(partial, input);
   assert.equal(check.valid, false);
   assert.equal(check.reason, 'UNKNOWN_EVIDENCE_REFERENCE');
@@ -226,7 +226,7 @@ test('12. Evidence Registry accepts all declared multi-source artifacts and fail
 
 test('13. field-level provenance retains source lineage after Evidence Registry validation', () => {
   const input = adapt();
-  const registry = new InMemoryEvidenceRegistry(input.source.artifacts);
+  const registry = new InMemoryEvidenceRegistry({ artifacts: input.source.artifacts });
   assert.equal(validateSnapshotInputAgainstRegistry(registry, input).valid, true);
 
   const member = input.members.find((item) => item.source_member_key === 'RANK-01');
