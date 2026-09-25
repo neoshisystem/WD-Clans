@@ -126,7 +126,7 @@ test('1. Successful atomic commit persists the complete Snapshot write set', () 
 
 test('2. Simulated failure produces rollback', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   const before = adapter.read();
   const result = adapter.commit(transaction, { failureInjection: { throw_after_writes: 2 } });
   assert.equal(result.result, 'FAILED_ROLLED_BACK');
@@ -135,7 +135,7 @@ test('2. Simulated failure produces rollback', () => {
 
 test('3. No partial state remains after rollback', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction, { failureInjection: { throw_after_writes: 1 } });
   const state = adapter.read();
   assert.equal(state.global_player_identities.length, 1);
@@ -147,7 +147,7 @@ test('3. No partial state remains after rollback', () => {
 
 test('4. Exact transaction replay is idempotent', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   const first = adapter.commit(transaction);
   const second = adapter.commit(transaction);
   assert.equal(first.result, 'COMMITTED');
@@ -158,7 +158,7 @@ test('4. Exact transaction replay is idempotent', () => {
 
 test('5. Conflicting replay under the same idempotency key is detected', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const conflicting = structuredClone(transaction);
   conflicting.plan_hash = sha256({ different: true });
@@ -169,7 +169,7 @@ test('5. Conflicting replay under the same idempotency key is detected', () => {
 
 test('6. Identical duplicate Snapshot is deterministic and idempotent', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const replayWithoutLedger = new InMemoryAtomicPersistenceAdapter(adapter.read());
   const replay = replayWithoutLedger.commit(transaction);
@@ -178,7 +178,7 @@ test('6. Identical duplicate Snapshot is deterministic and idempotent', () => {
 
 test('7. Duplicate Snapshot with different content is a conflict', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const conflicting = structuredClone(transaction);
   conflicting.canonical_patch.observations[0].total_kills = 11000;
@@ -190,7 +190,7 @@ test('7. Duplicate Snapshot with different content is a conflict', () => {
 
 test('8. Historical Observation is preserved', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const before = adapter.read();
   const second = secondTransaction(transaction, 'S-ATOMIC-002');
@@ -222,7 +222,7 @@ test('9. Membership history is preserved', () => {
     { snapshot_id: 'S-OLD-B', clan_id: 'CLAN-B', league_id: 'L-OLD', clan_league_id: 'CLANLEAGUE::CLAN-B::L-OLD', sequence: 1, official_timestamp_utc: '2026-09-20T13:00:00Z', member_count: 0, capacity: 50 }
   );
   model.membership_events.push(
-    { membership_event_id: 'MEV-A', event_type: 'LEAVE', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', membership_episode_id: 'ME-A1', effective_at_utc: '2026-09-21T00:00:00Z', observed_snapshot_id: null, evidence_refs: [], authority_ref: 'AUTH-A' },
+    { membership_event_id: 'MEV-A', event_type: 'LEAVE', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', membership_episode_id: 'ME-A1', effective_at_utc: '2026-09-22T00:00:00Z', observed_snapshot_id: null, evidence_refs: [], authority_ref: 'AUTH-A' },
     { membership_event_id: 'MEV-B', event_type: 'LEAVE', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-B', membership_episode_id: 'ME-B1', effective_at_utc: '2026-09-22T00:00:00Z', observed_snapshot_id: null, evidence_refs: [], authority_ref: 'AUTH-B' }
   );
   model.membership_episodes.push(
@@ -293,13 +293,13 @@ test('10. Clan A -> Clan B -> Clan A remains intact', () => {
     });
   });
   model.membership_episodes.push(
-    { membership_episode_id: 'ME-A1', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', sequence: 1, status: 'ENDED', started_from_snapshot_id: 'S-A1', ended_at_utc: '2026-09-21T00:00:00Z', ended_by_event_id: 'EVT-AB' },
-    { membership_episode_id: 'ME-B1', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-B', sequence: 1, status: 'ENDED', started_from_snapshot_id: 'S-B1', ended_at_utc: '2026-09-22T00:00:00Z', ended_by_event_id: 'EVT-BA' },
+    { membership_episode_id: 'ME-A1', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', sequence: 1, status: 'ENDED', started_from_snapshot_id: 'S-A1', ended_at_utc: '2026-09-22T00:00:00Z', ended_by_event_id: 'EVT-AB' },
+    { membership_episode_id: 'ME-B1', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-B', sequence: 1, status: 'ENDED', started_from_snapshot_id: 'S-B1', ended_at_utc: '2026-09-23T00:00:00Z', ended_by_event_id: 'EVT-BA' },
     { membership_episode_id: 'ME-A2', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', sequence: 2, status: 'ACTIVE', started_from_snapshot_id: 'S-A2', ended_at_utc: null, ended_by_event_id: null }
   );
   model.membership_events.push(
     { membership_event_id: 'EVT-AB', event_type: 'TRANSFER', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-B', membership_episode_id: 'ME-B1', effective_at_utc: '2026-09-21T00:00:00Z', observed_snapshot_id: 'S-B1', from_clan_id: 'CLAN-A', to_clan_id: 'CLAN-B', evidence_refs: [], authority_ref: 'AUTH-AB' },
-    { membership_event_id: 'EVT-BA', event_type: 'TRANSFER', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', membership_episode_id: 'ME-A2', effective_at_utc: '2026-09-22T00:00:00Z', observed_snapshot_id: 'S-A2', from_clan_id: 'CLAN-B', to_clan_id: 'CLAN-A', evidence_refs: [], authority_ref: 'AUTH-BA' }
+    { membership_event_id: 'EVT-BA', event_type: 'TRANSFER', global_player_id: 'GP-SEED-001', clan_id: 'CLAN-A', membership_episode_id: 'ME-A2', effective_at_utc: '2026-09-23T00:00:00Z', observed_snapshot_id: 'S-A2', from_clan_id: 'CLAN-B', to_clan_id: 'CLAN-A', evidence_refs: [], authority_ref: 'AUTH-BA' }
   );
   validateCanonicalModel(model);
   assert.deepEqual(model.membership_episodes.map((e) => e.clan_id), ['CLAN-A', 'CLAN-B', 'CLAN-A']);
@@ -378,7 +378,7 @@ test('12. Ambiguous identity is persistable only as review, without false Global
 
 test('13. Lifetime metric anomaly cannot overwrite prior Observation', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const anomaly = secondTransaction(transaction, 'S-ATOMIC-003', 9990);
   const result = adapter.commit(anomaly);
@@ -396,7 +396,7 @@ test('13. Lifetime metric anomaly cannot overwrite prior Observation', () => {
 
 test('14. League and ClanLeague consistency is preserved', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const state = adapter.read();
   assert.equal(state.clan_leagues[0].league_id, state.leagues[0].league_id);
@@ -406,7 +406,7 @@ test('14. League and ClanLeague consistency is preserved', () => {
 
 test('15. Late Snapshot does not modify League start', () => {
   const { input, transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const state = adapter.read();
   assert.equal(state.leagues[0].starts_at_utc, input.league.starts_at_utc);
@@ -415,7 +415,7 @@ test('15. Late Snapshot does not modify League start', () => {
 
 test('16. Expected-version mismatch is a conflict with no state change', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   const first = adapter.commit(transaction);
   assert.equal(first.result, 'COMMITTED');
   const next = secondTransaction(transaction, 'S-ATOMIC-004');
@@ -439,7 +439,7 @@ test('17. Missing Global Identity is detected as a conflict before commit', () =
 
 test('18. Missing final Snapshot remains representable', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   adapter.commit(transaction);
   const state = adapter.read();
   assert.equal(state.clan_leagues[0].final_snapshot_id, null);
