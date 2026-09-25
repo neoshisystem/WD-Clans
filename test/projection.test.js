@@ -427,35 +427,19 @@ test('7. Different insertion order -> identical Projection', () => {
 
 test('8. Stable sorting with ties', () => {
   const model = buildCanonical();
-  const firstTie = structuredClone(model.snapshots.find((item) => item.snapshot_id === 'S-A2'));
-  firstTie.snapshot_id = 'S-A0';
+  const firstTie = structuredClone(model.snapshots.find((item) => item.snapshot_id === 'S-B1'));
+  firstTie.snapshot_id = 'S-B0';
   firstTie.sequence = 3;
+  firstTie.official_timestamp_utc = '2026-09-29T12:00:00Z';
+  firstTie.member_count = 0;
+  firstTie.opening_snapshot_id = null;
+  firstTie.clan_league_id = 'CLANLEAGUE::CLAN-B::L1';
+  firstTie.provenance = provenance(['E-B']);
   model.snapshots.push(firstTie);
-  model.observations.push({
-    observation_id: 'S-A0::ROW-001',
-    snapshot_id: 'S-A0',
-    clan_id: 'CLAN-A',
-    source_member_key: 'ROW-001',
-    global_player_id: 'GP-001',
-    membership_episode_id: 'ME-A1',
-    identity_resolution_status: 'CONFIRMED',
-    display_name: 'Alpha Prime',
-    rank: 1,
-    stage: 11,
-    role: 'Member',
-    weapons: { '25mm': 5, hydra: 4 },
-    total_kills: 10250,
-    lifetime_medals: { gold: 6 },
-    current_league_clan_medals: 31,
-    profile_total_clan_medal_count: 31,
-    last_online_utc: '2026-09-29T12:00:00Z',
-    provenance: { evidence_refs: ['E-A'] }
-  });
-  model.snapshots.find((item) => item.snapshot_id === 'S-A0').member_count = 1;
   validateCanonicalModel(model);
   const snapshots = new ProjectionEngine().projectSnapshots(model);
   const sameTime = snapshots.filter((item) => item.official_timestamp_utc === '2026-09-29T12:00:00Z');
-  assert.deepEqual(sameTime.map((item) => item.snapshot_id), ['S-A0', 'S-A2']);
+  assert.deepEqual(sameTime.map((item) => item.snapshot_id), ['S-A2', 'S-B0']);
 });
 
 test('9. Missing field remains missing', () => {
@@ -532,7 +516,7 @@ test('17. Multi-clan Global Player history remains separated by membership', () 
 test('18. League-scoped metrics are not accidentally aggregated as lifetime metrics', () => {
   const history = new ProjectionEngine().projectPlayerHistory(buildCanonical())
     .find((item) => item.global_player_id === 'GP-001');
-  assert.deepEqual(history.observations.map((item) => item.current_league_clan_medals), [10, 30, 5, 7]);
+  assert.deepEqual(history.observations.map((item) => item.current_league_clan_medals), [10, 5, 30, 7]);
   assert.equal(history.observations[history.observations.length - 1].total_kills, 10500);
 });
 
@@ -541,7 +525,7 @@ test('19. Membership-episode metrics are not accidentally aggregated across epis
     .find((item) => item.global_player_id === 'GP-001');
   assert.deepEqual(
     history.observations.map((item) => [item.membership_episode_id, item.profile_total_clan_medal_count]),
-    [['ME-A1', 10], ['ME-A1', 30], ['ME-B1', 5], ['ME-B2', 7]]
+    [['ME-A1', 10], ['ME-B1', 5], ['ME-A1', 30], ['ME-B2', 7]]
   );
 });
 
