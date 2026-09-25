@@ -283,6 +283,18 @@ function applyPatch(candidate, patch, failureInjection) {
   return writes;
 }
 
+function preflightTransaction(state, transaction) {
+  for (const globalPlayerId of transaction.domain_scope.confirmed_global_player_ids || []) {
+    if (!state.global_player_identities.some((player) => player.global_player_id === globalPlayerId)) {
+      return {
+        result: 'CONFLICT',
+        reason: 'confirmed_global_player_identity_missing:' + globalPlayerId
+      };
+    }
+  }
+  return null;
+}
+
 function compareExistingSnapshot(state, transaction) {
   const snapshot = state.snapshots.find(
     (item) => item.snapshot_id === transaction.domain_scope.snapshot_id
@@ -367,6 +379,19 @@ class InMemoryAtomicPersistenceAdapter extends CanonicalPersistencePort {
         state_changed: false,
         version: this._version,
         reason: 'idempotency_key_reused_with_different_plan'
+      };
+    }
+
+    const referenceConflict = preflightTransaction(this._state, transaction);
+    if (referenceConflict) {
+      return {
+        result: referenceConflict.result,
+        transaction_id: transaction.transaction_id,
+        idempotency_key: transaction.idempotency_key,
+        committed: false,
+        state_changed: false,
+        version: this._version,
+        reason: referenceConflict.reason
       };
     }
 

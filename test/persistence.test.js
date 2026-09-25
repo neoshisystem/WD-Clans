@@ -56,13 +56,20 @@ function snapshotInput(overrides = {}) {
   };
 }
 
-function seedWithPlayer() {
+function seedWithPlayer(includeOther = false) {
   const model = emptyCanonicalModel();
   model.global_player_identities.push({
     global_player_id: 'GP-SEED-001',
     status: 'ACTIVE',
     provenance: { evidence_refs: [] }
   });
+  if (includeOther) {
+  model.global_player_identities.push({
+    global_player_id: 'GP-OTHER-002',
+    status: 'ACTIVE',
+    provenance: { evidence_refs: [] }
+  });
+  }
   return model;
 }
 
@@ -105,7 +112,7 @@ function secondTransaction(baseTransaction, snapshotId, kills = 11000) {
 
 test('1. Successful atomic commit persists the complete Snapshot write set', () => {
   const { transaction } = confirmedTransaction();
-  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
   const result = adapter.commit(transaction);
   assert.equal(result.result, 'COMMITTED');
   const state = adapter.read();
@@ -254,19 +261,22 @@ test('10. Clan A -> Clan B -> Clan A remains intact', () => {
   });
   const pairs = [['CLAN-A', 'S-A1'], ['CLAN-B', 'S-B1'], ['CLAN-A', 'S-A2']];
   pairs.forEach(([clanId, snapshotId], index) => {
-    model.clan_leagues.push({
-      clan_league_id: 'CLANLEAGUE::' + clanId + '::L-OLD',
-      clan_id: clanId,
-      league_id: 'L-OLD',
-      status: 'COMPLETED',
-      final_snapshot_id: null,
-      opening_snapshot_id: snapshotId
-    });
+    const clanLeagueId = 'CLANLEAGUE::' + clanId + '::L-OLD';
+    if (!model.clan_leagues.some((item) => item.clan_league_id === clanLeagueId)) {
+      model.clan_leagues.push({
+        clan_league_id: clanLeagueId,
+        clan_id: clanId,
+        league_id: 'L-OLD',
+        status: 'COMPLETED',
+        final_snapshot_id: null,
+        opening_snapshot_id: snapshotId
+      });
+    }
     model.snapshots.push({
       snapshot_id: snapshotId,
       clan_id: clanId,
       league_id: 'L-OLD',
-      clan_league_id: 'CLANLEAGUE::' + clanId + '::L-OLD',
+      clan_league_id: clanLeagueId,
       sequence: index + 1,
       official_timestamp_utc: '2026-09-2' + (index + 1) + 'T12:00:00Z',
       member_count: 0,
@@ -346,11 +356,11 @@ test('12. Ambiguous identity is persistable only as review, without false Global
     }
   });
   assert.equal(plan.transaction_status, 'REVIEW_REQUIRED');
-  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer(true));
   const result = adapter.commit(plan.persistence.transaction, { allowReviewPersistence: true });
   assert.equal(result.result, 'REVIEW_REQUIRED');
   const state = adapter.read();
-  assert.equal(state.global_player_identities.length, 1);
+  assert.equal(state.global_player_identities.length, 2);
   assert.equal(state.observations[0].global_player_id, null);
   assert.equal(state.observations[0].identity_resolution_status, 'AMBIGUOUS');
   assert.equal(state.resolution_cases[0].candidate_global_player_ids.length, 2);
@@ -407,7 +417,17 @@ test('16. Expected-version mismatch is a conflict with no state change', () => {
   assert.deepEqual(adapter.read(), before);
 });
 
-test('17. Missing final Snapshot remains representable', () => {
+test('17. Missing Global Identity is detected as a conflict before commit', () => {
+  const { transaction } = confirmedTransaction();
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const before = adapter.read();
+  const result = adapter.commit(transaction);
+  assert.equal(result.result, 'CONFLICT');
+  assert.match(result.reason, /confirmed_global_player_identity_missing/);
+  assert.deepEqual(adapter.read(), before);
+});
+
+test('18. Missing final Snapshot remains representable', () => {
   const { transaction } = confirmedTransaction();
   const adapter = new InMemoryAtomicPersistenceAdapter();
   adapter.commit(transaction);
