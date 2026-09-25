@@ -201,3 +201,49 @@ test('Monotonic lifetime decrease is an anomaly, not an automatic reset', () => 
   assert.equal(anomaly.delta, -10);
   assert.equal(anomaly.reason, 'monotonic_metric_decreased');
 });
+
+
+test('Snapshot transaction plan blocks unresolved identity without side effects', () => {
+  const { prepareSnapshotTransaction } = require('../src');
+  const window = leagueWindowForTimestamp('2026-09-26T12:00:00Z');
+  const input = {
+    project_id: 'UCS',
+    clan_id: 'CLAN-A',
+    schema_version: '0.1',
+    snapshot: {
+      snapshot_id: 'S-TEST-001',
+      sequence: 1,
+      official_timestamp_utc: '2026-09-26T12:00:00Z',
+      member_count: 1,
+      capacity: 50
+    },
+    league: {
+      league_id: 'LEAGUE-2026-09-24',
+      starts_at_utc: window.starts_at_utc,
+      ends_at_utc: window.ends_at_utc
+    },
+    source: {
+      artifact_id: 'EV-TEST-SNAPSHOT-001',
+      artifact_type: 'test-fixture',
+      content_hash: { algorithm: 'sha256', value: 'test-hash' }
+    },
+    members: [{
+      source_member_key: 'ROW-001',
+      rank: 1,
+      display_name: 'Player A',
+      role: 'Member',
+      stage: 10,
+      weapons: { '25mm': 4 },
+      total_kills: 10000,
+      lifetime_medals: { bronze: 2 },
+      current_league_clan_medals: 100,
+      profile_total_clan_medal_count: 100
+    }]
+  };
+
+  const plan = prepareSnapshotTransaction(input);
+  assert.equal(plan.transaction_status, 'REVIEW_REQUIRED');
+  assert.equal(plan.persistence.side_effects_executed, false);
+  assert.equal(plan.members[0].identity_resolution.status, 'UNRESOLVED');
+  assert.equal(plan.review_reasons[0].reason, 'identity_resolution_not_confirmed');
+});
