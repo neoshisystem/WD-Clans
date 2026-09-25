@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wd-clans.local/schemas/canonical-data-model.v0.1.json",
+  "title": "UCS Canonical Data Model v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "clans",
+    "leagues",
+    "snapshots",
+    "observations",
+    "global_player_identities",
+    "membership_episodes",
+    "membership_events",
+    "evidence_artifacts",
+    "resolution_cases",
+    "delta_results"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "clans": { "type": "array", "items": { "$ref": "#/$defs/clan" } },
+    "leagues": { "type": "array", "items": { "$ref": "#/$defs/league" } },
+    "snapshots": { "type": "array", "items": { "$ref": "#/$defs/snapshot" } },
+    "observations": { "type": "array", "items": { "$ref": "#/$defs/observation" } },
+    "global_player_identities": { "type": "array", "items": { "$ref": "#/$defs/globalPlayerIdentity" } },
+    "membership_episodes": { "type": "array", "items": { "$ref": "#/$defs/membershipEpisode" } },
+    "membership_events": { "type": "array", "items": { "$ref": "#/$defs/membershipEvent" } },
+    "evidence_artifacts": { "type": "array", "items": { "$ref": "#/$defs/evidenceArtifact" } },
+    "resolution_cases": { "type": "array", "items": { "$ref": "#/$defs/resolutionCase" } },
+    "delta_results": { "type": "array", "items": { "$ref": "#/$defs/deltaResult" } }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_refs"],
+      "properties": {
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "clan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["clan_id", "status"],
+      "properties": {
+        "clan_id": { "type": "string", "minLength": 1 },
+        "display_name": { "type": ["string", "null"] },
+        "status": { "type": "string", "enum": ["ACTIVE", "INACTIVE", "UNKNOWN"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "league": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["league_id", "starts_at_utc", "ends_at_utc", "status"],
+      "properties": {
+        "league_id": { "type": "string", "minLength": 1 },
+        "name": { "type": ["string", "null"] },
+        "starts_at_utc": { "type": "string", "format": "date-time" },
+        "ends_at_utc": { "type": "string", "format": "date-time" },
+        "sequence": { "type": ["integer", "null"], "minimum": 1 },
+        "status": { "type": "string", "enum": ["SCHEDULED", "ACTIVE", "COMPLETED", "UNKNOWN"] },
+        "completed_at_utc": { "type": ["string", "null"], "format": "date-time" },
+        "final_snapshot_id": { "type": ["string", "null"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "snapshot_id",
+        "clan_id",
+        "league_id",
+        "sequence",
+        "official_timestamp_utc",
+        "member_count",
+        "capacity"
+      ],
+      "properties": {
+        "snapshot_id": { "type": "string", "minLength": 1 },
+        "clan_id": { "type": "string", "minLength": 1 },
+        "league_id": { "type": "string", "minLength": 1 },
+        "sequence": { "type": "integer", "minimum": 1 },
+        "official_timestamp_utc": { "type": "string", "format": "date-time" },
+        "member_count": { "type": "integer", "minimum": 0 },
+        "capacity": { "type": "integer", "minimum": 0 },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id",
+        "snapshot_id",
+        "clan_id",
+        "source_member_key",
+        "display_name",
+        "rank",
+        "stage",
+        "weapons",
+        "total_kills",
+        "lifetime_medals",
+        "current_league_clan_medals",
+        "profile_total_clan_medal_count"
+      ],
+      "properties": {
+        "observation_id": { "type": "string", "minLength": 1 },
+        "snapshot_id": { "type": "string", "minLength": 1 },
+        "clan_id": { "type": "string", "minLength": 1 },
+        "source_member_key": { "type": "string", "minLength": 1 },
+        "global_player_id": { "type": ["string", "null"] },
+        "identity_resolution_status": {
+          "type": "string",
+          "enum": ["CONFIRMED", "AMBIGUOUS", "UNRESOLVED", "CONTRADICTION", "UNKNOWN"]
+        },
+        "display_name": { "type": "string", "minLength": 1 },
+        "rank": { "type": "integer", "minimum": 1 },
+        "stage": { "type": "integer", "minimum": 0 },
+        "role": { "type": ["string", "null"] },
+        "weapons": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "total_kills": { "type": "integer", "minimum": 0 },
+        "lifetime_medals": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "current_league_clan_medals": { "type": "integer", "minimum": 0 },
+        "profile_total_clan_medal_count": { "type": "integer", "minimum": 0 },
+        "last_online_utc": { "type": ["string", "null"], "format": "date-time" },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "globalPlayerIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["global_player_id", "status"],
+      "properties": {
+        "global_player_id": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "enum": ["ACTIVE", "INACTIVE", "UNKNOWN"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "membershipEpisode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "membership_episode_id",
+        "global_player_id",
+        "clan_id",
+        "sequence",
+        "status",
+        "started_from_snapshot_id"
+      ],
+      "properties": {
+        "membership_episode_id": { "type": "string", "minLength": 1 },
+        "global_player_id": { "type": "string", "minLength": 1 },
+        "clan_id": { "type": "string", "minLength": 1 },
+        "sequence": { "type": "integer", "minimum": 1 },
+        "status": { "type": "string", "enum": ["ACTIVE", "ENDED", "UNKNOWN"] },
+        "started_from_snapshot_id": { "type": "string", "minLength": 1 },
+        "ended_at_utc": { "type": ["string", "null"], "format": "date-time" },
+        "ended_by_event_id": { "type": ["string", "null"] },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "membershipEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "membership_event_id",
+        "event_type",
+        "global_player_id",
+        "clan_id",
+        "effective_at_utc"
+      ],
+      "properties": {
+        "membership_event_id": { "type": "string", "minLength": 1 },
+        "event_type": {
+          "type": "string",
+          "enum": ["JOIN", "LEAVE", "RETURN", "TRANSFER", "UNKNOWN_CHANGE", "NOT_OBSERVED"]
+        },
+        "global_player_id": { "type": "string", "minLength": 1 },
+        "clan_id": { "type": "string", "minLength": 1 },
+        "membership_episode_id": { "type": ["string", "null"] },
+        "effective_at_utc": { "type": "string", "format": "date-time" },
+        "observed_snapshot_id": { "type": ["string", "null"] },
+        "from_clan_id": { "type": ["string", "null"] },
+        "to_clan_id": { "type": ["string", "null"] },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "authority_ref": { "type": ["string", "null"] },
+        "precision": { "type": ["string", "null"] }
+      }
+    },
+    "evidenceArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_artifact_id",
+        "artifact_type",
+        "content_hash",
+        "immutable"
+      ],
+      "properties": {
+        "evidence_artifact_id": { "type": "string", "minLength": 1 },
+        "artifact_type": { "type": "string", "minLength": 1 },
+        "content_hash": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": { "type": "string", "minLength": 1 },
+            "value": { "type": "string", "minLength": 1 }
+          }
+        },
+        "source_location": { "type": ["string", "null"] },
+        "received_at_utc": { "type": ["string", "null"], "format": "date-time" },
+        "immutable": { "const": true }
+      }
+    },
+    "resolutionCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resolution_case_id",
+        "observation_id",
+        "status",
+        "candidate_global_player_ids",
+        "evidence_refs"
+      ],
+      "properties": {
+        "resolution_case_id": { "type": "string", "minLength": 1 },
+        "observation_id": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["CONFIRMED", "AMBIGUOUS", "UNRESOLVED", "CONTRADICTION", "UNKNOWN"]
+        },
+        "candidate_global_player_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "matched_global_player_id": { "type": ["string", "null"] },
+        "signals": { "type": "object", "additionalProperties": true },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "authority_ref": { "type": ["string", "null"] },
+        "process_ref": { "type": ["string", "null"] },
+        "decided_at_utc": { "type": ["string", "null"], "format": "date-time" },
+        "reason": { "type": ["string", "null"] }
+      }
+    },
+    "deltaResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "delta_id",
+        "current_observation_id",
+        "metric_key",
+        "scope",
+        "status"
+      ],
+      "properties": {
+        "delta_id": { "type": "string", "minLength": 1 },
+        "current_observation_id": { "type": "string", "minLength": 1 },
+        "baseline_observation_id": { "type": ["string", "null"] },
+        "baseline_type": {
+          "type": "string",
+          "enum": [
+            "PREVIOUS_VALID_OBSERVATION",
+            "NEW_LEAGUE_ZERO",
+            "NEW_MEMBERSHIP_EPISODE_ZERO",
+            "NONE",
+            "UNKNOWN"
+          ]
+        },
+        "metric_key": { "type": "string", "minLength": 1 },
+        "scope": {
+          "type": "string",
+          "enum": ["PLAYER_LIFETIME", "LEAGUE", "MEMBERSHIP_EPISODE"]
+        },
+        "clan_id": { "type": ["string", "null"] },
+        "league_id": { "type": ["string", "null"] },
+        "membership_episode_id": { "type": ["string", "null"] },
+        "delta": { "type": ["integer", "null"] },
+        "status": {
+          "type": "string",
+          "enum": ["VALID", "BASELINE_UNAVAILABLE", "ANOMALY", "UNKNOWN"]
+        },
+        "reason": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
