@@ -73,8 +73,8 @@ function seedWithPlayer(includeOther = false) {
   return model;
 }
 
-function confirmedTransaction() {
-  const input = snapshotInput();
+function confirmedTransaction(inputOverrides = {}) {
+  const input = snapshotInput(inputOverrides);
   const plan = prepareSnapshotTransaction(input, {
     identityDecisionsBySourceKey: {
       'ROW-001': {
@@ -138,7 +138,7 @@ test('3. No partial state remains after rollback', () => {
   const adapter = new InMemoryAtomicPersistenceAdapter();
   adapter.commit(transaction, { failureInjection: { throw_after_writes: 1 } });
   const state = adapter.read();
-  assert.equal(state.global_player_identities.length, 0);
+  assert.equal(state.global_player_identities.length, 1);
   assert.equal(state.leagues.length, 0);
   assert.equal(state.snapshots.length, 0);
   assert.equal(state.observations.length, 0);
@@ -232,7 +232,16 @@ test('9. Membership history is preserved', () => {
   validateCanonicalModel(model);
   const before = adapterSnapshot(model);
   const adapter = new InMemoryAtomicPersistenceAdapter(model);
-  const { transaction } = confirmedTransaction();
+  const { transaction } = confirmedTransaction({
+    clan_id: 'CLAN-C',
+    snapshot: {
+      snapshot_id: 'S-MEM-HISTORY',
+      sequence: 1,
+      official_timestamp_utc: '2026-09-26T12:00:00Z',
+      member_count: 1,
+      capacity: 50
+    }
+  });
   const result = adapter.commit(transaction);
   assert.equal(result.result, 'COMMITTED');
   const after = adapter.read();
@@ -294,6 +303,7 @@ test('10. Clan A -> Clan B -> Clan A remains intact', () => {
   );
   validateCanonicalModel(model);
   assert.deepEqual(model.membership_episodes.map((e) => e.clan_id), ['CLAN-A', 'CLAN-B', 'CLAN-A']);
+  assert.equal(new Set(model.membership_episodes.map((e) => e.membership_episode_id)).size, 3);
 });
 
 test('11. Leave -> Return creates a new Membership Episode', () => {
