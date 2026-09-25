@@ -27,17 +27,20 @@ Clan owns Clan-scoped history.
 
 League is an independent game-time entity.
 
+ClanLeague is the Clan × League participation context. It carries Clan-specific opening/final capture references without changing League's game-time boundaries.
+
 Snapshot:
 - belongs to one Clan;
-- binds to one League;
+- binds to one League and one ClanLeague;
 - has one official observation timestamp;
 - never defines the League boundary.
 
 Observation:
 - belongs to one Snapshot and Clan;
+- may reference one Membership Episode only after identity is confirmed;
 - retains observed player state;
 - may temporarily have no Global Player Identity when resolution is unresolved;
-- preserves source_member_key.
+- preserves source_member_key and optional source_identity.
 
 Global Player Identity:
 - is independent of Clan;
@@ -81,9 +84,9 @@ The scopes are intentionally separate.
 
 A League carries game-time completion separately from Snapshot capture.
 
-completed_at_utc represents completion by the fixed game boundary.
-final_snapshot_id may be null.
-A null final snapshot means no final Snapshot was captured; it does not mean the League remained active.
+completed_at_utc represents completion at the fixed game boundary.
+A ClanLeague carries final_snapshot_id and opening_snapshot_id independently for that Clan.
+A null final_snapshot_id means no final Snapshot was captured for that ClanLeague; it does not mean the League remained active.
 
 No synthetic Snapshot is created.
 
