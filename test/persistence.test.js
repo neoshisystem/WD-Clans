@@ -446,3 +446,62 @@ test('18. Missing final Snapshot remains representable', () => {
   assert.equal(state.clan_leagues[0].final_snapshot_id, null);
   assert.equal(state.leagues[0].completed_at_utc, null);
 });
+
+test('19. Multi-entity canonical patch commits Snapshot, Observation and Membership together', () => {
+  const { transaction } = confirmedTransaction();
+  const membershipEpisodeId = 'ME-ATOMIC-001';
+  transaction.canonical_patch.observations[0].membership_episode_id = membershipEpisodeId;
+  transaction.canonical_patch.membership_episodes.push({
+    membership_episode_id: membershipEpisodeId,
+    global_player_id: 'GP-SEED-001',
+    clan_id: 'CLAN-A',
+    sequence: 1,
+    status: 'ACTIVE',
+    started_from_snapshot_id: 'S-ATOMIC-001',
+    ended_at_utc: null,
+    ended_by_event_id: null
+  });
+  transaction.canonical_patch.membership_events.push({
+    membership_event_id: 'MEV-ATOMIC-001',
+    event_type: 'JOIN',
+    global_player_id: 'GP-SEED-001',
+    clan_id: 'CLAN-A',
+    membership_episode_id: membershipEpisodeId,
+    effective_at_utc: '2026-09-26T12:00:00Z',
+    observed_snapshot_id: 'S-ATOMIC-001',
+    evidence_refs: ['EV-ATOMIC-001'],
+    authority_ref: null
+  });
+  transaction.plan_hash = sha256(transaction.canonical_patch);
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
+  const result = adapter.commit(transaction);
+  assert.equal(result.result, 'COMMITTED');
+  const state = adapter.read();
+  assert.equal(state.snapshots.length, 1);
+  assert.equal(state.observations.length, 1);
+  assert.equal(state.membership_episodes.length, 1);
+  assert.equal(state.membership_events.length, 1);
+  assert.equal(state.observations[0].membership_episode_id, membershipEpisodeId);
+});
+
+test('20. Transaction plan hash is deterministic across object key order', () => {
+  const input1 = snapshotInput();
+  const input2 = structuredClone(input1);
+  input2.members[0].weapons = { hydra: 3, '25mm': 4 };
+  input2.members[0].lifetime_medals = { bronze: 2 };
+  const context = {
+    identityDecisionsBySourceKey: {
+      'ROW-001': {
+        status: 'CONFIRMED',
+        global_player_id: 'GP-SEED-001',
+        evidence_refs: [input1.source.artifact_id],
+        authority_ref: 'AUTH-TEST-001',
+        decided_at_utc: '2026-09-26T12:00:00Z',
+        reason: 'test confirmation'
+      }
+    }
+  };
+  const first = prepareSnapshotTransaction(input1, context);
+  const second = prepareSnapshotTransaction(input2, context);
+  assert.equal(first.persistence.transaction.plan_hash, second.persistence.transaction.plan_hash);
+});
