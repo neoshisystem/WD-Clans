@@ -4,15 +4,7 @@
   "title": "UCS Standard Snapshot Input v0.1",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "project_id",
-    "clan_id",
-    "schema_version",
-    "snapshot",
-    "league",
-    "source",
-    "members"
-  ],
+  "required": ["project_id","clan_id","schema_version","snapshot","league","source","members"],
   "properties": {
     "project_id": { "const": "UCS" },
     "clan_id": { "type": "string", "minLength": 1 },
@@ -20,7 +12,7 @@
     "snapshot": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["snapshot_id", "sequence", "official_timestamp_utc", "member_count", "capacity"],
+      "required": ["snapshot_id","sequence","official_timestamp_utc","member_count","capacity"],
       "properties": {
         "snapshot_id": { "type": "string", "minLength": 1 },
         "sequence": { "type": "integer", "minimum": 1 },
@@ -32,16 +24,13 @@
     "league": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["league_id", "starts_at_utc", "ends_at_utc"],
+      "required": ["league_id","starts_at_utc","ends_at_utc"],
       "properties": {
         "league_id": { "type": "string", "minLength": 1 },
-        "name": { "type": ["string", "null"] },
-        "sequence": { "type": ["integer", "null"], "minimum": 1 },
-        "status": { "type": ["string", "null"] },
-        "provenance": {
-          "type": ["object", "null"],
-          "additionalProperties": true
-        },
+        "name": { "type": ["string","null"] },
+        "sequence": { "type": ["integer","null"], "minimum": 1 },
+        "status": { "type": ["string","null"] },
+        "provenance": { "type": ["object","null"], "additionalProperties": true },
         "starts_at_utc": { "type": "string", "format": "date-time" },
         "ends_at_utc": { "type": "string", "format": "date-time" }
       }
@@ -49,18 +38,23 @@
     "source": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["artifact_id", "artifact_type", "content_hash"],
+      "required": ["artifact_id","artifact_type","content_hash"],
       "properties": {
         "artifact_id": { "type": "string", "minLength": 1 },
         "artifact_type": { "type": "string", "minLength": 1 },
         "content_hash": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["algorithm", "value"],
+          "required": ["algorithm","value"],
           "properties": {
             "algorithm": { "type": "string", "minLength": 1 },
             "value": { "type": "string", "minLength": 1 }
           }
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/sourceArtifact" }
         }
       }
     },
@@ -69,49 +63,76 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "source_member_key",
-          "rank",
-          "display_name",
-          "stage",
-          "weapons",
-          "total_kills",
-          "lifetime_medals",
-          "current_league_clan_medals",
-          "profile_total_clan_medal_count"
-        ],
+        "required": ["source_member_key","rank","display_name","stage","weapons","total_kills","lifetime_medals","current_league_clan_medals","profile_total_clan_medal_count"],
         "properties": {
           "source_member_key": { "type": "string", "minLength": 1 },
           "rank": { "type": "integer", "minimum": 1 },
           "display_name": { "type": "string", "minLength": 1 },
-          "role": { "type": ["string", "null"] },
+          "role": { "type": ["string","null"] },
           "stage": { "type": "integer", "minimum": 0 },
-          "weapons": {
-            "type": "object",
-            "additionalProperties": { "type": "integer", "minimum": 0 }
-          },
-          "total_kills": { "type": "integer", "minimum": 0 },
-          "lifetime_medals": {
-            "type": "object",
-            "additionalProperties": { "type": "integer", "minimum": 0 }
-          },
+          "weapons": { "type": ["object","null"], "additionalProperties": { "type": "integer", "minimum": 0 } },
+          "total_kills": { "type": ["integer","null"], "minimum": 0 },
+          "lifetime_medals": { "type": ["object","null"], "additionalProperties": { "type": "integer", "minimum": 0 } },
           "current_league_clan_medals": { "type": "integer", "minimum": 0 },
-          "profile_total_clan_medal_count": { "type": "integer", "minimum": 0 },
-          "last_online_utc": { "type": ["string", "null"], "format": "date-time" },
+          "profile_total_clan_medal_count": { "type": ["integer","null"], "minimum": 0 },
+          "last_online_utc": { "type": ["string","null"], "format": "date-time" },
           "source_identity": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["source_system", "source_identity_id"],
+            "required": ["source_system","source_identity_id"],
             "properties": {
               "source_system": { "type": "string", "minLength": 1 },
               "source_identity_id": { "type": "string", "minLength": 1 }
             }
           },
-          "evidence_refs": {
-            "type": "array",
-            "items": { "type": "string", "minLength": 1 }
+          "evidence_refs": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "field_provenance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "rank": { "$ref": "#/$defs/fieldProvenance" },
+              "display_name": { "$ref": "#/$defs/fieldProvenance" },
+              "role": { "$ref": "#/$defs/fieldProvenance" },
+              "stage": { "$ref": "#/$defs/fieldProvenance" },
+              "weapons": { "$ref": "#/$defs/fieldProvenance" },
+              "total_kills": { "$ref": "#/$defs/fieldProvenance" },
+              "lifetime_medals": { "$ref": "#/$defs/fieldProvenance" },
+              "current_league_clan_medals": { "$ref": "#/$defs/fieldProvenance" },
+              "profile_total_clan_medal_count": { "$ref": "#/$defs/fieldProvenance" },
+              "last_online_utc": { "$ref": "#/$defs/fieldProvenance" }
+            }
           }
         }
+      }
+    }
+  },
+  "$defs": {
+    "sourceArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id","artifact_type","content_hash"],
+      "properties": {
+        "artifact_id": { "type": "string", "minLength": 1 },
+        "artifact_type": { "type": "string", "minLength": 1 },
+        "source_location": { "type": ["string","null"] },
+        "content_hash": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm","value"],
+          "properties": {
+            "algorithm": { "type": "string", "minLength": 1 },
+            "value": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "fieldProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status","evidence_refs"],
+      "properties": {
+        "status": { "enum": ["OBSERVED","NOT_VISIBLE","UNKNOWN","AMBIGUOUS","CONFLICTING"] },
+        "evidence_refs": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
       }
     }
   }
