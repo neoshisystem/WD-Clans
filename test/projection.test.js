@@ -302,7 +302,8 @@ function buildCanonical() {
       provenance: {
         evidence_refs: ['E-B'],
         field_provenance: {
-          current_league_clan_medals: { status: 'OBSERVED', evidence_refs: ['E-B'] }
+          current_league_clan_medals: { status: 'CONFLICTING', evidence_refs: ['E-B', 'E-A'] },
+          last_online_utc: { status: 'UNKNOWN', evidence_refs: ['E-B'] }
         }
       }
     },
@@ -498,14 +499,105 @@ test('15. Projection preserves provenance references', () => {
   assert.ok(gp1.provenance.canonical_refs.includes('S-B2::ROW-001'));
 });
 
-test('16. Evidence references remain traceable', () => {
+test('16. Field-level provenance preserves multiple evidence refs and status', () => {
+  const member = new ProjectionEngine().projectSnapshots(buildCanonical())
+    .find((item) => item.snapshot_id === 'S-B2')
+    .members.find((item) => item.observation_id === 'S-B2::ROW-001');
+
+  assert.deepEqual(member.provenance.evidence_refs, ['E-B']);
+  assert.deepEqual(member.provenance.field_provenance.current_league_clan_medals, {
+    status: 'CONFLICTING',
+    evidence_refs: ['E-B', 'E-A']
+  });
+  assert.deepEqual(member.provenance.field_provenance.last_online_utc, {
+    status: 'UNKNOWN',
+    evidence_refs: ['E-B']
+  });
+});
+
+test('17. Field-level provenance preserves missing/null field values', () => {
+  const model = buildCanonical();
+  const canonicalObservation = model.observations.find((item) => item.observation_id === 'S-B2::ROW-001');
+  canonicalObservation.last_online_utc = null;
+  validateCanonicalModel(model);
+
+  const projected = new ProjectionEngine().projectSnapshots(model)
+    .find((item) => item.snapshot_id === 'S-B2')
+    .members.find((item) => item.observation_id === 'S-B2::ROW-001');
+
+  assert.equal(projected.last_online_utc, null);
+  assert.deepEqual(projected.provenance.field_provenance.last_online_utc, {
+    status: 'UNKNOWN',
+    evidence_refs: ['E-B']
+  });
+  assert.notEqual(projected.last_online_utc, 0);
+  assert.notEqual(projected.last_online_utc, '');
+  assert.notEqual(projected.last_online_utc, false);
+});
+
+test('18. Field-level provenance is deterministic across repeated projection', () => {
+  const model = buildCanonical();
+  const projector = new ProjectionEngine();
+  const first = stableStringify(projector.projectAll(model));
+  const second = stableStringify(projector.projectAll(model));
+  assert.equal(first, second);
+});
+
+test('19. Field-level provenance projection does not mutate Canonical', () => {
+  const model = buildCanonical();
+  const before = stableStringify(model);
+  new ProjectionEngine().projectAll(model);
+  assert.equal(stableStringify(model), before);
+});
+
+test('20. Previous Read Model mutation of field provenance does not affect later projection', () => {
+  const model = buildCanonical();
+  const projector = new ProjectionEngine();
+  const first = projector.projectAll(model);
+  const firstMember = first.snapshots
+    .find((item) => item.snapshot_id === 'S-B2')
+    .members.find((item) => item.observation_id === 'S-B2::ROW-001');
+
+  firstMember.provenance.field_provenance.current_league_clan_medals.evidence_refs.push('E-FAKE');
+  firstMember.provenance.field_provenance.last_online_utc.status = 'CONFLICTING';
+
+  assert.deepEqual(
+    model.observations.find((item) => item.observation_id === 'S-B2::ROW-001')
+      .provenance.field_provenance.current_league_clan_medals,
+    { status: 'CONFLICTING', evidence_refs: ['E-B', 'E-A'] }
+  );
+  assert.deepEqual(
+    projector.projectAll(model).snapshots
+      .find((item) => item.snapshot_id === 'S-B2')
+      .members.find((item) => item.observation_id === 'S-B2::ROW-001')
+      .provenance.field_provenance.last_online_utc,
+    { status: 'UNKNOWN', evidence_refs: ['E-B'] }
+  );
+});
+
+test('21. Provenance completeness keeps observation-level and field-level refs', () => {
+  const member = new ProjectionEngine().projectSnapshots(buildCanonical())
+    .find((item) => item.snapshot_id === 'S-B2')
+    .members.find((item) => item.observation_id === 'S-B2::ROW-001');
+
+  assert.deepEqual(member.provenance, {
+    canonical_ref: 'S-B2::ROW-001',
+    evidence_refs: ['E-B'],
+    field_provenance: {
+      current_league_clan_medals: { status: 'CONFLICTING', evidence_refs: ['E-B', 'E-A'] },
+      last_online_utc: { status: 'UNKNOWN', evidence_refs: ['E-B'] }
+    }
+  });
+});
+
+test('22. Evidence references remain traceable', () => {
   const snapshot = new ProjectionEngine().projectSnapshots(buildCanonical())
     .find((item) => item.snapshot_id === 'S-B2');
   assert.deepEqual(snapshot.provenance.evidence_refs, ['E-B']);
   assert.equal(snapshot.provenance.canonical_refs.includes('S-B2::ROW-001'), true);
 });
 
-test('17. Multi-clan Global Player history remains separated by membership', () => {
+test('23. Multi-clan Global Player history remains separated by membership', () => {
   const gp1 = new ProjectionEngine().projectGlobalPlayers(buildCanonical())[0];
   assert.deepEqual(
     gp1.memberships.map((membership) => [membership.clan_id, membership.membership_episode_id]),
@@ -513,14 +605,14 @@ test('17. Multi-clan Global Player history remains separated by membership', () 
   );
 });
 
-test('18. League-scoped metrics are not accidentally aggregated as lifetime metrics', () => {
+test('24. League-scoped metrics are not accidentally aggregated as lifetime metrics', () => {
   const history = new ProjectionEngine().projectPlayerHistory(buildCanonical())
     .find((item) => item.global_player_id === 'GP-001');
   assert.deepEqual(history.observations.map((item) => item.current_league_clan_medals), [10, 5, 30, 7]);
   assert.equal(history.observations[history.observations.length - 1].total_kills, 10500);
 });
 
-test('19. Membership-episode metrics are not accidentally aggregated across episodes', () => {
+test('25. Membership-episode metrics are not accidentally aggregated across episodes', () => {
   const history = new ProjectionEngine().projectPlayerHistory(buildCanonical())
     .find((item) => item.global_player_id === 'GP-001');
   assert.deepEqual(
@@ -529,14 +621,14 @@ test('19. Membership-episode metrics are not accidentally aggregated across epis
   );
 });
 
-test('20. Re-running projection produces identical output', () => {
+test('26. Re-running projection produces identical output', () => {
   const model = buildCanonical();
   const projector = new ProjectionEngine();
   const outputs = Array.from({ length: 5 }, () => stableStringify(projector.projectAll(model)));
   assert.equal(new Set(outputs).size, 1);
 });
 
-test('21. Previous generated Read Model does not affect new output', () => {
+test('27. Previous generated Read Model does not affect new output', () => {
   const model = buildCanonical();
   const projector = new ProjectionEngine();
   const first = projector.projectAll(model);
@@ -547,17 +639,17 @@ test('21. Previous generated Read Model does not affect new output', () => {
   assert.equal(second.snapshots[0].members[0].total_kills, 10000);
 });
 
-test('22. Projection does not read RawExtraction directly', () => {
+test('28. Projection does not read RawExtraction directly', () => {
   const source = require('node:fs').readFileSync(require.resolve('../src/projection'), 'utf8');
   assert.doesNotMatch(source, /RawExtraction|rawExtraction|raw-extraction/);
 });
 
-test('23. Projection does not read SnapshotInput directly', () => {
+test('29. Projection does not read SnapshotInput directly', () => {
   const source = require('node:fs').readFileSync(require.resolve('../src/projection'), 'utf8');
   assert.doesNotMatch(source, /SnapshotInput|snapshotInput|snapshot-input/);
 });
 
-test('24. Projection cannot mutate Canonical State through returned references', () => {
+test('30. Projection cannot mutate Canonical State through returned references', () => {
   const model = buildCanonical();
   const result = new ProjectionEngine().projectAll(model);
   result.global_players[0].latest_metrics.weapons['25mm'] = 999;
@@ -566,7 +658,7 @@ test('24. Projection cannot mutate Canonical State through returned references',
   assert.deepEqual(model.observations.find((item) => item.observation_id === 'S-A1::ROW-001').provenance.evidence_refs, ['E-A']);
 });
 
-test('25. Existing canonical delta results are not recomputed', () => {
+test('31. Existing canonical delta results are not recomputed', () => {
   const model = buildCanonical();
   model.delta_results = [{
     delta_id: 'D1',
@@ -589,7 +681,7 @@ test('25. Existing canonical delta results are not recomputed', () => {
   assert.equal(model.delta_results[0].delta, 200);
 });
 
-test('26. Projection is independent of wall-clock time', () => {
+test('32. Projection is independent of wall-clock time', () => {
   const model = buildCanonical();
   const projector = new ProjectionEngine();
   const originalNow = Date.now;
@@ -604,7 +696,7 @@ test('26. Projection is independent of wall-clock time', () => {
   }
 });
 
-test('27. projection hash is deterministic and distinct from record identity', () => {
+test('33. projection hash is deterministic and distinct from record identity', () => {
   const output = new ProjectionEngine().projectAll(buildCanonical());
   const crypto = require('node:crypto');
   const hash1 = crypto.createHash('sha256').update(stableStringify(output)).digest('hex');
@@ -613,7 +705,7 @@ test('27. projection hash is deterministic and distinct from record identity', (
   assert.notEqual(hash1, output.global_players[0].global_player_id);
 });
 
-test('28. projection version is implementation metadata, not Canonical State', () => {
+test('34. projection version is implementation metadata, not Canonical State', () => {
   const model = buildCanonical();
   const before = stableStringify(model);
   const output = new ProjectionEngine({ projection_version: 'test-0.1' }).projectAll(model);
