@@ -1,0 +1,13 @@
+{
+  "name": "wd-clans",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified Clan System (UCS) implementation foundation",
+  "scripts": {
+    "test": "node --test",
+    "validate:snapshot": "node src/validate-snapshot.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
