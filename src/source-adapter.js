@@ -213,7 +213,7 @@ class RawExtractionSourceAdapter extends SourceAdapter{
     const primaryArtifact=rawExtraction.source.artifacts.find((artifact)=>artifact.artifact_id===rawExtraction.source.primary_artifact_id);
     const artifactRecords=rawExtraction.source.artifacts.map((artifact)=>({
       artifact_id:artifact.artifact_id,artifact_type:artifact.artifact_type,source_location:artifact.source_location??null,content_hash:clone(artifact.content_hash)
-    }));
+    })).sort((left,right)=>left.artifact_id.localeCompare(right.artifact_id));
 
     const members=rawExtraction.members.map((member,index)=>{
       const p='$.members['+index+']';
@@ -241,6 +241,10 @@ class RawExtractionSourceAdapter extends SourceAdapter{
       const sourceIdentity=resolveSourceIdentity(member,p+'.source_identity');
       if(sourceIdentity)output.source_identity=sourceIdentity;
       return output;
+    }).sort((left,right)=>{
+      const rankResult=left.rank-right.rank;
+      if(rankResult!==0)return rankResult;
+      return left.source_member_key.localeCompare(right.source_member_key);
     });
 
     const snapshotInput={
