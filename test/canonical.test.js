@@ -207,6 +207,7 @@ test('8. Ambiguous identity remains unbound to Global Player Identity', () => {
   const observation = model.observations.find((o) => o.observation_id === 'O-B1-P1');
   observation.identity_resolution_status = 'AMBIGUOUS';
   observation.global_player_id = null;
+  observation.membership_episode_id = null;
   model.resolution_cases.push({
     resolution_case_id: 'RC-AMB',
     observation_id: observation.observation_id,
@@ -224,6 +225,7 @@ test('9. Unresolved identity remains explicit UNKNOWN candidate state', () => {
   const observation = model.observations.find((o) => o.observation_id === 'O-A3-P1');
   observation.identity_resolution_status = 'UNRESOLVED';
   observation.global_player_id = null;
+  observation.membership_episode_id = null;
   model.resolution_cases.push({
     resolution_case_id: 'RC-UNRES',
     observation_id: observation.observation_id,
