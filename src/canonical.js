@@ -72,6 +72,7 @@ function validateCanonicalModel(model) {
   const collections = [
     ['clans', 'clan', 'clan_id'],
     ['leagues', 'league', 'league_id'],
+    ['clan_leagues', 'clan-league', 'clan_league_id'],
     ['snapshots', 'snapshot', 'snapshot_id'],
     ['observations', 'observation', 'observation_id'],
     ['global_player_identities', 'global player identity', 'global_player_id'],
@@ -86,6 +87,7 @@ function validateCanonicalModel(model) {
   }
   const clans = byId(model.clans, 'clan_id');
   const leagues = byId(model.leagues, 'league_id');
+  const clanLeagues = byId(model.clan_leagues, 'clan_league_id');
   const snapshots = byId(model.snapshots, 'snapshot_id');
   const observations = byId(model.observations, 'observation_id');
   const players = byId(model.global_player_identities, 'global_player_id');
@@ -109,18 +111,45 @@ function validateCanonicalModel(model) {
     }
   }
 
+  for (const clanLeague of model.clan_leagues) {
+    requireRef(clans, clanLeague.clan_id, 'clan_league.clan_id');
+    requireRef(leagues, clanLeague.league_id, 'clan_league.league_id');
+    if (clanLeague.final_snapshot_id !== null && clanLeague.final_snapshot_id !== undefined) {
+      requireRef(snapshots, clanLeague.final_snapshot_id, 'clan_league.final_snapshot_id');
+      const finalSnapshot = snapshots.get(clanLeague.final_snapshot_id);
+      if (finalSnapshot.clan_league_id !== clanLeague.clan_league_id) {
+        throw new Error('final snapshot belongs to another ClanLeague: ' + clanLeague.final_snapshot_id);
+      }
+    }
+    if (clanLeague.opening_snapshot_id !== null && clanLeague.opening_snapshot_id !== undefined) {
+      requireRef(snapshots, clanLeague.opening_snapshot_id, 'clan_league.opening_snapshot_id');
+      const openingSnapshot = snapshots.get(clanLeague.opening_snapshot_id);
+      if (openingSnapshot.clan_league_id !== clanLeague.clan_league_id) {
+        throw new Error('opening snapshot belongs to another ClanLeague: ' + clanLeague.opening_snapshot_id);
+      }
+    }
+  }
+
   for (const snapshot of model.snapshots) {
     requireRef(clans, snapshot.clan_id, 'snapshot.clan_id');
     requireRef(leagues, snapshot.league_id, 'snapshot.league_id');
+    requireRef(clanLeagues, snapshot.clan_league_id, 'snapshot.clan_league_id');
+    const clanLeague = clanLeagues.get(snapshot.clan_league_id);
+    if (clanLeague.clan_id !== snapshot.clan_id || clanLeague.league_id !== snapshot.league_id) {
+      throw new Error('snapshot ClanLeague binding does not match clan/league: ' + snapshot.snapshot_id);
+    }
     bindSnapshotToLeague(snapshot.official_timestamp_utc, leagues.get(snapshot.league_id));
     if (snapshot.member_count > snapshot.capacity) throw new Error('snapshot member_count exceeds capacity: ' + snapshot.snapshot_id);
   }
 
   const sourceKeyBySnapshot = new Map();
+  const observationCountBySnapshot = new Map();
   for (const observation of model.observations) {
     requireRef(snapshots, observation.snapshot_id, 'observation.snapshot_id');
     requireRef(clans, observation.clan_id, 'observation.clan_id');
     if (snapshots.get(observation.snapshot_id).clan_id !== observation.clan_id) throw new Error('observation clan does not match snapshot: ' + observation.observation_id);
+    const snapshotCount = (observationCountBySnapshot.get(observation.snapshot_id) || 0) + 1;
+    observationCountBySnapshot.set(observation.snapshot_id, snapshotCount);
     const snapshotKey = observation.snapshot_id + '::' + observation.source_member_key;
     if (sourceKeyBySnapshot.has(snapshotKey)) throw new Error('duplicate source_member_key within snapshot: ' + observation.source_member_key);
     sourceKeyBySnapshot.set(snapshotKey, observation.observation_id);
@@ -130,7 +159,22 @@ function validateCanonicalModel(model) {
     } else if (observation.global_player_id !== null && observation.global_player_id !== undefined) {
       throw new Error('non-confirmed observation cannot bind global_player_id: ' + observation.observation_id);
     }
+    if (observation.membership_episode_id !== null && observation.membership_episode_id !== undefined) {
+      requireRef(episodes, observation.membership_episode_id, 'observation membership episode');
+    }
+    if (observation.source_identity !== null && observation.source_identity !== undefined) {
+      if (!observation.source_identity.source_system || !observation.source_identity.source_identity_id) {
+        throw new Error('observation source_identity is incomplete: ' + observation.observation_id);
+      }
+    }
     for (const evidenceRef of (observation.provenance && observation.provenance.evidence_refs) || []) requireRef(evidence, evidenceRef, 'observation provenance evidence');
+  }
+
+  for (const snapshot of model.snapshots) {
+    const observedCount = observationCountBySnapshot.get(snapshot.snapshot_id) || 0;
+    if (observedCount !== snapshot.member_count) {
+      throw new Error('snapshot observation count does not match member_count: ' + snapshot.snapshot_id);
+    }
   }
 
   for (const episode of model.membership_episodes) {
@@ -138,11 +182,27 @@ function validateCanonicalModel(model) {
     requireRef(clans, episode.clan_id, 'membership episode clan');
     requireRef(snapshots, episode.started_from_snapshot_id, 'membership episode start snapshot');
     if (snapshots.get(episode.started_from_snapshot_id).clan_id !== episode.clan_id) throw new Error('membership episode start snapshot is from another clan: ' + episode.membership_episode_id);
+    const startSnapshot = snapshots.get(episode.started_from_snapshot_id);
+    if (episode.status === 'ACTIVE' && (episode.ended_at_utc !== null && episode.ended_at_utc !== undefined)) {
+      throw new Error('active membership episode cannot have ended_at_utc: ' + episode.membership_episode_id);
+    }
+    if (episode.ended_at_utc && new Date(episode.ended_at_utc).getTime() < new Date(startSnapshot.official_timestamp_utc).getTime()) {
+      throw new Error('membership episode ended before it started: ' + episode.membership_episode_id);
+    }
+    if (episode.status === 'ACTIVE' && episode.ended_by_event_id) {
+      throw new Error('active membership episode cannot have ended_by_event_id: ' + episode.membership_episode_id);
+    }
     if (episode.status === 'ENDED' && !episode.ended_by_event_id) throw new Error('ended membership episode requires ended_by_event_id: ' + episode.membership_episode_id);
     if (episode.ended_by_event_id) requireRef(events, episode.ended_by_event_id, 'membership episode end event');
   }
   const episodePairSequence = new Set();
+  const activeEpisodePair = new Set();
   for (const episode of model.membership_episodes) {
+    if (episode.status === 'ACTIVE') {
+      const activeKey = episode.global_player_id + '::' + episode.clan_id;
+      if (activeEpisodePair.has(activeKey)) throw new Error('multiple active membership episodes for player/clan: ' + activeKey);
+      activeEpisodePair.add(activeKey);
+    }
     const key = episode.global_player_id + '::' + episode.clan_id + '::' + episode.sequence;
     if (episodePairSequence.has(key)) throw new Error('duplicate membership episode sequence: ' + key);
     episodePairSequence.add(key);
