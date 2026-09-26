@@ -11,7 +11,7 @@
         "source_location": "https://github.com/neoshisystem/war-drone-wiki/blob/main/clan-leaderboard/reports/2026-09-25-1600.html",
         "content_hash": {
           "algorithm": "sha256",
-          "value": "3b24a67fcae1b9b7451cffe53e4bfdc7a2a0ca18c0cb3bededd42b769799c224"
+          "value": "a970dc9f98796037474bbc5945d2e274315c2e42e2ea6e5a9844b51b4815f996"
         }
       },
       {
@@ -20,7 +20,7 @@
         "source_location": "https://github.com/neoshisystem/war-drone-wiki/blob/main/clan-leaderboard/data/player-observations.json",
         "content_hash": {
           "algorithm": "sha256",
-          "value": "c901155265f204f41c34d4da3b438fdd7f8f6686106dc6ae96e13d947f61ec89"
+          "value": "fc03cfd5d3f7d85b4dd24e328968002bf8a262a523b25cd4399de9cb53bf08ba"
         }
       }
     ]
