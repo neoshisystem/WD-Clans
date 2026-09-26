@@ -139,20 +139,36 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
   });
 
   const resolutionCases = preparedPlan.members
-    .filter((member) => canonicalResolutionStatus(member.identity_resolution?.status) !== 'CONFIRMED')
-    .map((member) => ({
-      resolution_case_id: 'RC::' + snapshotId + '::' + member.source_member_key,
-      observation_id: snapshotId + '::' + member.source_member_key,
-      status: canonicalResolutionStatus(member.identity_resolution?.status),
-      candidate_global_player_ids: candidateIds(member),
-      matched_global_player_id: null,
-      signals: clone(member.identity_resolution?.comparisons || []),
-      evidence_refs: [...(member.observation.evidence_refs || evidenceRefs)].sort(),
-      authority_ref: null,
-      process_ref: 'identity-resolution-v0.1',
-      decided_at_utc: null,
-      reason: 'identity_requires_review'
-    }));
+    .map((member) => {
+      const status = canonicalResolutionStatus(member.identity_resolution?.status);
+      const decision = member.identity_resolution?.decision || null;
+      const candidateGlobalPlayerIds = [
+        ...candidateIds(member),
+        ...(decision?.candidate_global_player_ids || [])
+      ];
+
+      return {
+        resolution_case_id: 'RC::' + snapshotId + '::' + member.source_member_key,
+        observation_id: snapshotId + '::' + member.source_member_key,
+        status,
+        candidate_global_player_ids: [...new Set(candidateGlobalPlayerIds)].sort(),
+        matched_global_player_id: status === 'CONFIRMED'
+          ? member.identity_resolution.global_player_id
+          : null,
+        signals: clone(
+          decision?.signals === undefined
+            ? (member.identity_resolution?.comparisons || [])
+            : decision.signals
+        ),
+        evidence_refs: [...(decision?.evidence_refs || member.observation.evidence_refs || evidenceRefs)].sort(),
+        authority_ref: decision?.authority_ref || null,
+        process_ref: decision?.process_ref || 'identity-resolution-v0.1',
+        decided_at_utc: decision?.decided_at_utc || null,
+        reason: status === 'CONFIRMED'
+          ? (decision?.reason || null)
+          : 'identity_requires_review'
+      };
+    });
 
   const patch = {
     clans: input.snapshot.sequence === 1 ? [{

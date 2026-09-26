@@ -50,6 +50,10 @@ function compareFingerprint(left, right) {
   };
 }
 
+function cloneValue(value) {
+  return value === undefined ? undefined : structuredClone(value);
+}
+
 function resolveIdentity({ observation, candidates = [], resolutionDecision = null }) {
   if (!observation) throw new Error('observation is required');
   const comparisons = candidates.map((candidate) => ({
@@ -70,8 +74,13 @@ function resolveIdentity({ observation, candidates = [], resolutionDecision = nu
     throw new Error(`unsupported identity status: ${resolutionDecision.status}`);
   }
 
-  if (resolutionDecision.status === 'CONFIRMED' && !resolutionDecision.global_player_id) {
-    throw new Error('CONFIRMED identity decision requires global_player_id');
+  if (
+    resolutionDecision.status === 'CONFIRMED' &&
+    (typeof resolutionDecision.global_player_id !== 'string' || resolutionDecision.global_player_id.trim() === '')
+  ) {
+    const error = new Error('CONFIRMED identity decision requires non-empty global_player_id');
+    error.code = 'CONFIRMED_GLOBAL_PLAYER_ID_REQUIRED';
+    throw error;
   }
 
   return {
@@ -81,8 +90,15 @@ function resolveIdentity({ observation, candidates = [], resolutionDecision = nu
     decision: {
       authority_ref: resolutionDecision.authority_ref || null,
       evidence_refs: Array.isArray(resolutionDecision.evidence_refs) ? [...resolutionDecision.evidence_refs] : [],
+      process_ref: resolutionDecision.process_ref || null,
       decided_at_utc: resolutionDecision.decided_at_utc || null,
-      reason: resolutionDecision.reason || null
+      reason: resolutionDecision.reason || null,
+      candidate_global_player_ids: Array.isArray(resolutionDecision.candidate_global_player_ids)
+        ? [...resolutionDecision.candidate_global_player_ids]
+        : [],
+      signals: resolutionDecision.signals === undefined
+        ? cloneValue(comparisons)
+        : cloneValue(resolutionDecision.signals)
     }
   };
 }
