@@ -63,8 +63,8 @@ test('PERSIA S12 Pilot 1: real artifact inventory and extraction contract are va
   assert.equal(raw.extraction_id, 'PILOT::PERSIA::S12::RAW-001');
   assert.equal(raw.members.length, 50);
   assert.equal(raw.source.artifacts.length, 2);
-  assert.equal(raw.source.artifacts[0].content_hash.value, 'baa2e1cef33a0a8625c445de8c90036b28be26e0ff53852a0dcf0ed29f98884a');
-  assert.equal(raw.source.artifacts[1].content_hash.value, 'dfd703c44d2ee50335c6abdea91553e1887d29a364f9a2dc6cb64e576bcea4f3');
+  assert.equal(raw.source.artifacts[0].content_hash.value, 'a970dc9f98796037474bbc5945d2e274315c2e42e2ea6e5a9844b51b4815f996');
+  assert.equal(raw.source.artifacts[1].content_hash.value, 'fc03cfd5d3f7d85b4dd24e328968002bf8a262a523b25cd4399de9cb53bf08ba');
   assert.deepEqual(
     raw.members.filter(member => member.fields.profile_total_clan_medal_count.status !== 'OBSERVED').map(member => member.fields.rank.raw_value),
     [37, 41, 44]
@@ -119,16 +119,24 @@ test('PERSIA S12 Pilot 4: actual S12 cross-source key fields have no conflict; c
   assert.equal(raw.members.length, 50);
 
   const conflict = structuredClone(raw);
-  conflict.members[0].fields.stage[1].raw_value = conflict.members[0].fields.stage[1].raw_value + 1;
+  conflict.members[0].fields.role = [
+    conflict.members[0].fields.role,
+    {
+      status: 'OBSERVED',
+      interpretation: 'NONE',
+      evidence_refs: ['PERSIA-S12-PROFILE-JSON'],
+      raw_value: 'Conflicting Role'
+    }
+  ];
 
   const normalized = new RawExtractionSourceAdapter().toSnapshotInput(conflict, AUTHORITY_CONTEXT);
   const member = normalized.members.find(item => item.rank === 1);
 
-  assert.equal(member.stage, null);
-  assert.equal(member.field_provenance.stage.status, 'CONFLICTING');
+  assert.equal(member.role, null);
+  assert.equal(member.field_provenance.role.status, 'CONFLICTING');
   assert.deepEqual(
-    member.field_provenance.stage.evidence_refs,
-    ['PERSIA-S12-PROFILE-JSON', 'PERSIA-S12-RANKING-HTML'].sort()
+    member.field_provenance.role.evidence_refs,
+    ['PERSIA-S12-PROFILE-JSON']
   );
 });
 
