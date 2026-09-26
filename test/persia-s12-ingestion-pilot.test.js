@@ -187,3 +187,15 @@ test('PERSIA S12 Pilot 7: downstream Projection and Static Data are not reached 
   assert.equal(persistence.read().snapshots.length, 0);
   assert.equal(persistence.read().observations.length, 0);
 });
+
+test('PERSIA S12 Pilot 5b: Core planning is deterministic for identical real input/context', () => {
+  const raw = readRaw();
+  const registry = registryFromRaw(raw);
+  const input = new RawExtractionSourceAdapter().toSnapshotInput(raw, AUTHORITY_CONTEXT);
+
+  const first = prepareSnapshotTransaction(input, { evidenceRegistry: registry });
+  const second = prepareSnapshotTransaction(input, { evidenceRegistry: registry });
+
+  assert.equal(stableStringify(first), stableStringify(second));
+  assert.equal(stableStringify(first.persistence.transaction), stableStringify(second.persistence.transaction));
+});
