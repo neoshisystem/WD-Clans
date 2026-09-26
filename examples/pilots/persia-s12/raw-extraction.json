@@ -1,0 +1,5931 @@
+{
+  "extraction_schema_version": "0.1",
+  "extraction_id": "PILOT::PERSIA::S12::RAW-001",
+  "extracted_at_utc": null,
+  "source": {
+    "primary_artifact_id": "PERSIA-S12-RANKING-HTML",
+    "artifacts": [
+      {
+        "artifact_id": "PERSIA-S12-RANKING-HTML",
+        "artifact_type": "persia-s12-ranking-report-html",
+        "source_location": "https://github.com/neoshisystem/war-drone-wiki/blob/main/clan-leaderboard/reports/2026-09-25-1600.html",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "3b24a67fcae1b9b7451cffe53e4bfdc7a2a0ca18c0cb3bededd42b769799c224"
+        }
+      },
+      {
+        "artifact_id": "PERSIA-S12-PROFILE-JSON",
+        "artifact_type": "persia-s12-player-observations-json",
+        "source_location": "https://github.com/neoshisystem/war-drone-wiki/blob/main/clan-leaderboard/data/player-observations.json",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "c901155265f204f41c34d4da3b438fdd7f8f6686106dc6ae96e13d947f61ec89"
+        }
+      }
+    ]
+  },
+  "members": [
+    {
+      "source_member_key": "PERSIA-S12-RANK-01",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0060"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 1
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ehsan"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ehsan"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Co-Leader"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 69
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 69
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1291,
+            "hydra": 441,
+            "hellfire": 71
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 276191
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 4,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 140313
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 139814
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-02",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0002"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 2
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Cpt. Of Persia"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Cpt. Of Persia"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Leader & MVP"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 50
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 50
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1056,
+            "hydra": 357,
+            "hellfire": 94
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 315961
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 4,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 135924
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 131273
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-03",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0003"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 3
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Alini"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Alini"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 53
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 53
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1073,
+            "hydra": 315,
+            "hellfire": 56
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 372753
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 5,
+            "bronze": 5
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 118177
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 118177
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-04",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0005"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 4
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "kaveh"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "kaveh"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Elder"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 40
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 40
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 955,
+            "hydra": 323,
+            "hellfire": 85
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 188417
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 92124
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 91692
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-05",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0061"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 5
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "RADMAN"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "RADMAN"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 50
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 50
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1092,
+            "hydra": 385,
+            "hellfire": 80
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 222054
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 2,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 89893
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 88756
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-06",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0001"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 6
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Commander"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Commander"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Elder"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 58
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 58
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1030,
+            "hydra": 261,
+            "hellfire": 68
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 269243
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 85212
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 84362
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-07",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0062"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 7
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ALI"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ALI"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 46
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 46
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1097,
+            "hydra": 271,
+            "hellfire": 62
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 111051
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 3,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 82895
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 66106
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-08",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0010"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 8
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "paradise"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "paradise"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 29
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 29
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 680,
+            "hydra": 192,
+            "hellfire": 58
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 163767
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 2,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 81867
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 81734
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-09",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0048"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 9
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ایرانی باوقار"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ایرانی باوقار"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 27
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 27
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 520,
+            "hydra": 173,
+            "hellfire": 27
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 131122
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 2,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 71830
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 71491
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-10",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0026"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 10
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Liam kouhkan"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Liam kouhkan"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 726,
+            "hydra": 224,
+            "hellfire": 83
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 145043
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 71499
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 569848
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-11",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0063"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 11
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Worker Ant"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Worker Ant"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 62
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 62
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1156,
+            "hydra": 393,
+            "hellfire": 84
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 262817
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 5,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 67368
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 67302
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-12",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0064"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 12
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "behrang"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "behrang"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 14
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 14
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 316,
+            "hydra": 140,
+            "hellfire": 60
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 84433
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 1,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 66195
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 65668
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-13",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0008"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 13
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "hisystem"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "hisystem"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Co-Leader"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 591,
+            "hydra": 253,
+            "hellfire": 58
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 192947
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 64657
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 61800
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-14",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0065"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 14
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "PERSIAN TIGER"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "PERSIAN TIGER"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 22
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 22
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 457,
+            "hydra": 232,
+            "hellfire": 49
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 84376
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 62255
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 62037
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-15",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0057"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 15
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "I.Man"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "I.Man"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 13
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 13
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 258,
+            "hydra": 127,
+            "hellfire": 25
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 39002
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 0,
+            "silver": 2,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 58117
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 70196
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-16",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0066"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 16
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "F 35"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "F 35"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 56
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 56
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1051,
+            "hydra": 294,
+            "hellfire": 54
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 252199
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 4,
+            "silver": 6,
+            "bronze": 4
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 56710
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 55798
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-17",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0009"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 17
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "SORENA"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "SORENA"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 920,
+            "hydra": 265,
+            "hellfire": 74
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 149129
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 56385
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 56385
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-18",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0004"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 18
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Eren"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Eren"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 26
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 26
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 628,
+            "hydra": 258,
+            "hellfire": 63
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 173400
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 2,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 53802
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 53802
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-19",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0016"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 19
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "HO3EIN"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "HO3EIN"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 39
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 39
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 720,
+            "hydra": 348,
+            "hellfire": 50
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 103575
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 4,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 49413
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 687721
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-20",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0067"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 20
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Dariush"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Dariush"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 34
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 34
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 681,
+            "hydra": 262,
+            "hellfire": 51
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 134780
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 46020
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 45366
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-21",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0013"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 21
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Vk"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Vk"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 40
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 40
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 766,
+            "hydra": 311,
+            "hellfire": 57
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 129813
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 4,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 45381
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 721366
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-22",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0068"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 22
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Elvin"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Elvin"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 26
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 26
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 541,
+            "hydra": 180,
+            "hellfire": 26
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 96497
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 2,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 42088
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 42088
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-23",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0069"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 23
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ایران"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ایران"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 37
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 37
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 683,
+            "hydra": 173,
+            "hellfire": 60
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 89840
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 1,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 41416
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 41416
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-24",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0014"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 24
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Hafezi"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Hafezi"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 39
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 39
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 812,
+            "hydra": 210,
+            "hellfire": 66
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 105770
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 4,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 40197
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 641355
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-25",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0070"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 25
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Tjk001"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Tjk001"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 25
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 25
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 466,
+            "hydra": 247,
+            "hellfire": 56
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 127512
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 39032
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 39032
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-26",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0071"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 26
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "reza1009"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "reza1009"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member & MVP"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 25
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 25
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 519,
+            "hydra": 160,
+            "hellfire": 41
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 89966
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 35744
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 35744
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-27",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0072"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 27
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ADA"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ADA"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 690,
+            "hydra": 243,
+            "hellfire": 82
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 140144
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 5,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 35101
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 34657
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-28",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0032"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 28
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "hadi,land"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "hadi,land"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member & MVP"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 39
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 39
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 718,
+            "hydra": 259,
+            "hellfire": 33
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 132599
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 2,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 34679
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 431573
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-29",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0044"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 29
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "hamedir"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "hamedir"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 32
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 32
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 703,
+            "hydra": 190,
+            "hellfire": 42
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 134610
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 32660
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 32660
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-30",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0025"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 30
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "YALALINHO"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "YALALINHO"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 54
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 54
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1001,
+            "hydra": 211,
+            "hellfire": 52
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 151599
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 30507
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 179507
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-31",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0073"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 31
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "boz gurd"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "boz gurd"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 618,
+            "hydra": 243,
+            "hellfire": 38
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 98047
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 1,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 28773
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 27975
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-32",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0028"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 32
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ali"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ali"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 29
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 29
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 542,
+            "hydra": 169,
+            "hellfire": 36
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 50129
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 1,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 27821
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 27821
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-33",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0029"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 33
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Mahbod_1"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Mahbod_1"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Elder"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 23
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 23
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 496,
+            "hydra": 120,
+            "hellfire": 48
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 48646
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 26767
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 375508
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-34",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0007"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 34
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Ardalan"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Ardalan"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 37
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 37
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 825,
+            "hydra": 208,
+            "hellfire": 69
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 147982
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 1,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 25828
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 25828
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-35",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0020"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 35
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "NaViD"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "NaViD"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 49
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 49
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 936,
+            "hydra": 329,
+            "hellfire": 63
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 173981
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 5,
+            "bronze": 3
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 25572
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 20203
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-36",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0022"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 36
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "amin"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "amin"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 8
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 8
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 506,
+            "hydra": 102,
+            "hellfire": 25
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 60442
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 23287
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 318733
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-37",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0074"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 37
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": "سید حسن ۳۳"
+        },
+        "role": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 28
+        },
+        "weapons": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "total_kills": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 22951
+        },
+        "profile_total_clan_medal_count": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-38",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0012"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 38
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "👑Dadashi👑"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "👑Dadashi👑"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Elder"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 64
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 64
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1153,
+            "hydra": 384,
+            "hellfire": 97
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 214954
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 22681
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 1142712
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-39",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0035"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 39
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Amin"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Amin"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 42
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 42
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 756,
+            "hydra": 307,
+            "hellfire": 60
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 88908
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 4,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 22022
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 377015
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-40",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0075"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 40
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Armin Lukas"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Armin Lukas"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 38
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 38
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 842,
+            "hydra": 307,
+            "hellfire": 54
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 147014
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 1,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 17493
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 16660
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-41",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0076"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 41
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": "hamid.iran"
+        },
+        "role": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 14
+        },
+        "weapons": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "total_kills": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 15840
+        },
+        "profile_total_clan_medal_count": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-42",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0037"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 42
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Nouk"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Nouk"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 37
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 37
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 670,
+            "hydra": 263,
+            "hellfire": 79
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 105904
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 14418
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 446458
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-43",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0077"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 43
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Masoudpas_4612"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Masoudpas_4612"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 510,
+            "hydra": 240,
+            "hellfire": 40
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 150543
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 5,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 13797
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 13797
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-44",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0011"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 44
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": "Amirhoseinifpv"
+        },
+        "role": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 37
+        },
+        "weapons": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "total_kills": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 13679
+        },
+        "profile_total_clan_medal_count": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-45",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0021"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 45
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "mohammad"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "mohammad"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 28
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 28
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 683,
+            "hydra": 218,
+            "hellfire": 42
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 127320
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 13353
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 13353
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-46",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0017"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 46
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Mohsen.es68"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Mohsen.es68"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 78
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 78
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1434,
+            "hydra": 485,
+            "hellfire": 55
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 176872
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 3,
+            "bronze": 1
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 12995
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 680482
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-47",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0027"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 47
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "♛soltoon♛"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "♛soltoon♛"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 38
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 38
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 1000,
+            "hydra": 156,
+            "hellfire": 53
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 140751
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 3,
+            "silver": 4,
+            "bronze": 4
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 12038
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 740354
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-48",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0031"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 48
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "حسن"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "حسن"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 48
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 48
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 886,
+            "hydra": 320,
+            "hellfire": 68
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 167405
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 6,
+            "silver": 7,
+            "bronze": 5
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 6108
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 309952
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-49",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0054"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 49
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "Cpt's eyes 😐"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "Cpt's eyes 😐"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 8
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 8
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 134,
+            "hydra": 37,
+            "hellfire": 7
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 4392
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 1039
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 1039
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    },
+    {
+      "source_member_key": "PERSIA-S12-RANK-50",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "PERSIA",
+        "source_identity_id": "PERSIA-P-0078"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 50
+        },
+        "display_name": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": "ErFaN.mZ79"
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": "ErFaN.mZ79"
+          }
+        ],
+        "role": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": "Member"
+        },
+        "stage": [
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-RANKING-HTML"
+            ],
+            "raw_value": 29
+          },
+          {
+            "status": "OBSERVED",
+            "interpretation": "NONE",
+            "evidence_refs": [
+              "PERSIA-S12-PROFILE-JSON"
+            ],
+            "raw_value": 29
+          }
+        ],
+        "weapons": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "25mm": 581,
+            "hydra": 276,
+            "hellfire": 51
+          }
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 106186
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": {
+            "gold": 2,
+            "silver": 1,
+            "bronze": 2
+          }
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-RANKING-HTML"
+          ],
+          "raw_value": 3
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ],
+          "raw_value": 3
+        },
+        "last_online_utc": {
+          "status": "UNKNOWN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "PERSIA-S12-PROFILE-JSON"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "PERSIA-S12-RANKING-HTML"
+      ]
+    }
+  ]
+}
