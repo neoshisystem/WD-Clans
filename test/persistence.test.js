@@ -505,3 +505,179 @@ test('20. Transaction plan hash is deterministic across object key order', () =>
   const second = prepareSnapshotTransaction(input2, context);
   assert.equal(first.persistence.transaction.plan_hash, second.persistence.transaction.plan_hash);
 });
+
+
+test('21. Valid external CONFIRMED decision creates an auditable Canonical Resolution Case', () => {
+  const input = snapshotInput();
+  const decision = {
+    status: 'CONFIRMED',
+    global_player_id: 'GP-SEED-001',
+    candidate_global_player_ids: ['GP-SEED-001'],
+    signals: { source: 'external-review', matched_on: ['manual-profile-review'] },
+    evidence_refs: [input.source.artifact_id],
+    authority_ref: 'AUTH-EXTERNAL-001',
+    process_ref: 'human-review-v1',
+    decided_at_utc: '2026-09-26T12:30:00Z',
+    reason: 'human-confirmed identity'
+  };
+  const plan = prepareSnapshotTransaction(input, {
+    identityDecisionsBySourceKey: { 'ROW-001': decision }
+  });
+  assert.equal(plan.transaction_status, 'READY_FOR_PERSISTENCE');
+
+  const resolution = plan.persistence.transaction.canonical_patch.resolution_cases[0];
+  assert.deepEqual(resolution, {
+    resolution_case_id: 'RC::S-ATOMIC-001::ROW-001',
+    observation_id: 'S-ATOMIC-001::ROW-001',
+    status: 'CONFIRMED',
+    candidate_global_player_ids: ['GP-SEED-001'],
+    matched_global_player_id: 'GP-SEED-001',
+    signals: decision.signals,
+    evidence_refs: ['EV-ATOMIC-001'],
+    authority_ref: 'AUTH-EXTERNAL-001',
+    process_ref: 'human-review-v1',
+    decided_at_utc: '2026-09-26T12:30:00Z',
+    reason: 'human-confirmed identity'
+  });
+
+  const adapter = new InMemoryAtomicPersistenceAdapter(seedWithPlayer());
+  const result = adapter.commit(plan.persistence.transaction);
+  assert.equal(result.result, 'COMMITTED');
+  assert.equal(adapter.read().resolution_cases.length, 1);
+  assert.equal(adapter.read().observations[0].global_player_id, 'GP-SEED-001');
+});
+
+test('22. CONFIRMED decision without global_player_id is rejected before transaction creation', () => {
+  const input = snapshotInput();
+  assert.throws(
+    () => prepareSnapshotTransaction(input, {
+      identityDecisionsBySourceKey: {
+        'ROW-001': {
+          status: 'CONFIRMED',
+          evidence_refs: [input.source.artifact_id],
+          authority_ref: 'AUTH-EXTERNAL-002',
+          decided_at_utc: '2026-09-26T12:31:00Z',
+          reason: 'missing global id'
+        }
+      }
+    }),
+    (error) => error.code === 'CONFIRMED_GLOBAL_PLAYER_ID_REQUIRED'
+  );
+
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  assert.equal(adapter.version(), 0);
+  assert.equal(adapter.read().global_player_identities.length, 0);
+});
+
+test('23. CONFIRMED decision referencing a missing Global Player is CONFLICT with no commit', () => {
+  const input = snapshotInput();
+  const plan = prepareSnapshotTransaction(input, {
+    identityDecisionsBySourceKey: {
+      'ROW-001': {
+        status: 'CONFIRMED',
+        global_player_id: 'GP-MISSING-001',
+        evidence_refs: [input.source.artifact_id],
+        authority_ref: 'AUTH-EXTERNAL-003',
+        process_ref: 'human-review-v1',
+        decided_at_utc: '2026-09-26T12:32:00Z',
+        reason: 'unknown player reference'
+      }
+    }
+  });
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const before = adapter.read();
+  const result = adapter.commit(plan.persistence.transaction);
+  assert.equal(result.result, 'CONFLICT');
+  assert.equal(result.committed, false);
+  assert.equal(result.state_changed, false);
+  assert.match(result.reason, /confirmed_global_player_identity_missing:GP-MISSING-001/);
+  assert.deepEqual(adapter.read(), before);
+});
+
+test('24. External Resolution metadata and supplied comparison context are retained', () => {
+  const input = snapshotInput();
+  const suppliedSignals = {
+    source: 'agent-review',
+    comparisons: [{ field: 'stage', match: true }, { field: 'total_kills', match: true }],
+    note: 'supplied comparison context'
+  };
+  const plan = prepareSnapshotTransaction(input, {
+    identityDecisionsBySourceKey: {
+      'ROW-001': {
+        status: 'CONFIRMED',
+        global_player_id: 'GP-SEED-001',
+        candidate_global_player_ids: ['GP-SEED-001'],
+        signals: suppliedSignals,
+        evidence_refs: [input.source.artifact_id],
+        authority_ref: 'AUTH-EXTERNAL-004',
+        process_ref: 'agent-review-v2',
+        decided_at_utc: '2026-09-26T12:33:00Z',
+        reason: 'external decision with supplied context'
+      }
+    }
+  });
+  const resolution = plan.persistence.transaction.canonical_patch.resolution_cases[0];
+  assert.deepEqual(resolution.signals, suppliedSignals);
+  assert.deepEqual(resolution.candidate_global_player_ids, ['GP-SEED-001']);
+  assert.equal(resolution.authority_ref, 'AUTH-EXTERNAL-004');
+  assert.equal(resolution.process_ref, 'agent-review-v2');
+  assert.equal(resolution.decided_at_utc, '2026-09-26T12:33:00Z');
+  assert.equal(resolution.reason, 'external decision with supplied context');
+  assert.deepEqual(resolution.evidence_refs, ['EV-ATOMIC-001']);
+});
+
+test('25. Unresolved behavior remains REVIEW_REQUIRED and does not persist by default', () => {
+  const input = snapshotInput();
+  const plan = prepareSnapshotTransaction(input);
+  assert.equal(plan.transaction_status, 'REVIEW_REQUIRED');
+  assert.equal(plan.persistence.transaction.canonical_patch.resolution_cases[0].status, 'UNRESOLVED');
+
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const result = adapter.commit(plan.persistence.transaction);
+  assert.equal(result.result, 'REVIEW_REQUIRED');
+  assert.equal(result.committed, false);
+  assert.equal(result.state_changed, false);
+  assert.equal(adapter.read().resolution_cases.length, 0);
+});
+
+test('26. Repeated external CONFIRMED planning is deterministic', () => {
+  const input = snapshotInput();
+  const context = {
+    identityDecisionsBySourceKey: {
+      'ROW-001': {
+        status: 'CONFIRMED',
+        global_player_id: 'GP-SEED-001',
+        candidate_global_player_ids: ['GP-SEED-001'],
+        signals: { source: 'external-review', match: true },
+        evidence_refs: [input.source.artifact_id],
+        authority_ref: 'AUTH-EXTERNAL-005',
+        process_ref: 'human-review-v1',
+        decided_at_utc: '2026-09-26T12:34:00Z',
+        reason: 'deterministic decision'
+      }
+    }
+  };
+  const first = prepareSnapshotTransaction(input, context);
+  const second = prepareSnapshotTransaction(structuredClone(input), structuredClone(context));
+  assert.deepEqual(second.persistence.transaction, first.persistence.transaction);
+  assert.equal(second.persistence.transaction.plan_hash, first.persistence.transaction.plan_hash);
+});
+
+test('27. Confirmed external decision never creates a Global Player implicitly', () => {
+  const input = snapshotInput();
+  const plan = prepareSnapshotTransaction(input, {
+    identityDecisionsBySourceKey: {
+      'ROW-001': {
+        status: 'CONFIRMED',
+        global_player_id: 'GP-NOT-YET-CREATED',
+        evidence_refs: [input.source.artifact_id],
+        authority_ref: 'AUTH-EXTERNAL-006',
+        reason: 'must not auto-create'
+      }
+    }
+  });
+  const adapter = new InMemoryAtomicPersistenceAdapter();
+  const result = adapter.commit(plan.persistence.transaction);
+  assert.equal(result.result, 'CONFLICT');
+  assert.equal(adapter.read().global_player_identities.length, 0);
+});
