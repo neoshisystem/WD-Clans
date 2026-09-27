@@ -116,6 +116,15 @@
   function valueFor(member, field) {
     return display(member[field]);
   }
+  const lastOnlineFor = (member) => display(member.last_online_display ?? member.last_online_utc);
+  const lifetimeMedalsFor = (member) => {
+    const medals = member.lifetime_medals || {};
+    return '🥇 طلا ' + display(medals.gold) + ' · 🥈 نقره ' + display(medals.silver) + ' · 🥉 برنز ' + display(medals.bronze);
+  };
+  const weaponsFor = (member) => {
+    const weapons = member.weapons || {};
+    return '25mm ' + display(weapons['25mm']) + ' · Hydra ' + display(weapons.hydra) + ' · Hellfire ' + display(weapons.hellfire);
+  };
 
 
   function membershipChangesForSnapshot(snapshotId) {
@@ -237,15 +246,13 @@
         '<td>' + esc(valueFor(member, 'stage')) + '</td>' +
         '<td>' + esc(valueFor(member, 'current_league_clan_medals')) + '</td>' +
         '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
-        '<td><span class="medal-inline">🥇 ' + esc(member.lifetime_medals?.gold ?? '—') + ' · 🥈 ' + esc(member.lifetime_medals?.silver ?? '—') + ' · 🥉 ' + esc(member.lifetime_medals?.bronze ?? '—') + '</span></td><td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td>' +
+        '<td><span class="medal-inline">' + esc(lifetimeMedalsFor(member)) + '</span></td><td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td><td>' + esc(weaponsFor(member)) + '</td>' +
         '<td>' + esc(valueFor(member, 'last_online_display') !== '—' ? valueFor(member, 'last_online_display') : valueFor(member, 'last_online_utc')) + '</td>' +
         '</tr>').join('');
-      const medalBadges = (member.lifetime_medals && typeof member.lifetime_medals === 'object') ? [['🥇', 'طلا', member.lifetime_medals.gold], ['🥈', 'نقره', member.lifetime_medals.silver], ['🥉', 'برنز', member.lifetime_medals.bronze]] : [];
       const graphic = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
         return '<article class="member-card"><header><div><span class="rank">' + esc(valueFor(member, 'rank')) + '</span><h3>' + esc(valueFor(member, 'display_name')) + '</h3><small>' + esc(valueFor(member, 'role')) + '</small></div><a class="link-arrow" href="' + playerLink(member) + '">←</a></header><div class="stats-grid">' +
-          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['آخرین آنلاین',member.last_online_display ?? member.last_online_utc]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : display(value)) + '</strong></div>').join('') +
-          '<div class="stat stat-medals"><span>نشان‌های عمر</span><strong>' + medalBadges.map(([icon, label, value]) => icon + ' ' + label + ' ' + display(value)).join(' · ') + '</strong></div>' +
+          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['نشان‌ها',lifetimeMedalsFor(member)],['سلاح‌ها',weaponsFor(member)],['آخرین آنلاین',lastOnlineFor(member)]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : display(value)) + '</strong></div>').join('') +
           '</div></article>';
       }).join('');
 
@@ -254,7 +261,7 @@
         ? '<div class="table-wrap"><table class="summary-table"><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','بازیکن') + '</th><th>' + sortButton('deltaMedals','Δ مدال') + '</th><th>' + sortButton('deltaKills','Δ کیل') + '</th><th>' + sortButton('league','مدال کلن') + '</th><th>' + sortButton('kills','جمع کیل') + '</th></tr></thead><tbody>' + summary + '</tbody></table></div>'
         : mode === 'graphic'
           ? '<div class="member-grid">' + graphic + '</div>'
-          : '<div class="table-wrap"><table><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','نام کاربری') + '</th><th>سمت</th><th>' + sortButton('stage','استیج') + '</th><th>' + sortButton('league','مدال لیگ') + '</th><th>' + sortButton('kills','مجموع کیل') + '</th><th>مدال کل کلن</th><th>Last Online</th></tr></thead><tbody>' + simple + '</tbody></table></div>';
+          : '<div class="table-wrap"><table><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','نام کاربری') + '</th><th>سمت</th><th>' + sortButton('stage','استیج') + '</th><th>' + sortButton('league','مدال لیگ') + '</th><th>' + sortButton('kills','مجموع کیل') + '</th><th>مدال کل کلن</th><th>نشان‌ها</th><th>سلاح‌ها</th><th>Last Online</th></tr></thead><tbody>' + simple + '</tbody></table></div>';
 
       root.querySelectorAll('[data-sort]').forEach((button) => button.onclick = () => {
         const next = button.dataset.sort;
@@ -403,9 +410,9 @@
       return;
     }
     root.innerHTML = header(displayName, 'UCS · PLAYER PROFILE', 'تاریخچهٔ Observationها مستقل باقی می‌ماند و از Snapshotهای ثبت‌شده خوانده می‌شود.') +
-      '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div></div></article>' +
+      '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div><div><span>Profile Total Clan Medals</span><b>' + esc(display(latest.profile_total_clan_medal_count)) + '</b></div></div><div class="detail-strip"><div><span>نشان‌ها</span><b>' + esc(lifetimeMedalsFor(latest)) + '</b></div><div><span>سلاح‌ها</span><b>' + esc(weaponsFor(latest)) + '</b></div><div><span>Last Online</span><b>' + esc(lastOnlineFor(latest)) + '</b></div></div></article>' +
       '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
-      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table><thead><tr><th>Snapshot</th><th>Clan</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Total Kills</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.map((item) => '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(display(item.last_online_utc)) + '</td></tr>').join('') + '</tbody></table></div></section>';
+      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table><thead><tr><th>Snapshot</th><th>Clan</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Total Kills</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.map((item) => '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>').join('') + '</tbody></table></div></section>';
   }
 
   function membershipHistory() {
