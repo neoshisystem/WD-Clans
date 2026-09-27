@@ -10,8 +10,10 @@ Date: 2026-09-28
 ## Required reading
 1. `AGENTS.md`
 2. `docs/UCS_AGENT_OPERATIONS.md`
-3. `docs/reports/2026-09-28_cr01-final-validation.md`
-4. This file
+3. `docs/UCS_SCHEMA_FILE_MAP_V0_1.md`
+4. `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
+5. `docs/reports/2026-09-28_cr01-final-validation.md`
+6. This file
 5. Existing canonical/data-model documents under `docs/`
 
 ## Current architecture
@@ -96,10 +98,20 @@ Treat S13 as the continuity baseline. When the ZIP is supplied:
 - Intermediate corrective runs 131/132 failed during diagnosis and generated-artifact synchronization; they are superseded by the final successful commit above.
 
 ## Reports
+- S13 ingestion report: `reports/2026-09-26_real-s13-ingestion.md`
+- Formal snapshot intake standard: `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
+- Schema/file map: `docs/UCS_SCHEMA_FILE_MAP_V0_1.md`
 - Final corrective report: `docs/reports/2026-09-28_cr01-final-validation.md`
 - Agent operations: `docs/UCS_AGENT_OPERATIONS.md`
 - Entry point: `AGENTS.md`
 - S13 raw evidence: `data/real-snapshots/persian-unity/S13.raw.json`
+
+## Final CR-01 data/UI checkpoint
+- S13 source-native `last_online_display` now survives Canonical → Projection → Static Read Model and is used by the viewer.
+- Lifetime gold/silver/bronze counts are exposed in the graphic member grid and table.
+- S13 remains the first observed Snapshot; Δ Medal / Δ Kills are unavailable without a valid baseline and must not be fabricated.
+- Global/Admin remains the only Clan switcher; dedicated Clan URLs remain isolated and direct-to-Leaderboard.
+- Horizontal page overflow is contained without redesign.
 
 ## CR-02 warning
 Do not assume the next Snapshot is S14 solely because it is the next file received. Confirm the Snapshot identifier/sequence according to the existing canonical/ingestion contract and Authority-provided metadata.
