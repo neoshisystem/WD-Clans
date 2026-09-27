@@ -327,8 +327,8 @@ function executeCommittedS12(options = {}) {
     confirmed: confirmedPlayers(),
     previousByGlobalPlayerId: options.previousByGlobalPlayerId || previousContext(),
     membershipBySourceKey: options.membershipBySourceKey || {
-      'PERSIA-S12-RANK-01': { sameLeague: false },
-      'PERSIA-S12-RANK-02': { sameLeague: true }
+      'PERSIA-S12-RANK-01': { same_league: false },
+      'PERSIA-S12-RANK-02': { same_league: true }
     }
   });
 
@@ -442,7 +442,7 @@ test('Delta materialization: new League Current League Clan Medal baseline is ze
     }],
     previousByGlobalPlayerId: previousContext(),
     membershipBySourceKey: {
-      'PERSIA-S12-RANK-01': { sameLeague: false }
+      'PERSIA-S12-RANK-01': { same_league: false }
     }
   });
 
@@ -559,8 +559,8 @@ test('Delta materialization: repeated planning is deterministic', () => {
     confirmed: confirmedPlayers(),
     previousByGlobalPlayerId: previous,
     membershipBySourceKey: {
-      'PERSIA-S12-RANK-01': { sameLeague: false },
-      'PERSIA-S12-RANK-02': { sameLeague: true }
+      'PERSIA-S12-RANK-01': { same_league: false },
+      'PERSIA-S12-RANK-02': { same_league: true }
     }
   };
 
