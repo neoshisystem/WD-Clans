@@ -131,7 +131,7 @@ function prepareSnapshotTransaction(input,context={}){
     review_reasons:reviewReasons,
     persistence:{atomic_boundary_required:true,writes_planned:true,side_effects_executed:false}
   };
-  prepared.persistence.transaction=createSnapshotPersistencePlan(input,prepared);
+  prepared.persistence.transaction=createSnapshotPersistencePlan(input,prepared,context.currentState||null);
   return prepared;
 }
 module.exports={prepareSnapshotTransaction};
