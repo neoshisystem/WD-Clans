@@ -55,3 +55,12 @@ Document-level horizontal overflow is clipped at the CSS boundary without changi
 PASS_WITH_REVIEW_CASES
 
 Evidence-backed extraction and persistence are complete. Identity and membership remain explicitly unresolved until later evidence supplies a valid baseline/decision.
+
+## Final UI/data checkpoint
+
+- Source-native `last_online_display` is preserved through Projection/Static Read Model; relative values such as `1m` are not rendered as a dash.
+- Lifetime medal counts (gold/silver/bronze) remain evidence-backed observation data and are displayed in the viewer grid/table.
+- S13 has no valid prior baseline, so Δ Clan Medals / Δ Total Kills are unavailable rather than fabricated.
+- S13 alone does not infer JOIN/LEAVE/RETURN/TRANSFER.
+- Dedicated Persian UNITY viewer opens S13 directly; Global/Admin remains the only cross-Clan selector.
+- Document-level horizontal overflow is contained without redesign.
