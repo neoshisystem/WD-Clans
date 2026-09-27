@@ -84,7 +84,7 @@ test('Dedicated Clan pages expose no cross-Clan selector and preserve Clan conte
     assert.match(html,/id="global-clan"/);
     assert.doesNotMatch(html,/id="clan-select"/);
   }
-  assert.match(app,/new Set\\(\\['clan-viewer','archive','players','player','member-history'\\]\\)/);
+  assert.ok(app.includes("new Set(['clan-viewer','archive','players','player','member-history'])"));
   assert.match(app,/document\\.querySelectorAll\\('\\.brand'\\)/);
 });
 
