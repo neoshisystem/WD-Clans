@@ -64,3 +64,10 @@ Do not re-ingest/overwrite S13. Do not assume the next identifier is S14.
 - Detailed corrective report: `docs/reports/2026-09-28_cr01-corrective-ux-ui-gap-closure.md`
 - Final corrective classification: **PASS_WITH_REVIEW_CASES**
 - Exact successor: CR-02 receives the next real Persian UNITY Snapshot. Re-check live Product + Memory, confirm the actual Snapshot identifier/sequence, compare with S13, and do not assume S14.
+
+### Final corrective verification
+- Product main HEAD: `f89271ef33afa05cc474d122a52e6af08fbf4fc1`.
+- Site-affecting corrective chain: `91d9e82315d00b5cd27de37077e9a6734899a9cc` → `7e94c9bfe9cd9aeb74a56242f2d87b48907959dd`.
+- Latest CI will validate this final documentation-synced HEAD.
+- Latest successful Pages site deployment: Run `36358889049` on `7e94c9bfe9cd9aeb74a56242f2d87b48907959dd`.
+- Pages: https://neoshisystem.github.io/WD-Clans/
