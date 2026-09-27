@@ -210,3 +210,11 @@ test('Scoped pages visibly expose reusable active Clan identity', () => {
  assert.ok(app.includes('clan-context-badge'));
  assert.ok(app.includes('activeClan.display_name'));
 });
+
+
+test('Player Profile surfaces supported period and cumulative performance without inventing data', () => {
+ const app = read('site/app.js');
+ for (const token of ['function playerPerformance','عملکرد این دوره و تجمعی','مدال کلن · لیگ جاری','کیل · لیگ جاری','مدال کلن · تجمعی','کیل · تجمعی','جمع Deltaهای معتبر ثبت‌شده']) {
+   assert.ok(app.includes(token),'missing profile performance surface: '+token);
+ }
+});
