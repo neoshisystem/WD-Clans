@@ -171,3 +171,42 @@ test('Generated static artifacts carry source-native Last Online for real S13', 
  assert.equal(first?.last_online_display, '1m');
  assert.match(read('site/data/ucs-vertical-slice.js'),/last_online_display/);
 });
+
+
+test('Leaderboard Grid preserves PERSIA-grade table interaction and viewport context', () => {
+ const app = read('site/app.js');
+ const css = read('site/styles.css');
+ for (const token of ['leaderboard-table','deltaMedals','deltaKills','previousScrollLeft','previousScrollTop','scrollTo({ top: previousScrollTop','lastOnlineFor','lifetimeMedalsFor','weaponsFor']) {
+   assert.ok(app.includes(token),'missing Grid hardening behavior: '+token);
+ }
+ for (const token of ['.table-wrap{overflow:auto','.table-wrap th{position:sticky','.table-wrap th .sort-button{display:flex','.summary-table{min-width:0!important','.profile-history-table{min-width:1320px!important']) {
+   assert.ok(css.includes(token),'missing Grid hardening style: '+token);
+ }
+});
+
+test('Leaderboard simple Grid exposes full UCS observation and supported delta fields', () => {
+ const app = read('site/app.js');
+ for (const token of ['مدال لیگ جاری','تغییر مدال کلن','مدال کل کلن','مدال افتخار','مجموع کیل 💀','افزایش کیل 💀','لول سلاح‌ها','آخرین آنلاین']) {
+   assert.ok(app.includes(token),'missing Grid field: '+token);
+ }
+});
+
+test('Membership change entries preserve Clan context and are linkable', () => {
+ const app = read('site/app.js');
+ assert.ok(app.includes('item.href ?'));
+ assert.ok(app.includes("base('player.html','?id=' + encodeURIComponent(event.global_player_id) + '&clan="));
+ assert.ok(app.includes("base('player.html','?observation=' + encodeURIComponent(event.observation_id) + '&clan="));
+});
+
+test('Player Snapshot History explicitly includes Clan Name and richer UCS fields', () => {
+ const app = read('site/app.js');
+ for (const token of ['Snapshot History','Clan Name','Δ Clan Medals','Total Clan Medals','Gold / Silver / Bronze','Total Kills','Δ Kills','Weapons','Last Online']) {
+   assert.ok(app.includes(token),'missing profile history field: '+token);
+ }
+});
+
+test('Scoped pages visibly expose reusable active Clan identity', () => {
+ const app = read('site/app.js');
+ assert.ok(app.includes('clan-context-badge'));
+ assert.ok(app.includes('activeClan.display_name'));
+});
