@@ -40,7 +40,6 @@ function secondClanRaw() {
     const captures = Array.isArray(capture) ? capture : [capture];
     for (const item of captures) item.evidence_refs = ['ART-SECOND-001'];
   }
-  raw.members[0].display_name = undefined;
   raw.members[0].fields.display_name.raw_value = 'Player A';
   return raw;
 }
