@@ -71,7 +71,8 @@
       ? '<span>حالت: <b>Global / Admin</b></span><span>کلن‌ها: <b>' + model.clans.length + '</b></span>'
       : (activeClan ? '<span>کلن: <b>' + esc(activeClan.display_name || activeClan.clan_id) + '</b></span>' : '<span>کلنی ثبت نشده است.</span>') +
         (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span>' : '');
-    return '<section class="hero"><span class="badge">' + esc(kicker) + '</span><h1>' + esc(title) + '</h1>' +
+    const contextBadge = activeClan ? '<span class="badge clan-context-badge">CLAN · ' + esc(activeClan.display_name || activeClan.clan_id) + '</span>' : '';
+    return '<section class="hero"><div class="hero-kickers"><span class="badge">' + esc(kicker) + '</span>' + contextBadge + '</div><h1>' + esc(title) + '</h1>' +
       (lead ? '<p>' + esc(lead) + '</p>' : '') +
       '<div class="meta-row">' + meta + '</div></section>';
   }
@@ -131,11 +132,16 @@
     const events = (Array.isArray(model.activity) ? model.activity : [])
       .filter((event) => event.observed_snapshot_id === snapshotId && (!event.clan_id || event.clan_id === activeClanId));
     const playerById = new Map((model.global_players || []).map((player) => [player.global_player_id, player]));
-    const nameOf = (event) => playerById.get(event.global_player_id)?.display_name || event.display_name || event.global_player_id || event.observation_id || '—';
+    const enrich = (event) => ({
+      event,
+      display_name: playerById.get(event.global_player_id)?.display_name || event.display_name || event.global_player_id || event.observation_id || '—',
+      href: event.global_player_id ? base('player.html', '?id=' + encodeURIComponent(event.global_player_id) + '&clan=' + encodeURIComponent(activeClanId)) :
+        event.observation_id ? base('player.html', '?observation=' + encodeURIComponent(event.observation_id) + '&clan=' + encodeURIComponent(activeClanId)) : null
+    });
     return {
-      joined: events.filter((event) => event.event_type === 'JOIN' || event.event_type === 'RETURN' || (event.event_type === 'TRANSFER' && event.to_clan_id === activeClanId)).map(nameOf),
-      left: events.filter((event) => event.event_type === 'LEAVE' || (event.event_type === 'TRANSFER' && event.from_clan_id === activeClanId)).map(nameOf),
-      other: events.filter((event) => event.event_type === 'UNKNOWN_CHANGE' || event.event_type === 'NOT_OBSERVED').map(nameOf)
+      joined: events.filter((event) => event.event_type === 'JOIN' || event.event_type === 'RETURN' || (event.event_type === 'TRANSFER' && event.to_clan_id === activeClanId)).map(enrich),
+      left: events.filter((event) => event.event_type === 'LEAVE' || (event.event_type === 'TRANSFER' && event.from_clan_id === activeClanId)).map(enrich),
+      other: events.filter((event) => event.event_type === 'UNKNOWN_CHANGE' || event.event_type === 'NOT_OBSERVED').map(enrich)
     };
   }
 
@@ -169,7 +175,7 @@
     const changes = membershipChangesForSnapshot(snapshot.snapshot_id);
     const total = changes.joined.length + changes.left.length + changes.other.length;
     const group = (title, items, className) => items.length
-      ? '<div class="membership-change-group ' + className + '"><div class="membership-change-heading"><span>' + title + '</span><b>' + items.length + '</b></div><div class="change-list">' + items.map((name) => '<span class="change-pill">' + esc(name) + '</span>').join('') + '</div></div>'
+      ? '<div class="membership-change-group ' + className + '"><div class="membership-change-heading"><span>' + title + '</span><b>' + items.length + '</b></div><div class="change-list">' + items.map((item) => item.href ? '<a class="change-pill" href="' + item.href + '">' + esc(item.display_name) + '</a>' : '<span class="change-pill">' + esc(item.display_name) + '</span>').join('') + '</div></div>'
       : '';
     const body = total
       ? group('🟢 اعضای جدید', changes.joined, 'membership-change-group--joined') +
@@ -193,6 +199,9 @@
     let query = '';
 
     const render = () => {
+      const previousTable = root.querySelector('.table-wrap');
+      const previousScrollLeft = previousTable ? previousTable.scrollLeft : 0;
+      const previousScrollTop = typeof window !== 'undefined' ? window.scrollY : 0;
       const normalized = query.trim().toLocaleLowerCase('fa');
       let rows = initialRows.filter((member) => [
         member.rank, member.display_name, member.role, member.stage, member.current_league_clan_medals,
@@ -200,15 +209,23 @@
       ].join(' ').toLocaleLowerCase('fa').includes(normalized));
 
       const sortValue = (member, key) => {
-        if (key === 'rank' || key === 'stage' || key === 'league' || key === 'kills' || key === 'deltaMedals' || key === 'deltaKills') {
-          return {
+        const delta = deltas.get(member.observation_id) || {};
+        if (['rank','name','role','stage','league','deltaMedals','clanMedals','kills','deltaKills','honors','weapons','lastOnline'].includes(key)) {
+          const values = {
             rank: number(member.rank),
+            name: String(member.display_name || '').toLocaleLowerCase('fa'),
+            role: String(member.role || '').toLocaleLowerCase('fa'),
             stage: number(member.stage),
             league: number(member.current_league_clan_medals),
+            deltaMedals: number(delta.medals?.delta),
+            clanMedals: number(member.profile_total_clan_medal_count),
             kills: number(member.total_kills),
-            deltaMedals: number(deltas.get(member.observation_id)?.medals?.delta),
-            deltaKills: number(deltas.get(member.observation_id)?.kills?.delta)
-          }[key];
+            deltaKills: number(delta.kills?.delta),
+            honors: lifetimeMedalsFor(member),
+            weapons: weaponsFor(member),
+            lastOnline: lastOnlineFor(member).toLocaleLowerCase('fa')
+          };
+          return values[key];
         }
         return String(member.display_name || '').toLocaleLowerCase('fa');
       };
@@ -239,16 +256,23 @@
           '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
           '</tr>';
       }).join('');
-      const simple = rows.map((member) => '<tr>' +
-        '<td>' + esc(valueFor(member, 'rank')) + '</td>' +
-        '<td><a href="' + playerLink(member) + '">' + esc(valueFor(member, 'display_name')) + '</a></td>' +
-        '<td>' + esc(valueFor(member, 'role')) + '</td>' +
-        '<td>' + esc(valueFor(member, 'stage')) + '</td>' +
-        '<td>' + esc(valueFor(member, 'current_league_clan_medals')) + '</td>' +
-        '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
-        '<td><span class="medal-inline">' + esc(lifetimeMedalsFor(member)) + '</span></td><td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td><td>' + esc(weaponsFor(member)) + '</td>' +
-        '<td>' + esc(valueFor(member, 'last_online_display') !== '—' ? valueFor(member, 'last_online_display') : valueFor(member, 'last_online_utc')) + '</td>' +
-        '</tr>').join('');
+      const simple = rows.map((member) => {
+        const d = deltas.get(member.observation_id) || {};
+        return '<tr>' +
+          '<td class="rank-cell">' + esc(valueFor(member, 'rank')) + '</td>' +
+          '<td><a href="' + playerLink(member) + '">' + esc(valueFor(member, 'display_name')) + '</a></td>' +
+          '<td>' + esc(valueFor(member, 'role')) + '</td>' +
+          '<td>' + esc(valueFor(member, 'stage')) + '</td>' +
+          '<td>' + esc(valueFor(member, 'current_league_clan_medals')) + '</td>' +
+          '<td>' + esc(signed(d.medals?.delta)) + '</td>' +
+          '<td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td>' +
+          '<td><span class="medal-inline">' + esc(lifetimeMedalsFor(member)) + '</span></td>' +
+          '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
+          '<td>' + esc(signed(d.kills?.delta)) + '</td>' +
+          '<td>' + esc(weaponsFor(member)) + '</td>' +
+          '<td>' + esc(lastOnlineFor(member)) + '</td>' +
+          '</tr>';
+      }).join('');
       const graphic = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
         return '<article class="member-card"><header><div><span class="rank">' + esc(valueFor(member, 'rank')) + '</span><h3>' + esc(valueFor(member, 'display_name')) + '</h3><small>' + esc(valueFor(member, 'role')) + '</small></div><a class="link-arrow" href="' + playerLink(member) + '">←</a></header><div class="stats-grid">' +
@@ -261,7 +285,20 @@
         ? '<div class="table-wrap"><table class="summary-table"><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','بازیکن') + '</th><th>' + sortButton('deltaMedals','Δ مدال') + '</th><th>' + sortButton('deltaKills','Δ کیل') + '</th><th>' + sortButton('league','مدال کلن') + '</th><th>' + sortButton('kills','جمع کیل') + '</th></tr></thead><tbody>' + summary + '</tbody></table></div>'
         : mode === 'graphic'
           ? '<div class="member-grid">' + graphic + '</div>'
-          : '<div class="table-wrap"><table><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','نام کاربری') + '</th><th>سمت</th><th>' + sortButton('stage','استیج') + '</th><th>' + sortButton('league','مدال لیگ') + '</th><th>' + sortButton('kills','مجموع کیل') + '</th><th>مدال کل کلن</th><th>نشان‌ها</th><th>سلاح‌ها</th><th>Last Online</th></tr></thead><tbody>' + simple + '</tbody></table></div>';
+          : '<div class="table-wrap"><table class="leaderboard-table"><thead><tr>' +
+            '<th>' + sortButton('rank','رتبه') + '</th>' +
+            '<th>' + sortButton('name','نام کاربری') + '</th>' +
+            '<th>' + sortButton('role','سمت') + '</th>' +
+            '<th>' + sortButton('stage','استیج') + '</th>' +
+            '<th>' + sortButton('league','مدال لیگ جاری') + '</th>' +
+            '<th>' + sortButton('deltaMedals','تغییر مدال کلن') + '</th>' +
+            '<th>' + sortButton('clanMedals','مدال کل کلن') + '</th>' +
+            '<th>' + sortButton('honors','مدال افتخار') + '</th>' +
+            '<th>' + sortButton('kills','مجموع کیل 💀') + '</th>' +
+            '<th>' + sortButton('deltaKills','افزایش کیل 💀') + '</th>' +
+            '<th>' + sortButton('weapons','لول سلاح‌ها') + '</th>' +
+            '<th>' + sortButton('lastOnline','آخرین آنلاین') + '</th>' +
+            '</tr></thead><tbody>' + simple + '</tbody></table></div>';
 
       root.querySelectorAll('[data-sort]').forEach((button) => button.onclick = () => {
         const next = button.dataset.sort;
@@ -269,6 +306,9 @@
         render();
       });
       root.querySelectorAll('[data-mode]').forEach((button) => button.onclick = () => { mode = button.dataset.mode; render(); });
+      const nextTable = root.querySelector('.table-wrap');
+      if (nextTable) nextTable.scrollLeft = previousScrollLeft;
+      if (typeof window !== 'undefined') window.scrollTo({ top: previousScrollTop, behavior: 'auto' });
     };
 
     const snapshotIndex = clanSnapshots.findIndex((snapshot) => snapshot.snapshot_id === activeSnapshot.snapshot_id);
@@ -331,7 +371,8 @@
               const transition = event.event_type === 'TRANSFER' && event.from_clan_id && event.to_clan_id
                 ? ' · ' + event.from_clan_id + ' → ' + event.to_clan_id
                 : '';
-              return '<span class="change-pill"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</span>';
+              const href = event.global_player_id ? base('player.html','?id=' + encodeURIComponent(event.global_player_id) + '&clan=' + encodeURIComponent(activeClanId)) : event.observation_id ? base('player.html','?observation=' + encodeURIComponent(event.observation_id) + '&clan=' + encodeURIComponent(activeClanId)) : null;
+              return href ? '<a class="change-pill" href="' + href + '"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</a>' : '<span class="change-pill"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</span>';
             }).join('') +
             '</div></div>'
           : '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>0</b></div><div class="change-empty">تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.</div></div>';
@@ -412,7 +453,7 @@
     root.innerHTML = header(displayName, 'UCS · PLAYER PROFILE', 'تاریخچهٔ Observationها مستقل باقی می‌ماند و از Snapshotهای ثبت‌شده خوانده می‌شود.') +
       '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div><div><span>Profile Total Clan Medals</span><b>' + esc(display(latest.profile_total_clan_medal_count)) + '</b></div></div><div class="detail-strip"><div><span>نشان‌ها</span><b>' + esc(lifetimeMedalsFor(latest)) + '</b></div><div><span>سلاح‌ها</span><b>' + esc(weaponsFor(latest)) + '</b></div><div><span>Last Online</span><b>' + esc(lastOnlineFor(latest)) + '</b></div></div></article>' +
       '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
-      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table><thead><tr><th>Snapshot</th><th>Clan</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Total Kills</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.map((item) => '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>').join('') + '</tbody></table></div></section>';
+      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table class="player-history-table"><thead><tr><th>Snapshot</th><th>Clan Name</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Δ Clan Medals</th><th>Total Clan Medals</th><th>Gold / Silver / Bronze</th><th>Total Kills</th><th>Δ Kills</th><th>Weapons</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.slice().sort((a,b) => String(b.observed_at_utc || '').localeCompare(String(a.observed_at_utc || ''))).map((item) => { const d = deltaMapForSnapshot(item.snapshot_id).get(item.observation_id) || {}; return '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(signed(d.medals?.delta)) + '</td><td>' + esc(display(item.profile_total_clan_medal_count)) + '</td><td>' + esc(lifetimeMedalsFor(item)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(signed(d.kills?.delta)) + '</td><td>' + esc(weaponsFor(item)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
   }
 
   function membershipHistory() {
