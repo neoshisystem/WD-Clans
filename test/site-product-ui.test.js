@@ -23,7 +23,7 @@ test('Product UI parity surface: preserves the established viewer interaction mo
     assert.ok(fs.existsSync(path.join(ROOT, 'site', page)));
   }
 
-  assert.match(index, /site\/data\/ucs-vertical-slice\.js/);
+  assert.equal(index.includes('./data/ucs-vertical-slice.js'), true);
   assert.equal(app.includes('fetch('), false);
   assert.equal(app.includes('WebSocket'), false);
   assert.equal(app.includes('http://'), false);
