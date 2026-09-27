@@ -81,3 +81,10 @@ body{overflow-x:clip;}
 @media(max-width:850px){.table-wrap table{min-width:1080px;}.member-grid{grid-template-columns:1fr;}.toolbar{align-items:stretch;}.view-switch button{padding:9px 10px;}}
 @media(max-width:680px){.topbar-tools{order:initial!important;width:auto!important;overflow:visible!important;}.global-clan{order:3;width:100%;overflow-x:auto;overflow-y:hidden;}.table-wrap th .sort-button{min-height:38px;padding:8px 9px;}.table-wrap td{padding:8px 9px;}.summary-table{min-width:0!important;}}
 @media(max-width:430px){.clan-context-badge{max-width:100%;overflow-wrap:anywhere;}}
+.profile-performance{margin-top:14px;}
+.profile-performance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+.profile-performance-card{border:1px solid var(--line);border-radius:12px;padding:10px;background:rgba(255,255,255,.018);min-width:0;}
+.profile-performance-card span,.profile-performance-card small{display:block;color:var(--muted);font-size:.68rem;}
+.profile-performance-card b{display:block;margin:2px 0;font-size:1rem;color:var(--text);}
+@media(max-width:920px){.profile-performance-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:430px){.profile-performance-grid{grid-template-columns:1fr;}}
