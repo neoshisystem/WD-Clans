@@ -40,7 +40,13 @@ function secondClanRaw() {
     const captures = Array.isArray(capture) ? capture : [capture];
     for (const item of captures) item.evidence_refs = ['ART-SECOND-001'];
   }
-  raw.members[0].fields.display_name.raw_value = 'Player A';
+  raw.members[0].fields.display_name.raw_value = 'Demo Operator';
+  raw.members[0].fields.stage.raw_value = '12';
+  raw.members[0].fields.weapons.raw_value = { '25mm': '4', hydra: '3', hellfire: '2' };
+  raw.members[0].fields.total_kills.raw_value = '12345';
+  raw.members[0].fields.lifetime_medals.raw_value = { bronze: '2', silver: '1', gold: '0' };
+  raw.members[0].fields.current_league_clan_medals.raw_value = '500';
+  raw.members[0].fields.profile_total_clan_medal_count.raw_value = '500';
   return raw;
 }
 
