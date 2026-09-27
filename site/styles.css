@@ -88,3 +88,24 @@ body{overflow-x:clip;}
 .profile-performance-card b{display:block;margin:2px 0;font-size:1rem;color:var(--text);}
 @media(max-width:920px){.profile-performance-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:430px){.profile-performance-grid{grid-template-columns:1fr;}}
+/* CR-01 corrective UX/UI: visually dominant reusable Clan identity. */
+.hero--clan{padding-top:34px;}
+.clan-context-identity{display:flex;align-items:center;gap:10px;margin:0 0 14px;padding-inline-start:12px;border-inline-start:3px solid var(--cyan);min-width:0;}
+.clan-context-identity strong{display:block;min-width:0;font-size:clamp(1.9rem,5vw,3rem);line-height:1.08;font-weight:1000;letter-spacing:-.02em;overflow-wrap:anywhere;}
+.clan-context-identity .clan-context-badge{flex:0 0 auto;background:rgba(49,216,255,.06);}
+/* CR-01 corrective UX/UI: current Snapshot Delta vs cumulative historical performance. */
+.compact-insights{grid-template-columns:repeat(4,minmax(0,1fr));}
+.compact-insight--cumulative{border-inline-start-color:var(--violet);}
+.compact-insight small{line-height:1.55;}
+.aggregate--performance{grid-template-columns:repeat(4,minmax(0,1fr));}
+.aggregate--performance>div{min-width:0;}
+.aggregate--performance small{display:block;color:var(--muted);font-size:.66rem;margin-top:2px;line-height:1.5;}
+@media(max-width:920px){
+ .compact-insights{grid-template-columns:1fr 1fr;}
+ .aggregate--performance{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:520px){
+ .clan-context-identity{align-items:flex-start;}
+ .clan-context-identity strong{font-size:1.9rem;}
+ .compact-insights,.aggregate--performance{grid-template-columns:1fr;}
+}
