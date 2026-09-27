@@ -186,7 +186,7 @@ function ingestSnapshot({
   if (!['COMMITTED', 'IDEMPOTENT_REPLAY', 'REVIEW_REQUIRED'].includes(commit.result)) {
     throw new Error('Snapshot persistence failed: ' + JSON.stringify(commit));
   }
-  if (commit.result === 'REVIEW_REQUIRED') {
+  if (commit.result === 'REVIEW_REQUIRED' && !commit.committed) {
     return {
       result: commit.result,
       persisted: false,
@@ -202,7 +202,7 @@ function ingestSnapshot({
   validateCanonicalModel(nextState);
   return {
     result: commit.result,
-    persisted: commit.result === 'COMMITTED',
+    persisted: Boolean(commit.committed),
     snapshot_id: snapshotInput.snapshot.snapshot_id,
     clan_id: snapshotInput.clan_id,
     review_reasons: prepared.review_reasons,
