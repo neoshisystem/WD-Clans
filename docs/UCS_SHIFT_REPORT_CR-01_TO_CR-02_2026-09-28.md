@@ -121,3 +121,62 @@ Treat S13 as the continuity baseline. When the ZIP is supplied:
 
 ## CR-02 warning
 Do not assume the next Snapshot is S14 solely because it is the next file received. Confirm the Snapshot identifier/sequence according to the existing canonical/ingestion contract and Authority-provided metadata.
+
+
+## CR-01 FINAL LIVE HANDOFF — 2026-09-28
+Classification: FACT / HANDOFF
+
+Earlier sections record historical checkpoints and remain point-in-time records. This section is the final live verification for CR-02.
+
+### Product
+- Repository: `neoshisystem/WD-Clans`
+- Branch: `main`
+- Current HEAD: `04007090223f9be2d2d82801335cda55eda67664`
+- Current tree: `7f182a2b7763e5872518d6c1e5c7869cdf5ae7df`
+- Canonical SHA: `55e5e59b3f93273b09fc9d99470f6fbf7dd702f7`
+
+### Persian UNITY / S13
+- Source label: S13
+- Canonical sequence: 1
+- Official: `2026-09-26T19:30:00Z` (4 Mehr 1405, 23:00 Iran)
+- Roster: 48/50
+- Evidence: `EV-REAL-PERSIAN-UNITY-S13`
+- ZIP SHA-256: `7e19f1702139c5d78c9f19acb43a5e0fc0fd14b4f34e8f40be992c55f154f583`
+- Inventory: 56 files = 8 Ranking captures (7 unique + 1 duplicate) + 48 Profile cards
+- Inventory hash: `a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1`
+- Observations: 48, all UNRESOLVED
+- Global IDs: 0
+- Resolution Cases: 48
+- Membership Episodes/Events: 0/0
+- S13 Delta Results: 0
+
+### Final classifications
+- Raw Artifact: COMPLETE
+- Historical Raw checkpoint: PARTIAL / REVIEW_REQUIRED
+- Evidence / Provenance: COMPLETE
+- Canonical: COMPLETE
+- Identity: REVIEW_REQUIRED / UNRESOLVED
+- Membership: COMPLETE for first-observed Snapshot semantics
+- Last Online: COMPLETE
+- Kills: COMPLETE as observed values; no S13 Delta baseline
+- Clan Medals: COMPLETE as observed values; no S13 Delta baseline
+- Gold/Silver/Bronze: COMPLETE
+- Projection / Static Bundle / UI: COMPLETE
+
+### Important continuation notes
+- `S13.raw.json` is historical first-pass evidence. Its pending-normalization list is not a data-loss indicator and must not be overwritten merely to mirror later reviewed Canonical values.
+- No standalone persisted S13 SnapshotInput file is stored. Do not create new persistence architecture for this unless explicitly authorized.
+- S13 is the first observed Snapshot for this Clan; no membership event was inferred.
+- Do not infer the next Snapshot identifier is S14. Confirm identifier/sequence from Authority/context.
+- Do not re-ingest or overwrite S13.
+
+### Validation
+- CI Run 159 / `36352526072` / Job `108713808536`: SUCCESS.
+- Pages Run 35 / `36352526096` / Job `108713820954`: SUCCESS.
+- Render and horizontal-scroll regressions remain covered by automated checks; direct live-browser visual verification was not available through the connector.
+
+### Authoritative report
+`docs/reports/2026-09-28_cr01-final-validation.md`
+
+### Exact next point
+**CR-02 — Real Snapshot #2 for Persian UNITY.**
