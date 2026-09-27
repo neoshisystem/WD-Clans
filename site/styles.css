@@ -58,3 +58,26 @@ body{overflow-x:clip;}
 .page,.hero,.section-block,.panel,.member-card,.player-card,.report-card,.clan-card{min-width:0;max-width:100%;}.clan-card-head,.clan-card-footer,.report-head,.membership-change-heading{min-width:0;}.clan-card h2,.clan-card .muted,.clan-card-footer span,.report-card p,.change-pill{overflow-wrap:anywhere;}.table-wrap{max-width:100%;min-width:0;}.medal-inline{white-space:nowrap;font-variant-numeric:tabular-nums;}.stat-medals{grid-column:1/-1;}.stat-medals strong{font-size:.82rem;white-space:normal;line-height:1.6;}
 
 .detail-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.detail-strip>div{border:1px solid var(--line);border-radius:11px;padding:8px;background:rgba(255,255,255,.025)}.detail-strip span{display:block;color:var(--muted);font-size:.7rem}.detail-strip b{display:block;margin-top:2px;font-size:.78rem;line-height:1.55;overflow-wrap:anywhere}.stat strong{overflow-wrap:anywhere}.medal-inline{white-space:normal;line-height:1.6}@media(max-width:680px){.detail-strip{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+/* PERSIA Grid parity for UCS Leaderboard / Profile history — presentation and interaction only. */
+.hero-kickers{display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+.clan-context-badge{border-color:color-mix(in srgb,var(--cyan) 55%,var(--line));background:rgba(49,216,255,.05);}
+.rank-cell{font-weight:900;color:var(--cyan);}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--panel);-webkit-overflow-scrolling:touch;max-width:100%;overscroll-behavior-x:contain;}
+.table-wrap table{border-collapse:collapse;width:100%;min-width:1080px;font-size:.78rem;}
+.table-wrap th{position:sticky;top:0;background:var(--panel2);color:var(--cyan);z-index:1;padding:0;}
+.table-wrap th .sort-button{display:flex;width:100%;min-height:40px;align-items:center;justify-content:flex-start;gap:7px;padding:9px 10px;border:0;border-radius:0;background:transparent;color:inherit;text-align:right;white-space:nowrap;}
+.table-wrap th .sort-button:hover,.table-wrap th .sort-button:focus-visible{background:rgba(49,216,255,.07);color:var(--cyan);outline:none;}
+.table-wrap th .sort-button:focus-visible{box-shadow:inset 0 0 0 1px var(--cyan);}
+.table-wrap td{padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap;}
+.table-wrap tr:last-child td{border-bottom:0;}
+.summary-table-wrap{overflow-x:auto;}
+.summary-table{min-width:0!important;width:100%!important;table-layout:auto;}
+.summary-table th,.summary-table td{padding:7px 8px;}
+.summary-table th .sort-button{min-height:34px;padding:6px 7px;}
+.summary-player{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+.profile-history-table{min-width:1320px!important;}
+.profile-history-table td:nth-child(8),.profile-history-table td:nth-child(11){white-space:normal;min-width:180px;line-height:1.6;}
+.change-pill{cursor:pointer;}
+@media(max-width:850px){.table-wrap table{min-width:1080px;}.member-grid{grid-template-columns:1fr;}.toolbar{align-items:stretch;}.view-switch button{padding:9px 10px;}}
+@media(max-width:680px){.topbar-tools{order:initial!important;width:auto!important;overflow:visible!important;}.global-clan{order:3;width:100%;overflow-x:auto;overflow-y:hidden;}.table-wrap th .sort-button{min-height:38px;padding:8px 9px;}.table-wrap td{padding:8px 9px;}.summary-table{min-width:0!important;}}
+@media(max-width:430px){.clan-context-badge{max-width:100%;overflow-wrap:anywhere;}}
