@@ -2,7 +2,7 @@
 
 ## Handoff
 Repository: neoshisystem/WD-Clans
-Live main at handoff: `96ea01e0e6aef4a9b8a18ac4df483b090b647581` — CR-02 must still re-check HEAD before any mutation.
+Live main at handoff: `ca97c547c98055e8b9b70cde7591b4513f6952d3` (documentation-only successor checkpoint after functional commit `96ea01e0e6aef4a9b8a18ac4df483b090b647581`). CR-02 must still re-check HEAD before any mutation.
 Successor Conversation: **CR-02**
 Previous Conversation: **CR-01**
 Date: 2026-09-28
@@ -90,7 +90,8 @@ Treat S13 as the continuity baseline. When the ZIP is supplied:
 
 ## Final validation evidence
 - Final corrective commit: https://github.com/neoshisystem/WD-Clans/commit/96ea01e0e6aef4a9b8a18ac4df483b090b647581
-- CI Run 133: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063868 — SUCCESS
+- CI Run 133: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063868 — SUCCESS (functional commit)
+- Successor docs CI Run: https://github.com/neoshisystem/WD-Clans/actions/runs/36349133986 — SUCCESS
 - Pages Run 23: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063883 — SUCCESS
 - Intermediate corrective runs 131/132 failed during diagnosis and generated-artifact synchronization; they are superseded by the final successful commit above.
 
