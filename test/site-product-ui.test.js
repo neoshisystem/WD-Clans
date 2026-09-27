@@ -51,18 +51,50 @@ test('Product UI adds restrained Snapshot navigation, archive activity and safe 
   assert.equal(app.includes('fetch('), false);
 });
 
-test('Product UI has a global dashboard plus a shared Clan Workspace route', () => {
+test('Product UI separates Global/Admin Dashboard from dedicated Clan Leaderboard entrypoint', () => {
   const app = read('site/app.js');
   const index = read('site/index.html');
-  const workspace = read('site/clan.html');
+  const clan = read('site/clan.html');
+
   assert.match(index,/data-page="global-dashboard"/);
-  assert.match(workspace,/data-page="clan-workspace"/);
-  for (const token of ['function globalDashboard()','function clanWorkspace()','model.clans','params.get(\'clan\')','bindNavContext']) {
-    assert.ok(app.includes(token),'missing scalable multi-clan surface: '+token);
+  assert.match(index,/id="global-clan"/);
+  assert.doesNotMatch(index,/Clan Workspace/);
+
+  assert.match(clan,/data-page="clan-viewer"/);
+  assert.match(clan,/data-route="leaderboard"/);
+  assert.doesNotMatch(clan,/data-route="dashboard"/);
+  assert.doesNotMatch(clan,/Clan Workspace/);
+
+  for (const token of ['function globalDashboard()', "case 'clan-viewer': leaderboard(); break;", "page === 'global-dashboard' ? clanSelector() : ''", "base('clan.html','?clan=' + encodeURIComponent(activeClanId))", 'bindNavContext']) {
+    assert.ok(app.includes(token),'missing scoped UI architecture: '+token);
   }
+  assert.equal(app.includes("function clanWorkspace()"), false);
+  assert.equal(app.includes("case 'clan-workspace'"), false);
   assert.doesNotMatch(app,/CLAN-UCS-DEMO|UCS Demo Clan|PERSIA|GOLDENCROWN/);
 });
 test('Product UI keeps scoped navigation and blocks cross-Clan profile fallback', () => {
   const app = read('site/app.js');
   for (const token of ['scopedObs','scopedMemberships','activeClanId','بازیکن در این Clan پیدا نشد']) assert.ok(app.includes(token));
+});
+
+test('Dedicated Clan pages expose no cross-Clan selector and preserve Clan context', () => {
+  const app = read('site/app.js');
+  for (const page of ['clan.html','archive.html','players.html','player.html','member-history.html']) {
+    const html = read('site/' + page);
+    assert.match(html,/id="global-clan"/);
+    assert.doesNotMatch(html,/id="clan-select"/);
+  }
+  assert.match(app,/new Set\\(\\['clan-viewer','archive','players','player','member-history'\\]\\)/);
+  assert.match(app,/document\\.querySelectorAll\\('\\.brand'\\)/);
+});
+
+test('Leaderboard includes compact performance deltas and per-Snapshot membership changes', () => {
+  const app = read('site/app.js');
+  const css = read('site/styles.css');
+  for (const token of ['snapshotPerformance','compactPerformanceHtml','Δ مدال کلن','Δ کیل','membershipChangesForSnapshot','membershipChangesHtml','تغییرات اعضا']) {
+    assert.ok(app.includes(token),'missing leaderboard enhancement: '+token);
+  }
+  for (const token of ['.compact-insights','.compact-insight','.membership-changes','.membership-change-grid']) {
+    assert.ok(css.includes(token),'missing leaderboard enhancement style: '+token);
+  }
 });
