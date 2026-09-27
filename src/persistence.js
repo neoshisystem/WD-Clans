@@ -83,7 +83,7 @@ function candidateIds(member) {
     .filter(Boolean);
 }
 
-function createSnapshotPersistencePlan(input, preparedPlan) {
+function createSnapshotPersistencePlan(input, preparedPlan, currentState = null) {
   if (!preparedPlan || !input) throw new Error('input and preparedPlan are required');
   const binding = preparedPlan.league_binding;
   if (!binding?.league_id || binding.league_id !== input.league.league_id) {
@@ -171,14 +171,28 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       };
     });
 
+  const stateHas = (collection, idField, id) =>
+    Boolean(currentState && Array.isArray(currentState[collection]) &&
+      currentState[collection].some((record) => record[idField] === id));
+  const shouldCreateClan = currentState
+    ? !stateHas('clans', 'clan_id', clanId)
+    : input.snapshot.sequence === 1;
+  const shouldCreateLeague = currentState
+    ? !stateHas('leagues', 'league_id', leagueId)
+    : input.snapshot.sequence === 1;
+  const clanLeagueId = 'CLANLEAGUE::' + clanId + '::' + leagueId;
+  const shouldCreateClanLeague = currentState
+    ? !stateHas('clan_leagues', 'clan_league_id', clanLeagueId)
+    : input.snapshot.sequence === 1;
+
   const patch = {
-    clans: input.snapshot.sequence === 1 ? [{
+    clans: shouldCreateClan ? [{
       clan_id: clanId,
       display_name: input.clan_name ?? null,
       status: 'ACTIVE',
       provenance: { evidence_refs: evidenceRefs }
     }] : [],
-    leagues: input.snapshot.sequence === 1 ? [{
+    leagues: shouldCreateLeague ? [{
       league_id: leagueId,
       name: input.league.name ?? null,
       starts_at_utc: input.league.starts_at_utc,
@@ -188,8 +202,8 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       completed_at_utc: leagueStatus === 'COMPLETED' ? input.league.ends_at_utc : null,
       provenance: { evidence_refs: evidenceRefs }
     }] : [],
-    clan_leagues: input.snapshot.sequence === 1 ? [{
-      clan_league_id: 'CLANLEAGUE::' + clanId + '::' + leagueId,
+    clan_leagues: shouldCreateClanLeague ? [{
+      clan_league_id: clanLeagueId,
       clan_id: clanId,
       league_id: leagueId,
       status: leagueStatus,
