@@ -1,5 +1,7 @@
 'use strict';
 
+// Dedicated Clan viewer: direct leaderboard context; Global/Admin stays isolated.
+
 (function () {
   const bundle = globalThis.UCS_STATIC_DATA;
   const root = document.getElementById('app');
