@@ -83,3 +83,31 @@ Inventory hash: a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1
 Raw checkpoint remains at data/real-snapshots/persian-unity/S13.raw.json and is historical first-pass evidence, not Canonical authority.
 
 Next Snapshot must be processed against S13 without silently confirming identities.
+
+
+## CR-01 final UI/data checkpoint — 2026-09-28
+Current handoff target: **CR-02**.
+Current Product main before this corrective commit: `211a1570f1b5a00e4f8a946a15f5b94506d93813`.
+
+Persian UNITY S13 remains:
+- official timestamp: 2026-09-26T19:30:00Z (4 Mehr 1405, 23:00 Iran)
+- 48/50 roster
+- 56 evidence files = 8 Ranking captures (7 unique + 1 duplicate) + 48 Profile cards
+- 48 UNRESOLVED observations
+- 0 Global IDs / 0 Membership Episodes / 0 Membership Events / 0 deltas
+
+UI correction required by this checkpoint:
+- source-native `last_online_display` must survive Canonical -> Projection -> Static Read Model and be used by the viewer; `last_online_utc` remains null unless exact UTC is known.
+- lifetime medal counts `gold/silver/bronze` are evidence-backed observation fields and must be visible in the viewer's player grid/cards.
+- Global/Admin `index.html` remains the only cross-Clan switcher.
+- Dedicated Clan URLs remain single-Clan and direct-to-Leaderboard.
+- Generated static artifacts are never hand-edited; regenerate from Canonical.
+
+When a new real ZIP is supplied:
+1. Read this file and the current shift report.
+2. Re-check live main.
+3. Hash and inventory the ZIP.
+4. Use Project Authority's supplied Clan/date/time as official metadata.
+5. Treat S13 as continuity baseline but do not auto-confirm identities.
+6. Preserve unresolved cases and only create membership/delta results when their prerequisites are met.
+7. Regenerate static data, validate, test, deploy, report, then update the shift report.

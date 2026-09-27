@@ -111,6 +111,7 @@ function observationProjection(observation, snapshot, clan) {
     lifetime_medals: cloneOptional(observation.lifetime_medals),
     current_league_clan_medals: observation.current_league_clan_medals,
     profile_total_clan_medal_count: observation.profile_total_clan_medal_count,
+    last_online_display: observation.last_online_display ?? null,
     last_online_utc: observation.last_online_utc ?? null,
     provenance: {
       canonical_ref: observation.observation_id,

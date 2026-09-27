@@ -146,3 +146,20 @@ test('Agent handoff documentation exists', () => {
  assert.ok(fs.existsSync(path.join(ROOT,'docs','UCS_AGENT_OPERATIONS.md')));
  assert.ok(fs.existsSync(path.join(ROOT,'docs','UCS_SHIFT_REPORT_2026-09-27.md')));
 });
+
+
+test('Real snapshot viewer preserves source-native Last Online and lifetime medal badges', () => {
+ const canonical = JSON.parse(read('data/canonical.json'));
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const snapshot = staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13');
+ assert.equal(snapshot?.members.length,48);
+ const first = snapshot.members.find(m => m.observation_id === 'S13::R001');
+ assert.equal(first?.last_online_display, '1m');
+ assert.deepEqual(first?.lifetime_medals, { bronze: 2, gold: 2, silver: 4 });
+ const source = canonical.observations.find(o => o.observation_id === 'S13::R001');
+ assert.equal(source?.last_online_display, '1m');
+ assert.match(read('site/app.js'),/last_online_display/);
+ assert.match(read('site/app.js'),/🥇/);
+ assert.match(read('site/app.js'),/🥈/);
+ assert.match(read('site/app.js'),/🥉/);
+});

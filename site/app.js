@@ -187,7 +187,7 @@
       const normalized = query.trim().toLocaleLowerCase('fa');
       let rows = initialRows.filter((member) => [
         member.rank, member.display_name, member.role, member.stage, member.current_league_clan_medals,
-        member.total_kills, member.profile_total_clan_medal_count, member.last_online_utc
+        member.total_kills, member.profile_total_clan_medal_count, member.last_online_display, member.last_online_utc
       ].join(' ').toLocaleLowerCase('fa').includes(normalized));
 
       const sortValue = (member, key) => {
@@ -237,13 +237,15 @@
         '<td>' + esc(valueFor(member, 'stage')) + '</td>' +
         '<td>' + esc(valueFor(member, 'current_league_clan_medals')) + '</td>' +
         '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
-        '<td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td>' +
-        '<td>' + esc(valueFor(member, 'last_online_utc')) + '</td>' +
+        '<td><span class="medal-inline">🥇 ' + esc(member.lifetime_medals?.gold ?? '—') + ' · 🥈 ' + esc(member.lifetime_medals?.silver ?? '—') + ' · 🥉 ' + esc(member.lifetime_medals?.bronze ?? '—') + '</span></td><td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td>' +
+        '<td>' + esc(valueFor(member, 'last_online_display') !== '—' ? valueFor(member, 'last_online_display') : valueFor(member, 'last_online_utc')) + '</td>' +
         '</tr>').join('');
+      const medalBadges = (member.lifetime_medals && typeof member.lifetime_medals === 'object') ? [['🥇', 'طلا', member.lifetime_medals.gold], ['🥈', 'نقره', member.lifetime_medals.silver], ['🥉', 'برنز', member.lifetime_medals.bronze]] : [];
       const graphic = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
         return '<article class="member-card"><header><div><span class="rank">' + esc(valueFor(member, 'rank')) + '</span><h3>' + esc(valueFor(member, 'display_name')) + '</h3><small>' + esc(valueFor(member, 'role')) + '</small></div><a class="link-arrow" href="' + playerLink(member) + '">←</a></header><div class="stats-grid">' +
-          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['آخرین آنلاین',member.last_online_utc]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : display(value)) + '</strong></div>').join('') +
+          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['آخرین آنلاین',member.last_online_display ?? member.last_online_utc]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : display(value)) + '</strong></div>').join('') +
+          '<div class="stat stat-medals"><span>نشان‌های عمر</span><strong>' + medalBadges.map(([icon, label, value]) => icon + ' ' + label + ' ' + display(value)).join(' · ') + '</strong></div>' +
           '</div></article>';
       }).join('');
 
