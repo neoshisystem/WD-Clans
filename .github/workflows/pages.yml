@@ -31,9 +31,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node dependencies
-        run: npm ci
-
       - name: Validate project
         run: npm test
 
