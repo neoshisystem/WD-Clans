@@ -168,7 +168,7 @@ function ingestSnapshot({
     };
   }
 
-  if (snapshotInput.snapshot.sequence === 1 && clanDisplayName) {
+  if (clanDisplayName) {
     const clanPatch = prepared.persistence.transaction.canonical_patch.clans.find(
       (clan) => clan.clan_id === snapshotInput.clan_id
     );
