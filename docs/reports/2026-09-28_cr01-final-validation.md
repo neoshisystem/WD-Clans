@@ -72,3 +72,66 @@ PROPOSAL: None.
 AUTHORITY DECISION: S13 is the baseline for the next real Snapshot.
 OPEN DECISION: Any identity correlation that cannot satisfy existing confirmation policy.
 UNKNOWN: Any unobserved or conflicting field in the next ZIP.
+
+
+## CR-01 FINAL COMPLETION AUDIT — 2026-09-28
+Classification: FACT / HANDOFF
+
+Live Product final verification:
+- HEAD: `04007090223f9be2d2d82801335cda55eda67664`
+- Tree: `7f182a2b7763e5872518d6c1e5c7869cdf5ae7df`
+- Canonical SHA: `55e5e59b3f93273b09fc9d99470f6fbf7dd702f7`
+- Latest CI Run 159 / `36352526072` / Job `108713808536`: SUCCESS
+- Latest Pages Run 35 / `36352526096` / Job `108713820954`: SUCCESS
+
+S13 final state:
+- Clan: Persian UNITY
+- Source Snapshot label: S13
+- Canonical sequence: 1
+- Official timestamp: `2026-09-26T19:30:00Z` (4 Mehr 1405, 23:00 Iran)
+- Roster: 48/50
+- Evidence artifact: `EV-REAL-PERSIAN-UNITY-S13`
+- ZIP SHA-256: `7e19f1702139c5d78c9f19acb43a5e0fc0fd14b4f34e8f40be992c55f154f583`
+- Inventory: 56 files = 8 Ranking captures (7 unique + 1 duplicate) + 48 Profile cards
+- Inventory hash: `a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1`
+
+Pipeline classification:
+- Raw Artifact: COMPLETE
+- Historical RawExtraction checkpoint: PARTIAL / REVIEW_REQUIRED
+- Source Adapter outcome: COMPLETE
+- Persisted S13 SnapshotInput artifact: PARTIAL (not separately stored)
+- Evidence / Provenance: COMPLETE
+- Canonical: COMPLETE
+- Identity: REVIEW_REQUIRED / 48 UNRESOLVED
+- Membership: COMPLETE for first-observed-Snapshot semantics
+- Metrics: COMPLETE for Last Online, Total Kills, Current League Clan Medals, Profile Total Clan Medal Count, and lifetime Gold/Silver/Bronze
+- Projection / Read Model: COMPLETE
+- Static Bundle: COMPLETE
+- UI: COMPLETE
+
+Important metric interpretation:
+- `last_online_display` is present for all 48; `last_online_utc` remains null because the source provides relative status only.
+- `total_kills` is present for all 48.
+- Current League Clan Medals and Profile Total Clan Medal Count are present for all 48 and remain separate scopes.
+- Lifetime `gold/silver/bronze` medal counts are present for all 48.
+- S13 Delta Results = 0 is correct: S13 is the first observed Snapshot for this Clan and has no valid prior baseline; no Delta was fabricated.
+- Membership Episodes/Events = 0 is correct for the same reason.
+
+Raw checkpoint note:
+`data/real-snapshots/persian-unity/S13.raw.json` is explicitly a historical first-pass checkpoint. Its pending-normalization list still contains Last Online / weapon levels / lifetime medals, but later reviewed values are already complete in Canonical, Projection, Static Data and UI. The raw checkpoint was not rewritten because historical raw evidence must not be silently overwritten.
+
+Reference audit:
+S10/S11-era PERSIA reference structures were checked only to confirm field conventions. They were not used as S13 source data and did not authorize a schema change.
+
+Regression:
+The previously fixed Render and Horizontal/Wide Scroll issues were not reimplemented. Current overflow containment and UI regression tests remain present. Automated CI passed; direct live-browser screenshot verification was not available through the current connector.
+
+Final outcome: **PASS_WITH_REVIEW_CASES**
+
+Remaining review cases are non-blocking:
+1. 48 S13 identities remain UNRESOLVED until valid confirmation evidence/policy permits resolution.
+2. The historical first-pass raw checkpoint remains unchanged.
+3. No standalone persisted S13 SnapshotInput artifact exists; do not add persistence architecture solely to close this without explicit Authority direction.
+
+Exact successor point:
+CR-02 proceeds to **Real Snapshot #2 for Persian UNITY**. Re-check live main, hash/inventory the new ZIP, verify its official Snapshot identifier/sequence from Authority/context, compare with S13, preserve unresolved identity when required, derive membership/deltas only when contracts permit, regenerate static artifacts, validate, and update the next report/handoff. Do not re-ingest or overwrite S13 and do not assume the next identifier is S14.
