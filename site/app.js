@@ -31,7 +31,8 @@
       '</select></label>';
   }
 
-  const savedTheme = localStorage.getItem('ucs-theme') || 'dark';
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem('ucs-theme') || 'dark'; } catch (_) {}
   document.documentElement.dataset.theme = savedTheme;
   document.getElementById('global-clan').innerHTML = clanSelector() +
     '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته">' +
@@ -45,7 +46,7 @@
   document.getElementById('theme-toggle')?.addEventListener('click', () => {
     const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem('ucs-theme', nextTheme);
+    try { localStorage.setItem('ucs-theme', nextTheme); } catch (_) {}
     const button = document.getElementById('theme-toggle');
     if (button) button.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
   });
