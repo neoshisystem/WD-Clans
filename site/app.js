@@ -31,12 +31,23 @@
       '</select></label>';
   }
 
-  document.getElementById('global-clan').innerHTML = clanSelector();
+  const savedTheme = localStorage.getItem('ucs-theme') || 'dark';
+  document.documentElement.dataset.theme = savedTheme;
+  document.getElementById('global-clan').innerHTML = clanSelector() +
+    '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته">' +
+    (savedTheme === 'dark' ? '☀️' : '🌙') + '</button>';
   document.getElementById('global-clan').querySelector('#clan-select')?.addEventListener('change', (event) => {
     const next = new URL(location.href);
     next.searchParams.set('clan', event.target.value);
     next.searchParams.delete('snapshot');
     location.href = next.toString();
+  });
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem('ucs-theme', nextTheme);
+    const button = document.getElementById('theme-toggle');
+    if (button) button.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
   });
 
   function header(title, kicker, lead = '') {
@@ -158,12 +169,21 @@
       root.querySelectorAll('[data-mode]').forEach((button) => button.onclick = () => { mode = button.dataset.mode; render(); });
     };
 
+    const snapshotIndex = clanSnapshots.findIndex((snapshot) => snapshot.snapshot_id === activeSnapshot.snapshot_id);
+    const olderSnapshot = snapshotIndex >= 0 && snapshotIndex < clanSnapshots.length - 1 ? clanSnapshots[snapshotIndex + 1] : null;
+    const newerSnapshot = snapshotIndex > 0 ? clanSnapshots[snapshotIndex - 1] : null;
+    const snapshotNav = '<div class="snapshot-nav">' +
+      '<a class="btn" href="' + (olderSnapshot ? base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(olderSnapshot.snapshot_id) + '&mode=' + encodeURIComponent(mode)) : '#') + '" ' + (olderSnapshot ? '' : 'aria-disabled="true"') + '>← Snapshot قبلی</a>' +
+      '<a class="btn" href="' + base('archive.html','?clan=' + encodeURIComponent(activeClanId)) + '">آرشیو</a>' +
+      '<a class="btn" href="' + (newerSnapshot ? base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(newerSnapshot.snapshot_id) + '&mode=' + encodeURIComponent(mode)) : '#') + '" ' + (newerSnapshot ? '' : 'aria-disabled="true"') + '>Snapshot بعدی →</a>' +
+      '</div>';
+
     root.innerHTML = header('جدول جامع عملکرد و تغییرات اعضای کلن', 'UCS · LEADERBOARD', 'ساختار Viewer بر پایهٔ الگوی تثبیت‌شدهٔ پروژه نگه داشته شده است؛ داده‌ها از Read Model خوانده می‌شوند.') +
       '<section class="panel"><div class="toolbar">' +
       '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(s.official_timestamp_utc) + '</option>').join('') + '</select></label>' +
       '<label class="field search-field"><span>جستجو</span><input id="search-input" type="search" placeholder="نام بازیکن، سمت یا مقدار..."></label>' +
       '<div class="view-switch"><button data-mode="simple">نمایش ساده</button><button data-mode="summary">نمایش خلاصه</button><button data-mode="graphic">نمایش گرافیکی</button></div>' +
-      '</div><div class="kpi-row"><div><span>اعضا</span><b>' + activeSnapshot.member_count + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + (bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div><div class="count" id="result-count"></div><div id="results"></div></section>';
+      '</div><div class="kpi-row"><div><span>اعضا</span><b>' + activeSnapshot.member_count + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + (bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>';
     root.querySelector('#snapshot-select').onchange = (event) => {
       const next = new URL(location.href);
       next.searchParams.set('snapshot', event.target.value);
@@ -185,10 +205,35 @@
       }
       return { medals: medalCount ? signed(medals) : '— / baseline', kills: killCount ? signed(kills) : '— / baseline' };
     };
+    const playerById = new Map((model.global_players || []).map((player) => [player.global_player_id, player]));
+    const eventLabel = {
+      JOIN: 'عضو جدید',
+      RETURN: 'بازگشت',
+      LEAVE: 'خروج / حذف',
+      TRANSFER: 'جابه‌جایی',
+      UNKNOWN_CHANGE: 'تغییر نامشخص',
+      NOT_OBSERVED: 'مشاهده نشد'
+    };
+    const activityForSnapshot = (snapshotId) => (Array.isArray(model.activity) ? model.activity : [])
+      .filter((event) => event.observed_snapshot_id === snapshotId && (!event.clan_id || event.clan_id === activeClanId));
+
     root.innerHTML = header('آرشیو دوره‌های کلن', 'UCS · SNAPSHOT ARCHIVE', 'هر Snapshot یک رکورد مستقل است و در آرشیو نگهداری می‌شود؛ نسخه‌های جدید جایگزین نسخه‌های قبلی نمی‌شوند.') +
       '<div class="report-list">' + snapshots.map((snapshot, index) => {
         const agg = aggregate(snapshot.snapshot_id);
-        return '<article class="report-card"><div class="report-index">' + (snapshots.length - index) + '</div><div class="report-main"><div class="report-head"><h2><a href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">' + esc(snapshot.snapshot_id) + ' · ' + esc(snapshot.official_timestamp_utc) + '</a></h2><span class="status">' + (index === 0 ? 'آخرین Snapshot' : 'آرشیو') + '</span></div><p>' + esc(snapshot.member_count) + ' / ' + esc(snapshot.capacity) + ' عضو · مستقل و قابل بازسازی</p><div class="aggregate"><div><span>جمع تغییر مدال کلن</span><b>' + agg.medals + '</b></div><div><span>جمع افزایش کیل</span><b>' + agg.kills + '</b></div></div></div><a class="link-arrow" href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">←</a></article>';
+        const activity = activityForSnapshot(snapshot.snapshot_id);
+        const changesHtml = activity.length
+          ? '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>' + activity.length + '</b></div><div class="change-list">' +
+            activity.map((event) => {
+              const player = playerById.get(event.global_player_id);
+              const label = player?.display_name || event.global_player_id || '—';
+              const transition = event.event_type === 'TRANSFER' && event.from_clan_id && event.to_clan_id
+                ? ' · ' + event.from_clan_id + ' → ' + event.to_clan_id
+                : '';
+              return '<span class="change-pill"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</span>';
+            }).join('') +
+            '</div></div>'
+          : '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>0</b></div><div class="change-empty">تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.</div></div>';
+        return '<article class="report-card"><div class="report-index">' + (snapshots.length - index) + '</div><div class="report-main"><div class="report-head"><h2><a href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">' + esc(snapshot.snapshot_id) + ' · ' + esc(snapshot.official_timestamp_utc) + '</a></h2><span class="status">' + (index === 0 ? 'آخرین Snapshot' : 'آرشیو') + '</span></div><p>' + esc(snapshot.member_count) + ' / ' + esc(snapshot.capacity) + ' عضو · مستقل و قابل بازسازی</p>' + changesHtml + '<div class="aggregate"><div><span>جمع تغییر مدال کلن</span><b>' + agg.medals + '</b></div><div><span>جمع افزایش کیل</span><b>' + agg.kills + '</b></div></div></div><a class="link-arrow" href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">←</a></article>';
       }).join('') + (snapshots.length ? '' : '<div class="empty">Snapshotی برای این Clan ثبت نشده است.</div>') + '</div>';
   }
 
