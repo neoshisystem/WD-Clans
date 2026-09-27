@@ -12,3 +12,7 @@ Critical operating rules:
 - Real Clan histories remain isolated.
 - For a first observed Snapshot, do not infer JOIN/LEAVE/TRANSFER.
 - Do not hand-edit generated static artifacts without matching Canonical regeneration.
+
+- Read docs/UCS_SCHEMA_FILE_MAP_V0_1.md and docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md before processing a real Snapshot.
+- Preserve source-native Last Online in `last_online_display`; do not replace relative values with invented UTC.
+- Lifetime medal counts (gold/silver/bronze) are evidence-backed observation fields and must remain visible in the Read Model/UI when observed.
