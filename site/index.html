@@ -57,6 +57,36 @@
       </div>
     </section>
 
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">DELTA READ MODEL</div>
+          <h2>Projected Deltas</h2>
+        </div>
+        <div class="mono muted">read_model.delta_results</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scope</th>
+              <th>Metric</th>
+              <th>Player / Global Player</th>
+              <th>Delta</th>
+              <th>Status</th>
+              <th>Baseline Type</th>
+              <th>Current Observation</th>
+              <th>Baseline Observation</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="delta-results-body"></tbody>
+        </table>
+      </div>
+      <p id="delta-empty-state" class="muted empty-state" hidden>No projected Delta records are present in this Static Data Bundle.</p>
+    </section>
+
     <section class="grid-two">
       <article class="panel">
         <div class="eyebrow">PROVENANCE</div>
