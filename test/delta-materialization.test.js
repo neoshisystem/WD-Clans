@@ -1,0 +1,614 @@
+'use strict';
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+
+const {
+  emptyCanonicalModel,
+  validateCanonicalModel
+} = require('../src/canonical');
+const {
+  RawExtractionSourceAdapter
+} = require('../src/source-adapter');
+const {
+  InMemoryEvidenceRegistry,
+  validateSnapshotInputAgainstRegistry
+} = require('../src/evidence-registry');
+const {
+  prepareSnapshotTransaction
+} = require('../src/pipeline');
+const {
+  InMemoryAtomicPersistenceAdapter
+} = require('../src/persistence');
+const {
+  ProjectionEngine
+} = require('../src/projection');
+const {
+  buildStaticDataBundle,
+  serializeStaticDataBundle,
+  hashStaticDataBundle
+} = require('../src/static-data');
+
+const AUTHORITY_CONTEXT = {
+  project_id: 'UCS',
+  clan_id: 'PERSIA',
+  snapshot: {
+    snapshot_id: 'S12',
+    sequence: 12,
+    official_timestamp_utc: '2026-09-25T12:30:00Z',
+    member_count: 50,
+    capacity: 50
+  },
+  league: {
+    league_id: 'PILOT::LEAGUE::2026-09-24',
+    name: null,
+    sequence: 1,
+    status: 'ACTIVE',
+    starts_at_utc: '2026-09-24T00:00:00Z',
+    ends_at_utc: '2026-10-01T00:00:00Z'
+  }
+};
+
+const CURRENT_LEAGUE_ID = AUTHORITY_CONTEXT.league.league_id;
+const OLD_LEAGUE_ID = 'PILOT::LEAGUE::2026-09-17';
+const HISTORY_EVIDENCE_ID = 'PERSIA-DELTA-TEST-HISTORY';
+
+function readRawAndInput() {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const raw = JSON.parse(fs.readFileSync(
+    path.join(
+      __dirname,
+      '..',
+      'examples',
+      'pilots',
+      'persia-s12',
+      'raw-extraction.json'
+    ),
+    'utf8'
+  ));
+
+  const registry = new InMemoryEvidenceRegistry({
+    artifacts: raw.source.artifacts
+  });
+
+  const input = new RawExtractionSourceAdapter().toSnapshotInput(
+    raw,
+    AUTHORITY_CONTEXT
+  );
+
+  assert.equal(validateSnapshotInputAgainstRegistry(registry, input).valid, true);
+
+  return { raw, input, registry };
+}
+
+function seedDeltaCanonical() {
+  const model = emptyCanonicalModel();
+
+  model.clans.push({
+    clan_id: 'PERSIA',
+    display_name: 'PERSIA',
+    status: 'ACTIVE',
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.leagues.push({
+    league_id: OLD_LEAGUE_ID,
+    name: null,
+    starts_at_utc: '2026-09-17T00:00:00Z',
+    ends_at_utc: '2026-09-24T00:00:00Z',
+    sequence: 0,
+    status: 'COMPLETED',
+    completed_at_utc: '2026-09-24T00:00:00Z',
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.leagues.push({
+    league_id: CURRENT_LEAGUE_ID,
+    name: null,
+    starts_at_utc: AUTHORITY_CONTEXT.league.starts_at_utc,
+    ends_at_utc: AUTHORITY_CONTEXT.league.ends_at_utc,
+    sequence: 1,
+    status: 'ACTIVE',
+    completed_at_utc: null,
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  const oldClanLeagueId = 'CLANLEAGUE::PERSIA::' + OLD_LEAGUE_ID;
+  const currentClanLeagueId = 'CLANLEAGUE::PERSIA::' + CURRENT_LEAGUE_ID;
+
+  model.clan_leagues.push({
+    clan_league_id: oldClanLeagueId,
+    clan_id: 'PERSIA',
+    league_id: OLD_LEAGUE_ID,
+    status: 'COMPLETED',
+    final_snapshot_id: null,
+    opening_snapshot_id: 'S11-DELTA-OLD',
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.clan_leagues.push({
+    clan_league_id: currentClanLeagueId,
+    clan_id: 'PERSIA',
+    league_id: CURRENT_LEAGUE_ID,
+    status: 'ACTIVE',
+    final_snapshot_id: null,
+    opening_snapshot_id: 'S12-DELTA-PREV',
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.snapshots.push({
+    snapshot_id: 'S11-DELTA-OLD',
+    clan_id: 'PERSIA',
+    league_id: OLD_LEAGUE_ID,
+    clan_league_id: oldClanLeagueId,
+    sequence: 10,
+    official_timestamp_utc: '2026-09-23T12:00:00Z',
+    member_count: 1,
+    capacity: 50,
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.snapshots.push({
+    snapshot_id: 'S12-DELTA-PREV',
+    clan_id: 'PERSIA',
+    league_id: CURRENT_LEAGUE_ID,
+    clan_league_id: currentClanLeagueId,
+    sequence: 11,
+    official_timestamp_utc: '2026-09-25T11:30:00Z',
+    member_count: 1,
+    capacity: 50,
+    provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+  });
+
+  model.global_player_identities.push(
+    {
+      global_player_id: 'GP-S12-KILL-001',
+      status: 'ACTIVE',
+      provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+    },
+    {
+      global_player_id: 'GP-S12-MEDAL-002',
+      status: 'ACTIVE',
+      provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+    },
+    {
+      global_player_id: 'GP-S12-NOBASELINE-003',
+      status: 'ACTIVE',
+      provenance: { evidence_refs: [HISTORY_EVIDENCE_ID] }
+    }
+  );
+
+  model.observations.push({
+    observation_id: 'S11-DELTA-OLD::PERSIA-S12-PREV-KILL',
+    snapshot_id: 'S11-DELTA-OLD',
+    clan_id: 'PERSIA',
+    source_member_key: 'PERSIA-S12-PREV-KILL',
+    source_identity: {
+      source_system: 'PERSIA',
+      source_identity_id: 'PERSIA-PREV-KILL'
+    },
+    global_player_id: 'GP-S12-KILL-001',
+    membership_episode_id: null,
+    identity_resolution_status: 'CONFIRMED',
+    display_name: 'Delta Kill Baseline',
+    rank: 1,
+    stage: 60,
+    role: 'Member',
+    weapons: { '25mm': 7, hydra: 7 },
+    total_kills: 275000,
+    lifetime_medals: { bronze: 10, silver: 5, gold: 2 },
+    current_league_clan_medals: 100000,
+    profile_total_clan_medal_count: 100000,
+    last_online_utc: null,
+    provenance: {
+      evidence_refs: [HISTORY_EVIDENCE_ID]
+    }
+  });
+
+  model.observations.push({
+    observation_id: 'S12-DELTA-PREV::PERSIA-S12-PREV-MEDAL',
+    snapshot_id: 'S12-DELTA-PREV',
+    clan_id: 'PERSIA',
+    source_member_key: 'PERSIA-S12-PREV-MEDAL',
+    source_identity: {
+      source_system: 'PERSIA',
+      source_identity_id: 'PERSIA-PREV-MEDAL'
+    },
+    global_player_id: 'GP-S12-MEDAL-002',
+    membership_episode_id: null,
+    identity_resolution_status: 'CONFIRMED',
+    display_name: 'Delta Medal Baseline',
+    rank: 2,
+    stage: 61,
+    role: 'Member',
+    weapons: { '25mm': 7, hydra: 7 },
+    total_kills: 315000,
+    lifetime_medals: { bronze: 10, silver: 6, gold: 2 },
+    current_league_clan_medals: 130000,
+    profile_total_clan_medal_count: 130000,
+    last_online_utc: null,
+    provenance: {
+      evidence_refs: [HISTORY_EVIDENCE_ID]
+    }
+  });
+
+  model.evidence_artifacts.push({
+    evidence_artifact_id: HISTORY_EVIDENCE_ID,
+    artifact_type: 'test-historical-baseline',
+    content_hash: {
+      algorithm: 'sha256',
+      value: 'cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc'
+    },
+    source_location: 'test://ucs/delta/history',
+    received_at_utc: null,
+    immutable: true
+  });
+
+  validateCanonicalModel(model);
+  return model;
+}
+
+function prepareS12({
+  confirmed = [],
+  previousByGlobalPlayerId = {},
+  membershipBySourceKey = {},
+  globalPlayerIds = []
+} = {}) {
+  const { raw, input, registry } = readRawAndInput();
+
+  const decisionsBySourceKey = {};
+  for (const item of confirmed) {
+    decisionsBySourceKey[item.sourceMemberKey] = {
+      status: 'CONFIRMED',
+      global_player_id: item.globalPlayerId,
+      candidate_global_player_ids: [item.globalPlayerId],
+      signals: {
+        source: 'external-test-review',
+        matched_on: item.matchedOn || ['explicit-external-confirmation']
+      },
+      evidence_refs: ['PERSIA-S12-RANKING-HTML'],
+      authority_ref: 'AUTH-DELTA-TEST-001',
+      process_ref: 'external-review-test-v1',
+      decided_at_utc: '2026-09-27T00:00:00Z',
+      reason: 'test-only external confirmation'
+    };
+  }
+
+  const plan = prepareSnapshotTransaction(input, {
+    evidenceRegistry: registry,
+    identityDecisionsBySourceKey: decisionsBySourceKey,
+    previousByGlobalPlayerId,
+    membershipBySourceKey
+  });
+
+  const canonicalSeed = seedDeltaCanonical();
+
+  for (const globalPlayerId of globalPlayerIds) {
+    assert.ok(
+      canonicalSeed.global_player_identities.some(
+        (player) => player.global_player_id === globalPlayerId
+      )
+    );
+  }
+
+  return { raw, input, plan, canonicalSeed };
+}
+
+function confirmedPlayers() {
+  return [
+    {
+      sourceMemberKey: 'PERSIA-S12-RANK-01',
+      globalPlayerId: 'GP-S12-KILL-001',
+      matchedOn: ['stage', 'total_kills', 'weapons']
+    },
+    {
+      sourceMemberKey: 'PERSIA-S12-RANK-02',
+      globalPlayerId: 'GP-S12-MEDAL-002',
+      matchedOn: ['stage', 'total_kills', 'weapons']
+    }
+  ];
+}
+
+function previousContext() {
+  const seed = seedDeltaCanonical();
+  return {
+    'GP-S12-KILL-001': seed.observations.find(
+      (observation) => observation.global_player_id === 'GP-S12-KILL-001'
+    ),
+    'GP-S12-MEDAL-002': seed.observations.find(
+      (observation) => observation.global_player_id === 'GP-S12-MEDAL-002'
+    )
+  };
+}
+
+function executeCommittedS12(options = {}) {
+  const { plan, canonicalSeed } = prepareS12({
+    confirmed: confirmedPlayers(),
+    previousByGlobalPlayerId: options.previousByGlobalPlayerId || previousContext(),
+    membershipBySourceKey: options.membershipBySourceKey || {
+      'PERSIA-S12-RANK-01': { sameLeague: false },
+      'PERSIA-S12-RANK-02': { sameLeague: true }
+    }
+  });
+
+  const adapter = new InMemoryAtomicPersistenceAdapter(canonicalSeed);
+  const result = adapter.commit(plan.persistence.transaction, {
+    allowReviewPersistence: true
+  });
+
+  assert.equal(result.committed, true);
+  return {
+    plan,
+    result,
+    canonical: adapter.read()
+  };
+}
+
+test('Delta materialization: confirmed real S12 identities produce lifetime and league deltas', () => {
+  const { plan, result, canonical } = executeCommittedS12();
+  const deltas = plan.persistence.transaction.canonical_patch.delta_results;
+
+  assert.equal(plan.transaction_status, 'REVIEW_REQUIRED');
+  assert.equal(result.result, 'REVIEW_REQUIRED');
+  assert.equal(deltas.length, 4);
+
+  const kill = deltas.find(
+    (delta) =>
+      delta.scope === 'PLAYER_LIFETIME' &&
+      delta.global_player_id === 'GP-S12-KILL-001'
+  );
+  assert.deepEqual(kill, {
+    delta_id: 'DELTA::PLAYER_LIFETIME::total_kills::S12::PERSIA-S12-RANK-01',
+    current_observation_id: 'S12::PERSIA-S12-RANK-01',
+    global_player_id: 'GP-S12-KILL-001',
+    baseline_observation_id: 'S11-DELTA-OLD::PERSIA-S12-PREV-KILL',
+    baseline_type: 'PREVIOUS_VALID_OBSERVATION',
+    metric_key: 'total_kills',
+    scope: 'PLAYER_LIFETIME',
+    clan_id: null,
+    league_id: null,
+    membership_episode_id: null,
+    delta: 1191,
+    status: 'VALID',
+    reason: null
+  });
+
+  const league = deltas.find(
+    (delta) =>
+      delta.scope === 'LEAGUE' &&
+      delta.global_player_id === 'GP-S12-MEDAL-002'
+  );
+  assert.deepEqual(league, {
+    delta_id: 'DELTA::LEAGUE::current_league_clan_medals::S12::PERSIA-S12-RANK-02',
+    current_observation_id: 'S12::PERSIA-S12-RANK-02',
+    global_player_id: 'GP-S12-MEDAL-002',
+    baseline_observation_id: 'S12-DELTA-PREV::PERSIA-S12-PREV-MEDAL',
+    baseline_type: 'PREVIOUS_VALID_OBSERVATION',
+    metric_key: 'current_league_clan_medals',
+    scope: 'LEAGUE',
+    clan_id: 'PERSIA',
+    league_id: CURRENT_LEAGUE_ID,
+    membership_episode_id: null,
+    delta: 5924,
+    status: 'VALID',
+    reason: null
+  });
+
+  assert.equal(canonical.delta_results.length, 4);
+  assert.equal(canonical.global_player_identities.length, 3);
+  assert.equal(
+    canonical.observations.find(
+      (observation) => observation.observation_id === 'S12::PERSIA-S12-RANK-01'
+    ).global_player_id,
+    'GP-S12-KILL-001'
+  );
+  assert.equal(
+    canonical.observations.find(
+      (observation) => observation.observation_id === 'S12::PERSIA-S12-RANK-02'
+    ).global_player_id,
+    'GP-S12-MEDAL-002'
+  );
+  assert.equal(validateCanonicalModel(canonical).valid, true);
+});
+
+test('Delta materialization: missing lifetime baseline is explicit and not fabricated', () => {
+  const { plan } = prepareS12({
+    confirmed: [{
+      sourceMemberKey: 'PERSIA-S12-RANK-03',
+      globalPlayerId: 'GP-S12-NOBASELINE-003'
+    }]
+  });
+
+  const delta = plan.persistence.transaction.canonical_patch.delta_results.find(
+    (item) =>
+      item.scope === 'PLAYER_LIFETIME' &&
+      item.global_player_id === 'GP-S12-NOBASELINE-003'
+  );
+
+  assert.ok(delta);
+  assert.equal(delta.status, 'BASELINE_UNAVAILABLE');
+  assert.equal(delta.delta, null);
+  assert.equal(delta.baseline_observation_id, null);
+  assert.equal(delta.baseline_type, 'NONE');
+  assert.equal(delta.reason, 'previous_valid_observation_missing');
+});
+
+test('Delta materialization: new League Current League Clan Medal baseline is zero', () => {
+  const { plan } = prepareS12({
+    confirmed: [{
+      sourceMemberKey: 'PERSIA-S12-RANK-01',
+      globalPlayerId: 'GP-S12-KILL-001'
+    }],
+    previousByGlobalPlayerId: previousContext(),
+    membershipBySourceKey: {
+      'PERSIA-S12-RANK-01': { sameLeague: false }
+    }
+  });
+
+  const delta = plan.persistence.transaction.canonical_patch.delta_results.find(
+    (item) =>
+      item.scope === 'LEAGUE' &&
+      item.global_player_id === 'GP-S12-KILL-001'
+  );
+
+  assert.deepEqual(delta, {
+    delta_id: 'DELTA::LEAGUE::current_league_clan_medals::S12::PERSIA-S12-RANK-01',
+    current_observation_id: 'S12::PERSIA-S12-RANK-01',
+    global_player_id: 'GP-S12-KILL-001',
+    baseline_observation_id: null,
+    baseline_type: 'NEW_LEAGUE_ZERO',
+    metric_key: 'current_league_clan_medals',
+    scope: 'LEAGUE',
+    clan_id: 'PERSIA',
+    league_id: CURRENT_LEAGUE_ID,
+    membership_episode_id: null,
+    delta: 140313,
+    status: 'VALID',
+    reason: 'new_league_baseline_zero'
+  });
+});
+
+test('Delta materialization: negative Total Kills remains an ANOMALY', () => {
+  const previous = previousContext();
+  previous['GP-S12-KILL-001'] = {
+    ...previous['GP-S12-KILL-001'],
+    total_kills: 276201
+  };
+
+  const { plan } = prepareS12({
+    confirmed: [{
+      sourceMemberKey: 'PERSIA-S12-RANK-01',
+      globalPlayerId: 'GP-S12-KILL-001'
+    }],
+    previousByGlobalPlayerId: previous
+  });
+
+  const delta = plan.persistence.transaction.canonical_patch.delta_results.find(
+    (item) =>
+      item.scope === 'PLAYER_LIFETIME' &&
+      item.global_player_id === 'GP-S12-KILL-001'
+  );
+
+  assert.ok(delta);
+  assert.equal(delta.status, 'ANOMALY');
+  assert.equal(delta.delta, -10);
+  assert.equal(delta.baseline_type, 'PREVIOUS_VALID_OBSERVATION');
+  assert.equal(
+    delta.baseline_observation_id,
+    'S11-DELTA-OLD::PERSIA-S12-PREV-KILL'
+  );
+  assert.equal(delta.reason, 'monotonic_metric_decreased');
+});
+
+test('Delta materialization: unresolved S12 observations receive no identity-bound deltas', () => {
+  const { plan } = prepareS12({
+    confirmed: []
+  });
+
+  assert.equal(plan.persistence.transaction.canonical_patch.delta_results.length, 0);
+});
+
+test('Delta materialization: missing confirmed Global Player reference fails closed', () => {
+  const { plan, canonicalSeed } = prepareS12({
+    confirmed: [{
+      sourceMemberKey: 'PERSIA-S12-RANK-01',
+      globalPlayerId: 'GP-MISSING-001'
+    }]
+  });
+
+  const adapter = new InMemoryAtomicPersistenceAdapter(canonicalSeed);
+  const before = adapter.read();
+  const result = adapter.commit(plan.persistence.transaction);
+
+  assert.equal(result.result, 'CONFLICT');
+  assert.equal(result.committed, false);
+  assert.equal(result.state_changed, false);
+  assert.match(
+    result.reason,
+    /confirmed_global_player_identity_missing:GP-MISSING-001/
+  );
+  assert.deepEqual(adapter.read(), before);
+});
+
+test('Delta materialization: Canonical → Projection → Static remains valid', () => {
+  const { canonical } = executeCommittedS12();
+
+  const projection = new ProjectionEngine().projectAll(canonical);
+  const staticBundle = buildStaticDataBundle(canonical);
+
+  assert.equal(validateCanonicalModel(canonical).valid, true);
+  assert.equal(projection.global_players.length, 3);
+  assert.equal(
+    projection.snapshots.find((snapshot) => snapshot.snapshot_id === 'S12').members.length,
+    50
+  );
+  assert.equal(staticBundle.read_model.snapshots.find(
+    (snapshot) => snapshot.snapshot_id === 'S12'
+  ).members.length, 50);
+  assert.match(
+    serializeStaticDataBundle(staticBundle),
+    /"static_data_version":"0.1"/
+  );
+  assert.match(hashStaticDataBundle(staticBundle), /^[a-f0-9]{64}$/);
+});
+
+test('Delta materialization: repeated planning is deterministic', () => {
+  const previous = previousContext();
+  const context = {
+    confirmed: confirmedPlayers(),
+    previousByGlobalPlayerId: previous,
+    membershipBySourceKey: {
+      'PERSIA-S12-RANK-01': { sameLeague: false },
+      'PERSIA-S12-RANK-02': { sameLeague: true }
+    }
+  };
+
+  const first = prepareS12(context).plan.persistence.transaction;
+  const second = prepareS12(context).plan.persistence.transaction;
+
+  assert.deepEqual(second, first);
+  assert.equal(second.plan_hash, first.plan_hash);
+  assert.deepEqual(
+    second.canonical_patch.delta_results,
+    first.canonical_patch.delta_results
+  );
+});
+
+test('Delta materialization: identical persistence replay is idempotent with no duplicate deltas', () => {
+  const first = executeCommittedS12();
+  const seed = seedDeltaCanonical();
+  const adapter = new InMemoryAtomicPersistenceAdapter(seed);
+
+  const firstCommit = adapter.commit(first.plan.persistence.transaction, {
+    allowReviewPersistence: true
+  });
+  const replay = adapter.commit(first.plan.persistence.transaction, {
+    allowReviewPersistence: true
+  });
+
+  assert.equal(firstCommit.result, 'REVIEW_REQUIRED');
+  assert.equal(firstCommit.committed, true);
+  assert.equal(replay.result, 'IDEMPOTENT_REPLAY');
+  assert.equal(replay.committed, false);
+  assert.equal(replay.state_changed, false);
+  assert.equal(adapter.read().delta_results.length, 4);
+  assert.equal(adapter.read().global_player_identities.length, 3);
+});
+
+test('Delta materialization: only PLAYER_LIFETIME and LEAGUE scopes are persisted', () => {
+  const { plan } = executeCommittedS12();
+  const scopes = new Set(
+    plan.persistence.transaction.canonical_patch.delta_results.map(
+      (delta) => delta.scope
+    )
+  );
+
+  assert.deepEqual([...scopes].sort(), ['LEAGUE', 'PLAYER_LIFETIME']);
+  assert.equal(
+    plan.persistence.transaction.canonical_patch.delta_results.some(
+      (delta) => delta.scope === 'MEMBERSHIP_EPISODE'
+    ),
+    false
+  );
+});
