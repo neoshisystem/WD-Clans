@@ -164,6 +164,38 @@ function eventProjection(event) {
   };
 }
 
+function deltaProjection(delta, observationsById) {
+  const currentObservation = observationsById.get(delta.current_observation_id);
+  const baselineObservation = delta.baseline_observation_id
+    ? observationsById.get(delta.baseline_observation_id)
+    : null;
+
+  const evidenceRefs = uniqueSorted([
+    ...collectEvidenceRefs(currentObservation),
+    ...collectEvidenceRefs(baselineObservation)
+  ]);
+
+  return {
+    delta_id: delta.delta_id,
+    current_observation_id: delta.current_observation_id,
+    global_player_id: delta.global_player_id ?? null,
+    baseline_observation_id: delta.baseline_observation_id ?? null,
+    baseline_type: delta.baseline_type,
+    metric_key: delta.metric_key,
+    scope: delta.scope,
+    clan_id: delta.clan_id ?? null,
+    league_id: delta.league_id ?? null,
+    membership_episode_id: delta.membership_episode_id ?? null,
+    delta: delta.delta ?? null,
+    status: delta.status,
+    reason: delta.reason ?? null,
+    provenance: {
+      canonical_ref: delta.delta_id,
+      evidence_refs: evidenceRefs
+    }
+  };
+}
+
 function assertCanonicalState(state) {
   validateCanonicalModel(state);
   return state;
@@ -464,6 +496,35 @@ class ProjectionEngine {
       .map(eventProjection);
   }
 
+  projectDeltaResults(state) {
+    assertCanonicalState(state);
+
+    const observationsById = indexBy(state.observations, 'observation_id');
+
+    return state.delta_results
+      .filter((delta) =>
+        (delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills') ||
+        (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals')
+      )
+      .slice()
+      .sort((left, right) => {
+        const scopeResult = compareText(left.scope, right.scope);
+        if (scopeResult !== 0) return scopeResult;
+
+        const metricResult = compareText(left.metric_key, right.metric_key);
+        if (metricResult !== 0) return metricResult;
+
+        const observationResult = compareText(
+          left.current_observation_id,
+          right.current_observation_id
+        );
+        if (observationResult !== 0) return observationResult;
+
+        return compareText(left.delta_id, right.delta_id);
+      })
+      .map((delta) => deltaProjection(delta, observationsById));
+  }
+
   projectAll(state) {
     assertCanonicalState(state);
     return {
@@ -472,7 +533,8 @@ class ProjectionEngine {
       clans: this.projectClans(state),
       snapshots: this.projectSnapshots(state),
       player_history: this.projectPlayerHistory(state),
-      activity: this.projectActivity(state)
+      activity: this.projectActivity(state),
+      delta_results: this.projectDeltaResults(state)
     };
   }
 
