@@ -51,8 +51,8 @@ function prepareSnapshotTransaction(input,context={}){
       priorEpisodeEnded:Boolean(priorMembership.prior_episode_ended)
     });
 
-    const lifetime=previous&&identity.global_player_id
-      ? validateLifetimeMetrics(previous,member)
+    const lifetime=identity.global_player_id
+      ? validateLifetimeMetrics(previous || {},member)
       : null;
 
     const currentLeague=currentLeagueClanMedalDelta({
@@ -77,6 +77,9 @@ function prepareSnapshotTransaction(input,context={}){
       league_id:leagueBinding.league_id,
       identity_resolution:identity,
       membership_resolution:membership,
+      delta_context:{
+        previous_observation_id:previous?.observation_id||null
+      },
       observation:{...member},
       metrics:{
         lifetime,
