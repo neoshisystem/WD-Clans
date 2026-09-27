@@ -66,3 +66,11 @@ Non-blocking review case: direct visual live-browser screenshot verification is 
 Re-check live Product + Memory heads; receive the next real Persian UNITY Snapshot ZIP; hash and inventory it; confirm the actual Snapshot identifier/sequence from Authority/context; compare against S13; preserve unresolved identity unless confirmation prerequisites are satisfied; derive only contract-supported Membership/Delta results; regenerate Static Data; validate; run CI/Pages; report and update handoff.
 
 **Do not re-ingest or overwrite S13. Do not assume S14.**
+
+## Final live verification
+- Product main HEAD: `234e4141057148a324ae27df6b8271d1dbee7256`.
+- Site-affecting corrective commit: `7e94c9bfe9cd9aeb74a56242f2d87b48907959dd` (CSS; includes the preceding app.js corrective commit `91d9e82315d00b5cd27de37077e9a6734899a9cc`).
+- Latest Product CI on final main: Run `36358984458` / Job status SUCCESS.
+- Latest successful Pages deployment carrying the corrective site: Run `36358889049` / SUCCESS.
+- Pages URL: https://neoshisystem.github.io/WD-Clans/
+- Current Canonical S13 state remains unchanged; the corrective commits changed presentation/tests/documentation only.
