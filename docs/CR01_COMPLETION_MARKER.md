@@ -44,3 +44,15 @@ S13 Delta absence is correct because S13 is the first observed Snapshot and has 
 CR-02: receive Real Snapshot #2 for Persian UNITY, re-check live main, hash/inventory, confirm Snapshot identifier/sequence from Authority/context, compare with S13, preserve unresolved identity, derive only contract-supported membership/deltas, regenerate Static Data, validate and report.
 
 Do not re-ingest/overwrite S13. Do not assume the next identifier is S14.
+
+
+## CR-01 FINAL UX/UI / GRID HARDENING — 2026-09-28
+- Functional hardening: c0c0a573299a771cd9b05bdcf95c90aa3127b56c
+- CSS hardening: 942e774e2c1af018c8892fc0cae05969ad071e5a
+- Regression coverage: fdb678d753b5d9db825cf3b10f0df7f952bfc4f3
+- CI Run 36356953627 / Job 108726479423: SUCCESS
+- Pages Run 36356946098: SUCCESS
+- Detailed report: docs/reports/2026-09-28_cr01-final-ux-ui-grid-hardening.md
+- S13 remains unchanged; its required observed fields are present in Canonical and Static.
+- Final status: PASS_WITH_REVIEW_CASES
+- Exact successor: CR-02 receives the next real Persian UNITY Snapshot ZIP. Re-check live main and confirm the actual Snapshot identifier/sequence. Compare with S13. Do not re-ingest S13 and do not assume S14.
