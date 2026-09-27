@@ -415,6 +415,29 @@
     render();
   }
 
+  function playerPerformance(globalId) {
+    const result = { currentLeagueMedals: null, currentLeagueKills: null, cumulativeMedals: null, cumulativeKills: null, currentLeagueMedalCount: 0, currentLeagueKillCount: 0, cumulativeMedalCount: 0, cumulativeKillCount: 0 };
+    if (!globalId) return result;
+    const currentLeagueId = activeSnapshot?.league_id || null;
+    for (const delta of Array.isArray(model.delta_results) ? model.delta_results : []) {
+      if (delta.global_player_id !== globalId || delta.status !== 'VALID' || !Number.isFinite(Number(delta.delta))) continue;
+      const snapshotId = String(delta.current_observation_id || '').split('::')[0];
+      const snapshot = model.snapshots.find((item) => item.snapshot_id === snapshotId);
+      if (!snapshot || (activeClanId && snapshot.clan_id !== activeClanId)) continue;
+      const value = Number(delta.delta);
+      if (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals') {
+        result.cumulativeMedals = (result.cumulativeMedals || 0) + value;
+        result.cumulativeMedalCount += 1;
+        if (currentLeagueId && snapshot.league_id === currentLeagueId) { result.currentLeagueMedals = (result.currentLeagueMedals || 0) + value; result.currentLeagueMedalCount += 1; }
+      }
+      if (delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills') {
+        result.cumulativeKills = (result.cumulativeKills || 0) + value;
+        result.cumulativeKillCount += 1;
+        if (currentLeagueId && snapshot.league_id === currentLeagueId) { result.currentLeagueKills = (result.currentLeagueKills || 0) + value; result.currentLeagueKillCount += 1; }
+      }
+    }
+    return result;
+  }
   function playerProfile() {
     const globalId = params.get('id');
     const observationId = params.get('observation');
@@ -445,12 +468,14 @@
     const scopedObs = observations.filter((item) => !activeClanId || item.clan_id === activeClanId);
     const scopedMemberships = memberships.filter((item) => !activeClanId || item.clan_id === activeClanId);
     const latest = scopedObs.slice().sort((a,b) => String(a.observed_at_utc || '').localeCompare(String(b.observed_at_utc || ''))).slice(-1)[0] || null;
+    const performance = playerPerformance(globalId);
     if (activeClanId && !latest) {
       root.innerHTML = header('Player Profile','UCS · PLAYER PROFILE','این Global Identity در Context انتخاب‌شدهٔ Clan Observation معتبر ندارد.') +
         '<section class="panel empty"><h2>بازیکن در این Clan پیدا نشد.</h2><p>برای جلوگیری از نمایش دادهٔ Clan دیگر، Profile فقط Observationهای همین Context را نشان می‌دهد.</p><a class="btn" href="' + base('players.html','?clan=' + encodeURIComponent(activeClanId)) + '">بازگشت به اعضای کلن</a></section>';
       return;
     }
     root.innerHTML = header(displayName, 'UCS · PLAYER PROFILE', 'تاریخچهٔ Observationها مستقل باقی می‌ماند و از Snapshotهای ثبت‌شده خوانده می‌شود.') +
+      '<section class="panel profile-performance"><div class="section-head"><div><span class="badge">عملکرد</span><h2>عملکرد این دوره و تجمعی</h2></div></div><div class="profile-performance-grid"><div class="profile-performance-card"><span>مدال کلن · لیگ جاری</span><b>' + esc(performance.currentLeagueMedalCount ? signed(performance.currentLeagueMedals) : '— / baseline') + '</b><small>' + esc(performance.currentLeagueMedalCount + ' رکورد معتبر') + '</small></div><div class="profile-performance-card"><span>کیل · لیگ جاری</span><b>' + esc(performance.currentLeagueKillCount ? signed(performance.currentLeagueKills) : '— / baseline') + '</b><small>' + esc(performance.currentLeagueKillCount + ' رکورد معتبر') + '</small></div><div class="profile-performance-card"><span>مدال کلن · تجمعی</span><b>' + esc(performance.cumulativeMedalCount ? signed(performance.cumulativeMedals) : '—') + '</b><small>جمع Deltaهای معتبر ثبت‌شده</small></div><div class="profile-performance-card"><span>کیل · تجمعی</span><b>' + esc(performance.cumulativeKillCount ? signed(performance.cumulativeKills) : '—') + '</b><small>جمع Deltaهای معتبر ثبت‌شده</small></div></div></section>' +
       '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div><div><span>Profile Total Clan Medals</span><b>' + esc(display(latest.profile_total_clan_medal_count)) + '</b></div></div><div class="detail-strip"><div><span>نشان‌ها</span><b>' + esc(lifetimeMedalsFor(latest)) + '</b></div><div><span>سلاح‌ها</span><b>' + esc(weaponsFor(latest)) + '</b></div><div><span>Last Online</span><b>' + esc(lastOnlineFor(latest)) + '</b></div></div></article>' +
       '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
       '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table class="player-history-table"><thead><tr><th>Snapshot</th><th>Clan Name</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Δ Clan Medals</th><th>Total Clan Medals</th><th>Gold / Silver / Bronze</th><th>Total Kills</th><th>Δ Kills</th><th>Weapons</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.slice().sort((a,b) => String(b.observed_at_utc || '').localeCompare(String(a.observed_at_utc || ''))).map((item) => { const d = deltaMapForSnapshot(item.snapshot_id).get(item.observation_id) || {}; return '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(signed(d.medals?.delta)) + '</td><td>' + esc(display(item.profile_total_clan_medal_count)) + '</td><td>' + esc(lifetimeMedalsFor(item)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(signed(d.kills?.delta)) + '</td><td>' + esc(weaponsFor(item)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
