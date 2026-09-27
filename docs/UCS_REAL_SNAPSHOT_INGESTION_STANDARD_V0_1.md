@@ -50,3 +50,7 @@ Every real Snapshot report must include: official time/source, SHA-256, inventor
 
 ## Current example
 Persian UNITY S13: 4 Mehr 1405, 23:00 Iran = 2026-09-26T19:30:00Z; 48/50; 56 evidence files; 48 UNRESOLVED; 0 Global IDs; 0 Membership Episodes/Events; 0 deltas.
+
+
+## UX/UI hardening boundary — 2026-09-28
+UX/UI hardening does not re-ingest, overwrite, renumber or reinterpret an existing Snapshot. S13 was audited as-is because its required observed fields already exist through Canonical -> Projection -> Static. Future real Snapshots remain new historical records and must follow this standard.
