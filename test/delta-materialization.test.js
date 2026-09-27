@@ -755,7 +755,7 @@ test('Delta projection: provenance is derived only from referenced Canonical obs
   assert.equal(kill.provenance.canonical_ref, kill.delta_id);
   assert.deepEqual(
     kill.provenance.evidence_refs.sort(),
-    ['PERSIA-DELTA-TEST-HISTORY', 'PERSIA-S12-RANKING-HTML'].sort()
+    ['PERSIA-DELTA-TEST-HISTORY', 'PERSIA-S12-PROFILE-JSON', 'PERSIA-S12-RANKING-HTML'].sort()
   );
 
   assert.ok(
