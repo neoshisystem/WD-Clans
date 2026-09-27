@@ -37,3 +37,16 @@ test('Product UI is multi-clan by read-model design, not clan-specific branching
   assert.ok(app.includes('s.clan_id === activeClanId'));
   assert.equal(app.includes('PERSIA'), false);
 });
+test('Product UI adds restrained Snapshot navigation, archive activity and safe theme switching', () => {
+  const app = read('site/app.js');
+  const css = read('site/styles.css');
+
+  for (const token of ['snapshotNav', 'Snapshot قبلی', 'Snapshot بعدی', 'activityForSnapshot', 'eventLabel', 'theme-toggle', "localStorage.getItem('ucs-theme')"]) {
+    assert.ok(app.includes(token), 'missing UI enhancement: ' + token);
+  }
+  for (const token of ['.snapshot-nav', '.changes', '.change-pill', '.theme-toggle', 'html[data-theme="light"]']) {
+    assert.ok(css.includes(token), 'missing UI style: ' + token);
+  }
+  assert.doesNotMatch(app, /RawExtraction|SnapshotInput/);
+  assert.equal(app.includes('fetch('), false);
+});
