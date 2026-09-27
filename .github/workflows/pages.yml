@@ -5,8 +5,11 @@ on:
     branches:
       - main
     paths:
+      - "data/**"
       - "site/**"
+      - "scripts/generate-static-vertical-slice.js"
       - ".github/workflows/pages.yml"
+      - "src/**"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +30,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Validate project
+        run: npm test
+
+      - name: Regenerate static data from Canonical
+        run: node scripts/generate-static-vertical-slice.js
+
+      - name: Verify generated static data is committed
+        run: git diff --exit-code -- site/data/ucs-vertical-slice.json site/data/ucs-vertical-slice.js
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

@@ -10,7 +10,7 @@ const {
 } = require('../src/static-data');
 
 const ROOT = path.resolve(__dirname, '..');
-const DEFAULT_CANONICAL_PATH = path.join(ROOT, 'examples/vertical-slice/canonical.json');
+const DEFAULT_CANONICAL_PATH = path.join(ROOT, 'data/canonical.json');
 const DEFAULT_JSON_PATH = path.join(ROOT, 'site/data/ucs-vertical-slice.json');
 const DEFAULT_BROWSER_PATH = path.join(ROOT, 'site/data/ucs-vertical-slice.js');
 
