@@ -1,0 +1,848 @@
+{
+  "schema_version": "UCS-RAW-SNAPSHOT/0.1",
+  "status": "RAW_EXTRACTION_RECORDED_REVIEW_REQUIRED",
+  "clan": {
+    "clan_id": "CLAN-PERSIAN-UNITY",
+    "display_name": "Persian UNITY"
+  },
+  "snapshot": {
+    "snapshot_id": "S13",
+    "sequence": 13,
+    "official_timestamp_utc": "2026-09-26T19:30:00.000Z",
+    "official_timestamp_source": "Project Authority",
+    "member_count": 48,
+    "capacity": 50
+  },
+  "source_artifact": {
+    "artifact_id": "EV-REAL-PERSIAN-UNITY-S13",
+    "artifact_type": "real-snapshot-zip",
+    "source_location": "user-upload:S13.zip",
+    "content_hash": {
+      "algorithm": "sha256",
+      "value": "7e19f1702139c5d78c9f19acb43a5e0fc0fd14b4f34e8f40be992c55f154f583"
+    },
+    "inventory_count": 56,
+    "inventory_summary": {
+      "ranking_screenshots": 8,
+      "profile_cards": 48,
+      "duplicate_ranking_screenshots": 1
+    }
+  },
+  "extraction_scope": {
+    "ranking_fields": [
+      "rank",
+      "display_name",
+      "role",
+      "stage",
+      "current_league_clan_medals"
+    ],
+    "profile_fields": [
+      "total_kills",
+      "profile_total_clan_medal_count",
+      "last_online",
+      "weapon_levels",
+      "lifetime_medals"
+    ],
+    "normalized_now": [
+      "rank",
+      "display_name",
+      "role",
+      "stage",
+      "current_league_clan_medals",
+      "total_kills",
+      "profile_total_clan_medal_count"
+    ],
+    "pending_normalization": [
+      "last_online",
+      "weapon_levels",
+      "lifetime_medals"
+    ]
+  },
+  "members": [
+    {
+      "source_member_key": "S13-R01",
+      "rank": 1,
+      "display_name": "ehsan",
+      "role": "Co-Leader",
+      "stage": 69,
+      "current_league_clan_medals": 243757,
+      "total_kills": 284528,
+      "profile_total_clan_medal_count": 246760,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225319_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R02",
+      "rank": 2,
+      "display_name": "Cpt. Of Persia",
+      "role": "Leader & MVP",
+      "stage": 50,
+      "current_league_clan_medals": 238355,
+      "total_kills": 326329,
+      "profile_total_clan_medal_count": 238355,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225326_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R03",
+      "rank": 3,
+      "display_name": "Alini",
+      "role": "Member",
+      "stage": 53,
+      "current_league_clan_medals": 232421,
+      "total_kills": 384764,
+      "profile_total_clan_medal_count": 232421,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225333_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R04",
+      "rank": 4,
+      "display_name": "kaveh",
+      "role": "Elder",
+      "stage": 45,
+      "current_league_clan_medals": 186039,
+      "total_kills": 195299,
+      "profile_total_clan_medal_count": 186039,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225354_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R05",
+      "rank": 5,
+      "display_name": "paradise",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 175237,
+      "total_kills": 171349,
+      "profile_total_clan_medal_count": 175237,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225411_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R06",
+      "rank": 6,
+      "display_name": "Eren",
+      "role": "Member",
+      "stage": 26,
+      "current_league_clan_medals": 155653,
+      "total_kills": 180059,
+      "profile_total_clan_medal_count": 155656,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225420_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R07",
+      "rank": 7,
+      "display_name": "ALI🇮🇷",
+      "role": "Member",
+      "stage": 46,
+      "current_league_clan_medals": 144626,
+      "total_kills": 171349,
+      "profile_total_clan_medal_count": 144626,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225437_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R08",
+      "rank": 8,
+      "display_name": "Commander 🇮🇷",
+      "role": "Elder",
+      "stage": 58,
+      "current_league_clan_medals": 142664,
+      "total_kills": 274556,
+      "profile_total_clan_medal_count": 142664,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225443_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R09",
+      "rank": 9,
+      "display_name": "PERSIAN TIGER🇮🇷",
+      "role": "Member",
+      "stage": 23,
+      "current_league_clan_medals": 131180,
+      "total_kills": 89579,
+      "profile_total_clan_medal_count": 131180,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225450_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R10",
+      "rank": 10,
+      "display_name": "Liam kouhkan",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 126745,
+      "total_kills": 155255,
+      "profile_total_clan_medal_count": 625538,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225458_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R11",
+      "rank": 11,
+      "display_name": "RADMAN",
+      "role": "Member",
+      "stage": 50,
+      "current_league_clan_medals": 125812,
+      "total_kills": 226022,
+      "profile_total_clan_medal_count": 125812,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225510_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R12",
+      "rank": 12,
+      "display_name": "behrang",
+      "role": "Member",
+      "stage": 14,
+      "current_league_clan_medals": 124420,
+      "total_kills": 93047,
+      "profile_total_clan_medal_count": 124420,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225519_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R13",
+      "rank": 13,
+      "display_name": "Worker Ant",
+      "role": "Member",
+      "stage": 63,
+      "current_league_clan_medals": 122104,
+      "total_kills": 267451,
+      "profile_total_clan_medal_count": 122187,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225525_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R14",
+      "rank": 14,
+      "display_name": "I.Man",
+      "role": "Member",
+      "stage": 14,
+      "current_league_clan_medals": 115451,
+      "total_kills": 43652,
+      "profile_total_clan_medal_count": 127538,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225535_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R15",
+      "rank": 15,
+      "display_name": "ایرانی باوقار",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 114202,
+      "total_kills": 197464,
+      "profile_total_clan_medal_count": 114202,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225543_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R16",
+      "rank": 16,
+      "display_name": "hisystem",
+      "role": "Co-Leader",
+      "stage": 28,
+      "current_league_clan_medals": 110026,
+      "total_kills": 196073,
+      "profile_total_clan_medal_count": 110026,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225553_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R17",
+      "rank": 17,
+      "display_name": "F 35 🇮🇷",
+      "role": "Member",
+      "stage": 56,
+      "current_league_clan_medals": 108777,
+      "total_kills": 258782,
+      "profile_total_clan_medal_count": 108780,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225601_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R18",
+      "rank": 18,
+      "display_name": "Tjk001",
+      "role": "Member",
+      "stage": 25,
+      "current_league_clan_medals": 108011,
+      "total_kills": 131907,
+      "profile_total_clan_medal_count": 108011,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225608_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R19",
+      "rank": 19,
+      "display_name": "Dariush",
+      "role": "Elder",
+      "stage": 34,
+      "current_league_clan_medals": 105072,
+      "total_kills": 141329,
+      "profile_total_clan_medal_count": 105075,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225614_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R20",
+      "rank": 20,
+      "display_name": "Navid",
+      "role": "Member",
+      "stage": 49,
+      "current_league_clan_medals": 93816,
+      "total_kills": 178063,
+      "profile_total_clan_medal_count": 93816,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225622_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R21",
+      "rank": 21,
+      "display_name": "ایران",
+      "role": "Member",
+      "stage": 37,
+      "current_league_clan_medals": 90870,
+      "total_kills": 93895,
+      "profile_total_clan_medal_count": 90870,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225632_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R22",
+      "rank": 22,
+      "display_name": "hadi,land",
+      "role": "Member & MVP",
+      "stage": 39,
+      "current_league_clan_medals": 78131,
+      "total_kills": 137903,
+      "profile_total_clan_medal_count": 475161,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225639_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R23",
+      "rank": 23,
+      "display_name": "SORENA",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 77539,
+      "total_kills": 151183,
+      "profile_total_clan_medal_count": 77539,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225648_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R24",
+      "rank": 24,
+      "display_name": "Ardalan",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 74545,
+      "total_kills": 152532,
+      "profile_total_clan_medal_count": 74545,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225654_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R25",
+      "rank": 25,
+      "display_name": "Amirhoseinifpy",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 72585,
+      "total_kills": 117627,
+      "profile_total_clan_medal_count": 660507,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225700_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R26",
+      "rank": 26,
+      "display_name": "HO3EIN",
+      "role": "Member",
+      "stage": 39,
+      "current_league_clan_medals": 71849,
+      "total_kills": 105890,
+      "profile_total_clan_medal_count": 710157,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225707_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R27",
+      "rank": 27,
+      "display_name": "Hafezi",
+      "role": "Member",
+      "stage": 40,
+      "current_league_clan_medals": 69209,
+      "total_kills": 108227,
+      "profile_total_clan_medal_count": 671462,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225723_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R28",
+      "rank": 28,
+      "display_name": "hamed_ir",
+      "role": "Member",
+      "stage": 32,
+      "current_league_clan_medals": 67407,
+      "total_kills": 138019,
+      "profile_total_clan_medal_count": 67487,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225731_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R29",
+      "rank": 29,
+      "display_name": "reza1009",
+      "role": "Member",
+      "stage": 25,
+      "current_league_clan_medals": 65151,
+      "total_kills": 91517,
+      "profile_total_clan_medal_count": 65154,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225738_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R30",
+      "rank": 30,
+      "display_name": "boz gurd",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 63277,
+      "total_kills": 102160,
+      "profile_total_clan_medal_count": 63277,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225745_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R31",
+      "rank": 31,
+      "display_name": "سید حیدر ۳۳",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 60636,
+      "total_kills": 115865,
+      "profile_total_clan_medal_count": 60639,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225822_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R32",
+      "rank": 32,
+      "display_name": "Vk 🇮🇷💪",
+      "role": "Member",
+      "stage": 40,
+      "current_league_clan_medals": 56109,
+      "total_kills": 130731,
+      "profile_total_clan_medal_count": 732094,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225837_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R33",
+      "rank": 33,
+      "display_name": "Elvin",
+      "role": "Member",
+      "stage": 26,
+      "current_league_clan_medals": 55244,
+      "total_kills": 99016,
+      "profile_total_clan_medal_count": 55247,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225844_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R34",
+      "rank": 34,
+      "display_name": "👑Dadashi👑",
+      "role": "Elder",
+      "stage": 64,
+      "current_league_clan_medals": 50891,
+      "total_kills": 217418,
+      "profile_total_clan_medal_count": 1178922,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225851_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R35",
+      "rank": 35,
+      "display_name": "Mohsen.es68",
+      "role": "Member",
+      "stage": 78,
+      "current_league_clan_medals": 45085,
+      "total_kills": 180951,
+      "profile_total_clan_medal_count": 712572,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225857_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R36",
+      "rank": 36,
+      "display_name": "Nouk",
+      "role": "Member",
+      "stage": 37,
+      "current_league_clan_medals": 39405,
+      "total_kills": 107719,
+      "profile_total_clan_medal_count": 473945,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225905_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R37",
+      "rank": 37,
+      "display_name": "Mahbod_1",
+      "role": "Elder",
+      "stage": 23,
+      "current_league_clan_medals": 39401,
+      "total_kills": 49700,
+      "profile_total_clan_medal_count": 392642,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225912_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R38",
+      "rank": 38,
+      "display_name": "حسن",
+      "role": "Member",
+      "stage": 48,
+      "current_league_clan_medals": 37469,
+      "total_kills": 167685,
+      "profile_total_clan_medal_count": 31313,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225920_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R39",
+      "rank": 39,
+      "display_name": "YALALINHO🔥",
+      "role": "Member",
+      "stage": 54,
+      "current_league_clan_medals": 36287,
+      "total_kills": 152258,
+      "profile_total_clan_medal_count": 185287,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225927_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R40",
+      "rank": 40,
+      "display_name": "Armin Lukas",
+      "role": "Member",
+      "stage": 39,
+      "current_league_clan_medals": 36153,
+      "total_kills": 149998,
+      "profile_total_clan_medal_count": 36391,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225935_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R41",
+      "rank": 41,
+      "display_name": "hamid.iran🇮🇷",
+      "role": "Member",
+      "stage": 14,
+      "current_league_clan_medals": 32078,
+      "total_kills": 48557,
+      "profile_total_clan_medal_count": 32078,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225940_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R42",
+      "rank": 42,
+      "display_name": "Amin",
+      "role": "Member",
+      "stage": 43,
+      "current_league_clan_medals": 29702,
+      "total_kills": 89903,
+      "profile_total_clan_medal_count": 384695,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225947_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R43",
+      "rank": 43,
+      "display_name": "Harpy🌧️",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 28386,
+      "total_kills": 104477,
+      "profile_total_clan_medal_count": 28386,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_225957_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R44",
+      "rank": 44,
+      "display_name": "♕soltoon♕",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 28182,
+      "total_kills": 142161,
+      "profile_total_clan_medal_count": 956498,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_230002_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R45",
+      "rank": 45,
+      "display_name": "ali",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 28106,
+      "total_kills": 50337,
+      "profile_total_clan_medal_count": 28106,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_230009_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R46",
+      "rank": 46,
+      "display_name": "mohammad",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 26549,
+      "total_kills": 128654,
+      "profile_total_clan_medal_count": 26549,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_230015_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R47",
+      "rank": 47,
+      "display_name": "ErFaN.mZ79",
+      "role": "Member",
+      "stage": 30,
+      "current_league_clan_medals": 26497,
+      "total_kills": 108015,
+      "profile_total_clan_medal_count": 26497,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_230022_War Drone.jpg"
+      }
+    },
+    {
+      "source_member_key": "S13-R48",
+      "rank": 48,
+      "display_name": "amin",
+      "role": "Member",
+      "stage": 8,
+      "current_league_clan_medals": 23287,
+      "total_kills": 60442,
+      "profile_total_clan_medal_count": 318733,
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
+        "profile_source": "Screenshot_20260926_230029_War Drone.jpg"
+      }
+    }
+  ],
+  "identity": {
+    "status": "UNRESOLVED",
+    "global_player_ids_created": 0,
+    "reason": "No authoritative Global Player IDs were supplied by the source artifact."
+  },
+  "membership": {
+    "canonical_events_created": 0,
+    "canonical_episodes_created": 0,
+    "reason": "Presence in this single snapshot is observed; final identity/membership history is not inferred from display name or rank."
+  },
+  "notes": [
+    "Ranking shows 48/50 membership capacity.",
+    "Seven unique ranking screens cover ranks 1-48; one additional ranking screenshot is a duplicate capture.",
+    "All 48 members have corresponding profile-card evidence.",
+    "No real S13 data was merged into the synthetic canonical dataset.",
+    "No Global Player IDs were created."
+  ]
+}
