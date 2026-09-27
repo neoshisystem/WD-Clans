@@ -1,0 +1,45 @@
+# UCS Schema & File Map v0.1
+
+## Purpose
+Agent-facing map of the current UCS data model and file ownership. This is continuity documentation, not an executable task. Live `main` is current truth.
+
+## Data path
+**Raw Evidence → Raw Extraction → SnapshotInput → Canonical → Projection/Read Model → Static Bundle → UI**
+
+- `data/canonical.json`: only source of truth.
+- `src/canonical.js`: Canonical invariants/reference validation.
+- `src/source-adapter.js`: Source/SnapshotInput boundary.
+- `src/evidence-registry.js`: evidence identity/provenance.
+- `src/identity.js`: explicit identity comparison/decision.
+- `src/membership.js`: membership classification.
+- `src/metrics.js`: supported delta/anomaly rules.
+- `src/persistence.js`: atomic persistence.
+- `src/projection.js`: deterministic Canonical → Read Model.
+- `src/static-data.js`: Static bundle serialization.
+- `scripts/generate-static-vertical-slice.js`: generated static artifacts.
+- `site/app.js`: read-only browser consumer.
+- `site/styles.css`: viewer/responsive styling.
+
+## Canonical collections
+`clans`, `leagues`, `clan_leagues`, `snapshots`, `observations`, `global_player_identities`, `membership_episodes`, `membership_events`, `evidence_artifacts`, `resolution_cases`, `delta_results`.
+
+## Observation fields
+Ranking: rank, display_name, role, stage, current_league_clan_medals.
+
+Profile: total_kills, profile_total_clan_medal_count, lifetime_medals (gold/silver/bronze), weapon levels, source-native `last_online_display`.
+
+Relative Last Online values such as `1m`, `1h`, `<1m` stay source-native. `last_online_utc` is null unless exact UTC is known.
+
+## UI isolation
+- `site/index.html`: Global/Admin dashboard; only cross-Clan selector.
+- `site/clan.html?clan=<CLAN-ID>`: direct latest Leaderboard for one Clan.
+- `site/archive.html?clan=<CLAN-ID>`: only that Clan.
+- `site/players.html?clan=<CLAN-ID>`: only that Clan.
+- `site/player.html?...&clan=<CLAN-ID>`: scoped profile.
+- `site/member-history.html?clan=<CLAN-ID>`: scoped membership.
+
+## Generation
+Never treat `site/data/ucs-vertical-slice.json/js` as source data. Regenerate from Canonical with `scripts/generate-static-vertical-slice.js` and require a clean generated-artifact diff.
+
+## Current real checkpoint
+Persian UNITY / `CLAN-PERSIAN-UNITY`: S13, 48/50, 48 UNRESOLVED observations, 0 Global IDs, 0 Membership Episodes/Events, 0 deltas because there is no prior valid baseline.
