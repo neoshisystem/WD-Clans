@@ -156,3 +156,15 @@ Latest validation:
 Successor:
 **CR-02 — Real Snapshot #2 for Persian UNITY.**
 Re-check live main before mutation, then treat S13 as the continuity baseline. Do not assume the next Snapshot identifier is S14, do not re-ingest S13, and do not alter identity/schema rules without explicit Authority direction.
+
+
+## CR-01 FINAL UX/UI / GRID HARDENING — 2026-09-28
+- PERSIA Grid was audited directly for table wrapper, sticky headers, sort controls, responsive behavior and scroll preservation.
+- UCS Leaderboard now exposes the full supported observation surface plus supported per-Snapshot deltas without importing PERSIA data architecture.
+- Player Snapshot History explicitly exposes Clan Name and richer observed metrics.
+- Membership change display uses safe Clan-preserving identity/observation routes.
+- Scoped pages visibly identify active Clan; Global/Admin remains the only Clan switcher.
+- Search/sort/mode rerender preserves table and browser viewing position.
+- S13 was audited only; no re-ingestion/overwrite occurred.
+- S13 required fields are already complete through Canonical -> Projection -> Static -> UI; no data-layer change was necessary.
+- Detailed report: docs/reports/2026-09-28_cr01-final-ux-ui-grid-hardening.md
