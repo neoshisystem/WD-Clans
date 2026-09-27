@@ -119,3 +119,40 @@ Before a real Snapshot task, also read:
 - `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
 
 These are the permanent agent-facing references for schema ownership, file responsibilities, ZIP intake order, source-native Last Online, identity/membership boundaries, and reporting.
+
+## CR-01 FINAL COMPLETION AUDIT — 2026-09-28
+Classification: FACT / HANDOFF
+
+Live Product:
+- Branch: main
+- HEAD: `04007090223f9be2d2d82801335cda55eda67664`
+- Tree: `7f182a2b7763e5872518d6c1e5c7869cdf5ae7df`
+- Canonical SHA: `55e5e59b3f93273b09fc9d99470f6fbf7dd702f7`
+
+Persian UNITY / S13:
+- Official: `2026-09-26T19:30:00Z`
+- 48/50
+- 56 evidence files
+- ZIP SHA-256: `7e19f1702139c5d78c9f19acb43a5e0fc0fd14b4f34e8f40be992c55f154f583`
+- Inventory hash: `a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1`
+- 48 observations / 48 UNRESOLVED / 0 Global IDs
+- 48 Resolution Cases / 0 Membership Episodes / 0 Membership Events / 0 S13 Delta Results
+
+Verified fields:
+- Last Online is source-native `last_online_display`; `last_online_utc` remains null unless exact UTC is known.
+- Total Kills is present for all 48.
+- Current League Clan Medals and Profile Total Clan Medal Count are both present for all 48 and remain separate scopes.
+- Lifetime Gold/Silver/Bronze are present for all 48.
+
+Review cases:
+- `data/real-snapshots/persian-unity/S13.raw.json` remains a historical first-pass checkpoint with a historical pending-normalization list; do not rewrite it merely to match later reviewed Canonical data.
+- No separate persisted S13 SnapshotInput artifact is stored. This is a traceability/replay limitation, not evidence of product-data loss.
+- Identity remains unresolved by current policy.
+
+Latest validation:
+- CI Run 159 / `36352526072` / Job `108713808536`: SUCCESS.
+- Pages Run 35 / `36352526096` / Job `108713820954`: SUCCESS.
+
+Successor:
+**CR-02 — Real Snapshot #2 for Persian UNITY.**
+Re-check live main before mutation, then treat S13 as the continuity baseline. Do not assume the next Snapshot identifier is S14, do not re-ingest S13, and do not alter identity/schema rules without explicit Authority direction.
