@@ -161,6 +161,7 @@
         },
         "current_league_clan_medals": { "type": "integer", "minimum": 0 },
         "profile_total_clan_medal_count": { "type": "integer", "minimum": 0 },
+        "last_online_display": { "type": ["string", "null"] },
         "last_online_utc": { "type": ["string", "null"], "format": "date-time" },
         "provenance": { "$ref": "#/$defs/provenance" }
       }
