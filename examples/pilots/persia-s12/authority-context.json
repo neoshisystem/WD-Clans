@@ -1,0 +1,21 @@
+{
+  "project_id": "UCS",
+  "clan_id": "PERSIA",
+  "clan_display_name": "PERSIA",
+  "snapshot": {
+    "snapshot_id": "S12",
+    "sequence": 12,
+    "official_timestamp_utc": "2026-09-25T12:30:00Z",
+    "member_count": 50,
+    "capacity": 50
+  },
+  "league": {
+    "league_id": "PILOT::LEAGUE::2026-09-24",
+    "name": "Current League",
+    "starts_at_utc": "2026-09-24T00:00:00Z",
+    "ends_at_utc": "2026-10-01T00:00:00Z",
+    "sequence": 1,
+    "status": "ACTIVE"
+  },
+  "identity_decisions_by_source_key": {}
+}

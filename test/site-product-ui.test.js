@@ -11,7 +11,7 @@ function read(name) {
   return fs.readFileSync(path.join(ROOT, name), 'utf8');
 }
 
-test('Product UI parity surface: preserves the established viewer interaction model', () => {
+test('Product UI parity surface: preserves the established PERSIA interaction model', () => {
   const app = read('site/app.js');
   const index = read('site/index.html');
 
@@ -23,14 +23,14 @@ test('Product UI parity surface: preserves the established viewer interaction mo
     assert.ok(fs.existsSync(path.join(ROOT, 'site', page)));
   }
 
-  assert.equal(index.includes('./data/ucs-vertical-slice.js'), true);
+  assert.match(index, /site\/data\/ucs-vertical-slice\.js/);
   assert.equal(app.includes('fetch('), false);
   assert.equal(app.includes('WebSocket'), false);
   assert.equal(app.includes('http://'), false);
   assert.equal(app.includes('https://'), false);
 });
 
-test('Product UI is multi-clan by read-model design, not clan-specific branching', () => {
+test('Product UI is multi-clan by read-model design, not PERSIA-specific branching', () => {
   const app = read('site/app.js');
   assert.ok(app.includes('model.clans'));
   assert.ok(app.includes('params.get(\'clan\')'));
