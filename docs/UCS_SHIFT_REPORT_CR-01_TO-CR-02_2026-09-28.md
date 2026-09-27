@@ -243,3 +243,10 @@ Detailed corrective report:
 **CR-02 — Real Snapshot #2 for Persian UNITY.**
 Re-check live Product + Memory; receive the next real Snapshot ZIP; confirm actual Snapshot identifier/sequence; compare against S13; preserve unresolved identity unless confirmation prerequisites are met; derive supported Membership/Delta only; regenerate Static; validate; CI/Pages; report.
 Do not re-ingest S13. Do not assume S14.
+
+### Final corrective verification
+- Product main final HEAD after corrective documentation: `4872fe64a074482acf2c1aa0832618ebd0ccdae6`.
+- Site-affecting corrective commits: `91d9e82315d00b5cd27de37077e9a6734899a9cc` and `7e94c9bfe9cd9aeb74a56242f2d87b48907959dd`.
+- Latest successful Pages deployment carrying the corrective UI: Run `36358889049`.
+- Latest CI is tied to the final main state; verify the run before relying on this handoff for subsequent mutation.
+- Corrective report: `docs/reports/2026-09-28_cr01-corrective-ux-ui-gap-closure.md`.
