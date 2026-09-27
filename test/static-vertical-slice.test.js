@@ -16,6 +16,7 @@ const ROOT = path.resolve(__dirname, '..');
 const CANONICAL_PATH = path.join(ROOT, 'examples/vertical-slice/canonical.json');
 const STATIC_JSON_PATH = path.join(ROOT, 'site/data/ucs-vertical-slice.json');
 const STATIC_BROWSER_PATH = path.join(ROOT, 'site/data/ucs-vertical-slice.js');
+const PUBLIC_CANONICAL_PATH = path.join(ROOT, 'data/canonical.json');
 const INDEX_PATH = path.join(ROOT, 'site/index.html');
 const APP_PATH = path.join(ROOT, 'site/app.js');
 
@@ -138,7 +139,7 @@ test('Vertical Slice 5: committed static artifacts equal regenerated output', ()
 
   try {
     const generated = generateStaticVerticalSlice({
-      canonicalPath: CANONICAL_PATH,
+      canonicalPath: PUBLIC_CANONICAL_PATH,
       jsonPath,
       browserPath
     });

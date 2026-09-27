@@ -138,7 +138,7 @@ test('Snapshot ingestion can explicitly persist a real unresolved Snapshot as re
   assert.equal(result.persisted, true);
   assert.equal(result.state.snapshots.some((snapshot) => snapshot.snapshot_id === 'S12'), true);
   assert.equal(result.state.observations.filter((observation) => observation.snapshot_id === 'S12').length, 50);
-  assert.equal(result.state.global_player_identities.length, 1);
+  assert.equal(result.state.global_player_identities.length, readJson(BASE_STATE).global_player_identities.length);
   assert.equal(result.state.observations.filter((observation) => observation.snapshot_id === 'S12' && observation.global_player_id === null).length, 50);
   assert.equal(result.state.clans.some((clan) => clan.clan_id === 'PERSIA' && clan.display_name === 'PERSIA'), true);
 });
@@ -165,7 +165,7 @@ test('Snapshot ingestion is idempotent for the same Snapshot identity', () => {
   assert.equal(second.state.snapshots.length, first.state.snapshots.length);
 });
 
-test('Snapshot ingestion adds a second Clan without creating a duplicate Global Player', () => {
+test('Snapshot ingestion adds an additional Clan without creating a duplicate Global Player', () => {
   const state = readJson(BASE_STATE);
   const result = ingestSnapshot({
     rawExtraction: secondClanRaw(),
@@ -176,8 +176,8 @@ test('Snapshot ingestion adds a second Clan without creating a duplicate Global 
   });
 
   assert.equal(result.result, 'COMMITTED');
-  assert.equal(result.state.clans.length, 2);
-  assert.equal(result.state.global_player_identities.length, 1);
+  assert.equal(result.state.clans.length, state.clans.length + 1);
+  assert.equal(result.state.global_player_identities.length, state.global_player_identities.length);
   assert.equal(result.state.snapshots.some((snapshot) => snapshot.snapshot_id === 'SECOND-S01' && snapshot.clan_id === 'CLAN-SECOND'), true);
 
   const observation = result.state.observations.find((item) => item.observation_id === 'SECOND-S01::ROW-001');
