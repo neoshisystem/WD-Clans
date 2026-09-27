@@ -163,3 +163,11 @@ test('Real snapshot viewer preserves source-native Last Online and lifetime meda
  assert.match(read('site/app.js'),/🥈/);
  assert.match(read('site/app.js'),/🥉/);
 });
+
+
+test('Generated static artifacts carry source-native Last Online for real S13', () => {
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const first = staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.find(m => m.observation_id === 'S13::R001');
+ assert.equal(first?.last_online_display, '1m');
+ assert.match(read('site/data/ucs-vertical-slice.js'),/last_online_display/);
+});
