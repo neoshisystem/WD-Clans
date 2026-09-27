@@ -11,7 +11,7 @@ function read(name) {
   return fs.readFileSync(path.join(ROOT, name), 'utf8');
 }
 
-test('Product UI parity surface: preserves the established PERSIA interaction model', () => {
+test('Product UI parity surface: preserves the established viewer interaction model', () => {
   const app = read('site/app.js');
   const index = read('site/index.html');
 
@@ -30,7 +30,7 @@ test('Product UI parity surface: preserves the established PERSIA interaction mo
   assert.equal(app.includes('https://'), false);
 });
 
-test('Product UI is multi-clan by read-model design, not PERSIA-specific branching', () => {
+test('Product UI is multi-clan by read-model design, not clan-specific branching', () => {
   const app = read('site/app.js');
   assert.ok(app.includes('model.clans'));
   assert.ok(app.includes('params.get(\'clan\')'));
