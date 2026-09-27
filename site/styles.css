@@ -112,6 +112,18 @@ th {
 
 td { font-size: 0.94rem; }
 
+.delta-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+}
+
+.empty-state {
+  margin: 16px 0 0;
+  padding: 12px;
+  border: 1px dashed rgba(150, 170, 196, 0.16);
+  text-align: center;
+}
+
 .grid-two {
   display: grid;
   grid-template-columns: 1fr 1fr;
