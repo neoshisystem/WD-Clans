@@ -218,3 +218,44 @@ test('Player Profile surfaces supported period and cumulative performance withou
    assert.ok(app.includes(token),'missing profile performance surface: '+token);
  }
 });
+
+test('Common Snapshot formatter renders Persian calendar + Iran local time from authoritative UTC', () => {
+ const vm = require('node:vm');
+ const app = read('site/app.js');
+ const start = app.indexOf("const iranSnapshotDateTimeFormatter =");
+ const end = app.indexOf("const base = (file, query = '') =>", start);
+ assert.ok(start >= 0 && end > start);
+ const snippet = app.slice(start, end);
+ const context = { Intl, Date, result: null };
+ vm.createContext(context);
+ vm.runInContext(snippet + "result = formatSnapshotDateTime('2026-09-26T19:30:00.000Z');", context);
+ assert.equal(context.result, '۴ مهر ۱۴۰۵، ساعت ۲۳:۰۰');
+ assert.doesNotMatch(app, /esc\(s\.official_timestamp_utc\)/);
+ assert.doesNotMatch(app, /esc\(snapshot\.official_timestamp_utc\)/);
+});
+
+test('Clan-scoped identity is visually prominent through one reusable header pattern', () => {
+ const app = read('site/app.js');
+ const css = read('site/styles.css');
+ assert.match(app,/clan-context-identity/);
+ assert.match(app,/activeClan\.display_name/);
+ assert.match(css,/\.hero--clan/);
+ assert.match(css,/\.clan-context-identity strong/);
+ assert.match(css,/font-size:clamp\(1\.9rem,5vw,3rem\)/);
+});
+
+test('Snapshot performance clearly separates current Snapshot Delta from cumulative historical Delta', () => {
+ const app = read('site/app.js');
+ const css = read('site/styles.css');
+ for (const token of ['performanceAggregate','این Snapshot · Δ مدال کلن','این Snapshot · Δ کیل','تجمعی تاریخی تا این Snapshot · مدال کلن','تجمعی تاریخی تا این Snapshot · کیل']) assert.ok(app.includes(token),'missing performance distinction: '+token);
+ assert.match(css,/\.compact-insight--cumulative/);
+ assert.match(css,/\.aggregate--performance/);
+});
+
+test('Player Snapshot History preserves Clan Name and uses localized Snapshot time', () => {
+ const app = read('site/app.js');
+ assert.match(app,/Snapshot History/);
+ assert.match(app,/Clan Name/);
+ assert.match(app,/formatSnapshotDateTime\(item\.observed_at_utc\)/);
+ assert.match(app,/formatSnapshotDateTime\(membership\.started_at_utc\)/);
+});
