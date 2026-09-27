@@ -489,8 +489,8 @@ test('Delta integration: Canonical to Projection to Static Data to Browser consu
   vm.runInContext(browserSource, browserSandbox);
 
   const browserBundle = browserSandbox.globalThis.UCS_STATIC_DATA;
-  assert.deepEqual(browserBundle.read_model.delta_results, staticBundle.read_model.delta_results);
-  assert.deepEqual(browserBundle.provenance, staticBundle.provenance);
+  assert.equal(stableStringify(browserBundle.read_model.delta_results), stableStringify(staticBundle.read_model.delta_results));
+  assert.equal(stableStringify(browserBundle.provenance), stableStringify(staticBundle.provenance));
 
   const nodes = runBrowserApp(browserBundle);
   const rows = nodes.get('delta-results-body').children;
