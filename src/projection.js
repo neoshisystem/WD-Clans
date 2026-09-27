@@ -279,6 +279,7 @@ class ProjectionEngine {
                 lifetime_medals: cloneOptional(latestObservation.lifetime_medals),
                 current_league_clan_medals: latestObservation.current_league_clan_medals,
                 profile_total_clan_medal_count: latestObservation.profile_total_clan_medal_count,
+                last_online_display: latestObservation.last_online_display ?? null,
                 last_online_utc: latestObservation.last_online_utc ?? null
               }
             : null,
@@ -410,9 +411,11 @@ class ProjectionEngine {
           member_count: snapshot.member_count,
           capacity: snapshot.capacity,
           member_observation_refs: observations.map((observation) => observation.observation_id),
-          members: observations.map((observation) =>
-            observationProjection(observation, snapshot, clans.get(observation.clan_id))
-          ),
+          members: observations.map((observation) => ({
+            ...observationProjection(observation, snapshot, clans.get(observation.clan_id)),
+            // Preserve the source-native relative Last Online exactly as observed; UTC remains separate.
+            last_online_display: observation.last_online_display ?? null
+          })),
           provenance: {
             canonical_refs: uniqueSorted([
               snapshot.snapshot_id,
