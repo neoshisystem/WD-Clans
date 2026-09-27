@@ -59,6 +59,12 @@ Read before execution:
 - this report
 - successor shift report
 
+## Final validation evidence
+- CI Run 133: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063868 — SUCCESS
+- GitHub Pages Run 23: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063883 — SUCCESS
+- Intermediate runs 131/132 failed while closing the generated-projection gap; the failure was diagnosed as the source-native Last Online field not surviving the Snapshot projection and deterministic generated artifacts. It was corrected before the final validation above.
+- Final verified S13 Read Model sample: `S13::R001.last_online_display = 1m`; `last_online_utc = null`; lifetime medals = gold 2 / silver 4 / bronze 2.
+
 ## Classification
 FACT: S13 Canonical evidence and normalized values already exist.
 FACT: The missing Last Online and medal display was a Projection/UI exposure defect.

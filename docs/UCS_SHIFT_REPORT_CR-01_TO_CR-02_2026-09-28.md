@@ -2,7 +2,7 @@
 
 ## Handoff
 Repository: neoshisystem/WD-Clans
-Live main at handoff: see current main branch; CR-02 must re-check HEAD before mutation.
+Live main at handoff: `96ea01e0e6aef4a9b8a18ac4df483b090b647581` — CR-02 must still re-check HEAD before any mutation.
 Successor Conversation: **CR-02**
 Previous Conversation: **CR-01**
 Date: 2026-09-28
@@ -69,8 +69,9 @@ Persian UNITY / S13:
 - Dedicated Clan entrypoint is direct-to-Leaderboard and has no cross-Clan selector.
 - Horizontal overflow containment is implemented.
 - Compact Snapshot Delta and Membership Changes sections exist.
-- Source-native Last Online is now preserved through Projection and displayed.
+- Source-native Last Online is now preserved through Canonical -> Snapshot Projection -> Static Read Model and displayed.
 - Lifetime gold/silver/bronze counts are now exposed in player grids/cards.
+- Final generated-static synchronization is deterministic and CI-validated.
 - Formal agent operations and snapshot-intake documentation are maintained.
 
 ## Next task
@@ -86,6 +87,12 @@ Treat S13 as the continuity baseline. When the ZIP is supplied:
 8. Regenerate static artifacts from Canonical.
 9. Run validation + tests + CI + Pages.
 10. Add a new development report and update this handoff with the final commit/CI/Pages evidence.
+
+## Final validation evidence
+- Final corrective commit: https://github.com/neoshisystem/WD-Clans/commit/96ea01e0e6aef4a9b8a18ac4df483b090b647581
+- CI Run 133: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063868 — SUCCESS
+- Pages Run 23: https://github.com/neoshisystem/WD-Clans/actions/runs/36349063883 — SUCCESS
+- Intermediate corrective runs 131/132 failed during diagnosis and generated-artifact synchronization; they are superseded by the final successful commit above.
 
 ## Reports
 - Final corrective report: `docs/reports/2026-09-28_cr01-final-validation.md`
