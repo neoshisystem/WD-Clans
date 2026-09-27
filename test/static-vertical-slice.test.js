@@ -9,7 +9,7 @@ const vm = require('node:vm');
 
 const { validateCanonicalModel } = require('../src/canonical');
 const { stableStringify } = require('../src/projection');
-const { buildStaticDataBundle } = require('../src/static-data');
+const { buildStaticDataBundle, serializeBrowserBundle } = require('../src/static-data');
 const { generateStaticVerticalSlice } = require('../scripts/generate-static-vertical-slice');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -357,4 +357,180 @@ test('Delta UI consumer: empty Static delta_results is safe and neutral', () => 
   assert.equal(nodes.get('delta-empty-state').hidden, false);
   assert.equal(nodes.get('delta-empty-state').textContent, 'No projected Delta records are present in this Static Data Bundle.');
   assert.notEqual(nodes.get('delta-empty-state').textContent, '0');
+});
+
+
+test('Delta integration: Canonical to Projection to Static Data to Browser consumer is continuous and preserves S12 deltas', () => {
+  const canonical = structuredClone(readCanonical());
+  const baselineSnapshot = {
+    snapshot_id: 'VS-S00',
+    clan_id: 'CLAN-UCS-DEMO',
+    league_id: 'LEAGUE-UCS-DEMO-2026W39',
+    clan_league_id: 'CLANLEAGUE::CLAN-UCS-DEMO::LEAGUE-UCS-DEMO-2026W39',
+    sequence: 1,
+    official_timestamp_utc: '2026-09-25T00:00:00.000Z',
+    member_count: 1,
+    capacity: 50,
+    provenance: {
+      evidence_refs: ['EV-SYN-001']
+    }
+  };
+  const currentSnapshot = canonical.snapshots[0];
+  currentSnapshot.sequence = 2;
+  canonical.clan_leagues[0].opening_snapshot_id = 'VS-S00';
+  canonical.membership_episodes[0].started_from_snapshot_id = 'VS-S00';
+
+  canonical.snapshots.unshift(baselineSnapshot);
+  canonical.observations.unshift({
+    observation_id: 'VS-S00::M-001',
+    snapshot_id: 'VS-S00',
+    clan_id: 'CLAN-UCS-DEMO',
+    source_member_key: 'M-001',
+    source_identity: {
+      source_system: 'UCS_SYNTHETIC',
+      source_identity_id: 'M-001'
+    },
+    global_player_id: 'GP-SYN-001',
+    membership_episode_id: null,
+    identity_resolution_status: 'CONFIRMED',
+    display_name: 'Demo Operator',
+    rank: 1,
+    stage: 12,
+    role: null,
+    weapons: {
+      '25mm': 4,
+      hydra: 3,
+      hellfire: 2
+    },
+    total_kills: 11154,
+    lifetime_medals: {
+      bronze: 2,
+      silver: 1,
+      gold: 0
+    },
+    current_league_clan_medals: 420,
+    profile_total_clan_medal_count: 420,
+    last_online_utc: null,
+    provenance: {
+      evidence_refs: ['EV-SYN-001'],
+      field_provenance: {
+        last_online_utc: {
+          status: 'NOT_VISIBLE',
+          evidence_refs: ['EV-SYN-001']
+        },
+        role: {
+          status: 'UNKNOWN',
+          evidence_refs: ['EV-SYN-001']
+        }
+      }
+    }
+  });
+
+  const currentObservation = canonical.observations.find(
+    (observation) => observation.observation_id === 'VS-S01::M-001'
+  );
+  currentObservation.current_league_clan_medals = 6344;
+
+  canonical.delta_results = [
+    {
+      delta_id: 'D-S12-PLAYER-LIFETIME-001',
+      current_observation_id: 'VS-S01::M-001',
+      global_player_id: 'GP-SYN-001',
+      baseline_observation_id: 'VS-S00::M-001',
+      baseline_type: 'PREVIOUS_VALID_OBSERVATION',
+      metric_key: 'total_kills',
+      scope: 'PLAYER_LIFETIME',
+      clan_id: null,
+      league_id: null,
+      membership_episode_id: null,
+      delta: 1191,
+      status: 'VALID',
+      reason: null
+    },
+    {
+      delta_id: 'D-S12-LEAGUE-001',
+      current_observation_id: 'VS-S01::M-001',
+      global_player_id: 'GP-SYN-001',
+      baseline_observation_id: 'VS-S00::M-001',
+      baseline_type: 'PREVIOUS_VALID_OBSERVATION',
+      metric_key: 'current_league_clan_medals',
+      scope: 'LEAGUE',
+      clan_id: 'CLAN-UCS-DEMO',
+      league_id: 'LEAGUE-UCS-DEMO-2026W39',
+      membership_episode_id: null,
+      delta: 5924,
+      status: 'VALID',
+      reason: null
+    }
+  ];
+
+  assert.equal(validateCanonicalModel(canonical).valid, true);
+  const before = stableStringify(canonical);
+
+  const staticBundle = buildStaticDataBundle(canonical);
+  assert.equal(stableStringify(canonical), before);
+  assert.equal(staticBundle.read_model.delta_results.length, 2);
+
+  const lifetime = staticBundle.read_model.delta_results.find(
+    (delta) => delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills'
+  );
+  const league = staticBundle.read_model.delta_results.find(
+    (delta) => delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals'
+  );
+
+  assert.equal(lifetime.delta, 1191);
+  assert.equal(lifetime.status, 'VALID');
+  assert.equal(league.delta, 5924);
+  assert.equal(league.status, 'VALID');
+
+  const browserSource = serializeBrowserBundle(staticBundle);
+  const browserSandbox = { globalThis: {} };
+  vm.createContext(browserSandbox);
+  vm.runInContext(browserSource, browserSandbox);
+
+  const browserBundle = browserSandbox.globalThis.UCS_STATIC_DATA;
+  assert.deepEqual(browserBundle.read_model.delta_results, staticBundle.read_model.delta_results);
+  assert.deepEqual(browserBundle.provenance, staticBundle.provenance);
+
+  const nodes = runBrowserApp(browserBundle);
+  const rows = nodes.get('delta-results-body').children;
+
+  assert.equal(rows.length, 2);
+
+  const renderedLifetime = rows.find(
+    (row) => row.children[0].textContent === 'PLAYER_LIFETIME'
+  );
+  const renderedLeague = rows.find(
+    (row) => row.children[0].textContent === 'LEAGUE'
+  );
+
+  assert.ok(renderedLifetime);
+  assert.equal(renderedLifetime.children[1].textContent, 'total_kills');
+  assert.equal(renderedLifetime.children[3].textContent, '+1191');
+  assert.equal(renderedLifetime.children[4].textContent, 'VALID');
+
+  assert.ok(renderedLeague);
+  assert.equal(renderedLeague.children[1].textContent, 'current_league_clan_medals');
+  assert.equal(renderedLeague.children[3].textContent, '+5924');
+  assert.equal(renderedLeague.children[4].textContent, 'VALID');
+
+  assert.equal(nodes.get('delta-empty-state').hidden, true);
+});
+
+test('Delta UI consumer: absent delta_results property is safe, neutral, and non-fabricating', () => {
+  const bundle = browserFixture([]);
+  delete bundle.read_model.delta_results;
+
+  const before = JSON.stringify(bundle);
+  const nodes = runBrowserApp(bundle);
+
+  assert.equal(Object.prototype.hasOwnProperty.call(bundle.read_model, 'delta_results'), false);
+  assert.equal(nodes.get('delta-results-body').children.length, 0);
+  assert.equal(nodes.get('delta-empty-state').hidden, false);
+  assert.equal(
+    nodes.get('delta-empty-state').textContent,
+    'No projected Delta records are present in this Static Data Bundle.'
+  );
+  assert.notEqual(nodes.get('delta-empty-state').textContent, '0');
+  assert.equal(JSON.stringify(bundle), before);
 });
