@@ -612,3 +612,241 @@ test('Delta materialization: only PLAYER_LIFETIME and LEAGUE scopes are persiste
     false
   );
 });
+
+
+
+test('Delta projection: Canonical delta_results are exposed unchanged', () => {
+  const { canonical } = executeCommittedS12();
+  const before = stableStringify(canonical);
+  const projection = new ProjectionEngine().projectAll(canonical);
+
+  assert.equal(projection.delta_results.length, canonical.delta_results.length);
+
+  for (const delta of canonical.delta_results) {
+    const projected = projection.delta_results.find(
+      (item) => item.delta_id === delta.delta_id
+    );
+    assert.ok(projected);
+    assert.deepEqual(
+      Object.fromEntries(
+        [
+          'delta_id',
+          'current_observation_id',
+          'global_player_id',
+          'baseline_observation_id',
+          'baseline_type',
+          'metric_key',
+          'scope',
+          'clan_id',
+          'league_id',
+          'membership_episode_id',
+          'delta',
+          'status',
+          'reason'
+        ].map((key) => [key, projected[key]])
+      ),
+      delta
+    );
+  }
+
+  assert.equal(stableStringify(canonical), before);
+});
+
+test('Delta projection: S12 Total Kills and League values are preserved exactly', () => {
+  const { canonical } = executeCommittedS12();
+  const projected = new ProjectionEngine().projectDeltaResults(canonical);
+
+  const kill = projected.find(
+    (delta) =>
+      delta.scope === 'PLAYER_LIFETIME' &&
+      delta.metric_key === 'total_kills' &&
+      delta.global_player_id === 'GP-S12-KILL-001'
+  );
+  const league = projected.find(
+    (delta) =>
+      delta.scope === 'LEAGUE' &&
+      delta.metric_key === 'current_league_clan_medals' &&
+      delta.global_player_id === 'GP-S12-MEDAL-002'
+  );
+
+  assert.equal(kill.delta, 1191);
+  assert.equal(kill.status, 'VALID');
+  assert.equal(kill.baseline_observation_id, 'S11-DELTA-OLD::PERSIA-S12-PREV-KILL');
+
+  assert.equal(league.delta, 5924);
+  assert.equal(league.status, 'VALID');
+  assert.equal(league.baseline_observation_id, 'S12-DELTA-PREV::PERSIA-S12-PREV-MEDAL');
+});
+
+test('Delta projection: edge states, baseline metadata and anomaly reason are preserved', () => {
+  const { canonical } = executeCommittedS12();
+  canonical.delta_results.push(
+    {
+      delta_id: 'D-EDGE-BASELINE-UNAVAILABLE',
+      current_observation_id: 'S12::PERSIA-S12-RANK-01',
+      global_player_id: 'GP-S12-KILL-001',
+      baseline_observation_id: null,
+      baseline_type: 'NONE',
+      metric_key: 'total_kills',
+      scope: 'PLAYER_LIFETIME',
+      clan_id: null,
+      league_id: null,
+      membership_episode_id: null,
+      delta: null,
+      status: 'BASELINE_UNAVAILABLE',
+      reason: 'previous_valid_observation_missing'
+    },
+    {
+      delta_id: 'D-EDGE-ANOMALY',
+      current_observation_id: 'S12::PERSIA-S12-RANK-01',
+      global_player_id: 'GP-S12-KILL-001',
+      baseline_observation_id: 'S11-DELTA-OLD::PERSIA-S12-PREV-KILL',
+      baseline_type: 'PREVIOUS_VALID_OBSERVATION',
+      metric_key: 'total_kills',
+      scope: 'PLAYER_LIFETIME',
+      clan_id: null,
+      league_id: null,
+      membership_episode_id: null,
+      delta: -10,
+      status: 'ANOMALY',
+      reason: 'monotonic_metric_decreased'
+    }
+  );
+  validateCanonicalModel(canonical);
+
+  const projected = new ProjectionEngine().projectDeltaResults(canonical);
+  const baselineUnavailable = projected.find(
+    (delta) => delta.delta_id === 'D-EDGE-BASELINE-UNAVAILABLE'
+  );
+  const anomaly = projected.find(
+    (delta) => delta.delta_id === 'D-EDGE-ANOMALY'
+  );
+  const newLeague = projected.find(
+    (delta) => delta.baseline_type === 'NEW_LEAGUE_ZERO'
+  );
+
+  assert.equal(baselineUnavailable.status, 'BASELINE_UNAVAILABLE');
+  assert.equal(baselineUnavailable.delta, null);
+  assert.equal(baselineUnavailable.baseline_observation_id, null);
+
+  assert.equal(anomaly.status, 'ANOMALY');
+  assert.equal(anomaly.delta, -10);
+  assert.equal(anomaly.reason, 'monotonic_metric_decreased');
+  assert.equal(
+    anomaly.baseline_observation_id,
+    'S11-DELTA-OLD::PERSIA-S12-PREV-KILL'
+  );
+
+  assert.ok(newLeague);
+  assert.equal(newLeague.status, 'VALID');
+  assert.equal(newLeague.baseline_type, 'NEW_LEAGUE_ZERO');
+});
+
+test('Delta projection: provenance is derived only from referenced Canonical observations', () => {
+  const { canonical } = executeCommittedS12();
+  const kill = new ProjectionEngine().projectDeltaResults(canonical).find(
+    (delta) => delta.global_player_id === 'GP-S12-KILL-001'
+  );
+
+  assert.equal(kill.provenance.canonical_ref, kill.delta_id);
+  assert.deepEqual(
+    kill.provenance.evidence_refs.sort(),
+    ['PERSIA-DELTA-TEST-HISTORY', 'PERSIA-S12-RANKING-HTML'].sort()
+  );
+
+  assert.ok(
+    canonical.observations
+      .find((observation) => observation.observation_id === kill.current_observation_id)
+      .provenance.evidence_refs.includes('PERSIA-S12-RANKING-HTML')
+  );
+  assert.ok(
+    canonical.observations
+      .find((observation) => observation.observation_id === kill.baseline_observation_id)
+      .provenance.evidence_refs.includes('PERSIA-DELTA-TEST-HISTORY')
+  );
+});
+
+test('Delta projection: unsupported Membership-Episode scope is not exposed by this bounded Read Model', () => {
+  const { canonical } = executeCommittedS12();
+  canonical.delta_results.push({
+    delta_id: 'D-UNSUPPORTED-MEMBERSHIP',
+    current_observation_id: 'S12::PERSIA-S12-RANK-01',
+    global_player_id: 'GP-S12-KILL-001',
+    baseline_observation_id: null,
+    baseline_type: 'NEW_MEMBERSHIP_EPISODE_ZERO',
+    metric_key: 'profile_total_clan_medal_count',
+    scope: 'MEMBERSHIP_EPISODE',
+    clan_id: 'PERSIA',
+    league_id: null,
+    membership_episode_id: 'MISSING-EPISODE',
+    delta: 1,
+    status: 'VALID',
+    reason: null
+  });
+  canonical.membership_episodes = [
+    {
+      membership_episode_id: 'MISSING-EPISODE',
+      global_player_id: 'GP-S12-KILL-001',
+      clan_id: 'PERSIA',
+      sequence: 1,
+      status: 'ACTIVE',
+      started_from_snapshot_id: 'S12',
+      ended_at_utc: null,
+      ended_by_event_id: null,
+      provenance: { evidence_refs: ['PERSIA-S12-RANKING-HTML'] }
+    }
+  ];
+  validateCanonicalModel(canonical);
+
+  const projected = new ProjectionEngine().projectDeltaResults(canonical);
+
+  assert.equal(
+    projected.some((delta) => delta.delta_id === 'D-UNSUPPORTED-MEMBERSHIP'),
+    false
+  );
+});
+
+test('Delta projection: projection is deterministic and does not mutate Canonical', () => {
+  const { canonical } = executeCommittedS12();
+  const before = stableStringify(canonical);
+  const projector = new ProjectionEngine();
+
+  const first = stableStringify(projector.projectAll(canonical));
+  const second = stableStringify(projector.projectAll(structuredClone(canonical)));
+
+  assert.equal(first, second);
+  assert.equal(stableStringify(canonical), before);
+  assert.deepEqual(
+    canonical.global_player_identities.map((item) => item.global_player_id),
+    ['GP-S12-KILL-001', 'GP-S12-MEDAL-002', 'GP-S12-NOBASELINE-003']
+  );
+});
+
+test('Delta projection: Static Data contains projected Deltas with deterministic serialization', () => {
+  const { canonical } = executeCommittedS12();
+  const first = buildStaticDataBundle(canonical);
+  const second = buildStaticDataBundle(structuredClone(canonical));
+
+  assert.deepEqual(first.read_model.delta_results, second.read_model.delta_results);
+  assert.deepEqual(
+    first.read_model.delta_results.map((delta) => delta.delta_id),
+    ['DELTA::LEAGUE::current_league_clan_medals::S12::PERSIA-S12-RANK-01',
+     'DELTA::LEAGUE::current_league_clan_medals::S12::PERSIA-S12-RANK-02',
+     'DELTA::PLAYER_LIFETIME::total_kills::S12::PERSIA-S12-RANK-01',
+     'DELTA::PLAYER_LIFETIME::total_kills::S12::PERSIA-S12-RANK-02']
+  );
+  assert.equal(
+    first.read_model.delta_results.find(
+      (delta) => delta.global_player_id === 'GP-S12-MEDAL-002' && delta.scope === 'LEAGUE'
+    ).delta,
+    5924
+  );
+
+  const serializedFirst = serializeStaticDataBundle(first);
+  const serializedSecond = serializeStaticDataBundle(second);
+  assert.equal(serializedFirst, serializedSecond);
+  assert.equal(hashStaticDataBundle(first), hashStaticDataBundle(second));
+  assert.ok(first.provenance.canonical_refs.includes(
+    'DELTA::PLAYER_LIFETIME::total_kills::S12::PERSIA-S12-RANK-01'
+  ));
+});
