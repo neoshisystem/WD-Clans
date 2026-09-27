@@ -56,3 +56,11 @@ Do not re-ingest/overwrite S13. Do not assume the next identifier is S14.
 - S13 remains unchanged; its required observed fields are present in Canonical and Static.
 - Final status: PASS_WITH_REVIEW_CASES
 - Exact successor: CR-02 receives the next real Persian UNITY Snapshot ZIP. Re-check live main and confirm the actual Snapshot identifier/sequence. Compare with S13. Do not re-ingest S13 and do not assume S14.
+
+## CR-01 CORRECTIVE UX/UI GAP CLOSURE — 2026-09-28
+- Baseline preserved: previous CR-01 UX/UI/Grid hardening.
+- Corrected: prominent Clan identity, common Persian/Iran Snapshot date/time presentation, current-vs-cumulative performance distinction, localized Player Snapshot History time.
+- S13 unchanged; no re-ingestion or overwrite.
+- Detailed corrective report: `docs/reports/2026-09-28_cr01-corrective-ux-ui-gap-closure.md`
+- Final corrective classification: **PASS_WITH_REVIEW_CASES**
+- Exact successor: CR-02 receives the next real Persian UNITY Snapshot. Re-check live Product + Memory, confirm the actual Snapshot identifier/sequence, compare with S13, and do not assume S14.
