@@ -75,7 +75,7 @@ test('Snapshot ingestion can explicitly persist a real unresolved Snapshot as re
     clanDisplayName: 'PERSIA'
   });
 
-  assert.equal(result.result, 'COMMITTED');
+  assert.equal(result.result, 'REVIEW_REQUIRED');
   assert.equal(result.persisted, true);
   assert.equal(result.state.snapshots.some((snapshot) => snapshot.snapshot_id === 'S12'), true);
   assert.equal(result.state.observations.filter((observation) => observation.snapshot_id === 'S12').length, 50);
@@ -100,7 +100,7 @@ test('Snapshot ingestion is idempotent for the same Snapshot identity', () => {
     clanDisplayName: 'PERSIA'
   });
 
-  assert.equal(first.result, 'COMMITTED');
+  assert.equal(first.result, 'REVIEW_REQUIRED');
   assert.equal(second.result, 'IDEMPOTENT_REPLAY');
   assert.equal(second.state.observations.length, first.state.observations.length);
   assert.equal(second.state.snapshots.length, first.state.snapshots.length);
