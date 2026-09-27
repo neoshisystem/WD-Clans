@@ -79,7 +79,7 @@ function runBrowserApp(bundle) {
     }
   };
   const sandbox = {
-    globalThis: { UCS_STATIC_DATA: structuredClone(bundle) },
+    globalThis: { UCS_STATIC_DATA: bundle },
     document
   };
   vm.createContext(sandbox);
