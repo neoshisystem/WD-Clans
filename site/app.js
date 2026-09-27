@@ -19,6 +19,29 @@
     if (!Number.isFinite(n)) return display(value);
     return n > 0 ? '+' + n.toLocaleString('en-US') : n.toLocaleString('en-US');
   };
+  const iranSnapshotDateTimeFormatter = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
+    timeZone: 'Asia/Tehran',
+    calendar: 'persian',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  });
+  const formatSnapshotDateTime = (value) => {
+    if (!value) return '—';
+    const date = new Date(value);
+    if (!Number.isFinite(date.getTime())) return '—';
+    const parts = Object.fromEntries(
+      iranSnapshotDateTimeFormatter.formatToParts(date)
+        .filter((part) => ['day','month','year','hour','minute'].includes(part.type))
+        .map((part) => [part.type, part.value])
+    );
+    return parts.day && parts.month && parts.year && parts.hour && parts.minute
+      ? parts.day + ' ' + parts.month + ' ' + parts.year + '، ساعت ' + parts.hour + ':' + parts.minute
+      : '—';
+  };
   const base = (file, query = '') => './' + file + query;
   const validClanId = params.get('clan') && model.clans.some((c) => c.clan_id === params.get('clan')) ? params.get('clan') : null;
   const scopedPage = new Set(['clan-viewer','archive','players','player','member-history']).has(page);
@@ -70,13 +93,15 @@
     const meta = page === 'global-dashboard' && !activeClan
       ? '<span>حالت: <b>Global / Admin</b></span><span>کلن‌ها: <b>' + model.clans.length + '</b></span>'
       : (activeClan ? '<span>کلن: <b>' + esc(activeClan.display_name || activeClan.clan_id) + '</b></span>' : '<span>کلنی ثبت نشده است.</span>') +
-        (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span>' : '');
-    const contextBadge = activeClan ? '<span class="badge clan-context-badge">CLAN · ' + esc(activeClan.display_name || activeClan.clan_id) + '</span>' : '';
-    return '<section class="hero"><div class="hero-kickers"><span class="badge">' + esc(kicker) + '</span>' + contextBadge + '</div><h1>' + esc(title) + '</h1>' +
+        (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span><span>زمان: <b>' + esc(formatSnapshotDateTime(activeSnapshot.official_timestamp_utc)) + '</b></span>' : '');
+    const clanIdentity = activeClan
+      ? '<div class="clan-context-identity"><span class="badge clan-context-badge">CLAN</span><strong>' + esc(activeClan.display_name || activeClan.clan_id) + '</strong></div>'
+      : '';
+    return '<section class="hero' + (activeClan ? ' hero--clan' : '') + '">' + clanIdentity +
+      '<div class="hero-kickers"><span class="badge">' + esc(kicker) + '</span></div><h1>' + esc(title) + '</h1>' +
       (lead ? '<p>' + esc(lead) + '</p>' : '') +
       '<div class="meta-row">' + meta + '</div></section>';
   }
-
   function globalDashboard() {
     const clans = model.clans.slice().sort((a,b) => String(a.display_name || a.clan_id).localeCompare(String(b.display_name || b.clan_id)));
     const latestSnapshotFor = (clan) => model.snapshots.filter((snapshot) => snapshot.clan_id === clan.clan_id).slice().sort((a,b) => b.official_timestamp_utc.localeCompare(a.official_timestamp_utc))[0] || null;
@@ -95,7 +120,7 @@
         return '<a class="clan-card" href="' + base('clan.html','?clan=' + encodeURIComponent(clan.clan_id)) + '">' +
           '<div class="clan-card-head"><div><span class="eyebrow">CLAN LEADERBOARD</span><h2>' + esc(clan.display_name || clan.clan_id) + '</h2><span class="muted">' + esc(clan.clan_id) + '</span></div><span class="link-arrow">←</span></div>' +
           '<div class="clan-card-stats"><div><span>آخرین Snapshot</span><b>' + esc(snapshot?.snapshot_id || '—') + '</b></div><div><span>اعضا</span><b>' + esc(snapshot?.member_count ?? '—') + '</b></div><div><span>آرشیو</span><b>' + esc(clan.snapshot_count ?? 0) + '</b></div><div><span>Unresolved</span><b>' + unresolved + '</b></div></div>' +
-          '<div class="clan-card-footer"><span>' + esc(snapshot?.official_timestamp_utc || 'تاریخ ثبت نشده') + '</span><b>ورود به Leaderboard</b></div>' +
+          '<div class="clan-card-footer"><span>' + esc(formatSnapshotDateTime(snapshot?.official_timestamp_utc) === '—' ? 'تاریخ ثبت نشده' : formatSnapshotDateTime(snapshot?.official_timestamp_utc)) + '</span><b>ورود به Leaderboard</b></div>' +
         '</a>';
       }).join('') + '</div></section>';
   }
@@ -145,27 +170,52 @@
     };
   }
 
-  function snapshotPerformance(snapshotId) {
+  function performanceAggregate(snapshotIds) {
+    const ids = new Set(snapshotIds);
     let medals = 0, kills = 0, medalCount = 0, killCount = 0;
     for (const delta of Array.isArray(model.delta_results) ? model.delta_results : []) {
-      if (!delta.current_observation_id?.startsWith(snapshotId + '::') || delta.status !== 'VALID') continue;
-      if (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals' && Number.isFinite(Number(delta.delta))) {
-        medals += Number(delta.delta); medalCount += 1;
+      if (delta.status !== 'VALID' || !Number.isFinite(Number(delta.delta))) continue;
+      const snapshotId = String(delta.current_observation_id || '').split('::')[0];
+      if (!ids.has(snapshotId)) continue;
+      const snapshot = model.snapshots.find((item) => item.snapshot_id === snapshotId);
+      if (activeClanId && snapshot?.clan_id !== activeClanId) continue;
+      if (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals') {
+        medals += Number(delta.delta);
+        medalCount += 1;
       }
-      if (delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills' && Number.isFinite(Number(delta.delta))) {
-        kills += Number(delta.delta); killCount += 1;
+      if (delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills') {
+        kills += Number(delta.delta);
+        killCount += 1;
       }
     }
-    return { medals: medalCount ? signed(medals) : '—', kills: killCount ? signed(kills) : '—', medalCount, killCount };
+    return { medals, kills, medalCount, killCount };
+  }
+
+  function snapshotPerformance(snapshotId) {
+    const snapshotIndex = clanSnapshots.findIndex((snapshot) => snapshot.snapshot_id === snapshotId);
+    const current = performanceAggregate([snapshotId]);
+    const cumulativeIds = snapshotIndex >= 0
+      ? clanSnapshots.slice(snapshotIndex).map((snapshot) => snapshot.snapshot_id)
+      : [snapshotId];
+    return { current, cumulative: performanceAggregate(cumulativeIds) };
+  }
+
+  function performanceValue(aggregate, fallback) {
+    return aggregate.count ? signed(aggregate.value) : fallback;
   }
 
   function compactPerformanceHtml(snapshotId) {
     const performance = snapshotPerformance(snapshotId);
-    const note = performance.medalCount || performance.killCount ? 'فقط Deltaهای معتبر' : 'baseline یا دادهٔ معتبر کافی در دسترس نیست';
+    const currentMedals = performanceValue({ value: performance.current.medals, count: performance.current.medalCount }, '— / baseline');
+    const currentKills = performanceValue({ value: performance.current.kills, count: performance.current.killCount }, '— / baseline');
+    const cumulativeMedals = performanceValue({ value: performance.cumulative.medals, count: performance.cumulative.medalCount }, '—');
+    const cumulativeKills = performanceValue({ value: performance.cumulative.kills, count: performance.cumulative.killCount }, '—');
+    const basis = (count) => count ? count + ' رکورد معتبر' : 'بدون Delta معتبر';
     return '<section class="compact-insights" aria-label="خلاصه عملکرد Snapshot">' +
-      '<div class="compact-insight"><span>Δ مدال کلن</span><b>' + esc(performance.medals) + '</b><small>' + esc(performance.medalCount ? performance.medalCount + ' بازیکن' : '—') + '</small></div>' +
-      '<div class="compact-insight"><span>Δ کیل</span><b>' + esc(performance.kills) + '</b><small>' + esc(performance.killCount ? performance.killCount + ' بازیکن' : '—') + '</small></div>' +
-      '<div class="compact-insight compact-insight--note"><span>مبنای نمایش</span><b>Snapshot</b><small>' + esc(note) + '</small></div>' +
+      '<div class="compact-insight"><span>این Snapshot · Δ مدال کلن</span><b>' + esc(currentMedals) + '</b><small>' + esc(basis(performance.current.medalCount)) + '</small></div>' +
+      '<div class="compact-insight"><span>این Snapshot · Δ کیل</span><b>' + esc(currentKills) + '</b><small>' + esc(basis(performance.current.killCount)) + '</small></div>' +
+      '<div class="compact-insight compact-insight--cumulative"><span>تجمعی تاریخی تا این Snapshot · مدال کلن</span><b>' + esc(cumulativeMedals) + '</b><small>' + esc(basis(performance.cumulative.medalCount)) + '</small></div>' +
+      '<div class="compact-insight compact-insight--cumulative"><span>تجمعی تاریخی تا این Snapshot · کیل</span><b>' + esc(cumulativeKills) + '</b><small>' + esc(basis(performance.cumulative.killCount)) + '</small></div>' +
       '</section>';
   }
 
@@ -322,7 +372,7 @@
 
     root.innerHTML = header('جدول جامع عملکرد و تغییرات اعضای کلن', 'UCS · LEADERBOARD', 'ساختار Viewer بر پایهٔ الگوی تثبیت‌شدهٔ پروژه نگه داشته شده است؛ داده‌ها از Read Model خوانده می‌شوند.') +
       '<section class="panel"><div class="toolbar">' +
-      '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(s.official_timestamp_utc) + '</option>').join('') + '</select></label>' +
+      '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(s.official_timestamp_utc)) + '</option>').join('') + '</select></label>' +
       '<label class="field search-field"><span>جستجو</span><input id="search-input" type="search" placeholder="نام بازیکن، سمت یا مقدار..."></label>' +
       '<div class="view-switch"><button data-mode="simple">نمایش ساده</button><button data-mode="summary">نمایش خلاصه</button><button data-mode="graphic">نمایش گرافیکی</button></div>' +
       '</div><div class="kpi-row"><div><span>اعضا</span><b>' + activeSnapshot.member_count + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + (bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>' + compactPerformanceHtml(activeSnapshot.snapshot_id) + membershipChangesHtml(activeSnapshot);
@@ -338,15 +388,7 @@
   function archive() {
     const snapshots = clanSnapshots;
     const deltaResults = Array.isArray(model.delta_results) ? model.delta_results : [];
-    const aggregate = (snapshotId) => {
-      let medals = 0, kills = 0, medalCount = 0, killCount = 0;
-      for (const delta of deltaResults) {
-        if (!delta.current_observation_id?.startsWith(snapshotId + '::') || delta.status !== 'VALID') continue;
-        if (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals' && Number.isFinite(Number(delta.delta))) { medals += Number(delta.delta); medalCount += 1; }
-        if (delta.scope === 'PLAYER_LIFETIME' && delta.metric_key === 'total_kills' && Number.isFinite(Number(delta.delta))) { kills += Number(delta.delta); killCount += 1; }
-      }
-      return { medals: medalCount ? signed(medals) : '— / baseline', kills: killCount ? signed(kills) : '— / baseline' };
-    };
+    const aggregate = (snapshotId) => snapshotPerformance(snapshotId);
     const playerById = new Map((model.global_players || []).map((player) => [player.global_player_id, player]));
     const eventLabel = {
       JOIN: 'عضو جدید',
@@ -376,7 +418,12 @@
             }).join('') +
             '</div></div>'
           : '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>0</b></div><div class="change-empty">تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.</div></div>';
-        return '<article class="report-card"><div class="report-index">' + (snapshots.length - index) + '</div><div class="report-main"><div class="report-head"><h2><a href="' + base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">' + esc(snapshot.snapshot_id) + ' · ' + esc(snapshot.official_timestamp_utc) + '</a></h2><span class="status">' + (index === 0 ? 'آخرین Snapshot' : 'آرشیو') + '</span></div><p>' + esc(snapshot.member_count) + ' / ' + esc(snapshot.capacity) + ' عضو · مستقل و قابل بازسازی</p>' + changesHtml + '<div class="aggregate"><div><span>جمع تغییر مدال کلن</span><b>' + agg.medals + '</b></div><div><span>جمع افزایش کیل</span><b>' + agg.kills + '</b></div></div></div><a class="link-arrow" href="' + base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">←</a></article>';
+        return '<article class="report-card"><div class="report-index">' + (snapshots.length - index) + '</div><div class="report-main"><div class="report-head"><h2><a href="' + base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">' + esc(snapshot.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(snapshot.official_timestamp_utc)) + '</a></h2><span class="status">' + (index === 0 ? 'آخرین Snapshot' : 'آرشیو') + '</span></div><p>' + esc(snapshot.member_count) + ' / ' + esc(snapshot.capacity) + ' عضو · مستقل و قابل بازسازی</p>' + changesHtml + '<div class="aggregate aggregate--performance">' +
+          '<div><span>این Snapshot · Δ مدال کلن</span><b>' + esc(performanceValue({ value: agg.current.medals, count: agg.current.medalCount }, '— / baseline')) + '</b><small>' + esc(agg.current.medalCount ? agg.current.medalCount + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +
+          '<div><span>این Snapshot · Δ کیل</span><b>' + esc(performanceValue({ value: agg.current.kills, count: agg.current.killCount }, '— / baseline')) + '</b><small>' + esc(agg.current.killCount ? agg.current.killCount + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +
+          '<div><span>تجمعی تاریخی · مدال کلن</span><b>' + esc(performanceValue({ value: agg.cumulative.medals, count: agg.cumulative.medalCount }, '—')) + '</b><small>' + esc(agg.cumulative.medalCount ? agg.cumulative.medalCount + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +
+          '<div><span>تجمعی تاریخی · کیل</span><b>' + esc(performanceValue({ value: agg.cumulative.kills, count: agg.cumulative.killCount }, '—')) + '</b><small>' + esc(agg.cumulative.killCount ? agg.cumulative.killCount + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +
+        '</div></div><a class="link-arrow" href="' + base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">←</a></article>';
       }).join('') + (snapshots.length ? '' : '<div class="empty">Snapshotی برای این Clan ثبت نشده است.</div>') + '</div>';
   }
 
@@ -477,8 +524,8 @@
     root.innerHTML = header(displayName, 'UCS · PLAYER PROFILE', 'تاریخچهٔ Observationها مستقل باقی می‌ماند و از Snapshotهای ثبت‌شده خوانده می‌شود.') +
       '<section class="panel profile-performance"><div class="section-head"><div><span class="badge">عملکرد</span><h2>عملکرد این دوره و تجمعی</h2></div></div><div class="profile-performance-grid"><div class="profile-performance-card"><span>مدال کلن · لیگ جاری</span><b>' + esc(performance.currentLeagueMedalCount ? signed(performance.currentLeagueMedals) : '— / baseline') + '</b><small>' + esc(performance.currentLeagueMedalCount + ' رکورد معتبر') + '</small></div><div class="profile-performance-card"><span>کیل · لیگ جاری</span><b>' + esc(performance.currentLeagueKillCount ? signed(performance.currentLeagueKills) : '— / baseline') + '</b><small>' + esc(performance.currentLeagueKillCount + ' رکورد معتبر') + '</small></div><div class="profile-performance-card"><span>مدال کلن · تجمعی</span><b>' + esc(performance.cumulativeMedalCount ? signed(performance.cumulativeMedals) : '—') + '</b><small>جمع Deltaهای معتبر ثبت‌شده</small></div><div class="profile-performance-card"><span>کیل · تجمعی</span><b>' + esc(performance.cumulativeKillCount ? signed(performance.cumulativeKills) : '—') + '</b><small>جمع Deltaهای معتبر ثبت‌شده</small></div></div></section>' +
       '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div><div><span>Profile Total Clan Medals</span><b>' + esc(display(latest.profile_total_clan_medal_count)) + '</b></div></div><div class="detail-strip"><div><span>نشان‌ها</span><b>' + esc(lifetimeMedalsFor(latest)) + '</b></div><div><span>سلاح‌ها</span><b>' + esc(weaponsFor(latest)) + '</b></div><div><span>Last Online</span><b>' + esc(lastOnlineFor(latest)) + '</b></div></div></article>' +
-      '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
-      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table class="player-history-table"><thead><tr><th>Snapshot</th><th>Clan Name</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Δ Clan Medals</th><th>Total Clan Medals</th><th>Gold / Silver / Bronze</th><th>Total Kills</th><th>Δ Kills</th><th>Weapons</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.slice().sort((a,b) => String(b.observed_at_utc || '').localeCompare(String(a.observed_at_utc || ''))).map((item) => { const d = deltaMapForSnapshot(item.snapshot_id).get(item.observation_id) || {}; return '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(signed(d.medals?.delta)) + '</td><td>' + esc(display(item.profile_total_clan_medal_count)) + '</td><td>' + esc(lifetimeMedalsFor(item)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(signed(d.kills?.delta)) + '</td><td>' + esc(weaponsFor(item)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
+      '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(formatSnapshotDateTime(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
+      '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table class="player-history-table"><thead><tr><th>Snapshot</th><th>زمان Snapshot</th><th>Clan Name</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Δ Clan Medals</th><th>Total Clan Medals</th><th>Gold / Silver / Bronze</th><th>Total Kills</th><th>Δ Kills</th><th>Weapons</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.slice().sort((a,b) => String(b.observed_at_utc || '').localeCompare(String(a.observed_at_utc || ''))).map((item) => { const d = deltaMapForSnapshot(item.snapshot_id).get(item.observation_id) || {}; return '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(formatSnapshotDateTime(item.observed_at_utc)) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(signed(d.medals?.delta)) + '</td><td>' + esc(display(item.profile_total_clan_medal_count)) + '</td><td>' + esc(lifetimeMedalsFor(item)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(signed(d.kills?.delta)) + '</td><td>' + esc(weaponsFor(item)) + '</td><td>' + esc(lastOnlineFor(item)) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
   }
 
   function membershipHistory() {
