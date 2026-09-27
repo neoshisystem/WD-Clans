@@ -6,7 +6,8 @@ const crypto = require('node:crypto');
 const {
   emptyCanonicalModel,
   validateCanonicalModel,
-  assertHistoryPreserved
+  assertHistoryPreserved,
+  buildDeltaResult
 } = require('./canonical');
 
 const TRANSACTION_RESULTS = Object.freeze([
@@ -220,7 +221,12 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
       immutable: true
     })),
     resolution_cases: resolutionCases,
-    delta_results: []
+    delta_results: materializeDeltaResults({
+      snapshotId,
+      clanId,
+      leagueId,
+      preparedPlan
+    })
   };
 
   const reviewRequired = preparedPlan.transaction_status === 'REVIEW_REQUIRED';
@@ -242,6 +248,81 @@ function createSnapshotPersistencePlan(input, preparedPlan) {
     },
     canonical_patch: patch
   };
+}
+
+function materializeDeltaResults({ snapshotId, clanId, leagueId, preparedPlan }) {
+  const deltas = [];
+
+  for (const member of preparedPlan.members || []) {
+    if (canonicalResolutionStatus(member.identity_resolution?.status) !== 'CONFIRMED') {
+      continue;
+    }
+
+    const globalPlayerId = member.identity_resolution.global_player_id;
+    if (!globalPlayerId) {
+      throw new Error('CONFIRMED identity requires global_player_id for delta materialization');
+    }
+
+    const currentObservationId = snapshotId + '::' + member.source_member_key;
+    const baselineObservationId = member.delta_context?.previous_observation_id || null;
+
+    const lifetime = member.metrics?.lifetime?.total_kills;
+    if (lifetime) {
+      deltas.push(buildDeltaResult({
+        deltaId: [
+          'DELTA',
+          'PLAYER_LIFETIME',
+          'total_kills',
+          currentObservationId
+        ].join('::'),
+        currentObservationId,
+        globalPlayerId,
+        metricKey: lifetime.metric,
+        scope: 'PLAYER_LIFETIME',
+        baselineObservationId,
+        baselineType: baselineObservationId
+          ? 'PREVIOUS_VALID_OBSERVATION'
+          : 'NONE',
+        delta: lifetime.delta,
+        status: lifetime.status,
+        reason: lifetime.reason
+      }));
+    }
+
+    const league = member.metrics?.current_league_clan_medals;
+    if (league) {
+      const newLeagueBaseline = league.reason === 'new_league_baseline_zero';
+      const leagueBaselineObservationId = newLeagueBaseline
+        ? null
+        : baselineObservationId;
+
+      deltas.push(buildDeltaResult({
+        deltaId: [
+          'DELTA',
+          'LEAGUE',
+          'current_league_clan_medals',
+          currentObservationId
+        ].join('::'),
+        currentObservationId,
+        globalPlayerId,
+        metricKey: league.metric,
+        scope: 'LEAGUE',
+        clanId,
+        leagueId,
+        baselineObservationId: leagueBaselineObservationId,
+        baselineType: newLeagueBaseline
+          ? 'NEW_LEAGUE_ZERO'
+          : (leagueBaselineObservationId
+            ? 'PREVIOUS_VALID_OBSERVATION'
+            : 'NONE'),
+        delta: league.delta,
+        status: league.status,
+        reason: league.reason
+      }));
+    }
+  }
+
+  return deltas.sort((left, right) => left.delta_id.localeCompare(right.delta_id));
 }
 
 function entityLabel(collection) {
