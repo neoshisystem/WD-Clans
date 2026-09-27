@@ -119,3 +119,30 @@ test('Global dashboard CSS selectors are syntactically repaired for Clan directo
   assert.match(css,/\.dashboard-grid\{grid-template-columns:1fr\}/);
   assert.match(css,/\.clan-card-stats span\{display:block/);
 });
+test('Real Persian UNITY S13 is represented in Canonical and static Read Model', () => {
+ const canonical = JSON.parse(read('data/canonical.json'));
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const clan = canonical.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY');
+ const snapshot = canonical.snapshots.find(s => s.snapshot_id === 'S13' && s.clan_id === 'CLAN-PERSIAN-UNITY');
+ const observations = canonical.observations.filter(o => o.snapshot_id === 'S13');
+ assert.equal(clan?.display_name,'Persian UNITY');
+ assert.equal(snapshot?.sequence,1);
+ assert.equal(snapshot?.official_timestamp_utc,'2026-09-26T19:30:00.000Z');
+ assert.equal(snapshot?.member_count,48);
+ assert.equal(observations.length,48);
+ assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
+ assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S13');
+ assert.equal(staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.length,48);
+ assert.equal(staticData.read_model.delta_results.some(d => d.current_observation_id?.startsWith('S13::')),false);
+});
+test('Global dashboard horizontal overflow is clipped at the document boundary', () => {
+ const css = read('site/styles.css');
+ assert.match(css,/html\{overflow-x:clip;\}/);
+ assert.match(css,/body\{overflow-x:clip;\}/);
+ assert.match(css,/\.global-clan,\.topbar-tools/);
+});
+test('Agent handoff documentation exists', () => {
+ assert.ok(fs.existsSync(path.join(ROOT,'AGENTS.md')));
+ assert.ok(fs.existsSync(path.join(ROOT,'docs','UCS_AGENT_OPERATIONS.md')));
+ assert.ok(fs.existsSync(path.join(ROOT,'docs','UCS_SHIFT_REPORT_2026-09-27.md')));
+});

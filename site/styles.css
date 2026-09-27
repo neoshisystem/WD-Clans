@@ -36,3 +36,20 @@ html[data-theme="light"] body{background:radial-gradient(circle at 80% -10%,rgba
 .membership-change-heading b{color:var(--cyan);}
 .membership-change-empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:12px;padding:10px;color:var(--muted);font-size:.74rem;}
 @media(max-width:680px){.compact-insights{grid-template-columns:1fr 1fr}.compact-insight--note{grid-column:1/-1}.membership-change-grid{grid-template-columns:1fr;}}
+
+/* Responsive containment — fixes page-level horizontal overflow without redesign. */
+html{overflow-x:clip;}
+body{overflow-x:clip;}
+.shell,.topbar-inner{min-width:0;}
+.nav,.global-clan,.topbar-tools{min-width:0;max-width:100%;}
+.topbar-tools{display:flex;align-items:center;gap:8px;}
+.clan-select{min-width:0;}
+.clan-select select{max-width:100%;min-width:0;}
+@media(max-width:920px){
+ .global-clan,.topbar-tools{order:3;width:100%;overflow-x:auto;overflow-y:hidden;}
+ .nav{width:100%;overflow-x:auto;overflow-y:hidden;}
+}
+@media(max-width:680px){
+ .clan-select{width:100%;justify-content:space-between;}
+ .clan-select select{max-width:min(240px,calc(100vw - 32px));}
+}
