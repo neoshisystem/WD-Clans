@@ -62,6 +62,57 @@
     document.getElementById('members-body').appendChild(row);
   }
 
+  const playerById = new Map(
+    (Array.isArray(model.global_players) ? model.global_players : [])
+      .map((player) => [player.global_player_id, player])
+  );
+
+  const deltaResults = Array.isArray(model.delta_results)
+    ? model.delta_results
+    : [];
+  const deltaBody = document.getElementById('delta-results-body');
+  const deltaEmptyState = document.getElementById('delta-empty-state');
+
+  const displayDelta = (value) => {
+    if (value === null || value === undefined || value === '') return '—';
+    return typeof value === 'number' && value > 0
+      ? '+' + String(value)
+      : String(value);
+  };
+
+  const appendDeltaCell = (row, value, className = '') => {
+    const cell = document.createElement('td');
+    if (className) cell.className = className;
+    cell.textContent = value;
+    row.appendChild(cell);
+  };
+
+  if (deltaBody && deltaResults.length > 0) {
+    deltaResults.forEach((delta) => {
+      const row = document.createElement('tr');
+      const player = playerById.get(delta.global_player_id);
+      const playerLabel = player?.display_name
+        ? player.display_name + ' · ' + display(delta.global_player_id)
+        : display(delta.global_player_id);
+
+      appendDeltaCell(row, display(delta.scope));
+      appendDeltaCell(row, display(delta.metric_key));
+      appendDeltaCell(row, playerLabel);
+      appendDeltaCell(row, displayDelta(delta.delta), 'delta-value');
+      appendDeltaCell(row, display(delta.status));
+      appendDeltaCell(row, display(delta.baseline_type));
+      appendDeltaCell(row, display(delta.current_observation_id));
+      appendDeltaCell(row, display(delta.baseline_observation_id));
+      appendDeltaCell(row, display(delta.reason));
+
+      deltaBody.appendChild(row);
+    });
+  }
+
+  if (deltaEmptyState) {
+    deltaEmptyState.hidden = deltaResults.length !== 0;
+  }
+
   const hashSource = JSON.stringify({
     static_data_version: bundle.static_data_version,
     projection_version: model.projection_version,
