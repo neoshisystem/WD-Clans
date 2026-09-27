@@ -151,7 +151,8 @@ function ingestSnapshot({
     evidenceRegistry: registry,
     previousByGlobalPlayerId: previousByGlobalPlayerId(state),
     membershipBySourceKey: membershipContextForInput(state, snapshotInput, decisions),
-    identityDecisionsBySourceKey: decisions
+    identityDecisionsBySourceKey: decisions,
+    currentState: state
   };
 
   const prepared = prepareSnapshotTransaction(snapshotInput, context);
