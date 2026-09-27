@@ -110,6 +110,7 @@
   }
 
   if (deltaEmptyState) {
+    deltaEmptyState.textContent = 'No projected Delta records are present in this Static Data Bundle.';
     deltaEmptyState.hidden = deltaResults.length !== 0;
   }
 
