@@ -22,7 +22,8 @@
   const base = (file, query = '') => './' + file + query;
   const validClanId = params.get('clan') && model.clans.some((c) => c.clan_id === params.get('clan')) ? params.get('clan') : null;
   const scopedPage = new Set(['clan-viewer','archive','players','player','member-history']).has(page);
-  const activeClanId = scopedPage ? (validClanId || model.clans[0]?.clan_id || null) : null;
+  // Scoped pages fail closed without an explicit Clan context; the Global/Admin dashboard is the only cross-Clan entrypoint.
+  const activeClanId = scopedPage ? validClanId : null;
   const activeClan = model.clans.find((c) => c.clan_id === activeClanId) || null;
   const clanSnapshots = model.snapshots.filter((s) => s.clan_id === activeClanId).slice().sort((a, b) => b.official_timestamp_utc.localeCompare(a.official_timestamp_utc));
   const requestedSnapshot = params.get('snapshot');
@@ -43,12 +44,12 @@
   let savedTheme = 'dark';
   try { savedTheme = localStorage.getItem('ucs-theme') || 'dark'; } catch (_) {}
   document.documentElement.dataset.theme = savedTheme;
-  const globalControl = document.getElementById('global-clan');
-  if (globalControl) {
-    globalControl.innerHTML = (page === 'global-dashboard' ? clanSelector() : '') +
+  const topbarControl = document.getElementById('global-clan') || document.getElementById('topbar-tools');
+  if (topbarControl) {
+    topbarControl.innerHTML = (page === 'global-dashboard' ? clanSelector() : '') +
       '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته">' +
       (savedTheme === 'dark' ? '☀️' : '🌙') + '</button>';
-    globalControl.querySelector('#clan-select')?.addEventListener('change', (event) => {
+    topbarControl.querySelector('#clan-select')?.addEventListener('change', (event) => {
       const clanId = event.target.value;
       const next = new URL('./clan.html', location.href);
       if (clanId === '__all__') next.searchParams.delete('clan');
@@ -56,11 +57,11 @@
       next.searchParams.delete('snapshot');
       location.href = next.toString();
     });
-    globalControl.querySelector('#theme-toggle')?.addEventListener('click', () => {
+    topbarControl.querySelector('#theme-toggle')?.addEventListener('click', () => {
       const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       document.documentElement.dataset.theme = nextTheme;
       try { localStorage.setItem('ucs-theme', nextTheme); } catch (_) {}
-      const button = globalControl.querySelector('#theme-toggle');
+      const button = topbarControl.querySelector('#theme-toggle');
       if (button) button.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
     });
   }

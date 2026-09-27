@@ -81,11 +81,21 @@ test('Dedicated Clan pages expose no cross-Clan selector and preserve Clan conte
   const app = read('site/app.js');
   for (const page of ['clan.html','archive.html','players.html','player.html','member-history.html']) {
     const html = read('site/' + page);
-    assert.match(html,/id="global-clan"/);
+    assert.match(html,/id="topbar-tools"/);
+    assert.doesNotMatch(html,/id="global-clan"/);
     assert.doesNotMatch(html,/id="clan-select"/);
+    assert.doesNotMatch(html,/href="\.\/index\.html"/);
   }
   assert.ok(app.includes("new Set(['clan-viewer','archive','players','player','member-history'])"));
   assert.ok(app.includes("document.querySelectorAll('.brand')"));
+});
+
+test('Global dashboard owns the only Clan selector and dedicated pages fail closed without Clan context', () => {
+  const app = read('site/app.js');
+  const index = read('site/index.html');
+  assert.match(index,/id="global-clan"/);
+  assert.ok(app.includes("document.getElementById('global-clan') || document.getElementById('topbar-tools')"));
+  assert.ok(app.includes("const activeClanId = scopedPage ? validClanId : null;"));
 });
 
 test('Leaderboard includes compact performance deltas and per-Snapshot membership changes', () => {
@@ -97,4 +107,15 @@ test('Leaderboard includes compact performance deltas and per-Snapshot membershi
   for (const token of ['.compact-insights','.compact-insight','.membership-changes','.membership-change-grid']) {
     assert.ok(css.includes(token),'missing leaderboard enhancement style: '+token);
   }
+});
+
+
+test('Global dashboard CSS selectors are syntactically repaired for Clan directory layout', () => {
+  const css = read('site/styles.css');
+  assert.equal(css.includes('.clan-card,.clan-card:hover,'), false);
+  assert.equal(css.includes('.clan-card h2,{'), false);
+  assert.equal(css.includes('.dashboard-grid,}'), false);
+  assert.match(css,/\.clan-card\{display:block/);
+  assert.match(css,/\.dashboard-grid\{grid-template-columns:1fr\}/);
+  assert.match(css,/\.clan-card-stats span\{display:block/);
 });
