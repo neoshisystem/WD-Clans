@@ -53,3 +53,6 @@ body{overflow-x:clip;}
  .clan-select{width:100%;justify-content:space-between;}
  .clan-select select{max-width:min(240px,calc(100vw - 32px));}
 }
+
+/* Final responsive containment: long data never expands the document viewport. */
+.page,.hero,.section-block,.panel,.member-card,.player-card,.report-card,.clan-card{min-width:0;max-width:100%;}.clan-card-head,.clan-card-footer,.report-head,.membership-change-heading{min-width:0;}.clan-card h2,.clan-card .muted,.clan-card-footer span,.report-card p,.change-pill{overflow-wrap:anywhere;}.table-wrap{max-width:100%;min-width:0;}.medal-inline{white-space:nowrap;font-variant-numeric:tabular-nums;}.stat-medals{grid-column:1/-1;}.stat-medals strong{font-size:.82rem;white-space:normal;line-height:1.6;}
