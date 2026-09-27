@@ -21,7 +21,8 @@ const {
   InMemoryAtomicPersistenceAdapter
 } = require('../src/persistence');
 const {
-  ProjectionEngine
+  ProjectionEngine,
+  stableStringify
 } = require('../src/projection');
 const {
   buildStaticDataBundle,
@@ -745,7 +746,10 @@ test('Delta projection: edge states, baseline metadata and anomaly reason are pr
 test('Delta projection: provenance is derived only from referenced Canonical observations', () => {
   const { canonical } = executeCommittedS12();
   const kill = new ProjectionEngine().projectDeltaResults(canonical).find(
-    (delta) => delta.global_player_id === 'GP-S12-KILL-001'
+    (delta) =>
+      delta.scope === 'PLAYER_LIFETIME' &&
+      delta.metric_key === 'total_kills' &&
+      delta.global_player_id === 'GP-S12-KILL-001'
   );
 
   assert.equal(kill.provenance.canonical_ref, kill.delta_id);
