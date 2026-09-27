@@ -111,3 +111,11 @@ When a new real ZIP is supplied:
 5. Treat S13 as continuity baseline but do not auto-confirm identities.
 6. Preserve unresolved cases and only create membership/delta results when their prerequisites are met.
 7. Regenerate static data, validate, test, deploy, report, then update the shift report.
+
+## Mandatory continuity documents
+
+Before a real Snapshot task, also read:
+- `docs/UCS_SCHEMA_FILE_MAP_V0_1.md`
+- `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
+
+These are the permanent agent-facing references for schema ownership, file responsibilities, ZIP intake order, source-native Last Online, identity/membership boundaries, and reporting.
