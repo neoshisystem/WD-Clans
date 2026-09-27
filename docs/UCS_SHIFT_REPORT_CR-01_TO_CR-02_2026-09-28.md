@@ -180,3 +180,45 @@ Earlier sections record historical checkpoints and remain point-in-time records.
 
 ### Exact next point
 **CR-02 — Real Snapshot #2 for Persian UNITY.**
+
+## CR-01 FINAL UX/UI / GRID HARDENING HANDOFF — 2026-09-28
+Classification: FACT / HANDOFF
+
+### Functional Product state
+- Last functional Product commit: fdb678d753b5d9db825cf3b10f0df7f952bfc4f3.
+- Leaderboard Grid: PERSIA interaction baseline applied to table containment, sticky headers, sortable headers, direction indicators, responsive behavior and rerender scroll preservation.
+- Simple Grid now exposes Rank, Name, Role, Stage, Current League Clan Medals, Snapshot Clan Medal Delta, Total Clan Medals, lifetime Gold/Silver/Bronze, Total Kills, Snapshot Kill Delta, Weapons and source-native Last Online.
+- Player Profile now exposes current-period/league and cumulative valid Delta summaries plus richer Snapshot History with explicit Clan Name.
+- Membership change entries are clickable where a valid Global identity or observation route exists.
+- Scoped pages visibly identify their active Clan; only Global/Admin exposes Clan switching.
+- Document-level horizontal overflow remains contained; table scrolling is local to the Grid.
+- S13 was not re-ingested or overwritten.
+
+### S13 continuity baseline
+- Persian UNITY / S13 / 48 of 50.
+- Official: 2026-09-26T19:30:00Z.
+- 48 UNRESOLVED observations; 0 Global IDs; 48 Resolution Cases; 0 Membership Episodes/Events; 0 S13 Delta Results.
+- Last Online, Total Kills, Current League Clan Medals, Profile Total Clan Medal Count, lifetime Gold/Silver/Bronze and Weapons are present through Canonical -> Projection -> Static.
+
+### Validation
+- CI Run 36356953627 / Job 108726479423: SUCCESS on fdb678d753b5d9db825cf3b10f0df7f952bfc4f3.
+- Pages Run 36356946098: SUCCESS on the site-affecting commit 942e774e2c1af018c8892fc0cae05969ad071e5a.
+- The later fdb678... commit is test-only, so deployed site content remains the successful Pages state.
+- Detailed report: docs/reports/2026-09-28_cr01-final-ux-ui-grid-hardening.md
+- Product completion marker: docs/CR01_COMPLETION_MARKER.md
+
+### Documentation status
+- AGENTS.md updated.
+- docs/UCS_AGENT_OPERATIONS.md updated.
+- docs/UCS_SCHEMA_FILE_MAP_V0_1.md contains the UI/Grid ownership contract.
+- docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md contains the UX/UI hardening boundary.
+- docs/reports/2026-09-28_cr01-final-ux-ui-grid-hardening.md recorded.
+
+### Remaining review cases
+- S13 identity remains UNRESOLVED by policy.
+- Historical S13 raw checkpoint remains unchanged.
+- No standalone persisted S13 SnapshotInput artifact exists.
+- Direct browser screenshot verification is unavailable through the connector environment.
+
+### Exact Next Action — CR-02
+Receive the next real Persian UNITY Snapshot ZIP. Re-check live main; hash and build deterministic inventory; confirm the actual Snapshot identifier and sequence from Authority/context; compare with S13; preserve unresolved identity unless confirmation prerequisites are met; derive only contract-supported membership/deltas; regenerate Static; validate; report and update the next handoff. Do not re-ingest S13. Do not assume the next identifier is S14.
