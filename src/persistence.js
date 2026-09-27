@@ -109,6 +109,76 @@ function createSnapshotPersistencePlan(input, preparedPlan, currentState = null)
   const leagueStatus = input.league.status || 'ACTIVE';
   const confirmedIds = confirmedPlayerIds(preparedPlan);
 
+  const membershipEpisodes = [];
+  const membershipEvents = [];
+  const membershipByMemberKey = new Map();
+
+  for (const member of preparedPlan.members) {
+    const status = canonicalResolutionStatus(member.identity_resolution?.status);
+    if (status !== 'CONFIRMED' || !currentState) continue;
+
+    const globalPlayerId = member.identity_resolution.global_player_id;
+    const sameClanEpisodes = currentState.membership_episodes
+      .filter((episode) => episode.global_player_id === globalPlayerId && episode.clan_id === clanId)
+      .slice()
+      .sort((left, right) => (right.sequence || 0) - (left.sequence || 0));
+
+    const activeEpisode = sameClanEpisodes.find((episode) => episode.status === 'ACTIVE') || null;
+    if (activeEpisode) {
+      membershipByMemberKey.set(member.source_member_key, {
+        membership_episode_id: activeEpisode.membership_episode_id,
+        event: null
+      });
+      continue;
+    }
+
+    const nextSequence = (sameClanEpisodes[0]?.sequence || 0) + 1;
+    const membershipEpisodeId = [
+      'ME',
+      globalPlayerId,
+      clanId,
+      nextSequence
+    ].join('::');
+    const eventType = sameClanEpisodes.length ? 'RETURN' : 'JOIN';
+    const membershipEventId = [
+      'MEMBERSHIP',
+      eventType,
+      snapshotId,
+      member.source_member_key
+    ].join('::');
+    const evidence = [...(member.observation.evidence_refs || evidenceRefs)].sort();
+
+    membershipEpisodes.push({
+      membership_episode_id: membershipEpisodeId,
+      global_player_id: globalPlayerId,
+      clan_id: clanId,
+      sequence: nextSequence,
+      status: 'ACTIVE',
+      started_from_snapshot_id: snapshotId,
+      ended_at_utc: null,
+      ended_by_event_id: null,
+      provenance: { evidence_refs: evidence }
+    });
+    membershipEvents.push({
+      membership_event_id: membershipEventId,
+      event_type: eventType,
+      global_player_id: globalPlayerId,
+      clan_id: clanId,
+      membership_episode_id: membershipEpisodeId,
+      effective_at_utc: input.snapshot.official_timestamp_utc,
+      observed_snapshot_id: snapshotId,
+      from_clan_id: null,
+      to_clan_id: null,
+      evidence_refs: evidence,
+      authority_ref: null,
+      precision: 'SNAPSHOT'
+    });
+    membershipByMemberKey.set(member.source_member_key, {
+      membership_episode_id: membershipEpisodeId,
+      event: membershipEventId
+    });
+  }
+
   const observations = preparedPlan.members.map((member) => {
     const status = canonicalResolutionStatus(member.identity_resolution?.status);
     return {
@@ -120,7 +190,7 @@ function createSnapshotPersistencePlan(input, preparedPlan, currentState = null)
       global_player_id: status === 'CONFIRMED'
         ? member.identity_resolution.global_player_id
         : null,
-      membership_episode_id: null,
+      membership_episode_id: membershipByMemberKey.get(member.source_member_key)?.membership_episode_id ?? null,
       identity_resolution_status: status,
       display_name: member.display_name,
       rank: member.observation.rank,
@@ -224,8 +294,8 @@ function createSnapshotPersistencePlan(input, preparedPlan, currentState = null)
     }],
     observations,
     global_player_identities: [],
-    membership_episodes: [],
-    membership_events: [],
+    membership_episodes: membershipEpisodes,
+    membership_events: membershipEvents,
     evidence_artifacts: sourceArtifacts.map((artifact) => ({
       evidence_artifact_id: artifact.artifact_id,
       artifact_type: artifact.artifact_type,
