@@ -48,3 +48,9 @@ Do not import PERSIA/GOLDENCROWN data.
 Do not create Global IDs from name matches.
 Do not infer departure from absence alone.
 Do not hand-edit generated static artifacts.
+
+## Final validation evidence
+- Final code/data commit: https://github.com/neoshisystem/WD-Clans/commit/b51d13c5b0665ba3d230a38f65fcb509e0988a5d
+- CI Run 128: https://github.com/neoshisystem/WD-Clans/actions/runs/36345596890 — SUCCESS
+- Pages Run 21: https://github.com/neoshisystem/WD-Clans/actions/runs/36345596824 — SUCCESS
+- Earlier detected failures were in intermediate generated-static synchronization commits; they were corrected before final validation.
