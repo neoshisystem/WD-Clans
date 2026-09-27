@@ -85,7 +85,7 @@ test('Dedicated Clan pages expose no cross-Clan selector and preserve Clan conte
     assert.doesNotMatch(html,/id="clan-select"/);
   }
   assert.ok(app.includes("new Set(['clan-viewer','archive','players','player','member-history'])"));
-  assert.match(app,/document\\.querySelectorAll\\('\\.brand'\\)/);
+  assert.ok(app.includes("document.querySelectorAll('.brand')"));
 });
 
 test('Leaderboard includes compact performance deltas and per-Snapshot membership changes', () => {
