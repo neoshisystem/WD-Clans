@@ -7,6 +7,7 @@
 
   const model = bundle.read_model;
   const params = new URLSearchParams(location.search);
+  const page = document.body.dataset.page || 'leaderboard';
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const display = (value) => value === null || value === undefined || value === '' ? '—' : String(value);
   const number = (value) => value === null || value === undefined || value === '' ? null : Number(value);
@@ -17,7 +18,11 @@
     return n > 0 ? '+' + n.toLocaleString('en-US') : n.toLocaleString('en-US');
   };
   const base = (file, query = '') => './' + file + query;
-  const activeClanId = params.get('clan') && model.clans.some((c) => c.clan_id === params.get('clan')) ? params.get('clan') : (model.clans[0]?.clan_id || null);
+  const validClanId = params.get('clan') && model.clans.some((c) => c.clan_id === params.get('clan')) ? params.get('clan') : null;
+  const scopedPage = new Set(['clan-workspace','archive','players','player']).has(page) ||
+    (page === 'global-dashboard' && Boolean(validClanId)) ||
+    (page === 'member-history' && Boolean(validClanId));
+  const activeClanId = scopedPage ? (validClanId || model.clans[0]?.clan_id || null) : null;
   const activeClan = model.clans.find((c) => c.clan_id === activeClanId) || null;
   const clanSnapshots = model.snapshots.filter((s) => s.clan_id === activeClanId).slice().sort((a, b) => b.official_timestamp_utc.localeCompare(a.official_timestamp_utc));
   const requestedSnapshot = params.get('snapshot');
@@ -26,7 +31,11 @@
   function clanSelector() {
     const clans = model.clans.slice().sort((a, b) => String(a.display_name || '').localeCompare(String(b.display_name || '')));
     if (!clans.length) return '';
+    const allOption = page === 'global-dashboard' && !validClanId
+      ? '<option value="__all__" ' + (!activeClanId ? 'selected' : '') + '>همه کلن‌ها</option>'
+      : '';
     return '<label class="clan-select"><span>کلن</span><select id="clan-select">' +
+      allOption +
       clans.map((clan) => '<option value="' + esc(clan.clan_id) + '" ' + (clan.clan_id === activeClanId ? 'selected' : '') + '>' + esc(clan.display_name || clan.clan_id) + '</option>').join('') +
       '</select></label>';
   }
@@ -38,8 +47,11 @@
     '<button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر پوسته">' +
     (savedTheme === 'dark' ? '☀️' : '🌙') + '</button>';
   document.getElementById('global-clan').querySelector('#clan-select')?.addEventListener('change', (event) => {
-    const next = new URL(location.href);
-    next.searchParams.set('clan', event.target.value);
+    const clanId = event.target.value;
+    const fromGlobal = page === 'global-dashboard' && !validClanId;
+    const next = fromGlobal ? new URL('./clan.html', location.href) : new URL(location.href);
+    if (clanId === '__all__') next.searchParams.delete('clan');
+    else next.searchParams.set('clan', clanId);
     next.searchParams.delete('snapshot');
     location.href = next.toString();
   });
@@ -52,11 +64,61 @@
   });
 
   function header(title, kicker, lead = '') {
+    const meta = page === 'global-dashboard' && !activeClan
+      ? '<span>حالت: <b>Global / Admin</b></span><span>کلن‌ها: <b>' + model.clans.length + '</b></span>'
+      : (activeClan ? '<span>کلن: <b>' + esc(activeClan.display_name || activeClan.clan_id) + '</b></span>' : '<span>کلنی ثبت نشده است.</span>') +
+        (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span>' : '');
     return '<section class="hero"><span class="badge">' + esc(kicker) + '</span><h1>' + esc(title) + '</h1>' +
       (lead ? '<p>' + esc(lead) + '</p>' : '') +
-      '<div class="meta-row">' +
-      (activeClan ? '<span>کلن: <b>' + esc(activeClan.display_name || activeClan.clan_id) + '</b></span>' : '<span>کلنی ثبت نشده است.</span>') +
-      (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span>' : '') +
+      '<div class="meta-row">' + meta + '</div></section>';
+  }
+
+  function globalDashboard() {
+    const clans = model.clans.slice().sort((a,b) => String(a.display_name || a.clan_id).localeCompare(String(b.display_name || b.clan_id)));
+    const latestSnapshotFor = (clan) => model.snapshots.filter((snapshot) => snapshot.clan_id === clan.clan_id).slice().sort((a,b) => b.official_timestamp_utc.localeCompare(a.official_timestamp_utc))[0] || null;
+    const uniqueObservedPlayers = new Set(clans.flatMap((clan) => clan.observed_global_player_ids || []));
+    root.innerHTML = header('داشبورد مرکزی سیستم Unified Clan System','UCS · GLOBAL / ADMIN DASHBOARD','نمای واحد مدیریت برای مشاهده و ورود سریع به تمام Clanها. هر Clan با Context مستقل خودش از همین Viewer استفاده می‌کند و اضافه‌شدن Clan جدید نیازمند تغییر UI نیست.') +
+      '<section class="panel"><div class="kpi-row dashboard-kpi">' +
+      '<div><span>تعداد کلن‌ها</span><b>' + clans.length + '</b></div>' +
+      '<div><span>Snapshotهای ثبت‌شده</span><b>' + model.snapshots.length + '</b></div>' +
+      '<div><span>Global Identityهای تاییدشده</span><b>' + uniqueObservedPlayers.size + '</b></div>' +
+      '<div><span>اعضای آخرین Snapshotها</span><b>' + clans.reduce((sum,clan) => sum + (latestSnapshotFor(clan)?.member_count || 0),0) + '</b></div>' +
+      '</div></section>' +
+      '<section class="section-block"><div class="section-head"><div><span class="badge">CLAN DIRECTORY</span><h2>کلن‌ها</h2></div><span class="count">' + clans.length + ' Clan</span></div>' +
+      '<div class="dashboard-grid">' + clans.map((clan) => {
+        const snapshot = latestSnapshotFor(clan);
+        const unresolved = (clan.unresolved_observation_refs || []).length;
+        return '<a class="clan-card" href="' + base('clan.html','?clan=' + encodeURIComponent(clan.clan_id)) + '">' +
+          '<div class="clan-card-head"><div><span class="eyebrow">CLAN WORKSPACE</span><h2>' + esc(clan.display_name || clan.clan_id) + '</h2><span class="muted">' + esc(clan.clan_id) + '</span></div><span class="link-arrow">←</span></div>' +
+          '<div class="clan-card-stats"><div><span>آخرین Snapshot</span><b>' + esc(snapshot?.snapshot_id || '—') + '</b></div><div><span>اعضا</span><b>' + esc(snapshot?.member_count ?? '—') + '</b></div><div><span>آرشیو</span><b>' + esc(clan.snapshot_count ?? 0) + '</b></div><div><span>Unresolved</span><b>' + unresolved + '</b></div></div>' +
+          '<div class="clan-card-footer"><span>' + esc(snapshot?.official_timestamp_utc || 'تاریخ ثبت نشده') + '</span><b>ورود به Workspace</b></div>' +
+        '</a>';
+      }).join('') + '</div></section>';
+  }
+
+  function clanWorkspace() {
+    if (!activeClan) {
+      root.innerHTML = header('Clan Workspace','UCS · CLAN WORKSPACE','یک Clan معتبر انتخاب نشده است.') + '<section class="panel empty"><h2>Clan پیدا نشد.</h2><p>از داشبورد مرکزی یک Clan را انتخاب کنید.</p><a class="btn" href="./index.html">بازگشت به داشبورد</a></section>';
+      return;
+    }
+    const latest = clanSnapshots[0] || null;
+    const unresolved = activeClan.unresolved_observation_refs?.length || 0;
+    const card = (file,title,description,meta) => '<a class="workspace-card" href="' + base(file,'?clan=' + encodeURIComponent(activeClanId)) + '"><span class="eyebrow">CLAN VIEW</span><h2>' + esc(title) + '</h2><p>' + esc(description) + '</p><div class="workspace-card-meta">' + esc(meta) + '</div><span class="link-arrow">←</span></a>';
+    root.innerHTML = header(activeClan.display_name || activeClan.clan_id,'UCS · CLAN WORKSPACE','محیط اختصاصی این Clan برای مدیریت میانی؛ همه نماهای موجود در Viewer با Context همین Clan باز می‌شوند.') +
+      '<section class="panel"><div class="kpi-row dashboard-kpi">' +
+      '<div><span>آخرین Snapshot</span><b>' + esc(latest?.snapshot_id || '—') + '</b></div>' +
+      '<div><span>اعضا</span><b>' + esc(latest?.member_count ?? '—') + '</b></div>' +
+      '<div><span>Snapshotها</span><b>' + esc(clanSnapshots.length) + '</b></div>' +
+      '<div><span>Unresolved</span><b>' + unresolved + '</b></div>' +
+      '</div><div class="workspace-actions"><a class="btn active" href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId)) + '">آخرین Leaderboard</a>' +
+      (latest ? '<a class="btn" href="' + base('index.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(latest.snapshot_id)) + '">باز کردن Snapshot جاری</a>' : '') +
+      '<a class="btn" href="./index.html">داشبورد مرکزی</a></div></section>' +
+      '<section class="section-block"><div class="section-head"><div><span class="badge">WORKSPACE</span><h2>دسترسی سریع</h2></div><span class="count">۴ نمای اصلی</span></div>' +
+      '<div class="workspace-grid">' +
+      card('index.html','Leaderboard','جدول کامل رتبه‌بندی، جستجو، مرتب‌سازی و سه حالت نمایش تثبیت‌شده.',latest ? latest.snapshot_id + ' · ' + latest.member_count + ' عضو' : 'بدون Snapshot') +
+      card('archive.html','Snapshot Archive','تاریخچهٔ مستقل Snapshotهای این Clan با ناوبری دوره‌ای و Activityهای ثبت‌شده.',clanSnapshots.length + ' Snapshot') +
+      card('players.html','Player Directory','فهرست بازیکنان همین Clan و ورود مستقیم به Profile همان Context.',(latest?.member_count || 0) + ' عضو') +
+      card('member-history.html','Membership History','تاریخچهٔ Membership مرتبط با همین Clan.',unresolved ? unresolved + ' مورد unresolved' : 'بدون مورد unresolved') +
       '</div></section>';
   }
 
@@ -242,7 +304,12 @@
     const observations = activeSnapshot?.members || [];
     const players = model.global_players.filter((player) => !activeClanId || player.memberships?.some((m) => m.clan_id === activeClanId));
     const entries = players.length
-      ? players.map((player) => ({ global: player, observation: model.player_history.find((h) => h.global_player_id === player.global_player_id)?.observations?.slice(-1)[0] || null }))
+      ? players.map((player) => {
+          const history = model.player_history.find((h) => h.global_player_id === player.global_player_id);
+          const scoped = (history?.observations || []).filter((observation) => !activeClanId || observation.clan_id === activeClanId);
+          const observation = scoped.slice().sort((a,b) => String(a.observed_at_utc || '').localeCompare(String(b.observed_at_utc || ''))).slice(-1)[0] || null;
+          return { global: player, observation };
+        }).filter((entry) => !activeClanId || entry.observation)
       : observations.map((observation) => ({ global: null, observation }));
 
     root.innerHTML = header('اعضای کلن', 'UCS · PLAYER DIRECTORY', 'نام نمایشی اطلاعات جاری بازی است. شناسهٔ Global فقط وقتی نمایش داده می‌شود که Identity در Canonical تأیید شده باشد.') +
@@ -296,22 +363,53 @@
     }
 
     const scopedObs = observations.filter((item) => !activeClanId || item.clan_id === activeClanId);
-    const latest = scopedObs[scopedObs.length - 1] || observations[observations.length - 1];
+    const scopedMemberships = memberships.filter((item) => !activeClanId || item.clan_id === activeClanId);
+    const latest = scopedObs.slice().sort((a,b) => String(a.observed_at_utc || '').localeCompare(String(b.observed_at_utc || ''))).slice(-1)[0] || null;
+    if (activeClanId && !latest) {
+      root.innerHTML = header('Player Profile','UCS · PLAYER PROFILE','این Global Identity در Context انتخاب‌شدهٔ Clan Observation معتبر ندارد.') +
+        '<section class="panel empty"><h2>بازیکن در این Clan پیدا نشد.</h2><p>برای جلوگیری از نمایش دادهٔ Clan دیگر، Profile فقط Observationهای همین Context را نشان می‌دهد.</p><a class="btn" href="' + base('players.html','?clan=' + encodeURIComponent(activeClanId)) + '">بازگشت به اعضای کلن</a></section>';
+      return;
+    }
     root.innerHTML = header(displayName, 'UCS · PLAYER PROFILE', 'تاریخچهٔ Observationها مستقل باقی می‌ماند و از Snapshotهای ثبت‌شده خوانده می‌شود.') +
       '<section class="profile-grid"><article class="panel profile-hero"><span class="badge">' + esc(status || 'UNKNOWN') + '</span><h2>' + esc(displayName) + '</h2><div class="profile-id">' + esc(globalId || latest.observation_id) + '</div><div class="kpi-row"><div><span>Stage</span><b>' + esc(display(latest.stage)) + '</b></div><div><span>Total Kills</span><b>' + esc(display(latest.total_kills)) + '</b></div><div><span>Clan Medals</span><b>' + esc(display(latest.current_league_clan_medals)) + '</b></div></div></article>' +
-      '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (memberships.length ? '<div class="timeline">' + memberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
+      '<article class="panel"><span class="badge">عضویت</span><h2>Membership History</h2>' + (scopedMemberships.length ? '<div class="timeline">' + scopedMemberships.map((membership) => '<div class="timeline-item"><b>' + esc(membership.clan_display_name || membership.clan_id) + '</b><span>' + esc(display(membership.status)) + ' · ' + esc(display(membership.started_at_utc)) + '</span></div>').join('') + '</div>' : '<p class="muted">برای این Observation هنوز Membership Global تأییدشده‌ای وجود ندارد.</p>') + '</article></section>' +
       '<section class="panel"><div class="section-head"><div><span class="badge">OBSERVATIONS</span><h2>Snapshot History</h2></div><span class="count">' + scopedObs.length + ' رکورد</span></div><div class="table-wrap"><table><thead><tr><th>Snapshot</th><th>Clan</th><th>Rank</th><th>Stage</th><th>League Medals</th><th>Total Kills</th><th>Last Online</th></tr></thead><tbody>' + scopedObs.map((item) => '<tr><td>' + esc(item.snapshot_id) + '</td><td>' + esc(item.clan_display_name || item.clan_id) + '</td><td>' + esc(display(item.rank)) + '</td><td>' + esc(display(item.stage)) + '</td><td>' + esc(display(item.current_league_clan_medals)) + '</td><td>' + esc(display(item.total_kills)) + '</td><td>' + esc(display(item.last_online_utc)) + '</td></tr>').join('') + '</tbody></table></div></section>';
   }
 
   function membershipHistory() {
-    const players = model.global_players.filter((p) => (p.memberships || []).length > 1 || (p.membership_event_refs || []).length > 0);
-    root.innerHTML = header('تاریخچه عضویت و جابه‌جایی', 'UCS · MEMBERSHIP HISTORY', 'جابجایی بین Clanها فقط بر پایهٔ Membership و Global Identity تأییدشده نمایش داده می‌شود.') +
+    const activity = Array.isArray(model.activity) ? model.activity : [];
+    const players = model.global_players.map((player) => {
+      const memberships = (player.memberships || []).filter((m) => !activeClanId || m.clan_id === activeClanId);
+      const events = activity.filter((event) => event.global_player_id === player.global_player_id && (!activeClanId || event.clan_id === activeClanId));
+      return { player, memberships, events };
+    }).filter((entry) => activeClanId ? (entry.memberships.length > 0 || entry.events.length > 0) : (entry.memberships.length > 1 || entry.events.length > 0));
+    root.innerHTML = header('تاریخچه عضویت و جابه‌جایی','UCS · MEMBERSHIP HISTORY',activeClanId ? 'نمایش فقط Membership و رویدادهای مرتبط با Clan انتخاب‌شده.' : 'نمای Global برای بررسی تاریخچهٔ عضویت و جابه‌جایی بین تمام Clanها.') +
       (players.length
-        ? '<section class="panel"><div class="player-grid">' + players.map((player) => '<a class="player-card" href="' + base('player.html','?id=' + encodeURIComponent(player.global_player_id)) + '"><div class="player-card-head"><span class="player-avatar">' + esc(String(player.display_name || '—').slice(0,1)) + '</span><div><h3>' + esc(player.display_name) + '</h3><span class="muted">' + esc(player.global_player_id) + '</span></div></div><div class="player-mini"><span>Clanها <b>' + player.memberships.length + '</b></span><span>رویدادها <b>' + (player.membership_event_refs?.length || 0) + '</b></span></div></a>').join('') + '</div></section>'
-        : '<section class="panel empty"><h2>هنوز جابه‌جایی Global تأییدشده‌ای ثبت نشده است.</h2><p>Observationهای unresolved همچنان قابل مشاهده‌اند، اما به‌عنوان Player مشترک بین Clanها ادغام نمی‌شوند.</p></section>');
+        ? '<section class="panel"><div class="player-grid">' + players.map(({player,memberships,events}) => '<a class="player-card" href="' + base('player.html','?id=' + encodeURIComponent(player.global_player_id) + (activeClanId ? '&clan=' + encodeURIComponent(activeClanId) : '')) + '"><div class="player-card-head"><span class="player-avatar">' + esc(String(player.display_name || '—').slice(0,1)) + '</span><div><h3>' + esc(player.display_name) + '</h3><span class="muted">' + esc(player.global_player_id) + '</span></div></div><div class="player-mini"><span>Membership <b>' + memberships.length + '</b></span><span>رویدادها <b>' + events.length + '</b></span></div></a>').join('') + '</div></section>'
+        : '<section class="panel empty"><h2>' + (activeClanId ? 'برای این Clan تاریخچهٔ Membership ثبت‌شده‌ای وجود ندارد.' : 'هنوز جابه‌جایی Global تأییدشده‌ای ثبت نشده است.') + '</h2><p>Observationهای unresolved همچنان قابل مشاهده‌اند، اما به‌عنوان Player مشترک بین Clanها ادغام نمی‌شوند.</p></section>');
   }
 
-  switch (document.body.dataset.page) {
+  function bindNavContext() {
+    document.querySelectorAll('.nav a').forEach((link) => {
+      const href = (link.getAttribute('href') || '').split('?')[0];
+      if (!href || href === './index.html') {
+        if (activeClanId && page !== 'global-dashboard') link.href = base('index.html','?clan=' + encodeURIComponent(activeClanId));
+        return;
+      }
+      if (activeClanId && (href === './players.html' || href === './archive.html' || href === './player.html' || href === './member-history.html' || href === './clan.html')) {
+        link.href = href + '?clan=' + encodeURIComponent(activeClanId);
+      }
+    });
+  }
+
+  bindNavContext();
+
+  switch (page) {
+    case 'global-dashboard':
+      if (validClanId) leaderboard();
+      else globalDashboard();
+      break;
+    case 'clan-workspace': clanWorkspace(); break;
     case 'leaderboard': leaderboard(); break;
     case 'archive': archive(); break;
     case 'players': playerDirectory(); break;

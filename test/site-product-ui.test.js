@@ -50,3 +50,19 @@ test('Product UI adds restrained Snapshot navigation, archive activity and safe 
   assert.doesNotMatch(app, /RawExtraction|SnapshotInput/);
   assert.equal(app.includes('fetch('), false);
 });
+
+test('Product UI has a global dashboard plus a shared Clan Workspace route', () => {
+  const app = read('site/app.js');
+  const index = read('site/index.html');
+  const workspace = read('site/clan.html');
+  assert.match(index,/data-page="global-dashboard"/);
+  assert.match(workspace,/data-page="clan-workspace"/);
+  for (const token of ['function globalDashboard()','function clanWorkspace()','model.clans','params.get(\'clan\')','bindNavContext']) {
+    assert.ok(app.includes(token),'missing scalable multi-clan surface: '+token);
+  }
+  assert.doesNotMatch(app,/CLAN-UCS-DEMO|UCS Demo Clan|PERSIA|GOLDENCROWN/);
+});
+test('Product UI keeps scoped navigation and blocks cross-Clan profile fallback', () => {
+  const app = read('site/app.js');
+  for (const token of ['scopedObs','scopedMemberships','activeClanId','بازیکن در این Clan پیدا نشد']) assert.ok(app.includes(token));
+});
