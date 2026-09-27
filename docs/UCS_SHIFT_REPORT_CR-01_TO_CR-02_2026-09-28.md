@@ -2,7 +2,7 @@
 
 ## Handoff
 Repository: neoshisystem/WD-Clans
-Live main at handoff: `ca97c547c98055e8b9b70cde7591b4513f6952d3` (documentation-only successor checkpoint after functional commit `96ea01e0e6aef4a9b8a18ac4df483b090b647581`). CR-02 must still re-check HEAD before any mutation.
+Live main at handoff: `76ddcf96777cc03216cb18b4faca30aeeec17a94` (latest documented checkpoint; CR-02 must still re-check HEAD before mutation). (documentation-only successor checkpoint after functional commit `96ea01e0e6aef4a9b8a18ac4df483b090b647581`). CR-02 must still re-check HEAD before any mutation.
 Successor Conversation: **CR-02**
 Previous Conversation: **CR-01**
 Date: 2026-09-28
@@ -112,6 +112,12 @@ Treat S13 as the continuity baseline. When the ZIP is supplied:
 - S13 remains the first observed Snapshot; Δ Medal / Δ Kills are unavailable without a valid baseline and must not be fabricated.
 - Global/Admin remains the only Clan switcher; dedicated Clan URLs remain isolated and direct-to-Leaderboard.
 - Horizontal page overflow is contained without redesign.
+
+## Latest validation after handoff-document updates
+- Current HEAD: `76ddcf96777cc03216cb18b4faca30aeeec17a94`
+- CI Run 144: https://github.com/neoshisystem/WD-Clans/actions/runs/36349284929 — SUCCESS
+- Pages Run 24: https://github.com/neoshisystem/WD-Clans/actions/runs/36349219724 — SUCCESS
+- The functional projection/UI fix is included in the Pages-validated chain; later documentation/schema commits do not change the published UI.
 
 ## CR-02 warning
 Do not assume the next Snapshot is S14 solely because it is the next file received. Confirm the Snapshot identifier/sequence according to the existing canonical/ingestion contract and Authority-provided metadata.
