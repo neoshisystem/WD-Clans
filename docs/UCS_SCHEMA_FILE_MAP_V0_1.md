@@ -43,3 +43,11 @@ Never treat `site/data/ucs-vertical-slice.json/js` as source data. Regenerate fr
 
 ## Current real checkpoint
 Persian UNITY / `CLAN-PERSIAN-UNITY`: S13, 48/50, 48 UNRESOLVED observations, 0 Global IDs, 0 Membership Episodes/Events, 0 deltas because there is no prior valid baseline.
+
+
+## UX/UI ownership and Grid contract — 2026-09-28
+- site/app.js: browser-only consumer for Leaderboard, Search, Sort, display modes, Profile, Archive, Membership and scoped routing.
+- site/styles.css: shared responsive styling, contained table scrolling, sticky headers, sort controls, Clan identity context and Profile history Grid.
+- UI consumes Read Model values only; missing values remain missing.
+- PERSIA is a presentation/interaction reference only. UCS Canonical and Projection semantics remain authoritative.
+- No new Canonical collection or projection field was introduced by the final UX/UI hardening.
