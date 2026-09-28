@@ -131,7 +131,7 @@ test('Real Persian UNITY S13 is represented in Canonical and static Read Model',
  assert.equal(snapshot?.member_count,48);
  assert.equal(observations.length,48);
  assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
- assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S14');
+ assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S15');
  assert.equal(staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.length,48);
  assert.equal(staticData.read_model.delta_results.some(d => d.current_observation_id?.startsWith('S13::')),false);
 });
@@ -356,4 +356,25 @@ test('Real Persian UNITY S14 continuity regression is represented in generated s
  assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),9207907);
  assert.deepEqual(changes.filter(c => c.change_type === 'JOIN').map(c => c.display_name).sort(),['ADNAN','Kian_Tak','saied','حسن']);
  assert.deepEqual(changes.filter(c => c.change_type === 'LEAVE').map(c => c.display_name).sort(),['amin','mohammad']);
+});
+
+test('Real Persian UNITY S15 checkpoint preserves separate Current League and Profile Clan Medal scopes', () => {
+ const canonical = JSON.parse(read('data/canonical.json'));
+ const snapshot = canonical.snapshots.find(s => s.snapshot_id === 'S15' && s.clan_id === 'CLAN-PERSIAN-UNITY');
+ const observations = canonical.observations.filter(o => o.snapshot_id === 'S15').sort((a,b) => a.rank - b.rank);
+ assert.ok(snapshot);
+ assert.equal(snapshot.sequence,3);
+ assert.equal(snapshot.official_timestamp_utc,'2026-09-28T19:30:00.000Z');
+ assert.equal(snapshot.member_count,50);
+ assert.equal(observations.length,50);
+ assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
+ assert.equal(canonical.resolution_cases.filter(o => o.observation_id.startsWith('S15::')).length,50);
+ assert.equal(canonical.delta_results.filter(o => o.current_observation_id?.startsWith('S15::')).length,0);
+ const byRank = Object.fromEntries(observations.map(o => [o.rank, o]));
+ assert.equal(byRank[29].current_league_clan_medals,113266);
+ assert.equal(byRank[29].profile_total_clan_medal_count,701188);
+ assert.equal(byRank[20].current_league_clan_medals,159305);
+ assert.equal(byRank[20].profile_total_clan_medal_count,171384);
+ assert.equal(byRank[44].current_league_clan_medals,54869);
+ assert.equal(byRank[44].profile_total_clan_medal_count,1174900);
 });
