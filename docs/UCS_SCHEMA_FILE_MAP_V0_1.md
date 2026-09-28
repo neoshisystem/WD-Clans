@@ -64,3 +64,11 @@ Persian UNITY / S14 is the latest Canonical Snapshot:
 - Evidence: EV-REAL-PERSIAN-UNITY-S14.
 - Raw evidence checkpoint: data/real-snapshots/persian-unity/S14.raw.json.
 - Report: reports/2026-09-28_real-s14-ingestion.md.
+
+## Derived continuity Read Model properties — 2026-09-28
+
+The current Read Model includes two derived properties in addition to the existing canonical-delta projection:
+- snapshot_delta_results: deterministic adjacent-Snapshot observation deltas for total_kills and current_league_clan_medals.
+- snapshot_membership_changes: deterministic observed JOIN/LEAVE changes between adjacent same-Clan Snapshots.
+
+Both retain Observation and Evidence references. Neither is a Canonical collection and neither creates Global identity or canonical membership state.
