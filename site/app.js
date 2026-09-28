@@ -1,6 +1,7 @@
 'use strict';
 
 // Dedicated Clan viewer: direct leaderboard context; Global/Admin stays isolated.
+// Snapshot continuity and Delta summaries are derived from adjacent same-Clan Read Model observations.
 
 (function () {
   const bundle = globalThis.UCS_STATIC_DATA;
