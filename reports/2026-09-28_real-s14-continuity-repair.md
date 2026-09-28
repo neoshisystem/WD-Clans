@@ -49,3 +49,16 @@ Identity remains UNRESOLVED. Observed roster continuity must not be interpreted 
 
 ## Successor
 CR-02 should read the permanent agent documents and this report, re-check live main, and treat S13/S14 as historical records. The next real Snapshot is a new historical record and must follow the standard ZIP intake pipeline.
+
+## Final validation checkpoint
+
+Status: PASS_WITH_REVIEW_CASES.
+
+- Final Product HEAD: 58ff6d6d66c048b97cdd11f57bcc51d108ea2a94
+- Canonical SHA: 257f1d7b0e4372bf6d95c237ce4016d3c87bf7e1
+- CI Run 212 / 36423268209: SUCCESS
+- GitHub Pages Run 54 / 36423268199: SUCCESS
+
+The earlier failed validation runs were intermediate diagnosis/fix steps and are superseded by the final successful checkpoint above.
+
+S14 remains 50/50. The Read Model contains 92 derived S14 deltas, 4 observed additions, and 2 observed departures. Canonical identity and membership state remain unchanged.
