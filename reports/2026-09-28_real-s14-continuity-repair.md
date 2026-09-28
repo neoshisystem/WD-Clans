@@ -62,3 +62,25 @@ Status: PASS_WITH_REVIEW_CASES.
 The earlier failed validation runs were intermediate diagnosis/fix steps and are superseded by the final successful checkpoint above.
 
 S14 remains 50/50. The Read Model contains 92 derived S14 deltas, 4 observed additions, and 2 observed departures. Canonical identity and membership state remain unchanged.
+
+## Documentation Sync — 2026-09-28
+
+Final synchronization completed after the S14 continuity repair validation.
+
+- S13 → S14 continuity is complete and recorded.
+- 46 matched observation pairs.
+- 4 observed additions.
+- 2 observed departures.
+- 92 derived Read-Model delta records.
+- Valid derived Total Kills increase: +145,391.
+- Valid derived Current League Clan Medal increase: +9,207,907.
+- Identity remains UNRESOLVED.
+- 0 Global Player IDs.
+- Canonical Membership Events: 0.
+- Canonical Delta Results: 0.
+
+**Critical distinction:** `Canonical Delta Results = 0`; `Derived Read-Model Delta Records = 92`. The derived records are not Canonical state and must never be presented as Canonical Delta Results.
+
+Status: **PASS_WITH_REVIEW_CASES**
+
+Successor: CR-02 starts from S14 as the latest valid real Snapshot. S13 and S14 must not be re-ingested or overwritten.
