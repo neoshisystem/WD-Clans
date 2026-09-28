@@ -13,7 +13,7 @@
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const display = (value) => value === null || value === undefined || value === '' ? '—' : String(value);
   const number = (value) => value === null || value === undefined || value === '' ? null : Number(value);
-  // Single presentation formatter for user-facing quantities; identifiers/dates use their own renderers.
+  // Single presentation formatter for all user-facing quantities; identifiers/dates use their own renderers.
   const formatNumber = (value) => {
     if (value === null || value === undefined || value === '') return '—';
     const n = Number(value);
