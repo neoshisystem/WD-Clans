@@ -222,3 +222,60 @@ Classification: FACT / HANDOFF
 
 ### Exact Next Action — CR-02
 Receive the next real Persian UNITY Snapshot ZIP. Re-check live main; hash and build deterministic inventory; confirm the actual Snapshot identifier and sequence from Authority/context; compare with S13; preserve unresolved identity unless confirmation prerequisites are met; derive only contract-supported membership/deltas; regenerate Static; validate; report and update the next handoff. Do not re-ingest S13. Do not assume the next identifier is S14.
+
+## FINAL CR-01 → CR-02 HANDOFF — VERIFIED CHECKPOINT — 2026-09-28
+
+Classification: FACT / HANDOFF.
+
+### Final live Product
+- Repository: neoshisystem/WD-Clans
+- Branch: main
+- HEAD: 58ff6d6d66c048b97cdd11f57bcc51d108ea2a94
+- Tree: 6e9a2f9af061032b2f585beff9723621715c9828
+- Canonical SHA: 257f1d7b0e4372bf6d95c237ce4016d3c87bf7e1
+
+### Persian UNITY continuity checkpoint
+- S13: 48/50, official 2026-09-26T19:30:00Z.
+- S14: 50/50, official 2026-09-27T19:30:00Z.
+- S14 ZIP SHA-256: 9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d
+- S14 inventory: 58 files = 8 Ranking + 50 Profile.
+- S14 inventory hash: cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be
+
+### Automatic S13 → S14 result
+- 46 matched observation pairs.
+- 4 observed additions: حسن Stage 10, ADNAN, saied, Kian_Tak.
+- 2 observed departures: mohammad, amin.
+- Net roster change: +2, matching 48 → 50.
+- 46 Total Kills deltas.
+- 46 Current League Clan Medal deltas.
+- Valid aggregate Total Kills increase: +145,391.
+- Valid aggregate Current League Clan Medal increase: +9,207,907.
+
+### Duplicate حسن
+- S13 Rank 38 / Stage 48 → S14 Rank 38 / Stage 48: continuity match.
+- S14 Rank 47 / Stage 10: separate observed addition.
+- No Global Player ID was fabricated or confirmed.
+
+### Architecture boundary
+- Canonical S13/S14 data was not rewritten by the continuity repair.
+- Canonical membership_events, membership_episodes, global_player_identities and canonical delta_results remain untouched.
+- snapshot_membership_changes and snapshot_delta_results are Projection/Read Model derived properties.
+- Browser and Archive consume the derived Read Model; no manual per-user Delta entry exists.
+
+### Reports and permanent documents
+- reports/2026-09-26_real-s13-ingestion.md
+- reports/2026-09-28_real-s14-ingestion.md
+- reports/2026-09-28_real-s14-continuity-repair.md
+- docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md
+- docs/UCS_AGENT_OPERATIONS.md
+- docs/UCS_SCHEMA_FILE_MAP_V0_1.md
+- docs/CR01_COMPLETION_MARKER.md
+- AGENTS.md
+
+### Validation
+- CI Run 212 / 36423268209: SUCCESS.
+- GitHub Pages Run 54 / 36423268199: SUCCESS.
+- Generated static data is synchronized with Canonical projection.
+
+### Exact next point
+CR-02 starts from this checkpoint. Read AGENTS.md, this shift report, the permanent operations/schema/intake documents and the S14 continuity report. Re-check live main before the next mutation. Do not re-ingest or overwrite S13/S14.
