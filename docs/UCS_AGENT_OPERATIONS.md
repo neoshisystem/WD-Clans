@@ -188,3 +188,13 @@ Persian UNITY S14 is now the latest real Snapshot:
 - Report: reports/2026-09-28_real-s14-ingestion.md
 
 S14 source fields include Last Online, lifetime Gold/Silver/Bronze, Total Kills, Profile Total Clan Medals and weapon levels. Do not infer identity, JOIN/LEAVE, or Delta merely from continuity with S13.
+
+
+## FINAL S14 DEPLOYMENT CHECKPOINT — 2026-09-28
+- Product HEAD: `96809119417aaf0527d4de6ab87524759a93ebef`
+- Persian UNITY S14: 50/50, 50 UNRESOLVED, 50 Resolution Cases, 0 Global IDs, 0 Membership Episodes/Events, 0 Delta Results.
+- Product CI Run `36415948600`: SUCCESS.
+- Pages Run `36415948559`: SUCCESS.
+- S14 report: `reports/2026-09-28_real-s14-ingestion.md`.
+- S14 raw checkpoint: `data/real-snapshots/persian-unity/S14.raw.json`.
+- Next real Snapshot must be new; do not re-ingest S13/S14 or silently resolve identity.

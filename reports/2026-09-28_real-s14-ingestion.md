@@ -51,3 +51,14 @@ S13 had 48/50; S14 has 50/50. S14 contains new/changed display-name cases and du
 ## Outcome
 **PASS_WITH_REVIEW_CASES**
 Evidence-backed S14 ingestion is complete. Identity and membership remain explicitly unresolved. S14 is publishable only after generated Static Data, validation, CI and Pages deployment pass.
+
+
+## Final Validation — 2026-09-28
+- Static bundle regenerated from Canonical in commit `230419e120cc1931b3419802fa1d0213ebcd1608`.
+- Validation test correction completed in commit `1531d76d545f922e3e711ca6d0df8282c0f20254`.
+- Final site-affecting checkpoint: `96809119417aaf0527d4de6ab87524759a93ebef`.
+- Product CI Run `36415948600`: **SUCCESS**.
+- GitHub Pages Run `36415948559`: **SUCCESS**.
+- S14 is now included in the published Static Read Model with 50 members.
+- Source-native Last Online and lifetime Gold/Silver/Bronze, Total Kills, Clan Medals and Weapons are present in the projected S14 member records.
+- No S14 Delta Results or Membership Events/Episodes were created.

@@ -353,3 +353,26 @@ Global/Admin remains the only cross-Clan switcher.
 
 ## Next action for successor
 After CI/Pages validation of this handoff, the next conversation should start from the live HEAD and treat S13 + S14 as historical evidence. The next real Snapshot must be ingested as a new record; identity and membership remain unresolved unless Authority supplies a valid decision.
+
+
+## FINAL LIVE S14 VALIDATION — 2026-09-28
+Classification: FACT / HANDOFF
+
+### Live Product
+- Current HEAD: `96809119417aaf0527d4de6ab87524759a93ebef`
+- Static regeneration: `230419e120cc1931b3419802fa1d0213ebcd1608`
+- Validation/test correction: `1531d76d545f922e3e711ca6d0df8282c0f20254`
+- Product CI Run `36415948600`: SUCCESS
+- Pages Run `36415948559`: SUCCESS
+
+### S14 publication
+- Persian UNITY / S14 / 50 of 50
+- Official: 2026-09-27T19:30:00Z
+- Evidence: EV-REAL-PERSIAN-UNITY-S14
+- ZIP SHA-256: `9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d`
+- Inventory hash: `cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be`
+- 50 UNRESOLVED / 0 Global IDs / 0 Membership Episodes/Events / 0 Delta Results
+- Static Read Model includes S14 with 50 projected members.
+
+### Final next action
+The next conversation should begin by reading the mandatory Product docs and this handoff, then re-check Product + Memory live state. S13 and S14 must not be re-ingested. The next real ZIP becomes the next historical Snapshot and must follow the same ZIP → evidence → extraction → Canonical → Projection → Static → validation → report pipeline.
