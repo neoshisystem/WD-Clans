@@ -339,7 +339,7 @@ test('Derived Snapshot continuity is exposed to the browser without weakening Ca
  for (const token of ['snapshot_delta_results','snapshot_membership_changes','allDeltaResults']) {
    assert.ok(app.includes(token),'missing derived continuity integration: '+token);
  }
- assert.match(app,/ورود و خروج از رویدادهای Membership ثبت‌شده و تغییرات مشاهده‌ای مشتق‌شده/);
+ assert.match(app,/ورودی و خروجی اعضا از رویدادهای Membership ثبت‌شده و مقایسهٔ خودکار/);
 });
 
 test('Real Persian UNITY S14 continuity regression is represented in generated static data', () => {
