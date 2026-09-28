@@ -262,7 +262,7 @@
         group('🔴 خروج / حذف', changes.left, 'membership-change-group--left') +
         group('◻ تغییر نامشخص', changes.other, 'membership-change-group--other')
       : '<div class="membership-change-empty">' + (previousSnapshot ? 'تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.' : 'این Snapshot ثبت اولیهٔ این Clan است و مبنای مقایسهٔ قبلی ندارد.') + '</div>';
-    return '<section class="membership-changes panel"><div class="section-head"><div><span class="badge">عضویت</span><h2>تغییرات اعضا</h2></div><span class="count">' + formatNumber(total) + ' تغییر</span></div><p class="membership-change-note">ورود و خروج از رویدادهای Membership ثبت‌شده و تغییرات مشاهده‌ای مشتق‌شده از مقایسه Snapshotهای متوالی همین Clan نمایش داده می‌شود.</p><div class="membership-change-grid">' + body + '</div></section>';
+    return '<section class="membership-changes panel"><div class="section-head"><div><span class="badge">عضویت</span><h2>تغییرات اعضا</h2></div><span class="count">' + formatNumber(total) + ' تغییر</span></div><p class="membership-change-note">ورودی و خروجی اعضا از رویدادهای Membership ثبت‌شده و مقایسهٔ خودکار Snapshotهای متوالی همین Clan نمایش داده می‌شود.</p><div class="membership-change-grid">' + body + '</div></section>';
   }
 
   function leaderboard() {
