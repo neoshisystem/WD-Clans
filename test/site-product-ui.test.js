@@ -242,6 +242,20 @@ test('Common quantity formatter uses en-US thousands separators and preserves id
  }));
 });
 
+test('Numeric stat helpers format lifetime medals, weapon levels and visible metric counts', () => {
+ const app = read('site/app.js');
+ assert.match(app,/formatNumber\(medals\.gold\)/);
+ assert.match(app,/formatNumber\(medals\.silver\)/);
+ assert.match(app,/formatNumber\(medals\.bronze\)/);
+ assert.match(app,/formatNumber\(weapons\['25mm'\]\)/);
+ assert.match(app,/formatNumber\(weapons\.hydra\)/);
+ assert.match(app,/formatNumber\(weapons\.hellfire\)/);
+ assert.match(app,/formatNumber\(count\) \+ ' رکورد معتبر'/);
+ assert.match(app,/formatNumber\(performance\.currentLeagueMedalCount\)/);
+ assert.match(app,/formatNumber\(performance\.currentLeagueKillCount\)/);
+ assert.match(app,/formatNumber\(snapshot\.member_count\)/);
+ assert.match(app,/formatNumber\(snapshot\.capacity\)/);
+});
 test('All primary UI surfaces route quantitative values through the common formatter', () => {
  const app = read('site/app.js');
  for (const token of [
@@ -262,6 +276,18 @@ test('All primary UI surfaces route quantitative values through the common forma
  assert.match(app,/function membershipHistory\(\)[\s\S]*formatNumber/);
 });
 
+test('Technical identifiers remain presentation-opaque while quantities are formatted', () => {
+ const app = read('site/app.js');
+ for (const token of [
+   "esc(activeSnapshot.snapshot_id)",
+   "esc(snapshot.snapshot_id)",
+   "encodeURIComponent(activeClanId)",
+   "encodeURIComponent(member.observation_id)",
+   "esc(globalId || latest.observation_id)"
+ ]) assert.ok(app.includes(token), 'identifier handling missing: ' + token);
+ assert.doesNotMatch(app,/formatNumber\(activeSnapshot\.snapshot_id\)/);
+ assert.doesNotMatch(app,/formatNumber\(snapshot\.snapshot_id\)/);
+});
 test('Common Snapshot formatter renders Persian calendar + Iran local time from authoritative UTC', () => {
  const vm = require('node:vm');
  const app = read('site/app.js');
