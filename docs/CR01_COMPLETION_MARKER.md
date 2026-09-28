@@ -118,3 +118,24 @@ Direct live-browser screenshot verification remains unavailable through the curr
 Re-check live Product + Memory; receive the next real Snapshot ZIP; hash/inventory; confirm actual Snapshot identifier/sequence from Authority/context; compare against S13; preserve unresolved identity where required; derive only contract-supported Membership/Delta; regenerate Static Data; validate; CI/Pages; report and update handoff.
 
 Do not re-ingest S13. Do not assume S14.
+
+## VERIFIED FINAL COMPLETION — 2026-09-28
+
+Status: PASS_WITH_REVIEW_CASES.
+
+Final Product HEAD: 58ff6d6d66c048b97cdd11f57bcc51d108ea2a94
+Canonical SHA: 257f1d7b0e4372bf6d95c237ce4016d3c87bf7e1
+
+S14 continuity:
+- 46 matched observation pairs
+- 4 observed additions
+- 2 observed departures
+- 92 derived delta records
+- +145,391 valid Total Kills increase
+- +9,207,907 valid Current League Clan Medal increase
+
+CI Run 212 / 36423268209: SUCCESS.
+GitHub Pages Run 54 / 36423268199: SUCCESS.
+
+Detailed report: reports/2026-09-28_real-s14-continuity-repair.md
+Successor: CR-02.
