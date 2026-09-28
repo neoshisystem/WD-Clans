@@ -219,6 +219,49 @@ test('Player Profile surfaces supported period and cumulative performance withou
  }
 });
 
+test('Common quantity formatter uses en-US thousands separators and preserves identifiers/missing values', () => {
+ const vm = require('node:vm');
+ const app = read('site/app.js');
+ const start = app.indexOf('const formatNumber =');
+ const end = app.indexOf('const iranSnapshotDateTimeFormatter =', start);
+ assert.ok(start >= 0 && end > start);
+ const snippet = app.slice(start, end);
+ const context = { result: null };
+ vm.createContext(context);
+ vm.runInContext(snippet + "result = {plain: formatNumber('1621864'), kills: formatNumber('5609361'), medals: formatNumber('25300553'), positive: signed(1191), negative: signed(-1250), zero: signed(0), missing: formatNumber(null), snapshot: formatNumber('S13'), globalId: formatNumber('GP-001')};", context);
+ assert.deepEqual(context.result, {
+   plain: '1,621,864',
+   kills: '5,609,361',
+   medals: '25,300,553',
+   positive: '+1,191',
+   negative: '-1,250',
+   zero: '0',
+   missing: '—',
+   snapshot: 'S13',
+   globalId: 'GP-001'
+ });
+});
+
+test('All primary UI surfaces route quantitative values through the common formatter', () => {
+ const app = read('site/app.js');
+ for (const token of [
+   "formatNumber(model.clans.length)",
+   "formatNumber(activeSnapshot.member_count)",
+   "formatNumber(rows.length)",
+   "formatNumber(snapshot.member_count)",
+   "formatNumber(list.length)",
+   "formatNumber(scopedObs.length)",
+   "formatNumber(memberships.length)",
+   "formatNumber(events.length)"
+ ]) assert.ok(app.includes(token), 'missing formatted quantity: ' + token);
+ assert.match(app,/function globalDashboard\(\)[\s\S]*formatNumber/);
+ assert.match(app,/function leaderboard\(\)[\s\S]*formatNumber/);
+ assert.match(app,/function archive\(\)[\s\S]*formatNumber/);
+ assert.match(app,/function playerDirectory\(\)[\s\S]*formatNumber/);
+ assert.match(app,/function playerProfile\(\)[\s\S]*formatNumber/);
+ assert.match(app,/function membershipHistory\(\)[\s\S]*formatNumber/);
+});
+
 test('Common Snapshot formatter renders Persian calendar + Iran local time from authoritative UTC', () => {
  const vm = require('node:vm');
  const app = read('site/app.js');

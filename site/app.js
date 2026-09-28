@@ -91,7 +91,7 @@
 
   function header(title, kicker, lead = '') {
     const meta = page === 'global-dashboard' && !activeClan
-      ? '<span>حالت: <b>Global / Admin</b></span><span>کلن‌ها: <b>' + model.clans.length + '</b></span>'
+      ? '<span>حالت: <b>Global / Admin</b></span><span>کلن‌ها: <b>' + formatNumber(model.clans.length) + '</b></span>'
       : (activeClan ? '<span>کلن: <b>' + esc(activeClan.display_name || activeClan.clan_id) + '</b></span>' : '<span>کلنی ثبت نشده است.</span>') +
         (activeSnapshot ? '<span>Snapshot: <b>' + esc(activeSnapshot.snapshot_id) + '</b></span><span>زمان: <b>' + esc(formatSnapshotDateTime(activeSnapshot.official_timestamp_utc)) + '</b></span>' : '');
     const clanIdentity = activeClan
@@ -108,10 +108,10 @@
     const uniqueObservedPlayers = new Set(clans.flatMap((clan) => clan.observed_global_player_ids || []));
     root.innerHTML = header('داشبورد مرکزی سیستم Unified Clan System','UCS · GLOBAL / ADMIN DASHBOARD','نمای واحد مدیریت برای مشاهده و ورود سریع به تمام Clanها. هر Clan با Context مستقل خودش در همین Viewer قابل مشاهده است و اضافه‌شدن Clan جدید نیازمند تغییر UI نیست.') +
       '<section class="panel"><div class="kpi-row dashboard-kpi">' +
-      '<div><span>تعداد کلن‌ها</span><b>' + clans.length + '</b></div>' +
-      '<div><span>Snapshotهای ثبت‌شده</span><b>' + model.snapshots.length + '</b></div>' +
-      '<div><span>Global Identityهای تاییدشده</span><b>' + uniqueObservedPlayers.size + '</b></div>' +
-      '<div><span>اعضای آخرین Snapshotها</span><b>' + clans.reduce((sum,clan) => sum + (latestSnapshotFor(clan)?.member_count || 0),0) + '</b></div>' +
+      '<div><span>تعداد کلن‌ها</span><b>' + formatNumber(clans.length) + '</b></div>' +
+      '<div><span>Snapshotهای ثبت‌شده</span><b>' + formatNumber(model.snapshots.length) + '</b></div>' +
+      '<div><span>Global Identityهای تاییدشده</span><b>' + formatNumber(uniqueObservedPlayers.size) + '</b></div>' +
+      '<div><span>اعضای آخرین Snapshotها</span><b>' + formatNumber(clans.reduce((sum,clan) => sum + (latestSnapshotFor(clan)?.member_count || 0),0)) + '</b></div>' +
       '</div></section>' +
       '<section class="section-block"><div class="section-head"><div><span class="badge">CLAN DIRECTORY</span><h2>کلن‌ها</h2></div><span class="count">' + clans.length + ' Clan</span></div>' +
       '<div class="dashboard-grid">' + clans.map((clan) => {
@@ -330,7 +330,7 @@
           '</div></article>';
       }).join('');
 
-      root.querySelector('#result-count').textContent = rows.length + ' نتیجه';
+      root.querySelector('#result-count').textContent = formatNumber(rows.length) + ' نتیجه';
       root.querySelector('#results').innerHTML = mode === 'summary'
         ? '<div class="table-wrap"><table class="summary-table"><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','بازیکن') + '</th><th>' + sortButton('deltaMedals','Δ مدال') + '</th><th>' + sortButton('deltaKills','Δ کیل') + '</th><th>' + sortButton('league','مدال کلن') + '</th><th>' + sortButton('kills','جمع کیل') + '</th></tr></thead><tbody>' + summary + '</tbody></table></div>'
         : mode === 'graphic'
@@ -375,7 +375,7 @@
       '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(s.official_timestamp_utc)) + '</option>').join('') + '</select></label>' +
       '<label class="field search-field"><span>جستجو</span><input id="search-input" type="search" placeholder="نام بازیکن، سمت یا مقدار..."></label>' +
       '<div class="view-switch"><button data-mode="simple">نمایش ساده</button><button data-mode="summary">نمایش خلاصه</button><button data-mode="graphic">نمایش گرافیکی</button></div>' +
-      '</div><div class="kpi-row"><div><span>اعضا</span><b>' + activeSnapshot.member_count + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + (bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>' + compactPerformanceHtml(activeSnapshot.snapshot_id) + membershipChangesHtml(activeSnapshot);
+      </div><div class="kpi-row"><div><span>اعضا</span><b>' + formatNumber(activeSnapshot.member_count) + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + formatNumber(bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>' + compactPerformanceHtml(activeSnapshot.snapshot_id) + membershipChangesHtml(activeSnapshot);
     root.querySelector('#snapshot-select').onchange = (event) => {
       const next = new URL(location.href);
       next.searchParams.set('snapshot', event.target.value);
@@ -448,7 +448,7 @@
         const text = [entry.global?.display_name, entry.global?.global_player_id, entry.observation?.display_name, entry.observation?.observation_id].join(' ').toLocaleLowerCase('fa');
         return text.includes(q);
       });
-      root.querySelector('#player-count').textContent = list.length + ' نتیجه';
+      root.querySelector('#player-count').textContent = formatNumber(list.length) + ' نتیجه';
       root.querySelector('#player-grid').innerHTML = list.map((entry) => {
         const playerId = entry.global?.global_player_id;
         const href = playerId
