@@ -32,3 +32,15 @@ Classification: FACT / HANDOFF
 - CI Run 36356953627 / Job 108726479423: SUCCESS.
 - Pages Run 36356946098: SUCCESS for the latest site-affecting commit in this hardening chain.
 - Exact next action: CR-02 receives the next real Persian UNITY Snapshot ZIP; re-check live main, hash/inventory, confirm actual Snapshot identifier/sequence, compare to S13, preserve unresolved identity and derive only contract-supported membership/deltas. Do not re-ingest S13 or assume S14.
+
+## S14 continuity repair — 2026-09-28
+
+Second-or-later Snapshot continuity is derived in Projection/Read Model only.
+
+For adjacent same-Clan Snapshots, the matcher uses exact display name plus Stage/weapon fingerprint scoring. A unique score >= 5 produces continuity; duplicate-name ties remain unmatched.
+
+S14 result: 46 matched, 4 observed additions, 2 observed departures, 92 derived deltas. Valid aggregate deltas: +145,391 Kills and +9,207,907 Current League Clan Medals.
+
+Two حسن records are separated by fingerprint: S13 Stage 48 -> S14 Stage 48 is continuity; S14 Stage 10 is a separate observed addition.
+
+Report: reports/2026-09-28_real-s14-continuity-repair.md
