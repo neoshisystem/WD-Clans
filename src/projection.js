@@ -640,8 +640,8 @@ class ProjectionEngine {
       player_history: this.projectPlayerHistory(state),
       activity: this.projectActivity(state),
       delta_results: this.projectDeltaResults(state),
-      snapshot_delta_results: this.projectSnapshotDeltaResults(state),
-      snapshot_membership_changes: this.projectSnapshotMembershipChanges(state)
+      snapshot_delta_results: projectSnapshotDeltaResults(state),
+      snapshot_membership_changes: projectSnapshotMembershipChanges(state)
     };
   }
 
