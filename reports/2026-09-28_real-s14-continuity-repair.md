@@ -1,7 +1,7 @@
 # Real Snapshot S14 Continuity Repair Report — Persian UNITY
 
 ## Classification
-FACT / PASS_WITH_REVIEW_CASES pending final CI and Pages validation.
+FACT / PASS_WITH_REVIEW_CASES.
 
 ## Scope
 This repair adds deterministic adjacent-Snapshot observation continuity and supported Snapshot deltas to the Projection/Read Model. Canonical S13/S14 records remain unchanged.
