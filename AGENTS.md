@@ -1,6 +1,6 @@
 # UCS Agent Entry Point
 
-Read docs/UCS_AGENT_OPERATIONS.md before any real-data mutation. For continuity, read docs/UCS_SHIFT_REPORT_CR-01_TO_CR-02_2026-09-28.md before taking over from CR-01.
+Read docs/UCS_AGENT_OPERATIONS.md before any real-data mutation. Read docs/UCS_DOCUMENTATION_CONTROL_V0_1.md before any material task or checkpoint. For continuity, read docs/UCS_SHIFT_REPORT_CR-01_TO-CR-02_2026-09-28.md before taking over from CR-01.
 
 Critical operating rules:
 - Live main is current truth; re-check HEAD immediately before mutation.
@@ -12,10 +12,23 @@ Critical operating rules:
 - Real Clan histories remain isolated.
 - For a first observed Snapshot, do not infer JOIN/LEAVE/TRANSFER.
 - Do not hand-edit generated static artifacts without matching Canonical regeneration.
+- A material task is not checkpoint-complete until the applicable documentation owners are reconciled and the documentation checks pass.
+- Before a material task, follow docs/UCS_DOCUMENTATION_CONTROL_V0_1.md for required reads and updates.
 
 - Read docs/UCS_SCHEMA_FILE_MAP_V0_1.md and docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md before processing a real Snapshot.
 - Preserve source-native Last Online in `last_online_display`; do not replace relative values with invented UTC.
 - Lifetime medal counts (gold/silver/bronze) are evidence-backed observation fields and must remain visible in the Read Model/UI when observed.
+
+## Documentation / Continuity Control
+
+The documentation synchronization contract is:
+`docs/UCS_DOCUMENTATION_CONTROL_V0_1.md` on Product and `projects/UCS/DOCUMENTATION_CONTROL.md` on Memory-ai.
+
+At checkpoint closure, update all applicable status-bearing owners: the development/review report, `CURRENT_STATE.md`, `NEXT_ACTION.md`, `SHIFT_REPORT.md`, and `CHECKPOINT.md`; update Timeline/Index when their governed facts or discoverability actually change.
+
+Do not rewrite historical reports or point-in-time handoffs merely to make them look current.
+
+Product CI must run `npm run check:documentation`. The cross-repository checker in Memory-ai is the authoritative synchronization check for the two-repository checkpoint boundary.
 
 ## CR-01 FINAL UX/UI / GRID HARDENING — 2026-09-28
 Classification: FACT / HANDOFF
@@ -53,4 +66,4 @@ GitHub Pages Run 54 / 36423268199: SUCCESS.
 
 S14 Persian UNITY continuity is implemented as derived Read Model data: 46 matches, 4 observed additions, 2 observed departures, 92 supported deltas.
 
-Read reports/2026-09-28_real-s14-continuity-repair.md and docs/UCS_SHIFT_REPORT_CR-01_TO_CR-02_2026-09-28.md for the exact successor checkpoint.
+Read reports/2026-09-28_real-s14-ingestion.md, reports/2026-09-28_real-s14-continuity-repair.md and docs/UCS_SHIFT_REPORT_CR-01_TO-CR-02_2026-09-28.md for the exact successor checkpoint.
