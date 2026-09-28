@@ -142,6 +142,29 @@
       },
       "received_at_utc": null,
       "source_location": "user-upload:S14.zip"
+    },
+    {
+      "artifact_type": "real-snapshot-zip",
+      "content_hash": {
+        "algorithm": "sha256",
+        "value": "eb652100c9e00a8882bbf4598b739c619bcdfb4672632d1a3c476cb720b678c5"
+      },
+      "evidence_artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+      "immutable": true,
+      "metadata": {
+        "clan_id": "CLAN-PERSIAN-UNITY",
+        "duplicate_ranking_screenshots": 0,
+        "inventory_count": 58,
+        "inventory_hash": "5e8d79979fc7656c259ae65b919042cdd18d378a29b5c796f89d94fd697119bd",
+        "inventory_hash_method": "SHA-256 of UTF-8 newline-joined sorted relative file paths",
+        "official_timestamp_utc": "2026-09-28T19:30:00.000Z",
+        "profile_cards": 50,
+        "ranking_screenshots": 8,
+        "snapshot_id": "S15",
+        "roster_count": 50
+      },
+      "received_at_utc": null,
+      "source_location": "user-upload:S15.zip"
     }
   ],
   "global_player_identities": [
@@ -10607,6 +10630,5256 @@
         "hellfire": 293,
         "hydra": 62
       }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 488220,
+      "display_name": "Cpt. Of Persia",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R001",
+      "profile_total_clan_medal_count": 488220,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 1,
+      "role": "Leader & MVP",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R01",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R01",
+      "stage": 50,
+      "total_kills": 342360,
+      "weapons": {
+        "25mm": 1062,
+        "hellfire": 357,
+        "hydra": 94
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 480136,
+      "display_name": "ehsan",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "18m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R002",
+      "profile_total_clan_medal_count": 480136,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 2,
+      "role": "Co-Leader",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R02",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R02",
+      "stage": 69,
+      "total_kills": 297192,
+      "weapons": {
+        "25mm": 1309,
+        "hellfire": 454,
+        "hydra": 72
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 355987,
+      "display_name": "Alini",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "4m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 2,
+        "silver": 5
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R003",
+      "profile_total_clan_medal_count": 355987,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 3,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R03",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R03",
+      "stage": 53,
+      "total_kills": 398514,
+      "weapons": {
+        "25mm": 1100,
+        "hellfire": 316,
+        "hydra": 57
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 338501,
+      "display_name": "kaveh",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R004",
+      "profile_total_clan_medal_count": 338501,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 4,
+      "role": "Elder",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R04",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R04",
+      "stage": 46,
+      "total_kills": 202102,
+      "weapons": {
+        "25mm": 1061,
+        "hellfire": 336,
+        "hydra": 90
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 329191,
+      "display_name": "Commander 🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "4m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R005",
+      "profile_total_clan_medal_count": 329191,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 5,
+      "role": "Elder",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R05",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R05",
+      "stage": 58,
+      "total_kills": 286129,
+      "weapons": {
+        "25mm": 1079,
+        "hellfire": 265,
+        "hydra": 68
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 297647,
+      "display_name": "paradise",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "16m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R006",
+      "profile_total_clan_medal_count": 297647,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 6,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R06",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R06",
+      "stage": 29,
+      "total_kills": 176351,
+      "weapons": {
+        "25mm": 686,
+        "hellfire": 196,
+        "hydra": 62
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 286994,
+      "display_name": "Eren",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R007",
+      "profile_total_clan_medal_count": 286994,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 7,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R07",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R07",
+      "stage": 27,
+      "total_kills": 189730,
+      "weapons": {
+        "25mm": 628,
+        "hellfire": 258,
+        "hydra": 63
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 259699,
+      "display_name": "ALI 🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R008",
+      "profile_total_clan_medal_count": 259699,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 8,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R08",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R08",
+      "stage": 46,
+      "total_kills": 117599,
+      "weapons": {
+        "25mm": 1140,
+        "hellfire": 277,
+        "hydra": 64
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 215178,
+      "display_name": "PERSIAN TIGER 🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "3h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R009",
+      "profile_total_clan_medal_count": 215178,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 9,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R09",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R09",
+      "stage": 24,
+      "total_kills": 98808,
+      "weapons": {
+        "25mm": 522,
+        "hellfire": 232,
+        "hydra": 49
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 211485,
+      "display_name": "🇮🇷 F 35 🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "21m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 4,
+        "silver": 6
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R010",
+      "profile_total_clan_medal_count": 211485,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 10,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R10",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R10",
+      "stage": 57,
+      "total_kills": 266181,
+      "weapons": {
+        "25mm": 1068,
+        "hellfire": 304,
+        "hydra": 54
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 210352,
+      "display_name": "Ardalan",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "3m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R011",
+      "profile_total_clan_medal_count": 210352,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 11,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R11",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R11",
+      "stage": 38,
+      "total_kills": 160072,
+      "weapons": {
+        "25mm": 842,
+        "hellfire": 216,
+        "hydra": 69
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 205716,
+      "display_name": "Liam kouhkan",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "15m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R012",
+      "profile_total_clan_medal_count": 205716,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 12,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R12",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R12",
+      "stage": 28,
+      "total_kills": 172189,
+      "weapons": {
+        "25mm": 732,
+        "hellfire": 224,
+        "hydra": 89
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 197714,
+      "display_name": "NaViD",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "48m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R013",
+      "profile_total_clan_medal_count": 197714,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 13,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R13",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R13",
+      "stage": 49,
+      "total_kills": 181646,
+      "weapons": {
+        "25mm": 936,
+        "hellfire": 329,
+        "hydra": 63
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 194571,
+      "display_name": "behrang",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R014",
+      "profile_total_clan_medal_count": 194571,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 14,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R14",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R14",
+      "stage": 14,
+      "total_kills": 104651,
+      "weapons": {
+        "25mm": 352,
+        "hellfire": 144,
+        "hydra": 62
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 191066,
+      "display_name": "SORENA 🏹",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "7h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R015",
+      "profile_total_clan_medal_count": 191066,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 15,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R15",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R15",
+      "stage": 28,
+      "total_kills": 161228,
+      "weapons": {
+        "25mm": 950,
+        "hellfire": 275,
+        "hydra": 76
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 189679,
+      "display_name": "Worker Ant 🐜",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "19m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R016",
+      "profile_total_clan_medal_count": 189679,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 16,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R16",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R16",
+      "stage": 64,
+      "total_kills": 273064,
+      "weapons": {
+        "25mm": 1175,
+        "hellfire": 394,
+        "hydra": 86
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 188014,
+      "display_name": "Tjk001",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 1,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R017",
+      "profile_total_clan_medal_count": 188014,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 17,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R17",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R17",
+      "stage": 25,
+      "total_kills": 139280,
+      "weapons": {
+        "25mm": 466,
+        "hellfire": 247,
+        "hydra": 58
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 171190,
+      "display_name": "hissystem",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R018",
+      "profile_total_clan_medal_count": 171190,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 18,
+      "role": "Co-Leader",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R18",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R18",
+      "stage": 28,
+      "total_kills": 201082,
+      "weapons": {
+        "25mm": 591,
+        "hellfire": 253,
+        "hydra": 58
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 161486,
+      "display_name": "ایرانی باوقار",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R019",
+      "profile_total_clan_medal_count": 161486,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 19,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R19",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R19",
+      "stage": 28,
+      "total_kills": 145058,
+      "weapons": {
+        "25mm": 524,
+        "hellfire": 203,
+        "hydra": 30
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 159305,
+      "display_name": "I.Man",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 0,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R020",
+      "profile_total_clan_medal_count": 159305,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 20,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R20",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R20",
+      "stage": 15,
+      "total_kills": 48413,
+      "weapons": {
+        "25mm": 300,
+        "hellfire": 135,
+        "hydra": 30
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 155455,
+      "display_name": "hamed ir",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "17m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R021",
+      "profile_total_clan_medal_count": 155455,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 21,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R21",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R21",
+      "stage": 32,
+      "total_kills": 145755,
+      "weapons": {
+        "25mm": 724,
+        "hellfire": 190,
+        "hydra": 42
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 552172,
+      "display_name": "hadi,land",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R022",
+      "profile_total_clan_medal_count": 552172,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 22,
+      "role": "Member & MVP",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R22",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R22",
+      "stage": 39,
+      "total_kills": 145665,
+      "weapons": {
+        "25mm": 743,
+        "hellfire": 267,
+        "hydra": 38
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 154680,
+      "display_name": "RADMAN",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R023",
+      "profile_total_clan_medal_count": 154680,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 23,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R23",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R23",
+      "stage": 50,
+      "total_kills": 228843,
+      "weapons": {
+        "25mm": 1110,
+        "hellfire": 389,
+        "hydra": 82
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 140741,
+      "display_name": "Dariush",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R024",
+      "profile_total_clan_medal_count": 140741,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 24,
+      "role": "Elder",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R24",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R24",
+      "stage": 34,
+      "total_kills": 145279,
+      "weapons": {
+        "25mm": 691,
+        "hellfire": 269,
+        "hydra": 53
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 138307,
+      "display_name": "boz gurd",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "16m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R025",
+      "profile_total_clan_medal_count": 138307,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 25,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R25",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R25",
+      "stage": 29,
+      "total_kills": 112009,
+      "weapons": {
+        "25mm": 650,
+        "hellfire": 260,
+        "hydra": 40
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 133953,
+      "display_name": "ایران",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "21m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R026",
+      "profile_total_clan_medal_count": 133953,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 26,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R26",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R26",
+      "stage": 38,
+      "total_kills": 97970,
+      "weapons": {
+        "25mm": 706,
+        "hellfire": 181,
+        "hydra": 60
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 131202,
+      "display_name": "H03EIN",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "5h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R027",
+      "profile_total_clan_medal_count": 131202,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 27,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R27",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R27",
+      "stage": 39,
+      "total_kills": 109472,
+      "weapons": {
+        "25mm": 729,
+        "hellfire": 348,
+        "hydra": 52
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 122360,
+      "display_name": "Harpy☁️",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 0,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R028",
+      "profile_total_clan_medal_count": 122360,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 28,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R28",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R28",
+      "stage": 29,
+      "total_kills": 113155,
+      "weapons": {
+        "25mm": 627,
+        "hellfire": 216,
+        "hydra": 40
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 113266,
+      "display_name": "Amirhoseinifpv",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "4h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R029",
+      "profile_total_clan_medal_count": 113266,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 29,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R29",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R29",
+      "stage": 38,
+      "total_kills": 120399,
+      "weapons": {
+        "25mm": 759,
+        "hellfire": 385,
+        "hydra": 56
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 111454,
+      "display_name": "reza1009",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "13h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R030",
+      "profile_total_clan_medal_count": 111454,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 30,
+      "role": "Member & MVP",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R30",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R30",
+      "stage": 25,
+      "total_kills": 94485,
+      "weapons": {
+        "25mm": 525,
+        "hellfire": 164,
+        "hydra": 43
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 105090,
+      "display_name": "Mahbod_1",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "22h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R031",
+      "profile_total_clan_medal_count": 105090,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 31,
+      "role": "Elder",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R31",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R31",
+      "stage": 23,
+      "total_kills": 51334,
+      "weapons": {
+        "25mm": 496,
+        "hellfire": 120,
+        "hydra": 48
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 102143,
+      "display_name": "Mohsen.es68",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R032",
+      "profile_total_clan_medal_count": 102143,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 32,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R32",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R32",
+      "stage": 78,
+      "total_kills": 186186,
+      "weapons": {
+        "25mm": 1440,
+        "hellfire": 489,
+        "hydra": 55
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 101743,
+      "display_name": "سید حیدر ۳۱۳",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "4h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R033",
+      "profile_total_clan_medal_count": 101743,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 33,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R33",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R33",
+      "stage": 28,
+      "total_kills": 123046,
+      "weapons": {
+        "25mm": 617,
+        "hellfire": 240,
+        "hydra": 63
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 100236,
+      "display_name": "Hafezi",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "5h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R034",
+      "profile_total_clan_medal_count": 100236,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 34,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R34",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R34",
+      "stage": 40,
+      "total_kills": 109916,
+      "weapons": {
+        "25mm": 827,
+        "hellfire": 214,
+        "hydra": 70
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 95998,
+      "display_name": "Uk 🇮🇷💪",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "4h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R035",
+      "profile_total_clan_medal_count": 95998,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 35,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R35",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R35",
+      "stage": 41,
+      "total_kills": 133004,
+      "weapons": {
+        "25mm": 776,
+        "hellfire": 311,
+        "hydra": 57
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 84270,
+      "display_name": "hamid.iran🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R036",
+      "profile_total_clan_medal_count": 84270,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 36,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R36",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R36",
+      "stage": 14,
+      "total_kills": 51912,
+      "weapons": {
+        "25mm": 308,
+        "hellfire": 136,
+        "hydra": 32
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 74011,
+      "display_name": "Elvin",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "5m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R037",
+      "profile_total_clan_medal_count": 74011,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 37,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R37",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R37",
+      "stage": 26,
+      "total_kills": 101000,
+      "weapons": {
+        "25mm": 550,
+        "hellfire": 184,
+        "hydra": 27
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 73845,
+      "display_name": "حسین",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R038",
+      "profile_total_clan_medal_count": 73845,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 38,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R38",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R38",
+      "stage": 10,
+      "total_kills": 249964,
+      "weapons": {
+        "25mm": 263,
+        "hellfire": 84,
+        "hydra": 46
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 73440,
+      "display_name": "YALALINHO🔥",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "12m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R039",
+      "profile_total_clan_medal_count": 73440,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 39,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R39",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R39",
+      "stage": 54,
+      "total_kills": 155631,
+      "weapons": {
+        "25mm": 1001,
+        "hellfire": 211,
+        "hydra": 52
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 73212,
+      "display_name": "ErFaN.m279",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "14h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R040",
+      "profile_total_clan_medal_count": 73212,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 40,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R40",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R40",
+      "stage": 30,
+      "total_kills": 110664,
+      "weapons": {
+        "25mm": 589,
+        "hellfire": 276,
+        "hydra": 51
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 67810,
+      "display_name": "♕soltoon♕",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R041",
+      "profile_total_clan_medal_count": 67810,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 41,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R41",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R41",
+      "stage": 38,
+      "total_kills": 145252,
+      "weapons": {
+        "25mm": 1000,
+        "hellfire": 174,
+        "hydra": 53
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 67443,
+      "display_name": "Nouk",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R042",
+      "profile_total_clan_medal_count": 67443,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 42,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R42",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R42",
+      "stage": 37,
+      "total_kills": 109737,
+      "weapons": {
+        "25mm": 676,
+        "hellfire": 267,
+        "hydra": 81
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 66635,
+      "display_name": "حسن",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "11h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 6,
+        "silver": 7
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R043",
+      "profile_total_clan_medal_count": 66635,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 43,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R43",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R43",
+      "stage": 48,
+      "total_kills": 168420,
+      "weapons": {
+        "25mm": 886,
+        "hellfire": 320,
+        "hydra": 68
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 54869,
+      "display_name": "👑Dadashi👑",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "13h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R044",
+      "profile_total_clan_medal_count": 54869,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 44,
+      "role": "Elder",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R44",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R44",
+      "stage": 64,
+      "total_kills": 217535,
+      "weapons": {
+        "25mm": 1153,
+        "hellfire": 384,
+        "hydra": 99
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 52555,
+      "display_name": "Amin",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1d",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R045",
+      "profile_total_clan_medal_count": 52555,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 45,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R45",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R45",
+      "stage": 43,
+      "total_kills": 91155,
+      "weapons": {
+        "25mm": 762,
+        "hellfire": 307,
+        "hydra": 60
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 50662,
+      "display_name": "ali",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R046",
+      "profile_total_clan_medal_count": 50662,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 46,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R46",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R46",
+      "stage": 29,
+      "total_kills": 51030,
+      "weapons": {
+        "25mm": 542,
+        "hellfire": 173,
+        "hydra": 36
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 50171,
+      "display_name": "Armin Lukas",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "1h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R047",
+      "profile_total_clan_medal_count": 50171,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 47,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R47",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R47",
+      "stage": 39,
+      "total_kills": 153018,
+      "weapons": {
+        "25mm": 862,
+        "hellfire": 313,
+        "hydra": 57
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 27802,
+      "display_name": "saied 🥇 🇮🇷",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "32m",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R048",
+      "profile_total_clan_medal_count": 27802,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 48,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R48",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R48",
+      "stage": 22,
+      "total_kills": 73622,
+      "weapons": {
+        "25mm": 546,
+        "hellfire": 88,
+        "hydra": 29
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 22373,
+      "display_name": "ADNAN",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "2h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R049",
+      "profile_total_clan_medal_count": 22373,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 49,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R49",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R49",
+      "stage": 38,
+      "total_kills": 168069,
+      "weapons": {
+        "25mm": 658,
+        "hellfire": 433,
+        "hydra": 76
+      }
+    },
+    {
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "current_league_clan_medals": 4808,
+      "display_name": "Kian...Tak",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
+      "last_online_display": "5h",
+      "last_online_utc": null,
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 0,
+        "silver": 2
+      },
+      "membership_episode_id": null,
+      "observation_id": "S15::R050",
+      "profile_total_clan_medal_count": 4808,
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ],
+        "field_provenance": {
+          "current_league_clan_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "display_name": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "lifetime_medals": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "profile_total_clan_medal_count": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "rank": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "role": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "stage": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "total_kills": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "weapons": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_display": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "OBSERVED"
+          },
+          "last_online_utc": {
+            "evidence_refs": [
+              "EV-REAL-PERSIAN-UNITY-S15"
+            ],
+            "status": "UNKNOWN"
+          }
+        }
+      },
+      "rank": 50,
+      "role": "Member",
+      "snapshot_id": "S15",
+      "source_identity": {
+        "source_identity_id": "S15-R50",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP"
+      },
+      "source_member_key": "S15-R50",
+      "stage": 34,
+      "total_kills": 103254,
+      "weapons": {
+        "25mm": 582,
+        "hellfire": 293,
+        "hydra": 62
+      }
     }
   ],
   "resolution_cases": [
@@ -11883,6 +17156,656 @@
       "reason": "No explicit Global Player identity decision was supplied for S14.",
       "resolution_case_id": "RC-S14-R050",
       "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R001",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R01",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R002",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R02",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R003",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R03",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R004",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R04",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R005",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R05",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R006",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R06",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R007",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R07",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R008",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R08",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R009",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R09",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R010",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R10",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R011",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R11",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R012",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R12",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R013",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R13",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R014",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R14",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R015",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R15",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R016",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R16",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R017",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R17",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R018",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R18",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R019",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R19",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R020",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R20",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R021",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R21",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R022",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R22",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R023",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R23",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R024",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R24",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R025",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R25",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R026",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R26",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R027",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R27",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R028",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R28",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R029",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R29",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R030",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R30",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R031",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R31",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R032",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R32",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R033",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R33",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R034",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R34",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R035",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R35",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R036",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R36",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R037",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R37",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R038",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R38",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R039",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R39",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R040",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R40",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R041",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R41",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R042",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R42",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R043",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R43",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R044",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R44",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R045",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R45",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R046",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R46",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R047",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R47",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R048",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R48",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R049",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R49",
+      "status": "UNRESOLVED"
+    },
+    {
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
+      "evidence_refs": [
+        "EV-REAL-PERSIAN-UNITY-S15"
+      ],
+      "matched_global_player_id": null,
+      "observation_id": "S15::R050",
+      "process_ref": "real-snapshot-ingestion",
+      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "resolution_case_id": "RC-S15-R50",
+      "status": "UNRESOLVED"
     }
   ],
   "schema_version": "0.1",
@@ -11946,6 +17869,21 @@
       },
       "sequence": 2,
       "snapshot_id": "S14"
+    },
+    {
+      "capacity": 50,
+      "clan_id": "CLAN-PERSIAN-UNITY",
+      "clan_league_id": "CLANLEAGUE::CLAN-PERSIAN-UNITY::LEAGUE-WD-2026W39",
+      "league_id": "LEAGUE-WD-2026W39",
+      "member_count": 50,
+      "official_timestamp_utc": "2026-09-28T19:30:00.000Z",
+      "provenance": {
+        "evidence_refs": [
+          "EV-REAL-PERSIAN-UNITY-S15"
+        ]
+      },
+      "sequence": 3,
+      "snapshot_id": "S15"
     }
   ]
 }
