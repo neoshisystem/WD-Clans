@@ -7,7 +7,8 @@
     "test": "node --test",
     "validate:snapshot": "node src/validate-snapshot.js",
     "validate:canonical": "node src/validate-canonical.js",
-    "build:static": "node scripts/generate-static-vertical-slice.js"
+    "build:static": "node scripts/generate-static-vertical-slice.js",
+    "check:documentation": "node scripts/check-ucs-documentation.js"
   },
   "engines": {
     "node": ">=20"
