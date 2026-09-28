@@ -252,7 +252,7 @@ test('Delta projection contract: synthetic S12 deltas remain available to the St
 
 
 test('Real Persian UNITY S14 checkpoint is represented in Canonical and static projection', () => {
-  const canonical = readCanonical();
+  const canonical = JSON.parse(fs.readFileSync(PUBLIC_CANONICAL_PATH, 'utf8'));
   const snapshot = canonical.snapshots.find((item) => item.snapshot_id === 'S14' && item.clan_id === 'CLAN-PERSIAN-UNITY');
   assert.ok(snapshot);
   assert.equal(snapshot.member_count, 50);

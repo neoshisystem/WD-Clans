@@ -131,7 +131,7 @@ test('Real Persian UNITY S13 is represented in Canonical and static Read Model',
  assert.equal(snapshot?.member_count,48);
  assert.equal(observations.length,48);
  assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
- assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S13');
+ assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S14');
  assert.equal(staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.length,48);
  assert.equal(staticData.read_model.delta_results.some(d => d.current_observation_id?.startsWith('S13::')),false);
 });
