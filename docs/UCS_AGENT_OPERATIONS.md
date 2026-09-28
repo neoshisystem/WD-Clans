@@ -212,3 +212,16 @@ These are derived observations, not Global identity confirmation. Do not create 
 S14 verified: 46 matched; 4 additions; 2 departures; 92 deltas. The two حسن records are separated by fingerprint continuity: S13 Stage 48 → S14 Stage 48 matches; S14 Stage 10 is separate.
 
 The UI and Archive consume these derived properties. Generated static artifacts must still be regenerated from Canonical.
+
+## Documentation checkpoint — v0.1
+
+Documentation continuity is governed by `docs/UCS_DOCUMENTATION_CONTROL_V0_1.md` (Product) and `projects/UCS/DOCUMENTATION_CONTROL.md` (Memory-ai).
+
+Required behavior:
+1. Read the control contract before any material task.
+2. Use its task matrix to determine mandatory/conditional document reads and updates.
+3. Treat `CURRENT_STATE.md`, `NEXT_ACTION.md`, `SHIFT_REPORT.md` and `CHECKPOINT.md` as status-bearing continuity surfaces; do not treat historical reports/handoffs as mutable Current.
+4. A checkpoint is SEALED only after product Reality Check, task/report evidence, applicable documentation reconciliation, Product-local documentation validation, and the Memory-ai cross-repository synchronization check all pass.
+5. Historical reports and point-in-time handoffs remain historical records and are not rewritten simply because newer state exists.
+6. If documentation is ahead/behind or cannot be proven synchronized, classify the checkpoint DRIFTED/BLOCKED/UNKNOWN and do not claim SEALED.
+7. The next Conversation must start from `projects/UCS/AGENT_START_HERE.md` and then follow the recorded checkpoint/read order rather than relying on hidden chat memory.
