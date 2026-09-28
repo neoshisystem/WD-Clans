@@ -198,3 +198,17 @@ S14 source fields include Last Online, lifetime Gold/Silver/Bronze, Total Kills,
 - S14 report: `reports/2026-09-28_real-s14-ingestion.md`.
 - S14 raw checkpoint: `data/real-snapshots/persian-unity/S14.raw.json`.
 - Next real Snapshot must be new; do not re-ingest S13/S14 or silently resolve identity.
+
+## S14 continuity and automatic Snapshot Delta operations — 2026-09-28
+
+For second-or-later real Snapshots, compare only the adjacent previous Snapshot of the same Clan.
+
+Derived Read Model properties:
+- snapshot_delta_results: per-observation Total Kills and Current League Clan Medal deltas.
+- snapshot_membership_changes: observed additions and departures between adjacent Snapshots.
+
+These are derived observations, not Global identity confirmation. Do not create Global IDs, Membership Episodes, or canonical Membership Events from these results.
+
+S14 verified: 46 matched; 4 additions; 2 departures; 92 deltas. The two حسن records are separated by fingerprint continuity: S13 Stage 48 → S14 Stage 48 matches; S14 Stage 10 is separate.
+
+The UI and Archive consume these derived properties. Generated static artifacts must still be regenerated from Canonical.
