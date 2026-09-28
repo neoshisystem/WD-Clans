@@ -139,3 +139,30 @@ GitHub Pages Run 54 / 36423268199: SUCCESS.
 
 Detailed report: reports/2026-09-28_real-s14-continuity-repair.md
 Successor: CR-02.
+
+## FINAL S14 CONTINUITY DOCUMENTATION SYNC — 2026-09-28
+
+Status: **PASS_WITH_REVIEW_CASES**
+
+S14 is now the latest valid Persian UNITY Snapshot and the S13 → S14 continuity repair is fully recorded.
+
+- 46 matched observation pairs.
+- 4 observed additions.
+- 2 observed departures.
+- 92 derived Read-Model delta records.
+- +145,391 derived valid Total Kills increase.
+- +9,207,907 derived valid Current League Clan Medal increase.
+- Identity remains UNRESOLVED.
+- 0 Global IDs.
+- 0 Canonical Membership Events.
+- 0 Canonical Delta Results.
+
+**Layer distinction:** Canonical Delta Results remain 0. The 92 records exist only in the Derived Read Model.
+
+Detailed report:
+`reports/2026-09-28_real-s14-continuity-repair.md`
+
+Product handoff:
+`docs/UCS_SHIFT_REPORT_CR-01_TO-CR-02_2026-09-28.md`
+
+The Product work is complete. CR-02 must begin from S14 and must not re-ingest or overwrite S13/S14.
