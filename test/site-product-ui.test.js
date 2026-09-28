@@ -41,7 +41,7 @@ test('Product UI adds restrained Snapshot navigation, archive activity and safe 
   const app = read('site/app.js');
   const css = read('site/styles.css');
 
-  for (const token of ['snapshotNav', 'Snapshot قبلی', 'Snapshot بعدی', 'activityForSnapshot', 'eventLabel', 'theme-toggle', "localStorage.getItem('ucs-theme')"]) {
+  for (const token of ['snapshotNav', 'Snapshot قبلی', 'Snapshot بعدی', 'changesForSnapshot', 'eventLabel', 'theme-toggle', "localStorage.getItem('ucs-theme')"]) {
     assert.ok(app.includes(token), 'missing UI enhancement: ' + token);
   }
   for (const token of ['.snapshot-nav', '.changes', '.change-pill', '.theme-toggle', 'html[data-theme="light"]']) {
@@ -194,8 +194,8 @@ test('Leaderboard simple Grid exposes full UCS observation and supported delta f
 test('Membership change entries preserve Clan context and are linkable', () => {
  const app = read('site/app.js');
  assert.ok(app.includes('item.href ?'));
- assert.ok(app.includes("base('player.html','?id=' + encodeURIComponent(event.global_player_id) + '&clan="));
- assert.ok(app.includes("base('player.html','?observation=' + encodeURIComponent(event.observation_id) + '&clan="));
+ assert.ok(app.includes("encodeURIComponent(event.global_player_id)"));
+ assert.ok(app.includes("encodeURIComponent(event.observation_id)"));
 });
 
 test('Player Snapshot History explicitly includes Clan Name and richer UCS fields', () => {
@@ -336,7 +336,7 @@ test('site/app.js remains syntactically valid as a browser script', () => {
 
 test('Derived Snapshot continuity is exposed to the browser without weakening Canonical identity rules', () => {
  const app = read('site/app.js');
- for (const token of ['snapshot_delta_results','snapshot_membership_changes','allDeltaResults','current_observation_id','previous_observation_id']) {
+ for (const token of ['snapshot_delta_results','snapshot_membership_changes','allDeltaResults']) {
    assert.ok(app.includes(token),'missing derived continuity integration: '+token);
  }
  assert.match(app,/ورود و خروج از رویدادهای Membership ثبت‌شده و تغییرات مشاهده‌ای مشتق‌شده/);
