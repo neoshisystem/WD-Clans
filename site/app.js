@@ -13,11 +13,18 @@
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const display = (value) => value === null || value === undefined || value === '' ? '—' : String(value);
   const number = (value) => value === null || value === undefined || value === '' ? null : Number(value);
+  // Single presentation formatter for user-facing quantities; identifiers/dates use their own renderers.
+  const formatNumber = (value) => {
+    if (value === null || value === undefined || value === '') return '—';
+    const n = Number(value);
+    if (!Number.isFinite(n)) return String(value);
+    return n.toLocaleString('en-US');
+  };
   const signed = (value) => {
     if (value === null || value === undefined || value === '') return '—';
     const n = Number(value);
     if (!Number.isFinite(n)) return display(value);
-    return n > 0 ? '+' + n.toLocaleString('en-US') : n.toLocaleString('en-US');
+    return n > 0 ? '+' + formatNumber(n) : formatNumber(n);
   };
   const iranSnapshotDateTimeFormatter = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
     timeZone: 'Asia/Tehran',
@@ -139,8 +146,9 @@
     return map;
   }
 
+  const QUANTITY_FIELDS = new Set(['rank','stage','current_league_clan_medals','profile_total_clan_medal_count','total_kills']);
   function valueFor(member, field) {
-    return display(member[field]);
+    return QUANTITY_FIELDS.has(field) ? formatNumber(member[field]) : display(member[field]);
   }
   const lastOnlineFor = (member) => display(member.last_online_display ?? member.last_online_utc);
   const lifetimeMedalsFor = (member) => {
@@ -326,7 +334,7 @@
       const graphic = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
         return '<article class="member-card"><header><div><span class="rank">' + esc(valueFor(member, 'rank')) + '</span><h3>' + esc(valueFor(member, 'display_name')) + '</h3><small>' + esc(valueFor(member, 'role')) + '</small></div><a class="link-arrow" href="' + playerLink(member) + '">←</a></header><div class="stats-grid">' +
-          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['نشان‌ها',lifetimeMedalsFor(member)],['سلاح‌ها',weaponsFor(member)],['آخرین آنلاین',lastOnlineFor(member)]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : display(value)) + '</strong></div>').join('') +
+          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['نشان‌ها',lifetimeMedalsFor(member)],['سلاح‌ها',weaponsFor(member)],['آخرین آنلاین',lastOnlineFor(member)]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : (['استیج','مدال لیگ','جمع کیل'].includes(label) ? formatNumber(value) : display(value))) + '</strong></div>').join('') +
           '</div></article>';
       }).join('');
 
