@@ -328,3 +328,8 @@ test('Player Snapshot History preserves Clan Name and uses localized Snapshot ti
  assert.match(app,/formatSnapshotDateTime\(item\.observed_at_utc\)/);
  assert.match(app,/formatSnapshotDateTime\(membership\.started_at_utc\)/);
 });
+
+test('site/app.js remains syntactically valid as a browser script', () => {
+  const app = read('site/app.js');
+  assert.doesNotThrow(() => new Function(app));
+});
