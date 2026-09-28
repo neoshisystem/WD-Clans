@@ -71,3 +71,50 @@ Do not re-ingest/overwrite S13. Do not assume the next identifier is S14.
 - Latest CI will validate this final documentation-synced HEAD.
 - Latest successful Pages site deployment: Run `36358889049` on `7e94c9bfe9cd9aeb74a56242f2d87b48907959dd`.
 - Pages: https://neoshisystem.github.io/WD-Clans/
+
+
+## 2026-09-28 — CR-01 Corrective Micro-Task: Number Presentation + Documentation Sync
+
+Classification: **PASS_WITH_REVIEW_CASES**
+
+### Reconciliation
+- Live Product `main` was re-verified before mutation.
+- Previous UX/UI corrective baseline was preserved; no UI rewrite, Canonical/Projection change, Identity/Membership change or S13 re-ingestion occurred.
+- Canonical SHA remains `55e5e59b3f93273b09fc9d99470f6fbf7dd702f7`; S13 data is unchanged.
+
+### Corrective implementation
+- One common `formatNumber()` helper now handles all user-facing quantities with `Number(value).toLocaleString('en-US')`.
+- Applied across Global/Admin Dashboard, Clan Directory, Leaderboard, Snapshot/Archive, Player Directory, Player Profile, Snapshot History and Membership History.
+- Rank, Stage, lifetime Gold/Silver/Bronze, Weapon Levels, Total Kills, Clan Medals, member/count metrics and Delta basis counts are formatted.
+- Signed Delta values use the same helper: `+1,191`, `-1,250`, `0`.
+- Missing/null remains `—`.
+- Snapshot IDs, Clan IDs, Global Player IDs, Observation IDs, Evidence IDs, hashes and timestamps remain identifier/date values and are not quantity-formatted.
+- Persian calendar + `Asia/Tehran` Snapshot date/time formatting remains unchanged.
+
+### Exact presentation examples
+`1621864` → `1,621,864`; `5609361` → `5,609,361`; `25300553` → `25,300,553`; `1191` → `+1,191`; `-1250` → `-1,250`; `0` → `0`; missing/null → `—`; `S13` remains `S13`.
+
+### Regression coverage
+- Common formatter regression: required positive/negative/zero/missing examples and identifier preservation.
+- Numeric stat helper coverage: lifetime medals, all weapon levels, Delta basis/count metrics and Snapshot member/capacity metrics.
+- Technical identifier regression confirms Snapshot/Clan/Global/Observation identifiers remain opaque.
+- Primary UI surface coverage: Dashboard/Clan Directory, Leaderboard, Archive/Snapshot, Player Directory/Profile and Membership History.
+- Existing Persian Snapshot date/time regression remains in the suite.
+
+### Validation
+- Final Product UI HEAD: `ca7ac8767206b932d5a9118f7a2b01ac4a799148`.
+- `site/app.js` SHA: `11a9468152c9f04f5d49e397eb423f026ae8f363`.
+- `test/site-product-ui.test.js` SHA: `b781245428497f5aed12a59be591b933b058dfd8`.
+- CI Run 192 / `36392902781`: **SUCCESS**.
+- GitHub Pages Run 47 / `36392902840`: **SUCCESS**.
+- Generated static artifacts remain synchronized; Canonical SHA is unchanged.
+- S13 was not re-ingested, overwritten or renumbered.
+
+### Review case
+Direct live-browser screenshot verification remains unavailable through the current connector environment. Automated CI and Pages deployment are successful.
+
+### Exact Next Action
+**CR-02 — Real Snapshot #2 for Persian UNITY.**
+Re-check live Product + Memory; receive the next real Snapshot ZIP; hash/inventory; confirm actual Snapshot identifier/sequence from Authority/context; compare against S13; preserve unresolved identity where required; derive only contract-supported Membership/Delta; regenerate Static Data; validate; CI/Pages; report and update handoff.
+
+Do not re-ingest S13. Do not assume S14.
