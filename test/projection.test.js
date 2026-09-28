@@ -712,3 +712,32 @@ test('34. projection version is implementation metadata, not Canonical State', (
   assert.equal(output.projection_version, 'test-0.1');
   assert.equal(stableStringify(model), before);
 });
+
+test('35. Derived adjacent-Snapshot deltas and roster changes preserve unresolved identity', () => {
+  const model = buildCanonical();
+  const output = new ProjectionEngine().projectAll(model);
+  const sA2 = output.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S-A2::'));
+  assert.equal(sA2.length, 2);
+  assert.equal(sA2.find((item) => item.metric_key === 'total_kills')?.delta, 200);
+  assert.equal(sA2.find((item) => item.metric_key === 'current_league_clan_medals')?.delta, 20);
+  assert.equal(sA2.every((item) => item.global_player_id === null), true);
+  const sB2Joins = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2' && item.change_type === 'JOIN');
+  assert.deepEqual(sB2Joins.map((item) => item.display_name), ['Mystery']);
+  assert.equal(model.global_player_identities.length, 2);
+});
+
+test('36. Duplicate display names use fingerprint continuity and do not create a false leave', () => {
+  const model = buildCanonical();
+  model.snapshots.find((item) => item.snapshot_id === 'S-B2').member_count = 3;
+  model.observations.push({
+    observation_id:'S-B2::ROW-HASSAN-NEW', snapshot_id:'S-B2', clan_id:'CLAN-B', source_member_key:'ROW-HASSAN-NEW',
+    global_player_id:null, membership_episode_id:null, identity_resolution_status:'UNRESOLVED', display_name:'حسن', rank:3, stage:10, role:null,
+    weapons:{'25mm':9,hydra:8,hellfire:7}, total_kills:1, lifetime_medals:{gold:0,silver:0,bronze:0}, current_league_clan_medals:1,
+    profile_total_clan_medal_count:1, last_online_utc:null, provenance:provenance(['E-B'])
+  });
+  validateCanonicalModel(model);
+  const output = new ProjectionEngine().projectAll(model);
+  const changes = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2');
+  assert.ok(changes.some((item) => item.change_type === 'JOIN' && item.display_name === 'حسن'));
+  assert.equal(changes.some((item) => item.change_type === 'LEAVE' && item.display_name === 'Alpha Prime'), false);
+});

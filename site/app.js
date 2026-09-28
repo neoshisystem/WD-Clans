@@ -132,9 +132,14 @@
       }).join('') + '</div></section>';
   }
 
+  const allDeltaResults = () => [
+    ...(Array.isArray(model.delta_results) ? model.delta_results : []),
+    ...(Array.isArray(model.snapshot_delta_results) ? model.snapshot_delta_results : [])
+  ];
+
   function deltaMapForSnapshot(snapshotId) {
     const map = new Map();
-    for (const delta of Array.isArray(model.delta_results) ? model.delta_results : []) {
+    for (const delta of allDeltaResults()) {
       if (delta.current_observation_id?.startsWith(snapshotId + '::')) {
         const key = delta.current_observation_id;
         const current = map.get(key) || {};
@@ -162,26 +167,43 @@
 
 
   function membershipChangesForSnapshot(snapshotId) {
-    const events = (Array.isArray(model.activity) ? model.activity : [])
-      .filter((event) => event.observed_snapshot_id === snapshotId && (!event.clan_id || event.clan_id === activeClanId));
     const playerById = new Map((model.global_players || []).map((player) => [player.global_player_id, player]));
-    const enrich = (event) => ({
-      event,
-      display_name: playerById.get(event.global_player_id)?.display_name || event.display_name || event.global_player_id || event.observation_id || '—',
-      href: event.global_player_id ? base('player.html', '?id=' + encodeURIComponent(event.global_player_id) + '&clan=' + encodeURIComponent(activeClanId)) :
-        event.observation_id ? base('player.html', '?observation=' + encodeURIComponent(event.observation_id) + '&clan=' + encodeURIComponent(activeClanId)) : null
-    });
+    const canonicalEvents = (Array.isArray(model.activity) ? model.activity : [])
+      .filter((event) => event.observed_snapshot_id === snapshotId && (!event.clan_id || event.clan_id === activeClanId))
+      .map((event) => ({
+        event,
+        event_type: event.event_type,
+        display_name: playerById.get(event.global_player_id)?.display_name || event.display_name || event.global_player_id || event.observation_id || '—',
+        observation_id: event.observation_id || null,
+        href: event.global_player_id
+          ? base('player.html', '?id=' + encodeURIComponent(event.global_player_id) + '&clan=' + encodeURIComponent(activeClanId))
+          : event.observation_id
+            ? base('player.html', '?observation=' + encodeURIComponent(event.observation_id) + '&clan=' + encodeURIComponent(activeClanId))
+            : null
+      }));
+    const derivedChanges = (Array.isArray(model.snapshot_membership_changes) ? model.snapshot_membership_changes : [])
+      .filter((change) => change.snapshot_id === snapshotId && change.clan_id === activeClanId)
+      .map((change) => ({
+        event: change,
+        event_type: change.change_type,
+        display_name: change.display_name || change.observation_id || '—',
+        observation_id: change.observation_id || null,
+        href: change.observation_id
+          ? base('player.html', '?observation=' + encodeURIComponent(change.observation_id) + '&clan=' + encodeURIComponent(activeClanId))
+          : null
+      }));
+    const events = [...canonicalEvents, ...derivedChanges];
     return {
-      joined: events.filter((event) => event.event_type === 'JOIN' || event.event_type === 'RETURN' || (event.event_type === 'TRANSFER' && event.to_clan_id === activeClanId)).map(enrich),
-      left: events.filter((event) => event.event_type === 'LEAVE' || (event.event_type === 'TRANSFER' && event.from_clan_id === activeClanId)).map(enrich),
-      other: events.filter((event) => event.event_type === 'UNKNOWN_CHANGE' || event.event_type === 'NOT_OBSERVED').map(enrich)
+      joined: events.filter((item) => item.event_type === 'JOIN' || item.event_type === 'RETURN' || (item.event_type === 'TRANSFER' && item.event.to_clan_id === activeClanId)),
+      left: events.filter((item) => item.event_type === 'LEAVE' || (item.event_type === 'TRANSFER' && item.event.from_clan_id === activeClanId)),
+      other: events.filter((item) => item.event_type === 'UNKNOWN_CHANGE' || item.event_type === 'NOT_OBSERVED')
     };
   }
 
   function performanceAggregate(snapshotIds) {
     const ids = new Set(snapshotIds);
     let medals = 0, kills = 0, medalCount = 0, killCount = 0;
-    for (const delta of Array.isArray(model.delta_results) ? model.delta_results : []) {
+    for (const delta of allDeltaResults()) {
       if (delta.status !== 'VALID' || !Number.isFinite(Number(delta.delta))) continue;
       const snapshotId = String(delta.current_observation_id || '').split('::')[0];
       if (!ids.has(snapshotId)) continue;
@@ -240,7 +262,7 @@
         group('🔴 خروج / حذف', changes.left, 'membership-change-group--left') +
         group('◻ تغییر نامشخص', changes.other, 'membership-change-group--other')
       : '<div class="membership-change-empty">' + (previousSnapshot ? 'تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.' : 'این Snapshot ثبت اولیهٔ این Clan است و مبنای مقایسهٔ قبلی ندارد.') + '</div>';
-    return '<section class="membership-changes panel"><div class="section-head"><div><span class="badge">عضویت</span><h2>تغییرات اعضا</h2></div><span class="count">' + formatNumber(total) + ' تغییر</span></div><p class="membership-change-note">ورود و خروج فقط از رویدادهای Membership ثبت‌شده در Read Model نمایش داده می‌شود.</p><div class="membership-change-grid">' + body + '</div></section>';
+    return '<section class="membership-changes panel"><div class="section-head"><div><span class="badge">عضویت</span><h2>تغییرات اعضا</h2></div><span class="count">' + formatNumber(total) + ' تغییر</span></div><p class="membership-change-note">ورود و خروج از رویدادهای Membership ثبت‌شده و تغییرات مشاهده‌ای مشتق‌شده از مقایسه Snapshotهای متوالی همین Clan نمایش داده می‌شود.</p><div class="membership-change-grid">' + body + '</div></section>';
   }
 
   function leaderboard() {
@@ -406,26 +428,23 @@
       UNKNOWN_CHANGE: 'تغییر نامشخص',
       NOT_OBSERVED: 'مشاهده نشد'
     };
-    const activityForSnapshot = (snapshotId) => (Array.isArray(model.activity) ? model.activity : [])
-      .filter((event) => event.observed_snapshot_id === snapshotId && (!event.clan_id || event.clan_id === activeClanId));
+    const changesForSnapshot = (snapshotId) => membershipChangesForSnapshot(snapshotId);
 
     root.innerHTML = header('آرشیو دوره‌های کلن', 'UCS · SNAPSHOT ARCHIVE', 'هر Snapshot یک رکورد مستقل است و در آرشیو نگهداری می‌شود؛ نسخه‌های جدید جایگزین نسخه‌های قبلی نمی‌شوند.') +
       '<div class="report-list">' + snapshots.map((snapshot, index) => {
         const agg = aggregate(snapshot.snapshot_id);
-        const activity = activityForSnapshot(snapshot.snapshot_id);
+        const changes = changesForSnapshot(snapshot.snapshot_id);
+        const activity = [...changes.joined, ...changes.left, ...changes.other];
         const changesHtml = activity.length
           ? '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>' + formatNumber(activity.length) + '</b></div><div class="change-list">' +
-            activity.map((event) => {
-              const player = playerById.get(event.global_player_id);
-              const label = player?.display_name || event.global_player_id || '—';
-              const transition = event.event_type === 'TRANSFER' && event.from_clan_id && event.to_clan_id
-                ? ' · ' + event.from_clan_id + ' → ' + event.to_clan_id
-                : '';
-              const href = event.global_player_id ? base('player.html','?id=' + encodeURIComponent(event.global_player_id) + '&clan=' + encodeURIComponent(activeClanId)) : event.observation_id ? base('player.html','?observation=' + encodeURIComponent(event.observation_id) + '&clan=' + encodeURIComponent(activeClanId)) : null;
-              return href ? '<a class="change-pill" href="' + href + '"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</a>' : '<span class="change-pill"><b>' + esc(eventLabel[event.event_type] || event.event_type) + '</b> ' + esc(label) + esc(transition) + '</span>';
+            activity.map((item) => {
+              const label = item.display_name || '—';
+              const eventType = item.event_type || item.event?.event_type || 'UNKNOWN_CHANGE';
+              const href = item.href || null;
+              return href ? '<a class="change-pill" href="' + href + '"><b>' + esc(eventLabel[eventType] || eventType) + '</b> ' + esc(label) + '</a>' : '<span class="change-pill"><b>' + esc(eventLabel[eventType] || eventType) + '</b> ' + esc(label) + '</span>';
             }).join('') +
             '</div></div>'
-          : '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>' + formatNumber(0) + '</b></div><div class="change-empty">تغییر عضویت ثبت‌شده‌ای برای این Snapshot وجود ندارد.</div></div>';
+          : '<div class="changes"><div class="changes-heading"><span>تغییر عضویت</span><b>' + formatNumber(0) + '</b></div><div class="change-empty">تغییر عضویت مشاهده‌شده‌ای برای این Snapshot وجود ندارد.</div></div>';
         return '<article class="report-card"><div class="report-index">' + formatNumber(snapshots.length - index) + '</div><div class="report-main"><div class="report-head"><h2><a href="' + base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(snapshot.snapshot_id)) + '">' + esc(snapshot.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(snapshot.official_timestamp_utc)) + '</a></h2><span class="status">' + (index === 0 ? 'آخرین Snapshot' : 'آرشیو') + '</span></div><p>' + formatNumber(snapshot.member_count) + ' / ' + formatNumber(snapshot.capacity) + ' عضو · مستقل و قابل بازسازی</p>' + changesHtml + '<div class="aggregate aggregate--performance">' +
           '<div><span>این Snapshot · Δ مدال کلن</span><b>' + esc(performanceValue({ value: agg.current.medals, count: agg.current.medalCount }, '— / baseline')) + '</b><small>' + esc(agg.current.medalCount ? formatNumber(agg.current.medalCount) + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +
           '<div><span>این Snapshot · Δ کیل</span><b>' + esc(performanceValue({ value: agg.current.kills, count: agg.current.killCount }, '— / baseline')) + '</b><small>' + esc(agg.current.killCount ? formatNumber(agg.current.killCount) + ' رکورد معتبر' : 'بدون Delta معتبر') + '</small></div>' +

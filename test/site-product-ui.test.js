@@ -333,3 +333,27 @@ test('site/app.js remains syntactically valid as a browser script', () => {
   const app = read('site/app.js');
   assert.doesNotThrow(() => new Function(app));
 });
+
+test('Derived Snapshot continuity is exposed to the browser without weakening Canonical identity rules', () => {
+ const app = read('site/app.js');
+ for (const token of ['snapshot_delta_results','snapshot_membership_changes','allDeltaResults','DISPLAY_NAME_FINGERPRINT','current_observation_id','previous_observation_id']) {
+   assert.ok(app.includes(token),'missing derived continuity integration: '+token);
+ }
+ assert.match(app,/ورود و خروج از رویدادهای Membership ثبت‌شده و تغییرات مشاهده‌ای مشتق‌شده/);
+});
+
+test('Real Persian UNITY S14 continuity regression is represented in generated static data', () => {
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const deltas = staticData.read_model.snapshot_delta_results.filter(d => d.current_observation_id.startsWith('S14::'));
+ const changes = staticData.read_model.snapshot_membership_changes.filter(c => c.snapshot_id === 'S14');
+ assert.equal(deltas.length,92);
+ assert.equal(deltas.filter(d => d.metric_key === 'total_kills').length,46);
+ assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals').length,46);
+ assert.equal(changes.filter(c => c.change_type === 'JOIN').length,4);
+ assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,2);
+ assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),9353298);
+ assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),145391);
+ assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),9207907);
+ assert.deepEqual(changes.filter(c => c.change_type === 'JOIN').map(c => c.display_name).sort(),['ADNAN','Kian_Tak','saied','حسن']);
+ assert.deepEqual(changes.filter(c => c.change_type === 'LEAVE').map(c => c.display_name).sort(),['amin','mohammad']);
+});

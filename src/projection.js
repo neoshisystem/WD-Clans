@@ -197,6 +197,107 @@ function deltaProjection(delta, observationsById) {
   };
 }
 
+const OBSERVATION_CONTINUITY_SCORE_THRESHOLD = 5;
+const OBSERVATION_FINGERPRINT_FIELDS = Object.freeze(['25mm', 'hydra', 'hellfire']);
+
+function observationContinuityScore(previousObservation, currentObservation) {
+  let score = 4;
+  const basis = ['display_name_exact'];
+  if (previousObservation.stage === currentObservation.stage) { score += 2; basis.push('stage_exact'); }
+  else if (Number.isFinite(previousObservation.stage) && Number.isFinite(currentObservation.stage) && Math.abs(previousObservation.stage - currentObservation.stage) === 1) { score += 1; basis.push('stage_adjacent'); }
+  for (const field of OBSERVATION_FINGERPRINT_FIELDS) {
+    const left = previousObservation.weapons?.[field]; const right = currentObservation.weapons?.[field];
+    if (Number.isFinite(left) && Number.isFinite(right) && left === right) { score += 1; basis.push('weapon_' + field + '_exact'); }
+  }
+  return { score, basis };
+}
+
+function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
+  const previous = state.observations.filter((o) => o.snapshot_id === previousSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
+  const current = state.observations.filter((o) => o.snapshot_id === currentSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
+  const candidates = [];
+  for (const currentObservation of current) {
+    const matches = previous.filter((previousObservation) => previousObservation.display_name === currentObservation.display_name)
+      .map((previousObservation) => ({ currentObservation, previousObservation, ...observationContinuityScore(previousObservation,currentObservation) }))
+      .filter((candidate) => candidate.score >= OBSERVATION_CONTINUITY_SCORE_THRESHOLD)
+      .sort((a,b) => b.score-a.score || compareText(a.previousObservation.observation_id,b.previousObservation.observation_id));
+    if (!matches.length) continue;
+    if (matches[1] && matches[1].score === matches[0].score) continue;
+    candidates.push(matches[0]);
+  }
+  const matchedCurrent = new Set(); const matchedPrevious = new Set(); const pairs = [];
+  candidates.sort((a,b) => b.score-a.score || compareText(a.currentObservation.observation_id,b.currentObservation.observation_id) || compareText(a.previousObservation.observation_id,b.previousObservation.observation_id));
+  for (const candidate of candidates) {
+    const currentId = candidate.currentObservation.observation_id; const previousId = candidate.previousObservation.observation_id;
+    if (matchedCurrent.has(currentId) || matchedPrevious.has(previousId)) continue;
+    matchedCurrent.add(currentId); matchedPrevious.add(previousId); pairs.push(candidate);
+  }
+  return { pairs, unmatchedCurrent: current.filter((o) => !matchedCurrent.has(o.observation_id)), unmatchedPrevious: previous.filter((o) => !matchedPrevious.has(o.observation_id)) };
+}
+
+function snapshotMetricDelta(currentValue, previousValue, metricKey, sameLeague) {
+  if (!Number.isFinite(currentValue)) return { status: 'UNKNOWN', delta: null, reason: 'current_value_invalid' };
+  if (!Number.isFinite(previousValue)) return { status: 'BASELINE_UNAVAILABLE', delta: null, reason: 'previous_valid_observation_missing' };
+  if (metricKey === 'current_league_clan_medals' && !sameLeague) return { status: 'VALID', delta: currentValue, reason: 'new_league_baseline_zero' };
+  const delta = currentValue - previousValue;
+  if (delta < 0) return { status: 'ANOMALY', delta, reason: 'monotonic_metric_decreased' };
+  return { status: 'VALID', delta, reason: null };
+}
+
+function projectSnapshotMembershipChanges(state) {
+  assertCanonicalState(state);
+  const snapshots = state.snapshots.slice().sort(compareByTimeThen('official_timestamp_utc','clan_id','sequence','snapshot_id'));
+  const previousByClan = new Map(); const results = [];
+  for (const snapshot of snapshots) {
+    const previousSnapshot = previousByClan.get(snapshot.clan_id);
+    if (previousSnapshot) {
+      const continuity = pairObservationContinuity(previousSnapshot,snapshot,state);
+      for (const observation of continuity.unmatchedCurrent) results.push({
+        change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::JOIN::'+observation.observation_id, change_type:'JOIN', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
+        clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
+        current_observation_id:observation.observation_id, previous_observation_id:null, match_method:'DISPLAY_NAME_FINGERPRINT', reason:'no_deterministic_prior_snapshot_match',
+        provenance:{ canonical_refs:uniqueSorted([snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
+      });
+      for (const observation of continuity.unmatchedPrevious) results.push({
+        change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::LEAVE::'+observation.observation_id, change_type:'LEAVE', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
+        clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
+        current_observation_id:null, previous_observation_id:observation.observation_id, match_method:'DISPLAY_NAME_FINGERPRINT', reason:'no_deterministic_current_snapshot_match',
+        provenance:{ canonical_refs:uniqueSorted([previousSnapshot.snapshot_id,snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(previousSnapshot),...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
+      });
+    }
+    previousByClan.set(snapshot.clan_id,snapshot);
+  }
+  return results.sort((a,b)=>compareText(a.snapshot_id,b.snapshot_id)||compareText(a.change_type,b.change_type)||compareText(a.observation_id,b.observation_id));
+}
+
+function projectSnapshotDeltaResults(state) {
+  assertCanonicalState(state);
+  const snapshots = state.snapshots.slice().sort(compareByTimeThen('official_timestamp_utc','clan_id','sequence','snapshot_id'));
+  const previousByClan = new Map(); const results = [];
+  for (const snapshot of snapshots) {
+    const previousSnapshot = previousByClan.get(snapshot.clan_id);
+    if (previousSnapshot) {
+      const continuity = pairObservationContinuity(previousSnapshot,snapshot,state);
+      const sameLeague = previousSnapshot.league_id === snapshot.league_id;
+      for (const pair of continuity.pairs) {
+        const currentObservation = pair.currentObservation; const previousObservation = pair.previousObservation;
+        const continuityMeta = { match_method:'DISPLAY_NAME_FINGERPRINT', match_score:pair.score, match_basis:pair.basis };
+        const evidenceRefs = uniqueSorted([...collectEvidenceRefs(previousObservation),...collectEvidenceRefs(currentObservation)]);
+        for (const [metricKey,scope,currentValue,previousValue] of [['total_kills','PLAYER_LIFETIME',currentObservation.total_kills,previousObservation.total_kills],['current_league_clan_medals','LEAGUE',currentObservation.current_league_clan_medals,previousObservation.current_league_clan_medals]]) {
+          const metric = snapshotMetricDelta(currentValue,previousValue,metricKey,sameLeague);
+          results.push({
+            delta_id:'OBS-DELTA::'+currentObservation.observation_id+'::'+scope+'::'+metricKey, current_observation_id:currentObservation.observation_id, global_player_id:null,
+            baseline_observation_id:previousObservation.observation_id, baseline_type:'PREVIOUS_SNAPSHOT_OBSERVATION', metric_key:metricKey, scope, clan_id:snapshot.clan_id, league_id:snapshot.league_id, membership_episode_id:null,
+            delta:metric.delta, status:metric.status, reason:metric.reason, continuity:continuityMeta,
+            provenance:{ canonical_refs:uniqueSorted([previousSnapshot.snapshot_id,snapshot.snapshot_id,previousObservation.observation_id,currentObservation.observation_id]), evidence_refs:evidenceRefs }
+          });
+        }
+      }
+    }
+    previousByClan.set(snapshot.clan_id,snapshot);
+  }
+  return results.sort((a,b)=>compareText(a.current_observation_id,b.current_observation_id)||compareText(a.scope,b.scope)||compareText(a.metric_key,b.metric_key));
+}
 function assertCanonicalState(state) {
   validateCanonicalModel(state);
   return state;
@@ -538,7 +639,9 @@ class ProjectionEngine {
       snapshots: this.projectSnapshots(state),
       player_history: this.projectPlayerHistory(state),
       activity: this.projectActivity(state),
-      delta_results: this.projectDeltaResults(state)
+      delta_results: this.projectDeltaResults(state),
+      snapshot_delta_results: this.projectSnapshotDeltaResults(state),
+      snapshot_membership_changes: this.projectSnapshotMembershipChanges(state)
     };
   }
 
