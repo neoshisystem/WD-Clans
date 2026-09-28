@@ -1,0 +1,27 @@
+name: UCS One-Time Static Generator
+
+on:
+  push:
+    branches:
+      - chore/ucs-s15-generator-rebuild
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: "!contains(github.event.head_commit.message, '[ucs-static-generated]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/generate-static-vertical-slice.js
+      - name: Commit generated static data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/ucs-vertical-slice.json site/data/ucs-vertical-slice.js
+          git diff --cached --quiet || git commit -m "chore(UCS): generate S15 static data [ucs-static-generated]"
+          git push
