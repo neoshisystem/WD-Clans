@@ -229,7 +229,7 @@ test('Common quantity formatter uses en-US thousands separators and preserves id
  const context = { result: null };
  vm.createContext(context);
  vm.runInContext(snippet + "result = {plain: formatNumber('1621864'), kills: formatNumber('5609361'), medals: formatNumber('25300553'), positive: signed(1191), negative: signed(-1250), zero: signed(0), missing: formatNumber(null), snapshot: formatNumber('S13'), globalId: formatNumber('GP-001')};", context);
- assert.deepEqual(context.result, {
+ assert.equal(JSON.stringify(context.result), JSON.stringify({
    plain: '1,621,864',
    kills: '5,609,361',
    medals: '25,300,553',
@@ -239,7 +239,7 @@ test('Common quantity formatter uses en-US thousands separators and preserves id
    missing: '—',
    snapshot: 'S13',
    globalId: 'GP-001'
- });
+ }));
 });
 
 test('All primary UI surfaces route quantitative values through the common formatter', () => {
