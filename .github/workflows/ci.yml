@@ -27,3 +27,4 @@ jobs:
       - run: node --check src/static-data.js
       - run: node scripts/generate-static-vertical-slice.js
       - run: git diff --exit-code -- site/data/ucs-vertical-slice.json site/data/ucs-vertical-slice.js
+      - run: npm run check:documentation
