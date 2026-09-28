@@ -376,3 +376,44 @@ Classification: FACT / HANDOFF
 
 ### Final next action
 The next conversation should begin by reading the mandatory Product docs and this handoff, then re-check Product + Memory live state. S13 and S14 must not be re-ingested. The next real ZIP becomes the next historical Snapshot and must follow the same ZIP → evidence → extraction → Canonical → Projection → Static → validation → report pipeline.
+
+## FINAL CR-01 DOCUMENTATION SYNC AFTER S14 CONTINUITY REPAIR — 2026-09-28
+
+Classification: **FACT / HANDOFF**
+
+This section supersedes earlier "next Snapshot" statements. Earlier sections remain historical point-in-time records and are not rewritten.
+
+### Current Product reference
+- Live Product `main` re-verified immediately before this documentation sync: `1eb98a89871eb3057da7e8651d086aa0d05167f8`.
+- This task changes documentation only; no Product code, Canonical data, Projection logic, Static Data or UI is being changed.
+
+### Persian UNITY continuity
+- S13: 48/50, sequence 1.
+- S14: 50/50, sequence 2.
+- S13 → S14: 46 matched observation pairs.
+- 4 observed additions.
+- 2 observed departures.
+- 92 derived Read-Model delta records.
+- Derived valid Total Kills increase: +145,391.
+- Derived valid Current League Clan Medal increase: +9,207,907.
+- Identity: UNRESOLVED.
+- Global Player IDs: 0.
+- Canonical Membership Events: 0.
+- Canonical Delta Results: 0.
+
+### Canonical / Derived boundary
+`Canonical Delta Results = 0` remains the Canonical fact.
+
+`Derived Read-Model Delta Records = 92` is a separate projection/read-model result created by the continuity repair.
+
+These values must never be merged or described as the same layer.
+
+### Authoritative continuity reports
+- Product S14 ingestion: `reports/2026-09-28_real-s14-ingestion.md`
+- Product S14 continuity repair: `reports/2026-09-28_real-s14-continuity-repair.md`
+- Memory Development Report: `projects/UCS/conversations/development-reports/2026-09-28_real-s14-continuity-repair.md`
+
+### Exact successor action
+**CR-02 starts from S14 as the latest valid real Snapshot.**
+
+No S13/S14 re-ingestion. No overwrite. The next real Snapshot, when supplied by Project Authority, becomes a new historical record and follows the established ZIP intake → evidence → extraction → validation → Canonical → Projection → Static → CI/Pages → report process. Identity remains unresolved unless valid confirmation is explicitly supplied.
