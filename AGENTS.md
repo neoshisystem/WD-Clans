@@ -44,3 +44,13 @@ S14 result: 46 matched, 4 observed additions, 2 observed departures, 92 derived 
 Two حسن records are separated by fingerprint: S13 Stage 48 -> S14 Stage 48 is continuity; S14 Stage 10 is a separate observed addition.
 
 Report: reports/2026-09-28_real-s14-continuity-repair.md
+
+## Verified CR-01 final checkpoint — 2026-09-28
+
+Final live HEAD: 58ff6d6d66c048b97cdd11f57bcc51d108ea2a94.
+CI Run 212 / 36423268209: SUCCESS.
+GitHub Pages Run 54 / 36423268199: SUCCESS.
+
+S14 Persian UNITY continuity is implemented as derived Read Model data: 46 matches, 4 observed additions, 2 observed departures, 92 supported deltas.
+
+Read reports/2026-09-28_real-s14-continuity-repair.md and docs/UCS_SHIFT_REPORT_CR-01_TO_CR-02_2026-09-28.md for the exact successor checkpoint.
