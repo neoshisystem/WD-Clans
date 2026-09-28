@@ -66,3 +66,20 @@ The standard was applied to Persian UNITY S14:
 - All S14 observations remain UNRESOLVED; no Global IDs, Membership Episodes/Events or Delta Results were fabricated.
 - Raw checkpoint: data/real-snapshots/persian-unity/S14.raw.json.
 - Detailed report: reports/2026-09-28_real-s14-ingestion.md.
+
+## Subsequent Snapshot continuity derivation — 2026-09-28
+
+For a second or later Snapshot in one Clan, the Read Model may derive observed roster changes and supported Snapshot deltas from the adjacent prior Snapshot.
+
+Continuity rule:
+1. Same display name is the initial candidate key.
+2. Stage equality adds 2 points; Stage adjacency by one adds 1 point.
+3. Each exact supported weapon value (25mm, hydra, hellfire) adds 1 point.
+4. Minimum continuity score is 5.
+5. Duplicate-name candidates are matched only when one candidate is uniquely stronger; equal-score ties remain unmatched.
+
+Derived roster changes are observation-level JOIN/LEAVE displays. They do not create Global Player IDs, Membership Episodes, or canonical Membership Events.
+
+Derived deltas are limited to PLAYER_LIFETIME/total_kills and LEAGUE/current_league_clan_medals. Negative monotonic deltas remain ANOMALY; missing baseline remains BASELINE_UNAVAILABLE.
+
+S14 checkpoint: 46 matched observations, 4 observed additions, 2 observed departures, 46 Kill deltas, and 46 Current League Clan Medal deltas. Valid aggregate increases: +145,391 Kills and +9,207,907 Current League Clan Medals.
