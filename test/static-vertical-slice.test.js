@@ -249,3 +249,28 @@ test('Delta projection contract: synthetic S12 deltas remain available to the St
   assert.equal(lifetime.delta, 1191);
   assert.equal(league.delta, 5924);
 });
+
+
+test('Real Persian UNITY S14 checkpoint is represented in Canonical and static projection', () => {
+  const canonical = readCanonical();
+  const snapshot = canonical.snapshots.find((item) => item.snapshot_id === 'S14' && item.clan_id === 'CLAN-PERSIAN-UNITY');
+  assert.ok(snapshot);
+  assert.equal(snapshot.member_count, 50);
+  assert.equal(snapshot.sequence, 2);
+  assert.equal(snapshot.official_timestamp_utc, '2026-09-27T19:30:00.000Z');
+  assert.equal(canonical.resolution_cases.filter((item) => item.observation_id.startsWith('S14::')).length, 50);
+  assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14').length, 50);
+  assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14' && item.identity_resolution_status === 'UNRESOLVED').length, 50);
+  assert.equal(canonical.delta_results.filter((item) => item.current_observation_id?.startsWith('S14::')).length, 0);
+
+  const bundle = buildStaticDataBundle(canonical);
+  const projected = bundle.read_model.snapshots.find((item) => item.snapshot_id === 'S14');
+  assert.ok(projected);
+  assert.equal(projected.members.length, 50);
+  const first = projected.members[0];
+  assert.equal(first.last_online_display, '4m');
+  assert.deepEqual(first.lifetime_medals, { bronze: 2, gold: 2, silver: 4 });
+  assert.deepEqual(first.weapons, { '25mm': 1301, hellfire: 450, hydra: 72 });
+  assert.equal(first.total_kills, 291112);
+  assert.equal(first.current_league_clan_medals, 345257);
+});

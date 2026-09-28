@@ -51,3 +51,16 @@ Persian UNITY / `CLAN-PERSIAN-UNITY`: S13, 48/50, 48 UNRESOLVED observations, 0 
 - UI consumes Read Model values only; missing values remain missing.
 - PERSIA is a presentation/interaction reference only. UCS Canonical and Projection semantics remain authoritative.
 - No new Canonical collection or projection field was introduced by the final UX/UI hardening.
+
+
+## S14 current real checkpoint — 2026-09-28
+Persian UNITY / S14 is the latest Canonical Snapshot:
+- 50/50 roster.
+- 50 UNRESOLVED observations.
+- 50 Resolution Cases.
+- 0 Global IDs.
+- 0 Membership Episodes/Events.
+- 0 Delta Results.
+- Evidence: EV-REAL-PERSIAN-UNITY-S14.
+- Raw evidence checkpoint: data/real-snapshots/persian-unity/S14.raw.json.
+- Report: reports/2026-09-28_real-s14-ingestion.md.

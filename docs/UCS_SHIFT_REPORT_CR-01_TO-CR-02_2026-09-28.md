@@ -297,3 +297,59 @@ Direct live-browser screenshot verification remains unavailable through the curr
 Re-check live Product + Memory; receive the next real Snapshot ZIP; hash/inventory; confirm actual Snapshot identifier/sequence from Authority/context; compare against S13; preserve unresolved identity where required; derive only contract-supported Membership/Delta; regenerate Static Data; validate; CI/Pages; report and update handoff.
 
 Do not re-ingest S13. Do not assume S14.
+
+
+# FINAL LIVE S14 HANDOFF — 2026-09-28
+Classification: FACT / HANDOFF
+
+## Current Product state
+- Latest real-data ingestion commit: `4b820b9b904945b64c5d2814b6b6fda950960e6f`
+- Static regeneration commit: `230419e120cc1931b3419802fa1d0213ebcd1608`
+- Live main must be re-checked again before the next mutation.
+- S13 remains unchanged.
+- S14 is now the latest real Snapshot for Persian UNITY.
+
+## S14 evidence
+- Official: 2026-09-27T19:30:00Z (5 Mehr 1405, 23:00 Iran)
+- Roster: 50/50
+- ZIP SHA-256: `9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d`
+- Inventory: 58 files
+- Inventory hash: `cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be`
+- 8 Ranking / 50 Profile / 0 duplicate Ranking
+- 50 UNRESOLVED observations
+- 50 Resolution Cases
+- 0 Global IDs
+- 0 Membership Episodes / Events
+- 0 Delta Results
+
+## Required agent reading
+1. `AGENTS.md`
+2. `docs/UCS_AGENT_OPERATIONS.md`
+3. `docs/UCS_SCHEMA_FILE_MAP_V0_1.md`
+4. `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
+5. `reports/2026-09-28_real-s14-ingestion.md`
+6. This shift report
+
+## Important S14 continuity notes
+- Do not overwrite or re-ingest S13.
+- Do not create Global Player IDs from display name, rank, Stage, medals, kills, avatar or one fingerprint.
+- Two S14 observations named «حسن» remain separate because identity is unresolved.
+- S14 roster differences from S13 are not canonical JOIN/LEAVE events.
+- No S14 Delta is materialized until identity/baseline prerequisites are satisfied.
+- Source-native Last Online strings, lifetime Gold/Silver/Bronze, Total Kills, Clan Medals, Profile Total Clan Medals and weapon levels are preserved.
+- Generated static files must remain regenerated from Canonical; never hand-edit them.
+
+## UI
+Dedicated Clan viewer:
+`site/clan.html?clan=CLAN-PERSIAN-UNITY&snapshot=S14`
+Global/Admin remains the only cross-Clan switcher.
+
+## Reports
+- S13: `reports/2026-09-26_real-s13-ingestion.md`
+- S14: `reports/2026-09-28_real-s14-ingestion.md`
+- Agent operations: `docs/UCS_AGENT_OPERATIONS.md`
+- Snapshot intake standard: `docs/UCS_REAL_SNAPSHOT_INGESTION_STANDARD_V0_1.md`
+- Schema/file map: `docs/UCS_SCHEMA_FILE_MAP_V0_1.md`
+
+## Next action for successor
+After CI/Pages validation of this handoff, the next conversation should start from the live HEAD and treat S13 + S14 as historical evidence. The next real Snapshot must be ingested as a new record; identity and membership remain unresolved unless Authority supplies a valid decision.

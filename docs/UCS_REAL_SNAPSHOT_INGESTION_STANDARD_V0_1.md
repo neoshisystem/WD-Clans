@@ -54,3 +54,15 @@ Persian UNITY S13: 4 Mehr 1405, 23:00 Iran = 2026-09-26T19:30:00Z; 48/50; 56 evi
 
 ## UX/UI hardening boundary — 2026-09-28
 UX/UI hardening does not re-ingest, overwrite, renumber or reinterpret an existing Snapshot. S13 was audited as-is because its required observed fields already exist through Canonical -> Projection -> Static. Future real Snapshots remain new historical records and must follow this standard.
+
+
+## S14 application checkpoint — 2026-09-28
+The standard was applied to Persian UNITY S14:
+- Official: 2026-09-27T19:30:00Z.
+- 58-file ZIP: 8 Ranking + 50 Profile, no duplicate Ranking capture.
+- 50/50 roster and 50 correlated Profile records.
+- ZIP SHA-256: 9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d.
+- Inventory hash: cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be.
+- All S14 observations remain UNRESOLVED; no Global IDs, Membership Episodes/Events or Delta Results were fabricated.
+- Raw checkpoint: data/real-snapshots/persian-unity/S14.raw.json.
+- Detailed report: reports/2026-09-28_real-s14-ingestion.md.

@@ -168,3 +168,23 @@ Re-check live main before mutation, then treat S13 as the continuity baseline. D
 - S13 was audited only; no re-ingestion/overwrite occurred.
 - S13 required fields are already complete through Canonical -> Projection -> Static -> UI; no data-layer change was necessary.
 - Detailed report: docs/reports/2026-09-28_cr01-final-ux-ui-grid-hardening.md
+
+
+## S14 checkpoint — 2026-09-28
+Persian UNITY S14 is now the latest real Snapshot:
+- Official: 2026-09-27T19:30:00Z (5 Mehr 1405, 23:00 Iran)
+- Canonical sequence: 2
+- Roster: 50/50
+- Evidence artifact: EV-REAL-PERSIAN-UNITY-S14
+- ZIP SHA-256: 9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d
+- Inventory: 58 files = 8 Ranking captures + 50 Profile cards; 0 duplicate Ranking captures
+- Inventory hash: cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be
+- 50 observations, all UNRESOLVED
+- 50 Resolution Cases
+- 0 Global IDs
+- 0 Membership Episodes / Events
+- 0 S14 delta_results
+- Raw checkpoint: data/real-snapshots/persian-unity/S14.raw.json
+- Report: reports/2026-09-28_real-s14-ingestion.md
+
+S14 source fields include Last Online, lifetime Gold/Silver/Bronze, Total Kills, Profile Total Clan Medals and weapon levels. Do not infer identity, JOIN/LEAVE, or Delta merely from continuity with S13.
