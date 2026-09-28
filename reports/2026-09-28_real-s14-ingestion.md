@@ -62,3 +62,20 @@ Evidence-backed S14 ingestion is complete. Identity and membership remain explic
 - S14 is now included in the published Static Read Model with 50 members.
 - Source-native Last Online and lifetime Gold/Silver/Bronze, Total Kills, Clan Medals and Weapons are present in the projected S14 member records.
 - No S14 Delta Results or Membership Events/Episodes were created.
+
+## Post-Ingestion Continuity Repair — 2026-09-28
+
+S14 ingestion remains unchanged. A separate deterministic S13 → S14 continuity repair was subsequently completed at the Derived Read-Model layer.
+
+- 46 matched observation pairs
+- 4 observed additions
+- 2 observed departures
+- 92 derived Read-Model delta records
+- Valid Total Kills increase: +145,391
+- Valid Current League Clan Medal increase: +9,207,907
+- Identity: UNRESOLVED
+- Global Player IDs: 0
+- Canonical Membership Events: 0
+- Canonical Delta Results: 0
+
+**Boundary:** the 92 continuity delta records are derived Read-Model results only. They do not change the fact that Canonical `delta_results` remains 0.
