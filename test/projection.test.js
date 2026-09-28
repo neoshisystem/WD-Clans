@@ -716,11 +716,11 @@ test('34. projection version is implementation metadata, not Canonical State', (
 test('35. Derived adjacent-Snapshot deltas and roster changes preserve unresolved identity', () => {
   const model = buildCanonical();
   const output = new ProjectionEngine().projectAll(model);
-  const sA2 = output.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S-A2::'));
-  assert.equal(sA2.length, 2);
-  assert.equal(sA2.find((item) => item.metric_key === 'total_kills')?.delta, 200);
-  assert.equal(sA2.find((item) => item.metric_key === 'current_league_clan_medals')?.delta, 20);
-  assert.equal(sA2.every((item) => item.global_player_id === null), true);
+  const sB2 = output.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S-B2::ROW-001'));
+  assert.equal(sB2.length, 2);
+  assert.equal(sB2.find((item) => item.metric_key === 'total_kills')?.delta, 200);
+  assert.equal(sB2.find((item) => item.metric_key === 'current_league_clan_medals')?.delta, 2);
+  assert.equal(sB2.every((item) => item.global_player_id === null), true);
   const sB2Joins = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2' && item.change_type === 'JOIN');
   assert.deepEqual(sB2Joins.map((item) => item.display_name), ['Mystery']);
   assert.equal(model.global_player_identities.length, 2);
