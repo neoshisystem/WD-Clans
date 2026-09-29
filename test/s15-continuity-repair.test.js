@@ -40,7 +40,7 @@ test('S15 fingerprint continuity repair keeps identity unresolved and maps all 5
     const expectedPriorKey = EXPECTED[canonical.observations.find((o) => o.observation_id === resolution.observation_id).source_member_key];
     assert.equal(resolution.signals?.continuity?.assessment_state, 'CONTINUOUS_CANDIDATE');
     assert.equal(resolution.signals?.continuity?.prior_source_member_key, expectedPriorKey);
-    assert.equal(resolution.signals?.continuity?.prior_observation_id, 'S14::R' + String(Number(expectedPriorKey.slice(4))).padStart(3, '0'));
+    assert.equal(resolution.signals?.continuity?.prior_observation_id, 'S14::R' + String(Number(expectedPriorKey.slice(5))).padStart(3, '0'));
     assert.ok(Array.isArray(resolution.signals.continuity.contradictions));
   }
 });
