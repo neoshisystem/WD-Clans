@@ -1,0 +1,38 @@
+{
+  "schema_version": "UCS-S14-CORRECTION/0.1",
+  "correction_id": "CORR-S14-FIELD-SCOPE-2026-09-29",
+  "correction_date_utc": "2026-09-29T13:49:00Z",
+  "snapshot_id": "S14",
+  "clan_id": "CLAN-PERSIAN-UNITY",
+  "authority_status": "APPROVED",
+  "source_artifact": {
+    "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+    "sha256": "9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d",
+    "inventory_count": 58,
+    "inventory_sha256": "cfefc6a5a96985eba187b1d115c901fb2d773578fabfcd18fc6b1f939f4866be"
+  },
+  "reason": "Confirmed S14 extraction field-scope error: current_league_clan_medals was populated from Profile Total Clan Medal Count on source-unequal rows.",
+  "before_raw_sha": "28117bdc557a284a4b408664f6f7816794c17429",
+  "source_field": "Ranking.current_league_clan_medals",
+  "preserved_profile_field": "Profile.profile_total_clan_medal_count",
+  "records": [
+    {"source_member_key":"S14-R09","rank":9,"display_name":"Liam kouhkan","original_value":666927,"corrected_value":168142,"profile_total":666927,"source_ranking":"Screenshot_20260927_224939_War Drone.jpg","source_profile":"Screenshot_20260927_225208_War Drone.jpg"},
+    {"source_member_key":"S14-R17","rank":17,"display_name":"I.Man","original_value":157793,"corrected_value":145714,"profile_total":157793,"source_ranking":"Screenshot_20260927_224950_War Drone.jpg","source_profile":"Screenshot_20260927_225310_War Drone.jpg"},
+    {"source_member_key":"S14-R21","rank":21,"display_name":"hadi.land","original_value":525136,"corrected_value":128106,"profile_total":525136,"source_ranking":"Screenshot_20260927_224950_War Drone.jpg","source_profile":"Screenshot_20260927_225340_War Drone.jpg"},
+    {"source_member_key":"S14-R26","rank":26,"display_name":"H03EIN","original_value":737297,"corrected_value":98989,"profile_total":737297,"source_ranking":"Screenshot_20260927_224958_War Drone.jpg","source_profile":"Screenshot_20260927_225417_War Drone.jpg"},
+    {"source_member_key":"S14-R29","rank":29,"display_name":"Amirhoseinifpv","original_value":680791,"corrected_value":92869,"profile_total":680791,"source_ranking":"Screenshot_20260927_225008_War Drone.jpg","source_profile":"Screenshot_20260927_225439_War Drone.jpg"},
+    {"source_member_key":"S14-R32","rank":32,"display_name":"Hafezi","original_value":681884,"corrected_value":80131,"profile_total":681884,"source_ranking":"Screenshot_20260927_225008_War Drone.jpg","source_profile":"Screenshot_20260927_225518_War Drone.jpg"},
+    {"source_member_key":"S14-R33","rank":33,"display_name":"Mohsen.es68","original_value":741570,"corrected_value":74083,"profile_total":741570,"source_ranking":"Screenshot_20260927_225008_War Drone.jpg","source_profile":"Screenshot_20260927_225526_War Drone.jpg"},
+    {"source_member_key":"S14-R34","rank":34,"display_name":"Uk 🇮🇷💪","original_value":743733,"corrected_value":67748,"profile_total":743733,"source_ranking":"Screenshot_20260927_225008_War Drone.jpg","source_profile":"Screenshot_20260927_225533_War Drone.jpg"},
+    {"source_member_key":"S14-R38","rank":38,"display_name":"حسن","original_value":360252,"corrected_value":56408,"profile_total":360252,"source_ranking":"Screenshot_20260927_225018_War Drone.jpg","source_profile":"Screenshot_20260927_225615_War Drone.jpg"},
+    {"source_member_key":"S14-R39","rank":39,"display_name":"👑Dadashi👑","original_value":1172900,"corrected_value":52869,"profile_total":1172900,"source_ranking":"Screenshot_20260927_225018_War Drone.jpg","source_profile":"Screenshot_20260927_225623_War Drone.jpg"},
+    {"source_member_key":"S14-R40","rank":40,"display_name":"Amin","original_value":407548,"corrected_value":52555,"profile_total":407548,"source_ranking":"Screenshot_20260927_225018_War Drone.jpg","source_profile":"Screenshot_20260927_225631_War Drone.jpg"},
+    {"source_member_key":"S14-R41","rank":41,"display_name":"soltoon","original_value":780661,"corrected_value":52345,"profile_total":780661,"source_ranking":"Screenshot_20260927_225018_War Drone.jpg","source_profile":"Screenshot_20260927_225638_War Drone.jpg"},
+    {"source_member_key":"S14-R42","rank":42,"display_name":"YALALINHO🔥","original_value":198585,"corrected_value":49585,"profile_total":198585,"source_ranking":"Screenshot_20260927_225018_War Drone.jpg","source_profile":"Screenshot_20260927_225653_War Drone.jpg"},
+    {"source_member_key":"S14-R43","rank":43,"display_name":"Nouk","original_value":482848,"corrected_value":48308,"profile_total":482848,"source_ranking":"Screenshot_20260927_225026_War Drone.jpg","source_profile":"Screenshot_20260927_225700_War Drone.jpg"},
+    {"source_member_key":"S14-R45","rank":45,"display_name":"Mahbod_1","original_value":399780,"corrected_value":46539,"profile_total":399780,"source_ranking":"Screenshot_20260927_225026_War Drone.jpg","source_profile":"Screenshot_20260927_225714_War Drone.jpg"},
+    {"source_member_key":"S14-R47","rank":47,"display_name":"حسن","original_value":19450,"corrected_value":18202,"profile_total":19450,"source_ranking":"Screenshot_20260927_225026_War Drone.jpg","source_profile":"Screenshot_20260927_225732_War Drone.jpg"},
+    {"source_member_key":"S14-R48","rank":48,"display_name":"ADNAN","original_value":8226,"corrected_value":8462,"profile_total":8226,"source_ranking":"Screenshot_20260927_225026_War Drone.jpg","source_profile":"Screenshot_20260927_225738_War Drone.jpg"}
+  ],
+  "checkpoint": "S14_RAW_CORRECTION_COMPLETE"
+}
