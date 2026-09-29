@@ -57,11 +57,12 @@ test('S15 fingerprint continuity repair produces 50 matched pairs, no derived ro
   assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals').length, 50);
   assert.equal(changes.length, 0);
 
-  assert.equal(deltas.filter((item) => item.status === 'ANOMALY').length, 14);
+  assert.equal(deltas.filter((item) => item.status === 'ANOMALY').length, 1);
   assert.equal(deltas.filter((item) => item.metric_key === 'total_kills' && item.status === 'ANOMALY').length, 1);
-  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'ANOMALY').length, 13);
+  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'ANOMALY').length, 0);
   assert.equal(deltas.filter((item) => item.metric_key === 'total_kills' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 142263);
-  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 1552379);
+  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').length, 50);
+  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 2258332);
 
   const lifekillsAnomaly = deltas.find((item) => item.metric_key === 'total_kills' && item.status === 'ANOMALY');
   assert.equal(lifekillsAnomaly.current_observation_id, 'S15::R045');
@@ -74,3 +75,5 @@ test('S15 fingerprint continuity repair produces 50 matched pairs, no derived ro
   assert.equal(staticDeltas.length, 100);
   assert.equal(staticChanges.length, 0);
 });
+
+// Historical S14 field-scope repair assertions are covered by test/s14-field-scope-repair.test.js.
