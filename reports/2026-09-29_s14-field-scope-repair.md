@@ -111,6 +111,87 @@ The authorized Raw Extraction correction has completed.
 
 The corrected Raw Extraction remains review-state; this step did not create identity, membership, or delta results.
 
+
+## 7. Checkpoint — CANONICAL_CORRECTION_COMPLETE
+
+- Product main after Canonical correction and continuity-audit refresh: `ebea003df7aa04d9e0c7ca26a9c7bb97bf0f9438` at that stage.
+- Final Canonical blob before the static-only commit: `ebea003df7aa04d9e0c7ca26a9c7bb97bf0f9438`.
+- Exactly 17 S14 observations had `current_league_clan_medals` changed from the authorized original values to the verified Ranking values.
+- No S14 Profile Total or Total Kills values were changed.
+- S15 continuity mapping remained 50 explicit continuous candidates; no Global IDs, Membership Events or Membership Episodes were introduced; `delta_results` remained 0.
+
+## 8. Checkpoint — PROJECTION_REGENERATED
+
+The existing Projection contract was applied to the corrected Canonical state. The 50 S14→S15 continuity pairs remained intact.
+
+For the 17 affected continuity baselines, the Current League comparison values were refreshed. Across the complete S15 snapshot:
+
+- Current League derived deltas: **50 VALID / 0 ANOMALY**
+- Current League valid-delta sum: **+2,258,332**
+- Amin Current League: **52,555 → 52,555 = 0**
+- Amin Total Kills: **91,455 → 91,155 = -300 ANOMALY**
+
+No new Current League anomaly was introduced.
+
+## 9. Checkpoint — STATIC_REGENERATED
+
+- Static regeneration commit on Product main: `210606da9adb5ec5ab1f9e12112d927038fc54fb`
+- Static JSON blob at current main: `d017bf1965debaf481a7fb3afcc8f4bbc2e157ab`
+- Static JS blob at current main: `df77e84613c9556a14eabde58e47fb63ebf1de2c`
+- The committed Static bundle contains the corrected 17 S14 Current League values and the recalculated S15 derived records.
+- The first attempted static commit reconstruction exposed a rank-key formatting mistake; it was corrected before the final main commit. No source/Cannonical regression was introduced by that formatting correction.
+- Static generation/deployment was not allowed to complete validation because the repository test suite failed first in both normal CI and Pages.
+
+## 10. STOP CONDITION — CI FAILURE / REPAIR_BLOCKED
+
+The task is now **BLOCKED** and no further repair or retry will be performed.
+
+### CI
+
+- Workflow: **UCS Foundation Validation**
+- Run: **36568505523** (run #264)
+- Job: **109406319571**
+- Head: `210606da9adb5ec5ab1f9e12112d927038fc54fb`
+- Result: **FAILURE**
+- `npm test`: **237 passed / 1 failed / 238 total**
+- First failing test: `test/static-vertical-slice.test.js:147:12`
+- All later CI steps were skipped because `npm test` failed.
+
+### GitHub Pages
+
+- Workflow: **Deploy UCS Static Site to GitHub Pages**
+- Run: **36568506593** (run #77)
+- Job: **109406323239**
+- Head: `210606da9adb5ec5ab1f9e12112d927038fc54fb`
+- Result: **FAILURE**
+- Failing step: **Validate project** (`npm test`)
+- Static regeneration/deployment steps were skipped.
+
+### Stop decision
+
+Per task Stop Conditions, the failed CI run means the repair cannot be declared complete. No test fix, retry, or additional mutation is executed in this task.
+
+## 11. Current Product State at Block
+
+- Product main: `210606da9adb5ec5ab1f9e12112d927038fc54fb`
+- S14 Raw Extraction: `bb7e8cbf27f68db7e3487bd613432a86307c1195`
+- Canonical: `ebea003df7aa04d9e0c7ca26a9c7bb97bf0f9438`
+- Static JSON: `d017bf1965debaf481a7fb3afcc8f4bbc2e157ab`
+- Static JS: `df77e84613c9556a14eabde58e47fb63ebf1de2c`
+- Evidence ID/hash remains `EV-REAL-PERSIAN-UNITY-S14` / `9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d`.
+- No source artifact bytes were modified.
+- Repair report itself remains the recovery artifact.
+- `VALIDATION_COMPLETE`: **NOT COMPLETED**
+- `CI_COMPLETE`: **completed with FAILURE**
+- `MEMORY_SYNC_COMPLETE`: **NOT COMPLETED**
+- `REPAIR_FINALIZED`: **NOT COMPLETED**
+
+## 12. Final Classification
+
+**REPAIR_BLOCKED**
+
+The data-layer correction and derived-output preparation reached the authorized bounded mutation stage, but the repository validation gate failed. The remaining state must not be treated as a successful repair until the failing test/contract is addressed under a new authorized continuation.
+
 ## 5. Source provenance
 
 The corrected S14 Current League field is sourced from Ranking evidence under `EV-REAL-PERSIAN-UNITY-S14`. The Profile Total field remains sourced from the corresponding Profile evidence. The correction preserves an auditable before/after record rather than silently treating the original stored value as source truth.
