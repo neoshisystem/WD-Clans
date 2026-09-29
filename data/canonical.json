@@ -18626,10 +18626,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 666927,
+              "previous": 168142,
               "current": 205716,
-              "result": "DECREASE",
-              "delta": -461211
+              "result": "INCREASE",
+              "delta": 37574
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
@@ -18640,11 +18640,6 @@
             {
               "signal": "profile_total_clan_medal_count",
               "reason": "membership_episode_metric_decreased_with_no_observed_leave_or_league_boundary_between_S14_and_S15",
-              "delta": -461211
-            },
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
               "delta": -461211
             }
           ],
@@ -19635,10 +19630,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 157793,
+              "previous": 145714,
               "current": 159305,
               "result": "INCREASE",
-              "delta": 1512
+              "delta": 13591
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
@@ -19883,10 +19878,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 525136,
+              "previous": 128106,
               "current": 552172,
               "result": "INCREASE",
-              "delta": 27036
+              "delta": 424066
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
@@ -20503,28 +20498,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 737297,
+              "previous": 98989,
               "current": 131202,
-              "result": "DECREASE",
-              "delta": -606095
+              "result": "INCREASE",
+              "delta": 32213
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -606095
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -20757,28 +20746,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 680791,
+              "previous": 92869,
               "current": 113266,
-              "result": "DECREASE",
-              "delta": -567525
+              "result": "INCREASE",
+              "delta": 20397
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -567525
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -21011,28 +20994,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 399780,
+              "previous": 46539,
               "current": 105090,
-              "result": "DECREASE",
-              "delta": -294690
+              "result": "INCREASE",
+              "delta": 58551
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -294690
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -21141,28 +21118,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 741570,
+              "previous": 74083,
               "current": 102143,
-              "result": "DECREASE",
-              "delta": -639427
+              "result": "INCREASE",
+              "delta": 28060
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -639427
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -21395,28 +21366,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 681884,
+              "previous": 80131,
               "current": 100236,
-              "result": "DECREASE",
-              "delta": -581648
+              "result": "INCREASE",
+              "delta": 20105
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -581648
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -21525,28 +21490,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 743733,
+              "previous": 67748,
               "current": 95998,
-              "result": "DECREASE",
-              "delta": -647735
+              "result": "INCREASE",
+              "delta": 28250
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -647735
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -21903,10 +21862,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 19450,
+              "previous": 18202,
               "current": 73845,
               "result": "INCREASE",
-              "delta": 54395
+              "delta": 55643
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
@@ -22027,28 +21986,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 198585,
+              "previous": 49585,
               "current": 73440,
-              "result": "DECREASE",
-              "delta": -125145
+              "result": "INCREASE",
+              "delta": 23855
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -125145
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -22281,28 +22234,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 780661,
+              "previous": 52345,
               "current": 67810,
-              "result": "DECREASE",
-              "delta": -712851
+              "result": "INCREASE",
+              "delta": 15465
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -712851
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -22411,28 +22358,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 482848,
+              "previous": 48308,
               "current": 67443,
-              "result": "DECREASE",
-              "delta": -415405
+              "result": "INCREASE",
+              "delta": 19135
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -415405
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -22541,28 +22482,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 360252,
+              "previous": 56408,
               "current": 66635,
-              "result": "DECREASE",
-              "delta": -293617
+              "result": "INCREASE",
+              "delta": 10227
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -293617
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -22671,28 +22606,22 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 1172900,
+              "previous": 52869,
               "current": 54869,
-              "result": "DECREASE",
-              "delta": -1118031
+              "result": "INCREASE",
+              "delta": 2000
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
               "note": "No Canonical Membership event inferred."
             }
           },
-          "contradictions": [
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -1118031
-            }
-          ],
+          "contradictions": [],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "CONTINUITY_SUPPORTED"
         }
       }
     },
@@ -22801,10 +22730,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 407548,
+              "previous": 52555,
               "current": 52555,
-              "result": "DECREASE",
-              "delta": -354993
+              "result": "EXACT",
+              "delta": 0
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
@@ -22816,11 +22745,6 @@
               "signal": "total_kills",
               "reason": "monotonicity_contradiction",
               "delta": -300
-            },
-            {
-              "signal": "current_league_clan_medals",
-              "reason": "same_league_metric_decreased",
-              "delta": -354993
             }
           ],
           "evidence_refs": [
@@ -23308,10 +23232,10 @@
               "current_snapshot": "S15"
             },
             "current_league_clan_medals": {
-              "previous": 8226,
+              "previous": 8462,
               "current": 22373,
               "result": "INCREASE",
-              "delta": 14147
+              "delta": 13911
             },
             "membership_continuity": {
               "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
