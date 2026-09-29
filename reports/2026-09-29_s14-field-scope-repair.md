@@ -93,6 +93,24 @@ The report will be advanced only after each state has actually completed:
 - [ ] MEMORY_SYNC_COMPLETE
 - [ ] REPAIR_FINALIZED
 
+## 6. REPAIR checkpoint — S14_RAW_CORRECTION_COMPLETE
+
+The authorized Raw Extraction correction has completed.
+
+- S14 Raw Extraction path: `data/real-snapshots/persian-unity/S14.raw.json`
+- Before blob SHA: `28117bdc557a284a4b408664f6f7816794c17429`
+- After blob SHA: `bb7e8cbf27f68db7e3487bd613432a86307c1195`
+- Exactly 17 `current_league_clan_medals` values changed.
+- Exactly the 17 authorized Ranking values were written.
+- All 17 `profile_total_clan_medal_count` values were preserved.
+- All 17 `total_kills` values were preserved.
+- The 33 out-of-scope S14 Current League records were not changed by the correction operation.
+- Auditable correction sidecar: `data/real-snapshots/persian-unity/S14.correction.json`
+- Sidecar commit: `4fb040b125dc103355dcaab784af433448769c6a`
+- Evidence artifact remains unchanged: `EV-REAL-PERSIAN-UNITY-S14` / SHA-256 `9d0006b7e4e1fafef9598be30bf121632ac1b2caa8c6b7cebe26e99aef42ba9d`.
+
+The corrected Raw Extraction remains review-state; this step did not create identity, membership, or delta results.
+
 ## 5. Source provenance
 
 The corrected S14 Current League field is sourced from Ranking evidence under `EV-REAL-PERSIAN-UNITY-S14`. The Profile Total field remains sourced from the corresponding Profile evidence. The correction preserves an auditable before/after record rather than silently treating the original stored value as source truth.
