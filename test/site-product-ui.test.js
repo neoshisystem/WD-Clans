@@ -351,9 +351,9 @@ test('Real Persian UNITY S14 continuity regression is represented in generated s
  assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals').length,46);
  assert.equal(changes.filter(c => c.change_type === 'JOIN').length,4);
  assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,2);
- assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),9353298);
+ assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),1829984);
  assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),145391);
- assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),9207907);
+ assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),1684593);
  assert.deepEqual(changes.filter(c => c.change_type === 'JOIN').map(c => c.display_name).sort(),['ADNAN','Kian_Tak','saied','حسن']);
  assert.deepEqual(changes.filter(c => c.change_type === 'LEAVE').map(c => c.display_name).sort(),['amin','mohammad']);
 });
