@@ -241,3 +241,57 @@ The failing CI assertion was reproduced from the official workflow log for Run 3
 | S14::R045 Current League delta | 360379 | 7138 |
 
 Resolution is authorized as bounded Static regeneration only; application test and Generator logic are not modified.
+
+
+## 14. VALIDATION GATE CLOSURE ATTEMPT — SERIALIZATION REPAIR AND NEW BLOCKER
+
+### STATIC_REGENERATED
+- The previous reconstructed Static JSON was missing its terminal newline. This was a serialization-only defect introduced by reconstructing the Generator's output from the CI assertion log rather than invoking the Generator in a writable checkout.
+- Current Product commit for the bounded serialization correction: 8eb9d713868bedcf60bf8c1935c6156088d6ad47.
+- Only `site/data/ucs-vertical-slice.json` changed in this corrective step; its content was preserved byte-for-byte and one final LF was restored. 
+- Browser Static already had the required terminal newline and was not changed in this step.
+- No Canonical, Raw Extraction, test, Generator logic, identity, membership, or source evidence was changed.
+
+### VALIDATION_COMPLETE
+**NOT COMPLETED.** The corrected JSON determinism gate itself now passes in CI: `Vertical Slice 5: committed static artifacts equal regenerated output` = PASS.
+
+The same CI run exposed a separate, pre-existing/stale expected-value assertion in the real S14 continuity regression:
+- Test: `test/site-product-ui.test.js:345` — `Real Persian UNITY S14 continuity regression is represented in generated static data`.
+- Failing assertion: `test/site-product-ui.test.js:354:9`.
+- Expected valid S14 delta sum: `9,353,298`.
+- Actual generated Static valid S14 delta sum after the authorized field-scope correction: `1,829,984`.
+- This actual value decomposes to valid Total Kills deltas `145,391` plus valid Current League Clan Medal deltas `1,684,593`.
+- The test's expected Current League component remains `9,207,907`, which is consistent with the pre-correction field-scope state rather than the corrected S14 Canonical state.
+- The test itself was not modified, as expressly prohibited by this task.
+
+### CI_COMPLETE
+- Workflow: UCS Foundation Validation
+- Run: `36573856706` (run #268)
+- Job: `109424302493`
+- Result: **FAILURE**
+- `npm test`: **237 passed / 1 failed / 238 total**.
+- Static determinism test (Vertical Slice 5): **PASS**.
+- The failing test is the S14 continuity regression above.
+- Remaining CI validation steps were skipped after `npm test` failure.
+
+### PAGES
+- Workflow: Deploy UCS Static Site to GitHub Pages
+- Run: `36573856529` (run #79)
+- Job: `109424303258`
+- Result: **FAILURE**
+- Validate project failed on the same `npm test` gate; regeneration and deployment steps were skipped.
+- Pages is downstream of the Product validation failure and was not independently diagnosed as an application/static deployment defect.
+
+### NEW STOP CONDITION
+Per the authorized task, the remaining CI failure is not resolved by changing Static serialization, and the task explicitly forbids modifying the test. Therefore execution stops here with the classification:
+
+**REPAIR_BLOCKED**
+
+No further Product mutation, test modification, Generator modification, retry, or Pages deployment is performed in this task.
+
+### REPAIR_FINALIZED
+- **NOT COMPLETED**. Final classification is **REPAIR_BLOCKED**.
+- Product current main: `8eb9d713868bedcf60bf8c1935c6156088d6ad47`.
+- Canonical remains `ebea003df7aa04d9e0c7ca26a9c7bb97bf0f9438`.
+- Static JSON is now deterministic against the official Generator according to the fresh CI run.
+- S14/S15 data invariants observed in the generated bundle remain: 50 S14 observations, 50 S15 observations, S15 Current League 0 anomalies, Amin Total Kills `-300` ANOMALY, and Canonical `delta_results` = 0.
