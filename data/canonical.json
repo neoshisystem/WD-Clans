@@ -17168,7 +17168,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R01",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R002",
+          "prior_source_member_key": "S14-R02",
+          "current_observation_id": "S15::R001",
+          "core_comparison": {
+            "stage": {
+              "previous": 50,
+              "current": 50,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1056,
+              "current": 1062,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 357,
+              "current": 357,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 94,
+              "current": 94,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 335017,
+              "current": 342360,
+              "result": "INCREASE",
+              "delta": 7343
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 336355,
+              "current": 488220,
+              "result": "INCREASE",
+              "delta": 151865
+            },
+            "role": {
+              "previous": "Leader & MVP",
+              "current": "Leader & MVP",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Cpt. Of Persia",
+              "current": "Cpt. Of Persia",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "cptofpersia",
+              "current": "cptofpersia",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 2,
+              "current": 1,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 336355,
+              "current": 488220,
+              "result": "INCREASE",
+              "delta": 151865
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17181,7 +17292,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R02",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R001",
+          "prior_source_member_key": "S14-R01",
+          "current_observation_id": "S15::R002",
+          "core_comparison": {
+            "stage": {
+              "previous": 69,
+              "current": 69,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1301,
+              "current": 1309,
+              "result": "INCREASE",
+              "delta": 8
+            },
+            "hellfire": {
+              "previous": 450,
+              "current": 454,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 72,
+              "current": 72,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 291112,
+              "current": 297192,
+              "result": "INCREASE",
+              "delta": 6080
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 345257,
+              "current": 480136,
+              "result": "INCREASE",
+              "delta": 134879
+            },
+            "role": {
+              "previous": "Co-Leader",
+              "current": "Co-Leader",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ehsan",
+              "current": "ehsan",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "ehsan",
+              "current": "ehsan",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 1,
+              "current": 2,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 345257,
+              "current": 480136,
+              "result": "INCREASE",
+              "delta": 134879
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17194,7 +17416,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R03",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R003",
+          "prior_source_member_key": "S14-R03",
+          "current_observation_id": "S15::R003",
+          "core_comparison": {
+            "stage": {
+              "previous": 53,
+              "current": 53,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1092,
+              "current": 1100,
+              "result": "INCREASE",
+              "delta": 8
+            },
+            "hellfire": {
+              "previous": 315,
+              "current": 316,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "hydra": {
+              "previous": 57,
+              "current": 57,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 391896,
+              "current": 398514,
+              "result": "INCREASE",
+              "delta": 6618
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 5,
+                "current": 5,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 5,
+                "current": 5,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 297962,
+              "current": 355987,
+              "result": "INCREASE",
+              "delta": 58025
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Alini",
+              "current": "Alini",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "alini",
+              "current": "alini",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 3,
+              "current": 3,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 297962,
+              "current": 355987,
+              "result": "INCREASE",
+              "delta": 58025
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17207,7 +17540,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R04",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R004",
+          "prior_source_member_key": "S14-R04",
+          "current_observation_id": "S15::R004",
+          "core_comparison": {
+            "stage": {
+              "previous": 46,
+              "current": 46,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1026,
+              "current": 1061,
+              "result": "INCREASE",
+              "delta": 35
+            },
+            "hellfire": {
+              "previous": 335,
+              "current": 336,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "hydra": {
+              "previous": 89,
+              "current": 90,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "total_kills": {
+              "previous": 198453,
+              "current": 202102,
+              "result": "INCREASE",
+              "delta": 3649
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 264575,
+              "current": 338501,
+              "result": "INCREASE",
+              "delta": 73926
+            },
+            "role": {
+              "previous": "Elder",
+              "current": "Elder",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "kaveh",
+              "current": "kaveh",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "kaveh",
+              "current": "kaveh",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 4,
+              "current": 4,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 264575,
+              "current": 338501,
+              "result": "INCREASE",
+              "delta": 73926
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17220,7 +17664,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R05",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R007",
+          "prior_source_member_key": "S14-R07",
+          "current_observation_id": "S15::R005",
+          "core_comparison": {
+            "stage": {
+              "previous": 58,
+              "current": 58,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1064,
+              "current": 1079,
+              "result": "INCREASE",
+              "delta": 15
+            },
+            "hellfire": {
+              "previous": 265,
+              "current": 265,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 68,
+              "current": 68,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 281130,
+              "current": 286129,
+              "result": "INCREASE",
+              "delta": 4999
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 211492,
+              "current": 329191,
+              "result": "INCREASE",
+              "delta": 117699
+            },
+            "role": {
+              "previous": "Elder",
+              "current": "Elder",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Commander",
+              "current": "Commander 🇮🇷",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "commander",
+              "current": "commander",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 7,
+              "current": 5,
+              "delta": -2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 211492,
+              "current": 329191,
+              "result": "INCREASE",
+              "delta": 117699
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17233,7 +17788,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R06",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R005",
+          "prior_source_member_key": "S14-R05",
+          "current_observation_id": "S15::R006",
+          "core_comparison": {
+            "stage": {
+              "previous": 29,
+              "current": 29,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 686,
+              "current": 686,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 196,
+              "current": 196,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 60,
+              "current": 62,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 174501,
+              "current": 176351,
+              "result": "INCREASE",
+              "delta": 1850
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 227779,
+              "current": 297647,
+              "result": "INCREASE",
+              "delta": 69868
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "paradise",
+              "current": "paradise",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "paradise",
+              "current": "paradise",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 5,
+              "current": 6,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 227779,
+              "current": 297647,
+              "result": "INCREASE",
+              "delta": 69868
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17246,7 +17912,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R07",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R008",
+          "prior_source_member_key": "S14-R08",
+          "current_observation_id": "S15::R007",
+          "core_comparison": {
+            "stage": {
+              "previous": 26,
+              "current": 27,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "25mm": {
+              "previous": 628,
+              "current": 628,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 258,
+              "current": 258,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 63,
+              "current": 63,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 183867,
+              "current": 189730,
+              "result": "INCREASE",
+              "delta": 5863
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 199994,
+              "current": 286994,
+              "result": "INCREASE",
+              "delta": 87000
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Eren",
+              "current": "Eren",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "eren",
+              "current": "eren",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 8,
+              "current": 7,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 199994,
+              "current": 286994,
+              "result": "INCREASE",
+              "delta": 87000
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17259,7 +18036,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R08",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R006",
+          "prior_source_member_key": "S14-R06",
+          "current_observation_id": "S15::R008",
+          "core_comparison": {
+            "stage": {
+              "previous": 46,
+              "current": 46,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1130,
+              "current": 1140,
+              "result": "INCREASE",
+              "delta": 10
+            },
+            "hellfire": {
+              "previous": 275,
+              "current": 277,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "hydra": {
+              "previous": 64,
+              "current": 64,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 116073,
+              "current": 117599,
+              "result": "INCREASE",
+              "delta": 1526
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 212131,
+              "current": 259699,
+              "result": "INCREASE",
+              "delta": 47568
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ALI",
+              "current": "ALI 🇮🇷",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "ali",
+              "current": "ali",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 6,
+              "current": 8,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 212131,
+              "current": 259699,
+              "result": "INCREASE",
+              "delta": 47568
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17272,7 +18160,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R09",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R010",
+          "prior_source_member_key": "S14-R10",
+          "current_observation_id": "S15::R009",
+          "core_comparison": {
+            "stage": {
+              "previous": 23,
+              "current": 24,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "25mm": {
+              "previous": 501,
+              "current": 522,
+              "result": "INCREASE",
+              "delta": 21
+            },
+            "hellfire": {
+              "previous": 232,
+              "current": 232,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 49,
+              "current": 49,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 95244,
+              "current": 98808,
+              "result": "INCREASE",
+              "delta": 3564
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 167384,
+              "current": 215178,
+              "result": "INCREASE",
+              "delta": 47794
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "PERSIAN TIGER",
+              "current": "PERSIAN TIGER 🇮🇷",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "persiantiger",
+              "current": "persiantiger",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 10,
+              "current": 9,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 167384,
+              "current": 215178,
+              "result": "INCREASE",
+              "delta": 47794
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17285,7 +18284,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R10",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R011",
+          "prior_source_member_key": "S14-R11",
+          "current_observation_id": "S15::R010",
+          "core_comparison": {
+            "stage": {
+              "previous": 57,
+              "current": 57,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1065,
+              "current": 1068,
+              "result": "INCREASE",
+              "delta": 3
+            },
+            "hellfire": {
+              "previous": 304,
+              "current": 304,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 54,
+              "current": 54,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 263696,
+              "current": 266181,
+              "result": "INCREASE",
+              "delta": 2485
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 6,
+                "current": 6,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 166524,
+              "current": 211485,
+              "result": "INCREASE",
+              "delta": 44961
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "F 35 🇮🇷",
+              "current": "🇮🇷 F 35 🇮🇷",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "f35",
+              "current": "f35",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 11,
+              "current": 10,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 166524,
+              "current": 211485,
+              "result": "INCREASE",
+              "delta": 44961
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17298,7 +18408,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R11",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R014",
+          "prior_source_member_key": "S14-R14",
+          "current_observation_id": "S15::R011",
+          "core_comparison": {
+            "stage": {
+              "previous": 38,
+              "current": 38,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 842,
+              "current": 842,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 216,
+              "current": 216,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 69,
+              "current": 69,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 156314,
+              "current": 160072,
+              "result": "INCREASE",
+              "delta": 3758
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 151123,
+              "current": 210352,
+              "result": "INCREASE",
+              "delta": 59229
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Ardalan",
+              "current": "Ardalan",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "ardalan",
+              "current": "ardalan",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 14,
+              "current": 11,
+              "delta": -3
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 151123,
+              "current": 210352,
+              "result": "INCREASE",
+              "delta": 59229
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17311,7 +18532,129 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R12",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R009",
+          "prior_source_member_key": "S14-R09",
+          "current_observation_id": "S15::R012",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 28,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 726,
+              "current": 732,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 224,
+              "current": 224,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 87,
+              "current": 89,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 163012,
+              "current": 172189,
+              "result": "INCREASE",
+              "delta": 9177
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 666927,
+              "current": 205716,
+              "result": "DECREASE",
+              "delta": -461211
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Liam kouhkan",
+              "current": "Liam kouhkan",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "liamkouhkan",
+              "current": "liamkouhkan",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 9,
+              "current": 12,
+              "delta": 3
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 666927,
+              "current": 205716,
+              "result": "DECREASE",
+              "delta": -461211
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "profile_total_clan_medal_count",
+              "reason": "membership_episode_metric_decreased_with_no_observed_leave_or_league_boundary_between_S14_and_S15",
+              "delta": -461211
+            },
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -461211
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17324,7 +18667,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R13",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R018",
+          "prior_source_member_key": "S14-R18",
+          "current_observation_id": "S15::R013",
+          "core_comparison": {
+            "stage": {
+              "previous": 49,
+              "current": 49,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 936,
+              "current": 936,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 329,
+              "current": 329,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 63,
+              "current": 63,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 179648,
+              "current": 181646,
+              "result": "INCREASE",
+              "delta": 1998
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 5,
+                "current": 5,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 145105,
+              "current": 197714,
+              "result": "INCREASE",
+              "delta": 52609
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "NaViD",
+              "current": "NaViD",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "navid",
+              "current": "navid",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 18,
+              "current": 13,
+              "delta": -5
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 145105,
+              "current": 197714,
+              "result": "INCREASE",
+              "delta": 52609
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17337,7 +18791,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R14",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R013",
+          "prior_source_member_key": "S14-R13",
+          "current_observation_id": "S15::R014",
+          "core_comparison": {
+            "stage": {
+              "previous": 14,
+              "current": 14,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 346,
+              "current": 352,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 144,
+              "current": 144,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 60,
+              "current": 62,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 99586,
+              "current": 104651,
+              "result": "INCREASE",
+              "delta": 5065
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 155423,
+              "current": 194571,
+              "result": "INCREASE",
+              "delta": 39148
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "behrang",
+              "current": "behrang",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "behrang",
+              "current": "behrang",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 13,
+              "current": 14,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 155423,
+              "current": 194571,
+              "result": "INCREASE",
+              "delta": 39148
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17350,7 +18915,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R15",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R022",
+          "prior_source_member_key": "S14-R22",
+          "current_observation_id": "S15::R015",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 28,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 922,
+              "current": 950,
+              "result": "INCREASE",
+              "delta": 28
+            },
+            "hellfire": {
+              "previous": 270,
+              "current": 275,
+              "result": "INCREASE",
+              "delta": 5
+            },
+            "hydra": {
+              "previous": 76,
+              "current": 76,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 154918,
+              "current": 161228,
+              "result": "INCREASE",
+              "delta": 6310
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 126590,
+              "current": 191066,
+              "result": "INCREASE",
+              "delta": 64476
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "SORENA",
+              "current": "SORENA 🏹",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "sorena",
+              "current": "sorena",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 22,
+              "current": 15,
+              "delta": -7
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 126590,
+              "current": 191066,
+              "result": "INCREASE",
+              "delta": 64476
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17363,7 +19039,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R16",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R012",
+          "prior_source_member_key": "S14-R12",
+          "current_observation_id": "S15::R016",
+          "core_comparison": {
+            "stage": {
+              "previous": 64,
+              "current": 64,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1167,
+              "current": 1175,
+              "result": "INCREASE",
+              "delta": 8
+            },
+            "hellfire": {
+              "previous": 394,
+              "current": 394,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 86,
+              "current": 86,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 270693,
+              "current": 273064,
+              "result": "INCREASE",
+              "delta": 2371
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 5,
+                "current": 5,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 166416,
+              "current": 189679,
+              "result": "INCREASE",
+              "delta": 23263
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Worker Ant",
+              "current": "Worker Ant 🐜",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "workerant",
+              "current": "workerant",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 12,
+              "current": 16,
+              "delta": 4
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 166416,
+              "current": 189679,
+              "result": "INCREASE",
+              "delta": 23263
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17376,7 +19163,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R17",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R015",
+          "prior_source_member_key": "S14-R15",
+          "current_observation_id": "S15::R017",
+          "core_comparison": {
+            "stage": {
+              "previous": 25,
+              "current": 25,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 466,
+              "current": 466,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 247,
+              "current": 247,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 58,
+              "current": 58,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 135987,
+              "current": 139280,
+              "result": "INCREASE",
+              "delta": 3293
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 150576,
+              "current": 188014,
+              "result": "INCREASE",
+              "delta": 37438
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Tjk001",
+              "current": "Tjk001",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "tjk001",
+              "current": "tjk001",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 15,
+              "current": 17,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 150576,
+              "current": 188014,
+              "result": "INCREASE",
+              "delta": 37438
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17389,7 +19287,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R18",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R019",
+          "prior_source_member_key": "S14-R19",
+          "current_observation_id": "S15::R018",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 28,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 591,
+              "current": 591,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 253,
+              "current": 253,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 58,
+              "current": 58,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 199048,
+              "current": 201082,
+              "result": "INCREASE",
+              "delta": 2034
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 137324,
+              "current": 171190,
+              "result": "INCREASE",
+              "delta": 33866
+            },
+            "role": {
+              "previous": "Co-Leader",
+              "current": "Co-Leader",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "hisystem",
+              "current": "hissystem",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "hisystem",
+              "current": "hissystem",
+              "result": "DIFFERENT"
+            },
+            "rank": {
+              "previous": 19,
+              "current": 18,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 137324,
+              "current": 171190,
+              "result": "INCREASE",
+              "delta": 33866
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17402,7 +19411,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R19",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R020",
+          "prior_source_member_key": "S14-R20",
+          "current_observation_id": "S15::R019",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 28,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 524,
+              "current": 524,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 199,
+              "current": 203,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 30,
+              "current": 30,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 141411,
+              "current": 145058,
+              "result": "INCREASE",
+              "delta": 3647
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 0,
+                "result": "DECREASE",
+                "delta": -2
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 133689,
+              "current": 161486,
+              "result": "INCREASE",
+              "delta": 27797
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ایرانی باوقار",
+              "current": "ایرانی باوقار",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "ایرانیباوقار",
+              "current": "ایرانیباوقار",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 20,
+              "current": 19,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 133689,
+              "current": 161486,
+              "result": "INCREASE",
+              "delta": 27797
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "bronze",
+              "reason": "monotonicity_contradiction",
+              "delta": -2
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17415,7 +19541,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R20",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R017",
+          "prior_source_member_key": "S14-R17",
+          "current_observation_id": "S15::R020",
+          "core_comparison": {
+            "stage": {
+              "previous": 15,
+              "current": 15,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 300,
+              "current": 300,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 135,
+              "current": 135,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 30,
+              "current": 30,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 46671,
+              "current": 48413,
+              "result": "INCREASE",
+              "delta": 1742
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 157793,
+              "current": 171384,
+              "result": "INCREASE",
+              "delta": 13591
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "I.Man",
+              "current": "I.Man",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "iman",
+              "current": "iman",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 17,
+              "current": 20,
+              "delta": 3
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 157793,
+              "current": 159305,
+              "result": "INCREASE",
+              "delta": 1512
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17428,7 +19665,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R21",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R025",
+          "prior_source_member_key": "S14-R25",
+          "current_observation_id": "S15::R021",
+          "core_comparison": {
+            "stage": {
+              "previous": 32,
+              "current": 32,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 716,
+              "current": 724,
+              "result": "INCREASE",
+              "delta": 8
+            },
+            "hellfire": {
+              "previous": 190,
+              "current": 190,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 42,
+              "current": 42,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 142198,
+              "current": 145755,
+              "result": "INCREASE",
+              "delta": 3557
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 99566,
+              "current": 155455,
+              "result": "INCREASE",
+              "delta": 55889
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "hamed_ir",
+              "current": "hamed ir",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "hamedir",
+              "current": "hamedir",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 25,
+              "current": 21,
+              "delta": -4
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 99566,
+              "current": 155455,
+              "result": "INCREASE",
+              "delta": 55889
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17441,7 +19789,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R22",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R021",
+          "prior_source_member_key": "S14-R21",
+          "current_observation_id": "S15::R022",
+          "core_comparison": {
+            "stage": {
+              "previous": 39,
+              "current": 39,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 737,
+              "current": 743,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 267,
+              "current": 267,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 36,
+              "current": 38,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 141969,
+              "current": 145665,
+              "result": "INCREASE",
+              "delta": 3696
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 525136,
+              "current": 552172,
+              "result": "INCREASE",
+              "delta": 27036
+            },
+            "role": {
+              "previous": "Member & MVP",
+              "current": "Member & MVP",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "hadi.land",
+              "current": "hadi,land",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "hadiland",
+              "current": "hadiland",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 21,
+              "current": 22,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 525136,
+              "current": 552172,
+              "result": "INCREASE",
+              "delta": 27036
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17454,7 +19913,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R23",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R016",
+          "prior_source_member_key": "S14-R16",
+          "current_observation_id": "S15::R023",
+          "core_comparison": {
+            "stage": {
+              "previous": 50,
+              "current": 50,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1104,
+              "current": 1110,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 389,
+              "current": 389,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 80,
+              "current": 82,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 227908,
+              "current": 228843,
+              "result": "INCREASE",
+              "delta": 935
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 147258,
+              "current": 154680,
+              "result": "INCREASE",
+              "delta": 7422
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "RADMAN",
+              "current": "RADMAN",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "radman",
+              "current": "radman",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 16,
+              "current": 23,
+              "delta": 7
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 147258,
+              "current": 154680,
+              "result": "INCREASE",
+              "delta": 7422
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17467,7 +20037,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R24",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R023",
+          "prior_source_member_key": "S14-R23",
+          "current_observation_id": "S15::R024",
+          "core_comparison": {
+            "stage": {
+              "previous": 34,
+              "current": 34,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 686,
+              "current": 691,
+              "result": "INCREASE",
+              "delta": 5
+            },
+            "hellfire": {
+              "previous": 267,
+              "current": 269,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "hydra": {
+              "previous": 53,
+              "current": 53,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 143428,
+              "current": 145279,
+              "result": "INCREASE",
+              "delta": 1851
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 125734,
+              "current": 140741,
+              "result": "INCREASE",
+              "delta": 15007
+            },
+            "role": {
+              "previous": "Elder",
+              "current": "Elder",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Dariush",
+              "current": "Dariush",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "dariush",
+              "current": "dariush",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 23,
+              "current": 24,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 125734,
+              "current": 140741,
+              "result": "INCREASE",
+              "delta": 15007
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17480,7 +20161,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R25",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R027",
+          "prior_source_member_key": "S14-R27",
+          "current_observation_id": "S15::R025",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 29,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "25mm": {
+              "previous": 622,
+              "current": 650,
+              "result": "INCREASE",
+              "delta": 28
+            },
+            "hellfire": {
+              "previous": 250,
+              "current": 260,
+              "result": "INCREASE",
+              "delta": 10
+            },
+            "hydra": {
+              "previous": 40,
+              "current": 40,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 106705,
+              "current": 112009,
+              "result": "INCREASE",
+              "delta": 5304
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 96621,
+              "current": 138307,
+              "result": "INCREASE",
+              "delta": 41686
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "boz gurd",
+              "current": "boz gurd",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "bozgurd",
+              "current": "bozgurd",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 27,
+              "current": 25,
+              "delta": -2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 96621,
+              "current": 138307,
+              "result": "INCREASE",
+              "delta": 41686
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17493,7 +20285,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R26",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R024",
+          "prior_source_member_key": "S14-R24",
+          "current_observation_id": "S15::R026",
+          "core_comparison": {
+            "stage": {
+              "previous": 38,
+              "current": 38,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 701,
+              "current": 706,
+              "result": "INCREASE",
+              "delta": 5
+            },
+            "hellfire": {
+              "previous": 181,
+              "current": 181,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 60,
+              "current": 60,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 96161,
+              "current": 97970,
+              "result": "INCREASE",
+              "delta": 1809
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 115347,
+              "current": 133953,
+              "result": "INCREASE",
+              "delta": 18606
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ایران",
+              "current": "ایران",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "ایران",
+              "current": "ایران",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 24,
+              "current": 26,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 115347,
+              "current": 133953,
+              "result": "INCREASE",
+              "delta": 18606
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17506,7 +20409,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R27",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R026",
+          "prior_source_member_key": "S14-R26",
+          "current_observation_id": "S15::R027",
+          "core_comparison": {
+            "stage": {
+              "previous": 39,
+              "current": 39,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 723,
+              "current": 729,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 348,
+              "current": 348,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 52,
+              "current": 52,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 107394,
+              "current": 109472,
+              "result": "INCREASE",
+              "delta": 2078
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 737297,
+              "current": 769510,
+              "result": "INCREASE",
+              "delta": 32213
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "H03E1N",
+              "current": "H03EIN",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "h03e1n",
+              "current": "h03ein",
+              "result": "DIFFERENT"
+            },
+            "rank": {
+              "previous": 26,
+              "current": 27,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 737297,
+              "current": 131202,
+              "result": "DECREASE",
+              "delta": -606095
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -606095
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17519,7 +20539,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R28",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R030",
+          "prior_source_member_key": "S14-R30",
+          "current_observation_id": "S15::R028",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 29,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "25mm": {
+              "previous": 617,
+              "current": 627,
+              "result": "INCREASE",
+              "delta": 10
+            },
+            "hellfire": {
+              "previous": 211,
+              "current": 216,
+              "result": "INCREASE",
+              "delta": 5
+            },
+            "hydra": {
+              "previous": 40,
+              "current": 40,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 109711,
+              "current": 113155,
+              "result": "INCREASE",
+              "delta": 3444
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 89258,
+              "current": 122360,
+              "result": "INCREASE",
+              "delta": 33102
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Harpy☁️",
+              "current": "Harpy☁️",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "harpy",
+              "current": "harpy",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 30,
+              "current": 28,
+              "delta": -2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 89258,
+              "current": 122360,
+              "result": "INCREASE",
+              "delta": 33102
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17532,7 +20663,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R29",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R029",
+          "prior_source_member_key": "S14-R29",
+          "current_observation_id": "S15::R029",
+          "core_comparison": {
+            "stage": {
+              "previous": 38,
+              "current": 38,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 756,
+              "current": 759,
+              "result": "INCREASE",
+              "delta": 3
+            },
+            "hellfire": {
+              "previous": 385,
+              "current": 385,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 56,
+              "current": 56,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 119235,
+              "current": 120399,
+              "result": "INCREASE",
+              "delta": 1164
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 680791,
+              "current": 701188,
+              "result": "INCREASE",
+              "delta": 20397
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Amirhoseinifpy",
+              "current": "Amirhoseinifpv",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "amirhoseinifpy",
+              "current": "amirhoseinifpv",
+              "result": "DIFFERENT"
+            },
+            "rank": {
+              "previous": 29,
+              "current": 29,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 680791,
+              "current": 113266,
+              "result": "DECREASE",
+              "delta": -567525
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -567525
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17545,7 +20793,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R30",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R028",
+          "prior_source_member_key": "S14-R28",
+          "current_observation_id": "S15::R030",
+          "core_comparison": {
+            "stage": {
+              "previous": 25,
+              "current": 25,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 521,
+              "current": 525,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hellfire": {
+              "previous": 164,
+              "current": 164,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 43,
+              "current": 43,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 93297,
+              "current": 94485,
+              "result": "INCREASE",
+              "delta": 1188
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 94324,
+              "current": 111454,
+              "result": "INCREASE",
+              "delta": 17130
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member & MVP",
+              "result": "DIFFERENT"
+            },
+            "display_name": {
+              "previous": "reza1009",
+              "current": "reza1009",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "reza1009",
+              "current": "reza1009",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 28,
+              "current": 30,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 94324,
+              "current": 111454,
+              "result": "INCREASE",
+              "delta": 17130
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17558,7 +20917,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R31",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R045",
+          "prior_source_member_key": "S14-R45",
+          "current_observation_id": "S15::R031",
+          "core_comparison": {
+            "stage": {
+              "previous": 23,
+              "current": 23,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 496,
+              "current": 496,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 120,
+              "current": 120,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 48,
+              "current": 48,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 50506,
+              "current": 51334,
+              "result": "INCREASE",
+              "delta": 828
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 399780,
+              "current": 458331,
+              "result": "INCREASE",
+              "delta": 58551
+            },
+            "role": {
+              "previous": "Elder",
+              "current": "Elder",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Mahbod_1",
+              "current": "Mahbod_1",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "mahbod1",
+              "current": "mahbod1",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 45,
+              "current": 31,
+              "delta": -14
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 399780,
+              "current": 105090,
+              "result": "DECREASE",
+              "delta": -294690
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -294690
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17571,7 +21047,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R32",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R033",
+          "prior_source_member_key": "S14-R33",
+          "current_observation_id": "S15::R032",
+          "core_comparison": {
+            "stage": {
+              "previous": 78,
+              "current": 78,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1439,
+              "current": 1440,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "hellfire": {
+              "previous": 489,
+              "current": 489,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 55,
+              "current": 55,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 184082,
+              "current": 186186,
+              "result": "INCREASE",
+              "delta": 2104
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 741570,
+              "current": 769630,
+              "result": "INCREASE",
+              "delta": 28060
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Mohsen.es68",
+              "current": "Mohsen.es68",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "mohsenes68",
+              "current": "mohsenes68",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 33,
+              "current": 32,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 741570,
+              "current": 102143,
+              "result": "DECREASE",
+              "delta": -639427
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -639427
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17584,7 +21177,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R33",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R031",
+          "prior_source_member_key": "S14-R31",
+          "current_observation_id": "S15::R033",
+          "core_comparison": {
+            "stage": {
+              "previous": 28,
+              "current": 28,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 611,
+              "current": 617,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 236,
+              "current": 240,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 61,
+              "current": 63,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 119270,
+              "current": 123046,
+              "result": "INCREASE",
+              "delta": 3776
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 86278,
+              "current": 101743,
+              "result": "INCREASE",
+              "delta": 15465
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "سید حیدر ۳۱۳",
+              "current": "سید حیدر ۳۱۳",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "سیدحیدر۳۱۳",
+              "current": "سیدحیدر۳۱۳",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 31,
+              "current": 33,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 86278,
+              "current": 101743,
+              "result": "INCREASE",
+              "delta": 15465
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17597,7 +21301,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R34",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R032",
+          "prior_source_member_key": "S14-R32",
+          "current_observation_id": "S15::R034",
+          "core_comparison": {
+            "stage": {
+              "previous": 40,
+              "current": 40,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 821,
+              "current": 827,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 210,
+              "current": 214,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 68,
+              "current": 70,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "total_kills": {
+              "previous": 109051,
+              "current": 109916,
+              "result": "INCREASE",
+              "delta": 865
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 681884,
+              "current": 701989,
+              "result": "INCREASE",
+              "delta": 20105
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Hafezi",
+              "current": "Hafezi",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "hafezi",
+              "current": "hafezi",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 32,
+              "current": 34,
+              "delta": 2
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 681884,
+              "current": 100236,
+              "result": "DECREASE",
+              "delta": -581648
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -581648
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17610,7 +21431,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R35",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R034",
+          "prior_source_member_key": "S14-R34",
+          "current_observation_id": "S15::R035",
+          "core_comparison": {
+            "stage": {
+              "previous": 41,
+              "current": 41,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 776,
+              "current": 776,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 311,
+              "current": 311,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 57,
+              "current": 57,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 131660,
+              "current": 133004,
+              "result": "INCREASE",
+              "delta": 1344
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 4,
+                "result": "INCREASE",
+                "delta": 1
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 743733,
+              "current": 771983,
+              "result": "INCREASE",
+              "delta": 28250
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Uk 🇮🇷💪",
+              "current": "Uk 🇮🇷💪",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "uk",
+              "current": "uk",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 34,
+              "current": 35,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 743733,
+              "current": 95998,
+              "result": "DECREASE",
+              "delta": -647735
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -647735
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17623,7 +21561,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R36",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R035",
+          "prior_source_member_key": "S14-R35",
+          "current_observation_id": "S15::R036",
+          "core_comparison": {
+            "stage": {
+              "previous": 14,
+              "current": 14,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 308,
+              "current": 308,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 132,
+              "current": 136,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 32,
+              "current": 32,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 50560,
+              "current": 51912,
+              "result": "INCREASE",
+              "delta": 1352
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 63980,
+              "current": 84270,
+              "result": "INCREASE",
+              "delta": 20290
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "hamid.iran🇮🇷",
+              "current": "hamid.iran🇮🇷",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "hamidiran",
+              "current": "hamidiran",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 35,
+              "current": 36,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 63980,
+              "current": 84270,
+              "result": "INCREASE",
+              "delta": 20290
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17636,7 +21685,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R37",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R037",
+          "prior_source_member_key": "S14-R37",
+          "current_observation_id": "S15::R037",
+          "core_comparison": {
+            "stage": {
+              "previous": 26,
+              "current": 26,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 547,
+              "current": 550,
+              "result": "INCREASE",
+              "delta": 3
+            },
+            "hellfire": {
+              "previous": 184,
+              "current": 184,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 27,
+              "current": 27,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 100003,
+              "current": 101000,
+              "result": "INCREASE",
+              "delta": 997
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 62305,
+              "current": 74011,
+              "result": "INCREASE",
+              "delta": 11706
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Elvin",
+              "current": "Elvin",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "elvin",
+              "current": "elvin",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 37,
+              "current": 37,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 62305,
+              "current": 74011,
+              "result": "INCREASE",
+              "delta": 11706
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17649,7 +21809,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R38",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R047",
+          "prior_source_member_key": "S14-R47",
+          "current_observation_id": "S15::R038",
+          "core_comparison": {
+            "stage": {
+              "previous": 10,
+              "current": 10,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 263,
+              "current": 263,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 84,
+              "current": 84,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 46,
+              "current": 46,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 239334,
+              "current": 249964,
+              "result": "INCREASE",
+              "delta": 10630
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 19450,
+              "current": 73845,
+              "result": "INCREASE",
+              "delta": 54395
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "حسن",
+              "current": "حسین",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "حسن",
+              "current": "حسین",
+              "result": "DIFFERENT"
+            },
+            "rank": {
+              "previous": 47,
+              "current": 38,
+              "delta": -9
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 19450,
+              "current": 73845,
+              "result": "INCREASE",
+              "delta": 54395
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17662,7 +21933,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R39",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R042",
+          "prior_source_member_key": "S14-R42",
+          "current_observation_id": "S15::R039",
+          "core_comparison": {
+            "stage": {
+              "previous": 54,
+              "current": 54,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1001,
+              "current": 1001,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 211,
+              "current": 211,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 52,
+              "current": 52,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 153608,
+              "current": 155631,
+              "result": "INCREASE",
+              "delta": 2023
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 198585,
+              "current": 222440,
+              "result": "INCREASE",
+              "delta": 23855
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "YALALINHO🔥",
+              "current": "YALALINHO🔥",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "yalalinho",
+              "current": "yalalinho",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 42,
+              "current": 39,
+              "delta": -3
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 198585,
+              "current": 73440,
+              "result": "DECREASE",
+              "delta": -125145
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -125145
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17675,7 +22063,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R40",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R036",
+          "prior_source_member_key": "S14-R36",
+          "current_observation_id": "S15::R040",
+          "core_comparison": {
+            "stage": {
+              "previous": 30,
+              "current": 30,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 589,
+              "current": 589,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 276,
+              "current": 276,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 51,
+              "current": 51,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 109807,
+              "current": 110664,
+              "result": "INCREASE",
+              "delta": 857
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 63655,
+              "current": 73212,
+              "result": "INCREASE",
+              "delta": 9557
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ErFaN.m279",
+              "current": "ErFaN.m279",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "erfanm279",
+              "current": "erfanm279",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 36,
+              "current": 40,
+              "delta": 4
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 63655,
+              "current": 73212,
+              "result": "INCREASE",
+              "delta": 9557
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17688,7 +22187,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R41",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R041",
+          "prior_source_member_key": "S14-R41",
+          "current_observation_id": "S15::R041",
+          "core_comparison": {
+            "stage": {
+              "previous": 38,
+              "current": 38,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1000,
+              "current": 1000,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 170,
+              "current": 174,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 53,
+              "current": 53,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 144287,
+              "current": 145252,
+              "result": "INCREASE",
+              "delta": 965
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 780661,
+              "current": 796126,
+              "result": "INCREASE",
+              "delta": 15465
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "soltoon",
+              "current": "♕soltoon♕",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "soltoon",
+              "current": "soltoon",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 41,
+              "current": 41,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 780661,
+              "current": 67810,
+              "result": "DECREASE",
+              "delta": -712851
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -712851
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17701,7 +22317,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R42",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R043",
+          "prior_source_member_key": "S14-R43",
+          "current_observation_id": "S15::R042",
+          "core_comparison": {
+            "stage": {
+              "previous": 37,
+              "current": 37,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 670,
+              "current": 676,
+              "result": "INCREASE",
+              "delta": 6
+            },
+            "hellfire": {
+              "previous": 267,
+              "current": 267,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 81,
+              "current": 81,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 108547,
+              "current": 109737,
+              "result": "INCREASE",
+              "delta": 1190
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 482848,
+              "current": 501983,
+              "result": "INCREASE",
+              "delta": 19135
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Nouk",
+              "current": "Nouk",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "nouk",
+              "current": "nouk",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 43,
+              "current": 42,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 482848,
+              "current": 67443,
+              "result": "DECREASE",
+              "delta": -415405
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -415405
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17714,7 +22447,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R43",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R038",
+          "prior_source_member_key": "S14-R38",
+          "current_observation_id": "S15::R043",
+          "core_comparison": {
+            "stage": {
+              "previous": 48,
+              "current": 48,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 886,
+              "current": 886,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 320,
+              "current": 320,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 68,
+              "current": 68,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 168127,
+              "current": 168420,
+              "result": "INCREASE",
+              "delta": 293
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 5,
+                "current": 5,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 7,
+                "current": 7,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 6,
+                "current": 6,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 360252,
+              "current": 370479,
+              "result": "INCREASE",
+              "delta": 10227
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "حسن",
+              "current": "حسن",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "حسن",
+              "current": "حسن",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 38,
+              "current": 43,
+              "delta": 5
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 360252,
+              "current": 66635,
+              "result": "DECREASE",
+              "delta": -293617
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -293617
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17727,7 +22577,124 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R44",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R039",
+          "prior_source_member_key": "S14-R39",
+          "current_observation_id": "S15::R044",
+          "core_comparison": {
+            "stage": {
+              "previous": 64,
+              "current": 64,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 1153,
+              "current": 1153,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 384,
+              "current": 384,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 99,
+              "current": 99,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 217535,
+              "current": 217535,
+              "result": "EXACT",
+              "delta": 0
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 1172900,
+              "current": 1174900,
+              "result": "INCREASE",
+              "delta": 2000
+            },
+            "role": {
+              "previous": "Elder",
+              "current": "Elder",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "👑Dadashi👑",
+              "current": "👑Dadashi👑",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "dadashi",
+              "current": "dadashi",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 39,
+              "current": 44,
+              "delta": 5
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 1172900,
+              "current": 54869,
+              "result": "DECREASE",
+              "delta": -1118031
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -1118031
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17740,7 +22707,129 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R45",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R040",
+          "prior_source_member_key": "S14-R40",
+          "current_observation_id": "S15::R045",
+          "core_comparison": {
+            "stage": {
+              "previous": 43,
+              "current": 43,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 762,
+              "current": 762,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 307,
+              "current": 307,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 60,
+              "current": 60,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 91455,
+              "current": 91155,
+              "result": "DECREASE",
+              "delta": -300
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 4,
+                "current": 4,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 3,
+                "current": 3,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 407548,
+              "current": 407548,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Amin",
+              "current": "Amin",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "amin",
+              "current": "amin",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 40,
+              "current": 45,
+              "delta": 5
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 407548,
+              "current": 52555,
+              "result": "DECREASE",
+              "delta": -354993
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [
+            {
+              "signal": "total_kills",
+              "reason": "monotonicity_contradiction",
+              "delta": -300
+            },
+            {
+              "signal": "current_league_clan_medals",
+              "reason": "same_league_metric_decreased",
+              "delta": -354993
+            }
+          ],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17753,7 +22842,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R46",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R046",
+          "prior_source_member_key": "S14-R46",
+          "current_observation_id": "S15::R046",
+          "core_comparison": {
+            "stage": {
+              "previous": 29,
+              "current": 29,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 542,
+              "current": 542,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 173,
+              "current": 173,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 36,
+              "current": 36,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 50690,
+              "current": 51030,
+              "result": "INCREASE",
+              "delta": 340
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 46472,
+              "current": 50662,
+              "result": "INCREASE",
+              "delta": 4190
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ali",
+              "current": "ali",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "ali",
+              "current": "ali",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 46,
+              "current": 46,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 46472,
+              "current": 50662,
+              "result": "INCREASE",
+              "delta": 4190
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17766,7 +22966,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R47",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R044",
+          "prior_source_member_key": "S14-R44",
+          "current_observation_id": "S15::R047",
+          "core_comparison": {
+            "stage": {
+              "previous": 39,
+              "current": 39,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 854,
+              "current": 862,
+              "result": "INCREASE",
+              "delta": 8
+            },
+            "hellfire": {
+              "previous": 312,
+              "current": 313,
+              "result": "INCREASE",
+              "delta": 1
+            },
+            "hydra": {
+              "previous": 57,
+              "current": 57,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 151716,
+              "current": 153018,
+              "result": "INCREASE",
+              "delta": 1302
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 48267,
+              "current": 50171,
+              "result": "INCREASE",
+              "delta": 1904
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Armin Lukas",
+              "current": "Armin Lukas",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "arminlukas",
+              "current": "arminlukas",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 44,
+              "current": 47,
+              "delta": 3
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 48267,
+              "current": 50171,
+              "result": "INCREASE",
+              "delta": 1904
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17779,7 +23090,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R48",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R049",
+          "prior_source_member_key": "S14-R49",
+          "current_observation_id": "S15::R048",
+          "core_comparison": {
+            "stage": {
+              "previous": 22,
+              "current": 22,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 546,
+              "current": 546,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hellfire": {
+              "previous": 88,
+              "current": 88,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 29,
+              "current": 29,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 70814,
+              "current": 73622,
+              "result": "INCREASE",
+              "delta": 2808
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 452,
+              "current": 27802,
+              "result": "INCREASE",
+              "delta": 27350
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "saied",
+              "current": "saied 🥇 🇮🇷",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "saied",
+              "current": "saied",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 49,
+              "current": 48,
+              "delta": -1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 452,
+              "current": 27802,
+              "result": "INCREASE",
+              "delta": 27350
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17792,7 +23214,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R49",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R048",
+          "prior_source_member_key": "S14-R48",
+          "current_observation_id": "S15::R049",
+          "core_comparison": {
+            "stage": {
+              "previous": 38,
+              "current": 38,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 654,
+              "current": 658,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hellfire": {
+              "previous": 429,
+              "current": 433,
+              "result": "INCREASE",
+              "delta": 4
+            },
+            "hydra": {
+              "previous": 76,
+              "current": 76,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 166249,
+              "current": 168069,
+              "result": "INCREASE",
+              "delta": 1820
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 8226,
+              "current": 22373,
+              "result": "INCREASE",
+              "delta": 14147
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "ADNAN",
+              "current": "ADNAN",
+              "result": "EXACT"
+            },
+            "normalized_system_name": {
+              "previous": "adnan",
+              "current": "adnan",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 48,
+              "current": 49,
+              "delta": 1
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 8226,
+              "current": 22373,
+              "result": "INCREASE",
+              "delta": 14147
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     },
     {
       "authority_ref": null,
@@ -17805,7 +23338,118 @@
       "process_ref": "real-snapshot-ingestion",
       "reason": "No explicit Global Player identity decision was supplied for S15.",
       "resolution_case_id": "RC-S15-R50",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "signals": {
+        "continuity": {
+          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
+          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "prior_observation_id": "S14::R050",
+          "prior_source_member_key": "S14-R50",
+          "current_observation_id": "S15::R050",
+          "core_comparison": {
+            "stage": {
+              "previous": 34,
+              "current": 34,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "25mm": {
+              "previous": 580,
+              "current": 582,
+              "result": "INCREASE",
+              "delta": 2
+            },
+            "hellfire": {
+              "previous": 293,
+              "current": 293,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "hydra": {
+              "previous": 62,
+              "current": 62,
+              "result": "EXACT",
+              "delta": 0
+            },
+            "total_kills": {
+              "previous": 102883,
+              "current": 103254,
+              "result": "INCREASE",
+              "delta": 371
+            }
+          },
+          "supporting_comparison": {
+            "lifetime_medals": {
+              "bronze": {
+                "previous": 1,
+                "current": 1,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "silver": {
+                "previous": 2,
+                "current": 2,
+                "result": "EXACT",
+                "delta": 0
+              },
+              "gold": {
+                "previous": 0,
+                "current": 0,
+                "result": "EXACT",
+                "delta": 0
+              }
+            },
+            "profile_total_clan_medal_count": {
+              "previous": 234,
+              "current": 4808,
+              "result": "INCREASE",
+              "delta": 4574
+            },
+            "role": {
+              "previous": "Member",
+              "current": "Member",
+              "result": "EXACT"
+            },
+            "display_name": {
+              "previous": "Kian_Tak",
+              "current": "Kian...Tak",
+              "result": "CHANGED"
+            },
+            "normalized_system_name": {
+              "previous": "kiantak",
+              "current": "kiantak",
+              "result": "MATCH"
+            },
+            "rank": {
+              "previous": 50,
+              "current": 50,
+              "delta": 0
+            },
+            "temporal": {
+              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
+              "previous_snapshot": "S14",
+              "current_snapshot": "S15"
+            },
+            "current_league_clan_medals": {
+              "previous": 234,
+              "current": 4808,
+              "result": "INCREASE",
+              "delta": 4574
+            },
+            "membership_continuity": {
+              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
+              "note": "No Canonical Membership event inferred."
+            }
+          },
+          "contradictions": [],
+          "evidence_refs": [
+            "EV-REAL-PERSIAN-UNITY-S14",
+            "EV-REAL-PERSIAN-UNITY-S15"
+          ],
+          "conclusion": "CONTINUITY_SUPPORTED"
+        }
+      }
     }
   ],
   "schema_version": "0.1",
