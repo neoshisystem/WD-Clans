@@ -196,3 +196,48 @@ The data-layer correction and derived-output preparation reached the authorized 
 
 The corrected S14 Current League field is sourced from Ranking evidence under `EV-REAL-PERSIAN-UNITY-S14`. The Profile Total field remains sourced from the corresponding Profile evidence. The correction preserves an auditable before/after record rather than silently treating the original stored value as source truth.
 
+
+
+## 13. VALIDATION GATE INVESTIGATION — STATIC STALE DIAGNOSTIC
+
+### VALIDATION_GATE_INVESTIGATION_STARTED
+- Live Product main at investigation start: 08a83ad5d18a134f05a28a09684154b77d08dd48.
+- The Authority-supplied blocked point was parent commit 210606da9adb5ec5ab1f9e12112d927038fc54fb; live main had advanced by one report-only commit and contained no Product-data change.
+- Canonical remained ebea003df7aa04d9e0c7ca26a9c7bb97bf0f9438.
+- Investigation was diagnostic first; no Canonical, Raw Extraction, test, or Generator change was permitted.
+
+### STATIC_DIFF_IDENTIFIED
+The failing CI assertion was reproduced from the official workflow log for Run 36568505523 / Job 109406319571. The test actual side is the committed Static JSON; the expected side is the temporary output produced by the official Generator.
+
+- Committed JSON blob SHA: d017bf1965debaf481a7fb3afcc8f4bbc2e157ab
+- Generated JSON size: 555086 bytes
+- Committed JSON size: 555105 bytes
+- First differing byte/character: 21782 (1-based byte position 21783), line 1
+- Parsed JSON: valid on both sides.
+- Semantic classification: STATIC_STALE.
+- The semantic diff contains only 15 derived S14-to-S14 Current League delta values; the Generator computes corrected values from the corrected Canonical while the committed artifact still contains pre-correction derived values.
+- The affected derived records are S14::R009, S14::R017, S14::R021, S14::R026, S14::R029, S14::R032, S14::R033, S14::R034, S14::R038, S14::R039, S14::R040, S14::R041, S14::R042, S14::R043, and S14::R045.
+- Browser Static is stale in the same derived-data region; its committed blob SHA is df77e84613c9556a14eabde58e47fb63ebf1de2c.
+- No rank-key, object-order, application-logic, identity, membership, or serialization-only defect was identified.
+- The Generator source is unchanged and internally consistent with src/static-data.js: JSON serialization uses stableStringify(bundle) plus a newline, and browser serialization uses the same stable bundle with the required assignment wrapper and newline.
+
+### DIAGNOSTIC DATA
+| Observation | Committed | Official Generator |
+|---|---:|---:|
+| S14::R009 Current League delta | 540182 | 41397 |
+| S14::R017 Current League delta | 42342 | 30263 |
+| S14::R021 Current League delta | 447005 | 49975 |
+| S14::R026 Current League delta | 665448 | 27140 |
+| S14::R029 Current League delta | 608206 | 20284 |
+| S14::R032 Current League delta | 612675 | 10922 |
+| S14::R033 Current League delta | 696485 | 28998 |
+| S14::R034 Current League delta | 687624 | 11639 |
+| S14::R038 Current League delta | 322783 | 18939 |
+| S14::R039 Current League delta | 1122009 | 1978 |
+| S14::R040 Current League delta | 377846 | 22853 |
+| S14::R041 Current League delta | 752479 | 24163 |
+| S14::R042 Current League delta | 162298 | 13298 |
+| S14::R043 Current League delta | 443443 | 8903 |
+| S14::R045 Current League delta | 360379 | 7138 |
+
+Resolution is authorized as bounded Static regeneration only; application test and Generator logic are not modified.
