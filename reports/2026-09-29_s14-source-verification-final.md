@@ -47,7 +47,7 @@ A separate issue remains valid at source level:
 
 - Amin / S15::R045 Total Kills: **91,455 → 91,155 = -300**
 - S14 Profile source confirms **91,455**
-- S15 source/Cannonical already confirmed **91,155**
+- S15 source/Canonical already confirmed **91,155**
 - This is a distinct lifetime-metric decrease and is **not explained by the S14 medal field-scope defect**.
 
 No S13 source is required to resolve the S14 field-scope defect or the Amin -300 source anomaly.
