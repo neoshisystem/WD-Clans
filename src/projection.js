@@ -212,27 +212,72 @@ function observationContinuityScore(previousObservation, currentObservation) {
   return { score, basis };
 }
 
+function explicitContinuityCases(previousSnapshot, currentSnapshot, state) {
+  const byCurrent = new Map();
+  for (const resolution of state.resolution_cases) {
+    const continuity = resolution?.signals?.continuity;
+    if (continuity?.assessment_state !== 'CONTINUOUS_CANDIDATE') continue;
+    const currentObservation = state.observations.find((observation) => observation.observation_id === resolution.observation_id);
+    const previousObservation = state.observations.find((observation) => observation.observation_id === continuity.prior_observation_id);
+    if (!currentObservation || !previousObservation) continue;
+    if (currentObservation.snapshot_id !== currentSnapshot.snapshot_id) continue;
+    if (previousObservation.snapshot_id !== previousSnapshot.snapshot_id) continue;
+    if (currentObservation.clan_id !== currentSnapshot.clan_id || previousObservation.clan_id !== previousSnapshot.clan_id) continue;
+    if (byCurrent.has(currentObservation.observation_id)) {
+      throw new Error('duplicate explicit continuity assessment for observation: ' + currentObservation.observation_id);
+    }
+    byCurrent.set(currentObservation.observation_id, { currentObservation, previousObservation, continuity });
+  }
+  return byCurrent;
+}
+
 function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
   const previous = state.observations.filter((o) => o.snapshot_id === previousSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
   const current = state.observations.filter((o) => o.snapshot_id === currentSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
+  const explicit = explicitContinuityCases(previousSnapshot, currentSnapshot, state);
+  const matchedCurrent = new Set(explicit.keys());
+  const matchedPrevious = new Set([...explicit.values()].map((item) => item.previousObservation.observation_id));
+  const pairs = [...explicit.values()].map((item) => ({
+    ...item,
+    score: null,
+    basis: [],
+    match_method: 'FINGERPRINT_REVIEW_CASE'
+  }));
   const candidates = [];
+
   for (const currentObservation of current) {
-    const matches = previous.filter((previousObservation) => previousObservation.display_name === currentObservation.display_name)
-      .map((previousObservation) => ({ currentObservation, previousObservation, ...observationContinuityScore(previousObservation,currentObservation) }))
+    if (matchedCurrent.has(currentObservation.observation_id)) continue;
+    const matches = previous
+      .filter((previousObservation) =>
+        !matchedPrevious.has(previousObservation.observation_id) &&
+        previousObservation.display_name === currentObservation.display_name
+      )
+      .map((previousObservation) => ({
+        currentObservation,
+        previousObservation,
+        ...observationContinuityScore(previousObservation,currentObservation)
+      }))
       .filter((candidate) => candidate.score >= OBSERVATION_CONTINUITY_SCORE_THRESHOLD)
       .sort((a,b) => b.score-a.score || compareText(a.previousObservation.observation_id,b.previousObservation.observation_id));
     if (!matches.length) continue;
     if (matches[1] && matches[1].score === matches[0].score) continue;
     candidates.push(matches[0]);
   }
-  const matchedCurrent = new Set(); const matchedPrevious = new Set(); const pairs = [];
+
   candidates.sort((a,b) => b.score-a.score || compareText(a.currentObservation.observation_id,b.currentObservation.observation_id) || compareText(a.previousObservation.observation_id,b.previousObservation.observation_id));
   for (const candidate of candidates) {
-    const currentId = candidate.currentObservation.observation_id; const previousId = candidate.previousObservation.observation_id;
+    const currentId = candidate.currentObservation.observation_id;
+    const previousId = candidate.previousObservation.observation_id;
     if (matchedCurrent.has(currentId) || matchedPrevious.has(previousId)) continue;
-    matchedCurrent.add(currentId); matchedPrevious.add(previousId); pairs.push(candidate);
+    matchedCurrent.add(currentId);
+    matchedPrevious.add(previousId);
+    pairs.push(candidate);
   }
-  return { pairs, unmatchedCurrent: current.filter((o) => !matchedCurrent.has(o.observation_id)), unmatchedPrevious: previous.filter((o) => !matchedPrevious.has(o.observation_id)) };
+  return {
+    pairs,
+    unmatchedCurrent: current.filter((o) => !matchedCurrent.has(o.observation_id)),
+    unmatchedPrevious: previous.filter((o) => !matchedPrevious.has(o.observation_id))
+  };
 }
 
 function snapshotMetricDelta(currentValue, previousValue, metricKey, sameLeague) {
@@ -281,7 +326,7 @@ function projectSnapshotDeltaResults(state) {
       const sameLeague = previousSnapshot.league_id === snapshot.league_id;
       for (const pair of continuity.pairs) {
         const currentObservation = pair.currentObservation; const previousObservation = pair.previousObservation;
-        const continuityMeta = { match_method:'DISPLAY_NAME_FINGERPRINT', match_score:pair.score, match_basis:pair.basis };
+        const continuityMeta = pair.continuity || { match_method:'DISPLAY_NAME_FINGERPRINT', match_score:pair.score, match_basis:pair.basis };
         const evidenceRefs = uniqueSorted([...collectEvidenceRefs(previousObservation),...collectEvidenceRefs(currentObservation)]);
         for (const [metricKey,scope,currentValue,previousValue] of [['total_kills','PLAYER_LIFETIME',currentObservation.total_kills,previousObservation.total_kills],['current_league_clan_medals','LEAGUE',currentObservation.current_league_clan_medals,previousObservation.current_league_clan_medals]]) {
           const metric = snapshotMetricDelta(currentValue,previousValue,metricKey,sameLeague);
