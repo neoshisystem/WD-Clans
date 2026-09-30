@@ -1,6 +1,7 @@
 'use strict';
 
 const { validateCanonicalModel } = require('./canonical');
+const { monotonicContinuityViolations } = require('./metrics');
 
 const PROJECTION_VERSION = '0.1';
 
@@ -214,6 +215,7 @@ function observationContinuityScore(previousObservation, currentObservation) {
 
 function explicitContinuityCases(previousSnapshot, currentSnapshot, state) {
   const byCurrent = new Map();
+  const blockedPairs = [];
   for (const resolution of state.resolution_cases) {
     const continuity = resolution?.signals?.continuity;
     if (continuity?.assessment_state !== 'CONTINUOUS_CANDIDATE') continue;
@@ -223,18 +225,25 @@ function explicitContinuityCases(previousSnapshot, currentSnapshot, state) {
     if (currentObservation.snapshot_id !== currentSnapshot.snapshot_id) continue;
     if (previousObservation.snapshot_id !== previousSnapshot.snapshot_id) continue;
     if (currentObservation.clan_id !== currentSnapshot.clan_id || previousObservation.clan_id !== previousSnapshot.clan_id) continue;
+    const violations = monotonicContinuityViolations(previousObservation, currentObservation);
+    if (violations.length) {
+      blockedPairs.push({ current_observation_id: currentObservation.observation_id, previous_observation_id: previousObservation.observation_id, reason: 'monotonic_identity_contradiction', violations });
+      continue;
+    }
     if (byCurrent.has(currentObservation.observation_id)) {
       throw new Error('duplicate explicit continuity assessment for observation: ' + currentObservation.observation_id);
     }
     byCurrent.set(currentObservation.observation_id, { currentObservation, previousObservation, continuity });
   }
-  return byCurrent;
+  return { byCurrent, blockedPairs };
 }
 
 function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
   const previous = state.observations.filter((o) => o.snapshot_id === previousSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
   const current = state.observations.filter((o) => o.snapshot_id === currentSnapshot.snapshot_id).slice().sort((a,b) => compareText(a.observation_id,b.observation_id));
-  const explicit = explicitContinuityCases(previousSnapshot, currentSnapshot, state);
+  const explicitResult = explicitContinuityCases(previousSnapshot, currentSnapshot, state);
+  const explicit = explicitResult.byCurrent;
+  const blockedPairs = [...explicitResult.blockedPairs];
   const matchedCurrent = new Set(explicit.keys());
   const matchedPrevious = new Set([...explicit.values()].map((item) => item.previousObservation.observation_id));
   const pairs = [...explicit.values()].map((item) => ({
@@ -247,7 +256,7 @@ function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
 
   for (const currentObservation of current) {
     if (matchedCurrent.has(currentObservation.observation_id)) continue;
-    const matches = previous
+    const rawMatches = previous
       .filter((previousObservation) =>
         !matchedPrevious.has(previousObservation.observation_id) &&
         previousObservation.display_name === currentObservation.display_name
@@ -255,9 +264,22 @@ function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
       .map((previousObservation) => ({
         currentObservation,
         previousObservation,
-        ...observationContinuityScore(previousObservation,currentObservation)
-      }))
-      .filter((candidate) => candidate.score >= OBSERVATION_CONTINUITY_SCORE_THRESHOLD)
+        ...observationContinuityScore(previousObservation,currentObservation),
+        monotonicViolations: monotonicContinuityViolations(previousObservation, currentObservation)
+      }));
+    const matches = rawMatches
+      .filter((candidate) => {
+        if (candidate.monotonicViolations.length) {
+          blockedPairs.push({
+            current_observation_id: candidate.currentObservation.observation_id,
+            previous_observation_id: candidate.previousObservation.observation_id,
+            reason: 'monotonic_identity_contradiction',
+            violations: candidate.monotonicViolations
+          });
+          return false;
+        }
+        return candidate.score >= OBSERVATION_CONTINUITY_SCORE_THRESHOLD;
+      })
       .sort((a,b) => b.score-a.score || compareText(a.previousObservation.observation_id,b.previousObservation.observation_id));
     if (!matches.length) continue;
     if (matches[1] && matches[1].score === matches[0].score) continue;
@@ -276,7 +298,8 @@ function pairObservationContinuity(previousSnapshot, currentSnapshot, state) {
   return {
     pairs,
     unmatchedCurrent: current.filter((o) => !matchedCurrent.has(o.observation_id)),
-    unmatchedPrevious: previous.filter((o) => !matchedPrevious.has(o.observation_id))
+    unmatchedPrevious: previous.filter((o) => !matchedPrevious.has(o.observation_id)),
+    blockedPairs
   };
 }
 
@@ -285,7 +308,7 @@ function snapshotMetricDelta(currentValue, previousValue, metricKey, sameLeague)
   if (!Number.isFinite(previousValue)) return { status: 'BASELINE_UNAVAILABLE', delta: null, reason: 'previous_valid_observation_missing' };
   if (metricKey === 'current_league_clan_medals' && !sameLeague) return { status: 'VALID', delta: currentValue, reason: 'new_league_baseline_zero' };
   const delta = currentValue - previousValue;
-  if (delta < 0) return { status: 'ANOMALY', delta, reason: 'monotonic_metric_decreased' };
+  if (delta < 0) return { status: 'ANOMALY', delta: null, reason: 'monotonic_metric_decreased' };
   return { status: 'VALID', delta, reason: null };
 }
 
@@ -297,16 +320,18 @@ function projectSnapshotMembershipChanges(state) {
     const previousSnapshot = previousByClan.get(snapshot.clan_id);
     if (previousSnapshot) {
       const continuity = pairObservationContinuity(previousSnapshot,snapshot,state);
+      const blockedCurrent = new Map(continuity.blockedPairs.map((pair) => [pair.current_observation_id, pair]));
+      const blockedPrevious = new Map(continuity.blockedPairs.map((pair) => [pair.previous_observation_id, pair]));
       for (const observation of continuity.unmatchedCurrent) results.push({
         change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::JOIN::'+observation.observation_id, change_type:'JOIN', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
         clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
-        current_observation_id:observation.observation_id, previous_observation_id:null, match_method:'DISPLAY_NAME_FINGERPRINT', reason:'no_deterministic_prior_snapshot_match',
+        current_observation_id:observation.observation_id, previous_observation_id:null, match_method:'DISPLAY_NAME_FINGERPRINT', reason:blockedCurrent.has(observation.observation_id)?'monotonic_identity_contradiction':'no_deterministic_prior_snapshot_match',
         provenance:{ canonical_refs:uniqueSorted([snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
       });
       for (const observation of continuity.unmatchedPrevious) results.push({
         change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::LEAVE::'+observation.observation_id, change_type:'LEAVE', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
         clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
-        current_observation_id:null, previous_observation_id:observation.observation_id, match_method:'DISPLAY_NAME_FINGERPRINT', reason:'no_deterministic_current_snapshot_match',
+        current_observation_id:null, previous_observation_id:observation.observation_id, match_method:'DISPLAY_NAME_FINGERPRINT', reason:blockedPrevious.has(observation.observation_id)?'monotonic_identity_contradiction':'no_deterministic_current_snapshot_match',
         provenance:{ canonical_refs:uniqueSorted([previousSnapshot.snapshot_id,snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(previousSnapshot),...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
       });
     }

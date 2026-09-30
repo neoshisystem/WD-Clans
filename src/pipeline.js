@@ -9,7 +9,8 @@ const { validateSnapshotInputAgainstRegistry }=require('./evidence-registry');
 const {
   validateLifetimeMetrics,
   currentLeagueClanMedalDelta,
-  membershipEpisodeClanMedalContribution
+  membershipEpisodeClanMedalContribution,
+  monotonicContinuityViolations
 }=require('./metrics');
 
 function prepareSnapshotTransaction(input,context={}){
@@ -42,6 +43,24 @@ function prepareSnapshotTransaction(input,context={}){
     previous=identity.global_player_id
       ? (previousByGlobalPlayerId[identity.global_player_id]||null)
       : null;
+
+    const monotonicViolations = previous ? monotonicContinuityViolations(previous, member) : [];
+    if (identity.status === 'CONFIRMED' && monotonicViolations.length) {
+      identity = {
+        ...identity,
+        status: 'CONTRADICTION',
+        global_player_id: null,
+        decision: {
+          ...(identity.decision || {}),
+          reason: 'monotonic_continuity_contradiction',
+          signals: {
+            ...(identity.decision?.signals || {}),
+            monotonic_continuity_violations: monotonicViolations
+          }
+        }
+      };
+      previous = null;
+    }
 
     const priorMembership=membershipBySourceKey[member.source_member_key]||{};
     const membership=classifyMembership({

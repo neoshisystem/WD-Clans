@@ -271,6 +271,9 @@ function validateCanonicalModel(model) {
     if (delta.league_id) requireRef(leagues, delta.league_id, 'delta league_id');
     if (delta.membership_episode_id) requireRef(episodes, delta.membership_episode_id, 'delta membership_episode_id');
     validateMetricScope(delta);
+    if (Number.isFinite(delta.delta) && delta.delta < 0) {
+      throw new Error('negative numeric delta is forbidden: ' + delta.delta_id);
+    }
     if (delta.status === 'VALID') {
       const zeroBaseline = delta.baseline_type === 'NEW_LEAGUE_ZERO' || delta.baseline_type === 'NEW_MEMBERSHIP_EPISODE_ZERO';
       if (delta.baseline_observation_id === null && !zeroBaseline && delta.baseline_type !== 'NONE') throw new Error('VALID delta without baseline reference: ' + delta.delta_id);

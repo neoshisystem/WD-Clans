@@ -11,8 +11,26 @@ function monotonicDelta(current, previous, metricName) {
   if (!Number.isFinite(current)) return { status: 'UNKNOWN', metric: metricName, delta: null, reason: 'current_value_invalid' };
   if (!Number.isFinite(previous)) return { status: 'BASELINE_UNAVAILABLE', metric: metricName, delta: null, reason: 'previous_valid_observation_missing' };
   const delta = current - previous;
-  if (delta < 0) return { status: 'ANOMALY', metric: metricName, delta, reason: 'monotonic_metric_decreased' };
+  if (delta < 0) return { status: 'ANOMALY', metric: metricName, delta: null, reason: 'monotonic_metric_decreased' };
   return { status: 'VALID', metric: metricName, delta, reason: null };
+}
+
+function monotonicContinuityViolations(previous = {}, current = {}) {
+  const violations = [];
+  const compare = (field, previousValue, currentValue) => {
+    if (Number.isFinite(previousValue) && Number.isFinite(currentValue) && currentValue < previousValue) {
+      violations.push({ field, previous: previousValue, current: currentValue, decrease: previousValue - currentValue });
+    }
+  };
+  compare('stage', previous.stage, current.stage);
+  compare('total_kills', previous.total_kills, current.total_kills);
+  for (const key of [...new Set([...Object.keys(previous.weapons || {}), ...Object.keys(current.weapons || {})])].sort()) {
+    compare('weapon:' + key, previous.weapons?.[key], current.weapons?.[key]);
+  }
+  for (const key of [...new Set([...Object.keys(previous.lifetime_medals || {}), ...Object.keys(current.lifetime_medals || {})])].sort()) {
+    compare('lifetime_medal:' + key, previous.lifetime_medals?.[key], current.lifetime_medals?.[key]);
+  }
+  return violations;
 }
 
 function currentLeagueClanMedalDelta({ current, previous = null, sameLeague }) {
@@ -59,5 +77,6 @@ module.exports = {
   monotonicDelta,
   currentLeagueClanMedalDelta,
   membershipEpisodeClanMedalContribution,
-  validateLifetimeMetrics
+  validateLifetimeMetrics,
+  monotonicContinuityViolations
 };
