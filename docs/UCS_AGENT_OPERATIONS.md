@@ -1,5 +1,11 @@
 # UCS Agent Operations — Schema, File Map, Snapshot Intake, and User Interaction
 
+## Mandatory Snapshot Contract
+
+For every real Snapshot, read `docs/SNAPSHOT_IMPORT.md` first. It is the single high-level contract for hard monotonic continuity, raw archival, scope separation, and Delta safety.
+
+A decrease in Stage, any Weapon level, Total Kills, or lifetime Bronze/Silver/Gold means the observations are **not the same Player** and must not be paired. Every Agent-produced Raw Extraction must be archived unchanged at `Snapshot/<Clan Display Name>/<Snapshot ID>.raw.json`; same Snapshot ID with different content is a fail-closed conflict.
+
 ## Authority
 Live main is current project truth. Canonical Data is the source of truth. Read Model and static site data are derived.
 Do not introduce backend, database, OCR, or production ingestion architecture into a bounded Snapshot task.

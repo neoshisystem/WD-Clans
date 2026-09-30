@@ -43,7 +43,7 @@ One information class has one canonical owner.
 |---|---|---|
 | Product implementation | WD-Clans live `main` | Current product reality |
 | Canonical data | `data/canonical.json` | Product source of truth |
-| Product operating rules | `docs/UCS_AGENT_OPERATIONS.md` + this control | Execution law |
+| Product operating rules | `docs/UCS_AGENT_OPERATIONS.md` + `docs/SNAPSHOT_IMPORT.md` + this control | Execution law |
 | Project continuity control | `projects/UCS/DOCUMENTATION_CONTROL.md` | Documentation synchronization/governance |
 | Current project state | `projects/UCS/CURRENT_STATE.md` | Mutable current-state summary |
 | Next action | `projects/UCS/NEXT_ACTION.md` | Intended successor action |
@@ -81,7 +81,7 @@ The SHA of the commit that contains a checkpoint file is not embedded in that sa
 **Update:** none during read-only calibration. After authorized acceptance, establish/update the current checkpoint only when the project actually reaches a meaningful state boundary.
 
 ### Real Snapshot intake
-**Read:** Snapshot Intake Playbook, UCS Agent Operations, schema/file map, current state, next action, decisions, fingerprint rules, latest relevant Snapshot/development report.
+**Read:** `docs/SNAPSHOT_IMPORT.md` first, then Snapshot Intake Playbook, UCS Agent Operations, schema/file map, current state, next action, decisions, fingerprint rules, latest relevant Snapshot/development report. The Raw Extraction must be archived under `Snapshot/<Clan>/` before normalization.
 
 **Update:** Snapshot evidence/report, `CURRENT_STATE.md`, `NEXT_ACTION.md`, `SHIFT_REPORT.md`, `CHECKPOINT.md`; update Timeline/Index when the new Snapshot materially changes project chronology/discoverability.
 

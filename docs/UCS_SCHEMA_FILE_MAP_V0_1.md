@@ -3,6 +3,12 @@
 ## Purpose
 Agent-facing map of the current UCS data model and file ownership. This is continuity documentation, not an executable task. Live `main` is current truth.
 
+## Primary Snapshot Contract
+`docs/SNAPSHOT_IMPORT.md` — single high-level agent-facing contract for Snapshot extraction, raw archival, monotonic continuity, medal scopes, and Delta safety.
+
+## Raw Snapshot archive
+`Snapshot/<Clan Display Name>/<Snapshot ID>.raw.json` — immutable Agent-produced Raw Extraction replay source. Read this before repeating visual extraction of a previously archived Snapshot.
+
 ## Data path
 **Raw Evidence → Raw Extraction → SnapshotInput → Canonical → Projection/Read Model → Static Bundle → UI**
 

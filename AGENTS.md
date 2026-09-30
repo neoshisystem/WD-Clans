@@ -1,5 +1,9 @@
 # UCS Agent Entry Point
 
+**FIRST READ FOR REAL SNAPSHOTS: `docs/SNAPSHOT_IMPORT.md`**
+
+This is the single high-level contract for monotonic identity continuity, raw Snapshot archiving, scope separation, and Delta safety. Read it before processing or mutating any real Snapshot.
+
 Read docs/UCS_AGENT_OPERATIONS.md before any real-data mutation. Read docs/UCS_DOCUMENTATION_CONTROL_V0_1.md before any material task or checkpoint. For continuity, read docs/UCS_SHIFT_REPORT_CR-01_TO-CR-02_2026-09-28.md before taking over from CR-01.
 
 Critical operating rules:

@@ -1,5 +1,11 @@
 # UCS Real Snapshot Ingestion Standard v0.1
 
+> **Primary operating contract:** `docs/SNAPSHOT_IMPORT.md`
+>
+> Mandatory continuity rule: Stage, Weapon Levels, Total Kills, and lifetime Bronze/Silver/Gold medals are monotonic. Any decrease means the observations are not the same Player and must not be paired.
+>
+> Mandatory raw archive: `Snapshot/<Clan Display Name>/<Snapshot ID>.raw.json`.
+
 ## User intake contract
 Normal input:
 1. Clan name.
@@ -80,6 +86,6 @@ Continuity rule:
 
 Derived roster changes are observation-level JOIN/LEAVE displays. They do not create Global Player IDs, Membership Episodes, or canonical Membership Events.
 
-Derived deltas are limited to PLAYER_LIFETIME/total_kills and LEAGUE/current_league_clan_medals. Negative monotonic deltas remain ANOMALY; missing baseline remains BASELINE_UNAVAILABLE.
+Derived deltas are limited to PLAYER_LIFETIME/total_kills and LEAGUE/current_league_clan_medals. Hard monotonic continuity contradictions block pairing; they do not become negative Deltas. Negative numeric Deltas are invalid and must not survive validation.
 
 S14 checkpoint: 46 matched observations, 4 observed additions, 2 observed departures, 46 Kill deltas, and 46 Current League Clan Medal deltas. Valid aggregate increases: +145,391 Kills and +9,207,907 Current League Clan Medals.

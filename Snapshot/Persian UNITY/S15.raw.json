@@ -1,0 +1,1365 @@
+{
+  "schema_version": "UCS-RAW-SNAPSHOT/0.1",
+  "status": "RAW_EXTRACTION_RECORDED_REVIEW_REQUIRED",
+  "clan": {
+    "clan_id": "CLAN-PERSIAN-UNITY",
+    "display_name": "Persian UNITY"
+  },
+  "snapshot": {
+    "snapshot_id": "S15",
+    "sequence": 3,
+    "official_timestamp_utc": "2026-09-28T19:30:00.000Z",
+    "official_timestamp_source": "Project Authority",
+    "member_count": 50,
+    "capacity": 50
+  },
+  "source_artifact": {
+    "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+    "artifact_type": "real-snapshot-zip",
+    "source_location": "user-upload:S15.zip",
+    "content_hash": {
+      "algorithm": "sha256",
+      "value": "eb652100c9e00a8882bbf4598b739c619bcdfb4672632d1a3c476cb720b678c5"
+    },
+    "inventory_count": 58,
+    "inventory_hash": "5e8d79979fc7656c259ae65b919042cdd18d378a29b5c796f89d94fd697119bd",
+    "inventory_hash_method": "SHA-256 of UTF-8 newline-joined sorted relative file paths",
+    "inventory_summary": {
+      "ranking_screenshots": 8,
+      "profile_cards": 50,
+      "duplicate_ranking_screenshots": 0
+    }
+  },
+  "extraction_scope": {
+    "ranking_fields": [
+      "rank",
+      "display_name",
+      "role",
+      "stage",
+      "current_league_clan_medals"
+    ],
+    "profile_fields": [
+      "total_kills",
+      "profile_total_clan_medal_count",
+      "last_online",
+      "weapon_levels",
+      "lifetime_medals"
+    ]
+  },
+  "identity": {
+    "status": "UNRESOLVED",
+    "global_player_ids_created": 0,
+    "reason": "No authoritative Global Player IDs were supplied by the source artifact."
+  },
+  "membership": {
+    "canonical_events_created": 0,
+    "canonical_episodes_created": 0,
+    "reason": "S15 presence is observed; cross-Snapshot identity and membership are not inferred."
+  },
+  "metrics": {
+    "delta_results_created": 0,
+    "reason": "S15 has no confirmed Global Player identity/baseline under the Canonical delta contract."
+  },
+  "members": [
+    {
+      "source_member_key": "S15-R01",
+      "rank": 1,
+      "display_name": "Cpt. Of Persia",
+      "role": "Leader & MVP",
+      "stage": 50,
+      "current_league_clan_medals": 488220,
+      "total_kills": 342360,
+      "profile_total_clan_medal_count": 488220,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 1062,
+        "hellfire": 357,
+        "hydra": 94
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R02",
+      "rank": 2,
+      "display_name": "ehsan",
+      "role": "Co-Leader",
+      "stage": 69,
+      "current_league_clan_medals": 480136,
+      "total_kills": 297192,
+      "profile_total_clan_medal_count": 480136,
+      "last_online_display": "18m",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 1309,
+        "hellfire": 454,
+        "hydra": 72
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R03",
+      "rank": 3,
+      "display_name": "Alini",
+      "role": "Member",
+      "stage": 53,
+      "current_league_clan_medals": 355987,
+      "total_kills": 398514,
+      "profile_total_clan_medal_count": 355987,
+      "last_online_display": "4m",
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapons": {
+        "25mm": 1100,
+        "hellfire": 316,
+        "hydra": 57
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R04",
+      "rank": 4,
+      "display_name": "kaveh",
+      "role": "Elder",
+      "stage": 46,
+      "current_league_clan_medals": 338501,
+      "total_kills": 202102,
+      "profile_total_clan_medal_count": 338501,
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 1061,
+        "hellfire": 336,
+        "hydra": 90
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R05",
+      "rank": 5,
+      "display_name": "Commander 🇮🇷",
+      "role": "Elder",
+      "stage": 58,
+      "current_league_clan_medals": 329191,
+      "total_kills": 286129,
+      "profile_total_clan_medal_count": 329191,
+      "last_online_display": "4m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 1079,
+        "hellfire": 265,
+        "hydra": 68
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R06",
+      "rank": 6,
+      "display_name": "paradise",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 297647,
+      "total_kills": 176351,
+      "profile_total_clan_medal_count": 297647,
+      "last_online_display": "16m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 686,
+        "hellfire": 196,
+        "hydra": 62
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R07",
+      "rank": 7,
+      "display_name": "Eren",
+      "role": "Member",
+      "stage": 27,
+      "current_league_clan_medals": 286994,
+      "total_kills": 189730,
+      "profile_total_clan_medal_count": 286994,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 628,
+        "hellfire": 258,
+        "hydra": 63
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R08",
+      "rank": 8,
+      "display_name": "ALI 🇮🇷",
+      "role": "Member",
+      "stage": 46,
+      "current_league_clan_medals": 259699,
+      "total_kills": 117599,
+      "profile_total_clan_medal_count": 259699,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 1140,
+        "hellfire": 277,
+        "hydra": 64
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R09",
+      "rank": 9,
+      "display_name": "PERSIAN TIGER 🇮🇷",
+      "role": "Member",
+      "stage": 24,
+      "current_league_clan_medals": 215178,
+      "total_kills": 98808,
+      "profile_total_clan_medal_count": 215178,
+      "last_online_display": "3h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 522,
+        "hellfire": 232,
+        "hydra": 49
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R10",
+      "rank": 10,
+      "display_name": "🇮🇷 F 35 🇮🇷",
+      "role": "Member",
+      "stage": 57,
+      "current_league_clan_medals": 211485,
+      "total_kills": 266181,
+      "profile_total_clan_medal_count": 211485,
+      "last_online_display": "21m",
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 4,
+        "silver": 6
+      },
+      "weapons": {
+        "25mm": 1068,
+        "hellfire": 304,
+        "hydra": 54
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R11",
+      "rank": 11,
+      "display_name": "Ardalan",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 210352,
+      "total_kills": 160072,
+      "profile_total_clan_medal_count": 210352,
+      "last_online_display": "3m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 842,
+        "hellfire": 216,
+        "hydra": 69
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R12",
+      "rank": 12,
+      "display_name": "Liam kouhkan",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 205716,
+      "total_kills": 172189,
+      "profile_total_clan_medal_count": 205716,
+      "last_online_display": "15m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 732,
+        "hellfire": 224,
+        "hydra": 89
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R13",
+      "rank": 13,
+      "display_name": "NaViD",
+      "role": "Member",
+      "stage": 49,
+      "current_league_clan_medals": 197714,
+      "total_kills": 181646,
+      "profile_total_clan_medal_count": 197714,
+      "last_online_display": "48m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapons": {
+        "25mm": 936,
+        "hellfire": 329,
+        "hydra": 63
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R14",
+      "rank": 14,
+      "display_name": "behrang",
+      "role": "Member",
+      "stage": 14,
+      "current_league_clan_medals": 194571,
+      "total_kills": 104651,
+      "profile_total_clan_medal_count": 194571,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 352,
+        "hellfire": 144,
+        "hydra": 62
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R15",
+      "rank": 15,
+      "display_name": "SORENA 🏹",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 191066,
+      "total_kills": 161228,
+      "profile_total_clan_medal_count": 191066,
+      "last_online_display": "7h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 950,
+        "hellfire": 275,
+        "hydra": 76
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R16",
+      "rank": 16,
+      "display_name": "Worker Ant 🐜",
+      "role": "Member",
+      "stage": 64,
+      "current_league_clan_medals": 189679,
+      "total_kills": 273064,
+      "profile_total_clan_medal_count": 189679,
+      "last_online_display": "19m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapons": {
+        "25mm": 1175,
+        "hellfire": 394,
+        "hydra": 86
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R17",
+      "rank": 17,
+      "display_name": "Tjk001",
+      "role": "Member",
+      "stage": 25,
+      "current_league_clan_medals": 188014,
+      "total_kills": 139280,
+      "profile_total_clan_medal_count": 188014,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 1,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 466,
+        "hellfire": 247,
+        "hydra": 58
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R18",
+      "rank": 18,
+      "display_name": "hissystem",
+      "role": "Co-Leader",
+      "stage": 28,
+      "current_league_clan_medals": 171190,
+      "total_kills": 201082,
+      "profile_total_clan_medal_count": 171190,
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 591,
+        "hellfire": 253,
+        "hydra": 58
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R19",
+      "rank": 19,
+      "display_name": "ایرانی باوقار",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 161486,
+      "total_kills": 145058,
+      "profile_total_clan_medal_count": 161486,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 524,
+        "hellfire": 203,
+        "hydra": 30
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R20",
+      "rank": 20,
+      "display_name": "I.Man",
+      "role": "Member",
+      "stage": 15,
+      "current_league_clan_medals": 159305,
+      "total_kills": 48413,
+      "profile_total_clan_medal_count": 171384,
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 0,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 300,
+        "hellfire": 135,
+        "hydra": 30
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R21",
+      "rank": 21,
+      "display_name": "hamed ir",
+      "role": "Member",
+      "stage": 32,
+      "current_league_clan_medals": 155455,
+      "total_kills": 145755,
+      "profile_total_clan_medal_count": 155455,
+      "last_online_display": "17m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 724,
+        "hellfire": 190,
+        "hydra": 42
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R22",
+      "rank": 22,
+      "display_name": "hadi,land",
+      "role": "Member & MVP",
+      "stage": 39,
+      "current_league_clan_medals": 552172,
+      "total_kills": 145665,
+      "profile_total_clan_medal_count": 552172,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 743,
+        "hellfire": 267,
+        "hydra": 38
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R23",
+      "rank": 23,
+      "display_name": "RADMAN",
+      "role": "Member",
+      "stage": 50,
+      "current_league_clan_medals": 154680,
+      "total_kills": 228843,
+      "profile_total_clan_medal_count": 154680,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 1110,
+        "hellfire": 389,
+        "hydra": 82
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R24",
+      "rank": 24,
+      "display_name": "Dariush",
+      "role": "Elder",
+      "stage": 34,
+      "current_league_clan_medals": 140741,
+      "total_kills": 145279,
+      "profile_total_clan_medal_count": 140741,
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 691,
+        "hellfire": 269,
+        "hydra": 53
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R25",
+      "rank": 25,
+      "display_name": "boz gurd",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 138307,
+      "total_kills": 112009,
+      "profile_total_clan_medal_count": 138307,
+      "last_online_display": "16m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 650,
+        "hellfire": 260,
+        "hydra": 40
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R26",
+      "rank": 26,
+      "display_name": "ایران",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 133953,
+      "total_kills": 97970,
+      "profile_total_clan_medal_count": 133953,
+      "last_online_display": "21m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 706,
+        "hellfire": 181,
+        "hydra": 60
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R27",
+      "rank": 27,
+      "display_name": "H03EIN",
+      "role": "Member",
+      "stage": 39,
+      "current_league_clan_medals": 131202,
+      "total_kills": 109472,
+      "profile_total_clan_medal_count": 769510,
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 729,
+        "hellfire": 348,
+        "hydra": 52
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R28",
+      "rank": 28,
+      "display_name": "Harpy☁️",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 122360,
+      "total_kills": 113155,
+      "profile_total_clan_medal_count": 122360,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 627,
+        "hellfire": 216,
+        "hydra": 40
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R29",
+      "rank": 29,
+      "display_name": "Amirhoseinifpv",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 113266,
+      "total_kills": 120399,
+      "profile_total_clan_medal_count": 701188,
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 759,
+        "hellfire": 385,
+        "hydra": 56
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R30",
+      "rank": 30,
+      "display_name": "reza1009",
+      "role": "Member & MVP",
+      "stage": 25,
+      "current_league_clan_medals": 111454,
+      "total_kills": 94485,
+      "profile_total_clan_medal_count": 111454,
+      "last_online_display": "13h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 525,
+        "hellfire": 164,
+        "hydra": 43
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R31",
+      "rank": 31,
+      "display_name": "Mahbod_1",
+      "role": "Elder",
+      "stage": 23,
+      "current_league_clan_medals": 105090,
+      "total_kills": 51334,
+      "profile_total_clan_medal_count": 458331,
+      "last_online_display": "22h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 496,
+        "hellfire": 120,
+        "hydra": 48
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R32",
+      "rank": 32,
+      "display_name": "Mohsen.es68",
+      "role": "Member",
+      "stage": 78,
+      "current_league_clan_medals": 102143,
+      "total_kills": 186186,
+      "profile_total_clan_medal_count": 769630,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 1440,
+        "hellfire": 489,
+        "hydra": 55
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R33",
+      "rank": 33,
+      "display_name": "سید حیدر ۳۱۳",
+      "role": "Member",
+      "stage": 28,
+      "current_league_clan_medals": 101743,
+      "total_kills": 123046,
+      "profile_total_clan_medal_count": 101743,
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 617,
+        "hellfire": 240,
+        "hydra": 63
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R34",
+      "rank": 34,
+      "display_name": "Hafezi",
+      "role": "Member",
+      "stage": 40,
+      "current_league_clan_medals": 100236,
+      "total_kills": 109916,
+      "profile_total_clan_medal_count": 701989,
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 827,
+        "hellfire": 214,
+        "hydra": 70
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R35",
+      "rank": 35,
+      "display_name": "Uk 🇮🇷💪",
+      "role": "Member",
+      "stage": 41,
+      "current_league_clan_medals": 95998,
+      "total_kills": 133004,
+      "profile_total_clan_medal_count": 771983,
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 776,
+        "hellfire": 311,
+        "hydra": 57
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R36",
+      "rank": 36,
+      "display_name": "hamid.iran🇮🇷",
+      "role": "Member",
+      "stage": 14,
+      "current_league_clan_medals": 84270,
+      "total_kills": 51912,
+      "profile_total_clan_medal_count": 84270,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 308,
+        "hellfire": 136,
+        "hydra": 32
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R37",
+      "rank": 37,
+      "display_name": "Elvin",
+      "role": "Member",
+      "stage": 26,
+      "current_league_clan_medals": 74011,
+      "total_kills": 101000,
+      "profile_total_clan_medal_count": 74011,
+      "last_online_display": "5m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 550,
+        "hellfire": 184,
+        "hydra": 27
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R38",
+      "rank": 38,
+      "display_name": "حسین",
+      "role": "Member",
+      "stage": 10,
+      "current_league_clan_medals": 73845,
+      "total_kills": 249964,
+      "profile_total_clan_medal_count": 73845,
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 263,
+        "hellfire": 84,
+        "hydra": 46
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R39",
+      "rank": 39,
+      "display_name": "YALALINHO🔥",
+      "role": "Member",
+      "stage": 54,
+      "current_league_clan_medals": 73440,
+      "total_kills": 155631,
+      "profile_total_clan_medal_count": 222440,
+      "last_online_display": "12m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 1001,
+        "hellfire": 211,
+        "hydra": 52
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R40",
+      "rank": 40,
+      "display_name": "ErFaN.m279",
+      "role": "Member",
+      "stage": 30,
+      "current_league_clan_medals": 73212,
+      "total_kills": 110664,
+      "profile_total_clan_medal_count": 73212,
+      "last_online_display": "14h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 589,
+        "hellfire": 276,
+        "hydra": 51
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R41",
+      "rank": 41,
+      "display_name": "♕soltoon♕",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 67810,
+      "total_kills": 145252,
+      "profile_total_clan_medal_count": 796126,
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 1000,
+        "hellfire": 174,
+        "hydra": 53
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R42",
+      "rank": 42,
+      "display_name": "Nouk",
+      "role": "Member",
+      "stage": 37,
+      "current_league_clan_medals": 67443,
+      "total_kills": 109737,
+      "profile_total_clan_medal_count": 501983,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 676,
+        "hellfire": 267,
+        "hydra": 81
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R43",
+      "rank": 43,
+      "display_name": "حسن",
+      "role": "Member",
+      "stage": 48,
+      "current_league_clan_medals": 66635,
+      "total_kills": 168420,
+      "profile_total_clan_medal_count": 370479,
+      "last_online_display": "11h",
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 6,
+        "silver": 7
+      },
+      "weapons": {
+        "25mm": 886,
+        "hellfire": 320,
+        "hydra": 68
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R44",
+      "rank": 44,
+      "display_name": "👑Dadashi👑",
+      "role": "Elder",
+      "stage": 64,
+      "current_league_clan_medals": 54869,
+      "total_kills": 217535,
+      "profile_total_clan_medal_count": 1174900,
+      "last_online_display": "13h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapons": {
+        "25mm": 1153,
+        "hellfire": 384,
+        "hydra": 99
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R45",
+      "rank": 45,
+      "display_name": "Amin",
+      "role": "Member",
+      "stage": 43,
+      "current_league_clan_medals": 52555,
+      "total_kills": 91155,
+      "profile_total_clan_medal_count": 407548,
+      "last_online_display": "1d",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapons": {
+        "25mm": 762,
+        "hellfire": 307,
+        "hydra": 60
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R46",
+      "rank": 46,
+      "display_name": "ali",
+      "role": "Member",
+      "stage": 29,
+      "current_league_clan_medals": 50662,
+      "total_kills": 51030,
+      "profile_total_clan_medal_count": 50662,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapons": {
+        "25mm": 542,
+        "hellfire": 173,
+        "hydra": 36
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R47",
+      "rank": 47,
+      "display_name": "Armin Lukas",
+      "role": "Member",
+      "stage": 39,
+      "current_league_clan_medals": 50171,
+      "total_kills": 153018,
+      "profile_total_clan_medal_count": 50171,
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 862,
+        "hellfire": 313,
+        "hydra": 57
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R48",
+      "rank": 48,
+      "display_name": "saied 🥇 🇮🇷",
+      "role": "Member",
+      "stage": 22,
+      "current_league_clan_medals": 27802,
+      "total_kills": 73622,
+      "profile_total_clan_medal_count": 27802,
+      "last_online_display": "32m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapons": {
+        "25mm": 546,
+        "hellfire": 88,
+        "hydra": 29
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R49",
+      "rank": 49,
+      "display_name": "ADNAN",
+      "role": "Member",
+      "stage": 38,
+      "current_league_clan_medals": 22373,
+      "total_kills": 168069,
+      "profile_total_clan_medal_count": 22373,
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 658,
+        "hellfire": 433,
+        "hydra": 76
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    },
+    {
+      "source_member_key": "S15-R50",
+      "rank": 50,
+      "display_name": "Kian...Tak",
+      "role": "Member",
+      "stage": 34,
+      "current_league_clan_medals": 4808,
+      "total_kills": 103254,
+      "profile_total_clan_medal_count": 4808,
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 0,
+        "silver": 2
+      },
+      "weapons": {
+        "25mm": 582,
+        "hellfire": 293,
+        "hydra": 62
+      },
+      "identity_resolution_status": "UNRESOLVED",
+      "global_player_id": null,
+      "evidence": {
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+      }
+    }
+  ]
+}
