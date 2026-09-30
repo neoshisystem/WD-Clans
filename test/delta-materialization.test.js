@@ -221,7 +221,7 @@ function seedDeltaCanonical() {
     identity_resolution_status: 'CONFIRMED',
     display_name: 'Delta Medal Baseline',
     rank: 2,
-    stage: 61,
+    stage: 50,
     role: 'Member',
     weapons: { '25mm': 7, hydra: 7 },
     total_kills: 315000,
