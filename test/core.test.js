@@ -195,10 +195,10 @@ test('Missing opening Snapshot does not block lifetime Kill Delta across League 
   assert.equal(profileEpisode.delta, 120);
 });
 
-test('Monotonic lifetime decrease is an anomaly, not an automatic reset', () => {
+test('Monotonic lifetime decrease is quarantined without a negative Delta', () => {
   const anomaly = monotonicDelta(9990, 10000, 'total_kills');
   assert.equal(anomaly.status, 'ANOMALY');
-  assert.equal(anomaly.delta, -10);
+  assert.equal(anomaly.delta, null);
   assert.equal(anomaly.reason, 'monotonic_metric_decreased');
 });
 

@@ -239,12 +239,13 @@ test('9. Unresolved identity remains explicit UNKNOWN candidate state', () => {
   assert.equal(validate(model), true);
 });
 
-test('10. Negative lifetime metric is represented as ANOMALY', () => {
+test('10. Negative lifetime metric is quarantined and cannot persist as a numeric Delta', () => {
   const metrics = validateLifetimeMetrics(
     { stage: 10, total_kills: 10000, weapons: { '25mm': 4 }, lifetime_medals: { bronze: 2 } },
     { stage: 10, total_kills: 9990, weapons: { '25mm': 4 }, lifetime_medals: { bronze: 2 } }
   );
   assert.equal(metrics.total_kills.status, 'ANOMALY');
+  assert.equal(metrics.total_kills.delta, null);
 
   const model = baseModel();
   model.delta_results.push(buildDeltaResult({
@@ -255,7 +256,7 @@ test('10. Negative lifetime metric is represented as ANOMALY', () => {
     scope: 'PLAYER_LIFETIME',
     baselineObservationId: 'O-A1-P1',
     baselineType: 'PREVIOUS_VALID_OBSERVATION',
-    delta: -10,
+    delta: null,
     status: 'ANOMALY',
     reason: 'monotonic_metric_decreased'
   }));

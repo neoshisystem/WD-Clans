@@ -12,6 +12,7 @@ const { generateStaticVerticalSlice } = require('./generate-static-vertical-slic
 
 const ROOT = path.resolve(__dirname, '..');
 const DEFAULT_STATE_PATH = path.join(ROOT, 'data/canonical.json');
+const DEFAULT_SNAPSHOT_ARCHIVE_ROOT = path.join(ROOT, 'Snapshot');
 
 function loadJson(filePath) {
   return JSON.parse(fs.readFileSync(path.resolve(filePath), 'utf8'));
@@ -94,6 +95,35 @@ function membershipContextForInput(state, rawInput, decisionMap) {
     };
   }
   return out;
+}
+
+function safePathSegment(value, label) {
+  const segment = String(value || '').trim();
+  if (!segment || segment === '.' || segment === '..' || segment.includes('/') || segment.includes('\\') || segment.includes('\0')) {
+    throw new Error(label + ' is not a safe archive path segment');
+  }
+  return segment;
+}
+
+function archiveRawExtraction({ rawExtraction, authorityContext, archiveRoot = DEFAULT_SNAPSHOT_ARCHIVE_ROOT }) {
+  const clanSegment = safePathSegment(authorityContext?.clan_display_name || authorityContext?.clan_id, 'clan_display_name');
+  const snapshotSegment = safePathSegment(authorityContext?.snapshot?.snapshot_id, 'snapshot_id');
+  const directory = path.resolve(archiveRoot, clanSegment);
+  const target = path.join(directory, snapshotSegment + '.raw.json');
+  const content = JSON.stringify(rawExtraction, null, 2) + '\n';
+  if (fs.existsSync(target)) {
+    if (fs.readFileSync(target, 'utf8') !== content) {
+      const error = new Error('raw Snapshot archive already exists with different content: ' + target);
+      error.code = 'SNAPSHOT_ARCHIVE_CONFLICT';
+      throw error;
+    }
+    return { result: 'IDEMPOTENT', path: target };
+  }
+  fs.mkdirSync(directory, { recursive: true });
+  const temporary = target + '.tmp-' + process.pid;
+  fs.writeFileSync(temporary, content, 'utf8');
+  fs.renameSync(temporary, target);
+  return { result: 'ARCHIVED', path: target };
 }
 
 function parseArgs(argv) {
@@ -221,6 +251,7 @@ if (require.main === module) {
       const rawExtraction = loadJson(args.raw);
       const authorityContext = loadJson(args.context);
       const state = loadJson(args.state);
+      archiveRawExtraction({ rawExtraction, authorityContext });
       const result = ingestSnapshot({
         rawExtraction,
         authorityContext,
@@ -263,5 +294,7 @@ module.exports = {
   writeJsonAtomic,
   previousByGlobalPlayerId,
   membershipContextForInput,
-  ingestSnapshot
+  ingestSnapshot,
+  archiveRawExtraction,
+  DEFAULT_SNAPSHOT_ARCHIVE_ROOT
 };

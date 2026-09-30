@@ -38,7 +38,7 @@ test('S15 fingerprint continuity repair keeps identity unresolved and maps all 5
 
   for (const resolution of s15Cases) {
     const expectedPriorKey = EXPECTED[canonical.observations.find((o) => o.observation_id === resolution.observation_id).source_member_key];
-    assert.equal(resolution.signals?.continuity?.assessment_state, 'CONTINUOUS_CANDIDATE');
+    assert.equal(resolution.signals?.continuity?.assessment_state, resolution.observation_id === 'S15::R045' ? 'IDENTITY_CONTRADICTION' : 'CONTINUOUS_CANDIDATE');
     assert.equal(resolution.signals?.continuity?.prior_source_member_key, expectedPriorKey);
     assert.equal(resolution.signals?.continuity?.prior_observation_id, 'S14::R' + String(Number(expectedPriorKey.slice(5))).padStart(3, '0'));
     assert.ok(Array.isArray(resolution.signals.continuity.contradictions));
@@ -52,28 +52,29 @@ test('S15 fingerprint continuity repair produces 50 matched pairs, no derived ro
   const deltas = projected.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S15::'));
   const changes = projected.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S15');
 
-  assert.equal(deltas.length, 100);
-  assert.equal(deltas.filter((item) => item.metric_key === 'total_kills').length, 50);
-  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals').length, 50);
-  assert.equal(changes.length, 0);
+  assert.equal(deltas.length, 98);
+  assert.equal(deltas.filter((item) => item.metric_key === 'total_kills').length, 49);
+  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals').length, 49);
+  assert.equal(changes.length, 2);
 
-  assert.equal(deltas.filter((item) => item.status === 'ANOMALY').length, 1);
-  assert.equal(deltas.filter((item) => item.metric_key === 'total_kills' && item.status === 'ANOMALY').length, 1);
-  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'ANOMALY').length, 0);
+  assert.equal(deltas.filter((item) => item.status === 'ANOMALY').length, 0);
   assert.equal(deltas.filter((item) => item.metric_key === 'total_kills' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 142263);
-  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').length, 50);
+  assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').length, 49);
   assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 2258332);
+  assert.equal(deltas.some((item) => Number.isFinite(item.delta) && item.delta < 0), false);
 
-  const lifekillsAnomaly = deltas.find((item) => item.metric_key === 'total_kills' && item.status === 'ANOMALY');
-  assert.equal(lifekillsAnomaly.current_observation_id, 'S15::R045');
-  assert.equal(lifekillsAnomaly.delta, -300);
-  assert.equal(lifekillsAnomaly.baseline_observation_id, 'S14::R040');
+  const joins = changes.filter((item) => item.change_type === 'JOIN');
+  const leaves = changes.filter((item) => item.change_type === 'LEAVE');
+  assert.deepEqual(joins.map((item) => item.display_name), ['Amin']);
+  assert.deepEqual(leaves.map((item) => item.display_name), ['Amin']);
+  assert.equal(joins[0].reason, 'monotonic_identity_contradiction');
+  assert.equal(leaves[0].reason, 'monotonic_identity_contradiction');
 
   const staticData = JSON.parse(fs.readFileSync(STATIC_PATH, 'utf8'));
   const staticDeltas = staticData.read_model.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S15::'));
   const staticChanges = staticData.read_model.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S15');
-  assert.equal(staticDeltas.length, 100);
-  assert.equal(staticChanges.length, 0);
+  assert.equal(staticDeltas.length, 98);
+  assert.equal(staticChanges.length, 2);
 });
 
 // Historical S14 field-scope repair assertions are covered by test/s14-field-scope-repair.test.js.

@@ -470,7 +470,7 @@ test('Delta materialization: new League Current League Clan Medal baseline is ze
   });
 });
 
-test('Delta materialization: negative Total Kills remains an ANOMALY', () => {
+test('Delta materialization: monotonic Total Kills decrease blocks the confirmed identity match', () => {
   const previous = previousContext();
   previous['GP-S12-KILL-001'] = {
     ...previous['GP-S12-KILL-001'],
@@ -485,21 +485,24 @@ test('Delta materialization: negative Total Kills remains an ANOMALY', () => {
     previousByGlobalPlayerId: previous
   });
 
-  const delta = plan.persistence.transaction.canonical_patch.delta_results.find(
-    (item) =>
-      item.scope === 'PLAYER_LIFETIME' &&
-      item.global_player_id === 'GP-S12-KILL-001'
-  );
-
-  assert.ok(delta);
-  assert.equal(delta.status, 'ANOMALY');
-  assert.equal(delta.delta, -10);
-  assert.equal(delta.baseline_type, 'PREVIOUS_VALID_OBSERVATION');
+  const member = plan.members.find((item) => item.source_member_key === 'PERSIA-S12-RANK-01');
+  assert.ok(member);
+  assert.equal(member.identity_resolution.status, 'CONTRADICTION');
+  assert.equal(member.identity_resolution.global_player_id, null);
+  assert.ok(plan.review_reasons.some((item) =>
+    item.source_member_key === 'PERSIA-S12-RANK-01' &&
+    item.reason === 'identity_resolution_not_confirmed'
+  ));
+  assert.ok(plan.review_reasons.some((item) =>
+    item.source_member_key === 'PERSIA-S12-RANK-01' &&
+    item.reason === 'monotonic_continuity_contradiction'
+  ));
   assert.equal(
-    delta.baseline_observation_id,
-    'S11-DELTA-OLD::PERSIA-S12-PREV-KILL'
+    plan.persistence.transaction.canonical_patch.delta_results.some(
+      (item) => item.current_observation_id === 'S12::PERSIA-S12-RANK-01'
+    ),
+    false
   );
-  assert.equal(delta.reason, 'monotonic_metric_decreased');
 });
 
 test('Delta materialization: unresolved S12 observations receive no identity-bound deltas', () => {
@@ -708,7 +711,7 @@ test('Delta projection: edge states, baseline metadata and anomaly reason are pr
       clan_id: null,
       league_id: null,
       membership_episode_id: null,
-      delta: -10,
+      delta: null,
       status: 'ANOMALY',
       reason: 'monotonic_metric_decreased'
     }
@@ -731,7 +734,7 @@ test('Delta projection: edge states, baseline metadata and anomaly reason are pr
   assert.equal(baselineUnavailable.baseline_observation_id, null);
 
   assert.equal(anomaly.status, 'ANOMALY');
-  assert.equal(anomaly.delta, -10);
+  assert.equal(anomaly.delta, null);
   assert.equal(anomaly.reason, 'monotonic_metric_decreased');
   assert.equal(
     anomaly.baseline_observation_id,
