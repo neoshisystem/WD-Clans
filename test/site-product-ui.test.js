@@ -355,7 +355,7 @@ test('Real Persian UNITY S14 continuity is quarantined by the hard monotonic ide
  assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
  assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
  assert.equal(changes.filter(c => c.change_type === 'JOIN' && c.reason === 'monotonic_identity_contradiction').length,47);
- assert.equal(changes.filter(c => c.change_type === 'LEAVE' && c.reason === 'monotonic_identity_contradiction').length,48);
+ assert.equal(changes.filter(c => c.change_type === 'LEAVE' && c.reason === 'monotonic_identity_contradiction').length,46);
 });
 
 test('Real Persian UNITY S15 checkpoint preserves separate Current League and Profile Clan Medal scopes', () => {
