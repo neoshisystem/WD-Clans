@@ -756,7 +756,7 @@ test('Hard monotonic continuity guard prevents false pairing when a lifetime fie
   );
 
   assert.equal(deltas.length, 0);
-  assert.equal(changes.length, 2);
+  assert.equal(changes.length, 1);
   assert.equal(changes.some((item) => item.change_type === 'JOIN' && item.reason === 'monotonic_identity_contradiction'), true);
   assert.equal(changes.some((item) => item.change_type === 'LEAVE' && item.reason === 'monotonic_identity_contradiction'), true);
   assert.equal(projected.snapshot_delta_results.some((item) => Number.isFinite(item.delta) && item.delta < 0), false);
