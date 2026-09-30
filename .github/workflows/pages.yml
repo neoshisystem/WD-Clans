@@ -1,4 +1,5 @@
 name: Deploy UCS Static Site to GitHub Pages
+# UCS: deployment trigger aligned to approved monotonic Snapshot contract.
 
 on:
   push:
