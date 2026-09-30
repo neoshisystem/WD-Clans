@@ -73,24 +73,22 @@ War Drone League boundaries are fixed:
 
 League status must be determined from the authoritative Snapshot timestamp, not the ZIP filename or ingestion time.
 
-## 5. Raw Snapshot archive — mandatory
+## 5. Replayable Raw Snapshot archive — mandatory
 
-Every Agent-produced Raw Extraction must be saved **unchanged** inside the Product repository before normalization:
+Every Agent-produced Raw Extraction must be saved as a replayable, conversation-readable archive in the private Memory-ai repository:
 
-`Snapshot/<Clan Display Name>/<Snapshot ID>.raw.json`
+projects/UCS/snapshots/<Clan Display Name>/<Snapshot ID>.raw.json
 
-Example:
-
-`Snapshot/Persian UNITY/S15.raw.json`
+The Product repository may retain a historical/raw mirror under data/real-snapshots/<clan>/.
 
 Rules:
-
 - one immutable raw file per Snapshot;
-- never overwrite an existing raw file;
-- same Snapshot ID + different content is an archive conflict and must fail closed;
-- the original ZIP remains evidence by SHA-256 and source location;
-- future audits/rechecks must read the archived Raw Extraction first;
-- do not repeat expensive image/OCR extraction when the archived Raw Extraction is complete and available;
+- never overwrite an existing raw archive; same Snapshot ID + different content is an archive conflict;
+- store ZIP SHA-256 and deterministic inventory hash;
+- preserve exact source display_name;
+- preserve Ranking/Profile source scope and evidence references;
+- preserve UNKNOWN, AMBIGUOUS, CONFLICTING and UNRESOLVED states;
+- later rechecks must be able to replay the Snapshot from the Raw archive without re-reading the ZIP when the archive is complete;
 - Raw Extraction is evidence/archive, not Canonical Data.
 
 `data/real-snapshots/...` remains historical legacy evidence where already present; new ingestion uses the `Snapshot/<Clan>/` archive as the standard replay source.
@@ -117,6 +115,10 @@ A value from one scope must never be silently substituted for another.
 Example: Profile Total Clan Medal Count must never be copied into Current League Clan Medals.
 
 ## 7. Required pipeline
+
+ZIP → SHA-256 → deterministic inventory → visual extraction → RawExtraction archive → same-Snapshot correlation → SnapshotInput → identity/continuity review → Canonical → Projection → Static → UI → validation/report
+
+S16+ intake must not bypass the RawExtraction archive step.
 
 `ZIP → SHA-256 → deterministic inventory → Ranking/Profile classification → visual extraction → Raw Extraction archive → same-Snapshot correlation → SnapshotInput → identity/continuity review → Canonical → Projection → Static → UI → validation/report`
 

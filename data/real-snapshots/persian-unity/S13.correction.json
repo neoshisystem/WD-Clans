@@ -1,0 +1,134 @@
+{
+  "schema_version": "UCS-S13-CORRECTION/0.2",
+  "correction_id": "CORR-S13-SOURCE-RECHECK-2026-09-30",
+  "correction_date_utc": "2026-09-30T19:50:00Z",
+  "snapshot_id": "S13",
+  "clan_id": "CLAN-PERSIAN-UNITY",
+  "authority_status": "APPROVED",
+  "source_artifact": {
+    "artifact_id": "EV-REAL-PERSIAN-UNITY-S13",
+    "sha256": "7e19f1702139c5d78c9f19acb43a5e0fc0fd14b4f34e8f40be992c55f154f583",
+    "inventory_count": 56,
+    "inventory_sha256": "a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1"
+  },
+  "before_raw_blob_sha": "060c37cb5faac32179da07f9a43ed95d28f2cd7b",
+  "reason": "Fresh re-extraction of the uploaded S13 ZIP found incomplete RawExtraction fields and source transcription differences.",
+  "corrections": [
+    [
+      "S13-R07",
+      "total_kills",
+      171349,
+      113174
+    ],
+    [
+      "S13-R10",
+      "profile_total_clan_medal_count",
+      625538,
+      625530
+    ],
+    [
+      "S13-R13",
+      "profile_total_clan_medal_count",
+      122187,
+      122107
+    ],
+    [
+      "S13-R15",
+      "total_kills",
+      197464,
+      137464
+    ],
+    [
+      "S13-R21",
+      "total_kills",
+      93895,
+      93835
+    ],
+    [
+      "S13-R29",
+      "total_kills",
+      91517,
+      91547
+    ],
+    [
+      "S13-R33",
+      "total_kills",
+      99016,
+      98416
+    ],
+    [
+      "S13-R34",
+      "profile_total_clan_medal_count",
+      1178922,
+      1170922
+    ],
+    [
+      "S13-R38",
+      "profile_total_clan_medal_count",
+      31313,
+      341313
+    ],
+    [
+      "S13-R44",
+      "profile_total_clan_medal_count",
+      956498,
+      756498
+    ],
+    [
+      "S13-R07",
+      "display_name",
+      "ALI",
+      "ALI🇮🇷"
+    ],
+    [
+      "S13-R08",
+      "display_name",
+      "Commander",
+      "Commander 🇮🇷"
+    ],
+    [
+      "S13-R09",
+      "display_name",
+      "PERSIAN TIGER",
+      "PERSIAN TIGER🇮🇷"
+    ],
+    [
+      "S13-R26",
+      "display_name",
+      "H03E1N",
+      "H03E1N"
+    ],
+    [
+      "S13-R31",
+      "display_name",
+      "سید حیدر ۳۱۳",
+      "سید حیدر ۳۱۳"
+    ],
+    [
+      "S13-R32",
+      "display_name",
+      "Uk 🇮🇷💪",
+      "Uk 🇮🇷💪"
+    ],
+    [
+      "S13-R43",
+      "display_name",
+      "Harpy☁️",
+      "Harpy🌧️"
+    ],
+    [
+      "S13-R44",
+      "display_name",
+      "soltoon",
+      "♕soltoon♕"
+    ],
+    [
+      "S13-R47",
+      "display_name",
+      "ErFaN.m279",
+      "ErFaN.m279"
+    ]
+  ],
+  "completeness_fix": "Restored source-observed last_online_display, lifetime_medals and weapon_levels for all 48 S13 profile observations in the replayable archive.",
+  "pairing_impact": "Hard monotonic continuity remains pair-blocking; no Global Player IDs are fabricated."
+}

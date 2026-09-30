@@ -974,7 +974,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 144626,
-      "display_name": "ALI",
+      "display_name": "ALI🇮🇷",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "1h",
@@ -1002,7 +1002,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -1058,7 +1059,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 7,
       "role": "Member",
@@ -1079,7 +1083,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 142664,
-      "display_name": "Commander",
+      "display_name": "Commander 🇮🇷",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "<1m",
@@ -1107,7 +1111,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -1163,7 +1168,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 8,
       "role": "Elder",
@@ -1184,7 +1192,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 131180,
-      "display_name": "PERSIAN TIGER",
+      "display_name": "PERSIAN TIGER🇮🇷",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "4h",
@@ -1212,7 +1220,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -1268,7 +1277,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 9,
       "role": "Member",
@@ -2549,7 +2561,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 78131,
-      "display_name": "hadi.land",
+      "display_name": "hadi,land",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "10m",
@@ -2577,7 +2589,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -2633,7 +2646,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 22,
       "role": "Member & MVP",
@@ -4754,7 +4770,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 28386,
-      "display_name": "Harpy☁️",
+      "display_name": "Harpy🌧️",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "2m",
@@ -4782,7 +4798,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -4838,7 +4855,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 43,
       "role": "Member",
@@ -4859,7 +4879,7 @@
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 28182,
-      "display_name": "soltoon",
+      "display_name": "♕soltoon♕",
       "global_player_id": null,
       "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "19m",
@@ -4887,7 +4907,8 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "OBSERVED"
+            "status": "CORRECTED_SOURCE_RECHECK",
+            "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
             "evidence_refs": [
@@ -4943,7 +4964,10 @@
             ],
             "status": "OBSERVED"
           }
-        }
+        },
+        "correction_refs": [
+          "CORR-S13-SOURCE-RECHECK-2026-09-30"
+        ]
       },
       "rank": 44,
       "role": "Member",
@@ -23461,5 +23485,9 @@
       "sequence": 3,
       "snapshot_id": "S15"
     }
-  ]
+  ],
+  "recheck": {
+    "last_source_recheck_utc": "2026-09-30T19:50:00Z",
+    "ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "UCS-RAW-SNAPSHOT/0.1",
+  "schema_version": "UCS-RAW-SNAPSHOT/0.2",
   "status": "RAW_EXTRACTION_RECORDED_REVIEW_REQUIRED",
   "clan": {
     "clan_id": "CLAN-PERSIAN-UNITY",
@@ -7,11 +7,12 @@
   },
   "snapshot": {
     "snapshot_id": "S13",
-    "sequence": 13,
+    "sequence": 1,
     "official_timestamp_utc": "2026-09-26T19:30:00.000Z",
     "official_timestamp_source": "Project Authority",
     "member_count": 48,
-    "capacity": 50
+    "capacity": 50,
+    "chain_sequence": 1
   },
   "source_artifact": {
     "artifact_id": "EV-REAL-PERSIAN-UNITY-S13",
@@ -26,7 +27,24 @@
       "ranking_screenshots": 8,
       "profile_cards": 48,
       "duplicate_ranking_screenshots": 1
-    }
+    },
+    "inventory_hash": "a3ec8927dc6bcf263a36ed57f54dfd21c76e7d8ee1101cd7fd0b067a2b65dea1",
+    "inventory_hash_method": "SHA-256 of UTF-8 newline-joined sorted relative file paths",
+    "capture_window_local": {
+      "timezone": "Asia/Tehran",
+      "start": "2026-09-26T22:51:36+03:30",
+      "end": "2026-09-26T23:00:29+03:30"
+    },
+    "ranking_files": [
+      "Screenshot_20260926_225136_War Drone.jpg",
+      "Screenshot_20260926_225146_War Drone.jpg",
+      "Screenshot_20260926_225157_War Drone.jpg",
+      "Screenshot_20260926_225207_War Drone.jpg",
+      "Screenshot_20260926_225220_War Drone.jpg",
+      "Screenshot_20260926_225235_War Drone.jpg",
+      "Screenshot_20260926_225242_War Drone.jpg",
+      "Screenshot_20260926_225313_War Drone.jpg"
+    ]
   },
   "extraction_scope": {
     "ranking_fields": [
@@ -72,7 +90,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225319_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225319_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 1297,
+        "hellfire": 71,
+        "hydra": 447
       }
     },
     {
@@ -88,7 +133,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225326_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225326_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "43m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 1056,
+        "hellfire": 94,
+        "hydra": 357
       }
     },
     {
@@ -104,7 +176,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225333_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225333_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "<1m",
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapon_levels": {
+        "25mm": 1084,
+        "hellfire": 57,
+        "hydra": 315
       }
     },
     {
@@ -120,7 +219,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225354_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225354_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 1011,
+        "hellfire": 85,
+        "hydra": 335
       }
     },
     {
@@ -136,7 +262,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225411_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225411_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 680,
+        "hellfire": 58,
+        "hydra": 192
       }
     },
     {
@@ -152,7 +305,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225420_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225420_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 628,
+        "hellfire": 63,
+        "hydra": 258
       }
     },
     {
@@ -162,13 +342,40 @@
       "role": "Member",
       "stage": 46,
       "current_league_clan_medals": 144626,
-      "total_kills": 171349,
+      "total_kills": 113174,
       "profile_total_clan_medal_count": 144626,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225136_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225437_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225437_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 1103,
+        "hellfire": 64,
+        "hydra": 275
       }
     },
     {
@@ -184,7 +391,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225443_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225443_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "<1m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 1055,
+        "hellfire": 68,
+        "hydra": 261
       }
     },
     {
@@ -200,7 +434,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225450_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225450_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 481,
+        "hellfire": 49,
+        "hydra": 232
       }
     },
     {
@@ -211,12 +472,39 @@
       "stage": 28,
       "current_league_clan_medals": 126745,
       "total_kills": 155255,
-      "profile_total_clan_medal_count": 625538,
+      "profile_total_clan_medal_count": 625530,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225458_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225458_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 726,
+        "hellfire": 85,
+        "hydra": 224
       }
     },
     {
@@ -232,7 +520,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225510_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225510_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "10m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 1098,
+        "hellfire": 80,
+        "hydra": 385
       }
     },
     {
@@ -248,7 +563,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225519_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225519_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "22m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 340,
+        "hellfire": 60,
+        "hydra": 140
       }
     },
     {
@@ -259,12 +601,39 @@
       "stage": 63,
       "current_league_clan_medals": 122104,
       "total_kills": 267451,
-      "profile_total_clan_medal_count": 122187,
+      "profile_total_clan_medal_count": 122107,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225525_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225525_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapon_levels": {
+        "25mm": 1162,
+        "hellfire": 84,
+        "hydra": 394
       }
     },
     {
@@ -280,7 +649,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225146_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225535_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225535_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 0,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 270,
+        "hellfire": 28,
+        "hydra": 131
       }
     },
     {
@@ -290,13 +686,40 @@
       "role": "Member",
       "stage": 28,
       "current_league_clan_medals": 114202,
-      "total_kills": 197464,
+      "total_kills": 137464,
       "profile_total_clan_medal_count": 114202,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225543_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225543_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 520,
+        "hellfire": 30,
+        "hydra": 177
       }
     },
     {
@@ -312,7 +735,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225553_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225553_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "<1m",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 591,
+        "hellfire": 58,
+        "hydra": 253
       }
     },
     {
@@ -328,7 +778,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225601_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225601_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1m",
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 4,
+        "silver": 6
+      },
+      "weapon_levels": {
+        "25mm": 1060,
+        "hellfire": 54,
+        "hydra": 300
       }
     },
     {
@@ -344,7 +821,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225608_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225608_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 1,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 466,
+        "hellfire": 58,
+        "hydra": 247
       }
     },
     {
@@ -360,13 +864,40 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225614_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225614_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "3m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 683,
+        "hellfire": 52,
+        "hydra": 266
       }
     },
     {
       "source_member_key": "S13-R20",
       "rank": 20,
-      "display_name": "Navid",
+      "display_name": "NaViD",
       "role": "Member",
       "stage": 49,
       "current_league_clan_medals": 93816,
@@ -376,7 +907,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225622_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225622_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 3,
+        "gold": 2,
+        "silver": 5
+      },
+      "weapon_levels": {
+        "25mm": 936,
+        "hellfire": 63,
+        "hydra": 329
       }
     },
     {
@@ -386,13 +944,40 @@
       "role": "Member",
       "stage": 37,
       "current_league_clan_medals": 90870,
-      "total_kills": 93895,
+      "total_kills": 93835,
       "profile_total_clan_medal_count": 90870,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225157_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225632_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225632_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 690,
+        "hellfire": 60,
+        "hydra": 177
       }
     },
     {
@@ -408,7 +993,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225639_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225639_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "10m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 737,
+        "hellfire": 34,
+        "hydra": 262
       }
     },
     {
@@ -424,7 +1036,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225648_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225648_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 922,
+        "hellfire": 74,
+        "hydra": 265
       }
     },
     {
@@ -440,7 +1079,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225654_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225654_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 837,
+        "hellfire": 69,
+        "hydra": 216
       }
     },
     {
@@ -456,13 +1122,40 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225700_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225700_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 746,
+        "hellfire": 56,
+        "hydra": 385
       }
     },
     {
       "source_member_key": "S13-R26",
       "rank": 26,
-      "display_name": "HO3EIN",
+      "display_name": "H03E1N",
       "role": "Member",
       "stage": 39,
       "current_league_clan_medals": 71849,
@@ -472,7 +1165,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225707_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225707_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 723,
+        "hellfire": 52,
+        "hydra": 348
       }
     },
     {
@@ -488,7 +1208,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225723_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225723_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 820,
+        "hellfire": 66,
+        "hydra": 210
       }
     },
     {
@@ -504,7 +1251,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225207_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225731_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225731_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 710,
+        "hellfire": 42,
+        "hydra": 190
       }
     },
     {
@@ -514,13 +1288,40 @@
       "role": "Member",
       "stage": 25,
       "current_league_clan_medals": 65151,
-      "total_kills": 91517,
+      "total_kills": 91547,
       "profile_total_clan_medal_count": 65154,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225738_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225738_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 519,
+        "hellfire": 42,
+        "hydra": 164
       }
     },
     {
@@ -536,13 +1337,40 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225745_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225745_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 622,
+        "hellfire": 38,
+        "hydra": 245
       }
     },
     {
       "source_member_key": "S13-R31",
       "rank": 31,
-      "display_name": "سید حیدر ۳۳",
+      "display_name": "سید حیدر ۳۱۳",
       "role": "Member",
       "stage": 28,
       "current_league_clan_medals": 60636,
@@ -552,13 +1380,40 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225822_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225822_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 605,
+        "hellfire": 61,
+        "hydra": 236
       }
     },
     {
       "source_member_key": "S13-R32",
       "rank": 32,
-      "display_name": "Vk 🇮🇷💪",
+      "display_name": "Uk 🇮🇷💪",
       "role": "Member",
       "stage": 40,
       "current_league_clan_medals": 56109,
@@ -568,7 +1423,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225837_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225837_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 766,
+        "hellfire": 57,
+        "hydra": 311
       }
     },
     {
@@ -578,13 +1460,40 @@
       "role": "Member",
       "stage": 26,
       "current_league_clan_medals": 55244,
-      "total_kills": 99016,
+      "total_kills": 98416,
       "profile_total_clan_medal_count": 55247,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225844_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225844_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "3m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 2
+      },
+      "weapon_levels": {
+        "25mm": 543,
+        "hellfire": 27,
+        "hydra": 183
       }
     },
     {
@@ -595,12 +1504,39 @@
       "stage": 64,
       "current_league_clan_medals": 50891,
       "total_kills": 217418,
-      "profile_total_clan_medal_count": 1178922,
+      "profile_total_clan_medal_count": 1170922,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225851_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225851_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "3h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 1153,
+        "hellfire": 99,
+        "hydra": 384
       }
     },
     {
@@ -616,7 +1552,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225220_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225857_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225857_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 1438,
+        "hellfire": 55,
+        "hydra": 485
       }
     },
     {
@@ -632,7 +1595,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225905_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225905_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 670,
+        "hellfire": 81,
+        "hydra": 263
       }
     },
     {
@@ -648,7 +1638,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225912_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225912_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 496,
+        "hellfire": 48,
+        "hydra": 120
       }
     },
     {
@@ -659,12 +1676,39 @@
       "stage": 48,
       "current_league_clan_medals": 37469,
       "total_kills": 167685,
-      "profile_total_clan_medal_count": 31313,
+      "profile_total_clan_medal_count": 341313,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225920_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225920_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2h",
+      "lifetime_medals": {
+        "bronze": 5,
+        "gold": 6,
+        "silver": 7
+      },
+      "weapon_levels": {
+        "25mm": 886,
+        "hellfire": 68,
+        "hydra": 320
       }
     },
     {
@@ -680,7 +1724,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225927_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225927_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 3,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 1001,
+        "hellfire": 52,
+        "hydra": 211
       }
     },
     {
@@ -696,7 +1767,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225935_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225935_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "<1m",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 848,
+        "hellfire": 56,
+        "hydra": 308
       }
     },
     {
@@ -712,7 +1810,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225940_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225940_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "4h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 308,
+        "hellfire": 32,
+        "hydra": 132
       }
     },
     {
@@ -728,7 +1853,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225235_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225947_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225947_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "3h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 762,
+        "hellfire": 60,
+        "hydra": 307
       }
     },
     {
@@ -744,7 +1896,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_225957_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_225957_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "2m",
+      "lifetime_medals": {
+        "bronze": 1,
+        "gold": 0,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 615,
+        "hellfire": 33,
+        "hydra": 210
       }
     },
     {
@@ -755,12 +1934,39 @@
       "stage": 38,
       "current_league_clan_medals": 28182,
       "total_kills": 142161,
-      "profile_total_clan_medal_count": 956498,
+      "profile_total_clan_medal_count": 756498,
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_230002_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_230002_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "19m",
+      "lifetime_medals": {
+        "bronze": 4,
+        "gold": 3,
+        "silver": 4
+      },
+      "weapon_levels": {
+        "25mm": 1000,
+        "hellfire": 53,
+        "hydra": 162
       }
     },
     {
@@ -776,7 +1982,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_230009_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_230009_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "16h",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 1,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 542,
+        "hellfire": 36,
+        "hydra": 169
       }
     },
     {
@@ -792,13 +2025,40 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_230015_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_230015_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "5h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 3
+      },
+      "weapon_levels": {
+        "25mm": 688,
+        "hellfire": 42,
+        "hydra": 220
       }
     },
     {
       "source_member_key": "S13-R47",
       "rank": 47,
-      "display_name": "ErFaN.mZ79",
+      "display_name": "ErFaN.m279",
       "role": "Member",
       "stage": 30,
       "current_league_clan_medals": 26497,
@@ -808,7 +2068,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_230022_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_230022_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "13h",
+      "lifetime_medals": {
+        "bronze": 2,
+        "gold": 2,
+        "silver": 1
+      },
+      "weapon_levels": {
+        "25mm": 587,
+        "hellfire": 51,
+        "hydra": 276
       }
     },
     {
@@ -824,7 +2111,34 @@
       "global_player_id": null,
       "evidence": {
         "ranking_source": "Screenshot_20260926_225242_War Drone.jpg",
-        "profile_source": "Screenshot_20260926_230029_War Drone.jpg"
+        "profile_source": "Screenshot_20260926_230029_War Drone.jpg",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "last_online_display": "1d",
+      "lifetime_medals": {
+        "bronze": 0,
+        "gold": 2,
+        "silver": 0
+      },
+      "weapon_levels": {
+        "25mm": 506,
+        "hellfire": 25,
+        "hydra": 102
       }
     }
   ],
@@ -844,5 +2158,12 @@
     "All 48 members have corresponding profile-card evidence.",
     "No real S13 data was merged into the synthetic canonical dataset.",
     "No Global Player IDs were created."
-  ]
+  ],
+  "recheck": {
+    "performed_utc": "2026-09-30T19:50:00Z",
+    "method": "fresh ZIP SHA/inventory verification plus source visual recheck plus existing-data comparison",
+    "source_archive_is_replayable": true,
+    "display_name_policy": "exact source display name preserved",
+    "hard_monotonic_identity_policy": "any decrease in Stage, any weapon level, Total Kills, lifetime Bronze, Silver, or Gold blocks continuity pairing"
+  }
 }

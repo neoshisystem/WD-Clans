@@ -89,3 +89,11 @@ Derived roster changes are observation-level JOIN/LEAVE displays. They do not cr
 Derived deltas are limited to PLAYER_LIFETIME/total_kills and LEAGUE/current_league_clan_medals. Hard monotonic continuity contradictions block pairing; they do not become negative Deltas. Negative numeric Deltas are invalid and must not survive validation.
 
 S14 checkpoint: 46 matched observations, 4 observed additions, 2 observed departures, 46 Kill deltas, and 46 Current League Clan Medal deltas. Valid aggregate increases: +145,391 Kills and +9,207,907 Current League Clan Medals.
+
+
+## 2026-09-30 replayability hardening
+- Durable RawExtraction archive: private Memory-ai at projects/UCS/snapshots/<Clan>/<Snapshot>.raw.json.
+- All real Snapshot raw records use weapon_levels consistently.
+- Exact source display_name is preserved; normalization must not overwrite it.
+- Every recheck compares fresh ZIP evidence against RawExtraction and Canonical before declaring the chain clean.
+- Any decrease in Stage, any weapon level, Total Kills, lifetime Bronze, Silver or Gold blocks continuity pairing.

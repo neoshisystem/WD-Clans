@@ -1,5 +1,5 @@
 {
-  "schema_version": "UCS-RAW-SNAPSHOT/0.1",
+  "schema_version": "UCS-RAW-SNAPSHOT/0.2",
   "status": "RAW_EXTRACTION_RECORDED_REVIEW_REQUIRED",
   "clan": {
     "clan_id": "CLAN-PERSIAN-UNITY",
@@ -11,7 +11,8 @@
     "official_timestamp_utc": "2026-09-28T19:30:00.000Z",
     "official_timestamp_source": "Project Authority",
     "member_count": 50,
-    "capacity": 50
+    "capacity": 50,
+    "chain_sequence": 3
   },
   "source_artifact": {
     "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
@@ -28,7 +29,22 @@
       "ranking_screenshots": 8,
       "profile_cards": 50,
       "duplicate_ranking_screenshots": 0
-    }
+    },
+    "capture_window_local": {
+      "timezone": "Asia/Tehran",
+      "start": "2026-09-28T22:41:44+03:30",
+      "end": "2026-09-28T22:49:46+03:30"
+    },
+    "ranking_files": [
+      "Screenshot_20260928_224144_War Drone.jpg",
+      "Screenshot_20260928_224152_War Drone.jpg",
+      "Screenshot_20260928_224159_War Drone.jpg",
+      "Screenshot_20260928_224206_War Drone.jpg",
+      "Screenshot_20260928_224212_War Drone.jpg",
+      "Screenshot_20260928_224218_War Drone.jpg",
+      "Screenshot_20260928_224228_War Drone.jpg",
+      "Screenshot_20260928_224233_War Drone.jpg"
+    ]
   },
   "extraction_scope": {
     "ranking_fields": [
@@ -76,15 +92,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 1062,
-        "hellfire": 357,
-        "hydra": 94
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1062,
+        "hellfire": 357,
+        "hydra": 94
       }
     },
     {
@@ -102,15 +134,31 @@
         "gold": 2,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 1309,
-        "hellfire": 454,
-        "hydra": 72
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1309,
+        "hellfire": 454,
+        "hydra": 72
       }
     },
     {
@@ -128,15 +176,31 @@
         "gold": 2,
         "silver": 5
       },
-      "weapons": {
-        "25mm": 1100,
-        "hellfire": 316,
-        "hydra": 57
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1100,
+        "hellfire": 316,
+        "hydra": 57
       }
     },
     {
@@ -154,15 +218,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 1061,
-        "hellfire": 336,
-        "hydra": 90
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1061,
+        "hellfire": 336,
+        "hydra": 90
       }
     },
     {
@@ -180,15 +260,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 1079,
-        "hellfire": 265,
-        "hydra": 68
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1079,
+        "hellfire": 265,
+        "hydra": 68
       }
     },
     {
@@ -206,15 +302,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 686,
-        "hellfire": 196,
-        "hydra": 62
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 686,
+        "hellfire": 196,
+        "hydra": 62
       }
     },
     {
@@ -232,15 +344,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 628,
-        "hellfire": 258,
-        "hydra": 63
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 628,
+        "hellfire": 258,
+        "hydra": 63
       }
     },
     {
@@ -258,15 +386,31 @@
         "gold": 3,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 1140,
-        "hellfire": 277,
-        "hydra": 64
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1140,
+        "hellfire": 277,
+        "hydra": 64
       }
     },
     {
@@ -284,15 +428,31 @@
         "gold": 0,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 522,
-        "hellfire": 232,
-        "hydra": 49
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 522,
+        "hellfire": 232,
+        "hydra": 49
       }
     },
     {
@@ -310,15 +470,31 @@
         "gold": 4,
         "silver": 6
       },
-      "weapons": {
-        "25mm": 1068,
-        "hellfire": 304,
-        "hydra": 54
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1068,
+        "hellfire": 304,
+        "hydra": 54
       }
     },
     {
@@ -336,15 +512,31 @@
         "gold": 2,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 842,
-        "hellfire": 216,
-        "hydra": 69
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 842,
+        "hellfire": 216,
+        "hydra": 69
       }
     },
     {
@@ -362,15 +554,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 732,
-        "hellfire": 224,
-        "hydra": 89
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 732,
+        "hellfire": 224,
+        "hydra": 89
       }
     },
     {
@@ -388,15 +596,31 @@
         "gold": 2,
         "silver": 5
       },
-      "weapons": {
-        "25mm": 936,
-        "hellfire": 329,
-        "hydra": 63
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 936,
+        "hellfire": 329,
+        "hydra": 63
       }
     },
     {
@@ -414,15 +638,31 @@
         "gold": 1,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 352,
-        "hellfire": 144,
-        "hydra": 62
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 352,
+        "hellfire": 144,
+        "hydra": 62
       }
     },
     {
@@ -440,15 +680,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 950,
-        "hellfire": 275,
-        "hydra": 76
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 950,
+        "hellfire": 275,
+        "hydra": 76
       }
     },
     {
@@ -466,15 +722,31 @@
         "gold": 2,
         "silver": 5
       },
-      "weapons": {
-        "25mm": 1175,
-        "hellfire": 394,
-        "hydra": 86
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1175,
+        "hellfire": 394,
+        "hydra": 86
       }
     },
     {
@@ -492,15 +764,31 @@
         "gold": 1,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 466,
-        "hellfire": 247,
-        "hydra": 58
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 466,
+        "hellfire": 247,
+        "hydra": 58
       }
     },
     {
@@ -518,15 +806,31 @@
         "gold": 3,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 591,
-        "hellfire": 253,
-        "hydra": 58
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 591,
+        "hellfire": 253,
+        "hydra": 58
       }
     },
     {
@@ -544,15 +848,31 @@
         "gold": 1,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 524,
-        "hellfire": 203,
-        "hydra": 30
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 524,
+        "hellfire": 203,
+        "hydra": 30
       }
     },
     {
@@ -570,15 +890,31 @@
         "gold": 0,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 300,
-        "hellfire": 135,
-        "hydra": 30
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 300,
+        "hellfire": 135,
+        "hydra": 30
       }
     },
     {
@@ -596,15 +932,31 @@
         "gold": 2,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 724,
-        "hellfire": 190,
-        "hydra": 42
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 724,
+        "hellfire": 190,
+        "hydra": 42
       }
     },
     {
@@ -622,15 +974,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 743,
-        "hellfire": 267,
-        "hydra": 38
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 743,
+        "hellfire": 267,
+        "hydra": 38
       }
     },
     {
@@ -648,15 +1016,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 1110,
-        "hellfire": 389,
-        "hydra": 82
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1110,
+        "hellfire": 389,
+        "hydra": 82
       }
     },
     {
@@ -674,15 +1058,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 691,
-        "hellfire": 269,
-        "hydra": 53
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 691,
+        "hellfire": 269,
+        "hydra": 53
       }
     },
     {
@@ -700,15 +1100,31 @@
         "gold": 1,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 650,
-        "hellfire": 260,
-        "hydra": 40
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 650,
+        "hellfire": 260,
+        "hydra": 40
       }
     },
     {
@@ -726,15 +1142,31 @@
         "gold": 2,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 706,
-        "hellfire": 181,
-        "hydra": 60
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 706,
+        "hellfire": 181,
+        "hydra": 60
       }
     },
     {
@@ -752,15 +1184,31 @@
         "gold": 2,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 729,
-        "hellfire": 348,
-        "hydra": 52
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 729,
+        "hellfire": 348,
+        "hydra": 52
       }
     },
     {
@@ -778,15 +1226,31 @@
         "gold": 0,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 627,
-        "hellfire": 216,
-        "hydra": 40
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 627,
+        "hellfire": 216,
+        "hydra": 40
       }
     },
     {
@@ -804,15 +1268,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 759,
-        "hellfire": 385,
-        "hydra": 56
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 759,
+        "hellfire": 385,
+        "hydra": 56
       }
     },
     {
@@ -830,15 +1310,31 @@
         "gold": 0,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 525,
-        "hellfire": 164,
-        "hydra": 43
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 525,
+        "hellfire": 164,
+        "hydra": 43
       }
     },
     {
@@ -856,15 +1352,31 @@
         "gold": 3,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 496,
-        "hellfire": 120,
-        "hydra": 48
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 496,
+        "hellfire": 120,
+        "hydra": 48
       }
     },
     {
@@ -882,15 +1394,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 1440,
-        "hellfire": 489,
-        "hydra": 55
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1440,
+        "hellfire": 489,
+        "hydra": 55
       }
     },
     {
@@ -908,15 +1436,31 @@
         "gold": 0,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 617,
-        "hellfire": 240,
-        "hydra": 63
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 617,
+        "hellfire": 240,
+        "hydra": 63
       }
     },
     {
@@ -934,15 +1478,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 827,
-        "hellfire": 214,
-        "hydra": 70
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 827,
+        "hellfire": 214,
+        "hydra": 70
       }
     },
     {
@@ -960,15 +1520,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 776,
-        "hellfire": 311,
-        "hydra": 57
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 776,
+        "hellfire": 311,
+        "hydra": 57
       }
     },
     {
@@ -986,15 +1562,31 @@
         "gold": 2,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 308,
-        "hellfire": 136,
-        "hydra": 32
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 308,
+        "hellfire": 136,
+        "hydra": 32
       }
     },
     {
@@ -1012,15 +1604,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 550,
-        "hellfire": 184,
-        "hydra": 27
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 550,
+        "hellfire": 184,
+        "hydra": 27
       }
     },
     {
@@ -1038,15 +1646,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 263,
-        "hellfire": 84,
-        "hydra": 46
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 263,
+        "hellfire": 84,
+        "hydra": 46
       }
     },
     {
@@ -1064,15 +1688,31 @@
         "gold": 3,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 1001,
-        "hellfire": 211,
-        "hydra": 52
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1001,
+        "hellfire": 211,
+        "hydra": 52
       }
     },
     {
@@ -1090,15 +1730,31 @@
         "gold": 2,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 589,
-        "hellfire": 276,
-        "hydra": 51
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 589,
+        "hellfire": 276,
+        "hydra": 51
       }
     },
     {
@@ -1116,15 +1772,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 1000,
-        "hellfire": 174,
-        "hydra": 53
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1000,
+        "hellfire": 174,
+        "hydra": 53
       }
     },
     {
@@ -1142,15 +1814,31 @@
         "gold": 3,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 676,
-        "hellfire": 267,
-        "hydra": 81
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 676,
+        "hellfire": 267,
+        "hydra": 81
       }
     },
     {
@@ -1168,15 +1856,31 @@
         "gold": 6,
         "silver": 7
       },
-      "weapons": {
-        "25mm": 886,
-        "hellfire": 320,
-        "hydra": 68
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 886,
+        "hellfire": 320,
+        "hydra": 68
       }
     },
     {
@@ -1194,15 +1898,31 @@
         "gold": 3,
         "silver": 3
       },
-      "weapons": {
-        "25mm": 1153,
-        "hellfire": 384,
-        "hydra": 99
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 1153,
+        "hellfire": 384,
+        "hydra": 99
       }
     },
     {
@@ -1220,15 +1940,31 @@
         "gold": 3,
         "silver": 4
       },
-      "weapons": {
-        "25mm": 762,
-        "hellfire": 307,
-        "hydra": 60
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 762,
+        "hellfire": 307,
+        "hydra": 60
       }
     },
     {
@@ -1246,15 +1982,31 @@
         "gold": 1,
         "silver": 1
       },
-      "weapons": {
-        "25mm": 542,
-        "hellfire": 173,
-        "hydra": 36
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 542,
+        "hellfire": 173,
+        "hydra": 36
       }
     },
     {
@@ -1272,15 +2024,31 @@
         "gold": 1,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 862,
-        "hellfire": 313,
-        "hydra": 57
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 862,
+        "hellfire": 313,
+        "hydra": 57
       }
     },
     {
@@ -1298,15 +2066,31 @@
         "gold": 0,
         "silver": 0
       },
-      "weapons": {
-        "25mm": 546,
-        "hellfire": 88,
-        "hydra": 29
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 546,
+        "hellfire": 88,
+        "hydra": 29
       }
     },
     {
@@ -1324,15 +2108,31 @@
         "gold": 2,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 658,
-        "hellfire": 433,
-        "hydra": 76
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 658,
+        "hellfire": 433,
+        "hydra": 76
       }
     },
     {
@@ -1350,16 +2150,39 @@
         "gold": 0,
         "silver": 2
       },
-      "weapons": {
-        "25mm": 582,
-        "hellfire": 293,
-        "hydra": 62
-      },
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S15",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
+      },
+      "weapon_levels": {
+        "25mm": 582,
+        "hellfire": 293,
+        "hydra": 62
       }
     }
-  ]
+  ],
+  "recheck": {
+    "performed_utc": "2026-09-30T19:50:00Z",
+    "method": "fresh ZIP SHA/inventory verification plus source visual recheck plus existing-data comparison",
+    "source_archive_is_replayable": true,
+    "display_name_policy": "exact source display name preserved",
+    "hard_monotonic_identity_policy": "any decrease in Stage, any weapon level, Total Kills, lifetime Bronze, Silver, or Gold blocks continuity pairing"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "UCS-RAW-SNAPSHOT/0.1",
+  "schema_version": "UCS-RAW-SNAPSHOT/0.2",
   "status": "RAW_EXTRACTION_RECORDED_REVIEW_REQUIRED",
   "clan": {
     "clan_id": "CLAN-PERSIAN-UNITY",
@@ -7,11 +7,12 @@
   },
   "snapshot": {
     "snapshot_id": "S14",
-    "sequence": 14,
+    "sequence": 2,
     "official_timestamp_utc": "2026-09-27T19:30:00.000Z",
     "official_timestamp_source": "Project Authority",
     "member_count": 50,
-    "capacity": 50
+    "capacity": 50,
+    "chain_sequence": 2
   },
   "source_artifact": {
     "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
@@ -28,7 +29,22 @@
       "ranking_screenshots": 8,
       "profile_cards": 50,
       "duplicate_ranking_screenshots": 0
-    }
+    },
+    "capture_window_local": {
+      "timezone": "Asia/Tehran",
+      "start": "2026-09-27T22:49:22+03:30",
+      "end": "2026-09-27T22:58:16+03:30"
+    },
+    "ranking_files": [
+      "Screenshot_20260927_224922_War Drone.jpg",
+      "Screenshot_20260927_224939_War Drone.jpg",
+      "Screenshot_20260927_224950_War Drone.jpg",
+      "Screenshot_20260927_224958_War Drone.jpg",
+      "Screenshot_20260927_225008_War Drone.jpg",
+      "Screenshot_20260927_225018_War Drone.jpg",
+      "Screenshot_20260927_225026_War Drone.jpg",
+      "Screenshot_20260927_225041_War Drone.jpg"
+    ]
   },
   "extraction_scope": {
     "ranking_fields": [
@@ -84,7 +100,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -110,7 +142,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -136,7 +184,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -162,7 +226,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -188,7 +268,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -214,7 +310,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -240,7 +352,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -266,7 +394,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -292,7 +436,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -318,7 +478,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -344,7 +520,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -370,7 +562,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -396,7 +604,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -422,7 +646,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -448,7 +688,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -474,7 +730,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -500,7 +772,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -526,7 +814,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -552,7 +856,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -578,7 +898,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -604,7 +940,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -630,7 +982,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -656,7 +1024,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -682,7 +1066,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -708,7 +1108,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -734,7 +1150,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -760,7 +1192,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -786,7 +1234,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -812,7 +1276,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -838,7 +1318,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -864,7 +1360,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -890,7 +1402,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -916,7 +1444,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -942,7 +1486,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -968,7 +1528,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -994,7 +1570,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1020,7 +1612,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1046,7 +1654,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1072,7 +1696,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1098,7 +1738,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1124,7 +1780,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1150,7 +1822,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1176,7 +1864,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1202,7 +1906,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1228,7 +1948,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1254,7 +1990,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1280,7 +2032,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1306,7 +2074,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1332,7 +2116,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     },
     {
@@ -1358,7 +2158,23 @@
       "identity_resolution_status": "UNRESOLVED",
       "global_player_id": null,
       "evidence": {
-        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14"
+        "artifact_id": "EV-REAL-PERSIAN-UNITY-S14",
+        "source_scope": {
+          "ranking": [
+            "rank",
+            "display_name",
+            "role",
+            "stage",
+            "current_league_clan_medals"
+          ],
+          "profile": [
+            "total_kills",
+            "profile_total_clan_medal_count",
+            "last_online_display",
+            "weapon_levels",
+            "lifetime_medals"
+          ]
+        }
       }
     }
   ],
@@ -1370,5 +2186,12 @@
     "No Global Player IDs or Membership Episodes/Events were created.",
     "Source-native Last Online strings are preserved; last_online_utc remains null."
   ],
-  "correction_ref": "data/real-snapshots/persian-unity/S14.correction.json"
+  "correction_ref": "data/real-snapshots/persian-unity/S14.correction.json",
+  "recheck": {
+    "performed_utc": "2026-09-30T19:50:00Z",
+    "method": "fresh ZIP SHA/inventory verification plus source visual recheck plus existing-data comparison",
+    "source_archive_is_replayable": true,
+    "display_name_policy": "exact source display name preserved",
+    "hard_monotonic_identity_policy": "any decrease in Stage, any weapon level, Total Kills, lifetime Bronze, Silver, or Gold blocks continuity pairing"
+  }
 }
