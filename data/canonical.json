@@ -19411,7 +19411,7 @@
         "continuity": {
           "specification": "projects/UCS/FINGERPRINT_TOOL.md",
           "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "assessment_state": "IDENTITY_CONTRADICTION",
           "prior_observation_id": "S14::R020",
           "prior_source_member_key": "S14-R20",
           "current_observation_id": "S15::R019",
@@ -19514,14 +19514,18 @@
             {
               "signal": "bronze",
               "reason": "monotonicity_contradiction",
-              "delta": -2
+              "previous": 2,
+              "current": 0,
+              "decrease": 2
             }
           ],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "IDENTITY_CONTRADICTION_DUE_TO_MONOTONIC_DECREASE",
+          "hard_exclusion": true,
+          "hard_exclusion_reason": "monotonic_lifetime_metric_decreased"
         }
       }
     },
@@ -22641,7 +22645,7 @@
         "continuity": {
           "specification": "projects/UCS/FINGERPRINT_TOOL.md",
           "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-          "assessment_state": "CONTINUOUS_CANDIDATE",
+          "assessment_state": "IDENTITY_CONTRADICTION",
           "prior_observation_id": "S14::R040",
           "prior_source_member_key": "S14-R40",
           "current_observation_id": "S15::R045",
@@ -22744,14 +22748,18 @@
             {
               "signal": "total_kills",
               "reason": "monotonicity_contradiction",
-              "delta": -300
+              "previous": 91455,
+              "current": 91155,
+              "decrease": 300
             }
           ],
           "evidence_refs": [
             "EV-REAL-PERSIAN-UNITY-S14",
             "EV-REAL-PERSIAN-UNITY-S15"
           ],
-          "conclusion": "CONTINUITY_SUPPORTED_WITH_REVIEW_CASES"
+          "conclusion": "IDENTITY_CONTRADICTION_DUE_TO_MONOTONIC_DECREASE",
+          "hard_exclusion": true,
+          "hard_exclusion_reason": "monotonic_lifetime_metric_decreased"
         }
       }
     },
