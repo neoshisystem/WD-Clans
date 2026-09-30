@@ -442,8 +442,8 @@
       "total_kills": 284528,
       "weapons": {
         "25mm": 1297,
-        "hellfire": 71,
-        "hydra": 447
+        "hellfire": 447,
+        "hydra": 71
       }
     },
     {
@@ -547,8 +547,8 @@
       "total_kills": 326329,
       "weapons": {
         "25mm": 1056,
-        "hellfire": 94,
-        "hydra": 357
+        "hellfire": 357,
+        "hydra": 94
       }
     },
     {
@@ -652,8 +652,8 @@
       "total_kills": 384764,
       "weapons": {
         "25mm": 1084,
-        "hellfire": 57,
-        "hydra": 315
+        "hellfire": 315,
+        "hydra": 57
       }
     },
     {
@@ -757,8 +757,8 @@
       "total_kills": 195299,
       "weapons": {
         "25mm": 1011,
-        "hellfire": 85,
-        "hydra": 335
+        "hellfire": 335,
+        "hydra": 85
       }
     },
     {
@@ -862,8 +862,8 @@
       "total_kills": 171349,
       "weapons": {
         "25mm": 680,
-        "hellfire": 58,
-        "hydra": 192
+        "hellfire": 192,
+        "hydra": 58
       }
     },
     {
@@ -967,8 +967,8 @@
       "total_kills": 180059,
       "weapons": {
         "25mm": 628,
-        "hellfire": 63,
-        "hydra": 258
+        "hellfire": 258,
+        "hydra": 63
       }
     },
     {
@@ -1076,8 +1076,8 @@
       "total_kills": 113174,
       "weapons": {
         "25mm": 1103,
-        "hellfire": 64,
-        "hydra": 275
+        "hellfire": 275,
+        "hydra": 64
       }
     },
     {
@@ -1185,8 +1185,8 @@
       "total_kills": 274556,
       "weapons": {
         "25mm": 1055,
-        "hellfire": 68,
-        "hydra": 261
+        "hellfire": 261,
+        "hydra": 68
       }
     },
     {
@@ -1294,8 +1294,8 @@
       "total_kills": 89579,
       "weapons": {
         "25mm": 481,
-        "hellfire": 49,
-        "hydra": 232
+        "hellfire": 232,
+        "hydra": 49
       }
     },
     {
@@ -1399,8 +1399,8 @@
       "total_kills": 155255,
       "weapons": {
         "25mm": 726,
-        "hellfire": 85,
-        "hydra": 224
+        "hellfire": 224,
+        "hydra": 85
       }
     },
     {
@@ -1504,8 +1504,8 @@
       "total_kills": 226022,
       "weapons": {
         "25mm": 1098,
-        "hellfire": 80,
-        "hydra": 385
+        "hellfire": 385,
+        "hydra": 80
       }
     },
     {
@@ -1609,8 +1609,8 @@
       "total_kills": 93047,
       "weapons": {
         "25mm": 340,
-        "hellfire": 60,
-        "hydra": 140
+        "hellfire": 140,
+        "hydra": 60
       }
     },
     {
@@ -1714,8 +1714,8 @@
       "total_kills": 267451,
       "weapons": {
         "25mm": 1162,
-        "hellfire": 84,
-        "hydra": 394
+        "hellfire": 394,
+        "hydra": 84
       }
     },
     {
@@ -1819,8 +1819,8 @@
       "total_kills": 43652,
       "weapons": {
         "25mm": 270,
-        "hellfire": 28,
-        "hydra": 131
+        "hellfire": 131,
+        "hydra": 28
       }
     },
     {
@@ -1924,8 +1924,8 @@
       "total_kills": 137464,
       "weapons": {
         "25mm": 520,
-        "hellfire": 30,
-        "hydra": 177
+        "hellfire": 177,
+        "hydra": 30
       }
     },
     {
@@ -2029,8 +2029,8 @@
       "total_kills": 196073,
       "weapons": {
         "25mm": 591,
-        "hellfire": 58,
-        "hydra": 253
+        "hellfire": 253,
+        "hydra": 58
       }
     },
     {
@@ -2134,8 +2134,8 @@
       "total_kills": 258782,
       "weapons": {
         "25mm": 1060,
-        "hellfire": 54,
-        "hydra": 300
+        "hellfire": 300,
+        "hydra": 54
       }
     },
     {
@@ -2239,8 +2239,8 @@
       "total_kills": 131907,
       "weapons": {
         "25mm": 466,
-        "hellfire": 58,
-        "hydra": 247
+        "hellfire": 247,
+        "hydra": 58
       }
     },
     {
@@ -2344,8 +2344,8 @@
       "total_kills": 141329,
       "weapons": {
         "25mm": 683,
-        "hellfire": 52,
-        "hydra": 266
+        "hellfire": 266,
+        "hydra": 52
       }
     },
     {
@@ -2449,8 +2449,8 @@
       "total_kills": 178063,
       "weapons": {
         "25mm": 936,
-        "hellfire": 63,
-        "hydra": 329
+        "hellfire": 329,
+        "hydra": 63
       }
     },
     {
@@ -2554,8 +2554,8 @@
       "total_kills": 93835,
       "weapons": {
         "25mm": 690,
-        "hellfire": 60,
-        "hydra": 177
+        "hellfire": 177,
+        "hydra": 60
       }
     },
     {
@@ -2663,8 +2663,8 @@
       "total_kills": 137903,
       "weapons": {
         "25mm": 737,
-        "hellfire": 34,
-        "hydra": 262
+        "hellfire": 262,
+        "hydra": 34
       }
     },
     {
@@ -2768,8 +2768,8 @@
       "total_kills": 151183,
       "weapons": {
         "25mm": 922,
-        "hellfire": 74,
-        "hydra": 265
+        "hellfire": 265,
+        "hydra": 74
       }
     },
     {
@@ -2873,8 +2873,8 @@
       "total_kills": 152532,
       "weapons": {
         "25mm": 837,
-        "hellfire": 69,
-        "hydra": 216
+        "hellfire": 216,
+        "hydra": 69
       }
     },
     {
@@ -2978,8 +2978,8 @@
       "total_kills": 117627,
       "weapons": {
         "25mm": 746,
-        "hellfire": 56,
-        "hydra": 385
+        "hellfire": 385,
+        "hydra": 56
       }
     },
     {
@@ -3083,8 +3083,8 @@
       "total_kills": 105890,
       "weapons": {
         "25mm": 723,
-        "hellfire": 52,
-        "hydra": 348
+        "hellfire": 348,
+        "hydra": 52
       }
     },
     {
@@ -3188,8 +3188,8 @@
       "total_kills": 108227,
       "weapons": {
         "25mm": 820,
-        "hellfire": 66,
-        "hydra": 210
+        "hellfire": 210,
+        "hydra": 66
       }
     },
     {
@@ -3293,8 +3293,8 @@
       "total_kills": 138019,
       "weapons": {
         "25mm": 710,
-        "hellfire": 42,
-        "hydra": 190
+        "hellfire": 190,
+        "hydra": 42
       }
     },
     {
@@ -3398,8 +3398,8 @@
       "total_kills": 91547,
       "weapons": {
         "25mm": 519,
-        "hellfire": 42,
-        "hydra": 164
+        "hellfire": 164,
+        "hydra": 42
       }
     },
     {
@@ -3503,8 +3503,8 @@
       "total_kills": 102160,
       "weapons": {
         "25mm": 622,
-        "hellfire": 38,
-        "hydra": 245
+        "hellfire": 245,
+        "hydra": 38
       }
     },
     {
@@ -3608,8 +3608,8 @@
       "total_kills": 115865,
       "weapons": {
         "25mm": 605,
-        "hellfire": 61,
-        "hydra": 236
+        "hellfire": 236,
+        "hydra": 61
       }
     },
     {
@@ -3713,8 +3713,8 @@
       "total_kills": 130731,
       "weapons": {
         "25mm": 766,
-        "hellfire": 57,
-        "hydra": 311
+        "hellfire": 311,
+        "hydra": 57
       }
     },
     {
@@ -3818,8 +3818,8 @@
       "total_kills": 98416,
       "weapons": {
         "25mm": 543,
-        "hellfire": 27,
-        "hydra": 183
+        "hellfire": 183,
+        "hydra": 27
       }
     },
     {
@@ -3923,8 +3923,8 @@
       "total_kills": 217418,
       "weapons": {
         "25mm": 1153,
-        "hellfire": 99,
-        "hydra": 384
+        "hellfire": 384,
+        "hydra": 99
       }
     },
     {
@@ -4028,8 +4028,8 @@
       "total_kills": 180951,
       "weapons": {
         "25mm": 1438,
-        "hellfire": 55,
-        "hydra": 485
+        "hellfire": 485,
+        "hydra": 55
       }
     },
     {
@@ -4133,8 +4133,8 @@
       "total_kills": 107719,
       "weapons": {
         "25mm": 670,
-        "hellfire": 81,
-        "hydra": 263
+        "hellfire": 263,
+        "hydra": 81
       }
     },
     {
@@ -4238,8 +4238,8 @@
       "total_kills": 49700,
       "weapons": {
         "25mm": 496,
-        "hellfire": 48,
-        "hydra": 120
+        "hellfire": 120,
+        "hydra": 48
       }
     },
     {
@@ -4343,8 +4343,8 @@
       "total_kills": 167685,
       "weapons": {
         "25mm": 886,
-        "hellfire": 68,
-        "hydra": 320
+        "hellfire": 320,
+        "hydra": 68
       }
     },
     {
@@ -4448,8 +4448,8 @@
       "total_kills": 152258,
       "weapons": {
         "25mm": 1001,
-        "hellfire": 52,
-        "hydra": 211
+        "hellfire": 211,
+        "hydra": 52
       }
     },
     {
@@ -4553,8 +4553,8 @@
       "total_kills": 149998,
       "weapons": {
         "25mm": 848,
-        "hellfire": 56,
-        "hydra": 308
+        "hellfire": 308,
+        "hydra": 56
       }
     },
     {
@@ -4658,8 +4658,8 @@
       "total_kills": 48557,
       "weapons": {
         "25mm": 308,
-        "hellfire": 32,
-        "hydra": 132
+        "hellfire": 132,
+        "hydra": 32
       }
     },
     {
@@ -4763,8 +4763,8 @@
       "total_kills": 89903,
       "weapons": {
         "25mm": 762,
-        "hellfire": 60,
-        "hydra": 307
+        "hellfire": 307,
+        "hydra": 60
       }
     },
     {
@@ -4872,8 +4872,8 @@
       "total_kills": 104477,
       "weapons": {
         "25mm": 615,
-        "hellfire": 33,
-        "hydra": 210
+        "hellfire": 210,
+        "hydra": 33
       }
     },
     {
@@ -4981,8 +4981,8 @@
       "total_kills": 142161,
       "weapons": {
         "25mm": 1000,
-        "hellfire": 53,
-        "hydra": 162
+        "hellfire": 162,
+        "hydra": 53
       }
     },
     {
@@ -5086,8 +5086,8 @@
       "total_kills": 50337,
       "weapons": {
         "25mm": 542,
-        "hellfire": 36,
-        "hydra": 169
+        "hellfire": 169,
+        "hydra": 36
       }
     },
     {
@@ -5191,8 +5191,8 @@
       "total_kills": 128654,
       "weapons": {
         "25mm": 688,
-        "hellfire": 42,
-        "hydra": 220
+        "hellfire": 220,
+        "hydra": 42
       }
     },
     {
@@ -5296,8 +5296,8 @@
       "total_kills": 108015,
       "weapons": {
         "25mm": 587,
-        "hellfire": 51,
-        "hydra": 276
+        "hellfire": 276,
+        "hydra": 51
       }
     },
     {
@@ -5401,8 +5401,8 @@
       "total_kills": 60442,
       "weapons": {
         "25mm": 506,
-        "hellfire": 25,
-        "hydra": 102
+        "hellfire": 102,
+        "hydra": 25
       }
     },
     {
