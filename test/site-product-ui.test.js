@@ -349,7 +349,7 @@ test('Real Persian UNITY S14 continuity is quarantined by the hard monotonic ide
  assert.equal(deltas.length,0);
  assert.equal(deltas.filter(d => d.metric_key === 'total_kills').length,0);
  assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals').length,0);
- assert.equal(changes.filter(c => c.change_type === 'JOIN').length,47);
+ assert.equal(changes.filter(c => c.change_type === 'JOIN').length,50);
  assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,48);
  assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
  assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);

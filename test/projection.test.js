@@ -745,6 +745,7 @@ test('36. Duplicate display names use fingerprint continuity and do not create a
 test('Hard monotonic continuity guard prevents false pairing when a lifetime field decreases', () => {
   const model = buildCanonical();
   const current = model.observations.find((item) => item.observation_id === 'S-A2::ROW-001');
+  current.display_name = 'Alpha';
   current.total_kills = 9999;
   validateCanonicalModel(model);
 
