@@ -342,20 +342,20 @@ test('Derived Snapshot continuity is exposed to the browser without weakening Ca
  assert.match(app,/ورودی و خروجی اعضا از رویدادهای Membership ثبت‌شده و مقایسهٔ خودکار/);
 });
 
-test('Real Persian UNITY S14 continuity regression is represented in generated static data', () => {
+test('Real Persian UNITY S14 continuity is quarantined by the hard monotonic identity contract', () => {
  const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
  const deltas = staticData.read_model.snapshot_delta_results.filter(d => d.current_observation_id.startsWith('S14::'));
  const changes = staticData.read_model.snapshot_membership_changes.filter(c => c.snapshot_id === 'S14');
- assert.equal(deltas.length,92);
- assert.equal(deltas.filter(d => d.metric_key === 'total_kills').length,46);
- assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals').length,46);
- assert.equal(changes.filter(c => c.change_type === 'JOIN').length,4);
- assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,2);
- assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),1829984);
- assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),145391);
- assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),1684593);
- assert.deepEqual(changes.filter(c => c.change_type === 'JOIN').map(c => c.display_name).sort(),['ADNAN','Kian_Tak','saied','حسن']);
- assert.deepEqual(changes.filter(c => c.change_type === 'LEAVE').map(c => c.display_name).sort(),['amin','mohammad']);
+ assert.equal(deltas.length,0);
+ assert.equal(deltas.filter(d => d.metric_key === 'total_kills').length,0);
+ assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals').length,0);
+ assert.equal(changes.filter(c => c.change_type === 'JOIN').length,50);
+ assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,48);
+ assert.equal(deltas.filter(d => d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
+ assert.equal(deltas.filter(d => d.metric_key === 'total_kills' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
+ assert.equal(deltas.filter(d => d.metric_key === 'current_league_clan_medals' && d.status === 'VALID').reduce((sum,d) => sum + d.delta,0),0);
+ assert.equal(changes.filter(c => c.change_type === 'JOIN' && c.reason === 'monotonic_identity_contradiction').length,50);
+ assert.equal(changes.filter(c => c.change_type === 'LEAVE' && c.reason === 'monotonic_identity_contradiction').length,48);
 });
 
 test('Real Persian UNITY S15 checkpoint preserves separate Current League and Profile Clan Medal scopes', () => {

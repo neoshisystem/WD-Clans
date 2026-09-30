@@ -34,7 +34,7 @@ function prepareSnapshotTransaction(input,context={}){
   const members=input.members.map((member)=>{
     let previous=null;
     const candidates=candidatesBySourceKey[member.source_member_key]||[];
-    const identity=resolveIdentity({
+    let identity=resolveIdentity({
       observation:member,
       candidates,
       resolutionDecision:decisionsBySourceKey[member.source_member_key]||null
@@ -110,6 +110,9 @@ function prepareSnapshotTransaction(input,context={}){
 
   const reviewReasons=[];
   for(const member of members){
+    if(member.identity_resolution.status==='CONTRADICTION' && member.identity_resolution.decision?.reason==='monotonic_continuity_contradiction'){
+      reviewReasons.push({source_member_key:member.source_member_key,reason:'monotonic_continuity_contradiction',status:'CONTRADICTION'});
+    }
     if(member.identity_resolution.status!=='CONFIRMED'){
       reviewReasons.push({
         source_member_key:member.source_member_key,

@@ -8,7 +8,8 @@ const path = require('node:path');
 
 const {
   ingestSnapshot,
-  writeJsonAtomic
+  writeJsonAtomic,
+  archiveRawExtraction
 } = require('../scripts/ingest-snapshot');
 
 const RAW_S12 = path.join(__dirname, '..', 'examples/pilots/persia-s12/raw-extraction.json');
@@ -19,6 +20,27 @@ function tempPath(name) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ucs-ingest-'));
   return path.join(dir, name);
 }
+
+test('Raw Snapshot archive is immutable and idempotent', () => {
+  const archiveRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'ucs-snapshot-archive-'));
+  const raw = readJson(RAW_S12);
+  const authority = s12Context();
+  const first = archiveRawExtraction({ rawExtraction: raw, authorityContext: authority, archiveRoot });
+  assert.equal(first.result, 'ARCHIVED');
+  assert.equal(fs.readFileSync(first.path, 'utf8'), JSON.stringify(raw, null, 2) + '\n');
+
+  const second = archiveRawExtraction({ rawExtraction: raw, authorityContext: authority, archiveRoot });
+  assert.equal(second.result, 'IDEMPOTENT');
+
+  const altered = structuredClone(raw);
+  altered.members[0].display_name = 'Archive Conflict';
+  assert.throws(
+    () => archiveRawExtraction({ rawExtraction: altered, authorityContext: authority, archiveRoot }),
+    (error) => error.code === 'SNAPSHOT_ARCHIVE_CONFLICT'
+  );
+
+  fs.rmSync(archiveRoot, { recursive: true, force: true });
+});
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
