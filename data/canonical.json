@@ -1002,7 +1002,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
@@ -1111,7 +1111,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
@@ -1220,7 +1220,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
@@ -2589,7 +2589,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
@@ -4798,7 +4798,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
@@ -4907,7 +4907,7 @@
             "evidence_refs": [
               "EV-REAL-PERSIAN-UNITY-S13"
             ],
-            "status": "CORRECTED_SOURCE_RECHECK",
+            "status": "OBSERVED",
             "correction_ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
           },
           "last_online_display": {
