@@ -752,7 +752,7 @@ test('Hard monotonic continuity guard prevents false pairing when a lifetime fie
   const projected = new ProjectionEngine().projectAll(model);
   const deltas = projected.snapshot_delta_results.filter((item) => item.current_observation_id === 'S-A2::ROW-001');
   const changes = projected.snapshot_membership_changes.filter(
-    (item) => item.snapshot_id === 'SA-2' && item.observation_id === 'O-A2-P1'
+    (item) => item.snapshot_id === 'S-A2' && item.observation_id === 'S-A2::ROW-001'
   );
 
   assert.equal(deltas.length, 0);
