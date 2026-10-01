@@ -24,25 +24,26 @@ const EXPECTED = {
   'S15-R46':'S14-R46','S15-R47':'S14-R44','S15-R48':'S14-R49','S15-R49':'S14-R48','S15-R50':'S14-R50'
 };
 
-test('S15 fingerprint continuity repair keeps identity unresolved and maps all 50 observations', () => {
+test('Real Persian UNITY identity resolution preserves S15 contradictions and confirmed chains', () => {
   const canonical = JSON.parse(fs.readFileSync(CANONICAL_PATH, 'utf8'));
   validateCanonicalModel(canonical);
 
   const s15Cases = canonical.resolution_cases.filter((item) => item.observation_id.startsWith('S15::'));
   assert.equal(s15Cases.length, 50);
-  assert.equal(s15Cases.every((item) => item.status === 'UNRESOLVED'), true);
-  assert.equal(canonical.global_player_identities.length, 2);
-  assert.equal(canonical.membership_events.length, 0);
-  assert.equal(canonical.membership_episodes.length, 2);
+  assert.equal(s15Cases.filter((item) => item.status === 'CONFIRMED').length, 34);
+  assert.equal(s15Cases.filter((item) => item.status === 'UNRESOLVED').length, 16);
+  assert.equal(canonical.global_player_identities.length, 50);
+  assert.equal(canonical.global_player_identities.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 48);
+  assert.equal(canonical.membership_events.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 48);
+  assert.equal(canonical.membership_episodes.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 83);
   assert.equal(canonical.delta_results.filter((item) => item.current_observation_id?.startsWith('S15::')).length, 0);
 
   for (const resolution of s15Cases) {
-    const expectedPriorKey = EXPECTED[canonical.observations.find((o) => o.observation_id === resolution.observation_id).source_member_key];
-    assert.equal(resolution.signals?.continuity?.assessment_state, (resolution.observation_id === 'S15::R019' || resolution.observation_id === 'S15::R045') ? 'IDENTITY_CONTRADICTION' : 'CONTINUOUS_CANDIDATE');
-    assert.equal(resolution.signals?.continuity?.prior_source_member_key, expectedPriorKey);
-    assert.equal(resolution.signals?.continuity?.prior_observation_id, 'S14::R' + String(Number(expectedPriorKey.slice(5))).padStart(3, '0'));
-    assert.ok(Array.isArray(resolution.signals.continuity.contradictions));
+    assert.ok(resolution.status === 'CONFIRMED' || resolution.status === 'UNRESOLVED');
   }
+  assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R019').identity_resolution_status, 'UNRESOLVED');
+  assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R045').identity_resolution_status, 'UNRESOLVED');
+  assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R035').identity_resolution_status, 'CONFIRMED');
 });
 
 test('S15 fingerprint continuity repair blocks hard monotonic contradictions and produces 48 matched pairs', () => {
