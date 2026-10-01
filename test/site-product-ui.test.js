@@ -123,6 +123,13 @@ test('Global dashboard CSS selectors are syntactically repaired for Clan directo
   assert.match(css,/\.dashboard-grid\{grid-template-columns:1fr\}/);
   assert.match(css,/\.clan-card-stats span\{display:block/);
 });
+test('Observation profile follows all continuity-linked snapshots without creating Global Identity', () => {
+ const app = read('site/app.js');
+ assert.ok(app.includes('function observationHistoryFor(observationId)'));
+ assert.ok(app.includes("item.status === 'VALID' && item.baseline_observation_id && item.current_observation_id"));
+ assert.ok(app.includes('observations = observationHistoryFor(observationId);'));
+});
+
 test('Empty Iranian Army [PU] clan is represented without members', () => {
  const canonical = JSON.parse(read('data/canonical.json'));
  const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
