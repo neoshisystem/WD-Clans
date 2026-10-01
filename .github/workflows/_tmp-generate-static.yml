@@ -1,0 +1,25 @@
+name: UCS Temporary Static Generator
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/generate-static-vertical-slice.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ucs-static-generated
+          path: |
+            site/data/ucs-vertical-slice.json
+            site/data/ucs-vertical-slice.js
