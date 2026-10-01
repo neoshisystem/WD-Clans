@@ -28,3 +28,33 @@ test('S13 recheck restores source values that were previously mistranscribed', (
   assert.equal(byRank[34].profile_total_clan_medal_count,1170922); assert.equal(byRank[38].profile_total_clan_medal_count,341313);
   assert.equal(byRank[44].profile_total_clan_medal_count,756498); assert.equal(byRank[47].display_name,'ErFaN.m279');
 });
+
+test('Canonical and RawExtraction agree on all source-backed S13-S15 values', () => {
+  const canonical = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'canonical.json'), 'utf8'));
+  const fields = [
+    ['rank', 'rank'],
+    ['display_name', 'display_name'],
+    ['stage', 'stage'],
+    ['current_league_clan_medals', 'current_league_clan_medals'],
+    ['total_kills', 'total_kills'],
+    ['profile_total_clan_medal_count', 'profile_total_clan_medal_count'],
+    ['lifetime_medals', 'lifetime_medals'],
+    ['weapons', 'weapon_levels']
+  ];
+  for (const snapshotId of ['S13','S14','S15']) {
+    const raw = readJson(`${snapshotId}.raw.json`);
+    const observations = canonical.observations.filter(o => o.snapshot_id === snapshotId);
+    assert.equal(observations.length, raw.members.length);
+    for (const observation of observations) {
+      const member = raw.members.find(m => m.source_member_key === observation.source_member_key);
+      assert.ok(member, `${snapshotId}/${observation.source_member_key} missing RawExtraction member`);
+      for (const [canonicalField, rawField] of fields) {
+        assert.deepEqual(
+          observation[canonicalField],
+          member[rawField],
+          `${snapshotId}/${observation.source_member_key} field mismatch: ${canonicalField}`
+        );
+      }
+    }
+  }
+});
