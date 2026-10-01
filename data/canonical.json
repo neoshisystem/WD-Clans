@@ -397,36 +397,6 @@
       "reason": "new_league_baseline_zero"
     },
     {
-      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA01::SA01-R13",
-      "current_observation_id": "SA01::SA01-R13",
-      "global_player_id": "GP-REAL-S13-R015",
-      "baseline_observation_id": "S15::R019",
-      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
-      "metric_key": "total_kills",
-      "scope": "PLAYER_LIFETIME",
-      "clan_id": null,
-      "league_id": null,
-      "membership_episode_id": null,
-      "delta": 10613,
-      "status": "VALID",
-      "reason": null
-    },
-    {
-      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA01::SA01-R13",
-      "current_observation_id": "SA01::SA01-R13",
-      "global_player_id": "GP-REAL-S13-R015",
-      "baseline_observation_id": null,
-      "baseline_type": "NEW_LEAGUE_ZERO",
-      "metric_key": "current_league_clan_medals",
-      "scope": "LEAGUE",
-      "clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": null,
-      "delta": 35463,
-      "status": "VALID",
-      "reason": "new_league_baseline_zero"
-    },
-    {
       "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA01::SA01-R14",
       "current_observation_id": "SA01::SA01-R14",
       "global_player_id": "GP-REAL-S13-R016",
@@ -519,22 +489,22 @@
     {
       "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA01::SA01-R17",
       "current_observation_id": "SA01::SA01-R17",
-      "global_player_id": "GP-REAL-S13-R042",
-      "baseline_observation_id": "S15::R045",
+      "global_player_id": "GP-REAL-S14-R040",
+      "baseline_observation_id": "S14::R040",
       "baseline_type": "PREVIOUS_VALID_OBSERVATION",
       "metric_key": "total_kills",
       "scope": "PLAYER_LIFETIME",
       "clan_id": null,
       "league_id": null,
       "membership_episode_id": null,
-      "delta": 3393,
+      "delta": 3093,
       "status": "VALID",
       "reason": null
     },
     {
       "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA01::SA01-R17",
       "current_observation_id": "SA01::SA01-R17",
-      "global_player_id": "GP-REAL-S13-R042",
+      "global_player_id": "GP-REAL-S14-R040",
       "baseline_observation_id": null,
       "baseline_type": "NEW_LEAGUE_ZERO",
       "metric_key": "current_league_clan_medals",
@@ -849,7 +819,7 @@
     {
       "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA01::SA01-R32",
       "current_observation_id": "SA01::SA01-R32",
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "baseline_observation_id": "S15::R035",
       "baseline_type": "PREVIOUS_VALID_OBSERVATION",
       "metric_key": "total_kills",
@@ -864,7 +834,7 @@
     {
       "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA01::SA01-R32",
       "current_observation_id": "SA01::SA01-R32",
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "baseline_observation_id": null,
       "baseline_type": "NEW_LEAGUE_ZERO",
       "metric_key": "current_league_clan_medals",
@@ -1319,12 +1289,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R008",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1337,12 +1301,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R001",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1355,12 +1313,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R002",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1373,12 +1325,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R004",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1391,12 +1337,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R020",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1409,12 +1349,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R003",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1427,12 +1361,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R026",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1445,12 +1373,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R023",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1463,12 +1385,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R012",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1481,30 +1397,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R043",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
-      }
-    },
-    {
-      "global_player_id": "GP-REAL-S13-R015",
-      "status": "ACTIVE",
-      "provenance": {
-        "evidence_refs": [
-          "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
-          "EV-REAL-PERSIAN-UNITY-S14",
-          "EV-REAL-PERSIAN-UNITY-S15"
-        ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R015",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1517,12 +1409,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R016",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1535,12 +1421,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R014",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1552,30 +1432,16 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S14::R049",
-        "resolved_from_snapshot_id": "S14",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
-      "global_player_id": "GP-REAL-S13-R042",
+      "global_player_id": "GP-REAL-S14-R040",
       "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
-          "EV-REAL-PERSIAN-UNITY-S14",
-          "EV-REAL-PERSIAN-UNITY-S15"
+          "EV-REAL-PERSIAN-UNITY-S14"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R042",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1588,12 +1454,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R027",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1606,12 +1466,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R009",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1624,12 +1478,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R022",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1642,12 +1490,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R019",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1660,12 +1502,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R028",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1678,12 +1514,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R013",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1696,12 +1526,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R017",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1714,12 +1538,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R034",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1732,12 +1550,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R021",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1750,30 +1562,17 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R007",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R032",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1786,12 +1585,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R031",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1804,12 +1597,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R030",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1822,12 +1609,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R011",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1840,12 +1621,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R010",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1858,12 +1633,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R025",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1876,12 +1645,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R005",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1894,12 +1657,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R037",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1912,12 +1669,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R018",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1930,12 +1681,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R045",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1948,12 +1693,6 @@
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_IDENTITY_RESOLUTION",
-        "anchor_observation_id": "S13::R006",
-        "resolved_from_snapshot_id": "S13",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1963,11 +1702,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R01",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1977,11 +1711,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R08",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -1991,11 +1720,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R19",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2005,11 +1729,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R23",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2019,11 +1738,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R29",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2033,11 +1747,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R31",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2047,11 +1756,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R36",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2061,11 +1765,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R37",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2075,11 +1774,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R42",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2089,11 +1783,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R43",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2103,11 +1792,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R45",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2117,11 +1801,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R46",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     },
     {
@@ -2131,11 +1810,6 @@
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01"
         ]
-      },
-      "identity_origin": {
-        "type": "PROJECT_AUTHORITY_NEW_IDENTITY",
-        "anchor_observation_id": "SA01::SA01-R47",
-        "resolution_reference": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION"
       }
     }
   ],
@@ -2545,39 +2219,6 @@
       }
     },
     {
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-PERSIAN-UNITY::1",
-      "global_player_id": "GP-REAL-S13-R015",
-      "clan_id": "CLAN-PERSIAN-UNITY",
-      "sequence": 1,
-      "status": "ENDED",
-      "started_from_snapshot_id": "S13",
-      "ended_at_utc": "2026-10-01T20:30:00.000Z",
-      "ended_by_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R015",
-      "provenance": {
-        "evidence_refs": [
-          "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
-          "EV-REAL-PERSIAN-UNITY-S14",
-          "EV-REAL-PERSIAN-UNITY-S15"
-        ]
-      }
-    },
-    {
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-IRANIAN-ARMY-PU::1",
-      "global_player_id": "GP-REAL-S13-R015",
-      "clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "sequence": 1,
-      "status": "ACTIVE",
-      "started_from_snapshot_id": "SA01",
-      "ended_at_utc": null,
-      "ended_by_event_id": null,
-      "provenance": {
-        "evidence_refs": [
-          "EV-REAL-IRANIAN-ARMY-SA01"
-        ]
-      }
-    },
-    {
       "membership_episode_id": "ME::GP-REAL-S13-R016::CLAN-PERSIAN-UNITY::1",
       "global_player_id": "GP-REAL-S13-R016",
       "clan_id": "CLAN-PERSIAN-UNITY",
@@ -2676,26 +2317,24 @@
       }
     },
     {
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-PERSIAN-UNITY::1",
-      "global_player_id": "GP-REAL-S13-R042",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-PERSIAN-UNITY::1",
+      "global_player_id": "GP-REAL-S14-R040",
       "clan_id": "CLAN-PERSIAN-UNITY",
       "sequence": 1,
       "status": "ENDED",
-      "started_from_snapshot_id": "S13",
+      "started_from_snapshot_id": "S14",
       "ended_at_utc": "2026-10-01T20:30:00.000Z",
-      "ended_by_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R042",
+      "ended_by_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S14-R040",
       "provenance": {
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
-          "EV-REAL-PERSIAN-UNITY-S14",
-          "EV-REAL-PERSIAN-UNITY-S15"
+          "EV-REAL-PERSIAN-UNITY-S14"
         ]
       }
     },
     {
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-IRANIAN-ARMY-PU::1",
-      "global_player_id": "GP-REAL-S13-R042",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-IRANIAN-ARMY-PU::1",
+      "global_player_id": "GP-REAL-S14-R040",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "sequence": 1,
       "status": "ACTIVE",
@@ -3039,26 +2678,25 @@
       }
     },
     {
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-PERSIAN-UNITY::1",
-      "global_player_id": "GP-REAL-S13-R032",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-PERSIAN-UNITY::1",
+      "global_player_id": "GP-REAL-S14-R034",
       "clan_id": "CLAN-PERSIAN-UNITY",
       "sequence": 1,
       "status": "ENDED",
-      "started_from_snapshot_id": "S13",
+      "started_from_snapshot_id": "S14",
       "ended_at_utc": "2026-10-01T20:30:00.000Z",
-      "ended_by_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R032",
+      "ended_by_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S14-R034",
       "provenance": {
         "evidence_refs": [
           "EV-REAL-IRANIAN-ARMY-SA01",
-          "EV-REAL-PERSIAN-UNITY-S13",
           "EV-REAL-PERSIAN-UNITY-S14",
           "EV-REAL-PERSIAN-UNITY-S15"
         ]
       }
     },
     {
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-IRANIAN-ARMY-PU::1",
-      "global_player_id": "GP-REAL-S13-R032",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-IRANIAN-ARMY-PU::1",
+      "global_player_id": "GP-REAL-S14-R034",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "sequence": 1,
       "status": "ACTIVE",
@@ -3769,23 +3407,6 @@
       "precision": "SNAPSHOT"
     },
     {
-      "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R015",
-      "event_type": "TRANSFER",
-      "global_player_id": "GP-REAL-S13-R015",
-      "clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-IRANIAN-ARMY-PU::1",
-      "effective_at_utc": "2026-10-01T20:30:00.000Z",
-      "observed_snapshot_id": "SA01",
-      "from_clan_id": "CLAN-PERSIAN-UNITY",
-      "to_clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "evidence_refs": [
-        "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
-      ],
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "precision": "SNAPSHOT"
-    },
-    {
       "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R016",
       "event_type": "TRANSFER",
       "global_player_id": "GP-REAL-S13-R016",
@@ -3837,18 +3458,18 @@
       "precision": "SNAPSHOT"
     },
     {
-      "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R042",
+      "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S14-R040",
       "event_type": "TRANSFER",
-      "global_player_id": "GP-REAL-S13-R042",
+      "global_player_id": "GP-REAL-S14-R040",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-IRANIAN-ARMY-PU::1",
       "effective_at_utc": "2026-10-01T20:30:00.000Z",
       "observed_snapshot_id": "SA01",
       "from_clan_id": "CLAN-PERSIAN-UNITY",
       "to_clan_id": "CLAN-IRANIAN-ARMY-PU",
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
+        "EV-REAL-PERSIAN-UNITY-S14"
       ],
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "precision": "SNAPSHOT"
@@ -4024,11 +3645,11 @@
       "precision": "SNAPSHOT"
     },
     {
-      "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S13-R032",
+      "membership_event_id": "MEMBERSHIP::TRANSFER::SA01::GP-REAL-S14-R034",
       "event_type": "TRANSFER",
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-IRANIAN-ARMY-PU::1",
       "effective_at_utc": "2026-10-01T20:30:00.000Z",
       "observed_snapshot_id": "SA01",
       "from_clan_id": "CLAN-PERSIAN-UNITY",
@@ -6006,8 +5627,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 114202,
       "display_name": "ایرانی باوقار",
-      "global_player_id": "GP-REAL-S13-R015",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "1m",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -6015,7 +5636,7 @@
         "gold": 1,
         "silver": 2
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S13::R015",
       "profile_total_clan_medal_count": 114202,
       "provenance": {
@@ -7795,8 +7416,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 56109,
       "display_name": "Uk 🇮🇷💪",
-      "global_player_id": "GP-REAL-S13-R032",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "5h",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -7804,7 +7425,7 @@
         "gold": 3,
         "silver": 4
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S13::R032",
       "profile_total_clan_medal_count": 732094,
       "provenance": {
@@ -8845,8 +8466,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 29702,
       "display_name": "Amin",
-      "global_player_id": "GP-REAL-S13-R042",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "3h",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -8854,7 +8475,7 @@
         "gold": 3,
         "silver": 4
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S13::R042",
       "profile_total_clan_medal_count": 384695,
       "provenance": {
@@ -11583,8 +11204,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 133689,
       "display_name": "ایرانی باوقار",
-      "global_player_id": "GP-REAL-S13-R015",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "7m",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -11592,7 +11213,7 @@
         "gold": 1,
         "silver": 2
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S14::R020",
       "profile_total_clan_medal_count": 133689,
       "provenance": {
@@ -13053,7 +12674,7 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 67748,
       "display_name": "Uk 🇮🇷💪",
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "identity_resolution_status": "CONFIRMED",
       "last_online_display": "5m",
       "last_online_utc": null,
@@ -13062,7 +12683,7 @@
         "gold": 3,
         "silver": 3
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-PERSIAN-UNITY::1",
       "observation_id": "S14::R034",
       "profile_total_clan_medal_count": 743733,
       "provenance": {
@@ -13683,7 +13304,7 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 52555,
       "display_name": "Amin",
-      "global_player_id": "GP-REAL-S13-R042",
+      "global_player_id": "GP-REAL-S14-R040",
       "identity_resolution_status": "CONFIRMED",
       "last_online_display": "3h",
       "last_online_utc": null,
@@ -13692,7 +13313,7 @@
         "gold": 3,
         "silver": 4
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-PERSIAN-UNITY::1",
       "observation_id": "S14::R040",
       "profile_total_clan_medal_count": 407548,
       "provenance": {
@@ -16728,8 +16349,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 161486,
       "display_name": "ایرانی باوقار",
-      "global_player_id": "GP-REAL-S13-R015",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "1h",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -16737,7 +16358,7 @@
         "gold": 1,
         "silver": 2
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S15::R019",
       "profile_total_clan_medal_count": 161486,
       "provenance": {
@@ -18408,7 +18029,7 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 95998,
       "display_name": "Uk 🇮🇷💪",
-      "global_player_id": "GP-REAL-S13-R032",
+      "global_player_id": "GP-REAL-S14-R034",
       "identity_resolution_status": "CONFIRMED",
       "last_online_display": "4h",
       "last_online_utc": null,
@@ -18417,7 +18038,7 @@
         "gold": 3,
         "silver": 4
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-PERSIAN-UNITY::1",
       "observation_id": "S15::R035",
       "profile_total_clan_medal_count": 771983,
       "provenance": {
@@ -19458,8 +19079,8 @@
       "clan_id": "CLAN-PERSIAN-UNITY",
       "current_league_clan_medals": 52555,
       "display_name": "Amin",
-      "global_player_id": "GP-REAL-S13-R042",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "last_online_display": "1d",
       "last_online_utc": null,
       "lifetime_medals": {
@@ -19467,7 +19088,7 @@
         "gold": 3,
         "silver": 4
       },
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-PERSIAN-UNITY::1",
+      "membership_episode_id": null,
       "observation_id": "S15::R045",
       "profile_total_clan_medal_count": 407548,
       "provenance": {
@@ -21282,9 +20903,9 @@
         "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
         "source_identity_id": "SA01-R13"
       },
-      "global_player_id": "GP-REAL-S13-R015",
-      "membership_episode_id": "ME::GP-REAL-S13-R015::CLAN-IRANIAN-ARMY-PU::1",
-      "identity_resolution_status": "CONFIRMED",
+      "global_player_id": null,
+      "membership_episode_id": null,
+      "identity_resolution_status": "UNRESOLVED",
       "display_name": "ایرانی باوقار",
       "rank": 13,
       "stage": 29,
@@ -21678,8 +21299,8 @@
         "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
         "source_identity_id": "SA01-R17"
       },
-      "global_player_id": "GP-REAL-S13-R042",
-      "membership_episode_id": "ME::GP-REAL-S13-R042::CLAN-IRANIAN-ARMY-PU::1",
+      "global_player_id": "GP-REAL-S14-R040",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-IRANIAN-ARMY-PU::1",
       "identity_resolution_status": "CONFIRMED",
       "display_name": "Amin",
       "rank": 17,
@@ -23163,8 +22784,8 @@
         "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
         "source_identity_id": "SA01-R32"
       },
-      "global_player_id": "GP-REAL-S13-R032",
-      "membership_episode_id": "ME::GP-REAL-S13-R032::CLAN-IRANIAN-ARMY-PU::1",
+      "global_player_id": "GP-REAL-S14-R034",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-IRANIAN-ARMY-PU::1",
       "identity_resolution_status": "CONFIRMED",
       "display_name": "Vk 🇮🇷💪",
       "rank": 32,
@@ -24949,7 +24570,7 @@
       "matched_global_player_id": "GP-REAL-S13-R001",
       "observation_id": "S13::R001",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R01",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -24966,7 +24587,7 @@
       "matched_global_player_id": "GP-REAL-S13-R002",
       "observation_id": "S13::R002",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R02",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -24983,7 +24604,7 @@
       "matched_global_player_id": "GP-REAL-S13-R003",
       "observation_id": "S13::R003",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R03",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25000,7 +24621,7 @@
       "matched_global_player_id": "GP-REAL-S13-R004",
       "observation_id": "S13::R004",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R04",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25017,7 +24638,7 @@
       "matched_global_player_id": "GP-REAL-S13-R005",
       "observation_id": "S13::R005",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R05",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25034,7 +24655,7 @@
       "matched_global_player_id": "GP-REAL-S13-R006",
       "observation_id": "S13::R006",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R06",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25051,7 +24672,7 @@
       "matched_global_player_id": "GP-REAL-S13-R007",
       "observation_id": "S13::R007",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R07",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25068,7 +24689,7 @@
       "matched_global_player_id": "GP-REAL-S13-R008",
       "observation_id": "S13::R008",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R08",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25085,7 +24706,7 @@
       "matched_global_player_id": "GP-REAL-S13-R009",
       "observation_id": "S13::R009",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R09",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25102,7 +24723,7 @@
       "matched_global_player_id": "GP-REAL-S13-R010",
       "observation_id": "S13::R010",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R10",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25119,7 +24740,7 @@
       "matched_global_player_id": "GP-REAL-S13-R011",
       "observation_id": "S13::R011",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R11",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25136,7 +24757,7 @@
       "matched_global_player_id": "GP-REAL-S13-R012",
       "observation_id": "S13::R012",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R12",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25153,7 +24774,7 @@
       "matched_global_player_id": "GP-REAL-S13-R013",
       "observation_id": "S13::R013",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R13",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25170,27 +24791,25 @@
       "matched_global_player_id": "GP-REAL-S13-R014",
       "observation_id": "S13::R014",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R14",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R015"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S13"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R015",
+      "matched_global_player_id": null,
       "observation_id": "S13::R015",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R15",
-      "status": "CONFIRMED",
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25204,7 +24823,7 @@
       "matched_global_player_id": "GP-REAL-S13-R016",
       "observation_id": "S13::R016",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R16",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25221,7 +24840,7 @@
       "matched_global_player_id": "GP-REAL-S13-R017",
       "observation_id": "S13::R017",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R17",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25238,7 +24857,7 @@
       "matched_global_player_id": "GP-REAL-S13-R018",
       "observation_id": "S13::R018",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R18",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25255,7 +24874,7 @@
       "matched_global_player_id": "GP-REAL-S13-R019",
       "observation_id": "S13::R019",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R19",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25272,7 +24891,7 @@
       "matched_global_player_id": "GP-REAL-S13-R020",
       "observation_id": "S13::R020",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R20",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25289,7 +24908,7 @@
       "matched_global_player_id": "GP-REAL-S13-R021",
       "observation_id": "S13::R021",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R21",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25306,7 +24925,7 @@
       "matched_global_player_id": "GP-REAL-S13-R022",
       "observation_id": "S13::R022",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R22",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25323,7 +24942,7 @@
       "matched_global_player_id": "GP-REAL-S13-R023",
       "observation_id": "S13::R023",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R23",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25337,9 +24956,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R024",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R24",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25353,7 +24973,7 @@
       "matched_global_player_id": "GP-REAL-S13-R025",
       "observation_id": "S13::R025",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R25",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25370,7 +24990,7 @@
       "matched_global_player_id": "GP-REAL-S13-R026",
       "observation_id": "S13::R026",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R26",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25387,7 +25007,7 @@
       "matched_global_player_id": "GP-REAL-S13-R027",
       "observation_id": "S13::R027",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R27",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25404,7 +25024,7 @@
       "matched_global_player_id": "GP-REAL-S13-R028",
       "observation_id": "S13::R028",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R28",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25418,9 +25038,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R029",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R29",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25434,7 +25055,7 @@
       "matched_global_player_id": "GP-REAL-S13-R030",
       "observation_id": "S13::R030",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R30",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25451,27 +25072,25 @@
       "matched_global_player_id": "GP-REAL-S13-R031",
       "observation_id": "S13::R031",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R31",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R032"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S13"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R032",
+      "matched_global_player_id": null,
       "observation_id": "S13::R032",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R32",
-      "status": "CONFIRMED",
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25482,9 +25101,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R033",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R33",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25498,7 +25118,7 @@
       "matched_global_player_id": "GP-REAL-S13-R034",
       "observation_id": "S13::R034",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R34",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25512,9 +25132,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R035",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R35",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25525,9 +25146,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R036",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R36",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25541,7 +25163,7 @@
       "matched_global_player_id": "GP-REAL-S13-R037",
       "observation_id": "S13::R037",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R37",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25555,9 +25177,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R038",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R38",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25568,9 +25191,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R039",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R39",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25581,9 +25205,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R040",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R40",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25594,26 +25219,25 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R041",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R41",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R042"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S13"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R042",
+      "matched_global_player_id": null,
       "observation_id": "S13::R042",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R42",
-      "status": "CONFIRMED",
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25627,7 +25251,7 @@
       "matched_global_player_id": "GP-REAL-S13-R043",
       "observation_id": "S13::R043",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R43",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25641,9 +25265,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R044",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R44",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25657,7 +25282,7 @@
       "matched_global_player_id": "GP-REAL-S13-R045",
       "observation_id": "S13::R045",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S13-R45",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25671,9 +25296,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R046",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R46",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25684,9 +25310,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R047",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R47",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -25697,9 +25324,10 @@
       "matched_global_player_id": null,
       "observation_id": "S13::R048",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S13.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S13-R48",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25713,7 +25341,7 @@
       "matched_global_player_id": "GP-REAL-S13-R001",
       "observation_id": "S14::R001",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R001",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25730,7 +25358,7 @@
       "matched_global_player_id": "GP-REAL-S13-R002",
       "observation_id": "S14::R002",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R002",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25747,7 +25375,7 @@
       "matched_global_player_id": "GP-REAL-S13-R003",
       "observation_id": "S14::R003",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R003",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25764,7 +25392,7 @@
       "matched_global_player_id": "GP-REAL-S13-R004",
       "observation_id": "S14::R004",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R004",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25781,7 +25409,7 @@
       "matched_global_player_id": "GP-REAL-S13-R005",
       "observation_id": "S14::R005",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R005",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25798,7 +25426,7 @@
       "matched_global_player_id": "GP-REAL-S13-R007",
       "observation_id": "S14::R006",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R006",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25815,7 +25443,7 @@
       "matched_global_player_id": "GP-REAL-S13-R008",
       "observation_id": "S14::R007",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R007",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25832,7 +25460,7 @@
       "matched_global_player_id": "GP-REAL-S13-R006",
       "observation_id": "S14::R008",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R008",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25849,7 +25477,7 @@
       "matched_global_player_id": "GP-REAL-S13-R010",
       "observation_id": "S14::R009",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R009",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25866,7 +25494,7 @@
       "matched_global_player_id": "GP-REAL-S13-R009",
       "observation_id": "S14::R010",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R010",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25883,7 +25511,7 @@
       "matched_global_player_id": "GP-REAL-S13-R017",
       "observation_id": "S14::R011",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R011",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25900,7 +25528,7 @@
       "matched_global_player_id": "GP-REAL-S13-R013",
       "observation_id": "S14::R012",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R012",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25917,7 +25545,7 @@
       "matched_global_player_id": "GP-REAL-S13-R012",
       "observation_id": "S14::R013",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R013",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25931,9 +25559,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R014",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R014",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -25947,7 +25576,7 @@
       "matched_global_player_id": "GP-REAL-S13-R018",
       "observation_id": "S14::R015",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R015",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25964,7 +25593,7 @@
       "matched_global_player_id": "GP-REAL-S13-R011",
       "observation_id": "S14::R016",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R016",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25981,7 +25610,7 @@
       "matched_global_player_id": "GP-REAL-S13-R014",
       "observation_id": "S14::R017",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R017",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -25998,7 +25627,7 @@
       "matched_global_player_id": "GP-REAL-S13-R020",
       "observation_id": "S14::R018",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R018",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26015,27 +25644,25 @@
       "matched_global_player_id": "GP-REAL-S13-R016",
       "observation_id": "S14::R019",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R019",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R015"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S14"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R015",
+      "matched_global_player_id": null,
       "observation_id": "S14::R020",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R020",
-      "status": "CONFIRMED",
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26049,7 +25676,7 @@
       "matched_global_player_id": "GP-REAL-S13-R022",
       "observation_id": "S14::R021",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R021",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26066,7 +25693,7 @@
       "matched_global_player_id": "GP-REAL-S13-R023",
       "observation_id": "S14::R022",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R022",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26083,7 +25710,7 @@
       "matched_global_player_id": "GP-REAL-S13-R019",
       "observation_id": "S14::R023",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R023",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26100,7 +25727,7 @@
       "matched_global_player_id": "GP-REAL-S13-R021",
       "observation_id": "S14::R024",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R024",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26117,7 +25744,7 @@
       "matched_global_player_id": "GP-REAL-S13-R028",
       "observation_id": "S14::R025",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R025",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26134,7 +25761,7 @@
       "matched_global_player_id": "GP-REAL-S13-R026",
       "observation_id": "S14::R026",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R026",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26151,7 +25778,7 @@
       "matched_global_player_id": "GP-REAL-S13-R030",
       "observation_id": "S14::R027",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R027",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26165,9 +25792,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R028",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R028",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26181,7 +25809,7 @@
       "matched_global_player_id": "GP-REAL-S13-R025",
       "observation_id": "S14::R029",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R029",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26198,7 +25826,7 @@
       "matched_global_player_id": "GP-REAL-S13-R043",
       "observation_id": "S14::R030",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R030",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26215,7 +25843,7 @@
       "matched_global_player_id": "GP-REAL-S13-R031",
       "observation_id": "S14::R031",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R031",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26232,7 +25860,7 @@
       "matched_global_player_id": "GP-REAL-S13-R027",
       "observation_id": "S14::R032",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R032",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26246,23 +25874,24 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R033",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R033",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "candidate_global_player_ids": [
-        "GP-REAL-S13-R032"
+        "GP-REAL-S14-R034"
       ],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S14"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R032",
+      "matched_global_player_id": "GP-REAL-S14-R034",
       "observation_id": "S14::R034",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R034",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26276,9 +25905,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R035",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R035",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26289,9 +25919,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R036",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R036",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26302,9 +25933,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R037",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R037",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26315,9 +25947,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R038",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R038",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26331,7 +25964,7 @@
       "matched_global_player_id": "GP-REAL-S13-R034",
       "observation_id": "S14::R039",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R039",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26339,16 +25972,16 @@
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "candidate_global_player_ids": [
-        "GP-REAL-S13-R042"
+        "GP-REAL-S14-R040"
       ],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S14"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R042",
+      "matched_global_player_id": "GP-REAL-S14-R040",
       "observation_id": "S14::R040",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R040",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26362,9 +25995,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R041",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R041",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26375,9 +26009,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R042",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R042",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26388,9 +26023,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R043",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R043",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26401,9 +26037,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R044",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R044",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26417,7 +26054,7 @@
       "matched_global_player_id": "GP-REAL-S13-R037",
       "observation_id": "S14::R045",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R045",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26434,7 +26071,7 @@
       "matched_global_player_id": "GP-REAL-S13-R045",
       "observation_id": "S14::R046",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R046",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26448,9 +26085,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R047",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R047",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -26461,9 +26099,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R048",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R048",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26477,7 +26116,7 @@
       "matched_global_player_id": "GP-REAL-S14-R049",
       "observation_id": "S14::R049",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S14-R049",
       "status": "CONFIRMED",
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
@@ -26491,9 +26130,10 @@
       "matched_global_player_id": null,
       "observation_id": "S14::R050",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S14.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S14-R050",
-      "status": "UNRESOLVED"
+      "status": "UNRESOLVED",
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -26507,7 +26147,7 @@
       "matched_global_player_id": "GP-REAL-S13-R002",
       "observation_id": "S15::R001",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R01",
       "status": "CONFIRMED",
       "signals": {
@@ -26635,7 +26275,7 @@
       "matched_global_player_id": "GP-REAL-S13-R001",
       "observation_id": "S15::R002",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R02",
       "status": "CONFIRMED",
       "signals": {
@@ -26763,7 +26403,7 @@
       "matched_global_player_id": "GP-REAL-S13-R003",
       "observation_id": "S15::R003",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R03",
       "status": "CONFIRMED",
       "signals": {
@@ -26891,7 +26531,7 @@
       "matched_global_player_id": "GP-REAL-S13-R004",
       "observation_id": "S15::R004",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R04",
       "status": "CONFIRMED",
       "signals": {
@@ -27019,7 +26659,7 @@
       "matched_global_player_id": "GP-REAL-S13-R008",
       "observation_id": "S15::R005",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R05",
       "status": "CONFIRMED",
       "signals": {
@@ -27147,7 +26787,7 @@
       "matched_global_player_id": "GP-REAL-S13-R005",
       "observation_id": "S15::R006",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R06",
       "status": "CONFIRMED",
       "signals": {
@@ -27275,7 +26915,7 @@
       "matched_global_player_id": "GP-REAL-S13-R006",
       "observation_id": "S15::R007",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R07",
       "status": "CONFIRMED",
       "signals": {
@@ -27403,7 +27043,7 @@
       "matched_global_player_id": "GP-REAL-S13-R007",
       "observation_id": "S15::R008",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R08",
       "status": "CONFIRMED",
       "signals": {
@@ -27531,7 +27171,7 @@
       "matched_global_player_id": "GP-REAL-S13-R009",
       "observation_id": "S15::R009",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R09",
       "status": "CONFIRMED",
       "signals": {
@@ -27659,7 +27299,7 @@
       "matched_global_player_id": "GP-REAL-S13-R017",
       "observation_id": "S15::R010",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R10",
       "status": "CONFIRMED",
       "signals": {
@@ -27784,7 +27424,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R011",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R11",
       "status": "UNRESOLVED",
       "signals": {
@@ -27897,7 +27537,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -27911,7 +27552,7 @@
       "matched_global_player_id": "GP-REAL-S13-R010",
       "observation_id": "S15::R012",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R12",
       "status": "CONFIRMED",
       "signals": {
@@ -28045,7 +27686,7 @@
       "matched_global_player_id": "GP-REAL-S13-R020",
       "observation_id": "S15::R013",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R13",
       "status": "CONFIRMED",
       "signals": {
@@ -28173,7 +27814,7 @@
       "matched_global_player_id": "GP-REAL-S13-R012",
       "observation_id": "S15::R014",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R14",
       "status": "CONFIRMED",
       "signals": {
@@ -28301,7 +27942,7 @@
       "matched_global_player_id": "GP-REAL-S13-R023",
       "observation_id": "S15::R015",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R15",
       "status": "CONFIRMED",
       "signals": {
@@ -28429,7 +28070,7 @@
       "matched_global_player_id": "GP-REAL-S13-R013",
       "observation_id": "S15::R016",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R16",
       "status": "CONFIRMED",
       "signals": {
@@ -28557,7 +28198,7 @@
       "matched_global_player_id": "GP-REAL-S13-R018",
       "observation_id": "S15::R017",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R17",
       "status": "CONFIRMED",
       "signals": {
@@ -28685,7 +28326,7 @@
       "matched_global_player_id": "GP-REAL-S13-R016",
       "observation_id": "S15::R018",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R18",
       "status": "CONFIRMED",
       "signals": {
@@ -28802,20 +28443,18 @@
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R015"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S15"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R015",
+      "matched_global_player_id": null,
       "observation_id": "S15::R019",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R19",
-      "status": "CONFIRMED",
+      "status": "UNRESOLVED",
       "signals": {
         "continuity": {
           "specification": "projects/UCS/FINGERPRINT_TOOL.md",
@@ -28937,7 +28576,7 @@
           "hard_exclusion_reason": "monotonic_lifetime_metric_decreased"
         }
       },
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -28951,7 +28590,7 @@
       "matched_global_player_id": "GP-REAL-S13-R014",
       "observation_id": "S15::R020",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R20",
       "status": "CONFIRMED",
       "signals": {
@@ -29079,7 +28718,7 @@
       "matched_global_player_id": "GP-REAL-S13-R028",
       "observation_id": "S15::R021",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R21",
       "status": "CONFIRMED",
       "signals": {
@@ -29207,7 +28846,7 @@
       "matched_global_player_id": "GP-REAL-S13-R022",
       "observation_id": "S15::R022",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R22",
       "status": "CONFIRMED",
       "signals": {
@@ -29335,7 +28974,7 @@
       "matched_global_player_id": "GP-REAL-S13-R011",
       "observation_id": "S15::R023",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R23",
       "status": "CONFIRMED",
       "signals": {
@@ -29463,7 +29102,7 @@
       "matched_global_player_id": "GP-REAL-S13-R019",
       "observation_id": "S15::R024",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R24",
       "status": "CONFIRMED",
       "signals": {
@@ -29591,7 +29230,7 @@
       "matched_global_player_id": "GP-REAL-S13-R030",
       "observation_id": "S15::R025",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R25",
       "status": "CONFIRMED",
       "signals": {
@@ -29719,7 +29358,7 @@
       "matched_global_player_id": "GP-REAL-S13-R021",
       "observation_id": "S15::R026",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R26",
       "status": "CONFIRMED",
       "signals": {
@@ -29847,7 +29486,7 @@
       "matched_global_player_id": "GP-REAL-S13-R026",
       "observation_id": "S15::R027",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R27",
       "status": "CONFIRMED",
       "signals": {
@@ -29975,7 +29614,7 @@
       "matched_global_player_id": "GP-REAL-S13-R043",
       "observation_id": "S15::R028",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R28",
       "status": "CONFIRMED",
       "signals": {
@@ -30103,7 +29742,7 @@
       "matched_global_player_id": "GP-REAL-S13-R025",
       "observation_id": "S15::R029",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R29",
       "status": "CONFIRMED",
       "signals": {
@@ -30228,7 +29867,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R030",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R30",
       "status": "UNRESOLVED",
       "signals": {
@@ -30341,7 +29980,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -30355,7 +29995,7 @@
       "matched_global_player_id": "GP-REAL-S13-R037",
       "observation_id": "S15::R031",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R31",
       "status": "CONFIRMED",
       "signals": {
@@ -30480,7 +30120,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R032",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R32",
       "status": "UNRESOLVED",
       "signals": {
@@ -30593,7 +30233,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -30607,7 +30248,7 @@
       "matched_global_player_id": "GP-REAL-S13-R031",
       "observation_id": "S15::R033",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R33",
       "status": "CONFIRMED",
       "signals": {
@@ -30735,7 +30376,7 @@
       "matched_global_player_id": "GP-REAL-S13-R027",
       "observation_id": "S15::R034",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R34",
       "status": "CONFIRMED",
       "signals": {
@@ -30854,16 +30495,16 @@
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "candidate_global_player_ids": [
-        "GP-REAL-S13-R032"
+        "GP-REAL-S14-R034"
       ],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S15"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R032",
+      "matched_global_player_id": "GP-REAL-S14-R034",
       "observation_id": "S15::R035",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R35",
       "status": "CONFIRMED",
       "signals": {
@@ -30988,7 +30629,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R036",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R36",
       "status": "UNRESOLVED",
       "signals": {
@@ -31101,7 +30742,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31112,7 +30754,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R037",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R37",
       "status": "UNRESOLVED",
       "signals": {
@@ -31225,7 +30867,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31236,7 +30879,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R038",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R38",
       "status": "UNRESOLVED",
       "signals": {
@@ -31349,7 +30992,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31360,7 +31004,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R039",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R39",
       "status": "UNRESOLVED",
       "signals": {
@@ -31473,7 +31117,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31484,7 +31129,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R040",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R40",
       "status": "UNRESOLVED",
       "signals": {
@@ -31597,7 +31242,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31608,7 +31254,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R041",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R41",
       "status": "UNRESOLVED",
       "signals": {
@@ -31721,7 +31367,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31732,7 +31379,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R042",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R42",
       "status": "UNRESOLVED",
       "signals": {
@@ -31845,7 +31492,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -31856,7 +31504,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R043",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R43",
       "status": "UNRESOLVED",
       "signals": {
@@ -31969,7 +31617,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -31983,7 +31632,7 @@
       "matched_global_player_id": "GP-REAL-S13-R034",
       "observation_id": "S15::R044",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R44",
       "status": "CONFIRMED",
       "signals": {
@@ -32100,20 +31749,18 @@
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R042"
-      ],
+      "authority_ref": null,
+      "candidate_global_player_ids": [],
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
         "EV-REAL-PERSIAN-UNITY-S15"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R042",
+      "matched_global_player_id": null,
       "observation_id": "S15::R045",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R45",
-      "status": "CONFIRMED",
+      "status": "UNRESOLVED",
       "signals": {
         "continuity": {
           "specification": "projects/UCS/FINGERPRINT_TOOL.md",
@@ -32235,7 +31882,7 @@
           "hard_exclusion_reason": "monotonic_lifetime_metric_decreased"
         }
       },
-      "decided_at_utc": "2026-10-01T20:30:00.000Z"
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -32249,7 +31896,7 @@
       "matched_global_player_id": "GP-REAL-S13-R045",
       "observation_id": "S15::R046",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R46",
       "status": "CONFIRMED",
       "signals": {
@@ -32374,7 +32021,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R047",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R47",
       "status": "UNRESOLVED",
       "signals": {
@@ -32487,7 +32134,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -32501,7 +32149,7 @@
       "matched_global_player_id": "GP-REAL-S14-R049",
       "observation_id": "S15::R048",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "project_authority_confirmed_historical_cross_clan_identity",
+      "reason": "project_authority_confirmed_historical_identity",
       "resolution_case_id": "RC-S15-R48",
       "status": "CONFIRMED",
       "signals": {
@@ -32626,7 +32274,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R049",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R49",
       "status": "UNRESOLVED",
       "signals": {
@@ -32739,7 +32387,8 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "authority_ref": null,
@@ -32750,7 +32399,7 @@
       "matched_global_player_id": null,
       "observation_id": "S15::R050",
       "process_ref": "real-snapshot-ingestion",
-      "reason": "No explicit Global Player identity decision was supplied for S15.",
+      "reason": "identity_requires_review",
       "resolution_case_id": "RC-S15-R50",
       "status": "UNRESOLVED",
       "signals": {
@@ -32863,20 +32512,23 @@
           ],
           "conclusion": "CONTINUITY_SUPPORTED"
         }
-      }
+      },
+      "decided_at_utc": null
     },
     {
       "resolution_case_id": "RC::SA01::SA01-R01",
       "observation_id": "SA01::SA01-R01",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R01"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R01",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R01",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -32933,57 +32585,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Commander 🇮🇷",
             "current": "Commander 🇮🇷",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Elder",
             "current": "Elder",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 5,
-            "current": 2,
-            "delta": -3
-          },
-          "current_league_clan_medals": {
-            "previous": 329191,
-            "current": 90032,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33043,57 +32658,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "ehsan",
             "current": "ehsan",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Co-Leader",
             "current": "Co-Leader & MVP",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 2,
-            "current": 3,
-            "delta": 1
-          },
-          "current_league_clan_medals": {
-            "previous": 480136,
-            "current": 83522,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33153,57 +32731,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Cpt. Of Persia",
             "current": "Cpt. Of Persia",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Leader & MVP",
             "current": "Co-Leader",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 1,
-            "current": 4,
-            "delta": 3
-          },
-          "current_league_clan_medals": {
-            "previous": 488220,
-            "current": 80253,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33263,57 +32804,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "kaveh",
             "current": "kaveh",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Elder",
             "current": "Elder",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 4,
-            "current": 5,
-            "delta": 1
-          },
-          "current_league_clan_medals": {
-            "previous": 338501,
-            "current": 75114,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33373,57 +32877,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 5,
-              "current": 5,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "NaViD",
             "current": "NaViD",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 13,
-            "current": 6,
-            "delta": -7
-          },
-          "current_league_clan_medals": {
-            "previous": 197714,
-            "current": 71625,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33483,57 +32950,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 5,
-              "current": 5,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 5,
-              "current": 5,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Alini",
             "current": "Alini",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 3,
-            "current": 7,
-            "delta": 4
-          },
-          "current_league_clan_medals": {
-            "previous": 355987,
-            "current": 63691,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33550,14 +32980,16 @@
       "resolution_case_id": "RC::SA01::SA01-R08",
       "observation_id": "SA01::SA01-R08",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R08"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R08",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R08",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -33614,57 +33046,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "H03EIN",
             "current": "H03EIN",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 27,
-            "current": 9,
-            "delta": -18
-          },
-          "current_league_clan_medals": {
-            "previous": 131202,
-            "current": 39766,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33724,57 +33119,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "SORENA 🏹",
             "current": "SORENA",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 15,
-            "current": 10,
-            "delta": -5
-          },
-          "current_league_clan_medals": {
-            "previous": 191066,
-            "current": 37762,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33834,57 +33192,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "behrang",
             "current": "behrang",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 14,
-            "current": 11,
-            "delta": -3
-          },
-          "current_league_clan_medals": {
-            "previous": 194571,
-            "current": 37101,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -33944,57 +33265,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Harpy☁️",
             "current": "HARPY 🌧️🦅",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 28,
-            "current": 12,
-            "delta": -16
-          },
-          "current_league_clan_medals": {
-            "previous": 122360,
-            "current": 36901,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34010,103 +33294,19 @@
     {
       "resolution_case_id": "RC::SA01::SA01-R13",
       "observation_id": "SA01::SA01-R13",
-      "status": "CONFIRMED",
-      "candidate_global_player_ids": [
-        "GP-REAL-S13-R015"
-      ],
-      "matched_global_player_id": "GP-REAL-S13-R015",
+      "status": "CONTRADICTION",
+      "candidate_global_player_ids": [],
+      "matched_global_player_id": null,
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-        "assessment_state": "CONTINUITY_SUPPORTED",
+        "assessment_state": "IDENTITY_CONTRADICTION",
         "prior_observation_id": "S15::R019",
         "current_observation_id": "SA01::SA01-R13",
-        "core_comparison": {
-          "stage": {
-            "previous": 28,
-            "current": 29,
-            "delta": 1,
-            "result": "INCREASE"
-          },
-          "25mm": {
-            "previous": 524,
-            "current": 536,
-            "delta": 12,
-            "result": "INCREASE"
-          },
-          "hydra": {
-            "previous": 30,
-            "current": 31,
-            "delta": 1,
-            "result": "INCREASE"
-          },
-          "hellfire": {
-            "previous": 203,
-            "current": 219,
-            "delta": 16,
-            "result": "INCREASE"
-          },
-          "total_kills": {
-            "previous": 145058,
-            "current": 155671,
-            "delta": 10613,
-            "result": "INCREASE"
-          }
-        },
-        "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
-          "display_name": {
-            "previous": "ایرانی باوقار",
-            "current": "ایرانی باوقار",
-            "delta": null,
-            "result": "EXACT"
-          },
-          "role": {
-            "previous": "Member",
-            "current": "Member",
-            "delta": null,
-            "result": "EXACT"
-          },
-          "rank": {
-            "previous": 19,
-            "current": 13,
-            "delta": -6
-          },
-          "current_league_clan_medals": {
-            "previous": 161486,
-            "current": 35463,
-            "result": "NEW_LEAGUE_CONTEXT"
-          },
-          "temporal": {
-            "previous_snapshot": "S15",
-            "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
-          }
-        }
+        "blocking_signal": "lifetime_bronze",
+        "prior_value": 2,
+        "current_value": 0,
+        "conclusion": "CANDIDATE_BLOCKED"
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
@@ -34115,7 +33315,7 @@
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
       "decided_at_utc": "2026-10-01T20:30:00.000Z",
-      "reason": "project_authority_confirmed_cross_clan_continuity"
+      "reason": "hard_continuity_contradiction_blocks_cross_clan_identity"
     },
     {
       "resolution_case_id": "RC::SA01::SA01-R14",
@@ -34164,57 +33364,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "hissystem",
             "current": "hisystem",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Co-Leader",
             "current": "Co-Leader",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 18,
-            "current": 14,
-            "delta": -4
-          },
-          "current_league_clan_medals": {
-            "previous": 171190,
-            "current": 34311,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34274,57 +33437,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "I.Man",
             "current": "I.Man",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 20,
-            "current": 15,
-            "delta": -5
-          },
-          "current_league_clan_medals": {
-            "previous": 159305,
-            "current": 33618,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34384,57 +33510,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "saied 🥇 🇮🇷",
             "current": "saied",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 48,
-            "current": 16,
-            "delta": -32
-          },
-          "current_league_clan_medals": {
-            "previous": 27802,
-            "current": 28936,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34452,14 +33541,14 @@
       "observation_id": "SA01::SA01-R17",
       "status": "CONFIRMED",
       "candidate_global_player_ids": [
-        "GP-REAL-S13-R042"
+        "GP-REAL-S14-R040"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R042",
+      "matched_global_player_id": "GP-REAL-S14-R040",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "CONTINUITY_SUPPORTED",
-        "prior_observation_id": "S15::R045",
+        "prior_observation_id": "S14::R040",
         "current_observation_id": "SA01::SA01-R17",
         "core_comparison": {
           "stage": {
@@ -34487,70 +33576,33 @@
             "result": "INCREASE"
           },
           "total_kills": {
-            "previous": 91155,
+            "previous": 91455,
             "current": 94548,
-            "delta": 3393,
+            "delta": 3093,
             "result": "INCREASE"
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Amin",
             "current": "Amin",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
           },
-          "rank": {
-            "previous": 45,
-            "current": 17,
-            "delta": -28
-          },
-          "current_league_clan_medals": {
-            "previous": 52555,
-            "current": 27169,
-            "result": "NEW_LEAGUE_CONTEXT"
-          },
           "temporal": {
-            "previous_snapshot": "S15",
+            "previous_snapshot": "S14",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
+        "EV-REAL-PERSIAN-UNITY-S14"
       ],
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
@@ -34604,57 +33656,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Hafezi",
             "current": "Hafezi",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 34,
-            "current": 18,
-            "delta": -16
-          },
-          "current_league_clan_medals": {
-            "previous": 100236,
-            "current": 27117,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34671,14 +33686,16 @@
       "resolution_case_id": "RC::SA01::SA01-R19",
       "observation_id": "SA01::SA01-R19",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R19"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R19",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R19",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -34735,57 +33752,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "PERSIAN TIGER 🇮🇷",
             "current": "PERSIAN TIGER 🇮🇷",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 9,
-            "current": 20,
-            "delta": 11
-          },
-          "current_league_clan_medals": {
-            "previous": 215178,
-            "current": 23120,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34845,57 +33825,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "hadi,land",
             "current": "hadi.land",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member & MVP",
             "current": "Member",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 22,
-            "current": 21,
-            "delta": -1
-          },
-          "current_league_clan_medals": {
-            "previous": 552172,
-            "current": 21481,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -34955,57 +33898,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Dariush",
             "current": "Dariush",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Elder",
             "current": "Member",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 24,
-            "current": 22,
-            "delta": -2
-          },
-          "current_league_clan_medals": {
-            "previous": 140741,
-            "current": 21179,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35022,14 +33928,16 @@
       "resolution_case_id": "RC::SA01::SA01-R23",
       "observation_id": "SA01::SA01-R23",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R23"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R23",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R23",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -35086,57 +33994,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "hamed ir",
             "current": "hamed ir",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 21,
-            "current": 24,
-            "delta": 3
-          },
-          "current_league_clan_medals": {
-            "previous": 155455,
-            "current": 19965,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35196,57 +34067,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 5,
-              "current": 5,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Worker Ant 🐜",
             "current": "Worker Ant",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 16,
-            "current": 25,
-            "delta": 9
-          },
-          "current_league_clan_medals": {
-            "previous": 189679,
-            "current": 19568,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35306,57 +34140,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 6,
-              "current": 6,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "🇮🇷 F 35 🇮🇷",
             "current": "F 35 🇮🇷",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 10,
-            "current": 26,
-            "delta": 16
-          },
-          "current_league_clan_medals": {
-            "previous": 211485,
-            "current": 17595,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35416,57 +34213,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "👑Dadashi👑",
             "current": "👑Dadashi👑",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Elder",
             "current": "Member",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 44,
-            "current": 27,
-            "delta": -17
-          },
-          "current_league_clan_medals": {
-            "previous": 54869,
-            "current": 16288,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35526,57 +34286,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "ایران",
             "current": "ایران 🇮🇷",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 26,
-            "current": 28,
-            "delta": 2
-          },
-          "current_league_clan_medals": {
-            "previous": 133953,
-            "current": 15908,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35593,14 +34316,16 @@
       "resolution_case_id": "RC::SA01::SA01-R29",
       "observation_id": "SA01::SA01-R29",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R29"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R29",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R29",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -35657,57 +34382,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "ALI 🇮🇷",
             "current": "ALI 🇮🇷",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 8,
-            "current": 30,
-            "delta": 22
-          },
-          "current_league_clan_medals": {
-            "previous": 259699,
-            "current": 13239,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35724,14 +34412,16 @@
       "resolution_case_id": "RC::SA01::SA01-R31",
       "observation_id": "SA01::SA01-R31",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R31"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R31",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R31",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -35746,9 +34436,9 @@
       "observation_id": "SA01::SA01-R32",
       "status": "CONFIRMED",
       "candidate_global_player_ids": [
-        "GP-REAL-S13-R032"
+        "GP-REAL-S14-R034"
       ],
-      "matched_global_player_id": "GP-REAL-S13-R032",
+      "matched_global_player_id": "GP-REAL-S14-R034",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
@@ -35788,57 +34478,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Uk 🇮🇷💪",
             "current": "Vk 🇮🇷💪",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 35,
-            "current": 32,
-            "delta": -3
-          },
-          "current_league_clan_medals": {
-            "previous": 95998,
-            "current": 11496,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -35898,57 +34551,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "سید حیدر ۳۱۳",
             "current": "سید حیدر ۳۱۳",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 33,
-            "current": 33,
-            "delta": 0
-          },
-          "current_league_clan_medals": {
-            "previous": 101743,
-            "current": 10938,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36008,57 +34624,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "boz gurd",
             "current": "boz gurd",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 25,
-            "current": 34,
-            "delta": 9
-          },
-          "current_league_clan_medals": {
-            "previous": 138307,
-            "current": 10463,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36118,57 +34697,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "RADMAN",
             "current": "RAMAN",
-            "delta": null,
             "result": "CHANGED"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 23,
-            "current": 35,
-            "delta": 12
-          },
-          "current_league_clan_medals": {
-            "previous": 154680,
-            "current": 10454,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36185,14 +34727,16 @@
       "resolution_case_id": "RC::SA01::SA01-R36",
       "observation_id": "SA01::SA01-R36",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R36"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R36",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R36",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36206,14 +34750,16 @@
       "resolution_case_id": "RC::SA01::SA01-R37",
       "observation_id": "SA01::SA01-R37",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R37"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R37",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R37",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36270,57 +34816,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Liam kouhkan",
             "current": "Liam kouhkan",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 12,
-            "current": 38,
-            "delta": 26
-          },
-          "current_league_clan_medals": {
-            "previous": 205716,
-            "current": 9265,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36380,57 +34889,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 4,
-              "current": 4,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Amirhoseinifpv",
             "current": "Amirhoseinifpv",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 29,
-            "current": 39,
-            "delta": 10
-          },
-          "current_league_clan_medals": {
-            "previous": 113266,
-            "current": 7599,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36490,57 +34962,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "paradise",
             "current": "paradise",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 6,
-            "current": 40,
-            "delta": 34
-          },
-          "current_league_clan_medals": {
-            "previous": 297647,
-            "current": 7191,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36600,57 +35035,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Mahbod_1",
             "current": "Mahbod_1",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Elder",
             "current": "Member",
-            "delta": null,
             "result": "CHANGED"
-          },
-          "rank": {
-            "previous": 31,
-            "current": 41,
-            "delta": 10
-          },
-          "current_league_clan_medals": {
-            "previous": 105090,
-            "current": 4187,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36667,14 +35065,16 @@
       "resolution_case_id": "RC::SA01::SA01-R42",
       "observation_id": "SA01::SA01-R42",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R42"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R42",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R42",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36688,14 +35088,16 @@
       "resolution_case_id": "RC::SA01::SA01-R43",
       "observation_id": "SA01::SA01-R43",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R43"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R43",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R43",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36752,57 +35154,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 3,
-              "current": 3,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Tjk001",
             "current": "Tjk001",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 17,
-            "current": 44,
-            "delta": 27
-          },
-          "current_league_clan_medals": {
-            "previous": 188014,
-            "current": 2145,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -36819,14 +35184,16 @@
       "resolution_case_id": "RC::SA01::SA01-R45",
       "observation_id": "SA01::SA01-R45",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R45"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R45",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R45",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36840,14 +35207,16 @@
       "resolution_case_id": "RC::SA01::SA01-R46",
       "observation_id": "SA01::SA01-R46",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R46"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R46",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R46",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36861,14 +35230,16 @@
       "resolution_case_id": "RC::SA01::SA01-R47",
       "observation_id": "SA01::SA01-R47",
       "status": "CONFIRMED",
-      "candidate_global_player_ids": [],
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R47"
+      ],
       "matched_global_player_id": "GP-REAL-SA01-R47",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
         "assessment_state": "NEW_IDENTITY_CONFIRMED",
         "current_observation_id": "SA01::SA01-R47",
-        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence; new identity created under explicit Project Authority instruction."
+        "candidate_pool_result": "No existing Persian UNITY identity met the required multi-signal continuity evidence."
       },
       "evidence_refs": [
         "EV-REAL-IRANIAN-ARMY-SA01"
@@ -36925,57 +35296,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 1,
-              "current": 1,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "ali",
             "current": "ali",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 46,
-            "current": 48,
-            "delta": 2
-          },
-          "current_league_clan_medals": {
-            "previous": 50662,
-            "current": 417,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
@@ -37035,57 +35369,20 @@
           }
         },
         "supporting_comparison": {
-          "lifetime_medals": {
-            "bronze": {
-              "previous": 0,
-              "current": 0,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "silver": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            },
-            "gold": {
-              "previous": 2,
-              "current": 2,
-              "delta": 0,
-              "result": "EXACT"
-            }
-          },
           "display_name": {
             "previous": "Eren",
             "current": "Eren",
-            "delta": null,
             "result": "EXACT"
           },
           "role": {
             "previous": "Member",
             "current": "Member",
-            "delta": null,
             "result": "EXACT"
-          },
-          "rank": {
-            "previous": 7,
-            "current": 49,
-            "delta": 42
-          },
-          "current_league_clan_medals": {
-            "previous": 286994,
-            "current": 0,
-            "result": "NEW_LEAGUE_CONTEXT"
           },
           "temporal": {
             "previous_snapshot": "S15",
             "current_snapshot": "SA01",
-            "result": "CROSS_CLAN_AUTHORITY_TRANSFER_TO_NEW_CLAN"
-          },
-          "membership": {
-            "from_clan": "CLAN-PERSIAN-UNITY",
-            "to_clan": "CLAN-IRANIAN-ARMY-PU",
-            "result": "AUTHORITY_TRANSFER"
+            "result": "CROSS_CLAN_AUTHORITY_TRANSFER"
           }
         }
       },
