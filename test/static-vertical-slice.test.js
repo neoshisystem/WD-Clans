@@ -260,7 +260,8 @@ test('Real Persian UNITY S14 checkpoint is represented in Canonical and static p
   assert.equal(snapshot.official_timestamp_utc, '2026-09-27T19:30:00.000Z');
   assert.equal(canonical.resolution_cases.filter((item) => item.observation_id.startsWith('S14::')).length, 50);
   assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14').length, 50);
-  assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14' && item.identity_resolution_status === 'UNRESOLVED').length, 50);
+  assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14' && item.identity_resolution_status === 'CONFIRMED').length, 35);
+  assert.equal(canonical.observations.filter((item) => item.snapshot_id === 'S14' && item.identity_resolution_status === 'UNRESOLVED').length, 15);
   assert.equal(canonical.delta_results.filter((item) => item.current_observation_id?.startsWith('S14::')).length, 0);
 
   const bundle = buildStaticDataBundle(canonical);
