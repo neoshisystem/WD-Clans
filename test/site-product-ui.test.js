@@ -155,7 +155,8 @@ test('Real Persian UNITY S13 is represented in Canonical and static Read Model',
  assert.equal(snapshot?.official_timestamp_utc,'2026-09-26T19:30:00.000Z');
  assert.equal(snapshot?.member_count,48);
  assert.equal(observations.length,48);
- assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'CONFIRMED').length, 32);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'UNRESOLVED').length, 16);
  assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S15');
  assert.equal(staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.length,48);
  assert.equal(staticData.read_model.delta_results.some(d => d.current_observation_id?.startsWith('S13::')),false);
@@ -391,7 +392,8 @@ test('Real Persian UNITY S15 checkpoint preserves separate Current League and Pr
  assert.equal(snapshot.official_timestamp_utc,'2026-09-28T19:30:00.000Z');
  assert.equal(snapshot.member_count,50);
  assert.equal(observations.length,50);
- assert.equal(observations.every(o => o.identity_resolution_status === 'UNRESOLVED' && !o.global_player_id),true);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'CONFIRMED').length, 34);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'UNRESOLVED').length, 16);
  assert.equal(canonical.resolution_cases.filter(o => o.observation_id.startsWith('S15::')).length,50);
  assert.equal(canonical.delta_results.filter(o => o.current_observation_id?.startsWith('S15::')).length,0);
  const byRank = Object.fromEntries(observations.map(o => [o.rank, o]));
