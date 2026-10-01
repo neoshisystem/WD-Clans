@@ -72,9 +72,13 @@ test('Product UI separates Global/Admin Dashboard from dedicated Clan Leaderboar
   assert.equal(app.includes("case 'clan-workspace'"), false);
   assert.doesNotMatch(app,/CLAN-UCS-DEMO|UCS Demo Clan|PERSIA|GOLDENCROWN/);
 });
-test('Product UI keeps scoped navigation and blocks cross-Clan profile fallback', () => {
+test('Product UI shows full confirmed Global Player history across Clan contexts', () => {
   const app = read('site/app.js');
-  for (const token of ['scopedObs','scopedMemberships','activeClanId','بازیکن در این Clan پیدا نشد']) assert.ok(app.includes(token));
+  assert.ok(app.includes('const scopedObs = observations;'));
+  assert.ok(app.includes('const scopedMemberships = memberships;'));
+  assert.ok(app.includes('full cross-Clan observation history'));
+  assert.ok(app.includes('if (!snapshot) continue;'));
+  assert.match(app,/Snapshot History/);
 });
 
 test('Dedicated Clan pages expose no cross-Clan selector and preserve Clan context', () => {
