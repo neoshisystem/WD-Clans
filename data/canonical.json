@@ -70,6 +70,11 @@
         ]
       },
       "status": "ACTIVE"
+    },
+    {
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "display_name": "Iranian Army [PU]",
+      "status": "ACTIVE"
     }
   ],
   "delta_results": [],
