@@ -498,7 +498,7 @@
       if (delta.global_player_id !== globalId || delta.status !== 'VALID' || !Number.isFinite(Number(delta.delta))) continue;
       const snapshotId = String(delta.current_observation_id || '').split('::')[0];
       const snapshot = model.snapshots.find((item) => item.snapshot_id === snapshotId);
-      if (!snapshot || (activeClanId && snapshot.clan_id !== activeClanId)) continue;
+      if (!snapshot) continue;
       const value = Number(delta.delta);
       if (delta.scope === 'LEAGUE' && delta.metric_key === 'current_league_clan_medals') {
         result.cumulativeMedals = (result.cumulativeMedals || 0) + value;
@@ -540,8 +540,9 @@
       return;
     }
 
-    const scopedObs = observations.filter((item) => !activeClanId || item.clan_id === activeClanId);
-    const scopedMemberships = memberships.filter((item) => !activeClanId || item.clan_id === activeClanId);
+    // A confirmed Global Player profile owns its full cross-Clan observation history. Clan context remains navigation context, not a history filter.
+    const scopedObs = observations;
+    const scopedMemberships = memberships;
     const latest = scopedObs.slice().sort((a,b) => String(a.observed_at_utc || '').localeCompare(String(b.observed_at_utc || ''))).slice(-1)[0] || null;
     const performance = playerPerformance(globalId);
     if (activeClanId && !latest) {
