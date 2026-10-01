@@ -1,5 +1,6 @@
 name: Deploy UCS Static Site to GitHub Pages
 # UCS: deployment trigger aligned to approved monotonic Snapshot contract.
+# UCS: post-replay validation refresh 2026-10-01.
 
 on:
   push:
