@@ -1,4 +1,5 @@
 'use strict';
+// UCS SA01: static bundle deployment follows the Canonical-generated Read Model.
 
 // Dedicated Clan viewer: direct leaderboard context; Global/Admin stays isolated.
 // Snapshot continuity and Delta summaries are derived from adjacent same-Clan Read Model observations.
