@@ -144,20 +144,7 @@ test('Vertical Slice 5: committed static artifacts equal regenerated output', ()
       browserPath
     });
 
-    const committedJsonText = fs.readFileSync(STATIC_JSON_PATH, 'utf8');
-    if (committedJsonText !== generated.json) {
-      let i = 0;
-      while (i < committedJsonText.length && i < generated.json.length && committedJsonText[i] === generated.json[i]) i += 1;
-      console.error(JSON.stringify({
-        static_mismatch_index: i,
-        committed_length: committedJsonText.length,
-        generated_length: generated.json.length,
-        committed_context: committedJsonText.slice(Math.max(0, i - 120), i + 240),
-        generated_context: generated.json.slice(Math.max(0, i - 120), i + 240),
-        semantic_equal: (() => { try { return JSON.stringify(JSON.parse(committedJsonText)) === JSON.stringify(JSON.parse(generated.json)); } catch { return false; } })()
-      }));
-    }
-    assert.equal(committedJsonText, generated.json);
+    assert.equal(fs.readFileSync(STATIC_JSON_PATH, 'utf8'), generated.json);
     assert.equal(fs.readFileSync(STATIC_BROWSER_PATH, 'utf8'), generated.browser);
 
     const committedJson = JSON.parse(fs.readFileSync(STATIC_JSON_PATH, 'utf8'));
