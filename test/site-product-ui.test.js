@@ -130,7 +130,7 @@ test('Observation profile follows all continuity-linked snapshots without creati
  assert.ok(app.includes('observations = observationHistoryFor(observationId);'));
 });
 
-test('Empty Iranian Army [PU] clan is represented without members', () => {
+test('Iranian Army [PU] SA01 roster exposes resolved and unresolved members', () => {
  const canonical = JSON.parse(read('data/canonical.json'));
  const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
  const canonicalClan = canonical.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
@@ -139,9 +139,9 @@ test('Empty Iranian Army [PU] clan is represented without members', () => {
  assert.equal(staticClan?.display_name, 'Iranian Army [PU]');
  assert.equal(staticClan?.snapshot_count, 1);
  assert.equal(staticClan?.latest_snapshot_id, 'SA01');
- assert.deepEqual(staticClan?.current_member_refs, []);
- assert.deepEqual(staticClan?.observed_global_player_ids, []);
- assert.equal(staticClan?.unresolved_observation_refs?.length, 49);
+ assert.equal(staticClan?.current_member_refs?.length, 48);
+ assert.equal(staticClan?.observed_global_player_ids?.length, 48);
+ assert.equal(staticClan?.unresolved_observation_refs?.length, 1);
 });
 
 test('Real Persian UNITY S13 is represented in Canonical and static Read Model', () => {
