@@ -123,6 +123,18 @@ test('Global dashboard CSS selectors are syntactically repaired for Clan directo
   assert.match(css,/\.dashboard-grid\{grid-template-columns:1fr\}/);
   assert.match(css,/\.clan-card-stats span\{display:block/);
 });
+test('Empty Iranian Army [PU] clan is represented without members', () => {
+ const canonical = JSON.parse(read('data/canonical.json'));
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const canonicalClan = canonical.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+ const staticClan = staticData.read_model.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+ assert.equal(canonicalClan?.display_name, 'Iranian Army [PU]');
+ assert.equal(staticClan?.display_name, 'Iranian Army [PU]');
+ assert.equal(staticClan?.snapshot_count, 0);
+ assert.deepEqual(staticClan?.current_member_refs, []);
+ assert.deepEqual(staticClan?.observed_global_player_ids, []);
+});
+
 test('Real Persian UNITY S13 is represented in Canonical and static Read Model', () => {
  const canonical = JSON.parse(read('data/canonical.json'));
  const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
