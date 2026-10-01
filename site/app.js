@@ -513,6 +513,43 @@
     }
     return result;
   }
+  function observationHistoryFor(observationId) {
+    const allMembers = model.snapshots.flatMap((snapshot) => snapshot.members || []);
+    const membersById = new Map(allMembers.map((member) => [member.observation_id, member]));
+    if (!membersById.has(observationId)) return [];
+
+    const edges = (Array.isArray(model.snapshot_delta_results) ? model.snapshot_delta_results : [])
+      .filter((item) => item.status === 'VALID' && item.baseline_observation_id && item.current_observation_id)
+      .filter((item) => {
+        const current = membersById.get(item.current_observation_id);
+        const baseline = membersById.get(item.baseline_observation_id);
+        return current && baseline && current.clan_id === baseline.clan_id;
+      })
+      .map((item) => [item.baseline_observation_id, item.current_observation_id]);
+
+    const connected = new Set([observationId]);
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const [left, right] of edges) {
+        if (!connected.has(left) && !connected.has(right)) continue;
+        if (!connected.has(left)) { connected.add(left); changed = true; }
+        if (!connected.has(right)) { connected.add(right); changed = true; }
+      }
+    }
+
+    return [...connected]
+      .map((id) => membersById.get(id))
+      .filter(Boolean)
+      .sort((a, b) => {
+        const left = model.snapshots.find((snapshot) => snapshot.snapshot_id === a.snapshot_id);
+        const right = model.snapshots.find((snapshot) => snapshot.snapshot_id === b.snapshot_id);
+        const leftTime = String(left?.official_timestamp_utc || '');
+        const rightTime = String(right?.official_timestamp_utc || '');
+        return leftTime.localeCompare(rightTime) || String(a.observation_id).localeCompare(String(b.observation_id));
+      });
+  }
+
   function playerProfile() {
     const globalId = params.get('id');
     const observationId = params.get('observation');
@@ -529,10 +566,9 @@
       displayName = player.display_name;
       status = player.identity_status;
     } else if (observationId) {
-      for (const snapshot of model.snapshots) {
-        const match = snapshot.members.find((member) => member.observation_id === observationId);
-        if (match) { observations.push(match); displayName = match.display_name; status = match.identity_resolution_status; }
-      }
+      observations = observationHistoryFor(observationId);
+      const seed = observations.find((item) => item.observation_id === observationId) || observations[0] || null;
+      if (seed) { displayName = seed.display_name; status = seed.identity_resolution_status; }
     }
 
     if (!displayName) {
