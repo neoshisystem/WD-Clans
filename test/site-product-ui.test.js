@@ -137,9 +137,11 @@ test('Empty Iranian Army [PU] clan is represented without members', () => {
  const staticClan = staticData.read_model.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
  assert.equal(canonicalClan?.display_name, 'Iranian Army [PU]');
  assert.equal(staticClan?.display_name, 'Iranian Army [PU]');
- assert.equal(staticClan?.snapshot_count, 0);
+ assert.equal(staticClan?.snapshot_count, 1);
+ assert.equal(staticClan?.latest_snapshot_id, 'SA01');
  assert.deepEqual(staticClan?.current_member_refs, []);
  assert.deepEqual(staticClan?.observed_global_player_ids, []);
+ assert.equal(staticClan?.unresolved_observation_refs?.length, 49);
 });
 
 test('Real Persian UNITY S13 is represented in Canonical and static Read Model', () => {
