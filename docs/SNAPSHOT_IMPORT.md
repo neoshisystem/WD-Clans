@@ -93,6 +93,16 @@ Rules:
 
 `data/real-snapshots/...` remains historical legacy evidence where already present; new ingestion uses the `Snapshot/<Clan>/` archive as the standard replay source.
 
+## 5.1 Roster completeness and Authority-approved exclusions
+
+The imported Snapshot must explicitly reconcile the source roster/header count with the members actually captured in the supplied evidence.
+
+- A missing roster position must never be silently discarded.
+- Every omitted position must be reported before acceptance.
+- Project Authority may explicitly exclude an omitted roster position when its status/reason is known and the exclusion is part of the Authority instruction.
+- An Authority-approved exclusion is recorded as an exception on the Snapshot/evidence metadata; it does not create an Observation, Global Player ID, Membership Episode or Membership Event for that omitted position.
+- Future Snapshots must repeat this completeness check even when a previous Snapshot used an approved exclusion.
+
 ## 6. Source field scope
 
 The extraction agent must keep these source scopes separate:
