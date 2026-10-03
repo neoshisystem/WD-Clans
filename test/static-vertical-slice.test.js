@@ -271,7 +271,7 @@ test('Real Persian UNITY S14 checkpoint is represented in Canonical and static p
   const first = projected.members[0];
   assert.equal(first.last_online_display, '4m');
   assert.deepEqual(first.lifetime_medals, { bronze: 2, gold: 2, silver: 4 });
-  assert.deepEqual(first.weapons, { '25mm': 1301, hellfire: 450, hydra: 72 });
+  assert.deepEqual(first.weapons, { '25mm': 1301, hellfire: 72, hydra: 450 });
   assert.equal(first.total_kills, 291112);
   assert.equal(first.current_league_clan_medals, 345257);
 });
