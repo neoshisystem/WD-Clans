@@ -44,6 +44,23 @@ The system must:
 
 Project Authority may establish that a source value was extracted incorrectly; in that case the **source evidence/extraction must be corrected**, not the game rule.
 
+## 2.1 Mandatory cross-clan search before new Global Player
+
+In the Multi-Clan UCS model, an observation that appears to be a new player must first be searched against **all existing resolved Global Player identities across all Clans**.
+
+Required order:
+1. Check the current Clan and Snapshot history.
+2. Search other Clans for the same or plausibly equivalent identity.
+3. Compare Stage, every weapon level (25mm/Hydra/Hellfire), Total Kills and lifetime Bronze/Silver/Gold using the hard monotonic rule.
+4. Compare display-name variants, Emoji, punctuation, spacing, aliases, Role, temporal continuity and Membership history as supporting evidence.
+5. Only when no supported existing Global Player remains may the case enter `NEW_IDENTITY_PENDING_AUTHORITY`.
+
+A changed name, Emoji, punctuation, spacing or rank is never sufficient reason to create a new Global Player ID.
+
+A Clan transfer is a Membership change, not a new Global Player.
+
+This gate is mandatory even when the incoming player is visually presented as a "new member" by a derived UI projection.
+
 ## 3. Medal scopes are not interchangeable
 
 ### Lifetime medals
