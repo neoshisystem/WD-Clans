@@ -1,3 +1,4 @@
+// UCS SA02 import validation refresh 2026-10-03
 'use strict';
 // UCS SA01: static bundle deployment follows the Canonical-generated Read Model.
 
