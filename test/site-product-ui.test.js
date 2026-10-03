@@ -135,13 +135,27 @@ test('Iranian Army [PU] SA01 roster exposes resolved and unresolved members', ()
  const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
  const canonicalClan = canonical.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
  const staticClan = staticData.read_model.clans.find(c => c.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+ const sa01 = staticData.read_model.snapshots.find(s => s.snapshot_id === 'SA01');
  assert.equal(canonicalClan?.display_name, 'Iranian Army [PU]');
  assert.equal(staticClan?.display_name, 'Iranian Army [PU]');
- assert.equal(staticClan?.snapshot_count, 1);
- assert.equal(staticClan?.latest_snapshot_id, 'SA01');
+ assert.equal(staticClan?.snapshot_count, 2);
+ assert.equal(staticClan?.latest_snapshot_id, 'SA02');
  assert.equal(staticClan?.current_member_refs?.length, 48);
  assert.equal(staticClan?.observed_global_player_ids?.length, 48);
- assert.equal(staticClan?.unresolved_observation_refs?.length, 1);
+ assert.equal(sa01?.members.length, 49);
+ assert.equal(sa01?.members.filter(m => m.identity_resolution_status === 'UNRESOLVED').length, 1);
+ assert.equal(sa01?.members.filter(m => m.identity_resolution_status === 'CONFIRMED').length, 48);
+});
+test('Iranian Army [PU] SA02 preserves corrected weapon semantic mapping and resolution counts', () => {
+ const canonical = JSON.parse(read('data/canonical.json'));
+ const staticData = JSON.parse(read('site/data/ucs-vertical-slice.json'));
+ const sa02 = staticData.read_model.snapshots.find(s => s.snapshot_id === 'SA02');
+ const ehsan = sa02?.members.find(m => m.display_name === 'ehsan');
+ assert.equal(canonical.snapshots.find(s => s.snapshot_id === 'SA02')?.member_count, 49);
+ assert.equal(sa02?.members.length, 49);
+ assert.equal(sa02?.members.filter(m => m.identity_resolution_status === 'CONFIRMED').length, 45);
+ assert.equal(sa02?.members.filter(m => m.identity_resolution_status === 'UNRESOLVED').length, 4);
+ assert.deepEqual(ehsan?.weapons, { '25mm': 1334, hydra: 459, hellfire: 74 });
 });
 
 test('Real Persian UNITY S13 is represented in Canonical and static Read Model', () => {
