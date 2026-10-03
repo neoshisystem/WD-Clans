@@ -1,0 +1,4921 @@
+{
+  "extraction_schema_version": "0.1",
+  "extraction_id": "SA02-RAW-EXTRACTION-001",
+  "extracted_at_utc": null,
+  "source": {
+    "primary_artifact_id": "EV-REAL-IRANIAN-ARMY-SA02",
+    "artifacts": [
+      {
+        "artifact_id": "EV-REAL-IRANIAN-ARMY-SA02",
+        "artifact_type": "real-snapshot-zip",
+        "source_location": "user-upload:SA-02.zip",
+        "content_hash": {
+          "algorithm": "sha256",
+          "value": "5de1394395555bb9e3a628cfd11a479490e1a2633ab58c931053a3e3939ed75d"
+        }
+      }
+    ]
+  },
+  "members": [
+    {
+      "source_member_key": "SA02-R01",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R01"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "1",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ARAN_KING",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "128",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "2422",
+            "hydra": "576",
+            "hellfire": "173"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "660771",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "299420",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "299420",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R02",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R02"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "2",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ehsan",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Co-Leader & MVP",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "69",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1334",
+            "hydra": "459",
+            "hellfire": "74"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "322628",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "210699",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "210699",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R03",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R03"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "3",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Cpt. Of Persia",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Co-Leader",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "52",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1082",
+            "hydra": "369",
+            "hellfire": "96"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "364412",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "4",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "163415",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "163415",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R04",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R04"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "4",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Alini",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "54",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1110",
+            "hydra": "355",
+            "hellfire": "59"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "434601",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "5",
+            "silver": "5",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "160450",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "160450",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R05",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R05"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "5",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "NaViD",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "50",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "950",
+            "hydra": "335",
+            "hellfire": "65"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "193369",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "5",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "157017",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "157017",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R06",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R06"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "6",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Commander 🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Elder",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "58",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1130",
+            "hydra": "273",
+            "hellfire": "72"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "301210",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "144229",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "144229",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R07",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R07"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "7",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Extreme",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "54",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1035",
+            "hydra": "311",
+            "hellfire": "75"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "187405",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "1",
+            "silver": "1",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "132702",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "132702",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R08",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R08"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "8",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "kaveh",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "46",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1088",
+            "hydra": "356",
+            "hellfire": "97"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "219736",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "130060",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "130060",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R09",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R09"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "9",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "🇮🇷 ALI 🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "54",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1181",
+            "hydra": "284",
+            "hellfire": "72"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "126267",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "3",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "112715",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "112715",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R10",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R10"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "10",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "🇮🇷 HARPY 🌩️🦅",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "32",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "678",
+            "hydra": "219",
+            "hellfire": "40"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "135330",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "1",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "96684",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "96684",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R11",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R11"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "11",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "behrang",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "25",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "500",
+            "hydra": "170",
+            "hellfire": "68"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "135589",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "1",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "95574",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "95574",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R12",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R12"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "12",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "I.Man",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "15",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "306",
+            "hydra": "139",
+            "hellfire": "32"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "61894",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "2",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "91513",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "91513",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R13",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R13"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "13",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ایرانی باوقار",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "29",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "540",
+            "hydra": "219",
+            "hellfire": "33"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "163457",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "2",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "78835",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "78835",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R14",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R14"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "14",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Hafezi",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "40",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "840",
+            "hydra": "222",
+            "hellfire": "76"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "115522",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "78530",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "78530",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R15",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R15"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "15",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Eren",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "628",
+            "hydra": "258",
+            "hellfire": "63"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "204540",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "2",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "78322",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "78322",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R16",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R16"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "16",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "hisystem",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Co-Leader",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "622",
+            "hydra": "253",
+            "hellfire": "60"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "213594",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "3",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "75483",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "75483",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R17",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R17"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "17",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "H03E1N",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "39",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "730",
+            "hydra": "353",
+            "hellfire": "54"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "117678",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "72930",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "72930",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R18",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R18"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "18",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Dariush",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "35",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "710",
+            "hydra": "285",
+            "hellfire": "57"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "157627",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "1",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "68046",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "68046",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R19",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R19"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "19",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Worker Ant",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "65",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1207",
+            "hydra": "398",
+            "hellfire": "88"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "286519",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "5",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "66415",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "66415",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R20",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R20"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "20",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "🏅saied🏅🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "23",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "574",
+            "hydra": "89",
+            "hellfire": "29"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "88687",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "65691",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "65691",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R21",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R21"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "21",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "RADMAN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "54",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1128",
+            "hydra": "397",
+            "hellfire": "82"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "239363",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "1",
+            "silver": "2",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "64654",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "64654",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R22",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R22"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "22",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "hadi.land",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "40",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "768",
+            "hydra": "272",
+            "hellfire": "40"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "160008",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "2",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "63061",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "63061",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R23",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R23"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "23",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "🇮🇷 F 35 🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "58",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1098",
+            "hydra": "312",
+            "hellfire": "54"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "283474",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "4",
+            "silver": "6",
+            "gold": "4"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "61090",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "61090",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R24",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R24"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "24",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ADA",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "702",
+            "hydra": "259",
+            "hellfire": "85"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "154823",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "5",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "53992",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "53992",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R25",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R25"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "25",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ایران 🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "39",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "719",
+            "hydra": "181",
+            "hellfire": "62"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "106661",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "1",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "53748",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "53748",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R26",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R26"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "26",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "SORENA",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "962",
+            "hydra": "275",
+            "hellfire": "80"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "171479",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "52585",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "52585",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R27",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R27"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "27",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Amin",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "43",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "768",
+            "hydra": "315",
+            "hellfire": "62"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "96614",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "50431",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "50431",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R28",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R28"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "👑Dadashi👑",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "65",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1159",
+            "hydra": "388",
+            "hellfire": "101"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "227871",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "3",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "45694",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "45694",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R29",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R29"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "29",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "GuiltyBlueSnake",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "35",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "758",
+            "hydra": "136",
+            "hellfire": "32"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "95123",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "43071",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "43071",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R30",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R30"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "30",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "boz gurd",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "30",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "670",
+            "hydra": "270",
+            "hellfire": "46"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "121650",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "1",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "41931",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "41931",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R31",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R31"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "31",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Vk 🇮🇷💪",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "43",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "791",
+            "hydra": "311",
+            "hellfire": "57"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "141118",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "40068",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "40068",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R32",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R32"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "32",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "PERSIAN TIGER🇮🇷",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "26",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "590",
+            "hydra": "236",
+            "hellfire": "49"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "112996",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "35668",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "35668",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R33",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R33"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "33",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "RAMIN",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "48",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "884",
+            "hydra": "246",
+            "hellfire": "42"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "124955",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "34429",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "34429",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R34",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R34"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "34",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Liam kouhkan",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "857",
+            "hydra": "225",
+            "hellfire": "89"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "203382",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "3",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "34179",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "34179",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R35",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R35"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "35",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "paradise",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "29",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "692",
+            "hydra": "200",
+            "hellfire": "64"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "184119",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "1",
+            "silver": "2",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "33210",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "33210",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R36",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R36"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "36",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "سید حیدر ۳۱۳",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "28",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "623",
+            "hydra": "244",
+            "hellfire": "69"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "137015",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "30974",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "30974",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R37",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R37"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "37",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Amirhoseinifpv",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "40",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "801",
+            "hydra": "385",
+            "hellfire": "56"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "126446",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "4",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "30581",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "30581",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R38",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R38"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "38",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "leeroth",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "46",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "969",
+            "hydra": "419",
+            "hellfire": "52"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "157908",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "27985",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "27985",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R39",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R39"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "39",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Falcon",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "14",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "310",
+            "hydra": "262",
+            "hellfire": "63"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "83683",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "2",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "27233",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "27233",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R40",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R40"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "40",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ali",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "30",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "554",
+            "hydra": "178",
+            "hellfire": "38"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "52763",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "1",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "19617",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "19617",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R41",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R41"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "41",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "CheekyIvoryWolf",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "47",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "860",
+            "hydra": "564",
+            "hellfire": "122"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "169971",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "2",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "16747",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "16747",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R42",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R42"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "42",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Tjk001",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "26",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "467",
+            "hydra": "252",
+            "hellfire": "62"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "146930",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "3",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "14416",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "14416",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R43",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R43"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "43",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "AMIR",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "34",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "734",
+            "hydra": "185",
+            "hellfire": "47"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "86825",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "12253",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "12253",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R44",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R44"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "44",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "Mahbod_1",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "23",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "508",
+            "hydra": "128",
+            "hellfire": "48"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "55416",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "3",
+            "gold": "3"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "11942",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "11942",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R45",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R45"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "45",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "santiago123",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "20",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "357",
+            "hydra": "160",
+            "hellfire": "38"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "26757",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "1",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "11713",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "11713",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R46",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R46"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "46",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "MD Samir",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "14",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "273",
+            "hydra": "165",
+            "hellfire": "16"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "30510",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "0",
+            "silver": "0",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "6572",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "6572",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R47",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R47"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "47",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "CaringBlueBear",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member & MVP",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "66",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "1341",
+            "hydra": "485",
+            "hellfire": "71"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "205550",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "3",
+            "silver": "3",
+            "gold": "1"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "5913",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "5913",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R48",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R48"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "48",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "ErFaN.m279",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Member",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "31",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "610",
+            "hydra": "276",
+            "hellfire": "54"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "116568",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "1",
+            "gold": "2"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "5083",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "5083",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    },
+    {
+      "source_member_key": "SA02-R49",
+      "source_identity": {
+        "status": "OBSERVED",
+        "source_system": "WAR_DRONE_SCREENSHOT_ZIP",
+        "source_identity_id": "SA02-R49"
+      },
+      "fields": {
+        "rank": {
+          "status": "OBSERVED",
+          "raw_value": "49",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "display_name": {
+          "status": "OBSERVED",
+          "raw_value": "سرباز وطن",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "role": {
+          "status": "OBSERVED",
+          "raw_value": "Leader",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "stage": {
+          "status": "OBSERVED",
+          "raw_value": "10",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "weapons": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "25mm": "302",
+            "hydra": "48",
+            "hellfire": "20"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "total_kills": {
+          "status": "OBSERVED",
+          "raw_value": "31240",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "lifetime_medals": {
+          "status": "OBSERVED",
+          "raw_value": {
+            "bronze": "2",
+            "silver": "2",
+            "gold": "0"
+          },
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "current_league_clan_medals": {
+          "status": "OBSERVED",
+          "raw_value": "0",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "profile_total_clan_medal_count": {
+          "status": "OBSERVED",
+          "raw_value": "0",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        },
+        "last_online_utc": {
+          "status": "NOT_VISIBLE",
+          "interpretation": "NONE",
+          "evidence_refs": [
+            "EV-REAL-IRANIAN-ARMY-SA02"
+          ]
+        }
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA02"
+      ]
+    }
+  ]
+}
