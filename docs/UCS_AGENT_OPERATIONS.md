@@ -74,6 +74,8 @@ test/* — automated foundation, ingestion, projection, and UI tests.
 14. Generate static artifacts from Canonical and require generated diff to be clean.
 15. Report evidence, coverage, identity, membership, metrics, persistence, projection, UI, tests, CI, commit, blockers, and next action.
 
+## Multi-Clan identity safety gate — mandatory
+Before treating an observed player as a genuinely new Global Player, search the complete existing Global Player set across all known Clans. Compare the six hard lifetime continuity signals (Stage, 25mm, Hydra, Hellfire, Total Kills, lifetime Bronze/Silver/Gold), then inspect name/Emoji/punctuation variants, aliases, Role, temporal continuity and Membership history. A presentation-only name change or Emoji change must never create a new Global Player. If no supported existing identity is found, keep the observation UNRESOLVED / NEW_IDENTITY_PENDING_AUTHORITY rather than fabricating an ID.
 ## User interaction
 The normal user contract is Clan + official date/time + ZIP. The agent reports uncertainty instead of guessing, works only inside the approved scope, and finishes with a report and handoff update.
 
