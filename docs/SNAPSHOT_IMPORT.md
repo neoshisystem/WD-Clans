@@ -93,6 +93,23 @@ Rules:
 
 `data/real-snapshots/...` remains historical legacy evidence where already present; new ingestion uses the `Snapshot/<Clan>/` archive as the standard replay source.
 
+## 5.2 Weapon semantic mapping — mandatory
+
+For real War Drone Snapshot Profile extraction, weapon values must be assigned by **semantic weapon label**, never by assumed visual position alone.
+
+Current locked semantic mapping is:
+- 25mm → 25mm
+- Hydra → Hydra
+- Hellfire → Hellfire
+
+A historical correction established that affected real Snapshot records had Hydra/Hellfire values stored under the opposite semantic keys. Corrected records use:
+- stored Hellfire value → corrected Hydra value
+- stored Hydra value → corrected Hellfire value
+
+This correction applies to S13, S14, S15 and SA01 real observations. Synthetic fixtures are unaffected.
+
+Future Snapshot extraction must preserve the source labels explicitly and must not infer Hydra/Hellfire identity from column position without verifying the source label.
+
 ## 5.1 Roster completeness and Authority-approved exclusions
 
 The imported Snapshot must explicitly reconcile the source roster/header count with the members actually captured in the supplied evidence.
