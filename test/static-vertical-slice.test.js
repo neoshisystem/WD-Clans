@@ -275,3 +275,56 @@ test('Real Persian UNITY S14 checkpoint is represented in Canonical and static p
   assert.equal(first.total_kills, 291112);
   assert.equal(first.current_league_clan_medals, 345257);
 });
+
+
+test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as membership changes', () => {
+  const canonical = JSON.parse(fs.readFileSync(PUBLIC_CANONICAL_PATH, 'utf8'));
+  const bundle = buildStaticDataBundle(canonical);
+  const changes = bundle.read_model.snapshot_membership_changes
+    .filter((change) => change.snapshot_id === 'SA02' && change.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+
+  assert.equal(changes.length, 5);
+
+  const joined = changes
+    .filter((change) => change.change_type === 'JOIN')
+    .map((change) => change.observation_id)
+    .sort();
+  const left = changes
+    .filter((change) => change.change_type === 'LEAVE')
+    .map((change) => change.observation_id)
+    .sort();
+
+  assert.deepEqual(joined, [
+    'SA02::SA02-R45',
+    'SA02::SA02-R48',
+    'SA02::SA02-R49'
+  ]);
+  assert.deepEqual(left, [
+    'SA01::SA01-R19',
+    'SA01::SA01-R42'
+  ]);
+
+  const falseRenameIds = [
+    'SA02::SA02-R09',
+    'SA02::SA02-R10',
+    'SA02::SA02-R11',
+    'SA02::SA02-R17',
+    'SA02::SA02-R20',
+    'SA02::SA02-R21',
+    'SA02::SA02-R23',
+    'SA02::SA02-R32',
+    'SA01::SA01-R09',
+    'SA01::SA01-R11',
+    'SA01::SA01-R12',
+    'SA01::SA01-R16',
+    'SA01::SA01-R20',
+    'SA01::SA01-R24',
+    'SA01::SA01-R26',
+    'SA01::SA01-R30',
+    'SA01::SA01-R35'
+  ];
+  assert.equal(
+    changes.some((change) => falseRenameIds.includes(change.observation_id)),
+    false
+  );
+});
