@@ -283,7 +283,7 @@ test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as m
   const changes = bundle.read_model.snapshot_membership_changes
     .filter((change) => change.snapshot_id === 'SA02' && change.clan_id === 'CLAN-IRANIAN-ARMY-PU');
 
-  assert.equal(changes.length, 5);
+  assert.equal(changes.length, 6);
 
   const joined = changes
     .filter((change) => change.change_type === 'JOIN')
@@ -301,6 +301,7 @@ test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as m
   ]);
   assert.deepEqual(left, [
     'SA01::SA01-R19',
+    'SA01::SA01-R24',
     'SA01::SA01-R42'
   ]);
 
