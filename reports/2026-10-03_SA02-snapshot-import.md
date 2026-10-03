@@ -48,7 +48,7 @@ Seven confirmed players have a lower Profile Total Clan Medal Count than in SA01
 Profile Total Clan Medal Count is Membership-Episode scoped, so these are not hard lifetime identity contradictions and no negative Delta was stored. However both SA01 and SA02 belong to League W40, so the established Leave -> League boundary -> Return reset rule does not explain a reset between the two captures. These cases remain review-required.
 
 ## Roster completeness
-SA02 source shows 49/50. Unlike SA01, there is no separate Authority instruction recorded for SA02 that permits treating roster position 50 as an approved exclusion. Therefore the Snapshot remains NOT SEALED for completeness review.
+SA02 source header is 49/50 and the captured Ranking evidence contains exactly 49 unique rows, ranks 1–49. Therefore the captured roster reconciles with the source header count. Capacity is 50; no silent roster omission is present in the supplied evidence.
 
 ## Persisted state
 Canonical:
@@ -71,5 +71,14 @@ Raw replay:
 - GitHub Pages #126: SUCCESS
 - Product HEAD: fb8dee777e5516a51c2e7871b8952afd8b43f9af
 
+## Membership change projection correction
+The initial Read Model displayed 22 SA02 membership changes because display-name/Emoji changes were being compared before established Global Player identity. This was corrected so confirmed Global Player continuity takes precedence over display-name comparison.
+
+SA02 now projects 6 derived membership changes:
+- JOIN: santiago123, ErFaN.m279, سرباز وطن
+- LEAVE: ehsan.7472, hamed ir, amin.shirazi
+
+The 16 rename/Emoji-only differences are no longer emitted as JOIN/LEAVE. No Global Player IDs were changed or fabricated by this correction.
+
 ## Next
-Resolve or explicitly accept the 49/50 roster completeness case, and review the seven Profile Total Clan Medal anomalies plus the four unresolved identity cases before issuing a sealed closure checkpoint.
+Review the seven Profile Total Clan Medal anomalies and the four unresolved identity cases before issuing a sealed closure checkpoint.
