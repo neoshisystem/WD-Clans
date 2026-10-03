@@ -115,8 +115,8 @@
       },
       "weapon_levels": {
         "25mm": 1062,
-        "hellfire": 357,
-        "hydra": 94
+        "hellfire": 94,
+        "hydra": 357
       }
     },
     {
@@ -157,8 +157,8 @@
       },
       "weapon_levels": {
         "25mm": 1309,
-        "hellfire": 454,
-        "hydra": 72
+        "hellfire": 72,
+        "hydra": 454
       }
     },
     {
@@ -199,8 +199,8 @@
       },
       "weapon_levels": {
         "25mm": 1100,
-        "hellfire": 316,
-        "hydra": 57
+        "hellfire": 57,
+        "hydra": 316
       }
     },
     {
@@ -241,8 +241,8 @@
       },
       "weapon_levels": {
         "25mm": 1061,
-        "hellfire": 336,
-        "hydra": 90
+        "hellfire": 90,
+        "hydra": 336
       }
     },
     {
@@ -283,8 +283,8 @@
       },
       "weapon_levels": {
         "25mm": 1079,
-        "hellfire": 265,
-        "hydra": 68
+        "hellfire": 68,
+        "hydra": 265
       }
     },
     {
@@ -325,8 +325,8 @@
       },
       "weapon_levels": {
         "25mm": 686,
-        "hellfire": 196,
-        "hydra": 62
+        "hellfire": 62,
+        "hydra": 196
       }
     },
     {
@@ -367,8 +367,8 @@
       },
       "weapon_levels": {
         "25mm": 628,
-        "hellfire": 258,
-        "hydra": 63
+        "hellfire": 63,
+        "hydra": 258
       }
     },
     {
@@ -409,8 +409,8 @@
       },
       "weapon_levels": {
         "25mm": 1140,
-        "hellfire": 277,
-        "hydra": 64
+        "hellfire": 64,
+        "hydra": 277
       }
     },
     {
@@ -451,8 +451,8 @@
       },
       "weapon_levels": {
         "25mm": 522,
-        "hellfire": 232,
-        "hydra": 49
+        "hellfire": 49,
+        "hydra": 232
       }
     },
     {
@@ -493,8 +493,8 @@
       },
       "weapon_levels": {
         "25mm": 1068,
-        "hellfire": 304,
-        "hydra": 54
+        "hellfire": 54,
+        "hydra": 304
       }
     },
     {
@@ -535,8 +535,8 @@
       },
       "weapon_levels": {
         "25mm": 842,
-        "hellfire": 216,
-        "hydra": 69
+        "hellfire": 69,
+        "hydra": 216
       }
     },
     {
@@ -577,8 +577,8 @@
       },
       "weapon_levels": {
         "25mm": 732,
-        "hellfire": 224,
-        "hydra": 89
+        "hellfire": 89,
+        "hydra": 224
       }
     },
     {
@@ -619,8 +619,8 @@
       },
       "weapon_levels": {
         "25mm": 936,
-        "hellfire": 329,
-        "hydra": 63
+        "hellfire": 63,
+        "hydra": 329
       }
     },
     {
@@ -661,8 +661,8 @@
       },
       "weapon_levels": {
         "25mm": 352,
-        "hellfire": 144,
-        "hydra": 62
+        "hellfire": 62,
+        "hydra": 144
       }
     },
     {
@@ -703,8 +703,8 @@
       },
       "weapon_levels": {
         "25mm": 950,
-        "hellfire": 275,
-        "hydra": 76
+        "hellfire": 76,
+        "hydra": 275
       }
     },
     {
@@ -745,8 +745,8 @@
       },
       "weapon_levels": {
         "25mm": 1175,
-        "hellfire": 394,
-        "hydra": 86
+        "hellfire": 86,
+        "hydra": 394
       }
     },
     {
@@ -787,8 +787,8 @@
       },
       "weapon_levels": {
         "25mm": 466,
-        "hellfire": 247,
-        "hydra": 58
+        "hellfire": 58,
+        "hydra": 247
       }
     },
     {
@@ -829,8 +829,8 @@
       },
       "weapon_levels": {
         "25mm": 591,
-        "hellfire": 253,
-        "hydra": 58
+        "hellfire": 58,
+        "hydra": 253
       }
     },
     {
@@ -871,8 +871,8 @@
       },
       "weapon_levels": {
         "25mm": 524,
-        "hellfire": 203,
-        "hydra": 30
+        "hellfire": 30,
+        "hydra": 203
       }
     },
     {
@@ -913,8 +913,8 @@
       },
       "weapon_levels": {
         "25mm": 300,
-        "hellfire": 135,
-        "hydra": 30
+        "hellfire": 30,
+        "hydra": 135
       }
     },
     {
@@ -955,8 +955,8 @@
       },
       "weapon_levels": {
         "25mm": 724,
-        "hellfire": 190,
-        "hydra": 42
+        "hellfire": 42,
+        "hydra": 190
       }
     },
     {
@@ -997,8 +997,8 @@
       },
       "weapon_levels": {
         "25mm": 743,
-        "hellfire": 267,
-        "hydra": 38
+        "hellfire": 38,
+        "hydra": 267
       }
     },
     {
@@ -1039,8 +1039,8 @@
       },
       "weapon_levels": {
         "25mm": 1110,
-        "hellfire": 389,
-        "hydra": 82
+        "hellfire": 82,
+        "hydra": 389
       }
     },
     {
@@ -1081,8 +1081,8 @@
       },
       "weapon_levels": {
         "25mm": 691,
-        "hellfire": 269,
-        "hydra": 53
+        "hellfire": 53,
+        "hydra": 269
       }
     },
     {
@@ -1123,8 +1123,8 @@
       },
       "weapon_levels": {
         "25mm": 650,
-        "hellfire": 260,
-        "hydra": 40
+        "hellfire": 40,
+        "hydra": 260
       }
     },
     {
@@ -1165,8 +1165,8 @@
       },
       "weapon_levels": {
         "25mm": 706,
-        "hellfire": 181,
-        "hydra": 60
+        "hellfire": 60,
+        "hydra": 181
       }
     },
     {
@@ -1207,8 +1207,8 @@
       },
       "weapon_levels": {
         "25mm": 729,
-        "hellfire": 348,
-        "hydra": 52
+        "hellfire": 52,
+        "hydra": 348
       }
     },
     {
@@ -1249,8 +1249,8 @@
       },
       "weapon_levels": {
         "25mm": 627,
-        "hellfire": 216,
-        "hydra": 40
+        "hellfire": 40,
+        "hydra": 216
       }
     },
     {
@@ -1291,8 +1291,8 @@
       },
       "weapon_levels": {
         "25mm": 759,
-        "hellfire": 385,
-        "hydra": 56
+        "hellfire": 56,
+        "hydra": 385
       }
     },
     {
@@ -1333,8 +1333,8 @@
       },
       "weapon_levels": {
         "25mm": 525,
-        "hellfire": 164,
-        "hydra": 43
+        "hellfire": 43,
+        "hydra": 164
       }
     },
     {
@@ -1375,8 +1375,8 @@
       },
       "weapon_levels": {
         "25mm": 496,
-        "hellfire": 120,
-        "hydra": 48
+        "hellfire": 48,
+        "hydra": 120
       }
     },
     {
@@ -1417,8 +1417,8 @@
       },
       "weapon_levels": {
         "25mm": 1440,
-        "hellfire": 489,
-        "hydra": 55
+        "hellfire": 55,
+        "hydra": 489
       }
     },
     {
@@ -1459,8 +1459,8 @@
       },
       "weapon_levels": {
         "25mm": 617,
-        "hellfire": 240,
-        "hydra": 63
+        "hellfire": 63,
+        "hydra": 240
       }
     },
     {
@@ -1501,8 +1501,8 @@
       },
       "weapon_levels": {
         "25mm": 827,
-        "hellfire": 214,
-        "hydra": 70
+        "hellfire": 70,
+        "hydra": 214
       }
     },
     {
@@ -1543,8 +1543,8 @@
       },
       "weapon_levels": {
         "25mm": 776,
-        "hellfire": 311,
-        "hydra": 57
+        "hellfire": 57,
+        "hydra": 311
       }
     },
     {
@@ -1585,8 +1585,8 @@
       },
       "weapon_levels": {
         "25mm": 308,
-        "hellfire": 136,
-        "hydra": 32
+        "hellfire": 32,
+        "hydra": 136
       }
     },
     {
@@ -1627,8 +1627,8 @@
       },
       "weapon_levels": {
         "25mm": 550,
-        "hellfire": 184,
-        "hydra": 27
+        "hellfire": 27,
+        "hydra": 184
       }
     },
     {
@@ -1669,8 +1669,8 @@
       },
       "weapon_levels": {
         "25mm": 263,
-        "hellfire": 84,
-        "hydra": 46
+        "hellfire": 46,
+        "hydra": 84
       }
     },
     {
@@ -1711,8 +1711,8 @@
       },
       "weapon_levels": {
         "25mm": 1001,
-        "hellfire": 211,
-        "hydra": 52
+        "hellfire": 52,
+        "hydra": 211
       }
     },
     {
@@ -1753,8 +1753,8 @@
       },
       "weapon_levels": {
         "25mm": 589,
-        "hellfire": 276,
-        "hydra": 51
+        "hellfire": 51,
+        "hydra": 276
       }
     },
     {
@@ -1795,8 +1795,8 @@
       },
       "weapon_levels": {
         "25mm": 1000,
-        "hellfire": 174,
-        "hydra": 53
+        "hellfire": 53,
+        "hydra": 174
       }
     },
     {
@@ -1837,8 +1837,8 @@
       },
       "weapon_levels": {
         "25mm": 676,
-        "hellfire": 267,
-        "hydra": 81
+        "hellfire": 81,
+        "hydra": 267
       }
     },
     {
@@ -1879,8 +1879,8 @@
       },
       "weapon_levels": {
         "25mm": 886,
-        "hellfire": 320,
-        "hydra": 68
+        "hellfire": 68,
+        "hydra": 320
       }
     },
     {
@@ -1921,8 +1921,8 @@
       },
       "weapon_levels": {
         "25mm": 1153,
-        "hellfire": 384,
-        "hydra": 99
+        "hellfire": 99,
+        "hydra": 384
       }
     },
     {
@@ -1963,8 +1963,8 @@
       },
       "weapon_levels": {
         "25mm": 762,
-        "hellfire": 307,
-        "hydra": 60
+        "hellfire": 60,
+        "hydra": 307
       }
     },
     {
@@ -2005,8 +2005,8 @@
       },
       "weapon_levels": {
         "25mm": 542,
-        "hellfire": 173,
-        "hydra": 36
+        "hellfire": 36,
+        "hydra": 173
       }
     },
     {
@@ -2047,8 +2047,8 @@
       },
       "weapon_levels": {
         "25mm": 862,
-        "hellfire": 313,
-        "hydra": 57
+        "hellfire": 57,
+        "hydra": 313
       }
     },
     {
@@ -2089,8 +2089,8 @@
       },
       "weapon_levels": {
         "25mm": 546,
-        "hellfire": 88,
-        "hydra": 29
+        "hellfire": 29,
+        "hydra": 88
       }
     },
     {
@@ -2131,8 +2131,8 @@
       },
       "weapon_levels": {
         "25mm": 658,
-        "hellfire": 433,
-        "hydra": 76
+        "hellfire": 76,
+        "hydra": 433
       }
     },
     {
@@ -2173,8 +2173,8 @@
       },
       "weapon_levels": {
         "25mm": 582,
-        "hellfire": 293,
-        "hydra": 62
+        "hellfire": 62,
+        "hydra": 293
       }
     }
   ],
