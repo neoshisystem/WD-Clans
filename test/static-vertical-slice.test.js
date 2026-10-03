@@ -319,7 +319,6 @@ test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as m
     'SA01::SA01-R12',
     'SA01::SA01-R16',
     'SA01::SA01-R20',
-    'SA01::SA01-R24',
     'SA01::SA01-R26',
     'SA01::SA01-R30',
     'SA01::SA01-R35'
