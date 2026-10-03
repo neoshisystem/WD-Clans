@@ -319,7 +319,46 @@ function projectSnapshotMembershipChanges(state) {
   for (const snapshot of snapshots) {
     const previousSnapshot = previousByClan.get(snapshot.clan_id);
     if (previousSnapshot) {
-      const continuity = pairObservationContinuity(previousSnapshot,snapshot,state);
+      // Confirmed Global Player identity is authoritative for same-Clan adjacent-Snapshot
+      // membership comparison. A display-name/emoji change alone is not a membership change.
+      const previousObservations = state.observations
+        .filter((observation) => observation.snapshot_id === previousSnapshot.snapshot_id)
+        .slice();
+      const currentObservations = state.observations
+        .filter((observation) => observation.snapshot_id === snapshot.snapshot_id)
+        .slice();
+      const previousByGlobalPlayerId = new Map(
+        previousObservations
+          .filter((observation) =>
+            observation.identity_resolution_status === 'CONFIRMED' &&
+            Boolean(observation.global_player_id)
+          )
+          .map((observation) => [observation.global_player_id, observation])
+      );
+      const matchedCurrentIds = new Set();
+      const matchedPreviousIds = new Set();
+
+      for (const currentObservation of currentObservations) {
+        if (currentObservation.identity_resolution_status !== 'CONFIRMED' || !currentObservation.global_player_id) continue;
+        const previousObservation = previousByGlobalPlayerId.get(currentObservation.global_player_id);
+        if (!previousObservation) continue;
+        const violations = monotonicContinuityViolations(previousObservation, currentObservation);
+        if (violations.length) continue;
+        matchedCurrentIds.add(currentObservation.observation_id);
+        matchedPreviousIds.add(previousObservation.observation_id);
+      }
+
+      // Remaining observations still use the established fingerprint path. This keeps
+      // unresolved observations and genuinely unmatched identities visible without
+      // letting a confirmed Global Player rename become JOIN/LEAVE noise.
+      const remainingState = {
+        ...state,
+        observations: state.observations.filter((observation) =>
+          !matchedCurrentIds.has(observation.observation_id) &&
+          !matchedPreviousIds.has(observation.observation_id)
+        )
+      };
+      const continuity = pairObservationContinuity(previousSnapshot, snapshot, remainingState);
       const blockedCurrent = new Map(continuity.blockedPairs.map((pair) => [pair.current_observation_id, pair]));
       const blockedPrevious = new Map(continuity.blockedPairs.map((pair) => [pair.previous_observation_id, pair]));
       for (const observation of continuity.unmatchedCurrent) results.push({
