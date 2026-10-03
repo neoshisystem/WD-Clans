@@ -141,6 +141,17 @@ A value from one scope must never be silently substituted for another.
 
 Example: Profile Total Clan Medal Count must never be copied into Current League Clan Medals.
 
+## 6.1 Membership change identity precedence — mandatory
+
+For adjacent Snapshots of the same Clan, Membership Change projection must use the strongest available identity evidence before display-name comparison:
+
+1. Confirmed global_player_id continuity with no hard monotonic contradiction.
+2. Explicit continuity/resolution evidence.
+3. Established fingerprint/name comparison for observations without a confirmed Global Player ID.
+
+A display-name, punctuation or Emoji change alone is not a JOIN or LEAVE when the same confirmed Global Player ID is present in both Snapshots.
+
+This rule applies to the derived Read Model membership-change view. It does not create identity, infer Global IDs, or override a hard continuity contradiction.
 ## 7. Required pipeline
 
 ZIP → SHA-256 → deterministic inventory → visual extraction → RawExtraction archive → same-Snapshot correlation → SnapshotInput → identity/continuity review → Canonical → Projection → Static → UI → validation/report
