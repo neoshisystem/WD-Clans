@@ -169,6 +169,22 @@ For adjacent Snapshots of the same Clan, Membership Change projection must use t
 A display-name, punctuation or Emoji change alone is not a JOIN or LEAVE when the same confirmed Global Player ID is present in both Snapshots.
 
 This rule applies to the derived Read Model membership-change view. It does not create identity, infer Global IDs, or override a hard continuity contradiction.
+## 6.3 SA03 membership false-positive lesson — mandatory
+
+SA03 established and validated the following additional rule for future real Snapshot intake:
+
+- Snapshot presence/absence is observation state only.
+- Do not derive factual JOIN/LEAVE from adjacent Snapshot set differences.
+- A hard continuity contradiction remains an identity review case; it is not a JOIN/LEAVE.
+- An unresolved Observation is not a new member.
+- A confirmed cross-Clan TRANSFER must not be duplicated as JOIN in the destination Clan.
+- Canonical Membership Events are the authoritative lifecycle record.
+- Projection may expose unresolved comparisons as UNKNOWN_CHANGE review evidence, but UNKNOWN_CHANGE must never be classified by the UI as JOIN/LEAVE.
+
+Before accepting a Snapshot as complete, verify the UI-facing Static bundle separately:
+Canonical Membership Events → Projection → Static → UI
+and confirm that only explicit/Authority-backed lifecycle events appear under "joined/entered" or "left/exited".
+
 ## 7. Required pipeline
 
 ZIP → SHA-256 → deterministic inventory → visual extraction → RawExtraction archive → same-Snapshot correlation → SnapshotInput → identity/continuity review → Canonical → Projection → Static → UI → validation/report
