@@ -56,7 +56,7 @@ test('S15 fingerprint continuity repair blocks hard monotonic contradictions and
   assert.equal(deltas.length, 96);
   assert.equal(deltas.filter((item) => item.metric_key === 'total_kills').length, 48);
   assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals').length, 48);
-  assert.equal(changes.length, 4);
+  assert.equal(changes.length, 2);
 
   assert.equal(deltas.filter((item) => item.status === 'ANOMALY').length, 0);
   assert.equal(deltas.filter((item) => item.metric_key === 'total_kills' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 138616);
@@ -64,18 +64,15 @@ test('S15 fingerprint continuity repair blocks hard monotonic contradictions and
   assert.equal(deltas.filter((item) => item.metric_key === 'current_league_clan_medals' && item.status === 'VALID').reduce((sum, item) => sum + item.delta, 0), 2230535);
   assert.equal(deltas.some((item) => Number.isFinite(item.delta) && item.delta < 0), false);
 
-  const joins = changes.filter((item) => item.change_type === 'JOIN');
-  const leaves = changes.filter((item) => item.change_type === 'LEAVE');
-  assert.deepEqual(joins.map((item) => item.display_name), ['ایرانی باوقار', 'Amin']);
-  assert.deepEqual(leaves.map((item) => item.display_name), ['ایرانی باوقار', 'Amin']);
-  assert.equal(joins.every((item) => item.reason === 'monotonic_identity_contradiction'), true);
-  assert.equal(leaves.every((item) => item.reason === 'monotonic_identity_contradiction'), true);
+  assert.equal(changes.every((item) => item.change_type === 'UNKNOWN_CHANGE'), true);
+  assert.deepEqual(changes.map((item) => item.display_name), ['ایرانی باوقار', 'Amin']);
+  assert.equal(changes.every((item) => item.reason === 'monotonic_identity_contradiction'), true);
 
   const staticData = JSON.parse(fs.readFileSync(STATIC_PATH, 'utf8'));
   const staticDeltas = staticData.read_model.snapshot_delta_results.filter((item) => item.current_observation_id.startsWith('S15::'));
   const staticChanges = staticData.read_model.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S15');
   assert.equal(staticDeltas.length, 96);
-  assert.equal(staticChanges.length, 4);
+  assert.equal(staticChanges.length, 2);
 });
 
 // Historical S14 field-scope repair assertions are covered by test/s14-field-scope-repair.test.js.
