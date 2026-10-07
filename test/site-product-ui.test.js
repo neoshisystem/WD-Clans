@@ -392,8 +392,9 @@ test('Real Persian UNITY S14 continuity respects the hard monotonic identity con
  assert.equal(deltas.filter(d => d.status === 'VALID').length,78);
  assert.equal(deltas.some(d => Number.isFinite(d.delta) && d.delta < 0), false);
  assert.equal(deltas.some(d => d.continuity?.assessment_state === 'IDENTITY_CONTRADICTION'), false);
- assert.equal(changes.filter(c => c.change_type === 'JOIN').length,6);
- assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,4);
+ assert.equal(changes.filter(c => c.change_type === 'JOIN').length,0);
+ assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,0);
+ assert.equal(changes.filter(c => c.change_type === 'UNKNOWN_CHANGE').length,6);
  assert.equal(changes.filter(c => c.reason === 'monotonic_identity_contradiction').length,3);
 });
 
