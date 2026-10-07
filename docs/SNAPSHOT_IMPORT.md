@@ -199,3 +199,21 @@ SA03 established the following mandatory operational checks after the earlier SA
 5. New Global IDs are reserved for players with no established cross-clan candidate after the full search.
 6. Raw Snapshot ZIP, deterministic inventory and RawExtraction must be registered before Canonical mutation.
 7. Hydra/Hellfire must be extracted by semantic source identity, not visual column position.
+
+## 6.2 Membership lifecycle safety — mandatory SA03 lesson
+
+Locked rule: Snapshot presence/absence is observation state, not Membership Event evidence.
+
+For adjacent Snapshots of the same Clan:
+- appearance is not automatically JOIN;
+- absence is not automatically LEAVE;
+- a hard continuity contradiction does not become JOIN or LEAVE;
+- an unresolved identity does not become a new member;
+- a cross-Clan movement already represented by an explicit TRANSFER must not be duplicated as JOIN;
+- explicit Canonical Membership Events are the authoritative lifecycle record.
+
+Fingerprint/continuity pairing is evidence for Identity Resolution. It is not a Membership Event generator.
+
+The derived Read Model may expose an unresolved comparison as UNKNOWN_CHANGE / review evidence, but it must never promote Snapshot set difference into factual JOIN/LEAVE semantics.
+
+This rule was added after the SA03 audit found 10 false derived membership classifications caused by unmatched Snapshot observations.
