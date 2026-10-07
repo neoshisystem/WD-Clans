@@ -188,3 +188,14 @@ Canonical remains the only product source of truth. Static files are always rege
 - Any remaining numeric negative Delta is invalid and must fail validation.
 
 This document is the first read for any real Snapshot task.
+## SA03 import closure — 2026-10-07
+
+SA03 established the following mandatory operational checks after the earlier SA02 identity mistakes:
+
+1. Search the complete multi-clan Canonical history before assigning a new Global Player ID.
+2. Name/icon/emoji/punctuation changes are never sufficient to create a new identity.
+3. A candidate with even one decrease in Stage, 25mm, Hydra, Hellfire, Total Kills, lifetime Bronze, lifetime Silver or lifetime Gold is a hard contradiction and must remain unresolved.
+4. Existing unresolved historical chains may be closed only when the new Snapshot supplies enough continuity evidence; historical contradiction pairs remain quarantined and are not erased.
+5. New Global IDs are reserved for players with no established cross-clan candidate after the full search.
+6. Raw Snapshot ZIP, deterministic inventory and RawExtraction must be registered before Canonical mutation.
+7. Hydra/Hellfire must be extracted by semantic source identity, not visual column position.
