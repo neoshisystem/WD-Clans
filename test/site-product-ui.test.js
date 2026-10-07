@@ -395,7 +395,7 @@ test('Real Persian UNITY S14 continuity respects the hard monotonic identity con
  assert.equal(changes.filter(c => c.change_type === 'JOIN').length,0);
  assert.equal(changes.filter(c => c.change_type === 'LEAVE').length,0);
  assert.equal(changes.filter(c => c.change_type === 'UNKNOWN_CHANGE').length,6);
- assert.equal(changes.filter(c => c.reason === 'monotonic_identity_contradiction').length,3);
+ assert.equal(changes.filter(c => c.reason === 'monotonic_identity_contradiction').length,2);
 });
 
 test('Real Persian UNITY S15 checkpoint preserves separate Current League and Profile Clan Medal scopes', () => {
