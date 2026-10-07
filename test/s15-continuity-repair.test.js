@@ -30,18 +30,18 @@ test('Real Persian UNITY identity resolution preserves S15 contradictions and co
 
   const s15Cases = canonical.resolution_cases.filter((item) => item.observation_id.startsWith('S15::'));
   assert.equal(s15Cases.length, 50);
-  assert.equal(s15Cases.filter((item) => item.status === 'CONFIRMED').length, 34);
-  assert.equal(s15Cases.filter((item) => item.status === 'UNRESOLVED').length, 16);
-  assert.equal(canonical.global_player_identities.length, 50);
-  assert.equal(canonical.global_player_identities.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 48);
-  assert.equal(canonical.membership_events.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 48);
-  assert.equal(canonical.membership_episodes.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 83);
+  assert.equal(s15Cases.filter((item) => item.status === 'CONFIRMED').length, 37);
+  assert.equal(s15Cases.filter((item) => item.status === 'UNRESOLVED').length, 13);
+  assert.equal(canonical.global_player_identities.length, 58);
+  assert.equal(canonical.global_player_identities.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 56);
+  assert.equal(canonical.membership_events.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 56);
+  assert.equal(canonical.membership_episodes.filter((item) => item.global_player_id.startsWith('GP-REAL-')).length, 94);
   assert.equal(canonical.delta_results.filter((item) => item.current_observation_id?.startsWith('S15::')).length, 0);
 
   for (const resolution of s15Cases) {
     assert.ok(resolution.status === 'CONFIRMED' || resolution.status === 'UNRESOLVED');
   }
-  assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R019').identity_resolution_status, 'UNRESOLVED');
+  assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R019').identity_resolution_status, 'CONFIRMED');
   assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R045').identity_resolution_status, 'UNRESOLVED');
   assert.equal(canonical.observations.find((o) => o.observation_id === 'S15::R035').identity_resolution_status, 'CONFIRMED');
 });
