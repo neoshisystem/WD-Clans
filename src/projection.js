@@ -313,6 +313,7 @@ function snapshotMetricDelta(currentValue, previousValue, metricKey, sameLeague)
 }
 
 function projectSnapshotMembershipChanges(state) {
+  // Canonical Membership Events are authoritative; Snapshot presence/absence is never lifecycle evidence.
   assertCanonicalState(state);
   const snapshots = state.snapshots.slice().sort(compareByTimeThen('official_timestamp_utc','clan_id','sequence','snapshot_id'));
   const previousByClan = new Map(); const results = [];
