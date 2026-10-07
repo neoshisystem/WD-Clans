@@ -140,8 +140,8 @@ test('Iranian Army [PU] SA01 roster exposes resolved and unresolved members', ()
  assert.equal(staticClan?.display_name, 'Iranian Army [PU]');
  assert.equal(staticClan?.snapshot_count, 3);
  assert.equal(staticClan?.latest_snapshot_id, 'SA03');
- assert.equal(staticClan?.current_member_refs?.length, 48);
- assert.equal(staticClan?.observed_global_player_ids?.length, 48);
+ assert.equal(staticClan?.current_member_refs?.length, 56);
+ assert.equal(staticClan?.observed_global_player_ids?.length, 56);
  assert.equal(sa01?.members.length, 49);
  assert.equal(sa01?.members.filter(m => m.identity_resolution_status !== 'CONFIRMED').length, 0);
  assert.equal(sa01?.members.filter(m => m.identity_resolution_status === 'CONFIRMED').length, 49);
