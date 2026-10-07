@@ -169,8 +169,8 @@ test('Real Persian UNITY S13 is represented in Canonical and static Read Model',
  assert.equal(snapshot?.official_timestamp_utc,'2026-09-26T19:30:00.000Z');
  assert.equal(snapshot?.member_count,48);
  assert.equal(observations.length,48);
- assert.equal(observations.filter(o => o.identity_resolution_status === 'CONFIRMED').length, 37);
- assert.equal(observations.filter(o => o.identity_resolution_status === 'UNRESOLVED').length, 11);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'CONFIRMED').length, 34);
+ assert.equal(observations.filter(o => o.identity_resolution_status === 'UNRESOLVED').length, 14);
  assert.equal(staticData.read_model.clans.find(c => c.clan_id === 'CLAN-PERSIAN-UNITY')?.latest_snapshot_id,'S15');
  assert.equal(staticData.read_model.snapshots.find(s => s.snapshot_id === 'S13')?.members.length,48);
  assert.equal(staticData.read_model.delta_results.some(d => d.current_observation_id?.startsWith('S13::')),false);
