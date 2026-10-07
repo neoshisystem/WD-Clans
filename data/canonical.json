@@ -2521,7 +2521,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R01::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 357941,
       "status": "VALID",
       "reason": null
@@ -2551,7 +2551,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R001::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 248015,
       "status": "VALID",
       "reason": null
@@ -2581,7 +2581,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R002::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 258849,
       "status": "VALID",
       "reason": null
@@ -2611,7 +2611,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R003::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 199510,
       "status": "VALID",
       "reason": null
@@ -2641,7 +2641,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R004::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 217505,
       "status": "VALID",
       "reason": null
@@ -2671,7 +2671,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R020::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 105014,
       "status": "VALID",
       "reason": null
@@ -2701,7 +2701,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R08::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 120961,
       "status": "VALID",
       "reason": null
@@ -2731,7 +2731,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R012::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 137110,
       "status": "VALID",
       "reason": null
@@ -2761,7 +2761,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R043::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 98949,
       "status": "VALID",
       "reason": null
@@ -2791,7 +2791,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R016::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 110268,
       "status": "VALID",
       "reason": null
@@ -2821,7 +2821,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R017::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 113225,
       "status": "VALID",
       "reason": null
@@ -2851,7 +2851,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R008::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 28412,
       "status": "VALID",
       "reason": null
@@ -2881,7 +2881,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S15-R019::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 87440,
       "status": "VALID",
       "reason": null
@@ -2911,7 +2911,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R023::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 108894,
       "status": "VALID",
       "reason": null
@@ -2941,7 +2941,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R006::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 82121,
       "status": "VALID",
       "reason": null
@@ -2971,7 +2971,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R007::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 46752,
       "status": "VALID",
       "reason": null
@@ -3001,7 +3001,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R014::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 61775,
       "status": "VALID",
       "reason": null
@@ -3031,7 +3031,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R026::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 55325,
       "status": "VALID",
       "reason": null
@@ -3061,7 +3061,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R030::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 85644,
       "status": "VALID",
       "reason": null
@@ -3091,7 +3091,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R019::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 59513,
       "status": "VALID",
       "reason": null
@@ -3121,7 +3121,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S14-R049::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 52512,
       "status": "VALID",
       "reason": null
@@ -3151,7 +3151,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R013::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 50668,
       "status": "VALID",
       "reason": null
@@ -3181,7 +3181,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R010::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 78380,
       "status": "VALID",
       "reason": null
@@ -3211,7 +3211,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R027::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 32620,
       "status": "VALID",
       "reason": null
@@ -3241,7 +3241,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R31::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 56962,
       "status": "VALID",
       "reason": null
@@ -3271,7 +3271,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R009::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 68201,
       "status": "VALID",
       "reason": null
@@ -3301,7 +3301,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R034::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 57881,
       "status": "VALID",
       "reason": null
@@ -3331,7 +3331,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R021::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 47195,
       "status": "VALID",
       "reason": null
@@ -3361,7 +3361,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R011::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 33484,
       "status": "VALID",
       "reason": null
@@ -3391,7 +3391,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 38627,
       "status": "VALID",
       "reason": null
@@ -3421,7 +3421,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R041::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 2502,
       "status": "VALID",
       "reason": null
@@ -3451,7 +3451,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R037::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 63410,
       "status": "VALID",
       "reason": null
@@ -3481,7 +3481,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R29::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 46062,
       "status": "VALID",
       "reason": null
@@ -3511,7 +3511,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 27864,
       "status": "VALID",
       "reason": null
@@ -3541,7 +3541,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R45::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 61484,
       "status": "VALID",
       "reason": null
@@ -3571,7 +3571,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R23::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 32457,
       "status": "VALID",
       "reason": null
@@ -3601,7 +3601,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R031::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 32482,
       "status": "VALID",
       "reason": null
@@ -3631,7 +3631,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R018::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 47321,
       "status": "VALID",
       "reason": null
@@ -3661,7 +3661,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R37::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 18498,
       "status": "VALID",
       "reason": null
@@ -3691,7 +3691,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R045::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 29112,
       "status": "VALID",
       "reason": null
@@ -3721,7 +3721,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R025::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 13441,
       "status": "VALID",
       "reason": null
@@ -3751,7 +3751,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-SA01-R36::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 25032,
       "status": "VALID",
       "reason": null
@@ -3781,7 +3781,7 @@
       "scope": "LEAGUE",
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "league_id": "LEAGUE-WD-2026W40",
-      "membership_episode_id": "ME::GP-REAL-S13-R047::CLAN-IRANIAN-ARMY-PU::1",
+      "membership_episode_id": null,
       "delta": 31845,
       "status": "VALID",
       "reason": null
