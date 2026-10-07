@@ -348,31 +348,87 @@ function projectSnapshotMembershipChanges(state) {
         matchedPreviousIds.add(previousObservation.observation_id);
       }
 
-      // Remaining observations still use the established fingerprint path. This keeps
-      // unresolved observations and genuinely unmatched identities visible without
-      // letting a confirmed Global Player rename become JOIN/LEAVE noise.
+      // Canonical Membership Events are authoritative for actual membership changes.
+      // A confirmed cross-clan TRANSFER/JOIN/RETURN must not also become heuristic JOIN noise.
+      const explicitCurrentIds = new Set(
+        state.membership_events
+          .filter((event) =>
+            event.observed_snapshot_id === snapshot.snapshot_id &&
+            event.clan_id === snapshot.clan_id &&
+            ['JOIN', 'RETURN', 'TRANSFER'].includes(event.event_type)
+          )
+          .map((event) => event.global_player_id)
+          .filter(Boolean)
+      );
+      const explicitPreviousIds = new Set(
+        state.membership_events
+          .filter((event) =>
+            event.observed_snapshot_id === snapshot.snapshot_id &&
+            event.clan_id === snapshot.clan_id &&
+            ['LEAVE', 'TRANSFER'].includes(event.event_type) &&
+            event.from_clan_id === snapshot.clan_id
+          )
+          .map((event) => event.global_player_id)
+          .filter(Boolean)
+      );
+
+      // Remaining observations may be examined by the Fingerprint path, but its output
+      // is review evidence only. It must never manufacture JOIN/LEAVE semantics from
+      // sampling gaps. Presence in one Snapshot without an explicit Membership Event is
+      // UNKNOWN_CHANGE; absence from the next Snapshot is NOT_OBSERVED, not LEAVE.
       const remainingState = {
         ...state,
         observations: state.observations.filter((observation) =>
           !matchedCurrentIds.has(observation.observation_id) &&
-          !matchedPreviousIds.has(observation.observation_id)
+          !matchedPreviousIds.has(observation.observation_id) &&
+          !explicitCurrentIds.has(observation.global_player_id) &&
+          !explicitPreviousIds.has(observation.global_player_id)
         )
       };
       const continuity = pairObservationContinuity(previousSnapshot, snapshot, remainingState);
-      const blockedCurrent = new Map(continuity.blockedPairs.map((pair) => [pair.current_observation_id, pair]));
-      const blockedPrevious = new Map(continuity.blockedPairs.map((pair) => [pair.previous_observation_id, pair]));
-      for (const observation of continuity.unmatchedCurrent) results.push({
-        change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::JOIN::'+observation.observation_id, change_type:'JOIN', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
-        clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
-        current_observation_id:observation.observation_id, previous_observation_id:null, match_method:'DISPLAY_NAME_FINGERPRINT', reason:blockedCurrent.has(observation.observation_id)?'monotonic_identity_contradiction':'no_deterministic_prior_snapshot_match',
-        provenance:{ canonical_refs:uniqueSorted([snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
-      });
-      for (const observation of continuity.unmatchedPrevious) results.push({
-        change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::LEAVE::'+observation.observation_id, change_type:'LEAVE', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
-        clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
-        current_observation_id:null, previous_observation_id:observation.observation_id, match_method:'DISPLAY_NAME_FINGERPRINT', reason:blockedPrevious.has(observation.observation_id)?'monotonic_identity_contradiction':'no_deterministic_current_snapshot_match',
-        provenance:{ canonical_refs:uniqueSorted([previousSnapshot.snapshot_id,snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(previousSnapshot),...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
-      });
+      const blockedPairs = continuity.blockedPairs;
+      const handledBlockedCurrent = new Set();
+      const handledBlockedPrevious = new Set();
+
+      for (const pair of blockedPairs) {
+        const currentObservation = currentObservations.find((observation) => observation.observation_id === pair.current_observation_id);
+        const previousObservation = previousObservations.find((observation) => observation.observation_id === pair.previous_observation_id);
+        if (!currentObservation || !previousObservation) continue;
+        handledBlockedCurrent.add(pair.current_observation_id);
+        handledBlockedPrevious.add(pair.previous_observation_id);
+        results.push({
+          change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::UNKNOWN_CHANGE::'+pair.current_observation_id+'::'+pair.previous_observation_id,
+          change_type:'UNKNOWN_CHANGE', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
+          clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null,
+          display_name:currentObservation.display_name, observation_id:currentObservation.observation_id,
+          current_observation_id:currentObservation.observation_id, previous_observation_id:previousObservation.observation_id,
+          match_method:'DISPLAY_NAME_FINGERPRINT', reason:'monotonic_identity_contradiction',
+          provenance:{ canonical_refs:uniqueSorted([previousSnapshot.snapshot_id,snapshot.snapshot_id,previousObservation.observation_id,currentObservation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(previousSnapshot),...collectEvidenceRefs(snapshot),...collectEvidenceRefs(previousObservation),...collectEvidenceRefs(currentObservation)]) }
+        });
+      }
+
+      // An unmatched current observation indicates insufficient continuity evidence,
+      // not a confirmed JOIN. Keep it visible as UNKNOWN_CHANGE unless an explicit
+      // canonical membership event already exists for the same Global Player.
+      for (const observation of continuity.unmatchedCurrent) {
+        if (handledBlockedCurrent.has(observation.observation_id)) continue;
+        if (explicitCurrentIds.has(observation.global_player_id)) continue;
+        results.push({
+          change_id:'OBS-MEMORY::'+snapshot.snapshot_id+'::UNKNOWN_CHANGE::'+observation.observation_id,
+          change_type:'UNKNOWN_CHANGE', snapshot_id:snapshot.snapshot_id, clan_id:snapshot.clan_id,
+          clan_display_name:state.clans.find((c)=>c.clan_id===snapshot.clan_id)?.display_name??null, display_name:observation.display_name, observation_id:observation.observation_id,
+          current_observation_id:observation.observation_id, previous_observation_id:null, match_method:'DISPLAY_NAME_FINGERPRINT', reason:'no_deterministic_prior_snapshot_match',
+          provenance:{ canonical_refs:uniqueSorted([snapshot.snapshot_id,observation.observation_id]), evidence_refs:uniqueSorted([...collectEvidenceRefs(snapshot),...collectEvidenceRefs(observation)]) }
+        });
+      }
+
+      // An unmatched previous observation means only that the player was not observed
+      // in the current Snapshot. It is deliberately not emitted as LEAVE.
+      // Explicit LEAVE/TRANSFER events remain available through canonical Membership Events.
+      for (const observation of continuity.unmatchedPrevious) {
+        if (handledBlockedPrevious.has(observation.observation_id)) continue;
+        if (explicitPreviousIds.has(observation.global_player_id)) continue;
+      }
     }
     previousByClan.set(snapshot.clan_id,snapshot);
   }
