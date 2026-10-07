@@ -233,3 +233,11 @@ Required behavior:
 5. Historical reports and point-in-time handoffs remain historical records and are not rewritten simply because newer state exists.
 6. If documentation is ahead/behind or cannot be proven synchronized, classify the checkpoint DRIFTED/BLOCKED/UNKNOWN and do not claim SEALED.
 7. The next Conversation must start from `projects/UCS/AGENT_START_HERE.md` and then follow the recorded checkpoint/read order rather than relying on hidden chat memory.
+
+## SA03 audit lesson — membership events must not be inferred from Snapshot gaps
+
+For real Snapshot processing, adjacent Snapshot presence/absence is not sufficient evidence of Membership lifecycle.
+Do not turn an unmatched previous Observation into LEAVE or an unmatched current Observation into JOIN.
+Use explicit Canonical Membership Events / Authority evidence for JOIN, RETURN, LEAVE and TRANSFER.
+Use Fingerprint only for identity continuity and review. Hard monotonic contradictions remain blocked.
+See Memory-ai report: projects/UCS/conversations/development-reports/2026-10-08_SA03-identity-membership-reconciliation-audit.md
