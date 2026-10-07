@@ -2495,6 +2495,1446 @@
       "delta": 5121,
       "status": "VALID",
       "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R01",
+      "current_observation_id": "SA03::SA03-R01",
+      "global_player_id": "GP-REAL-SA01-R01",
+      "baseline_observation_id": "SA03::SA03-R01",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R01",
+      "current_observation_id": "SA03::SA03-R01",
+      "global_player_id": "GP-REAL-SA01-R01",
+      "baseline_observation_id": "SA03::SA03-R01",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R01::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R02",
+      "current_observation_id": "SA03::SA03-R02",
+      "global_player_id": "GP-REAL-S13-R001",
+      "baseline_observation_id": "SA03::SA03-R02",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R02",
+      "current_observation_id": "SA03::SA03-R02",
+      "global_player_id": "GP-REAL-S13-R001",
+      "baseline_observation_id": "SA03::SA03-R02",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R001::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R03",
+      "current_observation_id": "SA03::SA03-R03",
+      "global_player_id": "GP-REAL-S13-R002",
+      "baseline_observation_id": "SA03::SA03-R03",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R03",
+      "current_observation_id": "SA03::SA03-R03",
+      "global_player_id": "GP-REAL-S13-R002",
+      "baseline_observation_id": "SA03::SA03-R03",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R002::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R04",
+      "current_observation_id": "SA03::SA03-R04",
+      "global_player_id": "GP-REAL-S13-R003",
+      "baseline_observation_id": "SA03::SA03-R04",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R04",
+      "current_observation_id": "SA03::SA03-R04",
+      "global_player_id": "GP-REAL-S13-R003",
+      "baseline_observation_id": "SA03::SA03-R04",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R003::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R05",
+      "current_observation_id": "SA03::SA03-R05",
+      "global_player_id": "GP-REAL-S13-R004",
+      "baseline_observation_id": "SA03::SA03-R05",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R05",
+      "current_observation_id": "SA03::SA03-R05",
+      "global_player_id": "GP-REAL-S13-R004",
+      "baseline_observation_id": "SA03::SA03-R05",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R004::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R06",
+      "current_observation_id": "SA03::SA03-R06",
+      "global_player_id": "GP-REAL-S13-R020",
+      "baseline_observation_id": "SA03::SA03-R06",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R06",
+      "current_observation_id": "SA03::SA03-R06",
+      "global_player_id": "GP-REAL-S13-R020",
+      "baseline_observation_id": "SA03::SA03-R06",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R020::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R07",
+      "current_observation_id": "SA03::SA03-R07",
+      "global_player_id": "GP-REAL-SA01-R08",
+      "baseline_observation_id": "SA03::SA03-R07",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R07",
+      "current_observation_id": "SA03::SA03-R07",
+      "global_player_id": "GP-REAL-SA01-R08",
+      "baseline_observation_id": "SA03::SA03-R07",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R08::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R08",
+      "current_observation_id": "SA03::SA03-R08",
+      "global_player_id": "GP-REAL-S13-R012",
+      "baseline_observation_id": "SA03::SA03-R08",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R08",
+      "current_observation_id": "SA03::SA03-R08",
+      "global_player_id": "GP-REAL-S13-R012",
+      "baseline_observation_id": "SA03::SA03-R08",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R012::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R09",
+      "current_observation_id": "SA03::SA03-R09",
+      "global_player_id": "GP-REAL-S13-R043",
+      "baseline_observation_id": "SA03::SA03-R09",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R09",
+      "current_observation_id": "SA03::SA03-R09",
+      "global_player_id": "GP-REAL-S13-R043",
+      "baseline_observation_id": "SA03::SA03-R09",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R043::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R10",
+      "current_observation_id": "SA03::SA03-R10",
+      "global_player_id": "GP-REAL-S13-R016",
+      "baseline_observation_id": "SA03::SA03-R10",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R10",
+      "current_observation_id": "SA03::SA03-R10",
+      "global_player_id": "GP-REAL-S13-R016",
+      "baseline_observation_id": "SA03::SA03-R10",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R016::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R11",
+      "current_observation_id": "SA03::SA03-R11",
+      "global_player_id": "GP-REAL-S13-R017",
+      "baseline_observation_id": "SA03::SA03-R11",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R11",
+      "current_observation_id": "SA03::SA03-R11",
+      "global_player_id": "GP-REAL-S13-R017",
+      "baseline_observation_id": "SA03::SA03-R11",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R017::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R12",
+      "current_observation_id": "SA03::SA03-R12",
+      "global_player_id": "GP-REAL-S13-R008",
+      "baseline_observation_id": "SA03::SA03-R12",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R12",
+      "current_observation_id": "SA03::SA03-R12",
+      "global_player_id": "GP-REAL-S13-R008",
+      "baseline_observation_id": "SA03::SA03-R12",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R008::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R13",
+      "current_observation_id": "SA03::SA03-R13",
+      "global_player_id": "GP-REAL-S15-R019",
+      "baseline_observation_id": "SA03::SA03-R13",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R13",
+      "current_observation_id": "SA03::SA03-R13",
+      "global_player_id": "GP-REAL-S15-R019",
+      "baseline_observation_id": "SA03::SA03-R13",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S15-R019::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R14",
+      "current_observation_id": "SA03::SA03-R14",
+      "global_player_id": "GP-REAL-S13-R023",
+      "baseline_observation_id": "SA03::SA03-R14",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R14",
+      "current_observation_id": "SA03::SA03-R14",
+      "global_player_id": "GP-REAL-S13-R023",
+      "baseline_observation_id": "SA03::SA03-R14",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R023::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R15",
+      "current_observation_id": "SA03::SA03-R15",
+      "global_player_id": "GP-REAL-S13-R006",
+      "baseline_observation_id": "SA03::SA03-R15",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R15",
+      "current_observation_id": "SA03::SA03-R15",
+      "global_player_id": "GP-REAL-S13-R006",
+      "baseline_observation_id": "SA03::SA03-R15",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R006::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R16",
+      "current_observation_id": "SA03::SA03-R16",
+      "global_player_id": "GP-REAL-S13-R007",
+      "baseline_observation_id": "SA03::SA03-R16",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R16",
+      "current_observation_id": "SA03::SA03-R16",
+      "global_player_id": "GP-REAL-S13-R007",
+      "baseline_observation_id": "SA03::SA03-R16",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R007::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R17",
+      "current_observation_id": "SA03::SA03-R17",
+      "global_player_id": "GP-REAL-S13-R014",
+      "baseline_observation_id": "SA03::SA03-R17",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R17",
+      "current_observation_id": "SA03::SA03-R17",
+      "global_player_id": "GP-REAL-S13-R014",
+      "baseline_observation_id": "SA03::SA03-R17",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R014::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R19",
+      "current_observation_id": "SA03::SA03-R19",
+      "global_player_id": "GP-REAL-S13-R026",
+      "baseline_observation_id": "SA03::SA03-R19",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R19",
+      "current_observation_id": "SA03::SA03-R19",
+      "global_player_id": "GP-REAL-S13-R026",
+      "baseline_observation_id": "SA03::SA03-R19",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R026::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R20",
+      "current_observation_id": "SA03::SA03-R20",
+      "global_player_id": "GP-REAL-S13-R030",
+      "baseline_observation_id": "SA03::SA03-R20",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R20",
+      "current_observation_id": "SA03::SA03-R20",
+      "global_player_id": "GP-REAL-S13-R030",
+      "baseline_observation_id": "SA03::SA03-R20",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R030::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R21",
+      "current_observation_id": "SA03::SA03-R21",
+      "global_player_id": "GP-REAL-S13-R019",
+      "baseline_observation_id": "SA03::SA03-R21",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R21",
+      "current_observation_id": "SA03::SA03-R21",
+      "global_player_id": "GP-REAL-S13-R019",
+      "baseline_observation_id": "SA03::SA03-R21",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R019::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R22",
+      "current_observation_id": "SA03::SA03-R22",
+      "global_player_id": "GP-REAL-S14-R049",
+      "baseline_observation_id": "SA03::SA03-R22",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R22",
+      "current_observation_id": "SA03::SA03-R22",
+      "global_player_id": "GP-REAL-S14-R049",
+      "baseline_observation_id": "SA03::SA03-R22",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S14-R049::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R23",
+      "current_observation_id": "SA03::SA03-R23",
+      "global_player_id": "GP-REAL-S13-R013",
+      "baseline_observation_id": "SA03::SA03-R23",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R23",
+      "current_observation_id": "SA03::SA03-R23",
+      "global_player_id": "GP-REAL-S13-R013",
+      "baseline_observation_id": "SA03::SA03-R23",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R013::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R24",
+      "current_observation_id": "SA03::SA03-R24",
+      "global_player_id": "GP-REAL-S13-R010",
+      "baseline_observation_id": "SA03::SA03-R24",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R24",
+      "current_observation_id": "SA03::SA03-R24",
+      "global_player_id": "GP-REAL-S13-R010",
+      "baseline_observation_id": "SA03::SA03-R24",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R010::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R25",
+      "current_observation_id": "SA03::SA03-R25",
+      "global_player_id": "GP-REAL-S13-R027",
+      "baseline_observation_id": "SA03::SA03-R25",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R25",
+      "current_observation_id": "SA03::SA03-R25",
+      "global_player_id": "GP-REAL-S13-R027",
+      "baseline_observation_id": "SA03::SA03-R25",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R027::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R26",
+      "current_observation_id": "SA03::SA03-R26",
+      "global_player_id": "GP-REAL-SA01-R31",
+      "baseline_observation_id": "SA03::SA03-R26",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R26",
+      "current_observation_id": "SA03::SA03-R26",
+      "global_player_id": "GP-REAL-SA01-R31",
+      "baseline_observation_id": "SA03::SA03-R26",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R31::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R27",
+      "current_observation_id": "SA03::SA03-R27",
+      "global_player_id": "GP-REAL-S13-R009",
+      "baseline_observation_id": "SA03::SA03-R27",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R27",
+      "current_observation_id": "SA03::SA03-R27",
+      "global_player_id": "GP-REAL-S13-R009",
+      "baseline_observation_id": "SA03::SA03-R27",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R009::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R28",
+      "current_observation_id": "SA03::SA03-R28",
+      "global_player_id": "GP-REAL-S13-R034",
+      "baseline_observation_id": "SA03::SA03-R28",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R28",
+      "current_observation_id": "SA03::SA03-R28",
+      "global_player_id": "GP-REAL-S13-R034",
+      "baseline_observation_id": "SA03::SA03-R28",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R034::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R29",
+      "current_observation_id": "SA03::SA03-R29",
+      "global_player_id": "GP-REAL-S13-R021",
+      "baseline_observation_id": "SA03::SA03-R29",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R29",
+      "current_observation_id": "SA03::SA03-R29",
+      "global_player_id": "GP-REAL-S13-R021",
+      "baseline_observation_id": "SA03::SA03-R29",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R021::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R30",
+      "current_observation_id": "SA03::SA03-R30",
+      "global_player_id": "GP-REAL-S13-R011",
+      "baseline_observation_id": "SA03::SA03-R30",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R30",
+      "current_observation_id": "SA03::SA03-R30",
+      "global_player_id": "GP-REAL-S13-R011",
+      "baseline_observation_id": "SA03::SA03-R30",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R011::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R31",
+      "current_observation_id": "SA03::SA03-R31",
+      "global_player_id": "GP-REAL-S14-R040",
+      "baseline_observation_id": "SA03::SA03-R31",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R31",
+      "current_observation_id": "SA03::SA03-R31",
+      "global_player_id": "GP-REAL-S14-R040",
+      "baseline_observation_id": "SA03::SA03-R31",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S14-R040::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R32",
+      "current_observation_id": "SA03::SA03-R32",
+      "global_player_id": "GP-REAL-S13-R041",
+      "baseline_observation_id": "SA03::SA03-R32",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R32",
+      "current_observation_id": "SA03::SA03-R32",
+      "global_player_id": "GP-REAL-S13-R041",
+      "baseline_observation_id": "SA03::SA03-R32",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R041::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R33",
+      "current_observation_id": "SA03::SA03-R33",
+      "global_player_id": "GP-REAL-S13-R037",
+      "baseline_observation_id": "SA03::SA03-R33",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R33",
+      "current_observation_id": "SA03::SA03-R33",
+      "global_player_id": "GP-REAL-S13-R037",
+      "baseline_observation_id": "SA03::SA03-R33",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R037::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R34",
+      "current_observation_id": "SA03::SA03-R34",
+      "global_player_id": "GP-REAL-SA01-R29",
+      "baseline_observation_id": "SA03::SA03-R34",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R34",
+      "current_observation_id": "SA03::SA03-R34",
+      "global_player_id": "GP-REAL-SA01-R29",
+      "baseline_observation_id": "SA03::SA03-R34",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R29::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R35",
+      "current_observation_id": "SA03::SA03-R35",
+      "global_player_id": "GP-REAL-S14-R034",
+      "baseline_observation_id": "SA03::SA03-R35",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R35",
+      "current_observation_id": "SA03::SA03-R35",
+      "global_player_id": "GP-REAL-S14-R034",
+      "baseline_observation_id": "SA03::SA03-R35",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S14-R034::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R36",
+      "current_observation_id": "SA03::SA03-R36",
+      "global_player_id": "GP-REAL-SA01-R45",
+      "baseline_observation_id": "SA03::SA03-R36",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R36",
+      "current_observation_id": "SA03::SA03-R36",
+      "global_player_id": "GP-REAL-SA01-R45",
+      "baseline_observation_id": "SA03::SA03-R36",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R45::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R37",
+      "current_observation_id": "SA03::SA03-R37",
+      "global_player_id": "GP-REAL-SA01-R23",
+      "baseline_observation_id": "SA03::SA03-R37",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R37",
+      "current_observation_id": "SA03::SA03-R37",
+      "global_player_id": "GP-REAL-SA01-R23",
+      "baseline_observation_id": "SA03::SA03-R37",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R23::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R38",
+      "current_observation_id": "SA03::SA03-R38",
+      "global_player_id": "GP-REAL-S13-R031",
+      "baseline_observation_id": "SA03::SA03-R38",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R38",
+      "current_observation_id": "SA03::SA03-R38",
+      "global_player_id": "GP-REAL-S13-R031",
+      "baseline_observation_id": "SA03::SA03-R38",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R031::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R39",
+      "current_observation_id": "SA03::SA03-R39",
+      "global_player_id": "GP-REAL-S13-R018",
+      "baseline_observation_id": "SA03::SA03-R39",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R39",
+      "current_observation_id": "SA03::SA03-R39",
+      "global_player_id": "GP-REAL-S13-R018",
+      "baseline_observation_id": "SA03::SA03-R39",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R018::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R40",
+      "current_observation_id": "SA03::SA03-R40",
+      "global_player_id": "GP-REAL-SA01-R37",
+      "baseline_observation_id": "SA03::SA03-R40",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R40",
+      "current_observation_id": "SA03::SA03-R40",
+      "global_player_id": "GP-REAL-SA01-R37",
+      "baseline_observation_id": "SA03::SA03-R40",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R37::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R42",
+      "current_observation_id": "SA03::SA03-R42",
+      "global_player_id": "GP-REAL-S13-R045",
+      "baseline_observation_id": "SA03::SA03-R42",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R42",
+      "current_observation_id": "SA03::SA03-R42",
+      "global_player_id": "GP-REAL-S13-R045",
+      "baseline_observation_id": "SA03::SA03-R42",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R045::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R43",
+      "current_observation_id": "SA03::SA03-R43",
+      "global_player_id": "GP-REAL-S13-R025",
+      "baseline_observation_id": "SA03::SA03-R43",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R43",
+      "current_observation_id": "SA03::SA03-R43",
+      "global_player_id": "GP-REAL-S13-R025",
+      "baseline_observation_id": "SA03::SA03-R43",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R025::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R44",
+      "current_observation_id": "SA03::SA03-R44",
+      "global_player_id": "GP-REAL-SA01-R36",
+      "baseline_observation_id": "SA03::SA03-R44",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R44",
+      "current_observation_id": "SA03::SA03-R44",
+      "global_player_id": "GP-REAL-SA01-R36",
+      "baseline_observation_id": "SA03::SA03-R44",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA01-R36::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R45",
+      "current_observation_id": "SA03::SA03-R45",
+      "global_player_id": "GP-REAL-S13-R047",
+      "baseline_observation_id": "SA03::SA03-R45",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R45",
+      "current_observation_id": "SA03::SA03-R45",
+      "global_player_id": "GP-REAL-S13-R047",
+      "baseline_observation_id": "SA03::SA03-R45",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-S13-R047::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R46",
+      "current_observation_id": "SA03::SA03-R46",
+      "global_player_id": "GP-REAL-SA03-R46",
+      "baseline_observation_id": "SA03::SA03-R46",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R46",
+      "current_observation_id": "SA03::SA03-R46",
+      "global_player_id": "GP-REAL-SA03-R46",
+      "baseline_observation_id": "SA03::SA03-R46",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA03-R46::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R47",
+      "current_observation_id": "SA03::SA03-R47",
+      "global_player_id": "GP-REAL-SA03-R47",
+      "baseline_observation_id": "SA03::SA03-R47",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R47",
+      "current_observation_id": "SA03::SA03-R47",
+      "global_player_id": "GP-REAL-SA03-R47",
+      "baseline_observation_id": "SA03::SA03-R47",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA03-R47::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R48",
+      "current_observation_id": "SA03::SA03-R48",
+      "global_player_id": "GP-REAL-SA03-R48",
+      "baseline_observation_id": "SA03::SA03-R48",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R48",
+      "current_observation_id": "SA03::SA03-R48",
+      "global_player_id": "GP-REAL-SA03-R48",
+      "baseline_observation_id": "SA03::SA03-R48",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA03-R48::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R49",
+      "current_observation_id": "SA03::SA03-R49",
+      "global_player_id": "GP-REAL-SA03-R49",
+      "baseline_observation_id": "SA03::SA03-R49",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R49",
+      "current_observation_id": "SA03::SA03-R49",
+      "global_player_id": "GP-REAL-SA03-R49",
+      "baseline_observation_id": "SA03::SA03-R49",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA03-R49::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::PLAYER_LIFETIME::total_kills::SA03::SA03-R50",
+      "current_observation_id": "SA03::SA03-R50",
+      "global_player_id": "GP-REAL-SA03-R50",
+      "baseline_observation_id": "SA03::SA03-R50",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "total_kills",
+      "scope": "PLAYER_LIFETIME",
+      "clan_id": null,
+      "league_id": null,
+      "membership_episode_id": null,
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
+    },
+    {
+      "delta_id": "DELTA::LEAGUE::current_league_clan_medals::SA03::SA03-R50",
+      "current_observation_id": "SA03::SA03-R50",
+      "global_player_id": "GP-REAL-SA03-R50",
+      "baseline_observation_id": "SA03::SA03-R50",
+      "baseline_type": "PREVIOUS_VALID_OBSERVATION",
+      "metric_key": "current_league_clan_medals",
+      "scope": "LEAGUE",
+      "clan_id": "CLAN-IRANIAN-ARMY-PU",
+      "league_id": "LEAGUE-WD-2026W40",
+      "membership_episode_id": "ME::GP-REAL-SA03-R50::CLAN-IRANIAN-ARMY-PU::1",
+      "delta": 0,
+      "status": "VALID",
+      "reason": null
     }
   ],
   "evidence_artifacts": [
@@ -37155,18 +38595,29 @@
       "decided_at_utc": null
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S13"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S13::R041",
       "observation_id": "S13::R041",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S13-R41",
-      "status": "UNRESOLVED",
-      "decided_at_utc": null
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R041"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R041",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S13::R041",
+        "prior_observation_id": "SA03::SA03-R32",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": null,
@@ -37246,18 +38697,29 @@
       "decided_at_utc": null
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S13"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S13::R047",
       "observation_id": "S13::R047",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S13-R47",
-      "status": "UNRESOLVED",
-      "decided_at_utc": null
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R047"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R047",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S13::R047",
+        "prior_observation_id": "SA03::SA03-R45",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": null,
@@ -37841,32 +39303,54 @@
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S14"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S14::R035",
       "observation_id": "S14::R035",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S14-R035",
-      "status": "UNRESOLVED",
-      "decided_at_utc": null
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R041"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R041",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S14::R035",
+        "prior_observation_id": "SA03::SA03-R32",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S14"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S14::R036",
       "observation_id": "S14::R036",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S14-R036",
-      "status": "UNRESOLVED",
-      "decided_at_utc": null
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R047"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R047",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S14::R036",
+        "prior_observation_id": "SA03::SA03-R45",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": null,
@@ -40387,140 +41871,29 @@
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S15::R019",
       "observation_id": "S15::R019",
-      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S15-R19",
-      "status": "UNRESOLVED",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S15-R019"
+      ],
+      "matched_global_player_id": "GP-REAL-S15-R019",
       "signals": {
-        "continuity": {
-          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
-          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-          "assessment_state": "IDENTITY_CONTRADICTION",
-          "prior_observation_id": "S14::R020",
-          "prior_source_member_key": "S14-R20",
-          "current_observation_id": "S15::R019",
-          "core_comparison": {
-            "stage": {
-              "previous": 28,
-              "current": 28,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "25mm": {
-              "previous": 524,
-              "current": 524,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "hellfire": {
-              "previous": 199,
-              "current": 203,
-              "result": "INCREASE",
-              "delta": 4
-            },
-            "hydra": {
-              "previous": 30,
-              "current": 30,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "total_kills": {
-              "previous": 141411,
-              "current": 145058,
-              "result": "INCREASE",
-              "delta": 3647
-            }
-          },
-          "supporting_comparison": {
-            "lifetime_medals": {
-              "bronze": {
-                "previous": 2,
-                "current": 0,
-                "result": "DECREASE",
-                "delta": -2
-              },
-              "silver": {
-                "previous": 2,
-                "current": 2,
-                "result": "EXACT",
-                "delta": 0
-              },
-              "gold": {
-                "previous": 1,
-                "current": 1,
-                "result": "EXACT",
-                "delta": 0
-              }
-            },
-            "profile_total_clan_medal_count": {
-              "previous": 133689,
-              "current": 161486,
-              "result": "INCREASE",
-              "delta": 27797
-            },
-            "role": {
-              "previous": "Member",
-              "current": "Member",
-              "result": "EXACT"
-            },
-            "display_name": {
-              "previous": "ایرانی باوقار",
-              "current": "ایرانی باوقار",
-              "result": "EXACT"
-            },
-            "normalized_system_name": {
-              "previous": "ایرانیباوقار",
-              "current": "ایرانیباوقار",
-              "result": "MATCH"
-            },
-            "rank": {
-              "previous": 20,
-              "current": 19,
-              "delta": -1
-            },
-            "temporal": {
-              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
-              "previous_snapshot": "S14",
-              "current_snapshot": "S15"
-            },
-            "current_league_clan_medals": {
-              "previous": 133689,
-              "current": 161486,
-              "result": "INCREASE",
-              "delta": 27797
-            },
-            "membership_continuity": {
-              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
-              "note": "No Canonical Membership event inferred."
-            }
-          },
-          "contradictions": [
-            {
-              "signal": "bronze",
-              "reason": "monotonicity_contradiction",
-              "previous": 2,
-              "current": 0,
-              "decrease": 2
-            }
-          ],
-          "evidence_refs": [
-            "EV-REAL-PERSIAN-UNITY-S14",
-            "EV-REAL-PERSIAN-UNITY-S15"
-          ],
-          "conclusion": "IDENTITY_CONTRADICTION_DUE_TO_MONOTONIC_DECREASE",
-          "hard_exclusion": true,
-          "hard_exclusion_reason": "monotonic_lifetime_metric_decreased"
-        }
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S15::R019",
+        "prior_observation_id": "SA03::SA03-R13",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
-      "decided_at_utc": null
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
@@ -42565,129 +43938,29 @@
       "decided_at_utc": "2026-10-01T20:30:00.000Z"
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S15"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S15::R036",
       "observation_id": "S15::R036",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S15-R36",
-      "status": "UNRESOLVED",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R041"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R041",
       "signals": {
-        "continuity": {
-          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
-          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-          "assessment_state": "CONTINUOUS_CANDIDATE",
-          "prior_observation_id": "S14::R035",
-          "prior_source_member_key": "S14-R35",
-          "current_observation_id": "S15::R036",
-          "core_comparison": {
-            "stage": {
-              "previous": 14,
-              "current": 14,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "25mm": {
-              "previous": 308,
-              "current": 308,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "hellfire": {
-              "previous": 132,
-              "current": 136,
-              "result": "INCREASE",
-              "delta": 4
-            },
-            "hydra": {
-              "previous": 32,
-              "current": 32,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "total_kills": {
-              "previous": 50560,
-              "current": 51912,
-              "result": "INCREASE",
-              "delta": 1352
-            }
-          },
-          "supporting_comparison": {
-            "lifetime_medals": {
-              "bronze": {
-                "previous": 2,
-                "current": 2,
-                "result": "EXACT",
-                "delta": 0
-              },
-              "silver": {
-                "previous": 3,
-                "current": 3,
-                "result": "EXACT",
-                "delta": 0
-              },
-              "gold": {
-                "previous": 2,
-                "current": 2,
-                "result": "EXACT",
-                "delta": 0
-              }
-            },
-            "profile_total_clan_medal_count": {
-              "previous": 63980,
-              "current": 84270,
-              "result": "INCREASE",
-              "delta": 20290
-            },
-            "role": {
-              "previous": "Member",
-              "current": "Member",
-              "result": "EXACT"
-            },
-            "display_name": {
-              "previous": "hamid.iran🇮🇷",
-              "current": "hamid.iran🇮🇷",
-              "result": "EXACT"
-            },
-            "normalized_system_name": {
-              "previous": "hamidiran",
-              "current": "hamidiran",
-              "result": "MATCH"
-            },
-            "rank": {
-              "previous": 35,
-              "current": 36,
-              "delta": 1
-            },
-            "temporal": {
-              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
-              "previous_snapshot": "S14",
-              "current_snapshot": "S15"
-            },
-            "current_league_clan_medals": {
-              "previous": 63980,
-              "current": 84270,
-              "result": "INCREASE",
-              "delta": 20290
-            },
-            "membership_continuity": {
-              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
-              "note": "No Canonical Membership event inferred."
-            }
-          },
-          "contradictions": [],
-          "evidence_refs": [
-            "EV-REAL-PERSIAN-UNITY-S14",
-            "EV-REAL-PERSIAN-UNITY-S15"
-          ],
-          "conclusion": "CONTINUITY_SUPPORTED"
-        }
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S15::R036",
+        "prior_observation_id": "SA03::SA03-R32",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
-      "decided_at_utc": null
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": null,
@@ -43065,129 +44338,29 @@
       "decided_at_utc": null
     },
     {
-      "authority_ref": null,
-      "candidate_global_player_ids": [],
-      "evidence_refs": [
-        "EV-REAL-PERSIAN-UNITY-S15"
-      ],
-      "matched_global_player_id": null,
+      "resolution_case_id": "RC::S15::R040",
       "observation_id": "S15::R040",
-      "process_ref": "real-snapshot-ingestion",
-      "reason": "identity_requires_review",
-      "resolution_case_id": "RC-S15-R40",
-      "status": "UNRESOLVED",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R047"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R047",
       "signals": {
-        "continuity": {
-          "specification": "projects/UCS/FINGERPRINT_TOOL.md",
-          "comparison_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-          "assessment_state": "CONTINUOUS_CANDIDATE",
-          "prior_observation_id": "S14::R036",
-          "prior_source_member_key": "S14-R36",
-          "current_observation_id": "S15::R040",
-          "core_comparison": {
-            "stage": {
-              "previous": 30,
-              "current": 30,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "25mm": {
-              "previous": 589,
-              "current": 589,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "hellfire": {
-              "previous": 276,
-              "current": 276,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "hydra": {
-              "previous": 51,
-              "current": 51,
-              "result": "EXACT",
-              "delta": 0
-            },
-            "total_kills": {
-              "previous": 109807,
-              "current": 110664,
-              "result": "INCREASE",
-              "delta": 857
-            }
-          },
-          "supporting_comparison": {
-            "lifetime_medals": {
-              "bronze": {
-                "previous": 2,
-                "current": 2,
-                "result": "EXACT",
-                "delta": 0
-              },
-              "silver": {
-                "previous": 1,
-                "current": 1,
-                "result": "EXACT",
-                "delta": 0
-              },
-              "gold": {
-                "previous": 2,
-                "current": 2,
-                "result": "EXACT",
-                "delta": 0
-              }
-            },
-            "profile_total_clan_medal_count": {
-              "previous": 63655,
-              "current": 73212,
-              "result": "INCREASE",
-              "delta": 9557
-            },
-            "role": {
-              "previous": "Member",
-              "current": "Member",
-              "result": "EXACT"
-            },
-            "display_name": {
-              "previous": "ErFaN.m279",
-              "current": "ErFaN.m279",
-              "result": "EXACT"
-            },
-            "normalized_system_name": {
-              "previous": "erfanm279",
-              "current": "erfanm279",
-              "result": "MATCH"
-            },
-            "rank": {
-              "previous": 36,
-              "current": 40,
-              "delta": 4
-            },
-            "temporal": {
-              "result": "ADJACENT_SNAPSHOTS_SAME_CLAN_SAME_LEAGUE",
-              "previous_snapshot": "S14",
-              "current_snapshot": "S15"
-            },
-            "current_league_clan_medals": {
-              "previous": 63655,
-              "current": 73212,
-              "result": "INCREASE",
-              "delta": 9557
-            },
-            "membership_continuity": {
-              "result": "NO_OBSERVED_ROSTER_GAP_AFTER_FINGERPRINT_MAPPING",
-              "note": "No Canonical Membership event inferred."
-            }
-          },
-          "contradictions": [],
-          "evidence_refs": [
-            "EV-REAL-PERSIAN-UNITY-S14",
-            "EV-REAL-PERSIAN-UNITY-S15"
-          ],
-          "conclusion": "CONTINUITY_SUPPORTED"
-        }
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
+        "current_observation_id": "S15::R040",
+        "prior_observation_id": "SA03::SA03-R45",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
-      "decided_at_utc": null
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "authority_ref": null,
@@ -45238,28 +46411,27 @@
     {
       "resolution_case_id": "RC::SA01::SA01-R13",
       "observation_id": "SA01::SA01-R13",
-      "status": "CONTRADICTION",
-      "candidate_global_player_ids": [],
-      "matched_global_player_id": null,
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S15-R019"
+      ],
+      "matched_global_player_id": "GP-REAL-S15-R019",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-        "assessment_state": "IDENTITY_CONTRADICTION",
-        "prior_observation_id": "S15::R019",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
         "current_observation_id": "SA01::SA01-R13",
-        "blocking_signal": "lifetime_bronze",
-        "prior_value": 2,
-        "current_value": 0,
-        "conclusion": "CANDIDATE_BLOCKED"
+        "prior_observation_id": "SA03::SA03-R13",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
       "evidence_refs": [
-        "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
+        "EV-REAL-IRANIAN-ARMY-SA03"
       ],
-      "authority_ref": "PROJECT-AUTHORITY:2026-10-02:SA01-IDENTITY-RESOLUTION",
-      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT + AUTHORIZED_IDENTITY_RESOLUTION/SA01",
-      "decided_at_utc": "2026-10-01T20:30:00.000Z",
-      "reason": "hard_continuity_contradiction_blocks_cross_clan_identity"
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "resolution_case_id": "RC::SA01::SA01-R14",
@@ -47642,26 +48814,27 @@
     {
       "resolution_case_id": "RC::SA02::SA02-R13",
       "observation_id": "SA02::SA02-R13",
-      "status": "UNRESOLVED",
-      "candidate_global_player_ids": [],
-      "matched_global_player_id": null,
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S15-R019"
+      ],
+      "matched_global_player_id": "GP-REAL-S15-R019",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-        "assessment_state": "UNRESOLVED_PRIOR_HAS_NO_CONFIRMED_GLOBAL_ID",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
         "current_observation_id": "SA02::SA02-R13",
-        "prior_observation_id": "SA01::SA01-R13",
-        "reason": "prior_identity_case_is_hard_blocked_and_has_no_global_player_id"
+        "prior_observation_id": "SA03::SA03-R13",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
       "evidence_refs": [
-        "EV-REAL-IRANIAN-ARMY-SA02",
-        "EV-REAL-IRANIAN-ARMY-SA01",
-        "EV-REAL-PERSIAN-UNITY-S15"
+        "EV-REAL-IRANIAN-ARMY-SA03"
       ],
-      "authority_ref": null,
-      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA02",
-      "decided_at_utc": null,
-      "reason": "identity_requires_review"
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "resolution_case_id": "RC::SA02::SA02-R14",
@@ -48561,28 +49734,27 @@
     {
       "resolution_case_id": "RC::SA02::SA02-R48",
       "observation_id": "SA02::SA02-R48",
-      "status": "UNRESOLVED",
-      "candidate_global_player_ids": [],
-      "matched_global_player_id": null,
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R047"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R047",
       "signals": {
         "fingerprint_tool_version": "v0.3",
         "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
-        "assessment_state": "UNRESOLVED_PRIOR_HAS_NO_CONFIRMED_GLOBAL_ID",
+        "assessment_state": "RETROACTIVE_CONTINUITY_CLOSURE",
         "current_observation_id": "SA02::SA02-R48",
-        "prior_observation_ids": [
-          "S13::R047",
-          "S14::R036",
-          "S15::R040"
-        ],
-        "reason": "prior_ErFaN_history_remains_unresolved"
+        "prior_observation_id": "SA03::SA03-R45",
+        "name_relation": "EXACT_SOURCE_NAME",
+        "reason": "SA03 provided authoritative continuity evidence; earlier historical contradiction pairs remain quarantined."
       },
       "evidence_refs": [
-        "EV-REAL-IRANIAN-ARMY-SA02"
+        "EV-REAL-IRANIAN-ARMY-SA03"
       ],
-      "authority_ref": null,
-      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA02",
-      "decided_at_utc": null,
-      "reason": "identity_requires_review"
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     },
     {
       "resolution_case_id": "RC::SA02::SA02-R49",
@@ -48604,6 +49776,1211 @@
       "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA02",
       "decided_at_utc": null,
       "reason": "identity_requires_review"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R01",
+      "observation_id": "SA03::SA03-R01",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R01"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R01",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R01",
+        "prior_observation_id": "SA03::SA03-R01",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R02",
+      "observation_id": "SA03::SA03-R02",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R001"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R001",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R02",
+        "prior_observation_id": "SA03::SA03-R02",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R03",
+      "observation_id": "SA03::SA03-R03",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R002"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R002",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R03",
+        "prior_observation_id": "SA03::SA03-R03",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R04",
+      "observation_id": "SA03::SA03-R04",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R003"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R003",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R04",
+        "prior_observation_id": "SA03::SA03-R04",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R05",
+      "observation_id": "SA03::SA03-R05",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R004"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R004",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R05",
+        "prior_observation_id": "SA03::SA03-R05",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R06",
+      "observation_id": "SA03::SA03-R06",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R020"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R020",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R06",
+        "prior_observation_id": "SA03::SA03-R06",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R07",
+      "observation_id": "SA03::SA03-R07",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R08"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R08",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R07",
+        "prior_observation_id": "SA03::SA03-R07",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R08",
+      "observation_id": "SA03::SA03-R08",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R012"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R012",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R08",
+        "prior_observation_id": "SA03::SA03-R08",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R09",
+      "observation_id": "SA03::SA03-R09",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R043"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R043",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R09",
+        "prior_observation_id": "SA03::SA03-R09",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R10",
+      "observation_id": "SA03::SA03-R10",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R016"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R016",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R10",
+        "prior_observation_id": "SA03::SA03-R10",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R11",
+      "observation_id": "SA03::SA03-R11",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R017"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R017",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R11",
+        "prior_observation_id": "SA03::SA03-R11",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R12",
+      "observation_id": "SA03::SA03-R12",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R008"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R008",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R12",
+        "prior_observation_id": "SA03::SA03-R12",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R13",
+      "observation_id": "SA03::SA03-R13",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S15-R019"
+      ],
+      "matched_global_player_id": "GP-REAL-S15-R019",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R13",
+        "prior_observation_id": "SA03::SA03-R13",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R14",
+      "observation_id": "SA03::SA03-R14",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R023"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R023",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R14",
+        "prior_observation_id": "SA03::SA03-R14",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R15",
+      "observation_id": "SA03::SA03-R15",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R006"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R006",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R15",
+        "prior_observation_id": "SA03::SA03-R15",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R16",
+      "observation_id": "SA03::SA03-R16",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R007"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R007",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R16",
+        "prior_observation_id": "SA03::SA03-R16",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R17",
+      "observation_id": "SA03::SA03-R17",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R014"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R014",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R17",
+        "prior_observation_id": "SA03::SA03-R17",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R18",
+      "observation_id": "SA03::SA03-R18",
+      "status": "UNRESOLVED",
+      "candidate_global_player_ids": [],
+      "matched_global_player_id": null,
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "BLOCKED_HARD_MONOTONIC_CONTRADICTION",
+        "current_observation_id": "SA03::SA03-R18",
+        "prior_observation_id": "SA02::SA02-R39",
+        "hard_monotonic_violations": [
+          "hydra:-60"
+        ],
+        "reason": "name match rejected because Hydra decreased from 262 to 202; hard monotonic contradiction."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "identity_requires_review"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R19",
+      "observation_id": "SA03::SA03-R19",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R026"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R026",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R19",
+        "prior_observation_id": "SA03::SA03-R19",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R20",
+      "observation_id": "SA03::SA03-R20",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R030"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R030",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R20",
+        "prior_observation_id": "SA03::SA03-R20",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R21",
+      "observation_id": "SA03::SA03-R21",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R019"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R019",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R21",
+        "prior_observation_id": "SA03::SA03-R21",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R22",
+      "observation_id": "SA03::SA03-R22",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S14-R049"
+      ],
+      "matched_global_player_id": "GP-REAL-S14-R049",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R22",
+        "prior_observation_id": "SA03::SA03-R22",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R23",
+      "observation_id": "SA03::SA03-R23",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R013"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R013",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R23",
+        "prior_observation_id": "SA03::SA03-R23",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R24",
+      "observation_id": "SA03::SA03-R24",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R010"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R010",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R24",
+        "prior_observation_id": "SA03::SA03-R24",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R25",
+      "observation_id": "SA03::SA03-R25",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R027"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R027",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R25",
+        "prior_observation_id": "SA03::SA03-R25",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R26",
+      "observation_id": "SA03::SA03-R26",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R31"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R31",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R26",
+        "prior_observation_id": "SA03::SA03-R26",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R27",
+      "observation_id": "SA03::SA03-R27",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R009"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R009",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R27",
+        "prior_observation_id": "SA03::SA03-R27",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R28",
+      "observation_id": "SA03::SA03-R28",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R034"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R034",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R28",
+        "prior_observation_id": "SA03::SA03-R28",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R29",
+      "observation_id": "SA03::SA03-R29",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R021"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R021",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R29",
+        "prior_observation_id": "SA03::SA03-R29",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R30",
+      "observation_id": "SA03::SA03-R30",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R011"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R011",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R30",
+        "prior_observation_id": "SA03::SA03-R30",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R31",
+      "observation_id": "SA03::SA03-R31",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S14-R040"
+      ],
+      "matched_global_player_id": "GP-REAL-S14-R040",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R31",
+        "prior_observation_id": "SA03::SA03-R31",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R32",
+      "observation_id": "SA03::SA03-R32",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R041"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R041",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R32",
+        "prior_observation_id": "SA03::SA03-R32",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R33",
+      "observation_id": "SA03::SA03-R33",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R037"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R037",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R33",
+        "prior_observation_id": "SA03::SA03-R33",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R34",
+      "observation_id": "SA03::SA03-R34",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R29"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R29",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R34",
+        "prior_observation_id": "SA03::SA03-R34",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R35",
+      "observation_id": "SA03::SA03-R35",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S14-R034"
+      ],
+      "matched_global_player_id": "GP-REAL-S14-R034",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R35",
+        "prior_observation_id": "SA03::SA03-R35",
+        "name_relation": "SOURCE_NAME_VARIANT"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R36",
+      "observation_id": "SA03::SA03-R36",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R45"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R45",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R36",
+        "prior_observation_id": "SA03::SA03-R36",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R37",
+      "observation_id": "SA03::SA03-R37",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R23"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R23",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R37",
+        "prior_observation_id": "SA03::SA03-R37",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R38",
+      "observation_id": "SA03::SA03-R38",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R031"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R031",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R38",
+        "prior_observation_id": "SA03::SA03-R38",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R39",
+      "observation_id": "SA03::SA03-R39",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R018"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R018",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R39",
+        "prior_observation_id": "SA03::SA03-R39",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R40",
+      "observation_id": "SA03::SA03-R40",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R37"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R37",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R40",
+        "prior_observation_id": "SA03::SA03-R40",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R41",
+      "observation_id": "SA03::SA03-R41",
+      "status": "UNRESOLVED",
+      "candidate_global_player_ids": [],
+      "matched_global_player_id": null,
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "BLOCKED_HARD_MONOTONIC_CONTRADICTION",
+        "current_observation_id": "SA03::SA03-R41",
+        "prior_observation_id": "S15::R046",
+        "hard_monotonic_violations": [
+          "25mm:-125",
+          "hydra:-42",
+          "hellfire:-4",
+          "total_kills:-748?"
+        ],
+        "reason": "historical continuity candidate blocked by multiple hard lifetime decreases."
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "identity_requires_review"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R42",
+      "observation_id": "SA03::SA03-R42",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R045"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R045",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R42",
+        "prior_observation_id": "SA03::SA03-R42",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R43",
+      "observation_id": "SA03::SA03-R43",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R025"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R025",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R43",
+        "prior_observation_id": "SA03::SA03-R43",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R44",
+      "observation_id": "SA03::SA03-R44",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA01-R36"
+      ],
+      "matched_global_player_id": "GP-REAL-SA01-R36",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R44",
+        "prior_observation_id": "SA03::SA03-R44",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R45",
+      "observation_id": "SA03::SA03-R45",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-S13-R047"
+      ],
+      "matched_global_player_id": "GP-REAL-S13-R047",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "CONTINUOUS_CANDIDATE",
+        "current_observation_id": "SA03::SA03-R45",
+        "prior_observation_id": "SA03::SA03-R45",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R46",
+      "observation_id": "SA03::SA03-R46",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA03-R46"
+      ],
+      "matched_global_player_id": "GP-REAL-SA03-R46",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "NEW_GLOBAL_ID_AFTER_CROSS_CLAN_SEARCH",
+        "current_observation_id": "SA03::SA03-R46",
+        "prior_observation_id": "SA03::SA03-R46",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R47",
+      "observation_id": "SA03::SA03-R47",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA03-R47"
+      ],
+      "matched_global_player_id": "GP-REAL-SA03-R47",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "NEW_GLOBAL_ID_AFTER_CROSS_CLAN_SEARCH",
+        "current_observation_id": "SA03::SA03-R47",
+        "prior_observation_id": "SA03::SA03-R47",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R48",
+      "observation_id": "SA03::SA03-R48",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA03-R48"
+      ],
+      "matched_global_player_id": "GP-REAL-SA03-R48",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "NEW_GLOBAL_ID_AFTER_CROSS_CLAN_SEARCH",
+        "current_observation_id": "SA03::SA03-R48",
+        "prior_observation_id": "SA03::SA03-R48",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R49",
+      "observation_id": "SA03::SA03-R49",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA03-R49"
+      ],
+      "matched_global_player_id": "GP-REAL-SA03-R49",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "NEW_GLOBAL_ID_AFTER_CROSS_CLAN_SEARCH",
+        "current_observation_id": "SA03::SA03-R49",
+        "prior_observation_id": "SA03::SA03-R49",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
+    },
+    {
+      "resolution_case_id": "RC::SA03::SA03-R50",
+      "observation_id": "SA03::SA03-R50",
+      "status": "CONFIRMED",
+      "candidate_global_player_ids": [
+        "GP-REAL-SA03-R50"
+      ],
+      "matched_global_player_id": "GP-REAL-SA03-R50",
+      "signals": {
+        "fingerprint_tool_version": "v0.3",
+        "comparison_rule_version": "UCS-FINGERPRINT-AUDIT/2026-09-29",
+        "assessment_state": "NEW_GLOBAL_ID_AFTER_CROSS_CLAN_SEARCH",
+        "current_observation_id": "SA03::SA03-R50",
+        "prior_observation_id": "SA03::SA03-R50",
+        "name_relation": "EXACT_SOURCE_NAME"
+      },
+      "evidence_refs": [
+        "EV-REAL-IRANIAN-ARMY-SA03"
+      ],
+      "authority_ref": "PROJECT-AUTHORITY:2026-10-07:SA03-IDENTITY-RESOLUTION",
+      "process_ref": "UCS-FINGERPRINT-TOOL-v0.3 + SNAPSHOT_IMPORT/SA03",
+      "decided_at_utc": "2026-10-06T20:29:00.000Z",
+      "reason": "project_authority_authorized_continuity_match"
     }
   ],
   "schema_version": "0.1",
@@ -48733,6 +51110,9 @@
   ],
   "recheck": {
     "last_source_recheck_utc": "2026-09-30T19:50:00Z",
-    "ref": "CORR-S13-SOURCE-RECHECK-2026-09-30"
+    "ref": "CORR-S13-SOURCE-RECHECK-2026-09-30",
+    "latest_snapshot_id": "SA03",
+    "latest_snapshot_status": "INGESTED_PENDING_CI",
+    "last_recheck_utc": "2026-10-07T18:00:00.000Z"
   }
 }
