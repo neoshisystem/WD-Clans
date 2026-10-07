@@ -277,33 +277,16 @@ test('Real Persian UNITY S14 checkpoint is represented in Canonical and static p
 });
 
 
-test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as membership changes', () => {
+test('Real Iranian Army SA02: heuristic projection does not infer membership from snapshot gaps', () => {
   const canonical = JSON.parse(fs.readFileSync(PUBLIC_CANONICAL_PATH, 'utf8'));
   const bundle = buildStaticDataBundle(canonical);
   const changes = bundle.read_model.snapshot_membership_changes
     .filter((change) => change.snapshot_id === 'SA02' && change.clan_id === 'CLAN-IRANIAN-ARMY-PU');
 
-  assert.equal(changes.length, 6);
-
-  const joined = changes
-    .filter((change) => change.change_type === 'JOIN')
-    .map((change) => change.observation_id)
-    .sort();
-  const left = changes
-    .filter((change) => change.change_type === 'LEAVE')
-    .map((change) => change.observation_id)
-    .sort();
-
-  assert.deepEqual(joined, [
-    'SA02::SA02-R45',
-    'SA02::SA02-R48',
-    'SA02::SA02-R49'
-  ]);
-  assert.deepEqual(left, [
-    'SA01::SA01-R19',
-    'SA01::SA01-R24',
-    'SA01::SA01-R42'
-  ]);
+  assert.equal(
+    changes.some((change) => change.change_type === 'JOIN' || change.change_type === 'LEAVE'),
+    false
+  );
 
   const falseRenameIds = [
     'SA02::SA02-R09',
@@ -326,5 +309,44 @@ test('Real Iranian Army SA02: confirmed Global-ID renames are not projected as m
   assert.equal(
     changes.some((change) => falseRenameIds.includes(change.observation_id)),
     false
+  );
+});
+
+test('Real Iranian Army SA03: explicit membership events are separated from unresolved continuity evidence', () => {
+  const canonical = JSON.parse(fs.readFileSync(PUBLIC_CANONICAL_PATH, 'utf8'));
+  const bundle = buildStaticDataBundle(canonical);
+  const derived = bundle.read_model.snapshot_membership_changes
+    .filter((change) => change.snapshot_id === 'SA03' && change.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+
+  assert.equal(
+    derived.some((change) => change.change_type === 'JOIN' || change.change_type === 'LEAVE'),
+    false
+  );
+
+  const unknownIds = derived
+    .filter((change) => change.change_type === 'UNKNOWN_CHANGE')
+    .map((change) => change.observation_id)
+    .sort();
+  assert.deepEqual(unknownIds, [
+    'SA03::SA03-R18',
+    'SA03::SA03-R41'
+  ]);
+
+  const explicit = canonical.membership_events
+    .filter((event) => event.observed_snapshot_id === 'SA03' && event.clan_id === 'CLAN-IRANIAN-ARMY-PU');
+  assert.equal(explicit.length, 6);
+  assert.deepEqual(
+    explicit.filter((event) => event.event_type === 'JOIN').map((event) => event.global_player_id).sort(),
+    [
+      'GP-REAL-SA03-R46',
+      'GP-REAL-SA03-R47',
+      'GP-REAL-SA03-R48',
+      'GP-REAL-SA03-R49',
+      'GP-REAL-SA03-R50'
+    ]
+  );
+  assert.deepEqual(
+    explicit.filter((event) => event.event_type === 'TRANSFER').map((event) => event.global_player_id),
+    ['GP-REAL-S13-R041']
   );
 });
