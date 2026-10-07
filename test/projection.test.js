@@ -721,12 +721,12 @@ test('35. Derived adjacent-Snapshot deltas and roster changes preserve unresolve
   assert.equal(sB2.find((item) => item.metric_key === 'total_kills')?.delta, 200);
   assert.equal(sB2.find((item) => item.metric_key === 'current_league_clan_medals')?.delta, 7);
   assert.equal(sB2.every((item) => item.global_player_id === null), true);
-  const sB2Joins = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2' && item.change_type === 'JOIN');
-  assert.deepEqual(sB2Joins.map((item) => item.display_name), ['Mystery']);
+  const sB2Changes = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2');
+  assert.equal(sB2Changes.length, 0);
   assert.equal(model.global_player_identities.length, 2);
 });
 
-test('36. Duplicate display names use fingerprint continuity and do not create a false leave', () => {
+test('36. Duplicate display names remain observation-only when continuity is unresolved', () => {
   const model = buildCanonical();
   model.snapshots.find((item) => item.snapshot_id === 'S-B2').member_count = 3;
   model.observations.push({
@@ -738,7 +738,8 @@ test('36. Duplicate display names use fingerprint continuity and do not create a
   validateCanonicalModel(model);
   const output = new ProjectionEngine().projectAll(model);
   const changes = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2');
-  assert.ok(changes.some((item) => item.change_type === 'JOIN' && item.display_name === 'حسن'));
+  assert.equal(changes.some((item) => item.change_type === 'JOIN' || item.change_type === 'LEAVE'), false);
+  assert.equal(changes.some((item) => item.change_type === 'UNKNOWN_CHANGE' && item.display_name === 'حسن'), true);
   assert.equal(changes.some((item) => item.change_type === 'LEAVE' && item.display_name === 'Alpha Prime'), false);
 });
 
@@ -757,6 +758,6 @@ test('Hard monotonic continuity guard prevents false pairing when a lifetime fie
 
   assert.equal(deltas.length, 0);
   assert.equal(changes.length, 1);
-  assert.equal(changes.some((item) => item.change_type === 'JOIN' && item.reason === 'monotonic_identity_contradiction'), true);
+  assert.equal(changes.some((item) => item.change_type === 'UNKNOWN_CHANGE' && item.reason === 'monotonic_identity_contradiction'), true);
   assert.equal(projected.snapshot_delta_results.some((item) => Number.isFinite(item.delta) && item.delta < 0), false);
 });
