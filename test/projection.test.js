@@ -722,7 +722,9 @@ test('35. Derived adjacent-Snapshot deltas and roster changes preserve unresolve
   assert.equal(sB2.find((item) => item.metric_key === 'current_league_clan_medals')?.delta, 7);
   assert.equal(sB2.every((item) => item.global_player_id === null), true);
   const sB2Changes = output.snapshot_membership_changes.filter((item) => item.snapshot_id === 'S-B2');
-  assert.equal(sB2Changes.length, 0);
+  assert.equal(sB2Changes.length, 1);
+  assert.deepEqual(sB2Changes.map((item) => item.display_name), ['Mystery']);
+  assert.equal(sB2Changes[0].change_type, 'UNKNOWN_CHANGE');
   assert.equal(model.global_player_identities.length, 2);
 });
 
