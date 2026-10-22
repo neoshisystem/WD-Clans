@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050b14">
+  <title>مدیریت سامانه · UCS War Drone Admin</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .admin-hero {
+      padding: 24px 0 20px;
+      border-bottom: 1px solid var(--line);
+      background: radial-gradient(circle at 80% 0%, rgba(49,216,255,.12), transparent 28rem);
+    }
+    .admin-tabs {
+      display: flex;
+      gap: 8px;
+      margin: 18px 0;
+      flex-wrap: wrap;
+    }
+    .admin-tab {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .15s ease;
+      font-size: 0.88rem;
+    }
+    .admin-tab.active, .admin-tab:hover {
+      background: var(--panel2);
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+    .admin-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .admin-card h3 {
+      margin-top: 0;
+      color: var(--cyan);
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-field label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color .15s ease;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: var(--cyan);
+    }
+    .admin-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .btn-action {
+      background: var(--cyan);
+      color: #050b14;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: opacity .15s ease;
+    }
+    .btn-action:hover {
+      opacity: 0.9;
+    }
+    .btn-action.btn-secondary {
+      background: var(--bg2);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .btn-action.btn-secondary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .btn-action.btn-danger {
+      background: rgba(255, 77, 106, 0.15);
+      color: var(--red);
+      border: 1px solid var(--red);
+    }
+    .btn-action.btn-danger:hover {
+      background: var(--red);
+      color: #fff;
+    }
+    .btn-action.btn-success {
+      background: rgba(85, 220, 162, 0.15);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+    .btn-action.btn-success:hover {
+      background: var(--green);
+      color: #050b14;
+    }
+    .auth-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 11, 20, 0.92);
+      backdrop-filter: blur(8px);
+      display: grid;
+      place-items: center;
+      z-index: 9999;
+    }
+    .auth-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 32px 28px;
+      width: min(92vw, 420px);
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .auth-box h2 {
+      margin-top: 0;
+      color: var(--cyan);
+    }
+    .badge-status {
+      display: inline-flex;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge-status.active, .badge-status.approved {
+      background: rgba(85, 220, 162, 0.15);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+    .badge-status.pending {
+      background: rgba(255, 201, 90, 0.15);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .badge-status.archived, .badge-status.blocked, .badge-status.rejected {
+      background: rgba(255, 77, 106, 0.15);
+      color: var(--red);
+      border: 1px solid var(--red);
+    }
+    .diag-box {
+      font-family: monospace;
+      direction: ltr;
+      text-align: left;
+      background: var(--bg2);
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      color: var(--cyan);
+      white-space: pre-wrap;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 11, 20, 0.85);
+      backdrop-filter: blur(5px);
+      display: none;
+      place-items: center;
+      z-index: 999;
+    }
+    .modal-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      width: min(92vw, 480px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay" style="display:none;">
+    <div class="auth-box">
+      <h2>🔐 احراز هویت مدیریت</h2>
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:20px;">جهت دسترسی به پنل مدیریت سامانه War Drone، کلید امنیتی را وارد نمایید:</p>
+      <div class="form-field" style="margin-bottom:16px;">
+        <input type="password" id="adminKeyInput" placeholder="کلید مدیریت (Admin Secret)..." autocomplete="current-password">
+      </div>
+      <button class="btn-action" style="width:100%;padding:12px;" onclick="loginAdmin()">ورود به پنل ⚡</button>
+      <div id="authError" style="color:var(--red);font-size:0.82rem;margin-top:12px;display:none;"></div>
+    </div>
+  </div>
+
+  <!-- Edit Clan Modal -->
+  <div class="modal-overlay" id="editClanModal">
+    <div class="modal-box">
+      <h3 style="color:var(--cyan);margin-top:0;">✏️ ویرایش مشخصات کلن</h3>
+      <div class="form-field" style="margin-bottom:12px;">
+        <label>شناسه کلن (غیرقابل تغییر):</label>
+        <input type="text" id="editClanId" readonly style="opacity:0.6;">
+      </div>
+      <div class="form-field" style="margin-bottom:12px;">
+        <label>نام نمایشی کلن:</label>
+        <input type="text" id="editClanName">
+      </div>
+      <div class="form-field" style="margin-bottom:12px;">
+        <label>تگ کلن (مخفف):</label>
+        <input type="text" id="editClanTag">
+      </div>
+      <div class="form-field" style="margin-bottom:18px;">
+        <label>وضعیت فعالیت:</label>
+        <select id="editClanStatus">
+          <option value="ACTIVE">فعال (ACTIVE)</option>
+          <option value="ARCHIVED">بایگانی‌شده (ARCHIVED)</option>
+        </select>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button class="btn-action btn-secondary" onclick="closeEditModal()">انصراف</button>
+        <button class="btn-action" onclick="saveClanEdit()">ذخیره تغییرات ✅</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="shell topbar-shell">
+      <a class="brand" href="./index.html">
+        <span class="brand-badge">WD</span>
+        <div class="brand-text">
+          <strong>War Drone PERSIA</strong>
+          <small>UCS Admin Surface · پنل مرکزی مدیریت</small>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="./index.html">داشبورد کلن‌ها</a>
+        <a href="./players.html">اعضای کلن</a>
+        <a href="./member-history.html">تاریخچه عضویت</a>
+        <a href="./archive.html">آرشیو دوره‌ها</a>
+        <button class="btn-action btn-secondary" style="padding:6px 14px;font-size:0.8rem;" onclick="logoutAdmin()">خروج 🚪</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell wrap">
+    <section class="admin-hero">
+      <span class="badge">SYSTEM CONTROL</span>
+      <h1 style="margin:10px 0 6px;">پیشخوان فرماندهی و مدیریت سامانه UCS</h1>
+      <p style="color:var(--muted);margin:0;">کنترل متمرکز کلن‌ها، کاربران تلگرام، بسته‌های قرنطینه، بهینه‌سازی دیتابیس و امنیت سامانه.</p>
+    </section>
+
+    <!-- Admin Tabs -->
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchTab('clans')">🏰 مدیریت کلن‌ها</button>
+      <button class="admin-tab" onclick="switchTab('users')">👥 کاربران ربات تلگرام</button>
+      <button class="admin-tab" onclick="switchTab('snapshots')">📦 بسته‌های قرنطینه (ZIP)</button>
+      <button class="admin-tab" onclick="switchTab('maintenance')">🛠 نگهداری دیتابیس و بکاپ</button>
+      <button class="admin-tab" onclick="switchTab('security')">🔐 تغییر رمز عبور مدیریت</button>
+      <button class="admin-tab" onclick="switchTab('diagnostics')">📊 سلامت و دیاگنوستیک</button>
+    </div>
+
+    <!-- TAB 1: CLANS -->
+    <div id="tabClans">
+      <!-- Add Clan Card -->
+      <div class="admin-card">
+        <h3>➕ تعریف و ثبت کلن جدید</h3>
+        <p style="color:var(--muted);font-size:0.84rem;margin-top:0;">پس از ثبت کلن، این کلن بلافاصله در لیدربورد، دایرکتوری و ربات تلگرام در دسترس قرار می‌گیرد.</p>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>شناسه یکتای کلن (clan_id):</label>
+            <input type="text" id="newClanId" placeholder="مثال: CLAN-PERSIAN-GULF">
+          </div>
+          <div class="form-field">
+            <label>نام نمایشی کلن:</label>
+            <input type="text" id="newClanName" placeholder="مثال: Persian Gulf Warriors">
+          </div>
+          <div class="form-field">
+            <label>تگ کلن (مخفف):</label>
+            <input type="text" id="newClanTag" placeholder="مثال: PG">
+          </div>
+          <div class="form-field">
+            <label>وضعیت اولیه:</label>
+            <select id="newClanStatus">
+              <option value="ACTIVE">فعال (ACTIVE)</option>
+              <option value="ARCHIVED">بایگانی (ARCHIVED)</option>
+            </select>
+          </div>
+        </div>
+        <div class="admin-actions">
+          <button class="btn-action" onclick="createClan()">ثبت و ایجاد کلن 🚀</button>
+        </div>
+      </div>
+
+      <!-- Clans List -->
+      <div class="admin-card">
+        <h3>📋 لیست کلن‌های ثبت‌شده در پایگاه‌داده</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>شناسه (Clan ID)</th>
+                <th>نام نمایشی</th>
+                <th>تگ</th>
+                <th>اعضای فعال</th>
+                <th>اسنپ‌شات‌ها</th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="clansTableBody">
+              <tr><td colspan="8" style="text-align:center;color:var(--muted);">در حال بارگذاری اطلاعات کلن‌ها...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: BOT USERS -->
+    <div id="tabUsers" style="display:none;">
+      <div class="admin-card">
+        <h3>👥 مدیریت دسترسی کاربران ربات تلگرام (@PersianUNITY_bot)</h3>
+        <p style="color:var(--muted);font-size:0.84rem;margin-top:0;">سامانه دارای تفکیک دسترسی هوشمند (RBAC) است. کاربران جدید تا قبل از تایید در صف انتظار قرار می‌گیرند.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>شناسه عددی</th>
+                <th>نام و یوزرنیم</th>
+                <th>نقش سازمانی</th>
+                <th>وضعیت دسترسی</th>
+                <th>تاریخ ثبت</th>
+                <th>عملیات تغییر وضعیت</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+              <tr><td colspan="6" style="text-align:center;color:var(--muted);">در حال دریافت لیست کاربران...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PACKAGES -->
+    <div id="tabSnapshots" style="display:none;">
+      <div class="admin-card">
+        <h3>📦 بسته‌های اسنپ‌شات فشرده (قرنطینه امن)</h3>
+        <p style="color:var(--muted);font-size:0.84rem;margin-top:0;">فایل‌های زیپ ارسالی کاربران در این بخش قرنطینه می‌شوند و فقط با تایید ادمین توسط هوش مصنوعی پردازش و ثبت می‌گردند.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>شناسه بسته</th>
+                <th>نام فایل</th>
+                <th>ارسال‌کننده</th>
+                <th>کلن مقصد</th>
+                <th>تاریخ ارسال</th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="packagesTableBody">
+              <tr><td colspan="7" style="text-align:center;color:var(--muted);">در حال دریافت لیست بسته‌ها...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: MAINTENANCE -->
+    <div id="tabMaintenance" style="display:none;">
+      <div class="admin-card">
+        <h3>🛠 عملیات نگهداری و بهینه‌سازی پایگاه داده SQLite</h3>
+        <p style="color:var(--muted);font-size:0.84rem;margin-top:0;">ابزارهای زیر به شما امکان بهینه‌سازی دیسک، سینک ژورنال WAL و پشتیبان‌گیری فوری را می‌دهند:</p>
+        <div class="admin-actions" style="margin-bottom:20px;">
+          <button class="btn-action" onclick="runMaintenance('vacuum')">🧹 اجرای فشرده‌سازی دیتابیس (VACUUM)</button>
+          <button class="btn-action btn-secondary" onclick="runMaintenance('checkpoint')">🔄 همگام‌سازی وال (WAL Checkpoint)</button>
+          <button class="btn-action btn-success" onclick="runMaintenance('backup')">💾 تهیه نسخه پشتیبان فوری (Backup)</button>
+        </div>
+        <div class="form-field">
+          <label>خروجی و لاگ عملیات دیتابیس:</label>
+          <div class="diag-box" id="maintenanceLog">آماده اجرای عملیات نگهداری...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: SECURITY -->
+    <div id="tabSecurity" style="display:none;">
+      <div class="admin-card" style="max-width:550px;">
+        <h3>🔐 تغییر رمز عبور مدیریت سامانه</h3>
+        <p style="color:var(--muted);font-size:0.84rem;margin-top:0;">با تغییر این رمز، دسترسی به پنل وب و APIهای محافظت‌شده با رمز جدید انجام خواهد شد.</p>
+        <div class="form-field" style="margin-bottom:14px;">
+          <label>رمز عبور فعلی مدیریت:</label>
+          <input type="password" id="curSecretInput" placeholder="رمز فعلی...">
+        </div>
+        <div class="form-field" style="margin-bottom:14px;">
+          <label>رمز عبور جدید (حداقل ۶ کاراکتر):</label>
+          <input type="password" id="newSecretInput" placeholder="رمز جدید...">
+        </div>
+        <div class="form-field" style="margin-bottom:18px;">
+          <label>تکرار رمز عبور جدید:</label>
+          <input type="password" id="repeatSecretInput" placeholder="تکرار رمز جدید...">
+        </div>
+        <div class="admin-actions">
+          <button class="btn-action" onclick="changeAdminPassword()">ذخیره و به‌روزرسانی رمز عبور 🔑</button>
+        </div>
+        <div id="securityAlert" style="margin-top:14px;font-size:0.85rem;display:none;"></div>
+      </div>
+    </div>
+
+    <!-- TAB 6: DIAGNOSTICS -->
+    <div id="tabDiagnostics" style="display:none;">
+      <div class="admin-card">
+        <h3>📊 وضعیت سلامت، منابع سرور و متریک‌ها</h3>
+        <div class="overview-grid" id="diagCards" style="margin-bottom:18px;">
+          <div class="overview-card"><span>حجم دیتابیس</span><strong id="diagDbSize">—</strong><small>فایل ucs.db با ژورنال WAL</small></div>
+          <div class="overview-card"><span>تعداد کلن‌ها</span><strong id="diagClans">—</strong><small>کلن‌های تعریف‌شده</small></div>
+          <div class="overview-card"><span>مشاهدات ثبت‌شده</span><strong id="diagObs">—</strong><small>رکوردهای تاریخی اعضا</small></div>
+          <div class="overview-card"><span>آپتایم سرور</span><strong id="diagUptime">—</strong><small>زمان فعالیت مستمر وب‌سرور</small></div>
+        </div>
+        <div class="form-field">
+          <label>پاسخ خام سیستم و اطلاعات حافظه Node.js:</label>
+          <div class="diag-box" id="diagRaw">در حال دریافت وضعیت...</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let adminKey = localStorage.getItem('wd-admin-key') || '';
+
+    function getHeaders() {
+      return {
+        'Content-Type': 'application/json',
+        'x-admin-key': adminKey
+      };
+    }
+
+    async function checkAuth() {
+      if (!adminKey) {
+        document.getElementById('authOverlay').style.display = 'grid';
+        return;
+      }
+      try {
+        const res = await fetch('/api/admin/auth', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ key: adminKey })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          document.getElementById('authOverlay').style.display = 'none';
+          loadClans();
+        } else {
+          document.getElementById('authOverlay').style.display = 'grid';
+        }
+      } catch (e) {
+        document.getElementById('authOverlay').style.display = 'grid';
+      }
+    }
+
+    async function loginAdmin() {
+      const input = document.getElementById('adminKeyInput').value.trim();
+      const errEl = document.getElementById('authError');
+      if (!input) return;
+
+      try {
+        const res = await fetch('/api/admin/auth', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ key: input })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          adminKey = input;
+          localStorage.setItem('wd-admin-key', input);
+          document.getElementById('authOverlay').style.display = 'none';
+          loadClans();
+        } else {
+          errEl.textContent = data.error || 'رمز عبور نادرست است.';
+          errEl.style.display = 'block';
+        }
+      } catch (err) {
+        errEl.textContent = 'خطا در ارتباط با سرور: ' + err.message;
+        errEl.style.display = 'block';
+      }
+    }
+
+    function logoutAdmin() {
+      localStorage.removeItem('wd-admin-key');
+      adminKey = '';
+      location.reload();
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
+      ['tabClans', 'tabUsers', 'tabSnapshots', 'tabMaintenance', 'tabSecurity', 'tabDiagnostics'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      if (tab === 'clans') {
+        document.querySelectorAll('.admin-tab')[0].classList.add('active');
+        document.getElementById('tabClans').style.display = 'block';
+        loadClans();
+      } else if (tab === 'users') {
+        document.querySelectorAll('.admin-tab')[1].classList.add('active');
+        document.getElementById('tabUsers').style.display = 'block';
+        loadUsers();
+      } else if (tab === 'snapshots') {
+        document.querySelectorAll('.admin-tab')[2].classList.add('active');
+        document.getElementById('tabSnapshots').style.display = 'block';
+        loadPackages();
+      } else if (tab === 'maintenance') {
+        document.querySelectorAll('.admin-tab')[3].classList.add('active');
+        document.getElementById('tabMaintenance').style.display = 'block';
+      } else if (tab === 'security') {
+        document.querySelectorAll('.admin-tab')[4].classList.add('active');
+        document.getElementById('tabSecurity').style.display = 'block';
+      } else if (tab === 'diagnostics') {
+        document.querySelectorAll('.admin-tab')[5].classList.add('active');
+        document.getElementById('tabDiagnostics').style.display = 'block';
+        loadDiagnostics();
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 1. CLANS
+    // ------------------------------------------------------------------------
+    async function loadClans() {
+      const tbody = document.getElementById('clansTableBody');
+      try {
+        const res = await fetch('/api/admin/clans', { headers: getHeaders() });
+        const data = await res.json();
+        if (!data.clans || !data.clans.length) {
+          tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--muted);">هیچ کلنی در سیستم ثبت نشده است.</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = data.clans.map((c, i) => {
+          const stCls = c.status === 'ACTIVE' ? 'active' : 'archived';
+          return `<tr>
+            <td>${i + 1}</td>
+            <td><code>${c.clan_id}</code></td>
+            <td><strong>${c.display_name}</strong></td>
+            <td><span class="badge">${c.tag || '—'}</span></td>
+            <td><strong>${c.member_count} نفر</strong></td>
+            <td>${c.snapshot_count} دوره</td>
+            <td><span class="badge-status ${stCls}">${c.status}</span></td>
+            <td>
+              <div style="display:flex;gap:6px;">
+                <button class="btn-action btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="openEditClan('${encodeURIComponent(JSON.stringify(c))}')">ویرایش ✏️</button>
+                <a class="btn-action btn-secondary" style="padding:4px 8px;font-size:0.75rem;text-decoration:none;" href="./clan.html?clan=${encodeURIComponent(c.clan_id)}">مشاهده 🌐</a>
+                <button class="btn-action btn-danger" style="padding:4px 8px;font-size:0.75rem;" onclick="archiveClan('${c.clan_id}')">بایگانی 📦</button>
+              </div>
+            </td>
+          </tr>`;
+        }).join('');
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="8" style="color:var(--red);">خطا در دریافت لیست کلن‌ها: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function createClan() {
+      const clan_id = document.getElementById('newClanId').value.trim();
+      const display_name = document.getElementById('newClanName').value.trim();
+      const tag = document.getElementById('newClanTag').value.trim();
+      const status = document.getElementById('newClanStatus').value;
+
+      if (!clan_id || !display_name) {
+        alert('لطفاً شناسه و نام نمایشی کلن را وارد نمایید.');
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/clans', {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ clan_id, display_name, tag, status })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alert('✅ کلن جدید با موفقیت ایجاد شد.');
+          document.getElementById('newClanId').value = '';
+          document.getElementById('newClanName').value = '';
+          document.getElementById('newClanTag').value = '';
+          loadClans();
+        } else {
+          alert('❌ خطا: ' + (data.error || 'عملیات ناموفق بود'));
+        }
+      } catch (err) {
+        alert('❌ خطا در ارتباط با سرور: ' + err.message);
+      }
+    }
+
+    function openEditClan(encodedClan) {
+      const clan = JSON.parse(decodeURIComponent(encodedClan));
+      document.getElementById('editClanId').value = clan.clan_id;
+      document.getElementById('editClanName').value = clan.display_name;
+      document.getElementById('editClanTag').value = clan.tag || '';
+      document.getElementById('editClanStatus').value = clan.status || 'ACTIVE';
+      document.getElementById('editClanModal').style.display = 'grid';
+    }
+
+    function closeEditModal() {
+      document.getElementById('editClanModal').style.display = 'none';
+    }
+
+    async function saveClanEdit() {
+      const clan_id = document.getElementById('editClanId').value;
+      const display_name = document.getElementById('editClanName').value.trim();
+      const tag = document.getElementById('editClanTag').value.trim();
+      const status = document.getElementById('editClanStatus').value;
+
+      if (!display_name) {
+        alert('نام نمایشی کلن نمی‌تواند خالی باشد.');
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/admin/clans/${encodeURIComponent(clan_id)}`, {
+          method: 'PUT',
+          headers: getHeaders(),
+          body: JSON.stringify({ display_name, tag, status })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alert('✅ اطلاعات کلن به‌روزرسانی شد.');
+          closeEditModal();
+          loadClans();
+        } else {
+          alert('❌ خطا: ' + data.error);
+        }
+      } catch (err) {
+        alert('❌ خطا: ' + err.message);
+      }
+    }
+
+    async function archiveClan(clan_id) {
+      if (!confirm(`آیا مطمئن هستید که می‌خواهید کلن ${clan_id} را به حالت بایگانی (غیرفعال) منتقل کنید؟`)) return;
+      try {
+        const res = await fetch(`/api/admin/clans/${encodeURIComponent(clan_id)}`, {
+          method: 'DELETE',
+          headers: getHeaders()
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alert('✅ کلن به بایگانی منتقل شد.');
+          loadClans();
+        } else {
+          alert('❌ خطا: ' + data.error);
+        }
+      } catch (err) {
+        alert('❌ خطا: ' + err.message);
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 2. USERS
+    // ------------------------------------------------------------------------
+    async function loadUsers() {
+      const tbody = document.getElementById('usersTableBody');
+      try {
+        const res = await fetch('/api/admin/users', { headers: getHeaders() });
+        const data = await res.json();
+        if (!data.users || !data.users.length) {
+          tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--muted);">کاربری ثبت نشده است.</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = data.users.map(u => {
+          const stCls = u.status === 'approved' ? 'approved' : (u.status === 'pending' ? 'pending' : 'blocked');
+          const uname = u.username ? `@${u.username}` : 'ندارد';
+          return `<tr>
+            <td><code>${u.user_id}</code></td>
+            <td><strong>${u.first_name || '—'}</strong> <small style="color:var(--muted);">(${uname})</small></td>
+            <td><span class="badge">${u.role || 'member'}</span></td>
+            <td><span class="badge-status ${stCls}">${u.status}</span></td>
+            <td><small>${u.requested_at_utc || '—'}</small></td>
+            <td>
+              <div style="display:flex;gap:6px;">
+                <button class="btn-action btn-success" style="padding:4px 8px;font-size:0.75rem;" onclick="setUserStatus(${u.user_id}, 'approved')">تایید ✅</button>
+                <button class="btn-action btn-danger" style="padding:4px 8px;font-size:0.75rem;" onclick="setUserStatus(${u.user_id}, 'blocked')">مسدودسازی ❌</button>
+                <button class="btn-action btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="toggleUserRole(${u.user_id}, '${u.role || 'member'}')">تغییر نقش 👑</button>
+              </div>
+            </td>
+          </tr>`;
+        }).join('');
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="6" style="color:var(--red);">خطا: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function setUserStatus(userId, status) {
+      try {
+        const res = await fetch(`/api/admin/users/${userId}/status`, {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ status })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          loadUsers();
+        } else {
+          alert('خطا: ' + data.error);
+        }
+      } catch (err) {
+        alert('خطا: ' + err.message);
+      }
+    }
+
+    async function toggleUserRole(userId, curRole) {
+      const newRole = curRole === 'admin' ? 'member' : 'admin';
+      try {
+        const res = await fetch(`/api/admin/users/${userId}/status`, {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ role: newRole })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          loadUsers();
+        } else {
+          alert('خطا: ' + data.error);
+        }
+      } catch (err) {
+        alert('خطا: ' + err.message);
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 3. PACKAGES
+    // ------------------------------------------------------------------------
+    async function loadPackages() {
+      const tbody = document.getElementById('packagesTableBody');
+      try {
+        const res = await fetch('/api/admin/packages', { headers: getHeaders() });
+        const data = await res.json();
+        if (!data.packages || !data.packages.length) {
+          tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--muted);">هیچ بسته فشرده‌ای در قرنطینه نیست.</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = data.packages.map(p => {
+          const stCls = p.status === 'approved' ? 'approved' : (p.status === 'pending' ? 'pending' : 'rejected');
+          return `<tr>
+            <td><code>${p.package_id}</code></td>
+            <td><strong>${p.file_name}</strong></td>
+            <td>${p.username ? `@${p.username}` : p.user_id}</td>
+            <td><span class="badge">${p.clan_id}</span></td>
+            <td><small>${p.created_at_utc || '—'}</small></td>
+            <td><span class="badge-status ${stCls}">${p.status}</span></td>
+            <td>
+              ${p.status === 'pending' ? `
+                <div style="display:flex;gap:6px;">
+                  <button class="btn-action btn-success" style="padding:4px 8px;font-size:0.75rem;" onclick="pkgAction('${p.package_id}', 'approve')">تایید و پردازش هوش مصنوعی ⚡</button>
+                  <button class="btn-action btn-danger" style="padding:4px 8px;font-size:0.75rem;" onclick="pkgAction('${p.package_id}', 'reject')">رد و حذف 🗑</button>
+                </div>
+              ` : `<small style="color:var(--muted);">پردازش‌شده</small>`}
+            </td>
+          </tr>`;
+        }).join('');
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="7" style="color:var(--red);">خطا: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function pkgAction(pkgId, action) {
+      if (!confirm(`آیا از ${action === 'approve' ? 'تایید و پردازش' : 'رد و حذف'} بسته ${pkgId} اطمینان دارید؟`)) return;
+      try {
+        const res = await fetch(`/api/admin/packages/${pkgId}/action`, {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ action })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alert('✅ ' + data.message);
+          loadPackages();
+        } else {
+          alert('❌ خطا: ' + data.error);
+        }
+      } catch (err) {
+        alert('❌ خطا: ' + err.message);
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 4. MAINTENANCE
+    // ------------------------------------------------------------------------
+    async function runMaintenance(action) {
+      const logEl = document.getElementById('maintenanceLog');
+      logEl.textContent = `در حال اجرای عملیات ${action}... لطفاً شکیبا باشید.`;
+      try {
+        const res = await fetch('/api/admin/db-maintenance', {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ action })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          logEl.textContent = `[${new Date().toLocaleTimeString('fa-IR')}] ✅ ${data.message}`;
+        } else {
+          logEl.textContent = `[${new Date().toLocaleTimeString('fa-IR')}] ❌ خطا: ${data.error}`;
+        }
+      } catch (err) {
+        logEl.textContent = `[${new Date().toLocaleTimeString('fa-IR')}] ❌ خطا در ارتباط: ${err.message}`;
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 5. SECURITY (Change Password)
+    // ------------------------------------------------------------------------
+    async function changeAdminPassword() {
+      const curKey = document.getElementById('curSecretInput').value.trim();
+      const newKey = document.getElementById('newSecretInput').value.trim();
+      const repKey = document.getElementById('repeatSecretInput').value.trim();
+      const alertEl = document.getElementById('securityAlert');
+
+      if (!curKey || !newKey) {
+        alertEl.style.display = 'block';
+        alertEl.style.color = 'var(--red)';
+        alertEl.textContent = 'لطفاً کلیه فیلدها را تکمیل نمایید.';
+        return;
+      }
+      if (newKey !== repKey) {
+        alertEl.style.display = 'block';
+        alertEl.style.color = 'var(--red)';
+        alertEl.textContent = 'رمز عبور جدید با تکرار آن یکسان نیست.';
+        return;
+      }
+      if (newKey.length < 6) {
+        alertEl.style.display = 'block';
+        alertEl.style.color = 'var(--red)';
+        alertEl.textContent = 'رمز عبور جدید باید حداقل ۶ کاراکتر باشد.';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/change-password', {
+          method: 'POST',
+          headers: getHeaders(),
+          body: JSON.stringify({ current_key: curKey, new_key: newKey })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          alertEl.style.display = 'block';
+          alertEl.style.color = 'var(--green)';
+          alertEl.textContent = '✅ رمز عبور مدیریت با موفقیت به‌روزرسانی شد!';
+          adminKey = newKey;
+          localStorage.setItem('wd-admin-key', newKey);
+          document.getElementById('curSecretInput').value = '';
+          document.getElementById('newSecretInput').value = '';
+          document.getElementById('repeatSecretInput').value = '';
+        } else {
+          alertEl.style.display = 'block';
+          alertEl.style.color = 'var(--red)';
+          alertEl.textContent = '❌ خطا: ' + (data.error || 'رمز فعلی نامعتبر است');
+        }
+      } catch (err) {
+        alertEl.style.display = 'block';
+        alertEl.style.color = 'var(--red)';
+        alertEl.textContent = '❌ خطا در ارتباط: ' + err.message;
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 6. DIAGNOSTICS
+    // ------------------------------------------------------------------------
+    async function loadDiagnostics() {
+      try {
+        const res = await fetch('/api/admin/diagnostics', { headers: getHeaders() });
+        const data = await res.json();
+        if (data.ok) {
+          document.getElementById('diagDbSize').textContent = `${data.db.size_mb || '—'} MB`;
+          document.getElementById('diagClans').textContent = `${data.counts.clans} کلن`;
+          document.getElementById('diagObs').textContent = `${data.counts.observations.toLocaleString('en-US')} رکورد`;
+          const upMin = Math.floor((data.uptime_seconds || 0) / 60);
+          document.getElementById('diagUptime').textContent = `${upMin} دقیقه`;
+          document.getElementById('diagRaw').textContent = JSON.stringify(data, null, 2);
+        }
+      } catch (err) {
+        document.getElementById('diagRaw').textContent = 'خطا در دیاگنوستیک: ' + err.message;
+      }
+    }
+
+    // Run on startup
+    checkAuth();
+  </script>
+</body>
+</html>

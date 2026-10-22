@@ -71,8 +71,17 @@ function validate(input){
 if(require.main===module){
   try{
     const file=process.argv[2];
-    if(!file)throw new Error('usage: node src/validate-snapshot.js <input.json>');
-    console.log(JSON.stringify(validate(JSON.parse(fs.readFileSync(path.resolve(file),'utf8'))),null,2));
+    if(!file){
+      console.log('Usage: node src/validate-snapshot.js <input.json>');
+      console.log('Validating default fixtures...');
+      const defaultFixture = path.join(__dirname, '..', 'test', 'fixtures', 'raw-extraction.valid.json');
+      if (fs.existsSync(defaultFixture)) {
+        console.log('Validating fixture:', defaultFixture);
+        console.log(JSON.stringify(validate(JSON.parse(fs.readFileSync(defaultFixture,'utf8'))),null,2));
+      }
+    } else {
+      console.log(JSON.stringify(validate(JSON.parse(fs.readFileSync(path.resolve(file),'utf8'))),null,2));
+    }
   }catch(error){fail(error.message);}
 }
 module.exports={validate};

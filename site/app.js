@@ -29,6 +29,14 @@
     if (!Number.isFinite(n)) return display(value);
     return n > 0 ? '+' + formatNumber(n) : formatNumber(n);
   };
+  const signedHtml = (value) => {
+    if (value === null || value === undefined || value === '') return '<span class="delta-zero">—</span>';
+    const n = Number(value);
+    if (!Number.isFinite(n)) return '<span class="delta-zero">' + esc(display(value)) + '</span>';
+    if (n > 0) return '<span class="delta-pos">+' + formatNumber(n) + '</span>';
+    if (n < 0) return '<span class="delta-neg">' + formatNumber(n) + '</span>';
+    return '<span class="delta-zero">0</span>';
+  };
   const iranSnapshotDateTimeFormatter = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
     timeZone: 'Asia/Tehran',
     calendar: 'persian',
@@ -123,7 +131,48 @@
       '<div><span>Global Identityهای تاییدشده</span><b>' + formatNumber(uniqueObservedPlayers.size) + '</b></div>' +
       '<div><span>اعضای آخرین Snapshotها</span><b>' + formatNumber(clans.reduce((sum,clan) => sum + (latestSnapshotFor(clan)?.member_count || 0),0)) + '</b></div>' +
       '</div></section>' +
-      '<section class="section-block"><div class="section-head"><div><span class="badge">CLAN DIRECTORY</span><h2>کلن‌ها</h2></div><span class="count">' + formatNumber(clans.length) + ' Clan</span></div>' +
+      '<section class="panel">' +
+        '<div class="section-head"><div><span class="badge">مقایسه کلن‌ها</span><h2>جدول جامع رتبه‌بندی و وضعیت کلن‌های War Drone</h2></div><span class="count">' + formatNumber(clans.length) + ' کلن فعال</span></div>' +
+        '<div class="table-wrap"><table><thead><tr>' +
+          '<th># ردیف</th>' +
+          '<th>نام کلن</th>' +
+          '<th>تگ</th>' +
+          '<th>تعداد اعضا</th>' +
+          '<th>مجموع کیل‌های ثبت‌شده 💀</th>' +
+          '<th>آخرین Snapshot</th>' +
+          '<th>وضعیت</th>' +
+          '<th>عملیات</th>' +
+        '</tr></thead><tbody>' +
+        clans.map((c, i) => {
+          const snap = latestSnapshotFor(c);
+          let cKills = 0;
+          if (snap && Array.isArray(snap.members)) {
+            snap.members.forEach(m => { cKills += Number(m.total_kills) || 0; });
+          }
+          const link = base('clan.html', '?clan=' + encodeURIComponent(c.clan_id));
+          return '<tr>' +
+            '<td><span class="tbl-rank">' + formatNumber(i + 1) + '</span></td>' +
+            '<td><a class="tbl-name" href="' + link + '"><strong>🛡️ ' + esc(c.display_name || c.clan_id) + '</strong></a></td>' +
+            '<td><span class="badge">' + esc(c.tag || '—') + '</span></td>' +
+            '<td><strong>' + (snap ? formatNumber(snap.member_count) : '0') + ' نفر</strong></td>' +
+            '<td><strong style="color:var(--cyan);">' + (cKills ? formatNumber(cKills) : '—') + '</strong></td>' +
+            '<td><small>' + (snap ? esc(formatSnapshotDateTime(snap.official_timestamp_utc)) : '—') + '</small></td>' +
+            '<td><span class="badge" style="color:var(--green);border-color:var(--green);">' + esc(c.status || 'ACTIVE') + '</span></td>' +
+            '<td><a class="btn" style="padding:4px 10px;font-size:0.75rem;" href="' + link + '">لیدربورد 🏰</a></td>' +
+            '</tr>';
+        }).join('') +
+        '</tbody></table></div>' +
+      '</section>' +
+      '<section class="panel">' +
+        '<div class="section-head"><div><span class="badge">دانش بازی</span><h2>راهنمای مکانیک‌های تخصصی War Drone</h2></div></div>' +
+        '<div class="overview-grid">' +
+          '<div class="overview-card"><span>🔥 رویداد فرنزی (Clan Frenzy)</span><strong>مدت ۴۵ دقیقه</strong><small>با شارژ نوار فرنزی (کیل زدن اعضا یا مصرف ۷۰۰ طلا)، دشمنان طلایی ظاهر می‌شوند که کیل زدن آنها منبع اصلی کسب مدال کلن است.</small></div>' +
+          '<div class="overview-card"><span>💥 تسلیحات سه‌گانه (Arsenal)</span><strong>توپ / هیدرا / هل‌فایر</strong><small>توپ ۲۵mm برای پیاده‌نظام و خمپاره‌ها، راکت هیدرا ۷۰ برای گروه‌های خودرویی و موشک هل‌فایر برای اهداف سنگین و تانک‌ها طراحی شده‌اند.</small></div>' +
+          '<div class="overview-card"><span>🎖️ مدال‌های لیگ و افتخار</span><strong>Current League vs Honors</strong><small>مدال‌های لیگ جاری رتبه دوره‌ای کلن را ارتقا می‌دهند و مدال‌های طلا، نقره و برنز نشان‌دهنده افتخارات تاریخی بازیکن هستند.</small></div>' +
+          '<div class="overview-card"><span>🎯 استیج‌های فارم کلنی</span><strong>Stage Selection</strong><small>تجربه تجربی نشان داده مراحل ۵، ۸، ۹ و ۱۰ بازدهی بسیار بالایی در فرنزی دارند و پیشروی هوشمند نیازمند هماهنگی سطح سلاح‌هاست.</small></div>' +
+        '</div>' +
+      '</section>' +
+      '<section class="section-block"><div class="section-head"><div><span class="badge">CLAN DIRECTORY</span><h2>کارت‌های کلن</h2></div><span class="count">' + formatNumber(clans.length) + ' Clan</span></div>' +
       '<div class="dashboard-grid">' + clans.map((clan) => {
         const snapshot = latestSnapshotFor(clan);
         const unresolved = (clan.unresolved_observation_refs || []).length;
@@ -341,33 +390,64 @@
       }).join('');
       const simple = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
+        const r = Number(member.rank);
+        const rankCls = r === 1 ? 'tbl-rank rank-1' : (r === 2 ? 'tbl-rank rank-2' : (r === 3 ? 'tbl-rank rank-3' : 'tbl-rank'));
+        const roleStr = String(member.role || '').toLowerCase();
+        const roleCls = roleStr.includes('leader') && !roleStr.includes('co') ? 'tbl-role leader' : (roleStr.includes('co-leader') ? 'tbl-role coleader' : (roleStr.includes('elder') ? 'tbl-role elder' : 'tbl-role'));
+        const initial = String(member.display_name || '—').slice(0, 1);
+        const wep = weaponsFor(member);
         return '<tr>' +
-          '<td class="rank-cell">' + esc(valueFor(member, 'rank')) + '</td>' +
-          '<td><a href="' + playerLink(member) + '">' + esc(valueFor(member, 'display_name')) + '</a></td>' +
-          '<td>' + esc(valueFor(member, 'role')) + '</td>' +
-          '<td>' + esc(valueFor(member, 'stage')) + '</td>' +
-          '<td>' + esc(valueFor(member, 'current_league_clan_medals')) + '</td>' +
-          '<td>' + esc(signed(d.medals?.delta)) + '</td>' +
+          '<td><span class="' + rankCls + '">' + (r <= 3 ? (r === 1 ? '🥇 ' : (r === 2 ? '🥈 ' : '🥉 ')) : '') + esc(valueFor(member, 'rank')) + '</span></td>' +
+          '<td><div class="tbl-player"><span class="tbl-avatar">' + esc(initial) + '</span><a class="tbl-name" href="' + playerLink(member) + '">' + esc(valueFor(member, 'display_name')) + '</a></div></td>' +
+          '<td><span class="' + roleCls + '">' + esc(valueFor(member, 'role')) + '</span></td>' +
+          '<td><strong>' + esc(valueFor(member, 'stage')) + '</strong></td>' +
+          '<td><strong style="color:var(--gold);">' + esc(valueFor(member, 'current_league_clan_medals')) + '</strong></td>' +
+          '<td>' + signedHtml(d.medals?.delta) + '</td>' +
           '<td>' + esc(valueFor(member, 'profile_total_clan_medal_count')) + '</td>' +
           '<td><span class="medal-inline">' + esc(lifetimeMedalsFor(member)) + '</span></td>' +
-          '<td>' + esc(valueFor(member, 'total_kills')) + '</td>' +
-          '<td>' + esc(signed(d.kills?.delta)) + '</td>' +
-          '<td>' + esc(weaponsFor(member)) + '</td>' +
-          '<td>' + esc(lastOnlineFor(member)) + '</td>' +
+          '<td><strong>' + esc(valueFor(member, 'total_kills')) + '</strong></td>' +
+          '<td>' + signedHtml(d.kills?.delta) + '</td>' +
+          '<td>' + (wep && wep !== '—' ? ('<span class="tbl-weapons">' + esc(wep) + '</span>') : '—') + '</td>' +
+          '<td><small style="color:var(--muted);">' + esc(lastOnlineFor(member)) + '</small></td>' +
           '</tr>';
       }).join('');
       const graphic = rows.map((member) => {
         const d = deltas.get(member.observation_id) || {};
-        return '<article class="member-card"><header><div><span class="rank">' + esc(valueFor(member, 'rank')) + '</span><h3>' + esc(valueFor(member, 'display_name')) + '</h3><small>' + esc(valueFor(member, 'role')) + '</small></div><a class="link-arrow" href="' + playerLink(member) + '">←</a></header><div class="stats-grid">' +
-          [['استیج',member.stage],['مدال لیگ',member.current_league_clan_medals],['Δ مدال',d.medals?.delta],['جمع کیل',member.total_kills],['Δ کیل',d.kills?.delta],['نشان‌ها',lifetimeMedalsFor(member)],['سلاح‌ها',weaponsFor(member)],['آخرین آنلاین',lastOnlineFor(member)]].map(([label, value]) => '<div class="stat"><span>' + label + '</span><strong>' + esc(label.startsWith('Δ') ? signed(value) : (['استیج','مدال لیگ','جمع کیل'].includes(label) ? formatNumber(value) : display(value))) + '</strong></div>').join('') +
-          '</div></article>';
+        const isTop = Number(member.rank) <= 3;
+        const deltaMedalNum = Number(d.medals?.delta) || 0;
+        const deltaKillNum = Number(d.kills?.delta) || 0;
+        const medalDeltaClass = deltaMedalNum > 0 ? 'delta' : (deltaMedalNum < 0 ? 'delta negative' : '');
+        const killDeltaClass = deltaKillNum > 0 ? 'delta' : (deltaKillNum < 0 ? 'delta negative' : '');
+
+        return '<article class="member' + (isTop ? ' top-tier' : '') + '" data-name="' + esc(member.display_name) + '">' +
+          '<div class="member-head">' +
+            '<div class="member-id">' +
+              '<span class="rank">' + esc(valueFor(member, 'rank')) + '</span>' +
+              '<div>' +
+                '<h3><a href="' + playerLink(member) + '">' + esc(valueFor(member, 'display_name')) + '</a></h3>' +
+                '<span class="role">' + esc(valueFor(member, 'role') || 'عضو') + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<span class="movement same">-</span>' +
+          '</div>' +
+          '<div class="member-grid">' +
+            '<div class="stat"><span>استیج</span><strong>' + formatNumber(member.stage) + '</strong></div>' +
+            '<div class="stat medal"><span>مدال لیگ جاری</span><strong>' + formatNumber(member.current_league_clan_medals) + '</strong></div>' +
+            '<div class="stat ' + medalDeltaClass + '"><span>تغییرات مدال لیگ</span><strong>' + esc(signed(d.medals?.delta)) + '</strong></div>' +
+            '<div class="stat"><span>مدال کل کلن</span><strong>' + formatNumber(member.profile_total_clan_medal_count) + '</strong></div>' +
+            '<div class="stat"><span>مجموع کیل 💀</span><strong>' + formatNumber(member.total_kills) + '</strong></div>' +
+            '<div class="stat ' + killDeltaClass + '"><span>افزایش کیل 💀</span><strong>' + esc(signed(d.kills?.delta)) + '</strong></div>' +
+            '<div class="stat weapons"><span>لول سلاح‌ها (25mm / هیدرا / هل‌فایر)</span><strong>' + esc(weaponsFor(member)) + '</strong></div>' +
+            '<div class="stat last-online"><span>آخرین آنلاین</span><strong>' + esc(lastOnlineFor(member)) + '</strong></div>' +
+          '</div>' +
+        '</article>';
       }).join('');
 
       root.querySelector('#result-count').textContent = formatNumber(rows.length) + ' نتیجه';
       root.querySelector('#results').innerHTML = mode === 'summary'
         ? '<div class="table-wrap"><table class="summary-table"><thead><tr><th>' + sortButton('rank','رتبه') + '</th><th>' + sortButton('name','بازیکن') + '</th><th>' + sortButton('deltaMedals','Δ مدال') + '</th><th>' + sortButton('deltaKills','Δ کیل') + '</th><th>' + sortButton('league','مدال کلن') + '</th><th>' + sortButton('kills','جمع کیل') + '</th></tr></thead><tbody>' + summary + '</tbody></table></div>'
         : mode === 'graphic'
-          ? '<div class="member-grid">' + graphic + '</div>'
+          ? '<div class="members" id="members">' + graphic + '</div>'
           : '<div class="table-wrap"><table class="leaderboard-table"><thead><tr>' +
             '<th>' + sortButton('rank','رتبه') + '</th>' +
             '<th>' + sortButton('name','نام کاربری') + '</th>' +
@@ -397,17 +477,48 @@
     const snapshotIndex = clanSnapshots.findIndex((snapshot) => snapshot.snapshot_id === activeSnapshot.snapshot_id);
     const olderSnapshot = snapshotIndex >= 0 && snapshotIndex < clanSnapshots.length - 1 ? clanSnapshots[snapshotIndex + 1] : null;
     const newerSnapshot = snapshotIndex > 0 ? clanSnapshots[snapshotIndex - 1] : null;
+    let totalKills = 0;
+    let topMedalGainer = null;
+    let topMedalGainVal = -Infinity;
+    let topKiller = null;
+    let topKillVal = -Infinity;
+
+    for (const m of activeSnapshot.members) {
+      const k = Number(m.total_kills) || 0;
+      totalKills += k;
+      if (k > topKillVal) {
+        topKillVal = k;
+        topKiller = m;
+      }
+      const d = deltas.get(m.observation_id) || {};
+      const deltaM = Number(d.medals?.delta) || 0;
+      if (deltaM > topMedalGainVal) {
+        topMedalGainVal = deltaM;
+        topMedalGainer = m;
+      }
+    }
+
+    const topMedalText = topMedalGainer ? (esc(topMedalGainer.display_name) + ' · +' + formatNumber(topMedalGainVal)) : '—';
+    const topKillerText = topKiller ? (esc(topKiller.display_name) + ' · ' + formatNumber(topKillVal)) : '—';
+
+    const overviewHtml = '<div class="overview-grid">' +
+      '<div class="overview-card"><span class="label">ظرفیت فعلی کلن</span><strong>' + formatNumber(activeSnapshot.member_count) + ' از ' + formatNumber(activeSnapshot.capacity || 50) + ' نفر</strong></div>' +
+      '<div class="overview-card"><span class="label">مجموع کیل‌های ثبت‌شده 💀</span><strong>' + formatNumber(totalKills) + '</strong></div>' +
+      '<div class="overview-card highlight"><span class="label">پیشتاز افزایش مدال لیگ جاری</span><strong>' + topMedalText + '</strong></div>' +
+      '<div class="overview-card highlight"><span class="label">بیشترین کیل ثبت‌شده</span><strong>' + topKillerText + '</strong></div>' +
+    '</div>';
+
     const snapshotNav = '<div class="snapshot-nav">' +
       '<a class="btn" href="' + (olderSnapshot ? base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(olderSnapshot.snapshot_id) + '&mode=' + encodeURIComponent(mode)) : '#') + '" ' + (olderSnapshot ? '' : 'aria-disabled="true"') + '>← Snapshot قبلی</a>' +
       '<a class="btn" href="' + base('archive.html','?clan=' + encodeURIComponent(activeClanId)) + '">آرشیو</a>' +
       '<a class="btn" href="' + (newerSnapshot ? base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(newerSnapshot.snapshot_id) + '&mode=' + encodeURIComponent(mode)) : '#') + '" ' + (newerSnapshot ? '' : 'aria-disabled="true"') + '>Snapshot بعدی →</a>' +
       '</div>';
 
-    root.innerHTML = header('جدول جامع عملکرد و تغییرات اعضای کلن', 'UCS · LEADERBOARD', 'ساختار Viewer بر پایهٔ الگوی تثبیت‌شدهٔ پروژه نگه داشته شده است؛ داده‌ها از Read Model خوانده می‌شوند.') +
+    root.innerHTML = header('جدول جامع عملکرد و تغییرات اعضای کلن', 'UCS · LEADERBOARD', 'ساختار Viewer بر پایهٔ الگوی تثبیت‌شدهٔ پروژه نگه داشته شده است؛ داده‌ها از Read Model خوانده می‌شوند.') + overviewHtml +
       '<section class="panel"><div class="toolbar">' +
       '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(s.official_timestamp_utc)) + '</option>').join('') + '</select></label>' +
       '<label class="field search-field"><span>جستجو</span><input id="search-input" type="search" placeholder="نام بازیکن، سمت یا مقدار..."></label>' +
-      '<div class="view-switch"><button data-mode="simple">نمایش ساده</button><button data-mode="summary">نمایش خلاصه</button><button data-mode="graphic">نمایش گرافیکی</button></div>' +
+      '<div class="view-switch"><button data-mode="simple" class="' + (mode === 'simple' ? 'active' : '') + '">📋 نمایش ساده و جامع (پیش‌فرض)</button><button data-mode="summary" class="' + (mode === 'summary' ? 'active' : '') + '">⚡ نمایش خلاصه (عملکرد)</button><button data-mode="graphic" class="' + (mode === 'graphic' ? 'active' : '') + '">🪪 نمایش گرافیکی (کارتی)</button></div>' +
       '</div><div class="kpi-row"><div><span>اعضا</span><b>' + formatNumber(activeSnapshot.member_count) + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + formatNumber(bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>' + compactPerformanceHtml(activeSnapshot.snapshot_id) + membershipChangesHtml(activeSnapshot);
     root.querySelector('#snapshot-select').onchange = (event) => {
       const next = new URL(location.href);
@@ -434,6 +545,36 @@
     const changesForSnapshot = (snapshotId) => membershipChangesForSnapshot(snapshotId);
 
     root.innerHTML = header('آرشیو دوره‌های کلن', 'UCS · SNAPSHOT ARCHIVE', 'هر Snapshot یک رکورد مستقل است و در آرشیو نگهداری می‌شود؛ نسخه‌های جدید جایگزین نسخه‌های قبلی نمی‌شوند.') +
+      '<section class="panel">' +
+        '<div class="section-head"><div><span class="badge">اسنپ‌شات‌ها</span><h2>جدول جامع دوره‌ها و آرشیو کلن</h2></div><span class="count">' + formatNumber(snapshots.length) + ' دوره ثبت‌شده</span></div>' +
+        '<div class="table-wrap"><table class="snapshots-table"><thead><tr>' +
+          '<th># دوره</th>' +
+          '<th>شناسه Snapshot</th>' +
+          '<th>زمان رسمی</th>' +
+          '<th>تعداد اعضا</th>' +
+          '<th>مجموع کیل‌ها</th>' +
+          '<th>مجموع مدال‌ها</th>' +
+          '<th>تغییرات عضویت</th>' +
+          '<th>عملیات</th>' +
+        '</tr></thead><tbody>' +
+        snapshots.map((s, idx) => {
+          const agg = aggregate(s.snapshot_id);
+          const changes = changesForSnapshot(s.snapshot_id);
+          const actCount = changes.joined.length + changes.left.length + changes.other.length;
+          const href = base('clan.html','?clan=' + encodeURIComponent(activeClanId) + '&snapshot=' + encodeURIComponent(s.snapshot_id));
+          return '<tr>' +
+            '<td><span class="tbl-rank">' + formatNumber(snapshots.length - idx) + '</span></td>' +
+            '<td><code>' + esc(s.snapshot_id) + '</code></td>' +
+            '<td>' + esc(formatSnapshotDateTime(s.official_timestamp_utc)) + '</td>' +
+            '<td><strong>' + formatNumber(s.member_count) + ' نفر</strong></td>' +
+            '<td><strong>' + (agg.totalKills ? formatNumber(agg.totalKills) : '—') + '</strong></td>' +
+            '<td><strong style="color:var(--gold);">' + (agg.totalMedals ? formatNumber(agg.totalMedals) : '—') + '</strong></td>' +
+            '<td>' + (actCount ? ('<span class="delta-pos">' + formatNumber(actCount) + ' تغییر</span>') : '<span class="delta-zero">بدون تغییر</span>') + '</td>' +
+            '<td><a class="btn" style="padding:4px 10px;font-size:0.75rem;" href="' + href + '">مشاهده لیدربورد 📊</a></td>' +
+            '</tr>';
+        }).join('') +
+        '</tbody></table></div>' +
+      '</section>' +
       '<div class="report-list">' + snapshots.map((snapshot, index) => {
         const agg = aggregate(snapshot.snapshot_id);
         const changes = changesForSnapshot(snapshot.snapshot_id);
@@ -469,25 +610,125 @@
         }).filter((entry) => !activeClanId || entry.observation)
       : observations.map((observation) => ({ global: null, observation }));
 
-    root.innerHTML = header('اعضای کلن', 'UCS · PLAYER DIRECTORY', 'نام نمایشی اطلاعات جاری بازی است. شناسهٔ Global فقط وقتی نمایش داده می‌شود که Identity در Canonical تأیید شده باشد.') +
-      '<section class="panel"><div class="toolbar"><label class="field search-field"><span>جستجو</span><input id="player-search" type="search" placeholder="نام بازیکن یا شناسه..."></label><span class="count" id="player-count"></span></div><div class="player-grid" id="player-grid"></div></section>';
+    let dirMode = 'table'; // Comprehensive Table is FIRST priority!
+
+    root.innerHTML = header('اعضای کلن', 'UCS · PLAYER DIRECTORY', 'فهرست جامع بازیکنان به همراه شناسه یکتا، لول سلاح‌ها، استیج و سوابق فعالیت در کلن.') +
+      '<section class="panel">' +
+        '<div class="toolbar-wrap">' +
+          '<label class="field search-field" style="flex:1;max-width:400px;"><span>جستجو</span><input id="player-search" type="search" placeholder="نام بازیکن، شناسه یا استیج..."></label>' +
+          '<div class="view-switch" id="dir-switch">' +
+            '<button data-dirmode="table" class="active">📋 جدول جامع اعضا (پیش‌فرض)</button>' +
+            '<button data-dirmode="cards">🪪 نمای کارتی</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="count" id="player-count"></div>' +
+        '<div id="player-content"></div>' +
+      '</section>';
 
     const render = () => {
-      const q = root.querySelector('#player-search').value.trim().toLocaleLowerCase('fa');
+      const q = (root.querySelector('#player-search')?.value || '').trim().toLocaleLowerCase('fa');
       const list = entries.filter((entry) => {
-        const text = [entry.global?.display_name, entry.global?.global_player_id, entry.observation?.display_name, entry.observation?.observation_id].join(' ').toLocaleLowerCase('fa');
+        const text = [
+          entry.global?.display_name,
+          entry.global?.global_player_id,
+          entry.observation?.display_name,
+          entry.observation?.observation_id,
+          entry.observation?.stage,
+          entry.observation?.clan_display_name
+        ].join(' ').toLocaleLowerCase('fa');
         return text.includes(q);
       });
-      root.querySelector('#player-count').textContent = formatNumber(list.length) + ' نتیجه';
-      root.querySelector('#player-grid').innerHTML = list.map((entry) => {
-        const playerId = entry.global?.global_player_id;
-        const href = playerId
-          ? base('player.html','?id=' + encodeURIComponent(playerId) + '&clan=' + encodeURIComponent(activeClanId || ''))
-          : base('player.html','?observation=' + encodeURIComponent(entry.observation?.observation_id || '') + '&clan=' + encodeURIComponent(activeClanId || ''));
-        const label = entry.global?.display_name || entry.observation?.display_name || '—';
-        return '<a class="player-card" href="' + href + '"><div class="player-card-head"><span class="player-avatar">' + esc(String(label).slice(0,1)) + '</span><div><h3>' + esc(label) + '</h3><span class="muted">' + (playerId ? esc(playerId) : 'Identity: UNRESOLVED') + '</span></div></div><div class="player-mini"><span>Stage <b>' + esc(formatNumber(entry.global?.latest_metrics?.stage ?? entry.observation?.stage)) + '</b></span><span>Clan Medal <b>' + esc(formatNumber(entry.global?.latest_metrics?.current_league_clan_medals ?? entry.observation?.current_league_clan_medals)) + '</b></span></div></a>';
-      }).join('') || '<div class="empty">بازیکنی برای این محدوده وجود ندارد.</div>';
+
+      root.querySelector('#player-count').textContent = formatNumber(list.length) + ' عضو ثبت‌شده';
+
+      if (!list.length) {
+        root.querySelector('#player-content').innerHTML = '<div class="empty">هیچ عضوی با این مشخصات یافت نشد.</div>';
+        return;
+      }
+
+      if (dirMode === 'table') {
+        const rowsHtml = list.map((entry, idx) => {
+          const playerId = entry.global?.global_player_id;
+          const href = playerId
+            ? base('player.html','?id=' + encodeURIComponent(playerId) + '&clan=' + encodeURIComponent(activeClanId || ''))
+            : base('player.html','?observation=' + encodeURIComponent(entry.observation?.observation_id || '') + '&clan=' + encodeURIComponent(activeClanId || ''));
+          const label = entry.global?.display_name || entry.observation?.display_name || '—';
+          const initial = String(label).slice(0, 1);
+          const stageVal = entry.global?.latest_metrics?.stage ?? entry.observation?.stage;
+          const medalVal = entry.global?.latest_metrics?.current_league_clan_medals ?? entry.observation?.current_league_clan_medals;
+          const killsVal = entry.observation?.total_kills ?? entry.global?.latest_metrics?.total_kills;
+          const wepVal = weaponsFor(entry.observation || {});
+          const clanName = entry.observation?.clan_display_name || activeClan?.display_name || '—';
+          const r = entry.observation?.rank;
+          const rankCls = r === 1 ? 'tbl-rank rank-1' : (r === 2 ? 'tbl-rank rank-2' : (r === 3 ? 'tbl-rank rank-3' : 'tbl-rank'));
+
+          return '<tr>' +
+            '<td><span class="' + rankCls + '">' + (r ? '#' + formatNumber(r) : formatNumber(idx + 1)) + '</span></td>' +
+            '<td><div class="tbl-player"><span class="tbl-avatar">' + esc(initial) + '</span><a class="tbl-name" href="' + href + '">' + esc(label) + '</a></div></td>' +
+            '<td><code style="font-size:0.78rem;color:var(--muted);">' + (playerId ? esc(playerId) : 'UNRESOLVED') + '</code></td>' +
+            '<td>' + esc(clanName) + '</td>' +
+            '<td><strong>' + formatNumber(stageVal) + '</strong></td>' +
+            '<td><strong style="color:var(--gold);">' + formatNumber(medalVal) + '</strong></td>' +
+            '<td><strong>' + (killsVal ? formatNumber(killsVal) : '—') + '</strong></td>' +
+            '<td>' + (wepVal && wepVal !== '—' ? ('<span class="tbl-weapons">' + esc(wepVal) + '</span>') : '—') + '</td>' +
+            '<td><span class="badge" style="font-size:0.7rem;padding:2px 7px;">' + (playerId ? 'تاییدشده' : 'تک‌مشاهده') + '</span></td>' +
+            '<td><a class="btn" style="padding:4px 10px;font-size:0.75rem;" href="' + href + '">کارنامه 👤</a></td>' +
+            '</tr>';
+        }).join('');
+
+        root.querySelector('#player-content').innerHTML =
+          '<div class="table-wrap"><table class="directory-table"><thead><tr>' +
+          '<th># ردیف</th>' +
+          '<th>نام بازیکن</th>' +
+          '<th>شناسه یکتای UCS</th>' +
+          '<th>کلن عضو</th>' +
+          '<th>استیج</th>' +
+          '<th>مدال کلن</th>' +
+          '<th>مجموع کیل 💀</th>' +
+          '<th>لول سلاح‌ها</th>' +
+          '<th>وضعیت هویت</th>' +
+          '<th>عملیات</th>' +
+          '</tr></thead><tbody>' + rowsHtml + '</tbody></table></div>';
+      } else {
+        const cardsHtml = list.map((entry) => {
+          const playerId = entry.global?.global_player_id;
+          const href = playerId
+            ? base('player.html','?id=' + encodeURIComponent(playerId) + '&clan=' + encodeURIComponent(activeClanId || ''))
+            : base('player.html','?observation=' + encodeURIComponent(entry.observation?.observation_id || '') + '&clan=' + encodeURIComponent(activeClanId || ''));
+          const label = entry.global?.display_name || entry.observation?.display_name || '—';
+          const stageVal = entry.global?.latest_metrics?.stage ?? entry.observation?.stage;
+          const medalVal = entry.global?.latest_metrics?.current_league_clan_medals ?? entry.observation?.current_league_clan_medals;
+          const killsVal = entry.observation?.total_kills;
+          const wepVal = weaponsFor(entry.observation || {});
+          return '<a class="player-card" href="' + href + '">' +
+            '<div class="player-card-head">' +
+              '<span class="rank">' + (entry.observation?.rank ? ('#' + esc(entry.observation.rank)) : '👤') + '</span>' +
+              '<div>' +
+                '<h3>' + esc(label) + '</h3>' +
+                '<span class="role">' + (playerId ? esc(playerId) : 'Identity: UNRESOLVED') + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="member-grid" style="margin-top:10px;">' +
+              '<div class="stat"><span>استیج</span><strong>' + formatNumber(stageVal) + '</strong></div>' +
+              '<div class="stat medal"><span>مدال کلن</span><strong>' + formatNumber(medalVal) + '</strong></div>' +
+              (killsVal ? ('<div class="stat"><span>مجموع کیل 💀</span><strong>' + formatNumber(killsVal) + '</strong></div>') : '') +
+              (wepVal && wepVal !== '—' ? ('<div class="stat weapons"><span>سلاح‌ها</span><strong>' + esc(wepVal) + '</strong></div>') : '') +
+            '</div>' +
+          '</a>';
+        }).join('');
+        root.querySelector('#player-content').innerHTML = '<div class="player-grid">' + cardsHtml + '</div>';
+      }
+
+      root.querySelectorAll('[data-dirmode]').forEach((btn) => {
+        btn.onclick = () => {
+          dirMode = btn.dataset.dirmode;
+          root.querySelectorAll('[data-dirmode]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          render();
+        };
+      });
     };
+
     root.querySelector('#player-search').oninput = render;
     render();
   }
@@ -602,10 +843,70 @@
       const events = activity.filter((event) => event.global_player_id === player.global_player_id && (!activeClanId || event.clan_id === activeClanId));
       return { player, memberships, events };
     }).filter((entry) => activeClanId ? (entry.memberships.length > 0 || entry.events.length > 0) : (entry.memberships.length > 1 || entry.events.length > 0));
+
+    let histMode = 'table'; // Comprehensive Table is FIRST priority!
+
     root.innerHTML = header('تاریخچه عضویت و جابه‌جایی','UCS · MEMBERSHIP HISTORY',activeClanId ? 'نمایش فقط Membership و رویدادهای مرتبط با Clan انتخاب‌شده.' : 'نمای Global برای بررسی تاریخچهٔ عضویت و جابه‌جایی بین تمام Clanها.') +
       (players.length
-        ? '<section class="panel"><div class="player-grid">' + players.map(({player,memberships,events}) => '<a class="player-card" href="' + base('player.html','?id=' + encodeURIComponent(player.global_player_id) + (activeClanId ? '&clan=' + encodeURIComponent(activeClanId) : '')) + '"><div class="player-card-head"><span class="player-avatar">' + esc(String(player.display_name || '—').slice(0,1)) + '</span><div><h3>' + esc(player.display_name) + '</h3><span class="muted">' + esc(player.global_player_id) + '</span></div></div><div class="player-mini"><span>Membership <b>' + formatNumber(memberships.length) + '</b></span><span>رویدادها <b>' + formatNumber(events.length) + '</b></span></div></a>').join('') + '</div></section>'
+        ? '<section class="panel">' +
+            '<div class="toolbar-wrap">' +
+              '<span class="count">' + formatNumber(players.length) + ' سابقه جابه‌جایی و عضویت ثبت‌شده</span>' +
+              '<div class="view-switch" id="hist-switch">' +
+                '<button data-histmode="table" class="active">📋 جدول جامع تاریخچه (پیش‌فرض)</button>' +
+                '<button data-histmode="cards">🪪 نمای کارتی</button>' +
+              '</div>' +
+            '</div>' +
+            '<div id="hist-content"></div>' +
+          '</section>'
         : '<section class="panel empty"><h2>' + (activeClanId ? 'برای این Clan تاریخچهٔ Membership ثبت‌شده‌ای وجود ندارد.' : 'هنوز جابه‌جایی Global تأییدشده‌ای ثبت نشده است.') + '</h2><p>Observationهای unresolved همچنان قابل مشاهده‌اند، اما به‌عنوان Player مشترک بین Clanها ادغام نمی‌شوند.</p></section>');
+
+    if (!players.length) return;
+
+    const render = () => {
+      if (histMode === 'table') {
+        const rowsHtml = players.map(({player, memberships, events}, idx) => {
+          const href = base('player.html','?id=' + encodeURIComponent(player.global_player_id) + (activeClanId ? '&clan=' + encodeURIComponent(activeClanId) : ''));
+          const initial = String(player.display_name || '—').slice(0, 1);
+          const clanList = memberships.map(m => m.clan_display_name || m.clan_id).join(' ➔ ') || '—';
+          return '<tr>' +
+            '<td><span class="tbl-rank">' + formatNumber(idx + 1) + '</span></td>' +
+            '<td><div class="tbl-player"><span class="tbl-avatar">' + esc(initial) + '</span><a class="tbl-name" href="' + href + '">' + esc(player.display_name) + '</a></div></td>' +
+            '<td><code style="font-size:0.78rem;color:var(--muted);">' + esc(player.global_player_id) + '</code></td>' +
+            '<td><strong>' + esc(clanList) + '</strong></td>' +
+            '<td>' + formatNumber(memberships.length) + ' کلن</td>' +
+            '<td>' + formatNumber(events.length) + ' رویداد</td>' +
+            '<td><span class="badge" style="font-size:0.7rem;padding:2px 7px;">' + esc(player.identity_status || 'VERIFIED') + '</span></td>' +
+            '<td><a class="btn" style="padding:4px 10px;font-size:0.75rem;" href="' + href + '">سوابق کامل 📜</a></td>' +
+            '</tr>';
+        }).join('');
+
+        root.querySelector('#hist-content').innerHTML =
+          '<div class="table-wrap"><table class="events-table"><thead><tr>' +
+          '<th># ردیف</th>' +
+          '<th>نام بازیکن</th>' +
+          '<th>شناسه گلوبال یکتا</th>' +
+          '<th>مسیر و کلن‌های عضویت</th>' +
+          '<th>تعداد دوره‌ها</th>' +
+          '<th>تعداد رویدادها</th>' +
+          '<th>وضعیت هویت</th>' +
+          '<th>عملیات</th>' +
+          '</tr></thead><tbody>' + rowsHtml + '</tbody></table></div>';
+      } else {
+        const cardsHtml = players.map(({player,memberships,events}) => '<a class="player-card" href="' + base('player.html','?id=' + encodeURIComponent(player.global_player_id) + (activeClanId ? '&clan=' + encodeURIComponent(activeClanId) : '')) + '"><div class="player-card-head"><span class="player-avatar">' + esc(String(player.display_name || '—').slice(0,1)) + '</span><div><h3>' + esc(player.display_name) + '</h3><span class="muted">' + esc(player.global_player_id) + '</span></div></div><div class="player-mini"><span>Membership <b>' + formatNumber(memberships.length) + '</b></span><span>رویدادها <b>' + formatNumber(events.length) + '</b></span></div></a>').join('');
+        root.querySelector('#hist-content').innerHTML = '<div class="player-grid">' + cardsHtml + '</div>';
+      }
+
+      root.querySelectorAll('[data-histmode]').forEach((btn) => {
+        btn.onclick = () => {
+          histMode = btn.dataset.histmode;
+          root.querySelectorAll('[data-histmode]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          render();
+        };
+      });
+    };
+
+    render();
   }
 
   function bindNavContext() {

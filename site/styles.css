@@ -109,3 +109,470 @@ body{overflow-x:clip;}
  .clan-context-identity strong{font-size:1.9rem;}
  .compact-insights,.aggregate--performance{grid-template-columns:1fr;}
 }
+
+
+/* ==========================================================================
+   WAR DRONE WIKI / UCS CANONICAL LEADERBOARD & CARD GRID STYLES
+   ========================================================================== */
+
+:root {
+  --lb-accent: #31d8ff;
+  --lb-gold: #ffc95a;
+  --lb-green: #55dca2;
+  --lb-red: #ff6872;
+  --lb-violet: #9e8cff;
+}
+
+/* Hero Section */
+.lb-hero {
+  padding: 28px 0 22px;
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(circle at 78% 0%, rgba(49, 216, 255, .14), transparent 30rem),
+              radial-gradient(circle at 12% 35%, rgba(158, 140, 255, .08), transparent 24rem);
+}
+.lb-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 8px 0 10px;
+}
+.lb-hero p {
+  color: var(--muted);
+  max-width: 900px;
+  margin: 0;
+}
+.lb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  color: var(--cyan);
+  font-size: .8rem;
+  font-weight: 800;
+  background: rgba(49, 216, 255, .06);
+}
+
+/* Overview Top Cards */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.overview-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.overview-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+.overview-card .label {
+  display: block;
+  color: var(--muted);
+  font-size: .78rem;
+}
+.overview-card strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.22rem;
+  color: var(--text);
+}
+.overview-card.highlight strong {
+  color: var(--gold);
+}
+
+/* Member Roster Card Grid (Exact Wiki UI) */
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.member {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.member:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+.member::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--cyan);
+  opacity: .85;
+}
+.member:nth-child(5n)::before,
+.member.top-tier::before {
+  background: var(--gold);
+}
+.member-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--line);
+}
+.member-id {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.rank {
+  display: grid;
+  place-items: center;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(49, 216, 255, .08);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-weight: 900;
+  font-size: .9rem;
+}
+.member.top-tier .rank {
+  background: rgba(255, 201, 90, .1);
+  border-color: rgba(255, 201, 90, .3);
+  color: var(--gold);
+}
+.member h3 {
+  font-size: 1.05rem;
+  margin: 0;
+  word-break: break-word;
+}
+.member h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.member h3 a:hover {
+  color: var(--cyan);
+}
+.role {
+  display: inline-block;
+  color: var(--muted);
+  font-size: .72rem;
+  margin-top: 2px;
+  background: rgba(255, 255, 255, .04);
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.movement {
+  white-space: nowrap;
+  font-size: .82rem;
+  font-weight: 900;
+}
+.movement.up { color: var(--green); }
+.movement.down { color: var(--red); }
+.movement.same { color: var(--muted); }
+
+/* Member Stats Grid inside Card */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+.stat {
+  border: 1px solid rgba(37, 66, 95, .7);
+  border-radius: 12px;
+  padding: 9px 10px;
+  background: rgba(255, 255, 255, .02);
+  min-width: 0;
+}
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: .7rem;
+}
+.stat strong {
+  display: block;
+  margin-top: 2px;
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+}
+.stat.medal strong { color: var(--gold); }
+.stat.delta strong { color: var(--green); }
+.stat.delta.negative strong { color: var(--red); }
+.stat.weapons { grid-column: 1 / -1; }
+.stat.last-online {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.stat.last-online strong {
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+/* View Mode Switcher Toolbar */
+.toolbar-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.view-switch {
+  display: flex;
+  gap: 6px;
+  background: var(--bg2);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.view-switch button {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.view-switch button.active,
+.view-switch button:hover {
+  background: var(--panel2);
+  color: var(--cyan);
+}
+
+/* Responsive Breakpoints */
+@media(max-width: 900px) {
+  .overview-grid { grid-template-columns: 1fr 1fr; }
+  .members { grid-template-columns: 1fr; }
+}
+@media(max-width: 620px) {
+  .overview-grid { grid-template-columns: 1fr; }
+  .member { padding: 13px; }
+  .member-grid { grid-template-columns: 1fr 1fr; }
+  .rank { min-width: 36px; height: 36px; }
+  .toolbar-wrap { flex-direction: column; align-items: stretch; }
+  .view-switch { width: 100%; justify-content: center; }
+}
+
+/* ==========================================================================
+   Comprehensive Table & Unified Data View Styles (First-Class Priority)
+   ========================================================================== */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+}
+.table-wrap::-webkit-scrollbar {
+  height: 8px;
+}
+.table-wrap::-webkit-scrollbar-track {
+  background: var(--bg2);
+  border-radius: 4px;
+}
+.table-wrap::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+.table-wrap::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1080px;
+  font-size: 0.84rem;
+}
+th, td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: var(--panel2);
+  color: var(--cyan);
+  z-index: 2;
+  font-weight: 900;
+  padding: 0;
+  user-select: none;
+}
+th button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 900;
+  text-align: right;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+th button:hover, th button:focus-visible {
+  background: rgba(49, 216, 255, 0.08);
+  color: #fff;
+  outline: none;
+}
+tbody tr {
+  transition: background 0.12s ease;
+}
+tbody tr:hover {
+  background: rgba(49, 216, 255, 0.045);
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Rank Badges in Tables */
+.tbl-rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 7px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 0.85rem;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+}
+.tbl-rank.rank-1 {
+  background: linear-gradient(135deg, rgba(255, 201, 90, 0.25), rgba(255, 201, 90, 0.05));
+  border-color: #ffc95a;
+  color: #ffc95a;
+  box-shadow: 0 0 10px rgba(255, 201, 90, 0.2);
+}
+.tbl-rank.rank-2 {
+  background: linear-gradient(135deg, rgba(226, 232, 240, 0.2), rgba(226, 232, 240, 0.05));
+  border-color: #cbd5e1;
+  color: #e2e8f0;
+}
+.tbl-rank.rank-3 {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.05));
+  border-color: #d97706;
+  color: #f59e0b;
+}
+
+/* Player Name Cell */
+.tbl-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tbl-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--panel2), var(--bg2));
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+.tbl-name {
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.tbl-name:hover {
+  color: var(--cyan);
+}
+
+/* Role Badges */
+.tbl-role {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+.tbl-role.leader {
+  background: rgba(255, 201, 90, 0.12);
+  border-color: #ffc95a;
+  color: #ffc95a;
+}
+.tbl-role.coleader {
+  background: rgba(49, 216, 255, 0.12);
+  border-color: #31d8ff;
+  color: #31d8ff;
+}
+.tbl-role.elder {
+  background: rgba(85, 220, 162, 0.12);
+  border-color: #55dca2;
+  color: #55dca2;
+}
+
+/* Deltas */
+.delta-pos {
+  color: var(--green);
+  font-weight: 800;
+}
+.delta-neg {
+  color: var(--red);
+  font-weight: 800;
+}
+.delta-zero {
+  color: var(--muted);
+}
+
+/* Weapon Pills */
+.tbl-weapons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--cyan);
+  background: rgba(49, 216, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(49, 216, 255, 0.2);
+}
+
+/* Directory & History specific table widths */
+.directory-table {
+  min-width: 950px;
+}
+.events-table {
+  min-width: 900px;
+}
