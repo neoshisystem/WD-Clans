@@ -57,36 +57,38 @@
     {
       "clan_id": "CLAN-UCS-DEMO",
       "display_name": "UCS Demo Clan",
+      "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [
           "EV-SYN-001"
         ]
-      },
-      "status": "ACTIVE"
+      }
     },
     {
       "clan_id": "CLAN-UCS-SECOND",
       "display_name": "UCS Second Clan",
+      "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [
           "EV-SYN-002"
         ]
-      },
-      "status": "ACTIVE"
+      }
     },
     {
       "clan_id": "CLAN-PERSIAN-UNITY",
       "display_name": "Persian UNITY",
+      "tag": "PU",
+      "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [
           "EV-REAL-PERSIAN-UNITY-S13"
         ]
-      },
-      "status": "ACTIVE"
+      }
     },
     {
       "clan_id": "CLAN-IRANIAN-ARMY-PU",
       "display_name": "Iranian Army [PU]",
+      "tag": "IA",
       "status": "ACTIVE",
       "provenance": {
         "evidence_refs": [

@@ -200,7 +200,28 @@
       width: min(92vw, 480px);
       box-shadow: 0 10px 40px rgba(0,0,0,0.6);
     }
+
+    @media (max-width: 768px) {
+      .admin-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+      }
+      .admin-tab {
+        padding: 9px 6px;
+        font-size: 0.8rem;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .admin-hero h1 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
+
 </head>
 <body>
 

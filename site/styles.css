@@ -576,3 +576,372 @@ tr:last-child td {
 .events-table {
   min-width: 900px;
 }
+
+/* ==========================================================================
+   WAR DRONE WIKI / PERSIA CANONICAL LEADERBOARD & DIRECTORY STYLES
+   ========================================================================== */
+
+/* Performance Overview Cards */
+.performance-card {
+  margin: 18px 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(145deg, var(--panel), var(--panel2));
+  box-shadow: var(--shadow);
+}
+.performance-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+.performance-card__head h2 {
+  margin: 8px 0 4px;
+  font-size: 1.15rem;
+}
+.performance-card__head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.8;
+}
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+.performance-stat {
+  border: 1px solid rgba(37, 66, 95, .8);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, .018);
+}
+.performance-stat span {
+  display: block;
+  color: var(--muted);
+  font-size: .72rem;
+}
+.performance-stat strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 1.15rem;
+  color: var(--cyan);
+}
+
+/* Toolbar & Switch from Wiki */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0 15px;
+  flex-wrap: wrap;
+}
+.search {
+  flex: 1;
+  min-width: 0;
+  height: 47px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--bg2);
+  color: var(--text);
+  padding: 0 13px;
+  outline: none;
+  font-family: inherit;
+}
+.search:focus {
+  border-color: var(--cyan);
+}
+.switch, .view-switch {
+  display: flex;
+  gap: 7px;
+}
+.switch button, .view-switch button {
+  height: 47px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--panel);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.switch button.active, .switch button:hover,
+.view-switch button.active, .view-switch button:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(49, 216, 255, .07);
+}
+
+/* Graphic Member Cards */
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.member {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 15px;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  box-shadow: var(--shadow);
+  transition: border-color .15s ease;
+}
+.member:hover {
+  border-color: var(--cyan);
+}
+.member:before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--cyan);
+  opacity: .85;
+}
+.member.top-tier:before {
+  background: var(--gold);
+  opacity: 1;
+}
+.member header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--line);
+}
+.member header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.member h3 {
+  font-size: 1rem;
+  margin: 0;
+  word-break: break-word;
+}
+.member small {
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.rank {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(49, 216, 255, .07);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-weight: 900;
+}
+.member header > b {
+  color: var(--muted);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-top: 11px;
+}
+.stat {
+  border: 1px solid rgba(37, 66, 95, .7);
+  border-radius: 11px;
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, .018);
+  min-width: 0;
+}
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: .68rem;
+}
+.stat strong {
+  display: block;
+  margin-top: 2px;
+  font-size: .84rem;
+  overflow-wrap: anywhere;
+}
+
+/* Member Changes Section */
+.member-changes-card {
+  margin-top: 22px;
+}
+.member-change-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.member-change-group {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 11px;
+  background: rgba(255, 255, 255, .018);
+}
+.member-change-group--left {
+  border-color: color-mix(in srgb, #ff6f7f 42%, var(--line));
+}
+.member-change-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.member-change-heading strong {
+  font-size: .8rem;
+}
+.member-change-heading span {
+  color: var(--muted);
+  font-size: .7rem;
+}
+.member-change-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.member-change-player {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: .72rem;
+  background: rgba(255, 255, 255, .018);
+}
+.member-change-player:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.member-change-group--left .member-change-player {
+  border-color: color-mix(in srgb, #ff6f7f 48%, var(--line));
+}
+.member-change-group--left .member-change-player:hover {
+  border-color: #ff6f7f;
+  color: #ff9da8;
+}
+.member-change-empty {
+  padding: 10px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+/* Summary Table from Wiki */
+.summary-table-wrap {
+  overflow-x: auto;
+}
+.summary-table {
+  min-width: 0 !important;
+  width: 100%;
+  table-layout: auto;
+}
+.summary-table th, .summary-table td {
+  padding: 7px 8px;
+}
+.summary-table th button {
+  min-height: 34px;
+  padding: 6px 7px;
+}
+.summary-player {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.summary-stage {
+  font-size: .82em;
+  opacity: .8;
+  font-weight: 900;
+}
+.summary-name {
+  font-weight: 900;
+}
+
+/* Player Grid from Wiki */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.player-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 15px;
+  background: var(--panel);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .15s ease;
+}
+.player-card:hover {
+  border-color: var(--cyan);
+}
+.player-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.player-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.player-id {
+  font-size: .68rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.status {
+  font-size: .68rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 7px;
+}
+
+/* Weapon Grids & Profile */
+.weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+.weapon {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 11px;
+}
+.weapon span {
+  display: block;
+  color: var(--muted);
+  font-size: .68rem;
+}
+.weapon b {
+  display: block;
+  margin-top: 2px;
+}
+
+@media(max-width: 850px) {
+  .members { grid-template-columns: 1fr; }
+  .player-grid { grid-template-columns: repeat(2, 1fr); }
+  .toolbar { align-items: stretch; }
+  .switch button, .view-switch button { padding: 0 11px; }
+}
+@media(max-width: 620px) {
+  .performance-grid { grid-template-columns: 1fr 1fr; }
+  .toolbar { display: grid; }
+  .switch, .view-switch { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .search { width: 100%; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .player-grid, .weapon-grid { grid-template-columns: 1fr; }
+  .member-change-grid { grid-template-columns: 1fr; }
+}

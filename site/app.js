@@ -468,7 +468,14 @@
         if (sortKey === next) sortDir *= -1; else { sortKey = next; sortDir = 1; }
         render();
       });
-      root.querySelectorAll('[data-mode]').forEach((button) => button.onclick = () => { mode = button.dataset.mode; render(); });
+      root.querySelectorAll('[data-mode]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.mode === mode);
+        button.onclick = () => {
+          mode = button.dataset.mode;
+          root.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+          render();
+        };
+      });
       const nextTable = root.querySelector('.table-wrap');
       if (nextTable) nextTable.scrollLeft = previousScrollLeft;
       if (typeof window !== 'undefined') window.scrollTo({ top: previousScrollTop, behavior: 'auto' });
@@ -518,7 +525,7 @@
       '<section class="panel"><div class="toolbar">' +
       '<label class="field"><span>Snapshot</span><select id="snapshot-select">' + clanSnapshots.map((s) => '<option value="' + esc(s.snapshot_id) + '" ' + (s.snapshot_id === activeSnapshot.snapshot_id ? 'selected' : '') + '>' + esc(s.snapshot_id) + ' · ' + esc(formatSnapshotDateTime(s.official_timestamp_utc)) + '</option>').join('') + '</select></label>' +
       '<label class="field search-field"><span>جستجو</span><input id="search-input" type="search" placeholder="نام بازیکن، سمت یا مقدار..."></label>' +
-      '<div class="view-switch"><button data-mode="simple" class="' + (mode === 'simple' ? 'active' : '') + '">📋 نمایش ساده و جامع (پیش‌فرض)</button><button data-mode="summary" class="' + (mode === 'summary' ? 'active' : '') + '">⚡ نمایش خلاصه (عملکرد)</button><button data-mode="graphic" class="' + (mode === 'graphic' ? 'active' : '') + '">🪪 نمایش گرافیکی (کارتی)</button></div>' +
+      '<div class="switch view-switch"><button data-mode="simple" class="' + (mode === 'simple' ? 'active' : '') + '">نمایش ساده</button><button data-mode="summary" class="' + (mode === 'summary' ? 'active' : '') + '">نمایش خلاصه</button><button data-mode="graphic" class="' + (mode === 'graphic' ? 'active' : '') + '">نمایش گرافیکی</button></div>' +
       '</div><div class="kpi-row"><div><span>اعضا</span><b>' + formatNumber(activeSnapshot.member_count) + '</b></div><div><span>Snapshot</span><b>' + esc(activeSnapshot.snapshot_id) + '</b></div><div><span>Evidence</span><b>' + formatNumber(bundle.provenance?.evidence_refs?.length || 0) + '</b></div><div><span>Projection</span><b>' + esc(model.projection_version) + '</b></div></div>' + snapshotNav + '<div class="count" id="result-count"></div><div id="results"></div></section>' + compactPerformanceHtml(activeSnapshot.snapshot_id) + membershipChangesHtml(activeSnapshot);
     root.querySelector('#snapshot-select').onchange = (event) => {
       const next = new URL(location.href);

@@ -47,6 +47,38 @@ const MIME_TYPES = {
 };
 
 const db = initDatabase(DB_PATH);
+const CANONICAL_PATH = path.join(__dirname, '..', 'data', 'canonical.json');
+let generateStaticVerticalSlice = null;
+try {
+  generateStaticVerticalSlice = require('../scripts/generate-static-vertical-slice').generateStaticVerticalSlice;
+} catch (_) {}
+
+function syncCanonicalAndRebuild() {
+  try {
+    if (!fs.existsSync(CANONICAL_PATH) || !generateStaticVerticalSlice) return;
+    const canon = JSON.parse(fs.readFileSync(CANONICAL_PATH, 'utf8'));
+    const dbClans = db.prepare('SELECT * FROM clans').all();
+
+    canon.clans = dbClans.map(c => {
+      let prov = {};
+      try { prov = c.provenance ? JSON.parse(c.provenance) : {}; } catch(_) {}
+      return {
+        clan_id: c.clan_id,
+        display_name: c.display_name,
+        tag: c.tag || undefined,
+        status: c.status || 'ACTIVE',
+        provenance: prov
+      };
+    });
+
+    fs.writeFileSync(CANONICAL_PATH, JSON.stringify(canon, null, 2), 'utf8');
+    generateStaticVerticalSlice();
+    console.log('[UCS Server] Synced clans to canonical.json and regenerated static bundle.');
+  } catch (err) {
+    console.error('[UCS Server] Error syncing canonical:', err);
+  }
+}
+
 
 function jsonResponse(res, statusCode, data) {
   const body = JSON.stringify(data, null, 2);
@@ -107,7 +139,9 @@ function handleStatic(req, res, pathname) {
     res.writeHead(200, {
       'Content-Type': contentType,
       'Content-Length': stats.size,
-      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=3600'
+      'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+      'Pragma': 'no-cache',
+      'Expires': '0'
     });
     fs.createReadStream(filePath).pipe(res);
   });
@@ -335,7 +369,8 @@ async function appHandler(req, res) {
               INSERT INTO clans (clan_id, display_name, tag, status, provenance)
               VALUES (?, ?, ?, ?, ?)
             `).run(clanId, displayName, tag || null, status, JSON.stringify({ source: 'admin_panel', created_at: new Date().toISOString() }));
-            return jsonResponse(res, 201, { ok: true, message: 'کلن جدید با موفقیت ایجاد شد.' });
+            syncCanonicalAndRebuild();
+            return jsonResponse(res, 201, { ok: true, message: 'کلن جدید با موفقیت ایجاد شد و در سایت مستقر گردید.' });
           } catch (err) {
             return jsonResponse(res, 400, { error: 'خطا در ثبت کلن: ' + err.message });
           }
@@ -361,11 +396,13 @@ async function appHandler(req, res) {
             UPDATE clans SET display_name = ?, tag = ?, status = ? WHERE clan_id = ?
           `).run(displayName, tag || null, status, clanId);
 
+          syncCanonicalAndRebuild();
           return jsonResponse(res, 200, { ok: true, message: 'اطلاعات کلن به‌روزرسانی شد.' });
         }
 
         if (req.method === 'DELETE') {
           db.prepare(`UPDATE clans SET status = 'ARCHIVED' WHERE clan_id = ?`).run(clanId);
+          syncCanonicalAndRebuild();
           return jsonResponse(res, 200, { ok: true, message: 'کلن به حالت بایگانی (ARCHIVED) منتقل شد.' });
         }
       }
